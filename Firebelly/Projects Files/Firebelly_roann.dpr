@@ -318,7 +318,10 @@ uses
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
-  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas';
+  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
+  WTMaintRemedialSlab in '..\WTMaintRemedialSlab.pas' {frmWTMaintRemedialSlab},
+  wtRSSOStockAllocation in '..\wtRSSOStockAllocation.pas' {frmWTRSSOStockAllocation},
+  wtRSSOStockDeAllocation in '..\wtRSSOStockDeAllocation.pas' {frmWTRSSOStockDeAllocation};
 
 {$R *.RES}
 

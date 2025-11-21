@@ -340,6 +340,7 @@ begin
   if bLineUp then
     Exit;
 
+  {Show Payemnt details}
   memPaymentNotes.Lines.clear;
 
   for icount := 0 to pred(memPayment.lines.count) do

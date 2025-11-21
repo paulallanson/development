@@ -12,10 +12,6 @@ uses
 
 type
   TfrmWTLUSupplier = class(TForm)
-    Panel1: TPanel;
-    CoolBar2: TCoolBar;
-    Panel3: TPanel;
-    Label2: TLabel;
     CoolBar1: TCoolBar;
     ToolBar1: TToolBar;
     btnAdd: TToolButton;
@@ -39,6 +35,9 @@ type
     qryDelete: TFDQuery;
     Panel4: TPanel;
     Button1: TButton;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label2: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);

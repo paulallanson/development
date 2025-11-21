@@ -103,6 +103,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       item
         Width = 50
       end>
+    ExplicitTop = 375
+    ExplicitWidth = 771
   end
   object Panel1: TPanel
     Left = 0
@@ -112,6 +114,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 310
+    ExplicitWidth = 771
     DesignSize = (
       777
       65)
@@ -123,7 +127,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Caption = 'Search'
     end
     object BitBtn1: TBitBtn
-      Left = 335
+      Left = 337
       Top = 10
       Width = 75
       Height = 25
@@ -133,7 +137,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = BitBtn1Click
     end
     object btnEdit: TBitBtn
-      Left = 421
+      Left = 423
       Top = 10
       Width = 75
       Height = 25
@@ -144,7 +148,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = btnEditClick
     end
     object btnDelete: TBitBtn
-      Left = 508
+      Left = 510
       Top = 10
       Width = 75
       Height = 25
@@ -155,7 +159,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 681
+      Left = 683
       Top = 10
       Width = 75
       Height = 25
@@ -166,7 +170,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       TabOrder = 3
     end
     object btnThickness: TBitBtn
-      Left = 249
+      Left = 251
       Top = 10
       Width = 75
       Height = 25
@@ -194,7 +198,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
-      Left = 594
+      Left = 596
       Top = 10
       Width = 75
       Height = 25
@@ -213,10 +217,11 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 771
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 68
+      Width = 67
       Height = 13
       Caption = 'Material Type'
     end
@@ -266,7 +271,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       'select * from Material_Type'
       
         'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
-        ')')
+        ')'
+      'Order By Description')
     Left = 208
     Top = 168
   end

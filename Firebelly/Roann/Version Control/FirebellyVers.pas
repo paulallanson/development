@@ -59,22 +59,12 @@ begin
      	CreateFirebellyDir(LocalDir);
   	end;
 
-  {Test that the Firebelly Import Export Manager Directory exists, if not then contruct}
-  if not DirectoryExists(LocalDir+'\Firebelly Import Export Manager') then
-  	begin
-     	CreateFirebellyDir(LocalDir+'\Firebelly Import Export Manager\');
-  	end;
-
 	frmFirebellyVers.Refresh ;
 
 	{Test the bitmaps} ;
 	StatusNarr('Checking Logos') ;
 	CopyIfNewer('wtHeadLogo.Bmp', 'Report Logo') ;
 	CopyIfNewer('wtFootLogo.Bmp', 'Report Logo') ;
-
-	{Check the Import Export Manager} ;
-	StatusNarr('Checking Import Export Manager') ;
-	CopyIfNewer('Firebelly Import Export Manager\FirebellyExportPricesService.dll', 'Import Export Manager') ;
 
 	{Do the actual program} ;
 	StatusNarr('Checking Firebelly Program') ;
@@ -93,41 +83,17 @@ begin
   CopyIfNewer('Register.bat', 'PDF Split Merge Register') ;
   CopyIfNewer('UnRegister.bat', 'PDF Split Merge UnRegister') ;
 
-	{Do the Scheduling Files} ;
-	StatusNarr('Checking Firebelly Scheduling files') ;
-	CopyIfNewer('FirebellyTeamScheduler.dll', 'Scheduling Program') ;
-	CopyIfNewer('FirebellyTeamScheduler.dll.config', 'Scheduling Program') ;
-	CopyIfNewer('FirebellyTeamScheduler.dll.manifest', 'Scheduling Program') ;
-	CopyIfNewer('FirebellyTeamScheduler.pdb', 'Scheduling Program') ;
-	CopyIfNewer('FirebellyTeamScheduler.vsto', 'Scheduling Program') ;
-
-	CopyIfNewer('log4net.config', 'Scheduling Program') ;
-	CopyIfNewer('log4net.dll', 'Scheduling Program') ;
-	CopyIfNewer('log4net.xml', 'Scheduling Program') ;
-
-	CopyIfNewer('Microsoft.Office.Interop.Outlook.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Interop.Outlook.xml', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Common.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Common.v4.0.Utilities.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Outlook.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.v4.0.Framework.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.VisualStudio.Tools.Applications.Runtime.dll', 'Scheduling Program') ;
-	CopyIfNewer('Office.dll', 'Scheduling Program') ;
-	CopyIfNewer('Office.xml', 'Scheduling Program') ;
-	CopyIfNewer('RGiesecke.DllExport.Metadata.dll', 'Scheduling Program') ;
-
 	{Do the Moraware Scheduling Files} ;
 	StatusNarr('Checking Moraware Scheduling files') ;
 	CopyIfNewer('msmqsend.exe', 'Scheduling Program') ;
 	CopyIfNewer('msmqsend.exe.config', 'Scheduling Program') ;
 	CopyIfNewer('msmqsend.pdb', 'Scheduling Program') ;
 
-  StrPCopy(FiName, LocalDir + '\firebelly.exe') ;
+  StrPCopy(FiName, LocalDir + '\firebelly24.exe') ;
 	StrPCopy(DiName ,LocalDir) ;
 	ShellExecute(0,nil,FiName,'', DiName, sw_Restore) ;
 	Application.Terminate ;
+
 end;
 
 procedure TfrmFirebellyVers.StatusNarr(Narr: String);

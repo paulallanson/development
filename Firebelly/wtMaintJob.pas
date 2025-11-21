@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons,
   Grids, DBCtrls, wtJobsDm, CRControls, AllCommon, DB, Spin, wtSalesOrderDM, ImgList, ShellAPI, QrCtrls, Menus,
   ToolWin, Inifiles, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, ShellCtrls, System.ImageList, FireDAC.Stan.Param,
-  DragDrop, DropTarget, DragDropFile, DropComboTarget;
+  DragDrop, DropTarget, DragDropFile, DropComboTarget, wtRemedialDM;
 
 type
   TfrmWTMaintJob = class(TForm)
@@ -1814,13 +1814,23 @@ procedure TfrmWTMaintJob.CallMaintRemedials(aMode : TjremMode);
 var
   inx : integer;
   jRemedial : TjRemedial;
+  Remedial: TRemedial;
   frm: TfrmWTMaintJRemedial;
+  dtmdlOneRemedial: TdtmdlRemedial;
 begin
 //  inx := sgRemedials.row;
-  inx := StrToIntDef(sgRemedials.cells[0,sgRemedials.row], 1);
+
+  dtmdlOneRemedial := TdtmdlRemedial.create(Application);
+
+  try
+    inx := strtoint(sgRemedials.cells[0,sgRemedials.row]);
+  except
+    inx := 1;
+  end;
 
   try
     frm := TfrmWTMaintjRemedial.Create(Self);
+    Remedial := TRemedial.create(dtmdlOneRemedial);
     try
       if aMode = jremAdd then
         jRemedial := TjRemedial.create(Job)
@@ -1828,8 +1838,12 @@ begin
       begin
         inx := Job.Remedials.IndexOf(inx);
         jRemedial := Job.Remedials[inx];
+        Remedial.dbkey := jRemedial.RemedialID;
+        Remedial.LoadFromDB;
       end;
       Frm.jRemedial := jRemedial;
+      Frm.Remedial := Remedial;
+      Frm.UseSlabs := dtmdlWorktops.UseCostingSystem;
       Frm.Mode := aMode;
       Frm.ShowModal;
       if (aMode = jremAdd) and (Frm.ModalResult <> mrOK) then
@@ -1841,6 +1855,7 @@ begin
         end;
     finally
       Frm.Free;
+      dtmdlOneRemedial.free
     end;
   finally
     if aMode = jremAdd then

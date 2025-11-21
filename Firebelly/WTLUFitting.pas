@@ -10,11 +10,6 @@ uses
 
 type
   TfrmWTLUFitting = class(TForm)
-    CoolBar2: TCoolBar;
-    Panel3: TPanel;
-    Label2: TLabel;
-    Label4: TLabel;
-    cmbCustomerFilter: TComboBox;
     stsBrDetails: TStatusBar;
     Panel1: TPanel;
     Label1: TLabel;
@@ -33,16 +28,21 @@ type
     btnReports: TToolButton;
     dbgDetails: TDBGrid;
     tmrSearch: TTimer;
-    lblWorkinProgress: TLabel;
     BitBtn2: TBitBtn;
     btnReturned: TToolButton;
     btnDeliveryNote: TToolButton;
     chkbxShowOnlyScheduled: TCheckBox;
-    cmbActionDate: TComboBox;
     pnlDateSelection: TPanel;
     Label8: TLabel;
     edtTempDate: TEdit;
     btnTempDate: TBitBtn;
+    cmbActionDate: TComboBox;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Label4: TLabel;
+    lblWorkinProgress: TLabel;
+    cmbCustomerFilter: TComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

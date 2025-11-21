@@ -1055,6 +1055,18 @@
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
         <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
         <DCCReference Include="..\..\Shared\Shared.DragDrop.Helper.pas"/>
+        <DCCReference Include="..\WTMaintRemedialSlab.pas">
+            <Form>frmWTMaintRemedialSlab</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOStockAllocation.pas">
+            <Form>frmWTRSSOStockAllocation</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOStockDeAllocation.pas">
+            <Form>frmWTRSSOStockDeAllocation</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -1086,13 +1098,13 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="..\Roann\Win32\Debug\Firebelly_roann.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\Firebelly_roann.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Firebelly_roann.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\Roann\Win32\Release\Firebelly_roann.exe" Configuration="Release" Class="ProjectOutput">
+                <DeployFile LocalName="..\Roann\Win32\Debug\Firebelly_roann.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Firebelly_roann.exe</RemoteName>
                         <Overwrite>true</Overwrite>

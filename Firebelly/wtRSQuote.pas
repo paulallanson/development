@@ -8,7 +8,7 @@ uses
   QrExport, StrUtils, ShellAPI, wtRPQuoteSummary,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, CRControls;
 
 type
   TfrmWTRSQuote = class(TForm)
@@ -37,6 +37,12 @@ type
     rdgrpType: TRadioGroup;
     chkbxEndUserMarkup: TCheckBox;
     chkbxHideAllPrices: TCheckBox;
+    grpbxPrint: TGroupBox;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    edtFirstPage: TCREditInt;
+    edtLastPage: TCREditInt;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure EnableRun(Sender: TObject);
@@ -319,21 +325,20 @@ begin
               frmwtRPQuote.bOnlyGrandTotal := chkbxOnlyShowGrandTotal.checked;
               frmwtRPQuote.bExcludeTemplate := chkbxExcludeTemplate.checked;
               frmwtRPQuote.bPrintAcceptance := chkbxIncludeConfirm.checked;
-              {$IFNDEF MEGAMARBLE}
               frmwtRPQuote.bHideAllPrices := chkbxHideAllPrices.checked;
-              {$ENDIF}
+              frmwtRPQuote.bApplyEndUserMarkup := chkbxEndUserMarkup.checked;
 
               frmwtRPQuote.qrpDetails.ShowProgress := false;
 
               if (frmwtRPQuote.GetDetails = 0) then
-  	            begin
+                begin
                   MessageDlg('There are no quotes to print.',mterror,[mbOK],0);
                   exit;
-    	          end;
+                end;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
               printFileName := 'Q' + EmailArray[irow,1];
-              TPrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
+              TPrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, sAttachmentType, false);
 
               if iQuoteCount = 1 then
                 begin
@@ -422,7 +427,7 @@ begin
               frmwtRPQuote.GetDetails;
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
               printFileName := 'Q' + EmailArray[irow,1];
-              TPrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
+              TPrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, sAttachmentType, false);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1] + ' - ' + frmwtRPQuote.qryReport.fieldbyname('Reference').asstring;
 
@@ -646,7 +651,7 @@ begin
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
               printFileName := 'Q' + EmailArray[irow,1];
-              TPrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
+              TPrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, sAttachmentType, false);
 
               if iQuoteCount = 1 then
                 begin
@@ -746,7 +751,7 @@ begin
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
               printFileName := 'Q' + EmailArray[irow,1];
-              TPrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, sAttachmentType);
+              TPrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, sAttachmentType, false);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1];
 
@@ -900,11 +905,11 @@ begin
     frmwtRPQuote.bPrintDetail := chkbxShowDetail.checked;
     frmwtRPQuote.bExcludeTemplate := chkbxExcludeTemplate.checked;
     frmwtRPQuote.bOnlyGrandTotal := chkbxOnlyShowGrandTotal.checked;
-    {$IFNDEF MEGAMARBLE}
     frmwtRPQuote.bHideAllPrices := chkbxHideAllPrices.checked;
     frmwtRPQuote.bApplyEndUserMarkup := chkbxEndUserMarkup.checked;
-    {$ENDIF}
     frmwtRPQuote.bPrintAcceptance := chkbxIncludeConfirm.checked;
+    frmwtRPQuote.iFirstPage := edtFirstPage.value;
+    frmwtRPQuote.iLastPage := edtLastPage.value;
 
     if printType = 'T' then
       begin
@@ -1467,6 +1472,7 @@ begin
       chkbxEndUserMarkup.Visible := false;
       chkbxHideAllPrices.Visible := false;
       btnEmail.Visible := false;
+      grpbxPrint.Visible := false;
     end
   else
     caption := 'Print Quotation';

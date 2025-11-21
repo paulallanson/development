@@ -44,12 +44,12 @@ type
     chkbxShowArchived: TCheckBox;
     BitBtn1: TBitBtn;
     btnSearch: TBitBtn;
+    pnlBody: TPanel;
     CoolBar2: TCoolBar;
     Panel3: TPanel;
     Label4: TLabel;
     Label5: TLabel;
     cmbCustomerFilter: TComboBox;
-    pnlBody: TPanel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

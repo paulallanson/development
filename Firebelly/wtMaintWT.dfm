@@ -38,6 +38,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 2
+    ExplicitTop = 369
   end
   object btnOK: TBitBtn
     Left = 264
@@ -52,6 +53,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
+    ExplicitTop = 364
   end
   object BitBtn2: TBitBtn
     Left = 352
@@ -64,6 +66,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 4
+    ExplicitTop = 364
   end
   object pgDetails: TPageControl
     Left = 8
@@ -76,7 +79,7 @@ object frmWTMaintWT: TfrmWTMaintWT
       Caption = 'Details'
       object Label3: TLabel
         Left = 0
-        Top = 52
+        Top = 12
         Width = 71
         Height = 13
         Caption = 'Material Type'
@@ -96,7 +99,7 @@ object frmWTMaintWT: TfrmWTMaintWT
       end
       object Label5: TLabel
         Left = 0
-        Top = 17
+        Top = 47
         Width = 31
         Height = 13
         Caption = 'Finish'
@@ -117,13 +120,13 @@ object frmWTMaintWT: TfrmWTMaintWT
       end
       object dblkpMaterialType: TDBLookupComboBox
         Left = 88
-        Top = 48
+        Top = 8
         Width = 161
         Height = 21
         KeyField = 'Material_Type'
         ListField = 'Description'
         ListSource = srclkpMatType
-        TabOrder = 2
+        TabOrder = 0
         OnClick = dblkpMaterialTypeClick
       end
       object dblkpWorktopGroup: TDBLookupComboBox
@@ -175,18 +178,18 @@ object frmWTMaintWT: TfrmWTMaintWT
       end
       object dblkpWorktopFinish: TDBLookupComboBox
         Left = 88
-        Top = 13
+        Top = 43
         Width = 161
         Height = 21
         KeyField = 'Worktop_Finish'
         ListField = 'Description'
         ListSource = srclkpWorktopFinsih
-        TabOrder = 0
+        TabOrder = 1
         OnClick = dblkpMaterialTypeClick
       end
       object Button2: TButton
         Left = 256
-        Top = 11
+        Top = 41
         Width = 25
         Height = 25
         Caption = '...'
@@ -196,7 +199,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 2
         OnClick = Button2Click
       end
       object Button3: TButton
@@ -1504,12 +1507,14 @@ object frmWTMaintWT: TfrmWTMaintWT
       
         'where ((inactive = '#39'N'#39') or (inactive is NULL) or (inactive = '#39#39')' +
         ') OR'
-      'Material_Type = :Material_Type')
-    Left = 264
+      'Material_Type = :Material_Type'
+      'order by Description')
+    Left = 304
     Top = 128
     ParamData = <
       item
         Name = 'Material_Type'
+        ParamType = ptInput
       end>
   end
   object srclkpMatType: TDataSource

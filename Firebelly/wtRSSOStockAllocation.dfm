@@ -24,11 +24,13 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 519
+    ExplicitWidth = 1030
     DesignSize = (
       1036
       41)
     object btnClose: TButton
-      Left = 893
+      Left = 887
       Top = 8
       Width = 75
       Height = 25
@@ -37,6 +39,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 881
     end
     object btnAllocate: TButton
       Left = 16
@@ -62,7 +65,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       OnClick = btnExcludeClick
     end
     object btnExcel: TBitBtn
-      Left = 798
+      Left = 792
       Top = 8
       Width = 75
       Height = 25
@@ -85,6 +88,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       NumGlyphs = 2
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitLeft = 786
     end
   end
   object stsBrDetails: TStatusBar
@@ -99,6 +103,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Width = 50
       end>
+    ExplicitTop = 560
+    ExplicitWidth = 1030
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -211,6 +217,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Height = 233
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 1030
     object rdgrpCustomer: TRadioGroup
       Left = 8
       Top = 8
@@ -267,7 +274,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       end
     end
     object rdgrpSortBy: TRadioGroup
-      Left = 384
+      Left = 528
       Top = 8
       Width = 113
       Height = 89
@@ -420,9 +427,9 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       OnClick = chkbxIncludeInvoicedClick
     end
     object rdgrpAllocate: TRadioGroup
-      Left = 528
+      Left = 384
       Top = 8
-      Width = 145
+      Width = 109
       Height = 57
       Caption = 'Allocation Type'
       ItemIndex = 0
@@ -468,8 +475,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   end
   object pmnCustomers: TPopupMenu
     OnPopup = pmnCustomersPopup
-    Left = 376
-    Top = 72
+    Left = 384
+    Top = 256
     object Delete1: TMenuItem
       Caption = 'Delete'
       OnClick = Delete1Click
@@ -916,8 +923,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '        Quote_Slab.Length,'
       '        Quote_Slab.Depth,'
       '        Sales_order_line.Sales_Order_Line_no')
-    Left = 572
-    Top = 6
+    Left = 900
+    Top = 78
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -929,8 +936,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       'SELECT *'
       'FROM Stock_System'
       'WHERE Stock_System = :Stock_System')
-    Left = 692
-    Top = 6
+    Left = 900
+    Top = 14
     ParamData = <
       item
         Name = 'Stock_System'
@@ -1490,30 +1497,50 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Quote_Slab'
-      'SET Quantity_Allocated = Quantity'
+      'SET Quantity_Allocated = Quantity,'
+      #160#160#160' Allocated_Stock_Item = :Allocated_Stock_Item,'
+      #160#160#160' Allocated_Stock_Code = :Allocated_Stock_Code,'
+      #160#160#160' Allocated_Stock_Alternative = :Allocated_Stock_Alternative'
       'WHERE'
-      '  (Quote_Slab.Quote = :Quote) AND'
-      '  (Quote_Slab.Worktop = :Worktop) AND'
-      '  (Quote_Slab.Thickness = :Thickness) AND'
-      '  (Quote_Slab.Length = :Length) AND'
-      '  (Quote_Slab.Depth = :Depth)')
-    Left = 642
-    Top = 526
+      #160' (Quote_Slab.Quote = :Quote) AND'
+      #160' (Quote_Slab.Worktop = :Worktop) AND'
+      #160' (Quote_Slab.Thickness = :Thickness) AND'
+      #160' (Quote_Slab.Length = :Length) AND'
+      #160' (Quote_Slab.Depth = :Depth)')
+    Left = 810
+    Top = 462
     ParamData = <
       item
+        Name = 'ALLOCATED_STOCK_ITEM'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ALLOCATED_STOCK_CODE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ALLOCATED_STOCK_ALTERNATIVE'
+        ParamType = ptInput
+      end
+      item
         Name = 'Quote'
+        ParamType = ptInput
       end
       item
         Name = 'Worktop'
+        ParamType = ptInput
       end
       item
         Name = 'Thickness'
+        ParamType = ptInput
       end
       item
         Name = 'Length'
+        ParamType = ptInput
       end
       item
         Name = 'Depth'
+        ParamType = ptInput
       end>
   end
   object qryDeAllocQuoteSlab: TFDQuery

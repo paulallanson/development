@@ -70,7 +70,6 @@ type
     Label37: TLabel;
     Label38: TLabel;
     Label39: TLabel;
-    chkbxUseCosting: TCheckBox;
     Label20: TLabel;
     chkbxPricesAreTrade: TCheckBox;
     Label3: TLabel;
@@ -124,8 +123,6 @@ type
     spnQuoteValidDays: TSpinEdit;
     Label63: TLabel;
     chkbxBalanceRequired: TCheckBox;
-    Label64: TLabel;
-    memFactoredPayment: TMemo;
     Label67: TLabel;
     DBMemo1: TDBMemo;
     Label68: TLabel;
@@ -133,8 +130,7 @@ type
     chkbxMandatoryDates: TCheckBox;
     chkbxUseOnstop: TCheckBox;
     Label70: TLabel;
-    GroupBox1: TGroupBox;
-    chkbxUseContractQuoting: TCheckBox;
+    grpbxContractQuoting: TGroupBox;
     chkbxContractQuoteBySlab: TCheckBox;
     chkbxUsePurchaseOrdering: TCheckBox;
     PageControl1: TPageControl;
@@ -266,6 +262,13 @@ type
     Label82: TLabel;
     edtPlanDocumentFolder: TEdit;
     memEmailPurchaseOrder: TMemo;
+    PageControl2: TPageControl;
+    TabSheet3: TTabSheet;
+    TabSheet12: TTabSheet;
+    memFactoredPayment: TMemo;
+    memVirtualPayment: TMemo;
+    chkbxUseContractQuoting: TCheckBox;
+    chkbxUseCosting: TCheckBox;
     procedure EnableOK(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);
@@ -299,7 +302,7 @@ type
     procedure chkbxUseStockSystemClick(Sender: TObject);
   private
     iProduct: integer;
-    iTerms, iRetailTerms, iAvailability, iPayments, iRetailPayments, iFactoredPayments, iConfirmation: integer;
+    iTerms, iRetailTerms, iAvailability, iPayments, iRetailPayments, iFactoredPayments, iVirtualPayments, iConfirmation: integer;
     iRetailQuoteEmail, iQuoteEmail, iInvoiceEmail, iSalesConfirmEmail, iRetailSalesConfirmEmail, iPurchaseOrderEmail, iSalesFittingConfirmEmail: integer;
     function GetCompNotes(TempNotes: integer): string;
     procedure SaveNotes;
@@ -315,6 +318,7 @@ type
     function UpdateConfirmation: Integer;
     function UpdateRetailQuotationEmail: Integer;
     function UpdateFactoredPayments: Integer;
+    function UpdateVirtualPayments: Integer;
     function UpdatePurchaseOrderEmail: Integer;
     function UpdateRetailSalesConfirmEmail: Integer;
     procedure SaveToDB;
@@ -560,6 +564,7 @@ begin
       parambyname('Invoice_Payment_Notes').asinteger := UpdatePayments;
       parambyname('Retail_Payment_Notes').asinteger := UpdateRetailPayments;
       parambyname('Factored_Payment_Notes').asinteger := UpdateFactoredPayments;
+      parambyname('Factored_Virtual_Payment_Notes').asinteger := UpdateVirtualPayments;
       parambyname('Email_Quotation_Notes').asinteger := UpdateQuotationEmail;
       parambyname('Email_Retail_Quote_Notes').asinteger := UpdateRetailQuotationEmail;
       parambyname('Email_Sales_Confirm_Notes').asinteger := UpdateSalesConfirmEmail;
@@ -587,22 +592,22 @@ begin
       parambyname('Fax_Number').asstring := edtFaxNumber.Text;
       parambyname('Web_Address').asstring := edtWebAddress.Text;
       parambyname('Email_Address').asstring := edtemailAddress.Text;
-      parambyname('Company_Reg_Number').asstring := edtCompanyNumber.Text;
+      parambyname('Company_Reg_Number').asstring := edtCompanyNumber.Text + ' ';
       parambyname('Vat_Number').asstring := edtVatNumber.Text;
       parambyname('Unique_Tax_Reference').asstring := edtUniqueTaxReference.Text;
 
-      parambyname('Install_Rate').asfloat := StrToFloatDef(edtInstallRate.Text, 0, FormatSettings);
-      parambyname('Survey_Rate').asfloat := StrToFloatDef(edtSurveyRate.Text, 0, FormatSettings);
-      parambyname('Delivery_Rate').asfloat := StrToFloatDef(edtDeliveryRate.Text, 0, FormatSettings);
-      parambyname('Discount_Rate').asfloat := StrToFloatDef(edtDiscountRate.Text, 0, FormatSettings);
-      parambyname('Deposit_Terms').asfloat := StrToFloatDef(edtDepositTerms.Text, 0, FormatSettings);
+      parambyname('Install_Rate').asfloat := strtofloat(edtInstallRate.Text);
+      parambyname('Survey_Rate').asfloat := strtofloat(edtSurveyRate.Text);
+      parambyname('Delivery_Rate').asfloat := strtofloat(edtDeliveryRate.Text);
+      parambyname('Discount_Rate').asfloat := strtofloat(edtDiscountRate.Text);
+      parambyname('Deposit_Terms').asfloat := strtofloat(edtDepositTerms.Text);
       if dblkpUpstand.keyvalue = 0 then
         parambyname('Underslip_Thickness').clear
       else
         parambyname('Underslip_Thickness').asinteger := dblkpUpstand.KeyValue;
 
-      parambyname('Upstand_Polish_Price').asfloat := StrToFloatDef(edtUpstandPolishPrice.Text, 0, FormatSettings);
-      parambyname('Upstand_Polish_Cost').asfloat := StrToFloatDef(edtUpstandPolishCost.Text, 0, FormatSettings);
+      parambyname('Upstand_Polish_Price').asfloat := strtofloat(edtUpstandPolishPrice.Text);
+      parambyname('Upstand_Polish_Cost').asfloat := strtofloat(edtUpstandPolishCost.Text);
       parambyname('Quote_Prefix').asstring := edtQuotePrefix.Text;
       parambyname('Job_Prefix').asstring := edtJobPrefix.Text;
 
@@ -619,7 +624,7 @@ begin
         parambyname('Contract_Inactive_Reason').clear
       else
         parambyname('Contract_Inactive_Reason').asinteger := dblkpInactiveContract.KeyValue;
-        
+
       parambyname('Default_Vat').asinteger := dblkpDefaultVat.KeyValue;
       parambyname('Nominal_Level').asstring := dblkpNominalLevel.text;
       parambyname('Default_Sales_Nominal').asstring := edtDefaultSalesNominal.text;
@@ -636,10 +641,10 @@ begin
       parambyname('Sales_Document_Directory').asstring := edtSalesDocumentDirectory.Text;
       parambyname('Job_Document_Directory').asstring := edtJobDocumentDirectory.Text;
       parambyname('Contract_Document_Directory').asstring := edtContractDocumentDirectory.Text;
-      parambyname('Default_Mileage_Rate').asfloat := StrToFloatDef(edtDefaultMileageRate.Text, 0, FormatSettings);
-      parambyname('Default_Labour_Rate').asfloat := StrToFloatDef(edtDefaultLabourRate.Text, 0, FormatSettings);
-      parambyname('Default_Handling_Rate').asfloat := StrToFloatDef(edtDefaultHandlingRate.Text, 0, FormatSettings);
-      parambyname('Waste_Cost_Multiplier').asfloat := StrToFloatDef(edtWasteCostMultiplier.Text, 0, FormatSettings);
+      parambyname('Default_Mileage_Rate').asfloat := strtofloat(edtDefaultMileageRate.Text);
+      parambyname('Default_Labour_Rate').asfloat := strtofloat(edtDefaultLabourRate.Text);
+      parambyname('Default_Handling_Rate').asfloat := strtofloat(edtDefaultHandlingRate.Text);
+      parambyname('Waste_Cost_Multiplier').asfloat := strtofloat(edtWasteCostMultiplier.Text);
       if dblkpSchedulePackage.keyvalue = '' then
         parambyname('Schedule_Package').clear
       else
@@ -659,17 +664,17 @@ begin
       if dblkpAccountManager.KeyValue = 0 then
         parambyname('Account_Manager').clear
       else
-        parambyname('Account_Manager').asinteger := dblkpAccountManager.ListValue;
+        parambyname('Account_Manager').asinteger := dblkpAccountManager.KeyValue;
 
       if dblkpSalesLeadSource.KeyValue = 0 then
         parambyname('Sales_Lead_Source').clear
       else
-        parambyname('Sales_Lead_Source').asinteger := dblkpSalesLeadSource.ListValue;
+        parambyname('Sales_Lead_Source').asinteger := dblkpSalesLeadSource.KeyValue;
 
       if dblkpCustSalesLeadSource.KeyValue = 0 then
         parambyname('Customer_Sales_Lead_Source').clear
       else
-        parambyname('Customer_Sales_Lead_Source').asinteger := dblkpCustSalesLeadSource.ListValue;
+        parambyname('Customer_Sales_Lead_Source').asinteger := dblkpCustSalesLeadSource.KeyValue;
 
       parambyname('Website_Image_Directory').asstring := edtWebsiteImageDirectory.text;
 
@@ -686,6 +691,7 @@ begin
       parambyname('Invoice_Payment_Notes').asinteger := UpdatePayments;
       parambyname('Retail_Payment_Notes').asinteger := UpdateRetailPayments;
       parambyname('Factored_Payment_Notes').asinteger := UpdateFactoredPayments;
+      parambyname('Factored_Virtual_Payment_Notes').asinteger := UpdateVirtualPayments;
       parambyname('Email_Quotation_Notes').asinteger := UpdateQuotationEmail;
       parambyname('Email_Retail_Quote_Notes').asinteger := UpdateRetailQuotationEmail;
       parambyname('Email_Sales_Confirm_Notes').asinteger := UpdateSalesConfirmEmail;
@@ -762,7 +768,6 @@ begin
       parambyname('Quotation_Document_Folder').asstring := edtQuotationDocumentFolder.Text;
       parambyname('Safety_Document_Folder').asstring := edtSafetyDocumentFolder.Text;
       parambyname('Remedial_Document_Folder').asstring := edtRemedialDocumentFolder.Text;
-      parambyname('Plan_Document_Folder').asstring := edtPlanDocumentFolder.text;
 
       ParamByName('Default_Quote_Valid_days').asinteger := spnQuoteValidDays.Value;
       ParamByName('Default_Quote_Follow_Up_days').asinteger := spnQuoteFollowUpDays.Value;
@@ -814,6 +819,21 @@ begin
   try
     Notes.DbKey := iFactoredPayments;
     Notes.DataInfo := memFactoredPayment.Text;
+    Notes.SaveToDB;
+    Result := Notes.DbKey;
+  finally
+    Notes.Free;
+  end;
+end;
+
+function TfrmWTMaintParams.UpdateVirtualPayments: Integer;
+var
+  Notes: TNotes;
+begin
+  Notes := TNotes.Create;
+  try
+    Notes.DbKey := iVirtualPayments;
+    Notes.DataInfo := memVirtualPayment.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -994,6 +1014,7 @@ begin
   memPayment.text := GetCompNotes(qryCompany.fieldbyname('Invoice_Payment_Notes').asinteger);
   memRetailPayment.text := GetCompNotes(qryCompany.fieldbyname('Retail_Payment_Notes').asinteger);
   memFactoredPayment.text := GetCompNotes(qryCompany.fieldbyname('Factored_Payment_Notes').asinteger);
+  memVirtualPayment.text := GetCompNotes(qryCompany.fieldbyname('Factored_Virtual_Payment_Notes').asinteger);
   memConfirm.text := GetCompNotes(qryCompany.fieldbyname('Order_Confirmation_Notes').asinteger);
   iTerms := qryCompany.Fieldbyname('Payment_Terms').Asinteger;
   iRetailTerms := qryCompany.Fieldbyname('Retail_Payment_Terms').Asinteger;
@@ -1001,8 +1022,10 @@ begin
   iPayments := qryCompany.Fieldbyname('Invoice_Payment_Notes').Asinteger;
   iRetailPayments := qryCompany.Fieldbyname('Retail_Payment_Notes').Asinteger;
   iFactoredPayments := qryCompany.Fieldbyname('Factored_Payment_Notes').Asinteger;
+  iVirtualPayments := qryCompany.Fieldbyname('Factored_Virtual_Payment_Notes').Asinteger;
   iConfirmation := qryCompany.Fieldbyname('Order_Confirmation_Notes').Asinteger;
 
+  {Email details}
   memEmailRetailQuote.text := GetCompNotes(qryCompany.fieldbyname('Email_Retail_Quote_Notes').asinteger);
   memEmailQuote.text := GetCompNotes(qryCompany.fieldbyname('Email_Quotation_Notes').asinteger);
   memEmailInvoice.text := GetCompNotes(qryCompany.fieldbyname('Email_Invoice_Notes').asinteger);
@@ -1208,7 +1231,8 @@ end;
 
 procedure TfrmWTMaintParams.chkbxUseContractQuotingClick(Sender: TObject);
 begin
-  chkbxContractQuoteBySlab.enabled := (Sender as TCheckBox).checked;
+  grpbxContractQuoting.Enabled := (Sender as TCheckBox).checked;
+//  chkbxContractQuoteBySlab.enabled := (Sender as TCheckBox).checked;
 end;
 
 procedure TfrmWTMaintParams.BitBtn1Click(Sender: TObject);

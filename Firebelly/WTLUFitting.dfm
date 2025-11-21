@@ -1,14 +1,13 @@
 object frmWTLUFitting: TfrmWTLUFitting
   Left = 186
   Top = 121
-  ActiveControl = cmbCustomerFilter
   Caption = 'Fitting Details'
-  ClientHeight = 405
-  ClientWidth = 1259
+  ClientHeight = 434
+  ClientWidth = 1288
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -20,98 +19,11 @@ object frmWTLUFitting: TfrmWTLUFitting
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
-  object CoolBar2: TCoolBar
-    Left = 0
-    Top = 0
-    Width = 1259
-    Height = 32
-    Bands = <
-      item
-        Control = Panel3
-        ImageIndex = -1
-        MinHeight = 30
-        Width = 1263
-      end>
-    ExplicitWidth = 1265
-    object Panel3: TPanel
-      Left = 11
-      Top = 0
-      Width = 1250
-      Height = 30
-      Align = alLeft
-      BevelOuter = bvNone
-      Color = 16642529
-      ParentBackground = False
-      TabOrder = 0
-      DesignSize = (
-        1244
-        30)
-      object Label2: TLabel
-        Left = 0
-        Top = 1
-        Width = 50
-        Height = 25
-        Caption = 'Fitting'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clNavy
-        Font.Height = -18
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label4: TLabel
-        Left = 981
-        Top = 6
-        Width = 81
-        Height = 15
-        Anchors = [akTop, akRight]
-        Caption = 'Customer Filter'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clNavy
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitLeft = 976
-      end
-      object lblWorkinProgress: TLabel
-        Left = 64
-        Top = 3
-        Width = 85
-        Height = 21
-        Caption = '-  Tomorrow'
-        Color = clSilver
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentColor = False
-        ParentFont = False
-      end
-      object cmbCustomerFilter: TComboBox
-        Left = 1068
-        Top = 3
-        Width = 145
-        Height = 21
-        Style = csDropDownList
-        Anchors = [akTop, akRight]
-        TabOrder = 0
-        OnChange = cmbCustomerFilterChange
-        Items.Strings = (
-          'All'
-          'Trade'
-          'Retail'
-          'Commercial')
-        ExplicitLeft = 1074
-      end
-    end
-  end
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 386
-    Width = 1259
+    Top = 415
+    Width = 1288
     Height = 19
     Panels = <
       item
@@ -123,48 +35,46 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Width = 50
       end>
-    ExplicitTop = 395
-    ExplicitWidth = 1265
+    ExplicitTop = 368
+    ExplicitWidth = 1247
   end
   object Panel1: TPanel
     Left = 0
-    Top = 345
-    Width = 1259
+    Top = 374
+    Width = 1288
     Height = 41
     Align = alBottom
     ParentBackground = False
-    TabOrder = 2
-    ExplicitTop = 354
-    ExplicitWidth = 1265
+    TabOrder = 1
+    ExplicitTop = 368
     DesignSize = (
-      1259
+      1288
       41)
     object Label1: TLabel
       Left = 8
-      Top = 15
-      Width = 34
-      Height = 13
+      Top = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 932
-      Top = 15
-      Width = 59
-      Height = 13
+      Left = 1020
+      Top = 13
+      Width = 69
+      Height = 17
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
-      ExplicitLeft = 999
     end
     object Label6: TLabel
-      Left = 536
-      Top = 15
-      Width = 64
-      Height = 13
+      Left = 534
+      Top = 13
+      Width = 69
+      Height = 17
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1096
+      Left = 1193
       Top = 9
       Width = 75
       Height = 25
@@ -172,25 +82,23 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 1108
     end
     object edtSearch: TEdit
       Left = 56
-      Top = 11
+      Top = 9
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 997
-      Top = 11
+      Left = 1095
+      Top = 9
       Width = 73
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 1009
     end
     object BitBtn2: TBitBtn
       Left = 240
@@ -204,28 +112,11 @@ object frmWTLUFitting: TfrmWTLUFitting
     object chkbxShowOnlyScheduled: TCheckBox
       Left = 328
       Top = 13
-      Width = 177
+      Width = 185
       Height = 17
       Caption = 'Only Show Scheduled Orders'
       TabOrder = 4
       OnClick = chkbxShowOnlyScheduledClick
-    end
-    object cmbActionDate: TComboBox
-      Left = 608
-      Top = 12
-      Width = 177
-      Height = 19
-      Style = csOwnerDrawFixed
-      ItemHeight = 13
-      TabOrder = 5
-      OnChange = cmbActionDateChange
-      Items.Strings = (
-        'Tomorrow - Excluding Weekends'
-        'Tomorrow'
-        'Today'
-        'Yesterday'
-        'Yesterday - Excluding Weekends'
-        'Selected Date')
     end
     object pnlDateSelection: TPanel
       Left = 792
@@ -234,32 +125,32 @@ object frmWTLUFitting: TfrmWTLUFitting
       Height = 39
       BevelOuter = bvNone
       ParentBackground = False
-      TabOrder = 6
+      TabOrder = 5
       Visible = False
       DesignSize = (
         225
         39)
       object Label8: TLabel
-        Left = 8
-        Top = 13
-        Width = 73
-        Height = 13
+        Left = 9
+        Top = 12
+        Width = 83
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Selected Date:'
       end
       object edtTempDate: TEdit
-        Left = 88
-        Top = 11
+        Left = 97
+        Top = 8
         Width = 81
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
         OnChange = edtTempDateChange
       end
       object btnTempDate: TBitBtn
-        Left = 176
-        Top = 9
+        Left = 184
+        Top = 8
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -280,27 +171,44 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnTempDateClick
       end
     end
+    object cmbActionDate: TComboBox
+      Left = 610
+      Top = 10
+      Width = 177
+      Height = 25
+      Style = csDropDownList
+      TabOrder = 6
+      OnChange = cmbActionDateChange
+      Items.Strings = (
+        'Tomorrow - Excluding Weekends'
+        'Tomorrow'
+        'Today'
+        'Yesterday'
+        'Yesterday - Excluding Weekends'
+        'Selected Date')
+    end
   end
   object CoolBar1: TCoolBar
     Left = 0
-    Top = 32
-    Width = 1259
+    Top = 41
+    Width = 1288
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1263
+        Width = 1282
       end>
-    ExplicitWidth = 1265
+    ExplicitTop = 32
+    ExplicitWidth = 1247
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1250
+      Width = 1273
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 59
+      ButtonHeight = 40
+      ButtonWidth = 67
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -317,7 +225,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnChangeClick
       end
       object btnFitting: TToolButton
-        Left = 59
+        Left = 67
         Top = 0
         Hint = 'print a template check list'
         Caption = 'Fitting'
@@ -326,7 +234,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnFittingClick
       end
       object btnDeliveryNote: TToolButton
-        Left = 118
+        Left = 134
         Top = 0
         Hint = 'Print Delivery Notes'
         Caption = 'Delivery'
@@ -337,7 +245,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnDeliveryNoteClick
       end
       object btnReturned: TToolButton
-        Left = 177
+        Left = 201
         Top = 0
         Caption = 'Returned'
         Enabled = False
@@ -345,7 +253,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnReturnedClick
       end
       object btnComplete: TToolButton
-        Left = 236
+        Left = 268
         Top = 0
         Hint = 'convert a sales order quotation to a job'
         Caption = 'Complete'
@@ -356,7 +264,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         OnClick = btnCompleteClick
       end
       object ToolButton1: TToolButton
-        Left = 295
+        Left = 335
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -364,7 +272,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 303
+        Left = 343
         Top = 0
         Hint = 'sales order reports'
         Caption = 'Reports'
@@ -377,20 +285,20 @@ object frmWTLUFitting: TfrmWTLUFitting
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 77
-    Width = 1259
-    Height = 268
+    Top = 86
+    Width = 1288
+    Height = 288
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -525,7 +433,6 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Expanded = False
         FieldName = 'Quote'
-        Width = 74
         Visible = True
       end
       item
@@ -560,6 +467,93 @@ object frmWTLUFitting: TfrmWTLUFitting
         Title.Caption = 'Version Number'
         Visible = True
       end>
+  end
+  object CoolBar2: TCoolBar
+    Left = 0
+    Top = 0
+    Width = 1288
+    Height = 41
+    Bands = <
+      item
+        Control = Panel3
+        ImageIndex = -1
+        MinHeight = 41
+        Width = 1282
+      end>
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 1247
+    object Panel3: TPanel
+      Left = 11
+      Top = 0
+      Width = 1273
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 16642529
+      ParentBackground = False
+      TabOrder = 0
+      DesignSize = (
+        1273
+        41)
+      object Label2: TLabel
+        Left = 0
+        Top = 7
+        Width = 50
+        Height = 25
+        Caption = 'Fitting'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -18
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 1004
+        Top = 12
+        Width = 81
+        Height = 15
+        Anchors = [akTop, akRight]
+        Caption = 'Customer Filter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblWorkinProgress: TLabel
+        Left = 64
+        Top = 9
+        Width = 85
+        Height = 21
+        Caption = '-  Tomorrow'
+        Color = clSilver
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object cmbCustomerFilter: TComboBox
+        Left = 1091
+        Top = 7
+        Width = 145
+        Height = 25
+        Style = csDropDownList
+        Anchors = [akTop, akRight]
+        TabOrder = 0
+        OnChange = cmbCustomerFilterChange
+        Items.Strings = (
+          'All'
+          'Trade'
+          'Retail'
+          'Commercial')
+      end
+    end
   end
   object imgLstHot: TImageList
     Left = 176

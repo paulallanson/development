@@ -3,8 +3,8 @@ object frmWTRSQuote: TfrmWTRSQuote
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Quote'
-  ClientHeight = 354
-  ClientWidth = 458
+  ClientHeight = 372
+  ClientWidth = 452
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSQuote: TfrmWTRSQuote
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    458
-    354)
+    452
+    372)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 317
+    Top = 335
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -28,22 +28,22 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 14
     OnClick = btnPrintClick
-    ExplicitTop = 308
+    ExplicitTop = 326
   end
   object Button4: TButton
     Left = 374
-    Top = 317
+    Top = 335
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 17
     OnClick = Button4Click
-    ExplicitTop = 308
+    ExplicitTop = 326
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
-    Top = 144
+    Top = 160
     Width = 200
     Height = 17
     Caption = 'Print your logo'
@@ -51,7 +51,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object SelectLst: TListBox
     Left = 408
-    Top = 152
+    Top = 168
     Width = 25
     Height = 105
     ItemHeight = 13
@@ -61,7 +61,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxShowDetail: TCheckBox
     Left = 8
-    Top = 168
+    Top = 184
     Width = 200
     Height = 17
     Caption = 'Show price breakdown'
@@ -70,7 +70,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object btnPreview: TButton
     Left = 96
-    Top = 317
+    Top = 335
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -78,11 +78,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 15
     OnClick = btnPreviewClick
-    ExplicitTop = 308
+    ExplicitTop = 326
   end
   object btnEmail: TButton
     Left = 184
-    Top = 317
+    Top = 335
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -90,11 +90,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 16
     OnClick = btnEmailClick
-    ExplicitTop = 308
+    ExplicitTop = 326
   end
   object chkbxOnlyShowGrandTotal: TCheckBox
     Left = 8
-    Top = 264
+    Top = 280
     Width = 200
     Height = 17
     Caption = 'ONLY Show Grand Total'
@@ -105,7 +105,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Left = 8
     Top = 8
     Width = 313
-    Height = 129
+    Height = 146
     Caption = 'Quote Number Selection'
     ParentBackground = False
     TabOrder = 0
@@ -131,7 +131,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxIncludeConfirm: TCheckBox
     Left = 216
-    Top = 168
+    Top = 184
     Width = 145
     Height = 17
     Caption = 'Include Order Confirmation'
@@ -139,7 +139,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxExcludeTemplate: TCheckBox
     Left = 8
-    Top = 216
+    Top = 232
     Width = 200
     Height = 17
     Caption = 'Exclude Template && Fitting Charges'
@@ -147,7 +147,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxShowDiscount: TCheckBox
     Left = 8
-    Top = 192
+    Top = 208
     Width = 200
     Height = 17
     Caption = 'Highlight Discount offered'
@@ -155,7 +155,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxPrintTemplate: TCheckBox
     Left = 216
-    Top = 192
+    Top = 208
     Width = 242
     Height = 17
     Caption = 'Print/Email Template Conditions Document'
@@ -165,7 +165,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxPrintAvailability: TCheckBox
     Left = 216
-    Top = 216
+    Top = 232
     Width = 225
     Height = 17
     Caption = 'Print/Email Availability Terms Document'
@@ -175,7 +175,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxPrintTerms: TCheckBox
     Left = 216
-    Top = 240
+    Top = 256
     Width = 238
     Height = 17
     Caption = 'Print/Email Terms && Conditions Document'
@@ -185,7 +185,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxShowOffer: TCheckBox
     Left = 216
-    Top = 144
+    Top = 160
     Width = 177
     Height = 17
     Caption = 'Show Offer Image'
@@ -206,7 +206,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxEndUserMarkup: TCheckBox
     Left = 8
-    Top = 240
+    Top = 256
     Width = 200
     Height = 17
     Caption = 'Apply End User Markup/Multiplier'
@@ -214,12 +214,57 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxHideAllPrices: TCheckBox
     Left = 8
-    Top = 288
+    Top = 304
     Width = 200
     Height = 17
     Caption = 'Hide ALL prices and totals'
     TabOrder = 8
     OnClick = chkbxHideAllPricesClick
+  end
+  object grpbxPrint: TGroupBox
+    Left = 216
+    Top = 279
+    Width = 234
+    Height = 49
+    Caption = 'Print  '
+    TabOrder = 19
+    object Label1: TLabel
+      Left = 16
+      Top = 24
+      Width = 30
+      Height = 13
+      Caption = 'Pages'
+    end
+    object Label3: TLabel
+      Left = 64
+      Top = 24
+      Width = 29
+      Height = 13
+      Caption = 'From:'
+    end
+    object Label4: TLabel
+      Left = 144
+      Top = 24
+      Width = 14
+      Height = 13
+      Caption = 'to:'
+    end
+    object edtFirstPage: TCREditInt
+      Left = 99
+      Top = 20
+      Width = 39
+      Height = 21
+      TabOrder = 0
+      Text = '1'
+    end
+    object edtLastPage: TCREditInt
+      Left = 164
+      Top = 20
+      Width = 53
+      Height = 21
+      TabOrder = 1
+      Text = '10000'
+    end
   end
   object qryGetQuotes: TFDQuery
     ConnectionName = 'WT'

@@ -132,6 +132,7 @@ type
     qrdbtExpiryDate: TQRDBText;
     imgPromotion: TQRImage;
     qrdbDescription: TQRDBText;
+    qrbPrintPage: TQRBand;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -173,6 +174,7 @@ type
     function BuildNotes(const iNotes: integer): string;
     function GetCompanyAddress: string;
   public
+    iFirstPage, iLastPage: integer;
     Quote: integer;
     bApplyEndUserMarkup: boolean;
     bEndUser: boolean;
@@ -230,6 +232,8 @@ begin
   qrpDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }
   qrpDetails.PrinterSettings.copies := Copies;   {set the number of copies }
   qrpDetails.PrinterSettings.PaperSize := Size;   {set the number of copies }
+  qrpDetails.PrinterSettings.firstpage := ifirstPage;
+  qrpDetails.PrinterSettings.lastpage := iLastPage;
 
   qrcbAcceptanceHeader.Enabled := bPrintAcceptance;
   qrcbSignature.enabled := bPrintAcceptance;

@@ -12,12 +12,6 @@ uses
 
 type
   TfrmWTLUContracts = class(TForm)
-    CoolBar2: TCoolBar;
-    Panel3: TPanel;
-    Label2: TLabel;
-    lblWorkinProgress: TLabel;
-    Label4: TLabel;
-    cmbCustomerFilter: TComboBox;
     CoolBar1: TCoolBar;
     ToolBar1: TToolBar;
     btnAdd: TToolButton;
@@ -40,6 +34,12 @@ type
     stsBrDetails: TStatusBar;
     imgLstHot: TImageList;
     tmrSearch: TTimer;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label2: TLabel;
+    lblWorkinProgress: TLabel;
+    Label4: TLabel;
+    cmbCustomerFilter: TComboBox;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);

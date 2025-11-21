@@ -168,6 +168,7 @@ type
     function BuildNotes(const iNotes: integer): string;
     function GetCompanyAddress: string;
   public
+    iFirstPage, iLastPage: integer;
     Quote: integer;
     bEndUser: boolean;
     bExcludeTemplate: boolean;

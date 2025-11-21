@@ -2,8 +2,8 @@ object frmwtLUSales: TfrmwtLUSales
   Left = 13
   Top = 98
   Caption = 'Sales Order details'
-  ClientHeight = 331
-  ClientWidth = 1334
+  ClientHeight = 322
+  ClientWidth = 1328
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUSales: TfrmwtLUSales
   TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 312
-    Width = 1334
+    Top = 303
+    Width = 1328
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUSales: TfrmwtLUSales
   end
   object Panel1: TPanel
     Left = 0
-    Top = 271
-    Width = 1334
+    Top = 262
+    Width = 1328
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1334
+      1328
       41)
     object Label1: TLabel
       Left = 8
@@ -61,7 +61,7 @@ object frmwtLUSales: TfrmwtLUSales
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 991
+      Left = 979
       Top = 15
       Width = 69
       Height = 17
@@ -71,7 +71,7 @@ object frmwtLUSales: TfrmwtLUSales
       ExplicitLeft = 1057
     end
     object Button1: TButton
-      Left = 1165
+      Left = 1153
       Top = 10
       Width = 75
       Height = 25
@@ -89,7 +89,7 @@ object frmwtLUSales: TfrmwtLUSales
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1066
+      Left = 1054
       Top = 11
       Width = 73
       Height = 25
@@ -109,20 +109,21 @@ object frmwtLUSales: TfrmwtLUSales
   end
   object CoolBar1: TCoolBar
     Left = 0
-    Top = 32
-    Width = 1334
+    Top = 41
+    Width = 1328
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1328
+        Width = 1322
       end>
+    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1319
+      Width = 1313
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 74
@@ -279,9 +280,9 @@ object frmwtLUSales: TfrmwtLUSales
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 77
-    Width = 1334
-    Height = 194
+    Top = 86
+    Width = 1328
+    Height = 176
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     DrawingStyle = gdsGradient
@@ -457,31 +458,31 @@ object frmwtLUSales: TfrmwtLUSales
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1334
-    Height = 32
+    Width = 1328
+    Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
-        MinHeight = 30
-        Width = 1328
+        MinHeight = 41
+        Width = 1322
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1319
-      Height = 30
+      Width = 1313
+      Height = 41
       Align = alLeft
       BevelOuter = bvNone
       Color = 16642529
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1319
-        30)
+        1313
+        41)
       object Label2: TLabel
         Left = 0
-        Top = 1
+        Top = 7
         Width = 99
         Height = 25
         Caption = 'Sales Orders'
@@ -494,7 +495,7 @@ object frmwtLUSales: TfrmwtLUSales
       end
       object lblWorkinProgress: TLabel
         Left = 120
-        Top = 3
+        Top = 9
         Width = 196
         Height = 21
         Caption = '-  displaying only live orders'
@@ -508,8 +509,8 @@ object frmwtLUSales: TfrmwtLUSales
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1048
-        Top = 6
+        Left = 1042
+        Top = 12
         Width = 81
         Height = 15
         Anchors = [akTop, akRight]
@@ -520,11 +521,10 @@ object frmwtLUSales: TfrmwtLUSales
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1096
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1135
-        Top = 3
+        Left = 1129
+        Top = 7
         Width = 145
         Height = 25
         Style = csDropDownList

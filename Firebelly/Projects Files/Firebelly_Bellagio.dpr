@@ -263,7 +263,10 @@ uses
   WTLUSalesOrderCharges in '..\WTLUSalesOrderCharges.pas' {frmWTLUSalesOrderCharges},
   WTMaintSalesOrderAssociateCharge in '..\WTMaintSalesOrderAssociateCharge.pas' {frmWTMaintSalesOrderAssociateCharge},
   WTRPSOAllocated in '..\WTRPSOAllocated.pas' {frmWTRPSOAllocated},
-  wtRSSOAllocated in '..\wtRSSOAllocated.pas' {frmWTRSSOAllocated};
+  wtRSSOAllocated in '..\wtRSSOAllocated.pas' {frmWTRSSOAllocated},
+  WTRemedialDM in '..\WTRemedialDM.pas' {dtmdlRemedial: TDataModule},
+  WTRSSalesByInvoice in '..\WTRSSalesByInvoice.pas' {frmWTRSSalesbyInvoice},
+  WTLUSupplier in '..\WTLUSupplier.pas' {frmWTLUSupplier};
 
 {$R *.RES}
 

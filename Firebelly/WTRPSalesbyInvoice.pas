@@ -115,6 +115,9 @@ type
     StringField13: TWideStringField;
     qryReportRevenue_Centre_Descr: TWideStringField;
     qryReportRequires_App_For_Payment: TWideStringField;
+    QRLabel8: TQRLabel;
+    qrlblFitDate: TQRLabel;
+    qryGetSO: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;
@@ -135,6 +138,7 @@ type
     FChargeType: integer;
     procedure SetCustomerCategory(const Value: integer);
     procedure SetChargeType(const Value: integer);
+    function GetSOFittingDate(SO: integer): TDateTime;
   public
     bOnlyShowAFP: boolean;
     SortBy: integer;
@@ -218,6 +222,12 @@ procedure TfrmwtRPSalesbyInvoice.qrsbDetailsBeforePrint(Sender: TQRCustomBand;
 var
   rMargin, rCostPerc, rCost: real;
 begin
+  {Get the Fitting Date}
+  if (qryReport.fieldbyname('Reference').asstring <> '') and (qryReport.fieldbyname('Invoice_or_Credit').asstring = 'I')  then
+    qrlblFitDate.caption := paDatestr(GetSOFittingDate(qryReport.fieldbyname('Reference').asinteger))
+  else
+    qrlblFitDate.caption := '';
+
   if qryReport.fieldbyname('Invoice_or_Credit').asstring = 'C' then
     rCost := (qryReport.fieldbyname('Total_Materials').asfloat * -1)
   else
@@ -231,7 +241,7 @@ begin
     rCostPerc := 100
   else
     rCostPerc := (qryReport.fieldbyname('Total_Materials').asfloat/qryReport.fieldbyname('Goods_Value').asfloat)*100;
-    
+
   qrlblCostPerc.caption := formatfloat('0.00%',rCostPerc);
 
   CustomerSell := CustomerSell + qryReport.fieldbyname('Goods_Value').asfloat;
@@ -394,6 +404,7 @@ begin
     + ',"Customer Type"'
     + ',"Rep"'
     + ',"Sales Order"'
+    + ',"Fitting Date"'
     + ',"Description"'
     + ',"Sales Value"'
     + ',"Vat Value"'
@@ -408,6 +419,20 @@ begin
   writeLn(self.exportFile, tempStr);
   qrpdetails.Prepare;
   CloseFile(self.exportFile);
+end;
+
+function TfrmwtRPSalesByInvoice.GetSOFittingDate(SO: integer): TDateTime;
+begin
+  Result := 0;
+  with qryGetSO do
+    begin
+      close;
+      parambyname('Sales_Order').asinteger := SO;
+      open;
+
+      if recordcount > 0 then
+        Result := fieldbyname('Date_Required').asdatetime;
+    end;
 end;
 
 procedure TfrmwtRPSalesbyInvoice.qrsbDetailsAfterPrint(
@@ -450,6 +475,9 @@ begin
 
     //Order Number
     tempStr := tempStr + ',"' + qryReport.fieldbyname('Reference').asstring + '"';
+
+    //Fitting Date
+    tempStr := tempStr + ',"' + qrlblFitDate.caption + '"';
 
     //Job Description
     tempStr := tempStr + ',"' + qryReport.fieldbyname('Description').asstring + '"';

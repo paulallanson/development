@@ -10,14 +10,14 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 32
     Top = 184
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -70,35 +70,35 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0
     object qrbPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 718
-      Height = 147
+      Left = 47
+      Top = 47
+      Width = 898
+      Height = 184
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        388.937500000000000000
-        1899.708333333333000000)
+        389.466666666666700000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblSOCaption: TQRLabel
-        Left = 545
+        Left = 679
         Top = 0
-        Width = 168
-        Height = 43
+        Width = 212
+        Height = 54
         Size.Values = (
-          113.770833333333300000
-          1441.979166666667000000
+          114.300000000000000000
+          1437.216666666667000000
           0.000000000000000000
-          444.500000000000000000)
+          448.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -108,7 +108,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -37
+        Font.Height = -47
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -119,10 +119,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 28
       end
       object memAddress: TQRRichText
-        Left = 200
-        Top = 40
-        Width = 513
-        Height = 16
+        Left = 250
+        Top = 50
+        Width = 641
+        Height = 20
         Enabled = False
         Size.Values = (
           42.333333333333330000
@@ -147,10 +147,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
           'memAddress')
       end
       object qriHeadLogo: TQRImage
-        Left = 12
-        Top = 8
-        Width = 180
-        Height = 120
+        Left = 15
+        Top = 10
+        Width = 225
+        Height = 150
         Size.Values = (
           317.500000000000000000
           31.750000000000000000
@@ -163,10 +163,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
       end
     end
     object qrsdFitterDateTimes: TQRSubDetail
-      Left = 38
-      Top = 241
-      Width = 718
-      Height = 312
+      Left = 47
+      Top = 302
+      Width = 898
+      Height = 390
       AlignToBottom = False
       BeforePrint = qrsdFitterDateTimesBeforePrint
       TransparentBand = False
@@ -174,7 +174,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
       ForceNewPage = False
       Size.Values = (
         825.500000000000000000
-        1899.708333333333000000)
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -182,10 +182,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
       PrintBefore = False
       PrintIfEmpty = True
       object gtQRShape1: TQRShape
-        Left = 8
-        Top = 229
-        Width = 707
-        Height = 49
+        Left = 10
+        Top = 286
+        Width = 884
+        Height = 61
         Size.Values = (
           129.645833333333300000
           21.166666666666670000
@@ -198,10 +198,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRShape3: TQRShape
-        Left = 8
-        Top = 173
-        Width = 707
-        Height = 49
+        Left = 10
+        Top = 216
+        Width = 884
+        Height = 61
         Size.Values = (
           129.645833333333300000
           21.166666666666670000
@@ -214,10 +214,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object QRDBText4: TQRDBText
-        Left = 15
-        Top = 202
-        Width = 201
-        Height = 15
+        Left = 19
+        Top = 252
+        Width = 251
+        Height = 19
         Size.Values = (
           39.687500000000000000
           39.687500000000000000
@@ -234,7 +234,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         DataField = 'Reference'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -247,15 +247,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 15
-        Top = 179
-        Width = 120
-        Height = 15
+        Left = 19
+        Top = 224
+        Width = 134
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          39.687500000000000000
-          473.604166666666700000
-          317.500000000000000000)
+          40.216666666666670000
+          40.216666666666670000
+          474.133333333333300000
+          283.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -265,7 +265,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -276,15 +276,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object QRLabel1: TQRLabel
-        Left = 16
-        Top = 53
-        Width = 57
-        Height = 17
+        Left = 20
+        Top = 66
+        Width = 69
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          140.229166666666700000
-          150.812500000000000000)
+          139.700000000000000000
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -294,7 +294,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -305,15 +305,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 9
       end
       object qrlblFitDateLabel: TQRLabel
-        Left = 473
-        Top = 178
-        Width = 44
-        Height = 15
+        Left = 591
+        Top = 222
+        Width = 53
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1251.479166666667000000
-          470.958333333333300000
-          116.416666666666700000)
+          40.216666666666670000
+          1250.950000000000000000
+          469.900000000000000000
+          112.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -323,7 +323,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -334,15 +334,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object qrlblTemplateDateLabel: TQRLabel
-        Left = 233
-        Top = 178
-        Width = 83
-        Height = 15
+        Left = 291
+        Top = 222
+        Width = 97
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          616.479166666666700000
-          470.958333333333300000
-          219.604166666666700000)
+          40.216666666666670000
+          615.950000000000000000
+          469.900000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -352,7 +352,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -363,10 +363,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 8
-        Top = 30
-        Width = 328
-        Height = 137
+        Left = 10
+        Top = 38
+        Width = 410
+        Height = 171
         Size.Values = (
           362.479166666666700000
           21.166666666666670000
@@ -379,10 +379,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object qrmAddress: TQRMemo
-        Left = 14
-        Top = 51
-        Width = 289
-        Height = 105
+        Left = 18
+        Top = 64
+        Width = 361
+        Height = 131
         Size.Values = (
           277.812500000000000000
           37.041666666666670000
@@ -397,7 +397,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -407,10 +407,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object gtQRShape2: TQRShape
-        Left = 380
-        Top = 30
-        Width = 336
-        Height = 137
+        Left = 475
+        Top = 38
+        Width = 420
+        Height = 171
         Size.Values = (
           362.479166666666700000
           1005.416666666667000000
@@ -423,10 +423,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object qrmSiteAddress: TQRMemo
-        Left = 392
-        Top = 51
-        Width = 289
-        Height = 114
+        Left = 490
+        Top = 64
+        Width = 361
+        Height = 142
         Size.Values = (
           301.625000000000000000
           1037.166666666667000000
@@ -441,7 +441,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -451,10 +451,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object gtQRShape4: TQRShape
-        Left = 221
-        Top = 173
-        Width = 9
-        Height = 49
+        Left = 276
+        Top = 216
+        Width = 11
+        Height = 61
         Size.Values = (
           129.645833333333300000
           584.729166666666700000
@@ -467,10 +467,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRShape5: TQRShape
-        Left = 453
-        Top = 173
-        Width = 9
-        Height = 49
+        Left = 566
+        Top = 216
+        Width = 11
+        Height = 61
         Size.Values = (
           129.645833333333300000
           1198.562500000000000000
@@ -483,10 +483,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRShape6: TQRShape
-        Left = 8
-        Top = 194
-        Width = 707
-        Height = 5
+        Left = 10
+        Top = 243
+        Width = 884
+        Height = 6
         Size.Values = (
           13.229166666666670000
           21.166666666666670000
@@ -499,15 +499,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRLabel2: TQRLabel
-        Left = 14
-        Top = 34
-        Width = 57
-        Height = 16
+        Left = 18
+        Top = 42
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          37.041666666666670000
-          89.958333333333330000
-          150.812500000000000000)
+          38.100000000000000000
+          88.900000000000000000
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -517,7 +517,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -528,15 +528,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object gtQRLabel3: TQRLabel
-        Left = 392
-        Top = 34
-        Width = 61
-        Height = 16
+        Left = 490
+        Top = 42
+        Width = 71
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1037.166666666667000000
-          89.958333333333330000
-          161.395833333333300000)
+          88.900000000000000000
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -546,7 +546,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -557,15 +557,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object qrlblTemplateDate: TQRLabel
-        Left = 232
-        Top = 201
-        Width = 86
-        Height = 16
+        Left = 290
+        Top = 251
+        Width = 105
+        Height = 20
         Size.Values = (
           42.333333333333330000
           613.833333333333300000
-          531.812500000000000000
-          227.541666666666700000)
+          531.283333333333300000
+          222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -575,7 +575,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -586,15 +586,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object qrlblDateRequired: TQRLabel
-        Left = 472
-        Top = 201
-        Width = 86
-        Height = 16
+        Left = 590
+        Top = 251
+        Width = 103
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1248.833333333333000000
-          531.812500000000000000
-          227.541666666666700000)
+          531.283333333333300000
+          218.016666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -604,7 +604,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -615,10 +615,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object gtQRDBText2: TQRDBText
-        Left = 15
-        Top = 234
-        Width = 690
-        Height = 15
+        Left = 19
+        Top = 293
+        Width = 863
+        Height = 19
         Size.Values = (
           39.687500000000000000
           39.687500000000000000
@@ -636,7 +636,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         DataField = 'Descriptive_Reference'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -649,10 +649,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 8
       end
       object gtQRShape9: TQRShape
-        Left = 8
-        Top = 2
-        Width = 329
-        Height = 25
+        Left = 10
+        Top = 3
+        Width = 411
+        Height = 31
         Size.Values = (
           66.145833333333330000
           21.166666666666670000
@@ -666,10 +666,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRShape10: TQRShape
-        Left = 100
-        Top = 2
-        Width = 9
-        Height = 25
+        Left = 125
+        Top = 3
+        Width = 11
+        Height = 31
         Size.Values = (
           66.145833333333330000
           264.583333333333300000
@@ -683,14 +683,14 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRLabel6: TQRLabel
-        Left = 18
-        Top = 7
-        Width = 80
-        Height = 17
+        Left = 23
+        Top = 9
+        Width = 100
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          47.625000000000000000
-          18.520833333333330000
+          44.450000000000000000
+          48.683333333333330000
+          19.050000000000000000
           211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -701,7 +701,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -712,15 +712,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRDBText3: TQRDBText
-        Left = 116
-        Top = 7
-        Width = 79
-        Height = 17
+        Left = 145
+        Top = 9
+        Width = 98
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           306.916666666666700000
-          18.520833333333330000
-          209.020833333333300000)
+          19.050000000000000000
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -731,7 +731,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         DataField = 'Sales_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -744,10 +744,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRShape15: TQRShape
-        Left = 381
-        Top = 2
-        Width = 334
-        Height = 25
+        Left = 476
+        Top = 3
+        Width = 417
+        Height = 31
         Size.Values = (
           66.145833333333330000
           1008.062500000000000000
@@ -761,15 +761,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRLabel7: TQRLabel
-        Left = 391
-        Top = 7
-        Width = 28
-        Height = 17
+        Left = 489
+        Top = 9
+        Width = 36
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1034.520833333333000000
-          18.520833333333330000
-          74.083333333333330000)
+          44.450000000000000000
+          1035.050000000000000000
+          19.050000000000000000
+          76.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -779,7 +779,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -790,14 +790,14 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRDBText6: TQRDBText
-        Left = 489
-        Top = 7
-        Width = 24
-        Height = 17
+        Left = 611
+        Top = 9
+        Width = 30
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1293.812500000000000000
-          18.520833333333330000
+          44.450000000000000000
+          1293.283333333333000000
+          19.050000000000000000
           63.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -809,7 +809,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         DataField = 'Job'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -822,10 +822,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRShape16: TQRShape
-        Left = 476
-        Top = 2
-        Width = 9
-        Height = 25
+        Left = 595
+        Top = 3
+        Width = 11
+        Height = 31
         Size.Values = (
           66.145833333333330000
           1259.416666666667000000
@@ -840,18 +840,18 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
       end
     end
     object qrgFitter: TQRGroup
-      Left = 38
-      Top = 185
-      Width = 718
-      Height = 2
+      Left = 47
+      Top = 231
+      Width = 898
+      Height = 3
       AlignToBottom = False
       Enabled = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
-        1899.708333333333000000)
+        6.350000000000000000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'Fitter_Name'
@@ -859,28 +859,28 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
       ReprintOnNewPage = False
     end
     object grpDate: TQRGroup
-      Left = 38
-      Top = 187
-      Width = 718
-      Height = 54
+      Left = 47
+      Top = 234
+      Width = 898
+      Height = 68
       AlignToBottom = False
       BeforePrint = grpDateBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        142.875000000000000000
-        1899.708333333333000000)
+        143.933333333333300000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'Date_Required'
       Master = qrsdFitterDateTimes
       ReprintOnNewPage = False
       object gtQRShape11: TQRShape
-        Left = 504
+        Left = 630
         Top = 0
-        Width = 209
-        Height = 51
+        Width = 261
+        Height = 64
         Size.Values = (
           134.937500000000000000
           1333.500000000000000000
@@ -894,10 +894,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRShape12: TQRShape
-        Left = 581
+        Left = 726
         Top = 0
-        Width = 9
-        Height = 51
+        Width = 11
+        Height = 64
         Size.Values = (
           134.937500000000000000
           1537.229166666667000000
@@ -911,10 +911,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRShape13: TQRShape
-        Left = 8
-        Top = 26
-        Width = 329
-        Height = 25
+        Left = 10
+        Top = 33
+        Width = 411
+        Height = 31
         Size.Values = (
           66.145833333333330000
           21.166666666666670000
@@ -928,10 +928,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRShape14: TQRShape
-        Left = 101
-        Top = 26
-        Width = 6
-        Height = 25
+        Left = 126
+        Top = 33
+        Width = 8
+        Height = 31
         Size.Values = (
           66.145833333333330000
           267.229166666666700000
@@ -945,15 +945,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object qrlblJobType: TQRLabel
-        Left = 18
-        Top = 31
-        Width = 44
-        Height = 17
+        Left = 23
+        Top = 39
+        Width = 58
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          47.625000000000000000
-          82.020833333333330000
-          116.416666666666700000)
+          44.450000000000000000
+          48.683333333333330000
+          82.550000000000000000
+          122.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -963,7 +963,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -974,15 +974,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRDBText4: TQRDBText
-        Left = 116
-        Top = 31
-        Width = 78
-        Height = 17
+        Left = 145
+        Top = 39
+        Width = 96
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           306.916666666666700000
-          82.020833333333330000
-          206.375000000000000000)
+          82.550000000000000000
+          203.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -993,7 +993,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         DataField = 'Fitter_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1006,15 +1006,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRLabel5: TQRLabel
-        Left = 512
-        Top = 29
-        Width = 34
-        Height = 17
+        Left = 640
+        Top = 36
+        Width = 43
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1354.666666666667000000
-          76.729166666666670000
-          89.958333333333330000)
+          76.200000000000000000
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1024,7 +1024,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1035,15 +1035,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRDBText5: TQRDBText
-        Left = 596
-        Top = 29
-        Width = 95
-        Height = 17
+        Left = 745
+        Top = 36
+        Width = 117
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1576.916666666667000000
-          76.729166666666670000
-          251.354166666666700000)
+          76.200000000000000000
+          247.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1054,7 +1054,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         DataField = 'Date_Required'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1067,10 +1067,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRShape7: TQRShape
-        Left = 504
-        Top = 22
-        Width = 209
-        Height = 5
+        Left = 630
+        Top = 27
+        Width = 261
+        Height = 6
         Size.Values = (
           13.229166666666670000
           1333.500000000000000000
@@ -1083,15 +1083,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRLabel1: TQRLabel
-        Left = 512
-        Top = 5
-        Width = 63
-        Height = 17
+        Left = 640
+        Top = 6
+        Width = 79
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1354.666666666667000000
-          13.229166666666670000
-          166.687500000000000000)
+          12.700000000000000000
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1101,7 +1101,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1112,15 +1112,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 10
       end
       object gtQRDBText1: TQRDBText
-        Left = 596
-        Top = 5
-        Width = 62
-        Height = 17
+        Left = 745
+        Top = 6
+        Width = 77
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1576.916666666667000000
-          13.229166666666670000
-          164.041666666666700000)
+          12.700000000000000000
+          162.983333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1131,7 +1131,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         DataField = 'Job_Type'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1145,25 +1145,24 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
       end
     end
     object QRBand1: TQRBand
-      Left = 38
-      Top = 553
-      Width = 718
-      Height = 88
+      Left = 47
+      Top = 692
+      Width = 898
+      Height = 110
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         232.833333333333300000
-        1899.708333333333000000)
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageFooter
       object gtQRShape8: TQRShape
-        Left = 8
-        Top = 5
-        Width = 707
-        Height = 52
+        Left = 10
+        Top = 6
+        Width = 884
         Size.Values = (
           137.583333333333300000
           21.166666666666670000
@@ -1176,10 +1175,10 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         VertAdjust = 0
       end
       object gtQRMemo1: TQRMemo
-        Left = 16
-        Top = 8
-        Width = 689
-        Height = 41
+        Left = 20
+        Top = 10
+        Width = 861
+        Height = 51
         Size.Values = (
           108.479166666666700000
           42.333333333333330000
@@ -1194,7 +1193,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         Lines.Strings = (
@@ -1209,15 +1208,15 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         FontSize = 9
       end
       object gtQRSysData1: TQRSysData
-        Left = 607
-        Top = 64
-        Width = 108
-        Height = 16
+        Left = 768
+        Top = 80
+        Width = 126
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1606.020833333333000000
+          1625.600000000000000000
           169.333333333333300000
-          285.750000000000000000)
+          266.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1227,7 +1226,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False

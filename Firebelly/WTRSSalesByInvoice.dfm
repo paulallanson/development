@@ -26,7 +26,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 259
+    ExplicitTop = 251
   end
   object Button4: TButton
     Left = 384
@@ -38,7 +38,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 259
+    ExplicitTop = 251
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -72,7 +72,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 15
+      Width = 14
       Height = 13
       Caption = 'To:'
     end
@@ -215,7 +215,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
-    ExplicitTop = 259
+    ExplicitTop = 251
   end
   object btnExcel: TButton
     Left = 184
@@ -226,7 +226,7 @@ object frmWTRSSalesbyInvoice: TfrmWTRSSalesbyInvoice
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitTop = 259
+    ExplicitTop = 251
   end
   object OleContainer1: TOleContainer
     Left = 172

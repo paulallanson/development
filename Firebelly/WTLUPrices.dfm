@@ -2,12 +2,12 @@ object frmWTLUPrices: TfrmWTLUPrices
   Left = 13
   Top = 157
   Caption = 'Prices'
-  ClientHeight = 475
-  ClientWidth = 1422
+  ClientHeight = 466
+  ClientWidth = 1416
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmWTLUPrices: TfrmWTLUPrices
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 456
-    Width = 1422
+    Top = 447
+    Width = 1416
     Height = 19
     Panels = <
       item
@@ -38,59 +38,60 @@ object frmWTLUPrices: TfrmWTLUPrices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 394
-    Width = 1422
+    Top = 385
+    Width = 1416
     Height = 62
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 391
     object Label1: TLabel
-      Left = 8
-      Top = 12
-      Width = 42
-      Height = 13
+      Left = 3
+      Top = 31
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label3: TLabel
-      Left = 160
-      Top = 12
-      Width = 35
-      Height = 13
+      Left = 155
+      Top = 31
+      Width = 39
+      Height = 17
       Caption = 'Colour'
     end
     object Label5: TLabel
-      Left = 304
-      Top = 12
-      Width = 50
-      Height = 13
+      Left = 299
+      Top = 31
+      Width = 55
+      Height = 17
       Caption = 'Thickness'
     end
     object Label6: TLabel
-      Left = 448
-      Top = 12
-      Width = 33
-      Height = 13
+      Left = 443
+      Top = 31
+      Width = 37
+      Height = 17
       Caption = 'Group'
     end
     object Label7: TLabel
-      Left = 592
-      Top = 12
-      Width = 70
-      Height = 13
+      Left = 587
+      Top = 31
+      Width = 79
+      Height = 17
       Caption = 'Effective Date'
     end
     object edtMaterial: TEdit
-      Left = 56
-      Top = 8
+      Left = 57
+      Top = 25
       Width = 85
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtMaterialChange
     end
     object Panel2: TPanel
-      Left = 1318
+      Left = 1248
       Top = 1
-      Width = 103
+      Width = 167
       Height = 60
       Align = alRight
       Alignment = taRightJustify
@@ -98,11 +99,11 @@ object frmWTLUPrices: TfrmWTLUPrices
       ParentBackground = False
       TabOrder = 4
       DesignSize = (
-        103
+        167
         60)
       object Button1: TButton
         Left = 20
-        Top = 26
+        Top = 21
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -113,31 +114,31 @@ object frmWTLUPrices: TfrmWTLUPrices
     end
     object edtColour: TEdit
       Left = 200
-      Top = 8
+      Top = 25
       Width = 85
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtColourChange
     end
     object edtThickness: TEdit
       Left = 360
-      Top = 8
+      Top = 25
       Width = 73
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = edtThicknessChange
     end
     object edtGroup: TEdit
-      Left = 488
-      Top = 8
+      Left = 483
+      Top = 27
       Width = 85
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnChange = edtGroupChange
     end
     object btnClear: TBitBtn
-      Left = 1000
-      Top = 6
+      Left = 1015
+      Top = 22
       Width = 75
       Height = 25
       Caption = 'Cl&ear'
@@ -145,17 +146,17 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnClick = btnClearClick
     end
     object edtEffectiveDate: TEdit
-      Left = 669
-      Top = 8
+      Left = 672
+      Top = 25
       Width = 85
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnExit = edtEffectiveDateExit
       OnKeyPress = edtEffectiveDateKeyPress
     end
     object btnEffectiveDate: TBitBtn
-      Left = 757
-      Top = 6
+      Left = 763
+      Top = 25
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -176,8 +177,8 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnClick = btnEffectiveDateClick
     end
     object BitBtn1: TBitBtn
-      Left = 789
-      Top = 6
+      Left = 795
+      Top = 25
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -198,8 +199,8 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
-      Left = 1080
-      Top = 6
+      Left = 1095
+      Top = 22
       Width = 75
       Height = 25
       Caption = 'S&weep'
@@ -207,16 +208,16 @@ object frmWTLUPrices: TfrmWTLUPrices
       OnClick = BitBtn2Click
     end
     object chkbxShowWebPrices: TCheckBox
-      Left = 832
-      Top = 34
-      Width = 145
+      Left = 850
+      Top = 33
+      Width = 159
       Height = 17
       Caption = 'Only Show Web Prices'
       TabOrder = 10
       OnClick = chkbxShowWebPricesClick
     end
     object chkbxShowInactive: TCheckBox
-      Left = 832
+      Left = 849
       Top = 10
       Width = 145
       Height = 17
@@ -227,15 +228,15 @@ object frmWTLUPrices: TfrmWTLUPrices
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 77
-    Width = 1422
-    Height = 317
+    Top = 86
+    Width = 1416
+    Height = 299
     Align = alClient
     DataSource = dtmdlPrices.dtsAllPrices
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -326,110 +327,26 @@ object frmWTLUPrices: TfrmWTLUPrices
         Visible = True
       end>
   end
-  object CoolBar2: TCoolBar
-    Left = 0
-    Top = 0
-    Width = 1422
-    Height = 32
-    Bands = <
-      item
-        Control = Panel3
-        ImageIndex = -1
-        MinHeight = 30
-        Width = 1416
-      end>
-    object Panel3: TPanel
-      Left = 11
-      Top = 0
-      Width = 1407
-      Height = 30
-      Align = alLeft
-      BevelOuter = bvNone
-      Color = 16642529
-      ParentBackground = False
-      TabOrder = 0
-      DesignSize = (
-        1407
-        30)
-      object Label2: TLabel
-        Left = 0
-        Top = 1
-        Width = 45
-        Height = 25
-        Caption = 'Prices'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clNavy
-        Font.Height = -18
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lblCurrentPrices: TLabel
-        Left = 72
-        Top = 3
-        Width = 180
-        Height = 21
-        Caption = '- displaying current prices'
-        Color = clSilver
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentColor = False
-        ParentFont = False
-      end
-      object Label4: TLabel
-        Left = 1154
-        Top = 5
-        Width = 31
-        Height = 15
-        Anchors = [akTop, akRight]
-        Caption = 'Prices'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clNavy
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitLeft = 1160
-      end
-      object cmbPriceTypeFilter: TComboBox
-        Left = 1194
-        Top = 2
-        Width = 145
-        Height = 21
-        Style = csDropDownList
-        Anchors = [akTop, akRight]
-        ItemIndex = 0
-        TabOrder = 0
-        Text = 'Current'
-        OnChange = cmbPriceTypeFilterChange
-        Items.Strings = (
-          'Current'
-          'Future')
-      end
-    end
-  end
   object CoolBar1: TCoolBar
     Left = 0
-    Top = 32
-    Width = 1422
+    Top = 41
+    Width = 1416
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1416
+        Width = 1410
       end>
+    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1407
+      Width = 1401
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 58
+      ButtonHeight = 40
+      ButtonWidth = 68
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -443,7 +360,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 58
+        Left = 68
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -452,7 +369,7 @@ object frmWTLUPrices: TfrmWTLUPrices
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 116
+        Left = 136
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -461,14 +378,14 @@ object frmWTLUPrices: TfrmWTLUPrices
         OnClick = btnDeleteClick
       end
       object ToolButton1: TToolButton
-        Left = 174
+        Left = 204
         Top = 0
         Caption = 'Prices'
         ImageIndex = 13
         OnClick = ToolButton1Click
       end
       object btnStockCode: TToolButton
-        Left = 232
+        Left = 272
         Top = 0
         Caption = '&Slabs'
         Enabled = False
@@ -476,11 +393,95 @@ object frmWTLUPrices: TfrmWTLUPrices
         OnClick = btnStockCodeClick
       end
       object btnRefresh: TToolButton
-        Left = 290
+        Left = 340
         Top = 0
         Caption = '&Refresh'
         ImageIndex = 11
         OnClick = btnRefreshClick
+      end
+    end
+  end
+  object CoolBar2: TCoolBar
+    Left = 0
+    Top = 0
+    Width = 1416
+    Height = 41
+    Bands = <
+      item
+        Control = Panel3
+        ImageIndex = -1
+        MinHeight = 41
+        Width = 1410
+      end>
+    object Panel3: TPanel
+      Left = 11
+      Top = 0
+      Width = 1401
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 16642529
+      ParentBackground = False
+      TabOrder = 0
+      DesignSize = (
+        1401
+        41)
+      object Label2: TLabel
+        Left = 0
+        Top = 7
+        Width = 45
+        Height = 25
+        Caption = 'Prices'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -18
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblCurrentPrices: TLabel
+        Left = 72
+        Top = 9
+        Width = 180
+        Height = 21
+        Caption = '- displaying current prices'
+        Color = clSilver
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 1101
+        Top = 13
+        Width = 34
+        Height = 17
+        Anchors = [akTop, akRight]
+        Caption = 'Prices'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object cmbPriceTypeFilter: TComboBox
+        Left = 1147
+        Top = 10
+        Width = 145
+        Height = 25
+        Style = csDropDownList
+        Anchors = [akTop, akRight]
+        ItemIndex = 0
+        TabOrder = 0
+        Text = 'Current'
+        OnChange = cmbPriceTypeFilterChange
+        Items.Strings = (
+          'Current'
+          'Future')
       end
     end
   end

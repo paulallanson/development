@@ -326,9 +326,38 @@ procedure TfrmWTRPSalesInvoice.InvoiceFooterBeforePrint(Sender: TQRCustomBand; v
   PrintBand: Boolean);
 var
   iTotal, iDeposit, iToPay, rVatValue: Real;
+  iCount: integer;
 begin
   if bLineUp then
     Exit;
+
+  {Show Payemnt details}
+  memPayment.Lines.clear;
+
+  if InvHeadSRC.DataSet.fieldbyname('Is_Retail_Customer').AsString = 'Y' then
+    BuildPaymentNotes(dtmdlWorktops.GetRetailPaymentNotes)
+  else
+  if InvHeadSRC.DataSet.fieldbyname('Account_Is_Factored').AsString = 'Y' then
+    begin
+      if InvHeadSRC.DataSet.fieldbyname('Use_Virtual_Bank_Details').AsString = 'Y' then
+        BuildPaymentNotes(dtmdlWorktops.GetFactoredVirtualPaymentNotes)
+      else
+        BuildPaymentNotes(dtmdlWorktops.GetFactoredPaymentNotes);
+    end;
+
+  if memPayment.lines.text = '' then
+    BuildPaymentNotes(dtmdlWorktops.GetCompanyPaymentNotes);
+
+  if trim(memPayment.lines.text) = '' then
+    begin
+      memPayment.enabled := false;
+      qrshpPayment.enabled := false;
+    end
+  else
+    begin
+      memPayment.enabled := true;
+      qrshpPayment.enabled := true;
+    end;
 
   if bInvoice then
     begin
@@ -339,7 +368,7 @@ begin
     end
   else
     qrlblPaymentTerms.Caption := '';
-    
+
   lblReference.caption := '';
 
   if (not bInvoice) and (trim(InvHeadSRC.Dataset.FieldByName('Reference').asstring) <> '') then
@@ -351,7 +380,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('0.00', iGoods);
   VatValueLbl.Caption := formatfloat('0.00', ivat);
 
-  itotal := StrToFloatDef(GoodsValueLbl.Caption, 0, FormatSettings) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
+  itotal := strtofloat(GoodsValueLbl.Caption) + strtofloat(VatValueLbl.Caption);
   TotalValueLbl.Caption := formatfloat('0.00', iTotal);
 
   iToPay := iTotal - iDeposit;
@@ -778,7 +807,6 @@ begin
   iVat := 0.00;
 
   FLines := 0;
-
   bReverseCharge := false;
   qrlblReverseCharge.Caption := '';
 
@@ -849,29 +877,6 @@ begin
     InvoiceDateLbl.Caption := FormatDateTime('dd"/"mm"/"yyyyy',
       InvHeadSRC.Dataset.FieldByName('invoice_date').AsDateTime);
   end;
-
-  {Show Payemnt details}
-  memPayment.Lines.clear;
-  
-  if InvHeadSRC.DataSet.fieldbyname('Is_Retail_Customer').AsString = 'Y' then
-    BuildPaymentNotes(dtmdlWorktops.GetRetailPaymentNotes)
-  else
-  if InvHeadSRC.DataSet.fieldbyname('Account_Is_Factored').AsString = 'Y' then
-    BuildPaymentNotes(dtmdlWorktops.GetFactoredPaymentNotes);
-
-  if memPayment.lines.text = '' then
-    BuildPaymentNotes(dtmdlWorktops.GetCompanyPaymentNotes);
-
-  if trim(memPayment.lines.text) = '' then
-    begin
-      memPayment.enabled := false;
-      qrshpPayment.enabled := false;
-    end
-  else
-    begin
-      memPayment.enabled := true;
-      qrshpPayment.enabled := true;
-    end;
 
   if bInvoice then
     begin
@@ -1050,6 +1055,7 @@ begin
   lblReference.caption := '';
   DepositLbl.caption := '';
   ToPayLbl.caption := '';
+  memPayment.lines.clear;
 end;
 
 function TfrmWTRPSalesInvoice.GetSIReference(tempCode: string): string;

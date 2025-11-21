@@ -30,7 +30,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 40
     Width = 705
     Height = 622
-    ActivePage = tsGeneral
+    ActivePage = TabSheet2
     TabOrder = 0
     object tsGeneral: TTabSheet
       Caption = 'General'
@@ -535,13 +535,6 @@ object frmWTMaintParams: TfrmWTMaintParams
         Height = 13
         Caption = 'Retail Payment Terms'
       end
-      object Label64: TLabel
-        Left = 16
-        Top = 483
-        Width = 173
-        Height = 13
-        Caption = 'Factored Invoices Payment Details'
-      end
       object memAvail: TMemo
         Left = 16
         Top = 20
@@ -592,15 +585,40 @@ object frmWTMaintParams: TfrmWTMaintParams
         ScrollBars = ssVertical
         TabOrder = 2
       end
-      object memFactoredPayment: TMemo
-        Left = 16
-        Top = 497
-        Width = 569
-        Height = 75
-        Lines.Strings = (
-          'Memo3')
-        ScrollBars = ssVertical
+      object PageControl2: TPageControl
+        Left = 8
+        Top = 480
+        Width = 673
+        Height = 193
+        ActivePage = TabSheet3
         TabOrder = 5
+        object TabSheet3: TTabSheet
+          Caption = 'Factored Invoices General Payment Details'
+          object memFactoredPayment: TMemo
+            Left = 6
+            Top = 3
+            Width = 569
+            Height = 75
+            Lines.Strings = (
+              'memFactoredPayment')
+            ScrollBars = ssVertical
+            TabOrder = 0
+          end
+        end
+        object TabSheet12: TTabSheet
+          Caption = 'Factored Invoices Virtual Payment Details'
+          ImageIndex = 1
+          object memVirtualPayment: TMemo
+            Left = 6
+            Top = 3
+            Width = 569
+            Height = 75
+            Lines.Strings = (
+              'memVirtualPayment')
+            ScrollBars = ssVertical
+            TabOrder = 0
+          end
+        end
       end
     end
     object TabSheet5: TTabSheet
@@ -723,61 +741,54 @@ object frmWTMaintParams: TfrmWTMaintParams
         Caption = 'Do not process orders if customer Onstop'
         TabOrder = 6
       end
-      object GroupBox1: TGroupBox
+      object grpbxContractQuoting: TGroupBox
         Left = 408
-        Top = 8
+        Top = 17
         Width = 273
-        Height = 129
+        Height = 104
+        Color = clMenu
         ParentBackground = False
+        ParentColor = False
         TabOrder = 7
         object Label77: TLabel
           Left = 24
-          Top = 96
+          Top = 81
           Width = 112
           Height = 13
           Caption = 'Drawing Folder Name'
         end
         object Label4: TLabel
           Left = 24
-          Top = 64
+          Top = 49
           Width = 80
           Height = 13
           Caption = 'Inactive Reason'
         end
-        object chkbxUseContractQuoting: TCheckBox
-          Left = 10
-          Top = 0
-          Width = 127
-          Height = 17
-          Caption = 'Use Contract Quoting'
-          TabOrder = 0
-          OnClick = chkbxUseContractQuotingClick
-        end
         object chkbxContractQuoteBySlab: TCheckBox
-          Left = 26
-          Top = 32
+          Left = 24
+          Top = 22
           Width = 143
           Height = 17
           Caption = 'Quote by Slab Details'
-          TabOrder = 1
+          TabOrder = 0
         end
         object edtDrawingFolderName: TEdit
           Left = 160
-          Top = 92
+          Top = 77
           Width = 97
           Height = 21
-          TabOrder = 2
+          TabOrder = 1
           Text = 'edtDrawingFolderName'
         end
         object dblkpInactiveContract: TDBLookupComboBox
           Left = 112
-          Top = 60
+          Top = 45
           Width = 145
           Height = 21
           KeyField = 'Inactive_Reason'
           ListField = 'Inactive_Reason_Descr'
           ListSource = dtsInactiveReason
-          TabOrder = 3
+          TabOrder = 2
         end
       end
       object chkbxUsePurchaseOrdering: TCheckBox
@@ -846,8 +857,10 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 352
         Width = 393
         Height = 65
+        Color = clMenu
         Enabled = False
         ParentBackground = False
+        ParentColor = False
         TabOrder = 15
         object Label5: TLabel
           Left = 24
@@ -910,7 +923,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object chkbxUseRemedialsAsOrders: TCheckBox
         Left = 26
-        Top = 349
+        Top = 345
         Width = 143
         Height = 17
         Caption = 'Use Remedial As Orders'
@@ -922,7 +935,9 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 216
         Width = 273
         Height = 57
+        Color = clMenu
         ParentBackground = False
+        ParentColor = False
         TabOrder = 17
         object Label80: TLabel
           Left = 24
@@ -944,12 +959,21 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object chkbxUseStockSystem: TCheckBox
         Left = 418
-        Top = 213
+        Top = 210
         Width = 111
         Height = 17
         Caption = 'Use Stock System'
         TabOrder = 18
         OnClick = chkbxUseStockSystemClick
+      end
+      object chkbxUseContractQuoting: TCheckBox
+        Left = 417
+        Top = 8
+        Width = 136
+        Height = 17
+        Caption = 'Use Contract Quoting'
+        TabOrder = 19
+        OnClick = chkbxUseContractQuotingClick
       end
     end
     object TabSheet2: TTabSheet
@@ -1040,7 +1064,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object grpbxCosting: TGroupBox
         Left = 8
-        Top = 280
+        Top = 281
         Width = 481
         Height = 153
         ParentBackground = False
@@ -1073,21 +1097,13 @@ object frmWTMaintParams: TfrmWTMaintParams
           Height = 13
           Caption = 'Waste Cost Multiplier'
         end
-        object chkbxUseCosting: TCheckBox
-          Left = 10
-          Top = -3
-          Width = 127
-          Height = 17
-          Caption = 'Use Costing System'
-          TabOrder = 0
-          OnClick = chkbxUseCostingClick
-        end
         object edtDefaultMileageRate: TCREditMoney
           Left = 200
           Top = 28
           Width = 81
           Height = 21
-          TabOrder = 1
+          Enabled = False
+          TabOrder = 0
           Text = 'edtDefaultMileageRate'
         end
         object edtDefaultLabourRate: TCREditMoney
@@ -1095,7 +1111,8 @@ object frmWTMaintParams: TfrmWTMaintParams
           Top = 60
           Width = 81
           Height = 21
-          TabOrder = 2
+          Enabled = False
+          TabOrder = 1
           Text = 'edtDefaultLabourRate'
         end
         object edtDefaultHandlingRate: TCREditMoney
@@ -1103,7 +1120,8 @@ object frmWTMaintParams: TfrmWTMaintParams
           Top = 92
           Width = 81
           Height = 21
-          TabOrder = 3
+          Enabled = False
+          TabOrder = 2
           Text = 'edtDefaultHandlingRate'
         end
         object edtWasteCostMultiplier: TCREditInt
@@ -1111,7 +1129,8 @@ object frmWTMaintParams: TfrmWTMaintParams
           Top = 124
           Width = 50
           Height = 21
-          TabOrder = 4
+          Enabled = False
+          TabOrder = 3
           Text = 'edtWasteCostMultiplier'
         end
       end
@@ -1442,6 +1461,15 @@ object frmWTMaintParams: TfrmWTMaintParams
           OnClick = chkbxUseDocumentTransferClick
         end
       end
+      object chkbxUseCosting: TCheckBox
+        Left = 18
+        Top = 275
+        Width = 127
+        Height = 17
+        Caption = 'Use Costing System'
+        TabOrder = 22
+        OnClick = chkbxUseCostingClick
+      end
     end
     object TabSheet1: TTabSheet
       Caption = 'Documents'
@@ -1475,8 +1503,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         Caption = 'Order Confirmation'
       end
       object Button5: TButton
-        Left = 430
-        Top = 10
+        Left = 446
+        Top = 11
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1484,8 +1512,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button5Click
       end
       object Button6: TButton
-        Left = 430
-        Top = 50
+        Left = 446
+        Top = 51
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1493,8 +1521,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button6Click
       end
       object Button7: TButton
-        Left = 430
-        Top = 90
+        Left = 446
+        Top = 91
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1512,24 +1540,24 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 3
       end
       object edtTemplateConditionsFile: TEdit
-        Left = 112
-        Top = 12
+        Left = 128
+        Top = 13
         Width = 313
         Height = 21
         TabOrder = 4
         Text = 'edtTemplateConditionsFile'
       end
       object edtSalesOrderTermsFile: TEdit
-        Left = 112
-        Top = 52
+        Left = 128
+        Top = 53
         Width = 313
         Height = 21
         TabOrder = 5
         Text = 'edtSalesOrderTermsFile'
       end
       object edtSalesAvailabilityFile: TEdit
-        Left = 112
-        Top = 92
+        Left = 128
+        Top = 93
         Width = 313
         Height = 21
         TabOrder = 6
@@ -1558,7 +1586,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           end
           object Label60: TLabel
             Left = 15
-            Top = 191
+            Top = 196
             Width = 177
             Height = 13
             Caption = 'Retail Specific Quotation Preamble'
@@ -1596,7 +1624,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           end
           object memEmailRetailQuote: TMemo
             Left = 15
-            Top = 209
+            Top = 214
             Width = 600
             Height = 150
             Lines.Strings = (
@@ -1728,7 +1756,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           ImageIndex = 3
           object Label49: TLabel
             Left = 15
-            Top = 16
+            Top = 15
             Width = 86
             Height = 13
             Caption = 'Invoice Preamble'
@@ -1756,7 +1784,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           end
           object memEmailInvoice: TMemo
             Left = 15
-            Top = 30
+            Top = 34
             Width = 600
             Height = 150
             Lines.Strings = (
@@ -1974,8 +2002,8 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object srcParams: TDataSource
     DataSet = qryCompany
-    Left = 568
-    Top = 296
+    Left = 288
+    Top = 528
   end
   object qryUpParams: TFDQuery
     ConnectionName = 'wt'
@@ -1998,8 +2026,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       '    Email_Purchase_Order_Notes = :Email_Purchase_Order_Notes,'
       '    Order_Confirmation_Notes = :Order_Confirmation_Notes'
       'where company = 1')
-    Left = 680
-    Top = 328
+    Left = 400
+    Top = 560
     ParamData = <
       item
         Name = 'Terms'
@@ -2050,13 +2078,13 @@ object frmWTMaintParams: TfrmWTMaintParams
       'select *'
       'from Thickness'
       'order by thickness_mm')
-    Left = 432
-    Top = 280
+    Left = 352
+    Top = 112
   end
   object srclkpThickness: TDataSource
     DataSet = lkpThickness
-    Left = 496
-    Top = 280
+    Left = 288
+    Top = 96
   end
   object qryAccounts: TFDQuery
     ConnectionName = 'wt'
@@ -2064,21 +2092,21 @@ object frmWTMaintParams: TfrmWTMaintParams
       'select * '
       'from Accounts_Package'
       'order by Accounts_Package_description')
-    Left = 468
-    Top = 384
+    Left = 188
+    Top = 616
   end
   object dtsAccounts: TDataSource
     DataSet = qryAccounts
-    Left = 532
-    Top = 320
+    Left = 252
+    Top = 552
   end
   object qryVat: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from VAT'
       'order by Vat_Rate')
-    Left = 452
-    Top = 448
+    Left = 629
+    Top = 128
     object qryVatVat: TIntegerField
       FieldName = 'Vat'
       Origin = 'Vat'
@@ -2106,13 +2134,13 @@ object frmWTMaintParams: TfrmWTMaintParams
       'select * '
       'from Schedule_Package'
       'order by Schedule_Package_Name')
-    Left = 420
-    Top = 296
+    Left = 316
+    Top = 144
   end
   object dtsScheduling: TDataSource
     DataSet = qryScheduling
-    Left = 472
-    Top = 296
+    Left = 496
+    Top = 568
   end
   object qryOperator: TFDQuery
     ConnectionName = 'WT'
@@ -2122,8 +2150,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       'FROM Operator'
       'WHERE (Operator_Can_Login = '#39'Y'#39') OR (Operator = :Operator)'
       'ORDER BY Operator_Name')
-    Left = 524
-    Top = 344
+    Left = 412
+    Top = 328
     ParamData = <
       item
         Name = 'Operator'
@@ -2131,8 +2159,8 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 556
-    Top = 336
+    Left = 524
+    Top = 432
   end
   object qryAccountManager: TFDQuery
     ConnectionName = 'WT'
@@ -2142,7 +2170,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       'FROM Operator'
       'WHERE (Operator_Can_Login = '#39'Y'#39') OR (Operator = :Operator)'
       'ORDER BY Operator_Name')
-    Left = 348
+    Left = 363
     Top = 448
     ParamData = <
       item
@@ -2164,8 +2192,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         'WHERE (Inactive = '#39'N'#39') OR (Sales_Lead_Source = :Sales_Lead_Sourc' +
         'e)'
       'ORDER BY Sales_Lead_Source_Descr')
-    Left = 524
-    Top = 400
+    Left = 668
+    Top = 568
     ParamData = <
       item
         Name = 'Sales_Lead_Source'
@@ -2173,8 +2201,8 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object dtsSalesSource: TDataSource
     DataSet = qrySalesSource
-    Left = 588
-    Top = 400
+    Left = 356
+    Top = 352
   end
   object qryCompany: TFDQuery
     ConnectionName = 'WT'
@@ -2182,8 +2210,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       'SELECT * '
       'FROM Company'
       'WHERE Company = 1')
-    Left = 612
-    Top = 280
+    Left = 332
+    Top = 512
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'WT'
@@ -2248,6 +2276,9 @@ object frmWTMaintParams: TfrmWTMaintParams
       '  Invoice_Payment_Notes = :Invoice_Payment_Notes,'
       '  Retail_Payment_Notes = :Retail_Payment_Notes,'
       '  Factored_Payment_Notes = :Factored_Payment_Notes,'
+      
+        '  Factored_Virtual_Payment_Notes = :Factored_Virtual_Payment_Not' +
+        'es,'
       '  Email_Retail_Quote_Notes = :Email_Retail_Quote_Notes,'
       '  Email_Quotation_Notes = :Email_Quotation_Notes,'
       '  Email_Invoice_Notes = :Email_Invoice_Notes,'
@@ -2281,12 +2312,12 @@ object frmWTMaintParams: TfrmWTMaintParams
       '  Quotation_Document_Folder = :Quotation_Document_Folder,'
       '  Safety_Document_Folder = :Safety_Document_Folder,'
       '  Remedial_Document_Folder = :Remedial_Document_Folder,'
-      '  Plan_Document_Folder = :Plan_Document_Folder,'
       '  Use_Remedials_As_Orders = :Use_Remedials_As_Orders,'
       '  Stock_System = :Stock_System'
-      'WHERE Company = 1')
-    Left = 676
-    Top = 280
+      'WHERE Company = 1'
+      '')
+    Left = 396
+    Top = 512
     ParamData = <
       item
         Name = 'Company_Name'
@@ -2533,6 +2564,10 @@ object frmWTMaintParams: TfrmWTMaintParams
         ParamType = ptInput
       end
       item
+        Name = 'FACTORED_VIRTUAL_PAYMENT_NOTES'
+        ParamType = ptInput
+      end
+      item
         Name = 'Email_Retail_Quote_Notes'
         DataType = ftInteger
         ParamType = ptInput
@@ -2667,10 +2702,6 @@ object frmWTMaintParams: TfrmWTMaintParams
         ParamType = ptInput
       end
       item
-        Name = 'PLAN_DOCUMENT_FOLDER'
-        ParamType = ptInput
-      end
-      item
         Name = 'Use_Remedials_As_Orders'
         ParamType = ptInput
       end
@@ -2690,8 +2721,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         'WHERE (Inactive = '#39'N'#39') OR (Sales_Lead_Source = :Sales_Lead_Sourc' +
         'e)'
       'ORDER BY Sales_Lead_Source_Descr')
-    Left = 468
-    Top = 400
+    Left = 316
+    Top = 216
     ParamData = <
       item
         Name = 'Sales_Lead_Source'
@@ -2699,7 +2730,7 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object dtsCustSalesSource: TDataSource
     DataSet = qryCustSalesSource
-    Left = 588
+    Left = 444
     Top = 448
   end
   object qryInactiveReason: TFDQuery
@@ -2708,13 +2739,13 @@ object frmWTMaintParams: TfrmWTMaintParams
       'SELECT * '
       'FROM Inactive_Reason'
       'ORDER BY Inactive_Reason_Descr')
-    Left = 612
-    Top = 216
+    Left = 332
+    Top = 448
   end
   object dtsInactiveReason: TDataSource
     DataSet = qryInactiveReason
-    Left = 660
-    Top = 216
+    Left = 380
+    Top = 448
   end
   object qryGetProduct: TFDQuery
     ConnectionName = 'WT'
@@ -2722,8 +2753,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       'SELECT *'
       'FROM Product'
       'WHERE Product = :Product')
-    Left = 568
-    Top = 24
+    Left = 608
+    Top = 8
     ParamData = <
       item
         Name = 'Product'
@@ -2735,12 +2766,12 @@ object frmWTMaintParams: TfrmWTMaintParams
       'SELECT *'
       'FROM Stock_System'
       'ORDER BY Stock_System_Description')
-    Left = 428
-    Top = 344
+    Left = 572
+    Top = 568
   end
   object dtsStockSystem: TDataSource
     DataSet = qryStockSystem
-    Left = 508
-    Top = 344
+    Left = 348
+    Top = 256
   end
 end

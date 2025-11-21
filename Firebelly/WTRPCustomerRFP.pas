@@ -81,6 +81,8 @@ type
     procedure InvoiceReportAfterPrint(Sender: TObject);
     procedure qrsdQLabourBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
+    procedure GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
   private
     exportFile: textFile;
     exporting: boolean;
@@ -159,7 +161,7 @@ begin
     Lines.Append('Fax: ' + Trim(qryGetCompany.FieldByName('Fax_Number').AsString));
     Lines.Append('Email: ' + Trim(qryGetCompany.FieldByName('Email_Address').AsString));
   end;
-  BuildPaymentNotes(dtmdlWorktops.GetCompanyPaymentNotes);
+//  BuildPaymentNotes(dtmdlWorktops.GetCompanyPaymentNotes);
 end;
 
 function TfrmWTRPCustomerRFP.GetDetails(Sender: TObject): Integer;
@@ -229,6 +231,42 @@ begin
       result := fieldbyname('Reference').asstring;
     end;
 end;
+
+procedure TfrmWTRPCustomerRFP.GrpFootQRBandBeforePrint(
+  Sender: TQRCustomBand; var PrintBand: Boolean);
+begin
+  {Show Payemnt details}
+  memPayment.Lines.clear;
+
+  if dtsSalesInv.dataset.fieldbyname('Account_Is_Factored').AsString = 'Y' then
+    begin
+      if dtsSalesInv.DataSet.fieldbyname('Use_Virtual_Bank_Details').AsString = 'Y' then
+        BuildPaymentNotes(dtmdlWorktops.GetFactoredVirtualPaymentNotes)
+      else
+        BuildPaymentNotes(dtmdlWorktops.GetFactoredPaymentNotes);
+    end;
+
+  if memPayment.lines.text = '' then
+    BuildPaymentNotes(dtmdlWorktops.GetCompanyPaymentNotes);
+
+  if trim(memPayment.lines.text) = '' then
+    begin
+      memPayment.enabled := false;
+      qrshpPayment.enabled := false;
+    end
+  else
+    begin
+      memPayment.enabled := true;
+      qrshpPayment.enabled := true;
+    end;
+
+  if dtsSalesInv.DataSet.fieldbyname('Payment_Terms_Description').asstring <> '' then
+    qrlblPaymentTerms.Caption := 'Payment Terms: ' + dtsSalesInv.DataSet.fieldbyname('Payment_Terms_Description').asstring
+  else
+    qrlblPaymentTerms.Caption := '';
+
+end;
+
 
 procedure TfrmWTRPCustomerRFP.CustBranchQRGroupBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);

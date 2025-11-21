@@ -2,12 +2,12 @@ object frmwtLUJobs: TfrmwtLUJobs
   Left = 86
   Top = 116
   Caption = 'Job details'
-  ClientHeight = 395
-  ClientWidth = 1058
+  ClientHeight = 386
+  ClientWidth = 1052
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmwtLUJobs: TfrmwtLUJobs
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 376
-    Width = 1058
+    Top = 367
+    Width = 1052
     Height = 19
     Panels = <
       item
@@ -38,35 +38,34 @@ object frmwtLUJobs: TfrmwtLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 335
-    Width = 1058
+    Top = 326
+    Width = 1052
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1058
+      1052
       41)
     object Label1: TLabel
-      Left = 8
+      Left = 6
       Top = 12
-      Width = 86
-      Height = 13
+      Width = 99
+      Height = 17
       Caption = 'Customer Search'
     end
     object Label3: TLabel
-      Left = 765
+      Left = 764
       Top = 12
-      Width = 62
-      Height = 13
+      Width = 73
+      Height = 17
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Job Number'
-      ExplicitLeft = 627
     end
     object Button1: TButton
-      Left = 921
-      Top = 6
+      Left = 951
+      Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -75,25 +74,25 @@ object frmwtLUJobs: TfrmwtLUJobs
       OnClick = Button1Click
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 111
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 833
+      Left = 843
       Top = 8
       Width = 73
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
     end
     object btnSearch: TBitBtn
-      Left = 280
-      Top = 6
+      Left = 287
+      Top = 8
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -103,23 +102,24 @@ object frmwtLUJobs: TfrmwtLUJobs
   end
   object CoolBar1: TCoolBar
     Left = 0
-    Top = 32
-    Width = 1058
+    Top = 41
+    Width = 1052
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1052
+        Width = 1046
       end>
+    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1043
+      Width = 1037
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 58
+      ButtonHeight = 40
+      ButtonWidth = 68
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -132,7 +132,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 58
+        Left = 68
         Top = 0
         Caption = 'Chang&e'
         Enabled = False
@@ -140,7 +140,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 116
+        Left = 136
         Top = 0
         Caption = 'C&opy'
         Enabled = False
@@ -148,7 +148,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnCopyClick
       end
       object btnDelete: TToolButton
-        Left = 174
+        Left = 204
         Top = 0
         Caption = '   &Delete   '
         Enabled = False
@@ -156,7 +156,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 232
+        Left = 272
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -164,7 +164,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnPrintClick
       end
       object ToolButton6: TToolButton
-        Left = 290
+        Left = 340
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -172,7 +172,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         Style = tbsSeparator
       end
       object btnJobSheet: TToolButton
-        Left = 298
+        Left = 348
         Top = 0
         Caption = 'Job &Sheet'
         Enabled = False
@@ -180,7 +180,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnJobSheetClick
       end
       object btnCutting: TToolButton
-        Left = 356
+        Left = 416
         Top = 0
         Caption = '&Cutting'
         Enabled = False
@@ -188,7 +188,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnCuttingClick
       end
       object btnFitting: TToolButton
-        Left = 414
+        Left = 484
         Top = 0
         Caption = '&Fitting'
         Enabled = False
@@ -196,7 +196,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnFittingClick
       end
       object btnRemedial: TToolButton
-        Left = 472
+        Left = 552
         Top = 0
         Caption = 'Remedial'
         Enabled = False
@@ -204,7 +204,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnRemedialClick
       end
       object btnComplete: TToolButton
-        Left = 530
+        Left = 620
         Top = 0
         Caption = 'Com&plete'
         Enabled = False
@@ -212,7 +212,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         OnClick = btnCompleteClick
       end
       object ToolButton1: TToolButton
-        Left = 588
+        Left = 688
         Top = 0
         Caption = '&Reports'
         ImageIndex = 7
@@ -222,9 +222,9 @@ object frmwtLUJobs: TfrmwtLUJobs
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 77
-    Width = 1058
-    Height = 258
+    Top = 86
+    Width = 1052
+    Height = 240
     Align = alClient
     DataSource = dtmdlJob.dtsAllJobs
     DrawingStyle = gdsGradient
@@ -376,31 +376,31 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1058
-    Height = 32
+    Width = 1052
+    Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
-        MinHeight = 30
-        Width = 1052
+        MinHeight = 41
+        Width = 1046
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1043
-      Height = 30
+      Width = 1037
+      Height = 41
       Align = alLeft
       BevelOuter = bvNone
       Color = 16642529
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1043
-        30)
+        1037
+        41)
       object Label2: TLabel
         Left = 0
-        Top = 1
+        Top = 7
         Width = 36
         Height = 25
         Caption = 'Jobs'
@@ -413,7 +413,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       end
       object lblWorkinProgress: TLabel
         Left = 48
-        Top = 3
+        Top = 9
         Width = 196
         Height = 21
         Caption = '-  displaying only live orders'
@@ -427,8 +427,8 @@ object frmwtLUJobs: TfrmwtLUJobs
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 777
-        Top = 6
+        Left = 771
+        Top = 12
         Width = 81
         Height = 15
         Anchors = [akTop, akRight]
@@ -439,13 +439,12 @@ object frmwtLUJobs: TfrmwtLUJobs
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 573
       end
       object cmbCustomerFilter: TComboBox
-        Left = 869
-        Top = 2
+        Left = 863
+        Top = 7
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         TabOrder = 0

@@ -5,7 +5,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   Height = 884
   HorzScrollBar.Range = 1200
   VertScrollBar.Range = 2000
-  Caption = 'Print Sales Invoice'
+  Caption = 'Invoice Print'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
@@ -16,8 +16,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   OnCreate = FormCreate
   TextHeight = 15
   object InvoiceReport: TQuickRep
-    Left = 184
-    Top = -144
+    Left = 224
+    Top = -664
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -77,7 +77,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0
