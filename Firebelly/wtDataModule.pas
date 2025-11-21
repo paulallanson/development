@@ -134,6 +134,7 @@ type
     function GetNumberOfFollowUpDays: integer;
     function GetPromoFileName: string;
     function GetQuoteFollowUpReminder(tmpCode: integer): integer;
+    function GetFactoredVirtualPaymentNotes: integer;
     function GetFactoredPaymentNotes: integer;
     function GetRetailPaymentNotes: integer;
     function GetNominalLevel: string;
@@ -514,6 +515,16 @@ begin
       close;
       open;
       result := fieldbyname('Retail_Payment_Notes').asinteger;
+    end;
+end;
+
+function TdtmdlWorktops.GetFactoredVirtualPaymentNotes: integer;
+begin
+  with qryCompany do
+    begin
+      close;
+      open;
+      result := fieldbyname('Factored_Virtual_Payment_Notes').asinteger;
     end;
 end;
 

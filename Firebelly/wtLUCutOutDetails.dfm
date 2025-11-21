@@ -93,6 +93,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 285
+    ExplicitWidth = 733
     DesignSize = (
       739
       69)
@@ -129,6 +131,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
+      ExplicitLeft = 297
     end
     object btnEdit: TBitBtn
       Left = 391
@@ -140,6 +143,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
+      ExplicitLeft = 385
     end
     object btnDelete: TBitBtn
       Left = 479
@@ -151,6 +155,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
+      ExplicitLeft = 473
     end
     object BitBtn4: TBitBtn
       Left = 655
@@ -162,6 +167,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
+      ExplicitLeft = 649
     end
     object btnExcel: TBitBtn
       Left = 567
@@ -173,6 +179,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
+      ExplicitLeft = 561
     end
   end
   object stsbrDetails: TStatusBar
@@ -187,6 +194,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       item
         Width = 50
       end>
+    ExplicitTop = 354
+    ExplicitWidth = 733
   end
   object Panel2: TPanel
     Left = 0
@@ -197,13 +206,14 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 733
     DesignSize = (
       739
       73)
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 68
+      Width = 67
       Height = 13
       Caption = 'Material Type'
     end
@@ -302,14 +312,14 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyMaterial: TDBLookupComboBox
-      Left = 495
-      Top = 32
+      Left = 497
+      Top = 35
       Width = 145
       Height = 21
       Anchors = [akTop, akRight]
       KeyField = 'Material_Type'
       ListField = 'Description'
-      ListSource = srclkpMatType
+      ListSource = srclkpMatTypeCopy
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
     end
@@ -323,6 +333,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
+      ExplicitLeft = 650
     end
   end
   object srclkpCOutThickness: TDataSource
@@ -481,13 +492,13 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       
         'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
         ')')
-    Left = 208
-    Top = 168
+    Left = 68
+    Top = 218
   end
   object srclkpMatType: TDataSource
     DataSet = lkpMatType
-    Left = 280
-    Top = 168
+    Left = 174
+    Top = 218
   end
   object qryDelCOutThick: TFDQuery
     ConnectionName = 'wt'
@@ -607,5 +618,20 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     DataSet = lkpEdgeType
     Left = 448
     Top = 32
+  end
+  object srclkpMatTypeCopy: TDataSource
+    DataSet = lkpMatTypeCopy
+    Left = 390
+    Top = 218
+  end
+  object lkpMatTypeCopy: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'select * from Material_Type'
+      
+        'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
+        ')')
+    Left = 300
+    Top = 218
   end
 end

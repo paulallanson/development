@@ -12,13 +12,13 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 14
   object QRLabel6: TQRLabel
-    Left = 448
-    Top = 176
-    Width = 10
-    Height = 10
+    Left = 560
+    Top = 220
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1185.333333333330000000
@@ -33,7 +33,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Color = clWhite
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -44,10 +44,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     FontSize = 10
   end
   object QRDBText6: TQRDBText
-    Left = 504
-    Top = 176
-    Width = 10
-    Height = 10
+    Left = 630
+    Top = 220
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1333.500000000000000000
@@ -63,7 +63,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     DataField = 'Fax_number'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -76,10 +76,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     FontSize = 10
   end
   object QRLabel7: TQRLabel
-    Left = 448
-    Top = 213
-    Width = 10
-    Height = 10
+    Left = 560
+    Top = 266
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1185.333333333330000000
@@ -94,7 +94,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Color = clWhite
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -105,10 +105,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     FontSize = 10
   end
   object QRDBText7: TQRDBText
-    Left = 504
-    Top = 213
-    Width = 10
-    Height = 10
+    Left = 630
+    Top = 266
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1333.500000000000000000
@@ -124,7 +124,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     DataField = 'Fax_number'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -137,10 +137,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     FontSize = 10
   end
   object InvoiceReport: TQuickRep
-    Left = 144
-    Top = -134
-    Width = 794
-    Height = 1123
+    Left = 152
+    Top = -350
+    Width = 992
+    Height = 1403
     AfterPrint = InvoiceReportAfterPrint
     ShowingPreview = False
     BeforePrint = InvoiceReportBeforePrint
@@ -201,10 +201,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     PreviewLeft = 0
     PreviewTop = 0
     object CustBranchQRGroup: TQRGroup
-      Left = 38
-      Top = 488
-      Width = 718
-      Height = 2
+      Left = 47
+      Top = 609
+      Width = 898
+      Height = 3
       AlignToBottom = False
       BeforePrint = CustBranchQRGroupBeforePrint
       TransparentBand = False
@@ -217,8 +217,8 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       ForceNewPage = True
       ParentFont = False
       Size.Values = (
-        5.291666666666667000
-        1899.708333333333000000)
+        6.350000000000000000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'SalesInvSQL.Account_Code'
@@ -227,10 +227,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       ReprintOnNewPage = False
     end
     object InvDetailBand: TQRSubDetail
-      Left = 38
-      Top = 490
-      Width = 718
-      Height = 20
+      Left = 47
+      Top = 612
+      Width = 898
+      Height = 25
       AfterPrint = InvDetailBandAfterPrint
       AlignToBottom = False
       BeforePrint = InvDetailBandBeforePrint
@@ -245,7 +245,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       ParentFont = False
       Size.Values = (
         52.916666666666670000
-        1899.708333333333000000)
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = InvoiceReport
@@ -253,15 +253,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       PrintBefore = False
       PrintIfEmpty = True
       object lblUnit: TQRLabel
-        Left = 458
+        Left = 578
         Top = 0
-        Width = 36
-        Height = 18
+        Width = 40
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1211.791666666667000000
+          48.683333333333330000
+          1223.433333333333000000
           0.000000000000000000
-          95.250000000000000000)
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -271,7 +271,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -282,15 +282,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object LblTotal: TQRLabel
-        Left = 663
+        Left = 833
         Top = 0
-        Width = 45
-        Height = 18
+        Width = 52
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1754.187500000000000000
+          48.683333333333330000
+          1763.183333333333000000
           0.000000000000000000
-          119.062500000000000000)
+          110.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -300,7 +300,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -311,15 +311,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object lblVat: TQRLabel
-        Left = 607
+        Left = 762
         Top = 0
-        Width = 31
-        Height = 18
+        Width = 36
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1606.020833333333000000
+          48.683333333333330000
+          1612.900000000000000000
           0.000000000000000000
-          82.020833333333330000)
+          76.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -329,7 +329,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -340,10 +340,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object lblCustomerRef: TQRLabel
-        Left = 43
+        Left = 54
         Top = 0
-        Width = 382
-        Height = 18
+        Width = 477
+        Height = 23
         Size.Values = (
           47.625000000000000000
           113.770833333333300000
@@ -359,7 +359,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -370,15 +370,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object QRLabel9: TQRLabel
-        Left = 5
+        Left = 8
         Top = 0
-        Width = 25
-        Height = 18
+        Width = 29
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          13.229166666666670000
+          48.683333333333330000
+          16.933333333333330000
           0.000000000000000000
-          66.145833333333330000)
+          61.383333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -388,7 +388,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -399,15 +399,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object lblGoods: TQRLabel
-        Left = 534
+        Left = 674
         Top = 0
-        Width = 51
-        Height = 18
+        Width = 58
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1412.875000000000000000
+          48.683333333333330000
+          1426.633333333333000000
           0.000000000000000000
-          134.937500000000000000)
+          122.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -417,7 +417,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -429,10 +429,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       end
     end
     object QRBand1: TQRBand
-      Left = 38
-      Top = 38
-      Width = 718
-      Height = 450
+      Left = 47
+      Top = 47
+      Width = 898
+      Height = 562
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
@@ -445,21 +445,21 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        1190.625000000000000000
-        1899.708333333333000000)
+        1189.566666666667000000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object lblRundate: TQRLabel
-        Left = 625
-        Top = 304
-        Width = 61
-        Height = 20
+        Left = 781
+        Top = 380
+        Width = 70
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1653.645833333333000000
+          1653.116666666667000000
           804.333333333333300000
-          161.395833333333300000)
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -469,7 +469,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -480,15 +480,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object lblInvoiceNo: TQRLabel
-        Left = 625
-        Top = 263
-        Width = 68
-        Height = 20
+        Left = 781
+        Top = 329
+        Width = 78
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1653.645833333333000000
-          695.854166666666700000
-          179.916666666666700000)
+          1653.116666666667000000
+          696.383333333333300000
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -498,7 +498,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -509,15 +509,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object QRLabel2: TQRLabel
-        Left = 512
-        Top = 384
-        Width = 42
-        Height = 20
+        Left = 640
+        Top = 480
+        Width = 51
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1354.666666666667000000
           1016.000000000000000000
-          111.125000000000000000)
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -527,7 +527,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -538,15 +538,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object lblPage: TQRLabel
-        Left = 625
-        Top = 384
-        Width = 43
-        Height = 20
+        Left = 781
+        Top = 480
+        Width = 49
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1653.645833333333000000
+          1653.116666666667000000
           1016.000000000000000000
-          113.770833333333300000)
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -556,7 +556,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -567,15 +567,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object QRLabel4: TQRLabel
-        Left = 512
-        Top = 264
-        Width = 98
-        Height = 20
+        Left = 640
+        Top = 330
+        Width = 120
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1354.666666666667000000
           698.500000000000000000
-          259.291666666666700000)
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -585,7 +585,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -596,15 +596,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 512
-        Top = 304
-        Width = 30
-        Height = 20
+        Left = 640
+        Top = 380
+        Width = 37
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1354.666666666667000000
           804.333333333333300000
-          79.375000000000000000)
+          78.316666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -614,7 +614,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -625,15 +625,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRLabel8: TQRLabel
-        Left = 47
-        Top = 8
-        Width = 307
-        Height = 36
+        Left = 59
+        Top = 10
+        Width = 387
+        Height = 45
         Size.Values = (
           95.250000000000000000
-          124.354166666666700000
+          124.883333333333300000
           21.166666666666670000
-          812.270833333333300000)
+          819.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -643,7 +643,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -29
+        Font.Height = -37
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -654,15 +654,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 22
       end
       object QRLabel10: TQRLabel
-        Left = 43
-        Top = 432
-        Width = 44
-        Height = 20
+        Left = 54
+        Top = 540
+        Width = 54
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          113.770833333333300000
+          114.300000000000000000
           1143.000000000000000000
-          116.416666666666700000)
+          114.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -672,7 +672,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -683,15 +683,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRLabel13: TQRLabel
-        Left = 676
-        Top = 432
-        Width = 33
-        Height = 20
+        Left = 845
+        Top = 540
+        Width = 40
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1788.583333333333000000
           1143.000000000000000000
-          87.312500000000000000)
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -701,7 +701,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -712,15 +712,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRLabel12: TQRLabel
-        Left = 9
-        Top = 432
-        Width = 22
-        Height = 20
+        Left = 11
+        Top = 540
+        Width = 29
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          23.812500000000000000
+          23.283333333333330000
           1143.000000000000000000
-          58.208333333333330000)
+          61.383333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -730,7 +730,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -741,15 +741,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRLabel17: TQRLabel
-        Left = 431
-        Top = 432
-        Width = 63
-        Height = 20
+        Left = 539
+        Top = 540
+        Width = 78
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1140.354166666667000000
+          1140.883333333333000000
           1143.000000000000000000
-          166.687500000000000000)
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -759,7 +759,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -770,15 +770,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRMemoCmpnyNm: TQRMemo
-        Left = 560
-        Top = 116
-        Width = 108
-        Height = 117
+        Left = 700
+        Top = 145
+        Width = 124
+        Height = 146
         Size.Values = (
-          309.562500000000000000
+          309.033333333333300000
           1481.666666666667000000
           306.916666666666700000
-          285.750000000000000000)
+          262.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -788,7 +788,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -798,15 +798,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 48
-        Top = 175
-        Width = 120
-        Height = 20
+        Left = 60
+        Top = 219
+        Width = 151
+        Height = 25
         Size.Values = (
           52.916666666666670000
           127.000000000000000000
-          463.020833333333300000
-          317.500000000000000000)
+          463.550000000000000000
+          319.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -816,7 +816,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -827,10 +827,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object CustomerAddMemo: TQRMemo
-        Left = 48
-        Top = 194
-        Width = 337
-        Height = 116
+        Left = 60
+        Top = 243
+        Width = 421
+        Height = 145
         Size.Values = (
           306.916666666666700000
           127.000000000000000000
@@ -845,7 +845,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         Lines.Strings = (
@@ -863,14 +863,14 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRLabel18: TQRLabel
-        Left = 512
-        Top = 338
-        Width = 60
-        Height = 20
+        Left = 640
+        Top = 423
+        Width = 75
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1354.666666666667000000
-          894.291666666666700000
+          895.350000000000000000
           158.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -881,7 +881,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -892,15 +892,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object LblAccountCode: TQRDBText
-        Left = 625
-        Top = 338
-        Width = 81
-        Height = 20
+        Left = 781
+        Top = 423
+        Width = 97
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1653.645833333333000000
-          894.291666666666700000
-          214.312500000000000000)
+          1653.116666666667000000
+          895.350000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -911,7 +911,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         DataField = 'Account_Code'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -924,15 +924,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object QRLabel14: TQRLabel
-        Left = 612
-        Top = 432
-        Width = 27
-        Height = 20
+        Left = 765
+        Top = 540
+        Width = 33
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1619.250000000000000000
           1143.000000000000000000
-          71.437500000000000000)
+          69.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -942,7 +942,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -953,10 +953,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object qriHeadLogo: TQRImage
-        Left = 460
+        Left = 575
         Top = 0
-        Width = 245
-        Height = 113
+        Width = 306
+        Height = 141
         Size.Values = (
           298.979166666666700000
           1217.083333333333000000
@@ -968,15 +968,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Stretch = True
       end
       object QRLabel16: TQRLabel
-        Left = 511
-        Top = 432
-        Width = 75
-        Height = 20
+        Left = 639
+        Top = 540
+        Width = 94
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1352.020833333333000000
+          1352.550000000000000000
           1143.000000000000000000
-          198.437500000000000000)
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -986,7 +986,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -997,15 +997,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object QRLabel11: TQRLabel
-        Left = 8
-        Top = 384
-        Width = 30
-        Height = 20
+        Left = 10
+        Top = 480
+        Width = 37
+        Height = 25
         Size.Values = (
           52.916666666666670000
           21.166666666666670000
           1016.000000000000000000
-          79.375000000000000000)
+          78.316666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1015,7 +1015,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1026,15 +1026,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 10
       end
       object qrlblSiteName: TQRLabel
-        Left = 48
-        Top = 385
-        Width = 80
-        Height = 16
+        Left = 60
+        Top = 481
+        Width = 92
+        Height = 20
         Size.Values = (
           42.333333333333330000
           127.000000000000000000
-          1018.645833333333000000
-          211.666666666666700000)
+          1018.116666666667000000
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1044,7 +1044,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1056,11 +1056,12 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       end
     end
     object GrpFootQRBand: TQRBand
-      Left = 38
-      Top = 561
-      Width = 718
-      Height = 192
+      Left = 47
+      Top = 701
+      Width = 898
+      Height = 240
       AlignToBottom = True
+      BeforePrint = GrpFootQRBandBeforePrint
       TransparentBand = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
@@ -1073,15 +1074,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       ParentFont = False
       Size.Values = (
         508.000000000000000000
-        1899.708333333333000000)
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageFooter
       object TotGoodsQRLbl: TQRLabel
-        Left = 614
-        Top = 79
-        Width = 95
-        Height = 20
+        Left = 768
+        Top = 99
+        Width = 119
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1624.541666666667000000
@@ -1097,7 +1098,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1108,10 +1109,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object TotVatQRLbl: TQRLabel
-        Left = 614
-        Top = 111
-        Width = 95
-        Height = 20
+        Left = 768
+        Top = 139
+        Width = 119
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1624.541666666667000000
@@ -1127,7 +1128,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1139,10 +1140,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object InvTotQrLbl: TQRLabel
-        Left = 614
-        Top = 143
-        Width = 95
-        Height = 20
+        Left = 768
+        Top = 179
+        Width = 119
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1624.541666666667000000
@@ -1158,7 +1159,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1170,15 +1171,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object QRLabel1: TQRLabel
-        Left = 556
-        Top = 79
-        Width = 51
-        Height = 20
+        Left = 693
+        Top = 99
+        Width = 66
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1471.083333333333000000
-          209.020833333333300000
-          134.937500000000000000)
+          1466.850000000000000000
+          209.550000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1188,7 +1189,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1199,15 +1200,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object gtQRLabel2: TQRLabel
-        Left = 583
-        Top = 111
-        Width = 24
-        Height = 20
+        Left = 730
+        Top = 139
+        Width = 29
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1542.520833333333000000
-          293.687500000000000000
-          63.500000000000000000)
+          1545.166666666667000000
+          294.216666666666700000
+          61.383333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1217,7 +1218,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1228,15 +1229,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object QRLabel15: TQRLabel
-        Left = 512
-        Top = 143
-        Width = 95
-        Height = 20
+        Left = 640
+        Top = 179
+        Width = 119
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1354.666666666667000000
-          378.354166666666700000
-          251.354166666666700000)
+          378.883333333333300000
+          251.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1246,7 +1247,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1257,15 +1258,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object qrlblPaymentTerms: TQRLabel
-        Left = 12
-        Top = 23
-        Width = 109
-        Height = 16
+        Left = 15
+        Top = 29
+        Width = 128
+        Height = 20
         Size.Values = (
           42.333333333333330000
           31.750000000000000000
-          60.854166666666670000
-          288.395833333333300000)
+          61.383333333333330000
+          270.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1275,7 +1276,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1286,10 +1287,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object qrshpPayment: TQRShape
-        Left = 8
-        Top = 43
-        Width = 409
-        Height = 130
+        Left = 10
+        Top = 54
+        Width = 511
+        Height = 162
         Size.Values = (
           343.958333333333300000
           21.166666666666670000
@@ -1302,10 +1303,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         VertAdjust = 0
       end
       object memPayment: TQRMemo
-        Left = 16
-        Top = 49
-        Width = 393
-        Height = 120
+        Left = 20
+        Top = 61
+        Width = 491
+        Height = 150
         Size.Values = (
           317.500000000000000000
           42.333333333333330000
@@ -1320,7 +1321,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         Lines.Strings = (
@@ -1333,31 +1334,31 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       end
     end
     object qrsdQLabour: TQRBand
-      Left = 38
-      Top = 510
-      Width = 718
-      Height = 51
+      Left = 47
+      Top = 637
+      Width = 898
+      Height = 64
       AlignToBottom = False
       BeforePrint = qrsdQLabourBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        134.937500000000000000
-        1899.708333333333000000)
+        135.466666666666700000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblLabourUTR: TQRLabel
-        Left = 44
-        Top = 5
-        Width = 51
-        Height = 16
+        Left = 55
+        Top = 6
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333330000
           116.416666666666700000
-          13.229166666666670000
-          134.937500000000000000)
+          12.700000000000000000
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1367,7 +1368,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1378,15 +1379,15 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         FontSize = 9
       end
       object qrlblLabourValue: TQRLabel
-        Left = 44
-        Top = 29
-        Width = 77
-        Height = 16
+        Left = 55
+        Top = 36
+        Width = 90
+        Height = 20
         Size.Values = (
           42.333333333333330000
           116.416666666666700000
-          76.729166666666670000
-          203.729166666666700000)
+          76.200000000000000000
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1396,7 +1397,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1456,7 +1457,14 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
       '        Customer.County_State,'
       '        Customer.Telephone_number,'
       '        Customer.Fax_number,'
+      '        Customer.Account_is_Factored,'
+      '        Customer.Use_Virtual_Bank_Details,'
       '        Customer.Separate_Labour_Invoice_Value,'
+      '        (Select Payment_Terms_Description'
+      '         from Payment_Terms'
+      
+        '         where Payment_Terms.Payment_Terms = Sales_invoice.Payme' +
+        'nt_Terms) as Payment_Terms_Description,'
       '        Int_Sel.Int_Sel_Code,'
       '        Int_Sel.Sel1,'
       '        Int_Sel.Text100,'
@@ -1479,6 +1487,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     ParamData = <
       item
         Name = 'Int_Sel'
+        ParamType = ptInput
       end>
   end
   object qryUpSalesInv: TFDQuery

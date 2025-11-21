@@ -55,6 +55,8 @@ type
     lkpCOutThicknessUnit_Price: TCurrencyField;
     lkpCOutThicknessUnit_Cost: TCurrencyField;
     lkpCOutThicknessPrice_Unit_Description: TWideStringField;
+    srclkpMatTypeCopy: TDataSource;
+    lkpMatTypeCopy: TFDQuery;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure dblkpMaterialTypeClick(Sender: TObject);
@@ -190,6 +192,7 @@ begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
   lkpMatType.active := true;
+  lkpMatTypeCopy.active := true;
   lkpEdgeType.active := true;
 
   dblkpMaterialType.keyvalue := lkpMatType.fieldbyname('Material_type').asinteger;

@@ -64,8 +64,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 824
-          ExplicitHeight = 537
+          ExplicitTop = -2
           DesignSize = (
             830
             546)
@@ -98,7 +97,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           object Label4: TLabel
             Left = 8
             Top = 91
-            Width = 28
+            Width = 27
             Height = 13
             Caption = 'Town'
           end
@@ -168,7 +167,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Width = 85
             Height = 13
             Caption = 'Discount Rate %'
-            FocusControl = chkbxFactored
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
@@ -241,7 +239,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           object Label15: TLabel
             Left = 384
             Top = 171
-            Width = 84
+            Width = 83
             Height = 13
             Caption = 'Deposit Terms %'
           end
@@ -280,8 +278,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Caption = 'Email Address'
           end
           object Label23: TLabel
-            Left = 384
-            Top = 504
+            Left = 383
+            Top = 520
             Width = 89
             Height = 13
             Caption = 'No. of Employees'
@@ -289,7 +287,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           object Label18: TLabel
             Left = 384
             Top = 139
-            Width = 75
+            Width = 74
             Height = 13
             Caption = 'Payment Terms'
           end
@@ -387,7 +385,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Width = 108
             Height = 13
             Caption = 'End User Price Factor'
-            FocusControl = chkbxFactored
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
@@ -403,8 +400,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Caption = 'Value'
           end
           object Label39: TLabel
-            Left = 384
-            Top = 471
+            Left = 383
+            Top = 498
             Width = 161
             Height = 13
             Caption = 'Area Calculation Decimal Places'
@@ -422,7 +419,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Width = 265
             Height = 17
             Caption = 'Requires Application for Payment'
-            TabOrder = 30
+            TabOrder = 29
           end
           object dblkpCustomerType: TDBLookupComboBox
             Left = 501
@@ -454,12 +451,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             TabOrder = 19
           end
           object chkbxOnline: TCheckBox
-            Left = 384
-            Top = 440
+            Left = 658
+            Top = 472
             Width = 153
             Height = 17
             Caption = 'Use online facilities'
-            TabOrder = 27
+            TabOrder = 26
             Visible = False
           end
           object dblkpRep: TDBLookupComboBox
@@ -502,14 +499,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Caption = 'This is a speculative trade account'
             TabOrder = 24
           end
-          object chkbxFactored: TCheckBox
-            Left = 384
-            Top = 393
-            Width = 265
-            Height = 17
-            Caption = 'Invoices are factored'
-            TabOrder = 25
-          end
           object dblkpLevelofImportance: TDBLookupComboBox
             Left = 501
             Top = 63
@@ -522,12 +511,12 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             OnClick = EnableOK
           end
           object chkbxShowLabourCharges: TCheckBox
-            Left = 384
-            Top = 417
+            Left = 387
+            Top = 472
             Width = 265
             Height = 17
             Caption = 'Customer deducts CIS'
-            TabOrder = 26
+            TabOrder = 25
           end
           object edtCustomerName: TEdit
             Left = 88
@@ -660,8 +649,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Text = 'edtInvoiceLabel'
           end
           object edtNoOfEmployees: TCREditInt
-            Left = 491
-            Top = 501
+            Left = 490
+            Top = 517
             Width = 46
             Height = 21
             TabOrder = 22
@@ -681,7 +670,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Width = 145
             Height = 21
             Style = csDropDownList
-            TabOrder = 29
+            TabOrder = 28
             Items.Strings = (
               'None'
               'End User Markup'
@@ -691,7 +680,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 383
             Top = 213
-            Width = 394
+            Width = 388
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
@@ -703,7 +692,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
-            TabOrder = 28
+            TabOrder = 27
             TitleFont.Charset = DEFAULT_CHARSET
             TitleFont.Color = clWindowText
             TitleFont.Height = -12
@@ -727,11 +716,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
               end>
           end
           object edtAreaDecimalPlaces: TCREditInt
-            Left = 563
-            Top = 468
+            Left = 562
+            Top = 495
             Width = 46
             Height = 21
-            TabOrder = 31
+            TabOrder = 30
             Text = 'edtNoOfEmployees'
           end
           object edtSupplierCode: TEdit
@@ -740,8 +729,29 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Width = 81
             Height = 21
             CharCase = ecUpperCase
-            TabOrder = 32
+            TabOrder = 31
             Text = 'EDTSUPPLIERCODE'
+          end
+          object rdgrpFactored: TRadioGroup
+            Left = 393
+            Top = 401
+            Width = 185
+            Height = 63
+            Enabled = False
+            ItemIndex = 0
+            Items.Strings = (
+              'General Bank Details'
+              'Virtual Bank Details')
+            TabOrder = 32
+          end
+          object chkbxFactored: TCheckBox
+            Left = 384
+            Top = 393
+            Width = 265
+            Height = 17
+            Caption = 'Invoices are factored'
+            TabOrder = 33
+            OnClick = chkbxFactoredClick
           end
         end
       end
@@ -785,7 +795,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           object lblTemplatingDiscount: TLabel
             Left = 24
             Top = 193
-            Width = 84
+            Width = 83
             Height = 13
             Caption = 'Templating Price'
             Font.Charset = DEFAULT_CHARSET
@@ -2003,14 +2013,14 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             object Label26: TLabel
               Left = 8
               Top = 53
-              Width = 47
+              Width = 46
               Height = 13
               Caption = 'To whom'
             end
             object Label27: TLabel
               Left = 288
               Top = 53
-              Width = 46
+              Width = 47
               Height = 13
               Caption = 'By whom'
             end
@@ -2763,9 +2773,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         '      Area_Calculation_Dec_Places = :Area_Calculation_Dec_Places' +
         ','
       '      Supplier_Code = :Supplier_Code,'
-      '      Pass_on_Associate_Charges = :Pass_on_Associate_Charges'
+      '      Pass_on_Associate_Charges = :Pass_on_Associate_Charges,'
+      '      Use_Virtual_Bank_Details = :Use_Virtual_Bank_Details'
       'WHERE'
-      '  Customer = :Customer')
+      '  Customer = :Customer'
+      '')
     Left = 570
     Top = 380
     ParamData = <
@@ -2992,6 +3004,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       item
         Name = 'PASS_ON_ASSOCIATE_CHARGES'
+        ParamType = ptInput
+      end
+      item
+        Name = 'USE_VIRTUAL_BANK_DETAILS'
         ParamType = ptInput
       end
       item

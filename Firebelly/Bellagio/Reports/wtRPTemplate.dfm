@@ -17,7 +17,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Left = 232
     Top = 8
     Width = 992
-    Height = 1591
+    Height = 1403
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -74,7 +74,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0

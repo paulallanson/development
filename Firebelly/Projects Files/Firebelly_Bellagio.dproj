@@ -890,6 +890,19 @@
             <Form>frmWTRSSOAllocated</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\WTRemedialDM.pas">
+            <Form>dtmdlRemedial</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTRSSalesByInvoice.pas">
+            <Form>frmWTRSSalesbyInvoice</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSupplier.pas">
+            <Form>frmWTLUSupplier</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="FirebellyScheduler.dll">
             <ContainerId>File</ContainerId>
         </None>

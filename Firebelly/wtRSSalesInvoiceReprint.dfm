@@ -58,7 +58,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnCloseClick
-    ExplicitTop = 141
+    ExplicitTop = 166
   end
   object SelectLst: TListBox
     Left = 248
@@ -80,7 +80,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnPrintClick
-    ExplicitTop = 141
+    ExplicitTop = 166
   end
   object btnPreview: TBitBtn
     Left = 97
@@ -92,7 +92,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnPreviewClick
-    ExplicitTop = 141
+    ExplicitTop = 166
   end
   object btnEmail: TBitBtn
     Left = 185
@@ -104,7 +104,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnEmailClick
-    ExplicitTop = 141
+    ExplicitTop = 166
   end
   object rdgrpType: TRadioGroup
     Left = 288
@@ -139,6 +139,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Is_Retail_Customer,'
       '        Customer.Customer_Is_Speculative,'
       '        Customer.Account_is_Factored,'
+      '        Customer.Use_Virtual_Bank_Details,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
       '        Customer.Supplier_Code,'
@@ -186,6 +187,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Is_Retail_Customer,'
       '        Customer.Customer_Is_Speculative,'
       '        Customer.Account_is_Factored,'
+      '        Customer.Use_Virtual_Bank_Details,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
       '        Customer.Supplier_Code,'
@@ -221,8 +223,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object qryGetCustomers: TFDQuery
     ConnectionName = 'wt'
-    Left = 152
-    Top = 8
+    Left = 150
+    Top = 10
   end
   object GetInvCustSQL: TFDQuery
     ConnectionName = 'wt'
@@ -257,8 +259,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '  Sales_Invoice.Customer_Name,'
       '  Sales_Invoice.Invoice_no'
       '')
-    Left = 232
-    Top = 8
+    Left = 218
+    Top = 18
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -296,8 +298,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '  Sales_Invoice.Customer_Name,'
       '  Sales_Invoice.Invoice_no'
       '')
-    Left = 232
-    Top = 56
+    Left = 290
+    Top = 14
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -316,6 +318,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Is_Retail_Customer,'
       '        Customer.Customer_Is_Speculative,'
       '        Customer.Account_is_Factored,'
+      '        Customer.Use_Virtual_Bank_Details,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
       '        Customer.Supplier_Code,'
@@ -343,8 +346,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '(Sales_Invoice.invoice_no = :Invoice_no)'
       'ORDER BY'
       '  Sales_Invoice.Invoice_No asc')
-    Left = 304
-    Top = 72
+    Left = 172
+    Top = 82
     ParamData = <
       item
         Name = 'Int_sel'
@@ -373,6 +376,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '        Customer.Is_Retail_Customer,'
       '        Customer.Customer_Is_Speculative,'
       '        Customer.Account_is_Factored,'
+      '        Customer.Use_Virtual_Bank_Details,'
       '        Customer.Separate_Labour_Invoice_Value,'
       '        Customer.Invoice_Label,'
       '        Customer.Supplier_Code,'
@@ -399,8 +403,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '(Sales_Invoice.invoice_no = :Invoice_no)'
       'ORDER BY'
       '  Sales_Invoice.Invoice_No asc')
-    Left = 336
-    Top = 104
+    Left = 332
+    Top = 50
     ParamData = <
       item
         Name = 'Int_sel'

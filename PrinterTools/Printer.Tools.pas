@@ -25,7 +25,7 @@ type
     constructor Create;
     destructor Destroy; override;
     class function New: IPrinterToAttachment;
-    procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string; const ClearFilesList: Boolean = True);
+    procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string; const ClearFilesList: Boolean = true);
     procedure PrintToFileQuote(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
     procedure PrintToFileDelivery(const Report: TQuickRep; const ListFiles: TStringList; const PONo: Real; const POLine, DelLine: integer; const attachmentType: string);
     procedure PrintToFileLabel(const Report: TQuickRep; const ListFiles: TStringList; const PONo: Real; const POLine, DelLine: integer; const attachmentType: string);
@@ -74,7 +74,7 @@ begin
 end;
 
 procedure TPrinterTools.PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName,
-  attachmentType: string; const ClearFilesList: Boolean = True);
+  attachmentType: string; const ClearFilesList: Boolean = true);
 var
   Location,
   targetFileName: string;

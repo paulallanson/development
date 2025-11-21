@@ -2,12 +2,12 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 444
-  ClientWidth = 1273
+  ClientHeight = 435
+  ClientWidth = 1267
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 425
-    Width = 1273
+    Top = 416
+    Width = 1267
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 384
-    Width = 1273
+    Top = 375
+    Width = 1267
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -47,20 +47,20 @@ object frmwtLUQuotes: TfrmwtLUQuotes
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 86
-      Height = 13
+      Width = 99
+      Height = 17
       Caption = 'Customer Search'
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 114
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 982
+      Left = 976
       Top = 1
       Width = 290
       Height = 39
@@ -73,10 +73,10 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         290
         39)
       object Label3: TLabel
-        Left = 22
+        Left = 10
         Top = 12
-        Width = 76
-        Height = 13
+        Width = 88
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Quote Number'
@@ -85,7 +85,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Left = 105
         Top = 8
         Width = 73
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 0
         OnKeyPress = edtNumberKeyPress
@@ -102,8 +102,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       end
     end
     object btnSearch: TBitBtn
-      Left = 280
-      Top = 6
+      Left = 290
+      Top = 8
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -111,9 +111,9 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnClick = btnSearchClick
     end
     object chkbxHighImportance: TCheckBox
-      Left = 368
-      Top = 10
-      Width = 193
+      Left = 378
+      Top = 12
+      Width = 249
       Height = 17
       Caption = 'Show only high importance quotes'
       TabOrder = 3
@@ -122,23 +122,24 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object CoolBar1: TCoolBar
     Left = 0
-    Top = 32
-    Width = 1273
+    Top = 41
+    Width = 1267
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1267
+        Width = 1261
       end>
+    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1258
+      Width = 1252
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 58
+      ButtonHeight = 40
+      ButtonWidth = 68
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -152,7 +153,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 58
+        Left = 68
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -161,7 +162,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 116
+        Left = 136
         Top = 0
         Hint = 'Copy a Quote'
         Caption = 'C&opy'
@@ -170,7 +171,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 174
+        Left = 204
         Top = 0
         Caption = '&Requote'
         Enabled = False
@@ -178,7 +179,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 232
+        Left = 272
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -187,7 +188,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 290
+        Left = 340
         Top = 0
         Hint = 'Print Quote'
         Caption = '&Print'
@@ -196,7 +197,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnPrintClick
       end
       object ToolButton6: TToolButton
-        Left = 348
+        Left = 408
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -204,7 +205,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Style = tbsSeparator
       end
       object btnTemplate: TToolButton
-        Left = 356
+        Left = 416
         Top = 0
         Caption = 'Template'
         Enabled = False
@@ -212,7 +213,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnTemplateClick
       end
       object btnConvert: TToolButton
-        Left = 414
+        Left = 484
         Top = 0
         Hint = 'Sales Order Confirmation'
         Caption = 'Con&firm'
@@ -223,7 +224,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnConvertClick
       end
       object btnJob: TToolButton
-        Left = 472
+        Left = 552
         Top = 0
         Hint = 'Create job from quote'
         Caption = 'Job'
@@ -232,7 +233,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnJobClick
       end
       object ToolButton2: TToolButton
-        Left = 530
+        Left = 620
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -240,7 +241,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 538
+        Left = 628
         Top = 0
         Caption = 'Reports'
         ImageIndex = 7
@@ -250,15 +251,15 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 77
-    Width = 1273
-    Height = 307
+    Top = 86
+    Width = 1267
+    Height = 289
     Align = alClient
     DataSource = dtmdlQuote.dtsAllQuotes
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -399,31 +400,31 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1273
-    Height = 32
+    Width = 1267
+    Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
-        MinHeight = 30
-        Width = 1267
+        MinHeight = 41
+        Width = 1261
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1258
-      Height = 30
+      Width = 1252
+      Height = 41
       Align = alLeft
       BevelOuter = bvNone
       Color = 16642529
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1258
-        30)
+        1252
+        41)
       object Label2: TLabel
         Left = 0
-        Top = 1
+        Top = 7
         Width = 58
         Height = 25
         Caption = 'Quotes'
@@ -436,7 +437,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       end
       object lblWorkinProgress: TLabel
         Left = 72
-        Top = 3
+        Top = 9
         Width = 198
         Height = 21
         Caption = '-  displaying only live quotes'
@@ -450,8 +451,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1008
-        Top = 6
+        Left = 1002
+        Top = 12
         Width = 81
         Height = 15
         Anchors = [akTop, akRight]
@@ -462,13 +463,12 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1032
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1095
-        Top = 3
+        Left = 1089
+        Top = 7
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         TabOrder = 0

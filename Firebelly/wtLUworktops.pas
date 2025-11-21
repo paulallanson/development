@@ -73,8 +73,6 @@ uses
 procedure TfrmWtLUWorktops.FormCreate(Sender: TObject);
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
-
-  dblkpMaterialType.keyvalue :=1;
 end;
 
 procedure TfrmWtLUWorktops.dblkpMaterialTypeClick(Sender: TObject);
@@ -107,6 +105,7 @@ begin
     else
       iCode := 0;
     frmWTMaintWT.FunctionMode := FuncMode;
+    frmWTMaintWT.MaterialType := dblkpMaterialType.KeyValue;
     frmWTMaintWT.Worktop := iCode;
     frmWTMaintWT.showmodal;
     iCode := frmWTMaintWT.iCode;
@@ -169,7 +168,8 @@ end;
 procedure TfrmWtLUWorktops.FormActivate(Sender: TObject);
 begin
   lkpMatType.active := true;
-
+  lkpMatType.First;
+  dblkpMaterialType.KeyValue := 0;
   dblkpMaterialTypeClick(Self);
   edtName.SetFocus;
 end;

@@ -5,8 +5,10 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
   ClientHeight = 347
   ClientWidth = 571
   Position = poMainFormCenter
-  ExplicitWidth = 587
-  ExplicitHeight = 386
+  ExplicitLeft = 3
+  ExplicitTop = 3
+  ExplicitWidth = 589
+  ExplicitHeight = 394
   TextHeight = 13
   object Label2: TLabel [0]
     Left = 224
@@ -68,39 +70,39 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
       571
       65)
     inherited BitBtn1: TBitBtn
-      Left = 198
+      Left = 192
       Top = 312
-      ExplicitLeft = 198
+      ExplicitLeft = 192
       ExplicitTop = 312
     end
     inherited btnEdit: TBitBtn
-      Left = 286
+      Left = 280
       Top = 312
-      ExplicitLeft = 286
+      ExplicitLeft = 280
       ExplicitTop = 312
     end
     inherited btnDelete: TBitBtn
-      Left = 374
+      Left = 368
       Top = 312
-      ExplicitLeft = 374
+      ExplicitLeft = 368
       ExplicitTop = 312
     end
     inherited BitBtn4: TBitBtn
-      Left = 462
+      Left = 456
       Top = 312
-      ExplicitLeft = 462
+      ExplicitLeft = 456
       ExplicitTop = 312
     end
     inherited btnThickness: TBitBtn
-      Left = 243
+      Left = 237
       Top = 312
       Visible = False
-      ExplicitLeft = 243
+      ExplicitLeft = 237
       ExplicitTop = 312
     end
     inherited btnExcel: TBitBtn
-      Left = 588
-      ExplicitLeft = 588
+      Left = 582
+      ExplicitLeft = 582
     end
   end
   inherited Panel2: TPanel

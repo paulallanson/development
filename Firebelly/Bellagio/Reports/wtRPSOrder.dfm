@@ -14,8 +14,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 88
-    Top = -32
+    Left = 112
+    Top = -416
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -74,7 +74,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0

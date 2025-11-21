@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, wtSalesOrderDM, Grids, ComCtrls,
   StdCtrls, DBCtrls, Buttons, ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM, ToolWin, IniFiles,
   DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB, Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile, DropComboTarget;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget, DragDropFile, DropComboTarget, WTRemedialDM;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
@@ -2535,6 +2535,15 @@ begin
             Frm.Mode := solView;
         end;
       Frm.ShowModal;
+      if (aMode = solDelete) and (frm.ModalResult = mrOK) then
+        begin
+          if SOrder.TemplateInSchedule and dtmdlWorktops.UseDocumentTransfer then
+            begin
+              {Delete all PDf documents and then re-add existing quote docs}
+              UpdateQuoteDocuments;
+            end;
+        end
+      else
       if (aMode = solAdd) and (Frm.ModalResult <> mrOK) then
         SOLine.Free;
     finally
@@ -4725,6 +4734,11 @@ end;
 
 procedure TfrmWTMaintSalesOrder.btnRemedialAddClick(Sender: TObject);
 begin
+  if SOrder.Datamodule.qryJobs.RecordCount = 0 then
+    begin
+      messagedlg('You can only create a remedial, once an order has been converted to a job.', mtinformation, [mbOK], 0);
+      exit;
+    end;
   CallMaintRemedials(jremAdd);
 end;
 
@@ -4732,10 +4746,13 @@ procedure TfrmWTMaintSalesOrder.CallMaintRemedials(aMode : TjremMode);
 var
   inx : integer;
   Job: TJob;
+  Remedial: TRemedial;
   jRemedial : TjRemedial;
   frm: TfrmWTMaintJRemedial;
+  dtmdlAllRemedials: TdtmdlRemedial;
 begin
 //  inx := sgRemedials.row;
+  dtmdlAllRemedials := TdtmdlRemedial.create(Application);
   Job := TJob.create(dtmdlAllJobs);
   try
     Job.dbkey := dbgJobs.DataSource.DataSet.fieldbyname('Job').asinteger;
@@ -4749,15 +4766,23 @@ begin
 
     try
       frm := TfrmWTMaintjRemedial.Create(Self);
+      Remedial := TRemedial.create(dtmdlAllRemedials);
+
       try
         if aMode = jremAdd then
-          jRemedial := TjRemedial.create(Job)
+          begin
+            jRemedial := TjRemedial.create(Job);
+          end
         else
         begin
           inx := Job.Remedials.IndexOf(inx);
           jRemedial := Job.Remedials[inx];
+          Remedial.dbkey := jRemedial.RemedialID;
+          Remedial.LoadFromDB;
         end;
         Frm.jRemedial := jRemedial;
+        Frm.Remedial := Remedial;
+        Frm.UseSlabs := dtmdlWorktops.UseCostingSystem;
         Frm.Mode := aMode;
         Frm.ShowModal;
         if (aMode = jremAdd) and (Frm.ModalResult <> mrOK) then
@@ -4765,16 +4790,20 @@ begin
         if Frm.ModalResult = mrOK then
           begin
             Job.SaveToDB(true);
+            Remedial.dbKey := jremedial.RemedialID;
+            Remedial.SaveToDB(true);
             ShowRemedials;
             dbgRemedials.DataSource.DataSet.Locate('Job;Remedial_Number', VarArrayOf([inttostr(Job.dbKey),inttostr(inx+1)]),[lopartialKey]);
           end;
       finally
         Frm.Free;
+//        Remedial.free;
       end;
     finally
     end;
   finally
     Job.free;
+    dtmdlAllRemedials.free
   end;
 end;
 
@@ -4960,14 +4989,24 @@ var
   aSOrder: TSOrder;
   aSOLine: TSOLine;
   dtmdlOneSales: TdtmdlSalesOrder;
+  dtmdlOneQuote: TdtmdlQuote;
+  dtmdlOneRemedial: TdtmdlRemedial;
   iCount: integer;
   inx : integer;
+  iQuote : integer;
   Job: TJob;
+  aQuote: TQuote;
+  aSlab: TQSlab;
+  aElement: TQElement;
+  Remedial: TRemedial;
   sInstallAddress: string;
   jRemedial : TjRemedial;
   frmRem: TfrmWTMaintSalesOrder;
   bOK: boolean;
 begin
+  dtmdlOneQuote := TdtmdlQuote.create(Application);
+  dtmdlOneRemedial := TdtmdlRemedial.create(Application);
+
   Job := TJob.create(dtmdlAllJobs);
   try
     Job.dbkey := dbgJobs.DataSource.DataSet.fieldbyname('Job').asinteger;
@@ -4979,32 +5018,154 @@ begin
       inx := 1;
     end;
 
+    iQuote := 0;
+
     try
       inx := Job.Remedials.IndexOf(inx);
       jRemedial := Job.Remedials[inx];
 
+      if jRemedial.ProductionRequired = 'Y' then
+        begin
+          try
+          Remedial := TRemedial.create(dtmdlOneRemedial);
+          Remedial.dbkey := jRemedial.RemedialID;
+          Remedial.LoadFromDB;
+
+          if Remedial.Slabs.count > 0 then
+            begin
+              {Create a Quote with slab details and create sales order}
+              aQuote := TQuote.Create(dtmdlOneQuote);
+              try
+                aQuote.DbKey := 0;
+                aQuote.qMode := qAdd;
+                aQuote.speculative := false;
+                aQuote.Address := 0;
+
+                aQuote.RevenueCentre := SOrder.RevenueCentre;
+                aQuote.Reference := SOrder.Reference;
+
+                aQuote.Customer := SOrder.Customer;
+                aQuote.CustomerName := SOrder.CustomerName;
+                aQuote.QDate := date;
+                aQuote.Inactive := 'N';
+                aQuote.AccountManager := SOrder.AccountManager;
+                aQuote.ContactName := SOrder.ContactName;
+                aQuote.DateRequired := SOrder.DateRequired;
+                aQuote.DeliveryPrice := 0.00;
+                aQuote.Description := Job.Description;
+                aQuote.DepositTerms := 0.00;
+                aQuote.DepositAmount := 0.00;
+                aQuote.DiscountRate := 0.00;
+                aQuote.DiscountValue := 0.00;
+                aQuote.InstallPrice := 0.00;
+                aQuote.Material := Job.Material;
+                aQuote.NettPrice := 0.00;
+                aQuote.Operator := frmWTMain.Operator;
+                aQuote.ContractQuote := false;
+                aQuote.Vat := Job.Vat;
+
+                {Added the Slab details based on what has been added to the Remedial}
+                for icount := 0 to pred(Remedial.Slabs.count) do
+                  begin
+                    aSlab := TQSlab.create(aQuote);
+                    aSlab.QSlabNo := Remedial.Slabs.Items[icount].RSlabNo;
+                    aSlab.Material := Remedial.Slabs.Items[icount].Material;
+                    aSlab.worktop := Remedial.Slabs.Items[icount].Worktop;
+                    aSlab.thickness := Remedial.Slabs.Items[icount].Thickness;
+                    aSlab.Supplier := Remedial.Slabs.Items[icount].Supplier;
+                    aSlab.length := Remedial.Slabs.Items[icount].Length;
+                    aSlab.Depth := Remedial.Slabs.Items[icount].Depth;
+                    aSlab.Quantity := Remedial.Slabs.Items[icount].Quantity;
+                    aSlab.UnitCost := Remedial.Slabs.Items[icount].UnitCost;
+                    aSlab.PriceUnit := Remedial.Slabs.Items[icount].PriceUnit;
+                    aSlab.WasteMultiplier := Remedial.Slabs.Items[icount].WasteMultiplier;
+                    aSlab.WastePercentage := Remedial.Slabs.Items[icount].WastePercentage;
+                    aSlab.WasteValue := Remedial.Slabs.Items[icount].WasteValue;
+                    aSlab.AdhesiveProductCode := Remedial.Slabs.Items[icount].AdhesiveProductCode;
+                    aSlab.AdhesiveDescription := Remedial.Slabs.Items[icount].AdhesiveDescription;
+                    aSlab.AdhesiveQuantity := Remedial.Slabs.Items[icount].AdhesiveQuantity;
+                    aSlab.AdhesiveCostPackQuantity := Remedial.Slabs.Items[icount].AdhesiveCostPackQuantity;
+                    aSlab.AdhesiveUnitCost := Remedial.Slabs.Items[icount].AdhesiveUnitCost;
+                    aQuote.slabs.Add(aSlab);
+                  end;
+
+                {Adde element lines based on the slab quantity. So if a fraction then the length is }
+                for icount := 0 to pred(Remedial.Slabs.count) do
+                  begin
+                    aElement := TQElement.create(aQuote);
+                    aElement.QENumber := Remedial.Slabs.Items[icount].RSlabNo;
+                    aElement.ElementDescription := 'Remedial Piece';
+                    aElement.Material := Remedial.Slabs.Items[icount].Material;
+                    aElement.worktop := Remedial.Slabs.Items[icount].Worktop;
+                    aElement.thickness := Remedial.Slabs.Items[icount].Thickness;
+                    aElement.length := round(Remedial.Slabs.Items[icount].Length * Remedial.Slabs.Items[icount].Quantity);
+                    aElement.Depth := Remedial.Slabs.Items[icount].Depth;
+                    aElement.Quantity := 1;
+                    aElement.UnitPrice := 0.00;
+                    aElement.PriceUnit := Remedial.Slabs.Items[icount].PriceUnit;
+                    aQuote.Elements.Add(aElement);
+                  end;
+                aQuote.SaveToDB(true);
+                iQuote := aQuote.dbKey;
+
+              finally
+                aQuote.Free;
+              end;
+            end;
+          finally
+            Remedial.Free;
+          end;
+            {End of Create a Quote with slab details and add to sales order}
+        end;
+
+      {Create the sales order}
       dtmdlOneSales := TdtmdlSalesOrder.create(Application);
       aSOrder := TSOrder.Create(dtmdlOneSales);
       try
-        aSOrder.DbKey := SOrder.dbKey;
-        aSOrder.Operator := frmwtMain.Operator;
-        aSOrder.SOMode := sopRemedial;
-        aSOrder.LoadFromDB;
-
-        aSorder.dbKey := 0;
-        aSOrder.SupplyOnly := 'N';
-        aSOrder.CollectionOnly := 'N';
-
-        if jRemedial.ProductionRequired = 'Y' then
+        if (jRemedial.ProductionRequired = 'Y') and (iQuote > 0) then
           begin
+            aSOrder.DataModule.QuoteNo := iQuote;
+            aSOrder.DbKey := 0;
+            aSOrder.LoadFromQuote;
+            aSOrder.SOMode := sopRemedial;
             aSOrder.RemedialProduction := 'Y';
             aSOrder.RemedialNoProduction := 'N';
+            aSOrder.OriginalSalesOrder := SOrder.dbKey;
           end
         else
           begin
-            aSOrder.RemedialProduction := 'N';
-            aSOrder.RemedialNoProduction := 'Y';
+            aSOrder.DbKey := SOrder.dbKey;
+            aSOrder.SOMode := sopRemedial;
+            aSOrder.LoadFromDB;
+
+            if jRemedial.ProductionRequired = 'Y' then
+              begin
+                aSOrder.RemedialProduction := 'Y';
+                aSOrder.RemedialNoProduction := 'N';
+              end
+            else
+              begin
+                aSOrder.RemedialProduction := 'N';
+                aSOrder.RemedialNoProduction := 'Y';
+              end;
+
+            for icount := pred(aSOrder.lines.count) downto 0 do
+              begin
+                aSOrder.lines.Delete(icount);
+              end;
           end ;
+
+        aSorder.dbKey := 0;
+        aSOrder.Operator := frmwtMain.Operator;
+        aSOrder.SupplyOnly := 'N';
+        aSOrder.CollectionOnly := 'N';
+        aSOrder.OrderReference := SOrder.OrderReference;
+        aSOrder.InstallAddress := SOrder.InstallAddress;
+        aSOrder.InstallEmail := SOrder.InstallEmail;
+        aSOrder.InstallName := SOrder.InstallName;
+        aSOrder.InstallPhone := SOrder.InstallPhone;
+        aSOrder.CustomerBranch := SOrder.CustomerBranch;
+        aSOrder.CustomerBranchName := SOrder.CustomerBranchName;
 
         aSOrder.TemplateInSchedule := false;
         aSOrder.FittingInSchedule := false;
@@ -5040,14 +5201,9 @@ begin
                                                 edtInstallphone.text,
                                                 'I');
 
-        for icount := pred(aSOrder.lines.count) downto 0 do
-          begin
-            aSOrder.lines.Delete(icount);
-          end;
-
         aSOLine := TSOLine.Create(aSOrder);
         try
-          aSOLine.SOLNumber := 1;
+          aSOLine.SOLNumber := (aSOLine.parent.Lines.count + 1);
           aSOLine.Product := dtmdlWorktops.GetDefaultRemedialProductCode;
           aSOLine.StockCode := dtmdlWorktops.GetProductStockCode(aSOLine.Product);
           aSOLine.Description := dtmdlWorktops.GetProductDescription(aSOLine.Product);
@@ -5097,6 +5253,8 @@ begin
     end;
   finally
     Job.Free;
+    dtmdlOneQuote.Free;
+    dtmdlOneRemedial.Free;
   end;
 end;
 

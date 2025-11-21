@@ -2,12 +2,12 @@ object frmWTLUContracts: TfrmWTLUContracts
   Left = 242
   Top = 115
   Caption = 'Contract Quotes'
-  ClientHeight = 385
-  ClientWidth = 939
+  ClientHeight = 376
+  ClientWidth = 933
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,111 +19,27 @@ object frmWTLUContracts: TfrmWTLUContracts
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
-  object CoolBar2: TCoolBar
-    Left = 0
-    Top = 0
-    Width = 939
-    Height = 32
-    Bands = <
-      item
-        Control = Panel3
-        ImageIndex = -1
-        MinHeight = 30
-        Width = 933
-      end>
-    object Panel3: TPanel
-      Left = 11
-      Top = 0
-      Width = 924
-      Height = 30
-      Align = alLeft
-      BevelOuter = bvNone
-      Color = 16642529
-      ParentBackground = False
-      TabOrder = 0
-      DesignSize = (
-        924
-        30)
-      object Label2: TLabel
-        Left = 0
-        Top = 0
-        Width = 130
-        Height = 25
-        Caption = 'Contract Quotes'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clNavy
-        Font.Height = -18
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lblWorkinProgress: TLabel
-        Left = 144
-        Top = 2
-        Width = 196
-        Height = 21
-        Caption = '-  displaying only live orders'
-        Color = clSilver
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentColor = False
-        ParentFont = False
-      end
-      object Label4: TLabel
-        Left = 677
-        Top = 9
-        Width = 81
-        Height = 15
-        Anchors = [akTop, akRight]
-        Caption = 'Customer Filter'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clNavy
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitLeft = 683
-      end
-      object cmbCustomerFilter: TComboBox
-        Left = 766
-        Top = 6
-        Width = 145
-        Height = 21
-        Style = csDropDownList
-        Anchors = [akTop, akRight]
-        TabOrder = 0
-        OnChange = cmbCustomerFilterChange
-        Items.Strings = (
-          'All'
-          'Trade'
-          'Retail'
-          'Commercial')
-      end
-    end
-  end
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
-    Top = 32
-    Width = 939
+    Top = 41
+    Width = 933
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 933
+        Width = 927
       end>
+    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 924
+      Width = 918
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 58
+      ButtonHeight = 40
+      ButtonWidth = 68
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -137,7 +53,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 58
+        Left = 68
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -146,7 +62,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 116
+        Left = 136
         Top = 0
         Hint = 'Copy a Quote'
         Caption = 'C&opy'
@@ -155,7 +71,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 174
+        Left = 204
         Top = 0
         Caption = '&Requote'
         Enabled = False
@@ -163,7 +79,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 232
+        Left = 272
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -172,7 +88,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 290
+        Left = 340
         Top = 0
         Hint = 'Print Quote'
         Caption = '&Print'
@@ -181,7 +97,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnPrintClick
       end
       object ToolButton6: TToolButton
-        Left = 348
+        Left = 408
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -189,7 +105,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 356
+        Left = 416
         Top = 0
         Caption = 'Reports'
         ImageIndex = 7
@@ -199,20 +115,20 @@ object frmWTLUContracts: TfrmWTLUContracts
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 77
-    Width = 939
-    Height = 248
+    Top = 86
+    Width = 933
+    Height = 230
     Align = alClient
     DataSource = dtmdlContract.dtsAllContracts
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -280,29 +196,29 @@ object frmWTLUContracts: TfrmWTLUContracts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 325
-    Width = 939
+    Top = 316
+    Width = 933
     Height = 41
     Align = alBottom
     ParentBackground = False
-    TabOrder = 3
+    TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 86
-      Height = 13
+      Width = 99
+      Height = 17
       Caption = 'Customer Search'
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 114
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 648
+      Left = 642
       Top = 1
       Width = 290
       Height = 39
@@ -315,26 +231,26 @@ object frmWTLUContracts: TfrmWTLUContracts
         290
         39)
       object Label3: TLabel
-        Left = 22
-        Top = 12
-        Width = 76
-        Height = 13
+        Left = 10
+        Top = 11
+        Width = 88
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Quote Number'
       end
       object edtNumber: TEdit
         Left = 105
-        Top = 8
+        Top = 7
         Width = 73
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 0
         OnKeyPress = edtNumberKeyPress
       end
       object Button1: TButton
         Left = 207
-        Top = 6
+        Top = 7
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -344,8 +260,8 @@ object frmWTLUContracts: TfrmWTLUContracts
       end
     end
     object btnSearch: TBitBtn
-      Left = 280
-      Top = 6
+      Left = 289
+      Top = 8
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -355,8 +271,8 @@ object frmWTLUContracts: TfrmWTLUContracts
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 366
-    Width = 939
+    Top = 357
+    Width = 933
     Height = 19
     Panels = <
       item
@@ -368,6 +284,91 @@ object frmWTLUContracts: TfrmWTLUContracts
       item
         Width = 50
       end>
+  end
+  object CoolBar2: TCoolBar
+    Left = 0
+    Top = 0
+    Width = 933
+    Height = 41
+    Bands = <
+      item
+        Control = Panel3
+        ImageIndex = -1
+        MinHeight = 41
+        Width = 927
+      end>
+    ExplicitTop = 8
+    object Panel3: TPanel
+      Left = 11
+      Top = 0
+      Width = 918
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 16642529
+      ParentBackground = False
+      TabOrder = 0
+      DesignSize = (
+        918
+        41)
+      object Label2: TLabel
+        Left = 0
+        Top = 7
+        Width = 130
+        Height = 25
+        Caption = 'Contract Quotes'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -18
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblWorkinProgress: TLabel
+        Left = 144
+        Top = 9
+        Width = 196
+        Height = 21
+        Caption = '-  displaying only live orders'
+        Color = clSilver
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 671
+        Top = 12
+        Width = 81
+        Height = 15
+        Anchors = [akTop, akRight]
+        Caption = 'Customer Filter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object cmbCustomerFilter: TComboBox
+        Left = 760
+        Top = 7
+        Width = 145
+        Height = 25
+        Style = csDropDownList
+        Anchors = [akTop, akRight]
+        TabOrder = 0
+        OnChange = cmbCustomerFilterChange
+        Items.Strings = (
+          'All'
+          'Trade'
+          'Retail'
+          'Commercial')
+      end
+    end
   end
   object imgLstHot: TImageList
     Left = 176

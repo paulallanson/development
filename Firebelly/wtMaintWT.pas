@@ -118,6 +118,8 @@ type
     FfunctionMode: string;
     iOldGroup: integer;
     sImageLocation: string;
+    FMaterialType: integer;
+    procedure SetMaterialType(const Value: integer);
     property GroupCode: integer read FGroupCode write SetGroupCode;
     procedure SetfunctionMode(const Value: string);
     procedure CreateSizes;
@@ -133,6 +135,7 @@ type
     { Private declarations }
   public
     iCode: integer;
+    property MaterialType: integer read FMaterialType write SetMaterialType;
     property Worktop: integer read FWorktop write SetWorktop;
     property functionMode: string read FfunctionMode write SetfunctionMode;
   end;
@@ -234,7 +237,10 @@ begin
   with lkpMatType do
     begin
       close;
-      parambyname('Material_Type').asinteger := qryWorktop.fieldbyname('Material_type').asinteger;
+      if FunctionMode = 'A' then
+        parambyname('Material_Type').asinteger := MaterialType
+      else
+        parambyname('Material_Type').asinteger := qryWorktop.fieldbyname('Material_type').asinteger;
       open;
     end;
 
@@ -254,7 +260,7 @@ begin
       
       edtDescription.Text := '';
       dblkpWorktopFinish.KeyValue := 0;
-      dblkpMaterialType.KeyValue := 0;
+      dblkpMaterialType.KeyValue := MaterialType;
       dblkpWorktopGroup.KeyValue := 0;
       dblkpDiscount.KeyValue := 0;
 
@@ -564,6 +570,11 @@ end;
 procedure TfrmWTMaintWT.SetGroupCode(const Value: integer);
 begin
   FGroupCode := Value;
+end;
+
+procedure TfrmWTMaintWT.SetMaterialType(const Value: integer);
+begin
+  FMaterialType := Value;
 end;
 
 procedure TfrmWTMaintWT.btnAddClick(Sender: TObject);

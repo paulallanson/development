@@ -24,8 +24,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 460
-    ExplicitWidth = 921
+    ExplicitTop = 421
+    ExplicitWidth = 892
     DesignSize = (
       898
       41)
@@ -39,7 +39,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 826
+      ExplicitLeft = 791
     end
     object btnAllocate: TButton
       Left = 16
@@ -66,8 +66,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       item
         Width = 50
       end>
-    ExplicitTop = 501
-    ExplicitWidth = 921
+    ExplicitTop = 462
+    ExplicitWidth = 892
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -148,7 +148,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 921
+    ExplicitWidth = 892
     object grpbxDateSelect: TGroupBox
       Left = 240
       Top = 16
@@ -841,30 +841,38 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Quote_Slab'
-      'SET Quantity_Allocated = 0'
+      'SET Quantity_Allocated = 0,'
+      #160#160#160' Allocated_Stock_Item = NULL,'
+      #160#160#160' Allocated_Stock_Code = NULL,'
+      #160#160#160' Allocated_Stock_Alternative = NULL'
       'WHERE'
-      '  (Quote_Slab.Quote = :Quote) AND'
-      '  (Quote_Slab.Worktop = :Worktop) AND'
-      '  (Quote_Slab.Thickness = :Thickness) AND'
-      '  (Quote_Slab.Length = :Length) AND'
-      '  (Quote_Slab.Depth = :Depth)')
+      #160' (Quote_Slab.Quote = :Quote) AND'
+      #160' (Quote_Slab.Worktop = :Worktop) AND'
+      #160' (Quote_Slab.Thickness = :Thickness) AND'
+      #160' (Quote_Slab.Length = :Length) AND'
+      #160' (Quote_Slab.Depth = :Depth)')
     Left = 478
     Top = 292
     ParamData = <
       item
         Name = 'Quote'
+        ParamType = ptInput
       end
       item
         Name = 'Worktop'
+        ParamType = ptInput
       end
       item
         Name = 'Thickness'
+        ParamType = ptInput
       end
       item
         Name = 'Length'
+        ParamType = ptInput
       end
       item
         Name = 'Depth'
+        ParamType = ptInput
       end>
   end
   object qryGetSalesOrderLine: TFDQuery

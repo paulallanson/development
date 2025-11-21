@@ -29,9 +29,6 @@ type
     CuttingSchedule1: TMenuItem;
     OrderSheet1: TMenuItem;
     Accont1: TMenuItem;
-    CoolBar2: TCoolBar;
-    Panel3: TPanel;
-    Label2: TLabel;
     Label3: TLabel;
     edtNumber: TEdit;
     btnCutting: TToolButton;
@@ -39,9 +36,12 @@ type
     btnComplete: TToolButton;
     ToolButton1: TToolButton;
     btnJobSheet: TToolButton;
-    lblWorkinProgress: TLabel;
     btnSearch: TBitBtn;
     btnRemedial: TToolButton;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label2: TLabel;
+    lblWorkinProgress: TLabel;
     Label4: TLabel;
     cmbCustomerFilter: TComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

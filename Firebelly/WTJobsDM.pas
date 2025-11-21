@@ -4768,6 +4768,8 @@ begin
       end;
   end;
 
+  self.RemedialID := iRemedial;
+
   Narrative.SavetoDB;
   with FParent.FDataModule.qryJAddRemedial do
   begin

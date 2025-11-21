@@ -1,9 +1,9 @@
 object frmwtRPQuote: TfrmwtRPQuote
   Left = 166
   Top = 34
-  Caption = 'frmwtRPQuote'
+  Caption = 'Quote Print'
   ClientHeight = 741
-  ClientWidth = 1148
+  ClientWidth = 1230
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmwtRPQuote: TfrmwtRPQuote
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 160
-    Top = 26
+    Left = 254
+    Top = -571
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -74,7 +74,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0
@@ -480,13 +480,13 @@ object frmwtRPQuote: TfrmwtRPQuote
         FontSize = 9
       end
       object QRDBText6: TQRDBText
-        Left = 728
+        Left = 729
         Top = 297
         Width = 155
         Height = 21
         Size.Values = (
           44.450000000000000000
-          1540.933333333333000000
+          1543.050000000000000000
           628.650000000000000000
           328.083333333333300000)
         XLColumn = 0
@@ -841,15 +841,15 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrbPageFooter: TQRBand
       Left = 47
-      Top = 1954
+      Top = 1949
       Width = 898
-      Height = 12
+      Height = 3
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        25.400000000000000000
+        6.350000000000000000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -859,14 +859,14 @@ object frmwtRPQuote: TfrmwtRPQuote
       Left = 47
       Top = 476
       Width = 898
-      Height = 25
+      Height = 24
       AlignToBottom = False
       BeforePrint = qrsdQElementsBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        52.916666666666670000
+        50.800000000000000000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -904,13 +904,13 @@ object frmwtRPQuote: TfrmwtRPQuote
         FontSize = 9
       end
       object lblWorktopTotal: TQRLabel
-        Left = 775
+        Left = 776
         Top = 3
         Width = 102
         Height = 20
         Size.Values = (
           42.333333333333330000
-          1640.416666666667000000
+          1642.533333333333000000
           6.350000000000000000
           215.900000000000000000)
         XLColumn = 0
@@ -997,16 +997,16 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrsdQCutOuts: TQRSubDetail
       Left = 47
-      Top = 501
+      Top = 500
       Width = 898
-      Height = 25
+      Height = 24
       AlignToBottom = False
       BeforePrint = qrsdQCutOutsBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        52.916666666666670000
+        50.800000000000000000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1016,13 +1016,13 @@ object frmwtRPQuote: TfrmwtRPQuote
       PrintIfEmpty = True
       object qrlblQuantity: TQRLabel
         Left = 20
-        Top = 5
+        Top = 4
         Width = 82
         Height = 20
         Size.Values = (
           42.333333333333330000
           42.333333333333330000
-          10.583333333333330000
+          8.466666666666667000
           173.566666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1045,13 +1045,13 @@ object frmwtRPQuote: TfrmwtRPQuote
       end
       object lblCutOutTotal: TQRLabel
         Left = 782
-        Top = 5
+        Top = 4
         Width = 94
         Height = 20
         Size.Values = (
           42.333333333333330000
           1655.233333333333000000
-          10.583333333333330000
+          8.466666666666667000
           198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1105,16 +1105,16 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrsdQEdges: TQRSubDetail
       Left = 47
-      Top = 526
+      Top = 524
       Width = 898
-      Height = 25
+      Height = 24
       AlignToBottom = False
       BeforePrint = qrsdQEdgesBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        52.916666666666670000
+        50.800000000000000000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1124,13 +1124,13 @@ object frmwtRPQuote: TfrmwtRPQuote
       PrintIfEmpty = True
       object qrlblLength: TQRLabel
         Left = 20
-        Top = 5
+        Top = 4
         Width = 72
         Height = 20
         Size.Values = (
           42.333333333333330000
           42.333333333333330000
-          10.583333333333330000
+          8.466666666666667000
           152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1152,14 +1152,14 @@ object frmwtRPQuote: TfrmwtRPQuote
         FontSize = 9
       end
       object lblEdgeTotal: TQRLabel
-        Left = 795
-        Top = 5
+        Left = 796
+        Top = 4
         Width = 81
         Height = 20
         Size.Values = (
           42.333333333333330000
-          1682.750000000000000000
-          10.583333333333330000
+          1684.866666666667000000
+          8.466666666666667000
           171.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1213,16 +1213,16 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrsdQExtras: TQRSubDetail
       Left = 47
-      Top = 551
+      Top = 548
       Width = 898
-      Height = 25
+      Height = 24
       AlignToBottom = False
       BeforePrint = qrsdQExtrasBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        52.916666666666670000
+        50.800000000000000000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1232,14 +1232,14 @@ object frmwtRPQuote: TfrmwtRPQuote
       PrintBefore = False
       PrintIfEmpty = True
       object lblExtraTotal: TQRLabel
-        Left = 795
-        Top = 5
+        Left = 796
+        Top = 4
         Width = 81
         Height = 20
         Size.Values = (
           42.333333333333330000
-          1682.750000000000000000
-          10.583333333333330000
+          1684.866666666667000000
+          8.466666666666667000
           171.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1292,13 +1292,13 @@ object frmwtRPQuote: TfrmwtRPQuote
       end
       object qrlblExtraQuantity: TQRLabel
         Left = 20
-        Top = 5
+        Top = 4
         Width = 82
         Height = 20
         Size.Values = (
           42.333333333333330000
           42.333333333333330000
-          10.583333333333330000
+          8.466666666666667000
           173.566666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1322,7 +1322,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrbQFooter: TQRBand
       Left = 47
-      Top = 601
+      Top = 596
       Width = 898
       Height = 110
       AfterPrint = qrbQFooterAfterPrint
@@ -1572,9 +1572,9 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbAvailability: TQRChildBand
       Left = 47
-      Top = 916
+      Top = 907
       Width = 898
-      Height = 65
+      Height = 64
       AfterPrint = qrcbAvailabilityAfterPrint
       AlignToBottom = False
       BeforePrint = qrcbAvailabilityBeforePrint
@@ -1582,7 +1582,7 @@ object frmwtRPQuote: TfrmwtRPQuote
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        137.583333333333300000
+        135.466666666666700000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1636,7 +1636,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -1646,16 +1646,16 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbTerms: TQRChildBand
       Left = 47
-      Top = 1889
+      Top = 1885
       Width = 898
-      Height = 65
+      Height = 64
       AlignToBottom = False
       BeforePrint = qrcbTermsBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        137.583333333333300000
+        135.466666666666700000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1692,15 +1692,15 @@ object frmwtRPQuote: TfrmwtRPQuote
         FontSize = 10
       end
       object qrrchtextTerms: TQRRichText
-        Left = 10
-        Top = 33
+        Left = 11
+        Top = 32
         Width = 871
         Height = 27
         Size.Values = (
-          58.208333333333320000
-          21.166666666666670000
-          68.791666666666680000
-          1844.145833333333000000)
+          57.150000000000000000
+          23.283333333333330000
+          67.733333333333330000
+          1843.616666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1709,7 +1709,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -1719,16 +1719,16 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbNotes: TQRChildBand
       Left = 47
-      Top = 851
+      Top = 846
       Width = 898
-      Height = 65
+      Height = 64
       AlignToBottom = False
       BeforePrint = qrcbNotesBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        137.583333333333300000
+        135.466666666666700000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -1791,7 +1791,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbSignature: TQRChildBand
       Left = 47
-      Top = 1259
+      Top = 1255
       Width = 898
       Height = 630
       AlignToBottom = False
@@ -1976,15 +1976,15 @@ object frmwtRPQuote: TfrmwtRPQuote
         VertAdjust = 0
       end
       object qrlblReturnDetails: TQRLabel
-        Left = 10
-        Top = 8
+        Left = 11
+        Top = 6
         Width = 881
         Height = 21
         Size.Values = (
-          44.979166666666670000
-          21.166666666666670000
-          15.875000000000000000
-          1865.312500000000000000)
+          44.450000000000000000
+          23.283333333333330000
+          12.700000000000000000
+          1864.783333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2699,20 +2699,20 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbAcceptanceHeader: TQRChildBand
       Left = 47
-      Top = 981
+      Top = 977
       Width = 898
       Height = 278
       AfterPrint = qrcbAcceptanceHeaderAfterPrint
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
-      ForceNewPage = True
+      ForceNewPage = False
       Size.Values = (
         588.433333333333300000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
-      ParentBand = qrcbAvailability
+      ParentBand = qrbPrintPage
       PrintOrder = cboAfterParent
       object QRLabel26: TQRLabel
         Left = 491
@@ -3011,29 +3011,29 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbDiscount: TQRBand
       Left = 47
-      Top = 576
+      Top = 572
       Width = 898
-      Height = 25
+      Height = 24
       AlignToBottom = False
       BeforePrint = qrbExtraFooterBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        52.916666666666670000
+        50.800000000000000000
         1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object lblDiscount: TQRLabel
         Left = 649
-        Top = 5
+        Top = 4
         Width = 81
         Height = 20
         Size.Values = (
           42.333333333333330000
           1373.716666666667000000
-          10.583333333333330000
+          8.466666666666667000
           171.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -3055,14 +3055,14 @@ object frmwtRPQuote: TfrmwtRPQuote
         FontSize = 9
       end
       object qrlblDiscountValue: TQRLabel
-        Left = 741
-        Top = 5
+        Left = 742
+        Top = 4
         Width = 135
         Height = 20
         Size.Values = (
           42.333333333333330000
-          1568.450000000000000000
-          10.583333333333330000
+          1570.566666666667000000
+          8.466666666666667000
           285.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -3086,7 +3086,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbTotal: TQRChildBand
       Left = 47
-      Top = 780
+      Top = 775
       Width = 898
       Height = 71
       AlignToBottom = False
@@ -3236,7 +3236,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbSubTotal: TQRChildBand
       Left = 47
-      Top = 711
+      Top = 706
       Width = 898
       Height = 69
       AlignToBottom = False
@@ -3383,6 +3383,27 @@ object frmwtRPQuote: TfrmwtRPQuote
         VerticalAlignment = tlTop
         FontSize = 9
       end
+    end
+    object qrbPrintPage: TQRBand
+      Left = 47
+      Top = 974
+      Width = 898
+      Height = 3
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      AlignToBottom = False
+      TransparentBand = False
+      ForceNewColumn = False
+      ForceNewPage = True
+      LinkBand = qrcbAvailability
+      Size.Values = (
+        6.350000000000000000
+        1900.766666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      BandType = rbSummary
     end
   end
   object qryReport: TFDQuery

@@ -2,8 +2,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   Left = 297
   Top = 42
   Caption = 'Remedial details'
-  ClientHeight = 681
-  ClientWidth = 907
+  ClientHeight = 703
+  ClientWidth = 899
   Color = clBtnFace
   Constraints.MinHeight = 660
   Font.Charset = DEFAULT_CHARSET
@@ -13,27 +13,29 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 662
-    Width = 907
+    Top = 684
+    Width = 899
     Height = 19
     Panels = <>
-    ExplicitTop = 653
-    ExplicitWidth = 901
+    ExplicitTop = 675
+    ExplicitWidth = 893
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 907
-    Height = 662
+    Width = 899
+    Height = 684
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 901
-    ExplicitHeight = 653
+    ExplicitWidth = 893
+    ExplicitHeight = 675
     object SpeedButton1: TSpeedButton
       Left = 482
       Top = 280
@@ -57,14 +59,14 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object pnlbottom: TPanel
       Left = 0
-      Top = 605
-      Width = 907
+      Top = 627
+      Width = 899
       Height = 57
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 596
-      ExplicitWidth = 901
+      ExplicitTop = 618
+      ExplicitWidth = 893
       object lblDelete: TLabel
         Left = 245
         Top = 22
@@ -86,7 +88,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'OK'
         Default = True
         Enabled = False
-        ModalResult = 1
         NumGlyphs = 2
         TabOrder = 0
         OnClick = btnOKClick
@@ -150,16 +151,16 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
     object pnlfooter: TPanel
       Left = 0
-      Top = 509
-      Width = 907
+      Top = 531
+      Width = 899
       Height = 96
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 500
-      ExplicitWidth = 901
+      ExplicitTop = 522
+      ExplicitWidth = 893
       DesignSize = (
-        907
+        899
         96)
       object Label3: TLabel
         Left = 672
@@ -176,7 +177,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Remedial Fitter'
       end
       object Label5: TLabel
-        Left = 713
+        Left = 681
         Top = 13
         Width = 23
         Height = 13
@@ -251,7 +252,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = EnableOK
       end
       object edtPrice: TCREditMoney
-        Left = 748
+        Left = 716
         Top = 9
         Width = 89
         Height = 21
@@ -259,7 +260,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 1
         Text = 'edtPrice'
         OnChange = EnableOK
-        ExplicitLeft = 742
+        ExplicitLeft = 710
       end
       object edtInstallDate: TEdit
         Left = 766
@@ -375,14 +376,14 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 907
+      Width = 899
       Height = 81
       Align = alTop
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 901
+      ExplicitWidth = 893
       DesignSize = (
-        907
+        899
         81)
       object Label6: TLabel
         Left = 8
@@ -398,7 +399,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 719
+        Left = 687
         Top = 16
         Width = 24
         Height = 13
@@ -421,7 +422,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Reported by'
       end
       object Label17: TLabel
-        Left = 634
+        Left = 602
         Top = 48
         Width = 53
         Height = 13
@@ -440,17 +441,17 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 0
       end
       object edtDateRaised: TEdit
-        Left = 756
+        Left = 724
         Top = 12
         Width = 89
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 1
         OnExit = edtDateRaisedExit
-        ExplicitLeft = 750
+        ExplicitLeft = 718
       end
       object btnDateRequired: TBitBtn
-        Left = 856
+        Left = 824
         Top = 10
         Width = 25
         Height = 25
@@ -471,7 +472,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         NumGlyphs = 2
         TabOrder = 2
         OnClick = btnDateRequiredClick
-        ExplicitLeft = 850
+        ExplicitLeft = 818
       end
       object dblkpRemedialType: TDBLookupComboBox
         Left = 368
@@ -494,7 +495,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         TabOrder = 4
       end
       object dblkpRemedialDept: TDBLookupComboBox
-        Left = 692
+        Left = 660
         Top = 44
         Width = 153
         Height = 21
@@ -503,7 +504,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ListField = 'Remedial_Dept_Descr'
         ListSource = dtsRemedailDept
         TabOrder = 5
-        ExplicitLeft = 686
+        ExplicitLeft = 654
       end
       object BitBtn1: TBitBtn
         Left = 584
@@ -540,7 +541,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = BitBtn3Click
       end
       object BitBtn4: TBitBtn
-        Left = 857
+        Left = 825
         Top = 43
         Width = 22
         Height = 22
@@ -556,184 +557,319 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ParentFont = False
         TabOrder = 8
         OnClick = BitBtn4Click
-        ExplicitLeft = 851
+        ExplicitLeft = 819
       end
     end
     object Panel2: TPanel
       Left = 0
       Top = 81
-      Width = 907
-      Height = 428
+      Width = 899
+      Height = 450
       Align = alClient
       Caption = 'Panel2'
       ParentBackground = False
       TabOrder = 3
-      ExplicitWidth = 901
-      ExplicitHeight = 419
-      object pnlLeft: TPanel
+      ExplicitWidth = 893
+      ExplicitHeight = 441
+      object pcDetails: TPageControl
         Left = 1
         Top = 1
-        Width = 448
-        Height = 426
-        Align = alLeft
-        ParentBackground = False
-        TabOrder = 0
-        ExplicitHeight = 417
-        object Label8: TLabel
-          Left = 8
-          Top = 112
-          Width = 266
-          Height = 13
-          Caption = 'What items needs returning to site? (255 characters)'
-        end
-        object Label11: TLabel
-          Left = 9
-          Top = 214
-          Width = 193
-          Height = 13
-          Caption = 'Tools required on site (255 characters)'
-        end
-        object Label13: TLabel
-          Left = 8
-          Top = 320
-          Width = 295
-          Height = 13
-          Caption = 'Additional Notes (Additional labour/Silicone colour used)'
-        end
-        object Label2: TLabel
-          Left = 8
-          Top = 8
-          Width = 80
-          Height = 13
-          Caption = 'Remedial Issue:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object memItemsToReturnToSite: TMemo
-          Left = 7
-          Top = 128
-          Width = 430
-          Height = 80
-          MaxLength = 255
-          ScrollBars = ssVertical
-          TabOrder = 1
-          OnChange = EnableOK
-        end
-        object memToolsRequired: TMemo
-          Left = 9
-          Top = 232
-          Width = 430
-          Height = 80
-          MaxLength = 255
-          ScrollBars = ssVertical
-          TabOrder = 2
-          OnChange = EnableOK
-        end
-        object memAdditionalNotes: TMemo
-          Left = 9
-          Top = 336
-          Width = 430
-          Height = 80
-          ScrollBars = ssVertical
-          TabOrder = 3
-          OnChange = EnableOK
-        end
-        object memRemedials: TMemo
-          Left = 8
-          Top = 23
-          Width = 430
-          Height = 80
-          ScrollBars = ssVertical
-          TabOrder = 0
-          OnChange = EnableOK
-        end
-      end
-      object pnlRight: TPanel
-        Left = 449
-        Top = 1
-        Width = 457
-        Height = 426
+        Width = 897
+        Height = 448
+        ActivePage = tsDetails
         Align = alClient
-        ParentBackground = False
-        TabOrder = 1
-        ExplicitWidth = 451
-        ExplicitHeight = 417
-        object Label9: TLabel
-          Left = 10
-          Top = 112
-          Width = 204
-          Height = 13
-          Caption = 'What items still on site? (255 characters)'
+        TabOrder = 0
+        ExplicitWidth = 891
+        ExplicitHeight = 439
+        object tsDetails: TTabSheet
+          Caption = 'Details'
+          object pnlRight: TPanel
+            Left = 448
+            Top = 0
+            Width = 441
+            Height = 420
+            Align = alClient
+            ParentBackground = False
+            TabOrder = 0
+            object Label9: TLabel
+              Left = 10
+              Top = 112
+              Width = 204
+              Height = 13
+              Caption = 'What items still on site? (255 characters)'
+            end
+            object Label12: TLabel
+              Left = 10
+              Top = 216
+              Width = 261
+              Height = 13
+              Caption = 'Site requirements before returning (255 characters)'
+            end
+            object Label14: TLabel
+              Left = 10
+              Top = 320
+              Width = 186
+              Height = 13
+              Caption = 'Factory/Manufacturing Notes/Issues'
+            end
+            object Label1: TLabel
+              Left = 11
+              Top = 8
+              Width = 263
+              Height = 13
+              Caption = 'Requirements to make good (include dimensions):'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object memItemsStillOnSite: TMemo
+              Left = 10
+              Top = 128
+              Width = 430
+              Height = 80
+              MaxLength = 255
+              ScrollBars = ssVertical
+              TabOrder = 1
+              OnChange = EnableOK
+            end
+            object memSiteRequirements: TMemo
+              Left = 10
+              Top = 232
+              Width = 430
+              Height = 80
+              MaxLength = 255
+              ScrollBars = ssVertical
+              TabOrder = 2
+              OnChange = EnableOK
+            end
+            object memManufacturingNotes: TMemo
+              Left = 10
+              Top = 336
+              Width = 430
+              Height = 80
+              ScrollBars = ssVertical
+              TabOrder = 3
+              OnChange = EnableOK
+            end
+            object memMaterials: TMemo
+              Left = 11
+              Top = 24
+              Width = 430
+              Height = 80
+              MaxLength = 255
+              ScrollBars = ssVertical
+              TabOrder = 0
+              OnChange = EnableOK
+            end
+          end
+          object pnlLeft: TPanel
+            Left = 0
+            Top = 0
+            Width = 448
+            Height = 420
+            Align = alLeft
+            ParentBackground = False
+            TabOrder = 1
+            object Label8: TLabel
+              Left = 8
+              Top = 112
+              Width = 266
+              Height = 13
+              Caption = 'What items needs returning to site? (255 characters)'
+            end
+            object Label11: TLabel
+              Left = 9
+              Top = 214
+              Width = 193
+              Height = 13
+              Caption = 'Tools required on site (255 characters)'
+            end
+            object Label13: TLabel
+              Left = 8
+              Top = 320
+              Width = 295
+              Height = 13
+              Caption = 'Additional Notes (Additional labour/Silicone colour used)'
+            end
+            object Label2: TLabel
+              Left = 8
+              Top = 8
+              Width = 80
+              Height = 13
+              Caption = 'Remedial Issue:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object memItemsToReturnToSite: TMemo
+              Left = 7
+              Top = 128
+              Width = 430
+              Height = 80
+              MaxLength = 255
+              ScrollBars = ssVertical
+              TabOrder = 1
+              OnChange = EnableOK
+            end
+            object memToolsRequired: TMemo
+              Left = 9
+              Top = 232
+              Width = 430
+              Height = 80
+              MaxLength = 255
+              ScrollBars = ssVertical
+              TabOrder = 2
+              OnChange = EnableOK
+            end
+            object memAdditionalNotes: TMemo
+              Left = 9
+              Top = 336
+              Width = 430
+              Height = 80
+              ScrollBars = ssVertical
+              TabOrder = 3
+              OnChange = EnableOK
+            end
+            object memRemedials: TMemo
+              Left = 8
+              Top = 23
+              Width = 430
+              Height = 80
+              ScrollBars = ssVertical
+              TabOrder = 0
+              OnChange = EnableOK
+            end
+          end
         end
-        object Label12: TLabel
-          Left = 10
-          Top = 216
-          Width = 261
-          Height = 13
-          Caption = 'Site requirements before returning (255 characters)'
-        end
-        object Label14: TLabel
-          Left = 10
-          Top = 320
-          Width = 186
-          Height = 13
-          Caption = 'Factory/Manufacturing Notes/Issues'
-        end
-        object Label1: TLabel
-          Left = 11
-          Top = 8
-          Width = 263
-          Height = 13
-          Caption = 'Requirements to make good (include dimensions):'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object memItemsStillOnSite: TMemo
-          Left = 10
-          Top = 128
-          Width = 430
-          Height = 80
-          MaxLength = 255
-          ScrollBars = ssVertical
-          TabOrder = 1
-          OnChange = EnableOK
-        end
-        object memSiteRequirements: TMemo
-          Left = 10
-          Top = 232
-          Width = 430
-          Height = 80
-          MaxLength = 255
-          ScrollBars = ssVertical
-          TabOrder = 2
-          OnChange = EnableOK
-        end
-        object memManufacturingNotes: TMemo
-          Left = 10
-          Top = 336
-          Width = 430
-          Height = 80
-          ScrollBars = ssVertical
-          TabOrder = 3
-          OnChange = EnableOK
-        end
-        object memMaterials: TMemo
-          Left = 11
-          Top = 24
-          Width = 430
-          Height = 80
-          MaxLength = 255
-          ScrollBars = ssVertical
-          TabOrder = 0
-          OnChange = EnableOK
+        object tsSlabs: TTabSheet
+          Caption = 'Slab Details'
+          ImageIndex = 1
+          object Panel25: TPanel
+            Left = 0
+            Top = 392
+            Width = 889
+            Height = 28
+            Align = alBottom
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 0
+            ExplicitTop = 383
+            ExplicitWidth = 883
+            object lblSlabTotalArea: TLabel
+              Left = 288
+              Top = 7
+              Width = 87
+              Height = 13
+              Caption = 'Total Sales Value:'
+            end
+            object lblSlabTotalCost: TLabel
+              Left = 8
+              Top = 7
+              Width = 87
+              Height = 13
+              Caption = 'Total Cost Value: '
+            end
+            object lblSlabWasteCost: TLabel
+              Left = 630
+              Top = 7
+              Width = 96
+              Height = 13
+              Alignment = taRightJustify
+              Caption = 'Total Waste Value: '
+            end
+          end
+          object Panel24: TPanel
+            Left = 803
+            Top = 0
+            Width = 86
+            Height = 339
+            Align = alRight
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 1
+            ExplicitLeft = 797
+            ExplicitHeight = 330
+            object btnAddSlabs: TBitBtn
+              Left = 6
+              Top = 9
+              Width = 75
+              Height = 25
+              Caption = '&Add'
+              TabOrder = 0
+              OnClick = btnAddSlabsClick
+            end
+            object btnChangeSlabs: TBitBtn
+              Left = 8
+              Top = 40
+              Width = 75
+              Height = 25
+              Caption = '&Change'
+              Enabled = False
+              TabOrder = 1
+              OnClick = btnChangeSlabsClick
+            end
+            object btnDeleteSlabs: TBitBtn
+              Left = 8
+              Top = 72
+              Width = 75
+              Height = 25
+              Caption = '&Delete'
+              Enabled = False
+              TabOrder = 2
+              OnClick = btnDeleteSlabsClick
+            end
+          end
+          object Panel27: TPanel
+            Left = 0
+            Top = 339
+            Width = 889
+            Height = 53
+            Align = alBottom
+            BevelOuter = bvNone
+            ParentBackground = False
+            TabOrder = 2
+            ExplicitTop = 330
+            ExplicitWidth = 883
+          end
+          object sgSlabs: TStringGrid
+            Left = 0
+            Top = 0
+            Width = 803
+            Height = 339
+            Align = alClient
+            ColCount = 11
+            DefaultColWidth = 40
+            DefaultRowHeight = 18
+            Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
+            TabOrder = 3
+            OnDblClick = sgSlabsDblClick
+            ExplicitWidth = 797
+            ExplicitHeight = 330
+            ColWidths = (
+              40
+              200
+              78
+              137
+              78
+              76
+              66
+              96
+              97
+              97
+              81)
+            RowHeights = (
+              18
+              18
+              18
+              18
+              18)
+          end
         end
       end
     end

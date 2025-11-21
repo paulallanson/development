@@ -89,7 +89,7 @@ begin
 	CopyIfNewer('msmqsend.exe.config', 'Scheduling Program') ;
 	CopyIfNewer('msmqsend.pdb', 'Scheduling Program') ;
 
-	StrPCopy(FiName, LocalDir + '\firebelly.exe') ;
+	StrPCopy(FiName, LocalDir + '\firebelly24.exe') ;
 	StrPCopy(DiName ,LocalDir) ;
 	ShellExecute(0,nil,FiName,'', DiName, sw_Restore) ;
 	Application.Terminate ;

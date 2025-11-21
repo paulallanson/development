@@ -19,10 +19,6 @@ type
     Panel2: TPanel;
     Button1: TButton;
     dbgDetails: TDBGrid;
-    CoolBar2: TCoolBar;
-    Panel3: TPanel;
-    Label2: TLabel;
-    lblCurrentPrices: TLabel;
     CoolBar1: TCoolBar;
     ToolBar1: TToolBar;
     btnAdd: TToolButton;
@@ -36,8 +32,6 @@ type
     edtThickness: TEdit;
     Label6: TLabel;
     edtGroup: TEdit;
-    Label4: TLabel;
-    cmbPriceTypeFilter: TComboBox;
     btnClear: TBitBtn;
     Label7: TLabel;
     edtEffectiveDate: TEdit;
@@ -49,6 +43,12 @@ type
     chkbxShowInactive: TCheckBox;
     ToolButton1: TToolButton;
     btnStockCode: TToolButton;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label2: TLabel;
+    lblCurrentPrices: TLabel;
+    Label4: TLabel;
+    cmbPriceTypeFilter: TComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);

@@ -2,12 +2,12 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   Left = 192
   Top = 114
   Caption = 'Suppliers details'
-  ClientHeight = 360
-  ClientWidth = 885
+  ClientHeight = 351
+  ClientWidth = 879
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -18,75 +18,28 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 885
-    Height = 30
-    Align = alTop
-    BevelInner = bvLowered
-    BevelOuter = bvNone
-    Color = clSilver
-    ParentBackground = False
-    TabOrder = 0
-    object CoolBar2: TCoolBar
-      Left = 1
-      Top = 1
-      Width = 883
-      Height = 75
-      Bands = <
-        item
-          Control = Panel3
-          ImageIndex = -1
-          MinHeight = 30
-          Width = 877
-        end>
-      object Panel3: TPanel
-        Left = 11
-        Top = 0
-        Width = 868
-        Height = 30
-        Align = alLeft
-        BevelOuter = bvNone
-        Color = 16642529
-        ParentBackground = False
-        TabOrder = 0
-        object Label2: TLabel
-          Left = 0
-          Top = 1
-          Width = 73
-          Height = 25
-          Caption = 'Suppliers'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clNavy
-          Font.Height = -18
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-      end
-    end
-  end
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
-    Top = 30
-    Width = 885
+    Top = 41
+    Width = 879
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 879
+        Width = 873
       end>
+    ExplicitTop = 42
     object ToolBar1: TToolBar
       Left = 11
-      Top = 0
-      Width = 870
+      Top = -3
+      Width = 864
       Height = 40
-      ButtonHeight = 36
-      ButtonWidth = 58
+      Align = alClient
+      ButtonHeight = 40
+      ButtonWidth = 73
       Caption = 'ToolBar1'
       Constraints.MinHeight = 40
       Constraints.MinWidth = 50
@@ -98,12 +51,12 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       object btnAdd: TToolButton
         Left = 0
         Top = 0
-        Caption = '&Add'
+        Caption = ' &Add '
         ImageIndex = 0
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 58
+        Left = 73
         Top = 0
         Caption = 'Chang&e'
         Enabled = False
@@ -111,7 +64,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 116
+        Left = 146
         Top = 0
         Caption = '   &Delete   '
         Enabled = False
@@ -119,15 +72,15 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         OnClick = btnDeleteClick
       end
       object btnContacts: TToolButton
-        Left = 174
+        Left = 219
         Top = 0
-        Caption = ' Con&tacts '
+        Caption = '   Con&tacts '
         Enabled = False
         ImageIndex = 7
         OnClick = btnContactsClick
       end
       object ToolButton6: TToolButton
-        Left = 232
+        Left = 292
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -135,7 +88,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 240
+        Left = 300
         Top = 0
         Caption = 'Reports'
         ImageIndex = 8
@@ -144,20 +97,20 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 73
-    Width = 885
-    Height = 227
+    Top = 84
+    Width = 879
+    Height = 207
     Align = alClient
     DataSource = dtsSuppliers
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -230,8 +183,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 341
-    Width = 885
+    Top = 332
+    Width = 879
     Height = 19
     Panels = <
       item
@@ -243,39 +196,41 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object Panel2: TPanel
     Left = 0
-    Top = 300
-    Width = 885
+    Top = 291
+    Width = 879
     Height = 41
     Align = alBottom
     ParentBackground = False
-    TabOrder = 4
+    TabOrder = 3
+    ExplicitTop = 300
+    ExplicitWidth = 885
     object Label1: TLabel
       Left = 8
-      Top = 12
-      Width = 80
-      Height = 13
+      Top = 11
+      Width = 91
+      Height = 17
       Caption = 'Supplier Search'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 8
+      Left = 110
+      Top = 7
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object chkbxShowInactive: TCheckBox
-      Left = 360
-      Top = 12
-      Width = 145
+      Left = 365
+      Top = 11
+      Width = 180
       Height = 17
       Caption = 'Show inactive suppliers'
       TabOrder = 1
       OnClick = chkbxShowInactiveClick
     end
     object btnSearch: TBitBtn
-      Left = 272
-      Top = 6
+      Left = 277
+      Top = 7
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -283,11 +238,12 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       OnClick = btnSearchClick
     end
     object Panel4: TPanel
-      Left = 699
+      Left = 693
       Top = 1
       Width = 185
       Height = 39
       Align = alRight
+      BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
       DesignSize = (
@@ -302,6 +258,46 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         Caption = '&Close'
         TabOrder = 0
         OnClick = Button1Click
+      end
+    end
+  end
+  object CoolBar2: TCoolBar
+    Left = 0
+    Top = 0
+    Width = 879
+    Height = 41
+    Bands = <
+      item
+        Control = Panel3
+        ImageIndex = -1
+        MinHeight = 41
+        Width = 873
+      end>
+    ExplicitLeft = 1
+    ExplicitTop = 1
+    ExplicitWidth = 877
+    object Panel3: TPanel
+      Left = 11
+      Top = 0
+      Width = 864
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 16642529
+      ParentBackground = False
+      TabOrder = 0
+      object Label2: TLabel
+        Left = 0
+        Top = 7
+        Width = 73
+        Height = 25
+        Caption = 'Suppliers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clNavy
+        Font.Height = -18
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
     end
   end

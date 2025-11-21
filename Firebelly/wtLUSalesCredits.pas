@@ -46,11 +46,6 @@ type
     btnReprint: TToolButton;
     ToolButton6: TToolButton;
     btnReports: TToolButton;
-    CoolBar2: TCoolBar;
-    Panel3: TPanel;
-    Label4: TLabel;
-    Label5: TLabel;
-    cmbCustomerFilter: TComboBox;
     Panel4: TPanel;
     Label1: TLabel;
     edtSearch: TEdit;
@@ -62,6 +57,11 @@ type
     grpbxRevCentre: TGroupBox;
     Label6: TLabel;
     dblkpRevCentre: TDBLookupComboBox;
+    CoolBar2: TCoolBar;
+    Panel3: TPanel;
+    Label4: TLabel;
+    Label5: TLabel;
+    cmbCustomerFilter: TComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

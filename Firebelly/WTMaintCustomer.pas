@@ -151,7 +151,6 @@ type
     Panel16: TPanel;
     chkbxSpeculative: TCheckBox;
     btnClearGroup: TSpeedButton;
-    chkbxFactored: TCheckBox;
     Label35: TLabel;
     dblkpLevelofImportance: TDBLookupComboBox;
     SpeedButton7: TSpeedButton;
@@ -225,6 +224,8 @@ type
     btnChargesChange: TBitBtn;
     btnChargesDelete: TBitBtn;
     dbgAssociateCharges: TDBGrid;
+    rdgrpFactored: TRadioGroup;
+    chkbxFactored: TCheckBox;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure EnableOK(Sender: TObject);
@@ -314,6 +315,7 @@ type
     procedure btnChargesChangeClick(Sender: TObject);
     procedure btnChargesDeleteClick(Sender: TObject);
     procedure dbgAssociateChargesDblClick(Sender: TObject);
+    procedure chkbxFactoredClick(Sender: TObject);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -562,6 +564,8 @@ begin
 
       chkbxSpeculative.Checked := false;
       chkbxFactored.Checked := false;
+      rdgrpFactored.itemindex := 0;
+
       chkbxShowLabourCharges.Checked := false;
       chkbxOnline.Checked := false;
       chkbxRequiresAppForPay.checked := false;
@@ -655,6 +659,12 @@ begin
 
       chkbxFactored.Checked := (qryOneCustomer.fieldbyname('Account_Is_Factored').asstring = 'Y');
       chkbxFactored.enabled := (cmbCustomerCategory.itemindex = 0) or (cmbCustomerCategory.itemindex = 2);
+      rdgrpFactored.Enabled := chkbxFactored.Checked;
+
+      if qryOneCustomer.fieldbyname('Use_Virtual_Bank_Details').asstring = 'Y' then
+        rdgrpFactored.ItemIndex := 1
+      else
+        rdgrpFactored.itemindex := 0;
 
       chkbxProspect.Checked := (qryOneCustomer.fieldbyname('Prospect').asstring = 'Y');
       chkbxPassOnCharges.Checked := (qryOneCustomer.fieldbyname('Pass_On_Associate_Charges').asstring = 'Y');
@@ -2483,6 +2493,16 @@ begin
       else
         parambyname('Account_Is_Factored').asstring := 'N';
 
+      if chkbxFactored.checked then
+        begin
+          case rdgrpFactored.ItemIndex of
+            0: parambyname('Use_Virtual_Bank_Details').asstring := 'N';
+            1: parambyname('Use_Virtual_Bank_Details').asstring := 'Y';
+          end;
+        end
+      else
+        parambyname('Use_Virtual_Bank_Details').asstring := 'N';
+
       if chkbxSpeculative.checked then
         parambyname('Customer_is_Speculative').asstring := 'Y'
       else
@@ -2755,6 +2775,11 @@ procedure TfrmWtMaintCustomer.dbgAssociateChargesDblClick(Sender: TObject);
 begin
   if chkbxPassOnCharges.Checked then
     btnChargesChangeClick(self);
+end;
+
+procedure TfrmWtMaintCustomer.chkbxFactoredClick(Sender: TObject);
+begin
+  rdgrpFactored.Enabled := chkbxFactored.Checked;
 end;
 
 procedure TfrmWtMaintCustomer.chkbxPassOnChargesClick(Sender: TObject);

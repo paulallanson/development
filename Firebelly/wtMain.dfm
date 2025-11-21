@@ -7,7 +7,7 @@ object frmWTMain: TfrmWTMain
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIForm
@@ -19,17 +19,17 @@ object frmWTMain: TfrmWTMain
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
     Width = 1475
-    Height = 40
+    Height = 41
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
-        MinHeight = 36
+        MinHeight = 40
         Width = 1469
       end>
     ExplicitWidth = 1469
@@ -37,17 +37,17 @@ object frmWTMain: TfrmWTMain
       Left = 11
       Top = 0
       Width = 1460
-      Height = 36
+      Height = 40
       Align = alClient
       AutoSize = True
-      ButtonHeight = 36
-      ButtonWidth = 63
+      ButtonHeight = 40
+      ButtonWidth = 71
       Caption = 'ToolBar1'
       EdgeInner = esNone
       EdgeOuter = esNone
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Images = imgLstHot
@@ -66,21 +66,21 @@ object frmWTMain: TfrmWTMain
         OnClick = btnCustomersClick
       end
       object btnSuppliers: TToolButton
-        Left = 63
+        Left = 71
         Top = 0
         Caption = 'Su&ppliers'
         ImageIndex = 7
         OnClick = btnSuppliersClick
       end
       object btnContracts: TToolButton
-        Left = 126
+        Left = 142
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 8
         OnClick = btnContractsClick
       end
       object btnQuotes: TToolButton
-        Left = 189
+        Left = 213
         Top = 0
         Hint = 'Quotes|Maintain Quotes Estimates and Quotations'
         Caption = '&Quotes'
@@ -91,21 +91,21 @@ object frmWTMain: TfrmWTMain
         OnClick = btnQuotesClick
       end
       object btnSales: TToolButton
-        Left = 252
+        Left = 284
         Top = 0
         Caption = '&Sales'
         ImageIndex = 6
         OnClick = btnSalesClick
       end
       object btnTemplating: TToolButton
-        Left = 315
+        Left = 355
         Top = 0
         Caption = '&Templating'
         ImageIndex = 11
         OnClick = btnTemplatingClick
       end
       object btnJobs: TToolButton
-        Left = 378
+        Left = 426
         Top = 0
         Hint = 'Jobs|Maintain Job details'
         Caption = '&Jobs'
@@ -116,35 +116,35 @@ object frmWTMain: TfrmWTMain
         OnClick = btnJobsClick
       end
       object btnFitting: TToolButton
-        Left = 441
+        Left = 497
         Top = 0
         Caption = '&Fitting'
         ImageIndex = 11
         OnClick = btnFittingClick
       end
       object btnStock: TToolButton
-        Left = 504
+        Left = 568
         Top = 0
         Caption = 'Stoc&k'
         ImageIndex = 5
         OnClick = btnStockClick
       end
       object btnPurchasing: TToolButton
-        Left = 567
+        Left = 639
         Top = 0
         Caption = '&Purchase'
         ImageIndex = 3
         OnClick = btnPurchasingClick
       end
       object btnSalesInvoices: TToolButton
-        Left = 630
+        Left = 710
         Top = 0
         Caption = '&Invoicing'
         DropdownMenu = pmnuSInvoicing
         ImageIndex = 4
       end
       object btnPrices: TToolButton
-        Left = 693
+        Left = 781
         Top = 0
         Caption = 'Colours'
         ImageIndex = 10

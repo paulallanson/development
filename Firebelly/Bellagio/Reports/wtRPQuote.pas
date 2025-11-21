@@ -156,6 +156,7 @@ type
     qryGetCustMaterialType: TFDQuery;
     qrlblNumberOfUnitsLabel: TQRLabel;
     qrlblNumberOfUnits: TQRLabel;
+    qrbPrintPage: TQRBand;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -201,6 +202,7 @@ type
     function GetCustomerMaterialTypeMultiplier(tmpCustomer,
       tmpMatType: integer): real;
   public
+    iFirstPage, iLastPage: integer;
     Quote: integer;
     bApplyEndUserMarkup: boolean;
     bEndUser: boolean;
@@ -252,6 +254,7 @@ var
   Bin: TQRBin;
   Size: TQRPaperSize;
   Duplex: Boolean;
+  sReturnText: string;
 begin
   {set the printer to what the user selected}
   qrpDetails.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
@@ -260,8 +263,12 @@ begin
   qrpDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }
   qrpDetails.PrinterSettings.copies := Copies;   {set the number of copies }
   qrpDetails.PrinterSettings.PaperSize := Size;   {set the number of copies }
+  qrpDetails.PrinterSettings.firstpage := ifirstPage;
+  qrpDetails.PrinterSettings.lastpage := iLastPage;
 
   qrcbAcceptanceHeader.Enabled := bPrintAcceptance;
+  qrbPrintPage.enabled := qrcbAcceptanceHeader.Enabled;
+
   qrcbSignature.enabled := bPrintAcceptance;
 
   qrcbSubTotal.enabled := bPrintTotals;
@@ -296,8 +303,13 @@ begin
   qrlblCompanyAdd1.caption := '';
   qrlblCompanyAdd1.caption := qrlblCompanyAdd.caption;
 
-  qrlblReturnDetails.caption := qrlblReturnDetails.caption + ' fax to ' + qryCompany.fieldbyname('Fax_Number').asstring +
-                                ' or send an email to ' + qryCompany.fieldbyname('Email_Address').asstring;
+  sreturnText := 'To accept this quotation, please complete the details below and send back to ' + qryCompany.fieldbyname('Email_Address').asstring + '. ' +
+                  'If you require any assistance, please contact the office on ' + qryCompany.fieldbyname('Telephone_number').asstring + ' to speak to the sales department.';
+
+  qrlblReturnDetails.caption := sReturnText;
+
+//  qrlblReturnDetails.caption := qrlblReturnDetails.caption + ' fax to ' + qryCompany.fieldbyname('Fax_Number').asstring +
+//                                ' or send an email to ' + qryCompany.fieldbyname('Email_Address').asstring;
 
   {Availability Notes}
   qrrchTextAvailability.lines.clear;
