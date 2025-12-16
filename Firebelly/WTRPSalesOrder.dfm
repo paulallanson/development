@@ -3,7 +3,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
   Top = 110
   Caption = 'Sales Order Report'
   ClientHeight = 568
-  ClientWidth = 1159
+  ClientWidth = 1303
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1464,15 +1464,18 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
     object qrySalesOrdersGoods_Value: TFloatField
       FieldName = 'Goods_Value'
       Origin = 'Goods_Value'
+      DisplayFormat = '#,##0.00'
     end
     object qrySalesOrdersVAT_Value: TFloatField
       FieldName = 'VAT_Value'
       Origin = 'VAT_Value'
+      DisplayFormat = '#,##0.00'
     end
     object qrySalesOrdersTotal_Value: TFloatField
       FieldName = 'Total_Value'
       Origin = 'Total_Value'
       ReadOnly = True
+      DisplayFormat = '#,##0.00'
     end
     object qrySalesOrdersRep: TIntegerField
       FieldName = 'Rep'
@@ -1484,6 +1487,9 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
       Origin = 'Rep_Name'
       Required = True
       Size = 50
+    end
+    object qrySalesOrdersRevenue_Centre_Descr: TWideStringField
+      FieldName = 'Revenue_Centre_Descr'
     end
   end
 end

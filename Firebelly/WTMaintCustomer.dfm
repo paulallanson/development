@@ -49,7 +49,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Top = 0
       Width = 838
       Height = 574
-      ActivePage = tsGeneral
+      ActivePage = tbsDocuments
       Align = alClient
       TabOrder = 0
       ExplicitWidth = 832
@@ -64,7 +64,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = -2
+          ExplicitWidth = 824
+          ExplicitHeight = 537
           DesignSize = (
             830
             546)
@@ -680,7 +681,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 383
             Top = 213
-            Width = 388
+            Width = 382
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]

@@ -1190,13 +1190,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 8
       end
       object QRDBText7: TQRDBText
-        Left = 580
+        Left = 570
         Top = 5
         Width = 50
         Height = 20
         Size.Values = (
           42.333333333333330000
-          1227.666666666667000000
+          1206.500000000000000000
           10.583333333333330000
           105.833333333333300000)
         XLColumn = 0
@@ -2534,8 +2534,9 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       DisplayFormat = '0.00'
     end
     object qrySOLineDescription: TWideStringField
+      DisplayWidth = 255
       FieldName = 'Description'
-      Size = 50
+      Size = 255
     end
     object qrySOLineProduct: TIntegerField
       FieldName = 'Product'

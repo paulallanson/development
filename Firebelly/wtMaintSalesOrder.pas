@@ -1079,11 +1079,14 @@ begin
       edtReqDate.enabled := not FittingInSchedule;
       btnReqdDate.enabled := edtReqDate.enabled;
 
-      if FittingInSchedule then
+      if (FittingInSchedule) and (edtReqDate.Text <> '') then
         begin
           rdgrpDateType.Items.Delete(2);
           rdgrpDateType.height := 70;
-        end;
+        end
+      else
+      if (edtReqDate.Text = '') then
+        rdgrpDateType.ItemIndex := 2;
 
       edtPlansDocument.text := SOrder.LocationPlanDocument;
       edtApplianceDetails.Text := SOrder.ApplianceDetails;
@@ -1586,6 +1589,23 @@ begin
   if (rdgrpDateType.ItemIndex < 2) AND ((edtTempDate.Text = '') OR (edtReqDate.Text = '')) AND (rdgrpJobType.ItemIndex = 0) then
     begin
       messagedlg('Please specify the template and fitting dates', mtinformation, [mbOK], 0);
+      edtTempDate.enabled := true;
+      edtReqDate.enabled := true;
+      btnTempDate.enabled := true;
+      btnReqdDate.enabled := true;
+      rdgrpJobType.enabled := true;
+      rdgrpDateType.setfocus;
+      exit;
+    end
+  else
+  if (rdgrpDateType.ItemIndex < 2) AND ((edtReqDate.Text = '')) then
+    begin
+      messagedlg('Please specify the fitting date', mtinformation, [mbOK], 0);
+      edtTempDate.enabled := false;
+      edtReqDate.enabled := true;
+      btnTempDate.enabled := false;
+      btnReqdDate.enabled := true;
+      rdgrpJobType.enabled := true;
       rdgrpDateType.setfocus;
       exit;
     end;

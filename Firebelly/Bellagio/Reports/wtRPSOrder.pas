@@ -441,7 +441,7 @@ begin
 
   if qrySOLine.FieldByName('Quote').Asinteger <> 0 then
     begin
-      qrlblDescription.caption := qrySOLine.fieldbyname('Description').asstring + ' Quote: ' + qrySOLine.FieldByName('Quote').Asstring;
+      qrlblDescription.caption := trim(qrySOLine.fieldbyname('Description').asstring) + ' Quote: ' + qrySOLine.FieldByName('Quote').Asstring;
       unitPrice := ((qrySOLine.FieldByName('Nett_Price').Asfloat) - qrySOLine.FieldByName('Discount_Value').Asfloat) + qrySOLine.FieldByName('Installation_Price').Asfloat
                               + qrySOLine.FieldByName('Survey_Price').Asfloat
                               + qrySOLine.FieldByName('Delivery_Price').Asfloat
