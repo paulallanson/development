@@ -3,8 +3,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   Top = 66
   BorderStyle = bsDialog
   Caption = 'Global Price changes'
-  ClientHeight = 397
-  ClientWidth = 389
+  ClientHeight = 388
+  ClientWidth = 383
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -31,14 +31,14 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   object Label4: TLabel
     Left = 16
     Top = 16
-    Width = 68
+    Width = 67
     Height = 13
     Caption = 'Material Type'
   end
   object Label5: TLabel
     Left = 224
     Top = 316
-    Width = 24
+    Width = 23
     Height = 13
     Caption = 'Time'
   end
@@ -178,7 +178,7 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     object Label1: TLabel
       Left = 10
       Top = 13
-      Width = 50
+      Width = 49
       Height = 13
       Caption = 'Thickness'
     end
@@ -361,8 +361,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'select *'
       'from thickness'
       'order by thickness_mm')
-    Left = 114
-    Top = 256
+    Left = 271
+    Top = 264
   end
   object dtsThickness: TDataSource
     DataSet = qryThickness

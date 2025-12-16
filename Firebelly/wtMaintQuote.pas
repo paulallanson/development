@@ -1527,6 +1527,7 @@ var
   iQuoteFollowUpReminder: integer;
   iSlabs, iElements: integer;
   bAllSlabsExists, bSlabExists: boolean;
+  iElementCount, iUpstandCount: integer;
 begin
   bOK := true;
   if Mode = qDelete then
@@ -1543,8 +1544,8 @@ begin
         end;
     end;
 
-//  if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qChange)  or (Mode = qRequote)) and ((Quote.Elements.TotalArea > 0) or (Quote.Upstands.TotalArea > 0)) and (dtmdlWorktops.UseCostingSystem) and (not Quote.ContractQuote) then
-  if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qChange)  or (Mode = qRequote)) and ((Quote.Elements.TotalArea > 0) or (Quote.Upstands.TotalArea > 0)) and (dtmdlWorktops.UseCostingSystem) then
+  if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qChange)  or (Mode = qRequote)) and ((Quote.Elements.TotalArea > 0) or (Quote.Upstands.TotalArea > 0)) and (dtmdlWorktops.UseCostingSystem) and (not Quote.ContractQuote) then
+//  if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qChange)  or (Mode = qRestrict) or (Mode = qView) or (Mode = qRequote)) and ((Quote.Elements.TotalArea > 0) or (Quote.Upstands.TotalArea > 0)) and (dtmdlWorktops.UseCostingSystem) then
     begin
       if Quote.Slabs.count = 0 then
         begin
@@ -1561,38 +1562,34 @@ begin
           exit;
         end;
 
-      {Check that all the slabs are for the elements in the quote}
-      bAllSlabsExists := true;
-      for iSlabs := 0 to pred(Quote.slabs.count) do
+      iElementCount := 0;
+      for iElements := 0 to pred(Quote.Elements.count) do
         begin
-          bSlabExists := false;
-          for iElements := 0 to pred(Quote.elements.count) do
+          for iSlabs := 0 to pred(Quote.Slabs.count) do
             begin
               if (Quote.Slabs[iSlabs].worktop = Quote.elements[iElements].worktop) AND (Quote.Slabs[iSlabs].thickness = Quote.elements[iElements].thickness) then
                 begin
-                  bSlabExists := true;
+                  iElementCount := iElementCount + 1;
                   break;
                 end;
             end;
+        end;
 
-          if bSlabExists then
-            continue;
-
-          for iElements := 0 to pred(Quote.Upstands.count) do
+      iUpstandCount := 0;
+      for iElements := 0 to pred(Quote.Upstands.count) do
+        begin
+          bSlabExists := false;
+          for iSlabs := 0 to pred(Quote.Slabs.count) do
             begin
               if (Quote.Slabs[iSlabs].worktop = Quote.Upstands[iElements].worktop) AND (Quote.Slabs[iSlabs].thickness = Quote.Upstands[iElements].thickness) then
                 begin
-                  bSlabExists := true;
+                  iUpstandCount := iUpstandCount + 1;
                   break;
                 end;
             end;
-
-          if bSlabExists then
-            continue
-          else
-            bAllSlabsExists := false;
         end;
 
+      bAllSlabsExists := (iElementCount = Quote.Elements.count) AND (iUpstandCount = Quote.Upstands.count);
 
       if bAllSlabsExists = false then
         begin

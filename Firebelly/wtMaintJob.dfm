@@ -73,7 +73,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         1030
         41)
       object lblDeletePrompt: TLabel
-        Left = 686
+        Left = 674
         Top = 16
         Width = 97
         Height = 17
@@ -89,7 +89,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 708
       end
       object btnOK: TBitBtn
-        Left = 806
+        Left = 794
         Top = 8
         Width = 75
         Height = 25
@@ -100,10 +100,10 @@ object frmWTMaintJob: TfrmWTMaintJob
         NumGlyphs = 2
         TabOrder = 0
         OnClick = btnOKClick
-        ExplicitLeft = 800
+        ExplicitLeft = 788
       end
       object btnCancel: TBitBtn
-        Left = 886
+        Left = 874
         Top = 8
         Width = 75
         Height = 25
@@ -113,7 +113,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         NumGlyphs = 2
         TabOrder = 1
         OnClick = btnCancelClick
-        ExplicitLeft = 880
+        ExplicitLeft = 868
       end
     end
     object Panel4: TPanel
@@ -130,7 +130,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         1030
         101)
       object Label11: TLabel
-        Left = 600
+        Left = 588
         Top = 28
         Width = 83
         Height = 13
@@ -155,7 +155,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         Visible = False
       end
       object Label37: TLabel
-        Left = 582
+        Left = 570
         Top = 52
         Width = 104
         Height = 13
@@ -164,7 +164,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 604
       end
       object Label38: TLabel
-        Left = 630
+        Left = 618
         Top = 76
         Width = 53
         Height = 13
@@ -173,7 +173,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 652
       end
       object Label41: TLabel
-        Left = 798
+        Left = 786
         Top = 28
         Width = 76
         Height = 13
@@ -183,7 +183,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 804
       end
       object lbldifference: TLabel
-        Left = 559
+        Left = 547
         Top = 76
         Width = 66
         Height = 13
@@ -193,7 +193,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 581
       end
       object Label42: TLabel
-        Left = 857
+        Left = 845
         Top = 52
         Width = 17
         Height = 13
@@ -203,7 +203,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 863
       end
       object Label43: TLabel
-        Left = 845
+        Left = 833
         Top = 76
         Width = 29
         Height = 13
@@ -213,7 +213,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 851
       end
       object lblVATRate1: TLabel
-        Left = 783
+        Left = 771
         Top = 52
         Width = 59
         Height = 13
@@ -231,7 +231,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         Visible = False
       end
       object edtNettPrice: TMemo
-        Left = 688
+        Left = 676
         Top = 24
         Width = 89
         Height = 21
@@ -244,7 +244,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 0
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 682
+        ExplicitLeft = 670
       end
       object spnDepositTerms: TSpinEdit
         Left = 296
@@ -269,7 +269,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         OnChange = edtDepositPaidChange
       end
       object edtQNettPrice: TMemo
-        Left = 688
+        Left = 676
         Top = 48
         Width = 89
         Height = 21
@@ -282,10 +282,10 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 3
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 682
+        ExplicitLeft = 670
       end
       object edtDifference: TMemo
-        Left = 688
+        Left = 676
         Top = 72
         Width = 89
         Height = 21
@@ -298,10 +298,10 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 4
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 682
+        ExplicitLeft = 670
       end
       object memNett: TMemo
-        Left = 880
+        Left = 868
         Top = 24
         Width = 89
         Height = 21
@@ -314,10 +314,10 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 5
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 874
+        ExplicitLeft = 862
       end
       object memVat: TMemo
-        Left = 880
+        Left = 868
         Top = 48
         Width = 89
         Height = 21
@@ -330,10 +330,10 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 6
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 874
+        ExplicitLeft = 862
       end
       object memTotal: TMemo
-        Left = 880
+        Left = 868
         Top = 72
         Width = 89
         Height = 21
@@ -346,7 +346,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 7
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 874
+        ExplicitLeft = 862
       end
       object chkbxDeclined: TCheckBox
         Left = 13
@@ -389,7 +389,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       Top = 169
       Width = 1030
       Height = 276
-      ActivePage = TabSheet1
+      ActivePage = tbDocuments
       Align = alClient
       TabOrder = 2
       ExplicitWidth = 1024
@@ -488,7 +488,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           Caption = 'Designer'
         end
         object btnCustomerSearch: TBitBtn
-          Left = 550
+          Left = 538
           Top = 12
           Width = 22
           Height = 22
@@ -508,7 +508,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         object pnlAddress: TPanel
           Left = 70
           Top = 0
-          Width = 481
+          Width = 469
           Height = 249
           Anchors = [akLeft, akTop, akRight]
           BevelOuter = bvNone
@@ -516,7 +516,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ParentBackground = False
           TabOrder = 1
           DesignSize = (
-            481
+            469
             249)
           object Label24: TLabel
             Left = 104
@@ -528,7 +528,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtCustomerName: TEdit
             Left = 8
             Top = 12
-            Width = 463
+            Width = 451
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
@@ -537,7 +537,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtStreet: TEdit
             Left = 8
             Top = 36
-            Width = 463
+            Width = 451
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 1
@@ -545,7 +545,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtlocale: TEdit
             Left = 8
             Top = 56
-            Width = 463
+            Width = 451
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 2
@@ -553,7 +553,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtTown: TEdit
             Left = 8
             Top = 77
-            Width = 463
+            Width = 451
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 3
@@ -569,7 +569,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtCounty: TEdit
             Left = 144
             Top = 97
-            Width = 327
+            Width = 315
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 5
@@ -577,7 +577,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtContact: TEdit
             Left = 8
             Top = 124
-            Width = 464
+            Width = 452
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 6
@@ -586,7 +586,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtEmail: TEdit
             Left = 8
             Top = 171
-            Width = 463
+            Width = 451
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 7
@@ -594,14 +594,14 @@ object frmWTMaintJob: TfrmWTMaintJob
           object edtTelephone: TEdit
             Left = 8
             Top = 148
-            Width = 383
+            Width = 371
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 8
           end
         end
         object btnContactSearch: TBitBtn
-          Left = 550
+          Left = 538
           Top = 124
           Width = 22
           Height = 22
@@ -627,8 +627,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 3
-          ExplicitLeft = 651
-          ExplicitHeight = 239
           object GroupBox1: TGroupBox
             Left = 92
             Top = 0
@@ -815,7 +813,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         object dblkpShowroom: TDBLookupComboBox
           Left = 78
           Top = 196
-          Width = 399
+          Width = 387
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Branch_no'
@@ -825,7 +823,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         object dblkpDesigner: TDBLookupComboBox
           Left = 78
           Top = 223
-          Width = 256
+          Width = 244
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Designer'
@@ -833,7 +831,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           TabOrder = 5
         end
         object btnDesigner: TBitBtn
-          Left = 344
+          Left = 332
           Top = 222
           Width = 22
           Height = 22
@@ -872,8 +870,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           TabOrder = 0
           OnDblClick = sgElementsDblClick
-          ExplicitWidth = 931
-          ExplicitHeight = 239
           ColWidths = (
             40
             190
@@ -893,8 +889,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 931
-          ExplicitHeight = 239
           object btnAddElts: TBitBtn
             Left = 8
             Top = 8
@@ -1405,6 +1399,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1016
           object Label44: TLabel
             Left = 2
             Top = 0
@@ -1427,6 +1422,8 @@ object frmWTMaintJob: TfrmWTMaintJob
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
+          ExplicitLeft = 987
+          ExplicitHeight = 222
           object btnExcel: TToolButton
             Left = 0
             Top = 0
@@ -1489,13 +1486,13 @@ object frmWTMaintJob: TfrmWTMaintJob
           TabOrder = 2
           OnDragDrop = stvDocumentsDragDrop
           OnDragOver = stvDocumentsDragOver
+          ExplicitHeight = 222
         end
         object slvDocuments: TShellListView
           Left = 161
           Top = 17
           Width = 832
           Height = 231
-          AutoRefresh = True
           ObjectTypes = [otFolders, otNonFolders]
           Root = 'C:\'
           ShellTreeView = stvDocuments
@@ -1507,7 +1504,6 @@ object frmWTMaintJob: TfrmWTMaintJob
           OnMouseMove = slvDocumentsMouseMove
           TabOrder = 3
           ViewStyle = vsReport
-          ExplicitWidth = 838
         end
       end
       object tbNotes: TTabSheet
@@ -1647,7 +1643,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           1022
           248)
         object Label8: TLabel
-          Left = 672
+          Left = 660
           Top = 127
           Width = 85
           Height = 13
@@ -1656,7 +1652,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 694
         end
         object Label9: TLabel
-          Left = 689
+          Left = 677
           Top = 151
           Width = 60
           Height = 13
@@ -1666,7 +1662,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitTop = 162
         end
         object Label14: TLabel
-          Left = 684
+          Left = 672
           Top = 175
           Width = 67
           Height = 13
@@ -1675,7 +1671,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 706
         end
         object lblDiscountRate: TLabel
-          Left = 531
+          Left = 519
           Top = 103
           Width = 81
           Height = 13
@@ -1684,7 +1680,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 553
         end
         object lblDiscountValue: TLabel
-          Left = 707
+          Left = 695
           Top = 103
           Width = 46
           Height = 13
@@ -1693,7 +1689,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 729
         end
         object Label36: TLabel
-          Left = 652
+          Left = 640
           Top = 55
           Width = 104
           Height = 13
@@ -1702,7 +1698,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 674
         end
         object lblVatRate: TLabel
-          Left = 499
+          Left = 487
           Top = 208
           Width = 52
           Height = 13
@@ -1713,7 +1709,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 521
         end
         object lblVat: TLabel
-          Left = 562
+          Left = 550
           Top = 208
           Width = 17
           Height = 13
@@ -1723,7 +1719,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 568
         end
         object lblTotal: TLabel
-          Left = 698
+          Left = 686
           Top = 208
           Width = 51
           Height = 13
@@ -1732,7 +1728,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 704
         end
         object Label12: TLabel
-          Left = 694
+          Left = 682
           Top = 79
           Width = 58
           Height = 13
@@ -1741,7 +1737,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           ExplicitLeft = 716
         end
         object edtDiscountRate: TCREditMoney
-          Left = 619
+          Left = 607
           Top = 99
           Width = 65
           Height = 21
@@ -1752,10 +1748,9 @@ object frmWTMaintJob: TfrmWTMaintJob
           OnChange = edtDiscountRateChange
           OnEnter = edtDiscountRateEnter
           OnExit = edtDiscountRateExit
-          ExplicitLeft = 625
         end
         object edtQuoted: TMemo
-          Left = 762
+          Left = 750
           Top = 51
           Width = 90
           Height = 21
@@ -1770,7 +1765,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           WordWrap = False
         end
         object edtVatValue: TMemo
-          Left = 594
+          Left = 582
           Top = 204
           Width = 90
           Height = 21
@@ -1786,7 +1781,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           WordWrap = False
         end
         object edtGrossPrice: TMemo
-          Left = 762
+          Left = 750
           Top = 204
           Width = 90
           Height = 21
@@ -1801,7 +1796,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           WordWrap = False
         end
         object edtDeliveryPrice: TMemo
-          Left = 762
+          Left = 750
           Top = 171
           Width = 90
           Height = 21
@@ -1818,7 +1813,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           OnExit = edtInstallPriceExit
         end
         object edtSurveyPrice: TMemo
-          Left = 762
+          Left = 750
           Top = 147
           Width = 90
           Height = 21
@@ -1835,7 +1830,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           OnExit = edtInstallPriceExit
         end
         object edtInstallPrice: TMemo
-          Left = 762
+          Left = 750
           Top = 123
           Width = 90
           Height = 21
@@ -1852,7 +1847,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           OnExit = edtInstallPriceExit
         end
         object edtDiscountValue: TMemo
-          Left = 762
+          Left = 750
           Top = 99
           Width = 90
           Height = 21
@@ -1870,7 +1865,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           OnExit = edtDiscountValueExit
         end
         object edtWasteValue: TMemo
-          Left = 762
+          Left = 750
           Top = 75
           Width = 90
           Height = 21
@@ -1925,7 +1920,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ParentFont = False
       end
       object Label3: TLabel
-        Left = 558
+        Left = 546
         Top = 12
         Width = 74
         Height = 13
@@ -1940,7 +1935,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 580
       end
       object Label15: TLabel
-        Left = 786
+        Left = 774
         Top = 12
         Width = 40
         Height = 13
@@ -1981,7 +1976,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ParentFont = False
       end
       object Label5: TLabel
-        Left = 550
+        Left = 538
         Top = 90
         Width = 51
         Height = 13
@@ -1996,7 +1991,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 572
       end
       object Label17: TLabel
-        Left = 549
+        Left = 537
         Top = 114
         Width = 68
         Height = 13
@@ -2011,7 +2006,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 571
       end
       object Label39: TLabel
-        Left = 549
+        Left = 537
         Top = 140
         Width = 27
         Height = 13
@@ -2021,7 +2016,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         ExplicitLeft = 571
       end
       object Label63: TLabel
-        Left = 550
+        Left = 538
         Top = 66
         Width = 35
         Height = 13
@@ -2069,7 +2064,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 1
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 838
+        Left = 826
         Top = 8
         Width = 129
         Height = 21
@@ -2077,7 +2072,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         KeyField = 'Operator'
         ListField = 'Operator_Name'
         TabOrder = 4
-        ExplicitLeft = 832
+        ExplicitLeft = 820
       end
       object dblkpMaterial: TDBLookupComboBox
         Left = 88
@@ -2090,24 +2085,24 @@ object frmWTMaintJob: TfrmWTMaintJob
         OnClick = dblkpMaterialClick
       end
       object edtReference: TEdit
-        Left = 631
+        Left = 619
         Top = 86
         Width = 345
         Height = 21
         Anchors = [akRight, akBottom]
         TabOrder = 7
         OnChange = edtReferenceChange
-        ExplicitLeft = 625
+        ExplicitLeft = 613
       end
       object edtCustomerPO: TEdit
-        Left = 631
+        Left = 619
         Top = 110
         Width = 177
         Height = 21
         Anchors = [akRight, akBottom]
         TabOrder = 9
         OnChange = edtCustomerPOChange
-        ExplicitLeft = 625
+        ExplicitLeft = 613
       end
       object BitBtn1: TBitBtn
         Left = 344
@@ -2129,17 +2124,17 @@ object frmWTMaintJob: TfrmWTMaintJob
       object edtDescription: TMemo
         Left = 88
         Top = 64
-        Width = 448
+        Width = 436
         Height = 43
         Anchors = [akLeft, akTop, akRight]
         MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 8
         OnChange = edtDescriptionChange
-        ExplicitWidth = 442
+        ExplicitWidth = 430
       end
       object dblkpFitter: TDBLookupComboBox
-        Left = 631
+        Left = 619
         Top = 136
         Width = 177
         Height = 21
@@ -2148,10 +2143,10 @@ object frmWTMaintJob: TfrmWTMaintJob
         ListField = 'Fitter_Name'
         TabOrder = 10
         Visible = False
-        ExplicitLeft = 625
+        ExplicitLeft = 613
       end
       object BitBtn2: TBitBtn
-        Left = 822
+        Left = 810
         Top = 135
         Width = 22
         Height = 22
@@ -2168,20 +2163,20 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 11
         Visible = False
         OnClick = BitBtn2Click
-        ExplicitLeft = 816
+        ExplicitLeft = 804
       end
       object edtDateRequired: TEdit
-        Left = 646
+        Left = 634
         Top = 8
         Width = 89
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 2
         OnExit = edtDateRequiredExit
-        ExplicitLeft = 640
+        ExplicitLeft = 628
       end
       object btnDateRequired: TBitBtn
-        Left = 742
+        Left = 730
         Top = 6
         Width = 25
         Height = 25
@@ -2202,22 +2197,22 @@ object frmWTMaintJob: TfrmWTMaintJob
         NumGlyphs = 2
         TabOrder = 3
         OnClick = btnDateRequiredClick
-        ExplicitLeft = 736
+        ExplicitLeft = 724
       end
       object edtProject: TEdit
-        Left = 631
+        Left = 619
         Top = 62
         Width = 345
         Height = 21
         Anchors = [akTop, akRight]
         TabOrder = 12
         OnChange = edtProjectChange
-        ExplicitLeft = 625
+        ExplicitLeft = 613
       end
       object Memo4: TMemo
         Left = 88
         Top = 114
-        Width = 448
+        Width = 436
         Height = 47
         Anchors = [akLeft, akTop, akRight, akBottom]
         Lines.Strings = (
@@ -2225,7 +2220,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 13
         Visible = False
         OnChange = edtDescriptionChange
-        ExplicitWidth = 442
+        ExplicitWidth = 430
       end
     end
   end

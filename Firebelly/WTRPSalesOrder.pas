@@ -74,6 +74,7 @@ type
     qrySalesOrdersTotal_Value: TFloatField;
     qrySalesOrdersRep: TIntegerField;
     qrySalesOrdersRep_Name: TWideStringField;
+    qrySalesOrdersRevenue_Centre_Descr: TWideStringField;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;

@@ -237,36 +237,45 @@ end;
 
 procedure TfrmWTAutoPriceChange.btnOKClick(Sender: TObject);
 begin
-  if MessageDlg('Confirm that you wish to make these price changes?',
+if MessageDlg('Confirm that you wish to make these price changes?',
     mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
     exit;
   try
-	  if rdgrpPriceChange.itemindex = 0 then
-  	  RunWTGroups
+    if rdgrpPriceChange.itemindex = 0 then
+      begin
+        RunWTGroups;
+        RunWorktops;
+      end
     else
-	  if rdgrpPriceChange.itemindex = 1 then
-  	  RunWorktops
+    if rdgrpPriceChange.itemindex = 1 then
+      begin
+        RunWTGroups;
+        RunWorktops;
+      end
     else
-	  if rdgrpPriceChange.itemindex = 2 then
-    	RunEdgeProfiles
+    if rdgrpPriceChange.itemindex = 2 then
+      RunEdgeProfiles
     else
-	  if rdgrpPriceChange.itemindex = 3 then
-    	RunCutOuts
+    if rdgrpPriceChange.itemindex = 3 then
+      RunCutOuts
     else
-	  if rdgrpPriceChange.itemindex = 4 then
-  	  RunAdditions
+    if rdgrpPriceChange.itemindex = 4 then
+      RunAdditions
     else
-	  if rdgrpPriceChange.itemindex = 5 then
-  	  begin
-  	    RunWTGroups;
-  	    RunWorktops;
-  	    RunEdgeProfiles;
-  	    RunCutOuts;
-//  	    RunAdditions;
-  	  end;
+    if rdgrpPriceChange.itemindex = 5 then
+      begin
+        RunWTGroups;
+        RunWorktops;
+        RunEdgeProfiles;
+        RunCutOuts;
+//        RunAdditions;
+      end;
     MessageDlg('Global price change has completed successfully', mtInformation,[mbOk], 0);
-    close;
-  except MessageDlg('Global price change has encountered an error', mterror,[mbOk], 0);
+//    close;
+    edtChange.Text := '';
+    btnOK.Enabled := false;
+  except
+    MessageDlg('Global price change has encountered an error', mterror,[mbOk], 0);
   end;
 end;
 

@@ -989,6 +989,12 @@ begin
 
   RefreshMaterialSlabSizes;
   RefreshWorktops;
+
+  dblkpWorktop.KeyValue := -1;
+  edtDepth.text := '';
+  edtLength.text := '';
+  edtWastePercentage.Text := '0';
+  enableOK(self);
 end;
 
 procedure TfrmWTMaintQSlab.edtQuantityChange(Sender: TObject);

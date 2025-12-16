@@ -3,8 +3,8 @@ object WTMaintDBAliasFrm: TWTMaintDBAliasFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Database Aliases'
-  ClientHeight = 205
-  ClientWidth = 419
+  ClientHeight = 196
+  ClientWidth = 413
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

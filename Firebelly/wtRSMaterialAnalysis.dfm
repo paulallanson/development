@@ -27,6 +27,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 369
   end
   object Button4: TButton
     Left = 534
@@ -38,6 +39,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 369
   end
   object rdgrpReps: TRadioGroup
     Left = 16
@@ -85,7 +87,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     object Label2: TLabel
       Left = 26
       Top = 48
-      Width = 15
+      Width = 14
       Height = 13
       Caption = 'To:'
     end
@@ -214,6 +216,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 7
     OnClick = btnExcelClick
+    ExplicitTop = 369
   end
   object btnPreview: TButton
     Left = 104
@@ -224,6 +227,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Caption = 'P&review'
     TabOrder = 8
     OnClick = btnPreviewClick
+    ExplicitTop = 369
   end
   object grpbxReps: TGroupBox
     Left = 128
@@ -516,11 +520,11 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'SELECT  Worktop.Worktop,'
       
         '        Sum(Quote_Element.Unit_Price*((Quote_Element.Depth*Quote' +
-        '_Element.Length)/1000000)*Quote_Element.Quantity) as Worktop_Val' +
-        'ue,'
+        '_Element.Length)/1000000.0000)*Quote_Element.Quantity) as Workto' +
+        'p_Value,'
       
-        '        Sum(((Quote_Element.Depth*Quote_Element.Length)/1000000)' +
-        '*Quote_Element.Quantity) as Worktop_Area,'
+        '        Sum(((Quote_Element.Depth*Quote_Element.Length)/1000000.' +
+        '0000)*Quote_Element.Quantity) as Worktop_Area,'
       '        Sales_Order.Sales_Order as Sales_Reference,'
       '        Sales_Order.Goods_Value'
       'FROM Operator'
@@ -558,9 +562,11 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ParamData = <
       item
         Name = 'Date_From'
+        ParamType = ptInput
       end
       item
         Name = 'Date_To'
+        ParamType = ptInput
       end>
   end
   object pmnCustomers: TPopupMenu
@@ -577,11 +583,11 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'SELECT  Worktop.Worktop,'
       
         '        Sum(Quote_Element.Unit_Price*((Quote_Element.Depth*Quote' +
-        '_Element.Length)/1000000)*Quote_Element.Quantity) as Worktop_Val' +
-        'ue,'
+        '_Element.Length)/1000000.0000)*Quote_Element.Quantity) as Workto' +
+        'p_Value,'
       
-        '        Sum(((Quote_Element.Depth*Quote_Element.Length)/1000000)' +
-        '*Quote_Element.Quantity) as Worktop_Area,'
+        '        Sum(((Quote_Element.Depth*Quote_Element.Length)/1000000.' +
+        '0000)*Quote_Element.Quantity) as Worktop_Area,'
       '        Sales_Invoice.Sales_Invoice as Sales_Reference,'
       '        Sales_Invoice.Goods_Value'
       'FROM Customer'
@@ -624,9 +630,11 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ParamData = <
       item
         Name = 'Date_From'
+        ParamType = ptInput
       end
       item
         Name = 'Date_To'
+        ParamType = ptInput
       end>
   end
 end

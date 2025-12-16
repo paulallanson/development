@@ -14610,7 +14610,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '(Sales_Invoice.Customer = Customer.Customer) AND'
       
         '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
-        'ue_Centre))'
+        'ue_Centre) OR (Sales_Invoice.Revenue_Centre IS NULL))'
       'Order by Sales_invoice')
     Left = 1008
     Top = 112
@@ -14699,7 +14699,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '(Sales_Invoice.Customer = Customer.Customer) AND'
       
         '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
-        'ue_Centre))')
+        'ue_Centre) OR (Sales_Invoice.Revenue_Centre IS NULL))')
     Left = 850
     Top = 113
     ParamData = <
@@ -14832,18 +14832,14 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '(Sales_Invoice.Customer = Customer.Customer) AND'
       
         '((Sales_Invoice.Revenue_Centre = :Revenue_Centre) OR (0 = :Reven' +
-        'ue_Centre))'
-      '')
+        'ue_Centre) OR (Sales_Invoice.Revenue_Centre IS NULL))')
     Left = 64
     Top = 245
     ParamData = <
       item
         Name = 'Revenue_Centre'
         DataType = ftInteger
-      end
-      item
-        Name = 'Revenue_Centre'
-        DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object GetNarrSQL: TFDQuery

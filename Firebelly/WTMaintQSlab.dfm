@@ -24,8 +24,6 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 736
-    ExplicitHeight = 378
     object Label1: TLabel
       Left = 16
       Top = 14
@@ -43,7 +41,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     object Label3: TLabel
       Left = 16
       Top = 106
-      Width = 50
+      Width = 49
       Height = 13
       Caption = 'Thickness'
     end
@@ -71,7 +69,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     object Label7: TLabel
       Left = 563
       Top = 224
-      Width = 76
+      Width = 75
       Height = 13
       Caption = 'Total Slab Cost'
     end
@@ -295,8 +293,6 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 14
-      ExplicitTop = 290
-      ExplicitWidth = 736
       object Label19: TLabel
         Left = 16
         Top = 13
@@ -335,7 +331,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       object Label22: TLabel
         Left = 539
         Top = 45
-        Width = 100
+        Width = 99
         Height = 13
         Caption = 'Total Adhesive Cost'
       end
@@ -449,8 +445,6 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 15
-      ExplicitTop = 266
-      ExplicitWidth = 736
       object Label15: TLabel
         Left = 16
         Top = 5
@@ -475,7 +469,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       object Label18: TLabel
         Left = 560
         Top = 5
-        Width = 77
+        Width = 76
         Height = 13
         Caption = 'Total Slab Price'
       end
@@ -529,8 +523,6 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 16
-      ExplicitTop = 354
-      ExplicitWidth = 736
       object Label23: TLabel
         Left = 574
         Top = 5
@@ -586,8 +578,6 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 378
-    ExplicitWidth = 736
     DesignSize = (
       742
       46)
