@@ -691,8 +691,8 @@ begin
         begin
           Items.Delete(4);
           Items.Delete(3);
-          height := 90;
-          top := 166;
+          height := 130;
+//          top := 220;
         end;
       pnlSubContract.visible := false;
     end;
@@ -1082,7 +1082,7 @@ begin
       if (FittingInSchedule) and (edtReqDate.Text <> '') then
         begin
           rdgrpDateType.Items.Delete(2);
-          rdgrpDateType.height := 70;
+          rdgrpDateType.height := 77;
         end
       else
       if (edtReqDate.Text = '') then

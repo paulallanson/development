@@ -170,9 +170,9 @@ begin
 //       AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
      self.Caption := 'Convert to Order';
       dbgDetails.visible := false;
-      self.Height := 660;
-      self.Width := 620;
-      self.BorderStyle := bsDialog;
+//      self.Height := 546;
+//      self.Width := 582;
+//      self.BorderStyle := bsDialog;
     end
   else
     begin
@@ -181,7 +181,7 @@ begin
       dbgDetails.visible := true;
       pnlReference.Visible := false;
       pnlSiteLocation.Visible := false;
-      self.Height := 670;
+      self.Height := 659;
       lblNoOfOrders.Visible := false;
       spnNoOfOrders.Visible := false;
 

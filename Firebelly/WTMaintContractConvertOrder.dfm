@@ -2,24 +2,24 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   Left = 425
   Top = 59
   Caption = 'Convert to Order'
-  ClientHeight = 621
-  ClientWidth = 594
+  ClientHeight = 587
+  ClientWidth = 598
   Color = clBtnFace
   Constraints.MinWidth = 560
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlFooter: TPanel
     Left = 0
-    Top = 576
-    Width = 594
+    Top = 542
+    Width = 598
     Height = 45
     Align = alBottom
     BevelOuter = bvNone
@@ -28,11 +28,11 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     ExplicitTop = 567
     ExplicitWidth = 588
     DesignSize = (
-      594
+      598
       45)
     object btnOK: TBitBtn
-      Left = 369
-      Top = 4
+      Left = 412
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -59,11 +59,11 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 363
+      ExplicitLeft = 384
     end
     object BitBtn2: TBitBtn
-      Left = 457
-      Top = 4
+      Left = 500
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -71,60 +71,60 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      ExplicitLeft = 451
+      ExplicitLeft = 472
     end
   end
   object pnlReference: TPanel
     Left = 0
-    Top = 514
-    Width = 594
-    Height = 62
+    Top = 471
+    Width = 598
+    Height = 71
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 505
-    ExplicitWidth = 588
+    ExplicitTop = 514
+    ExplicitWidth = 594
     object Label1: TLabel
-      Left = 16
-      Top = 8
-      Width = 51
-      Height = 13
+      Left = 14
+      Top = 6
+      Width = 60
+      Height = 17
       Caption = 'Reference'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label9: TLabel
-      Left = 16
+      Left = 14
       Top = 40
-      Width = 68
-      Height = 13
+      Width = 81
+      Height = 17
       Caption = 'Customer PO'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object edtReference: TEdit
-      Left = 96
+      Left = 105
       Top = 4
       Width = 294
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtReference'
       OnChange = EnableOK
     end
     object edtCustomerPO: TEdit
-      Left = 96
+      Left = 105
       Top = 36
       Width = 294
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtCustomerPO'
       OnChange = EnableOK
@@ -133,83 +133,83 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 594
+    Width = 598
     Height = 129
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 2
+    ExplicitWidth = 588
     object Label2: TLabel
-      Left = 16
+      Left = 14
       Top = 16
-      Width = 46
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Worktop'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 16
+      Left = 14
       Top = 48
-      Width = 50
-      Height = 13
+      Width = 60
+      Height = 17
       Caption = 'Thickness'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblNoOfOrders: TLabel
-      Left = 376
+      Left = 363
       Top = 16
-      Width = 94
-      Height = 13
+      Width = 112
+      Height = 17
       Caption = 'Number of Orders'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label8: TLabel
-      Left = 16
+      Left = 14
       Top = 80
-      Width = 44
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Upstand'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label13: TLabel
-      Left = 16
+      Left = 14
       Top = 107
-      Width = 50
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object dblkpWorktops: TDBLookupComboBox
-      Left = 96
+      Left = 104
       Top = 12
       Width = 210
-      Height = 21
+      Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
       ListSource = dtsWorktops1
@@ -217,10 +217,10 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       OnClick = rktopsClick
     end
     object dblkpThickness: TDBLookupComboBox
-      Left = 96
+      Left = 104
       Top = 44
       Width = 129
-      Height = 21
+      Height = 25
       KeyField = 'Thickness'
       ListField = 'Thickness_mm'
       ListSource = dtsThickness
@@ -228,20 +228,20 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       OnClick = dblkpThicknessClick
     end
     object spnNoOfOrders: TSpinEdit
-      Left = 480
-      Top = 11
+      Left = 481
+      Top = 12
       Width = 57
-      Height = 22
+      Height = 27
       MaxValue = 1000
       MinValue = 1
       TabOrder = 2
       Value = 1
     end
     object dblkpUpstand: TDBLookupComboBox
-      Left = 96
+      Left = 104
       Top = 76
       Width = 210
-      Height = 21
+      Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
       ListSource = dtsWorktops2
@@ -249,17 +249,17 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       OnClick = EnableOK
     end
     object edtCustomerName: TEdit
-      Left = 96
+      Left = 104
       Top = 103
       Width = 401
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 4
       Text = 'edtCustomerName'
       OnChange = EnableOK
     end
     object btnCustomer: TBitBtn
-      Left = 509
+      Left = 517
       Top = 102
       Width = 22
       Height = 22
@@ -280,14 +280,14 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object dbgDetails: TDBGrid
     Left = 0
     Top = 393
-    Width = 594
-    Height = 121
+    Width = 598
+    Height = 78
     Align = alClient
     DataSource = dtsSalesOrders
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -329,155 +329,155 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object pnlSiteLocation: TPanel
     Left = 0
     Top = 129
-    Width = 594
+    Width = 598
     Height = 264
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 131
+    ExplicitWidth = 588
     object Label4: TLabel
-      Left = 16
+      Left = 14
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 60
+      Height = 17
       Caption = 'Developer'
     end
     object Label5: TLabel
-      Left = 16
+      Left = 14
       Top = 208
-      Width = 62
-      Height = 13
+      Width = 74
+      Height = 17
       Caption = 'Site Contact'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label7: TLabel
-      Left = 16
+      Left = 14
       Top = 239
-      Width = 56
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Site Phone'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 16
+      Left = 14
       Top = 67
-      Width = 42
-      Height = 13
+      Width = 49
+      Height = 17
       Caption = 'Address'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label10: TLabel
-      Left = 16
+      Left = 14
       Top = 123
-      Width = 51
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Town/City'
     end
     object Label11: TLabel
-      Left = 16
+      Left = 14
       Top = 151
-      Width = 48
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Postcode'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label12: TLabel
-      Left = 16
+      Left = 14
       Top = 179
-      Width = 37
-      Height = 13
+      Width = 40
+      Height = 17
       Caption = 'County'
     end
     object edtDeveloper: TEdit
-      Left = 96
+      Left = 104
       Top = 4
       Width = 441
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtDeveloper'
       OnChange = EnableOK
     end
     object edtSitePhone: TEdit
-      Left = 96
+      Left = 104
       Top = 235
       Width = 233
-      Height = 21
+      Height = 25
       TabOrder = 7
       Text = 'edtSitePhone'
       OnChange = EnableOK
     end
     object edtSiteContact: TEdit
-      Left = 96
+      Left = 104
       Top = 204
       Width = 233
-      Height = 21
+      Height = 25
       TabOrder = 6
       Text = 'edtSiteContact'
       OnChange = EnableOK
     end
     object edtStreet: TEdit
-      Left = 96
+      Left = 104
       Top = 63
       Width = 441
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtStreet'
       OnChange = EnableOK
     end
     object edtLocale: TEdit
-      Left = 96
+      Left = 104
       Top = 91
       Width = 441
-      Height = 21
+      Height = 25
       TabOrder = 2
       Text = 'edtLocale'
       OnChange = EnableOK
     end
     object edtTown: TEdit
-      Left = 96
+      Left = 104
       Top = 119
       Width = 233
-      Height = 21
+      Height = 25
       TabOrder = 3
       Text = 'edtTown'
       OnChange = EnableOK
     end
     object edtPostcode: TEdit
-      Left = 96
+      Left = 104
       Top = 147
       Width = 97
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 4
       Text = 'EDTPOSTCODE'
       OnChange = EnableOK
     end
     object edtCounty: TEdit
-      Left = 96
+      Left = 104
       Top = 175
       Width = 233
-      Height = 21
+      Height = 25
       TabOrder = 5
       Text = 'edtCounty'
       OnChange = EnableOK
@@ -485,37 +485,37 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     object pnlCustomerBranch: TPanel
       Left = 0
       Top = 30
-      Width = 505
+      Width = 615
       Height = 27
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 8
       DesignSize = (
-        505
+        615
         27)
       object Label14: TLabel
-        Left = 16
+        Left = 14
         Top = 7
-        Width = 51
-        Height = 13
+        Width = 60
+        Height = 17
         Caption = 'Site Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object btnClearCustomerBranch: TSpeedButton
-        Left = 408
-        Top = 1
+        Left = 416
+        Top = 3
         Width = 25
         Height = 25
         Hint = 'Clear Revenue Centre'
         Anchors = [akLeft, akBottom]
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         Glyph.Data = {
@@ -538,17 +538,17 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         OnClick = btnClearCustomerBranchClick
       end
       object edtSiteName: TEdit
-        Left = 96
+        Left = 104
         Top = 3
         Width = 270
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
         Text = 'edtSiteName'
       end
       object btnCustomerBranch: TBitBtn
-        Left = 376
-        Top = 1
+        Left = 384
+        Top = 3
         Width = 25
         Height = 25
         Hint = 'Select Customer'
@@ -592,7 +592,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       '      Customer_Worktop_Group.Group_Number = :Group_Number'
       'ORDER BY Worktop.Description')
     Left = 352
-    Top = 112
+    Top = 48
     ParamData = <
       item
         Name = 'Customer'
@@ -603,8 +603,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   end
   object dtsWorktops1: TDataSource
     DataSet = qryWorktops1
-    Left = 408
-    Top = 112
+    Left = 448
+    Top = 80
   end
   object qryGetQElement: TFDQuery
     ConnectionName = 'WT'
@@ -667,8 +667,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         'r'
       'ORDER BY Thickness_mm'
       '')
-    Left = 416
-    Top = 184
+    Left = 472
+    Top = 304
     ParamData = <
       item
         Name = 'Customer'
@@ -679,8 +679,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   end
   object dtsThickness: TDataSource
     DataSet = qryThickness
-    Left = 344
-    Top = 176
+    Left = 384
+    Top = 280
   end
   object dtsSalesOrders: TDataSource
     DataSet = qrySalesOrders
@@ -723,8 +723,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       'SELECT TOP 1 Quote_Slab.Thickness'
       'FROM Quote_Slab'
       'WHERE Quote_Slab.Quote = :Quote')
-    Left = 464
-    Top = 144
+    Left = 512
+    Top = 296
     ParamData = <
       item
         Name = 'Quote'
@@ -755,8 +755,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       'WHERE Customer_Worktop_Group.Customer = :Customer AND'
       '      Customer_Worktop_Group.Group_Number = :Group_Number'
       'ORDER BY Worktop.Description')
-    Left = 352
-    Top = 144
+    Left = 536
+    Top = 80
     ParamData = <
       item
         Name = 'Customer'
@@ -767,7 +767,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   end
   object dtsWorktops2: TDataSource
     DataSet = qryWorktops2
-    Left = 408
-    Top = 144
+    Left = 464
+    Top = 96
   end
 end

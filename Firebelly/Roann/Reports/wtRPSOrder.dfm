@@ -14,8 +14,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 168
-    Top = -182
+    Left = 144
+    Top = -46
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -2324,7 +2324,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     end
     object qrySOLineDescription: TWideStringField
       FieldName = 'Description'
-      Size = 50
+      Size = 255
     end
     object qrySOLineProduct: TIntegerField
       FieldName = 'Product'

@@ -7,11 +7,11 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -20,30 +20,32 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = 288
+    ExplicitTop = 8
     object Label3: TLabel
       Left = 13
       Top = 17
-      Width = 74
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Date Required'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object edtDateRequired: TEdit
-      Left = 91
-      Top = 13
+      Left = 108
+      Top = 11
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = CheckOK
       OnExit = edtDateRequiredExit
     end
     object btnDateRequired: TBitBtn
-      Left = 195
+      Left = 212
       Top = 11
       Width = 25
       Height = 25
@@ -73,6 +75,8 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 299
+    ExplicitWidth = 689
     DesignSize = (
       695
       46)
@@ -109,6 +113,8 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     Width = 695
     Height = 19
     Panels = <>
+    ExplicitTop = 345
+    ExplicitWidth = 689
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -119,7 +125,7 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]

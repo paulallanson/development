@@ -3,27 +3,29 @@ object frmWTAccExport1: TfrmWTAccExport1
   Top = 120
   BorderStyle = bsSingle
   Caption = 'Import and Export Wizard'
-  ClientHeight = 472
-  ClientWidth = 346
+  ClientHeight = 512
+  ClientWidth = 434
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 16
   object pnlFooter: TPanel
     Left = 0
-    Top = 431
-    Width = 346
+    Top = 471
+    Width = 434
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 422
+    ExplicitWidth = 340
     object NextBitBtn: TBitBtn
       Left = 176
       Top = 8
@@ -34,8 +36,8 @@ object frmWTAccExport1: TfrmWTAccExport1
       OnClick = NextBitBtnClick
     end
     object CancelBitBtn: TBitBtn
-      Left = 256
-      Top = 8
+      Left = 342
+      Top = 6
       Width = 75
       Height = 25
       Caption = 'Cancel'
@@ -43,8 +45,8 @@ object frmWTAccExport1: TfrmWTAccExport1
       OnClick = CancelBitBtnClick
     end
     object UpdateBitBtn: TBitBtn
-      Left = 16
-      Top = 8
+      Left = 15
+      Top = 6
       Width = 75
       Height = 25
       Caption = 'Update'
@@ -63,25 +65,27 @@ object frmWTAccExport1: TfrmWTAccExport1
   end
   object pnlMain: TPanel
     Left = 0
-    Top = 73
-    Width = 346
-    Height = 358
+    Top = 81
+    Width = 434
+    Height = 390
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 73
+    ExplicitWidth = 340
+    ExplicitHeight = 349
     object Label1: TLabel
       Left = 16
-      Top = 8
-      Width = 136
-      Height = 13
+      Top = 3
+      Width = 170
+      Height = 16
       Caption = 'Choose an action to perform:'
     end
     object ActionListBox: TListBox
       Left = 16
       Top = 24
-      Width = 313
-      Height = 225
-      ItemHeight = 13
+      Width = 401
+      Height = 251
       Items.Strings = (
         'Export Customer details'
         'Export Supplier details'
@@ -103,8 +107,8 @@ object frmWTAccExport1: TfrmWTAccExport1
     end
     object GroupBox1: TGroupBox
       Left = 16
-      Top = 256
-      Width = 313
+      Top = 281
+      Width = 401
       Height = 89
       Caption = 'Description'
       ParentBackground = False
@@ -125,17 +129,18 @@ object frmWTAccExport1: TfrmWTAccExport1
   object pnlRevenueCentre: TPanel
     Left = 0
     Top = 0
-    Width = 346
-    Height = 73
+    Width = 434
+    Height = 81
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 346
     object rdgrpRevenueCentre: TRadioGroup
-      Left = 8
+      Left = 3
       Top = 3
       Width = 121
-      Height = 62
+      Height = 70
       Caption = 'Revenue Centre '
       ItemIndex = 0
       Items.Strings = (
@@ -147,8 +152,8 @@ object frmWTAccExport1: TfrmWTAccExport1
     end
     object grpbxRevCentre: TGroupBox
       Left = 134
-      Top = 3
-      Width = 203
+      Top = 11
+      Width = 283
       Height = 62
       ParentBackground = False
       TabOrder = 1
@@ -156,15 +161,15 @@ object frmWTAccExport1: TfrmWTAccExport1
       object Label3: TLabel
         Left = 8
         Top = 12
-        Width = 78
-        Height = 13
+        Width = 97
+        Height = 16
         Caption = 'Revenue Centre'
       end
       object dblkpRevCentre: TDBLookupComboBox
         Left = 8
         Top = 32
-        Width = 185
-        Height = 21
+        Width = 233
+        Height = 24
         KeyField = 'Revenue_Centre'
         ListField = 'Revenue_Centre_Descr'
         TabOrder = 0
@@ -187,12 +192,12 @@ object frmWTAccExport1: TfrmWTAccExport1
         '          ON Accounts_Package.Accounts_Package = Revenue_Centre.' +
         'Accounts_Package'
       'ORDER BY Revenue_Centre_Descr')
-    Left = 208
-    Top = 8
+    Left = 216
+    Top = 96
   end
   object dtsRevenueCentre: TDataSource
     DataSet = qryRevenueCentre
-    Left = 296
-    Top = 8
+    Left = 288
+    Top = 88
   end
 end
