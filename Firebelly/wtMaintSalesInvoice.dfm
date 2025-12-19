@@ -9,14 +9,14 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
   Constraints.MinWidth = 875
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 602
@@ -85,63 +85,62 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         36)
       object Label1: TLabel
         Left = 8
-        Top = 12
-        Width = 56
-        Height = 13
+        Top = 10
+        Width = 66
+        Height = 17
         Caption = 'Invoice No'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label2: TLabel
         Left = 240
-        Top = 12
-        Width = 64
-        Height = 13
+        Top = 10
+        Width = 77
+        Height = 17
         Caption = 'Invoice Date'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 645
-        Top = 12
-        Width = 73
-        Height = 13
+        Left = 639
+        Top = 10
+        Width = 88
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Office Contact'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 653
       end
       object edtInvNumber: TEdit
-        Left = 96
-        Top = 8
+        Left = 101
+        Top = 5
         Width = 97
-        Height = 21
+        Height = 25
         TabOrder = 0
       end
       object edtInvoiceDate: TEdit
-        Left = 320
-        Top = 8
+        Left = 323
+        Top = 6
         Width = 97
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnChange = CheckOK
         OnExit = edtInvoiceDateExit
       end
       object btnInvDate: TBitBtn
-        Left = 424
+        Left = 427
         Top = 6
         Width = 25
         Height = 25
@@ -163,17 +162,16 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         OnClick = btnInvDateClick
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 741
-        Top = 8
+        Left = 735
+        Top = 6
         Width = 145
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Operator'
         ListField = 'Operator_Name'
         ListSource = dtmdlSalesInvoice.dsOperator
         TabOrder = 3
         OnClick = dblkpOperatorClick
-        ExplicitLeft = 735
       end
     end
     object pnlHeader: TPanel
@@ -184,49 +182,47 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Align = alTop
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 907
+      ExplicitTop = 38
       DesignSize = (
         913
         221)
       object Label6: TLabel
-        Left = 509
+        Left = 507
         Top = 8
-        Width = 55
-        Height = 13
+        Width = 67
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Invoice To:'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 517
       end
       object Label7: TLabel
-        Left = 493
+        Left = 487
         Top = 115
-        Width = 73
-        Height = 13
+        Width = 85
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Account Code'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 501
       end
       object Label8: TLabel
         Left = 8
         Top = 8
-        Width = 53
-        Height = 13
+        Width = 64
+        Height = 17
         Caption = 'Customer:'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -234,12 +230,12 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       object Label11: TLabel
         Left = 8
         Top = 139
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Caption = 'Rep'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -247,38 +243,36 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       object Label10: TLabel
         Left = 8
         Top = 192
-        Width = 59
-        Height = 13
+        Width = 71
+        Height = 17
         Caption = 'Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object memInvToCustomer: TMemo
-        Left = 581
+        Left = 579
         Top = 8
         Width = 270
         Height = 95
         Anchors = [akTop, akRight]
         ReadOnly = True
         TabOrder = 0
-        ExplicitLeft = 575
       end
       object edtAccountCode: TEdit
-        Left = 581
+        Left = 579
         Top = 111
         Width = 89
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         ReadOnly = True
         TabOrder = 1
-        ExplicitLeft = 575
       end
       object btnInvToCustomer: TBitBtn
-        Left = 861
+        Left = 859
         Top = 8
         Width = 25
         Height = 25
@@ -295,10 +289,9 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         ShowHint = True
         TabOrder = 2
         OnClick = btnInvToCustomerClick
-        ExplicitLeft = 855
       end
       object memCustomer: TMemo
-        Left = 96
+        Left = 102
         Top = 8
         Width = 270
         Height = 95
@@ -306,7 +299,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         TabOrder = 3
       end
       object btnCustomer: TBitBtn
-        Left = 376
+        Left = 382
         Top = 8
         Width = 25
         Height = 25
@@ -324,10 +317,10 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         OnClick = btnCustomerClick
       end
       object dblkpRep: TDBLookupComboBox
-        Left = 96
+        Left = 101
         Top = 135
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Rep'
         ListField = 'Rep_Name'
         ListSource = dtmdlSalesInvoice.dsRep
@@ -335,24 +328,22 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         OnClick = dblkpRepClick
       end
       object lblReference: TStaticText
-        Left = 749
+        Left = 747
         Top = 113
-        Width = 68
-        Height = 17
+        Width = 76
+        Height = 21
         Anchors = [akTop, akRight]
         Caption = 'lblReference'
         TabOrder = 6
-        ExplicitLeft = 743
       end
       object edtDescription: TEdit
-        Left = 96
+        Left = 101
         Top = 188
-        Width = 814
-        Height = 21
+        Width = 808
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 7
         OnChange = edtDescriptionChange
-        ExplicitWidth = 808
       end
       object pnlRevenueCentre: TPanel
         Left = -2
@@ -367,19 +358,19 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           27)
         object Label59: TLabel
           Left = 10
-          Top = 7
-          Width = 81
-          Height = 13
+          Top = 3
+          Width = 91
+          Height = 17
           Caption = 'Revenue Centre'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object SpeedButton2: TSpeedButton
-          Left = 312
+          Left = 318
           Top = 2
           Width = 23
           Height = 22
@@ -387,7 +378,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           Anchors = [akLeft, akBottom]
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Glyph.Data = {
@@ -410,10 +401,10 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           OnClick = SpeedButton2Click
         end
         object dblkpRevenueCentre: TDBLookupComboBox
-          Left = 98
-          Top = 3
+          Left = 104
+          Top = 1
           Width = 201
-          Height = 21
+          Height = 25
           KeyField = 'Revenue_Centre'
           ListField = 'Revenue_Centre_Descr'
           TabOrder = 0
@@ -424,36 +415,36 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         Left = 0
         Top = 104
         Width = 449
-        Height = 27
+        Height = 29
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 9
         DesignSize = (
           449
-          27)
+          29)
         object Label13: TLabel
           Left = 8
           Top = 7
-          Width = 51
-          Height = 13
+          Width = 60
+          Height = 17
           Caption = 'Site Name'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object btnClearCustomerBranch: TSpeedButton
           Left = 408
-          Top = 2
+          Top = 4
           Width = 25
           Height = 25
           Hint = 'Clear Revenue Centre'
           Anchors = [akLeft, akBottom]
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Glyph.Data = {
@@ -474,12 +465,13 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           ParentShowHint = False
           ShowHint = True
           OnClick = btnClearCustomerBranchClick
+          ExplicitTop = 2
         end
         object edtSiteName: TEdit
-          Left = 96
+          Left = 102
           Top = 3
           Width = 270
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
@@ -517,29 +509,27 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         913
         126)
       object lblDepositLabel: TLabel
-        Left = 539
+        Left = 528
         Top = 70
-        Width = 65
-        Height = 13
+        Width = 74
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Deposit Paid'
-        ExplicitLeft = 547
       end
       object lblPaymentTerms: TLabel
         Left = 8
         Top = 14
-        Width = 74
-        Height = 13
+        Width = 88
+        Height = 17
         Caption = 'Payment Terms'
       end
       object lblTotalPaid: TLabel
-        Left = 539
+        Left = 528
         Top = 99
-        Width = 49
-        Height = 13
+        Width = 57
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Total Paid'
-        ExplicitLeft = 545
       end
       object Panel5: TPanel
         Left = 727
@@ -557,16 +547,16 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         object Label3: TLabel
           Left = 6
           Top = 17
-          Width = 34
-          Height = 13
+          Width = 39
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Goods'
         end
         object Label4: TLabel
-          Left = 10
+          Left = 6
           Top = 44
-          Width = 17
-          Height = 13
+          Width = 21
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'VAT'
@@ -574,16 +564,16 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         object Label5: TLabel
           Left = 6
           Top = 73
-          Width = 24
-          Height = 13
+          Width = 28
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total'
         end
         object Label12: TLabel
           Left = 6
           Top = 99
-          Width = 31
-          Height = 13
+          Width = 38
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'To Pay'
         end
@@ -637,7 +627,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         end
       end
       object memDeposit: TMemo
-        Left = 613
+        Left = 607
         Top = 65
         Width = 89
         Height = 23
@@ -650,13 +640,13 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         OnChange = memDepositChange
         OnEnter = SaveValue
         OnExit = ValidateMoney
-        ExplicitLeft = 607
+        ExplicitLeft = 601
       end
       object dblkpPaymentTerms: TDBLookupComboBox
-        Left = 88
+        Left = 101
         Top = 10
         Width = 217
-        Height = 21
+        Height = 25
         KeyField = 'Payment_Terms'
         ListField = 'Payment_Terms_Description'
         ListSource = dtmdlSalesInvoice.dsPaymentTerms
@@ -664,7 +654,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         OnClick = dblkpPaymentTermsClick
       end
       object btnPaymentTerms: TBitBtn
-        Left = 320
+        Left = 333
         Top = 8
         Width = 25
         Height = 25
@@ -682,7 +672,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         OnClick = btnPaymentTermsClick
       end
       object memTotalPaid: TMemo
-        Left = 613
+        Left = 607
         Top = 94
         Width = 89
         Height = 23
@@ -694,7 +684,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         TabOrder = 4
         OnEnter = SaveValue
         OnExit = ValidateMoney
-        ExplicitLeft = 607
+        ExplicitLeft = 601
       end
     end
     object pnlBottom: TPanel
@@ -779,7 +769,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           435
           39)
         object lblDeleteprompt: TLabel
-          Left = 118
+          Left = 110
           Top = 12
           Width = 125
           Height = 16
@@ -793,7 +783,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           ParentFont = False
         end
         object btnOK: TBitBtn
-          Left = 256
+          Left = 248
           Top = 8
           Width = 75
           Height = 25
@@ -822,7 +812,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           OnClick = btnOKClick
         end
         object BitBtn2: TBitBtn
-          Left = 352
+          Left = 344
           Top = 8
           Width = 75
           Height = 25
@@ -896,8 +886,8 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 232
-    Top = 320
+    Left = 290
+    Top = 360
   end
   object IntFlashTimer: TTimer
     Enabled = False

@@ -4,16 +4,16 @@ object frmwtAboutBox: TfrmwtAboutBox
   BorderStyle = bsDialog
   Caption = 'About'
   ClientHeight = 231
-  ClientWidth = 404
+  ClientWidth = 429
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Image1: TImage
     Left = 8
     Top = 8
@@ -1514,7 +1514,7 @@ object frmwtAboutBox: TfrmwtAboutBox
   object Panel1: TPanel
     Left = 168
     Top = 8
-    Width = 225
+    Width = 253
     Height = 177
     BevelInner = bvRaised
     BevelOuter = bvLowered
@@ -1522,55 +1522,55 @@ object frmwtAboutBox: TfrmwtAboutBox
     ParentColor = True
     TabOrder = 0
     object ProductName: TLabel
-      Left = 47
+      Left = 18
       Top = 16
-      Width = 127
-      Height = 13
+      Width = 147
+      Height = 17
       Caption = 'Product Name:   Firebelly'
       IsControl = True
     end
     object lblVersion: TLabel
-      Left = 60
-      Top = 40
-      Width = 88
-      Height = 13
+      Left = 18
+      Top = 36
+      Width = 102
+      Height = 17
       Caption = 'Version Number: '
       IsControl = True
     end
     object Copyright: TLabel
-      Left = 95
+      Left = 18
       Top = 88
-      Width = 118
-      Height = 13
-      Caption = '(C)opyright 2005 - 2024'
+      Width = 138
+      Height = 17
+      Caption = '(C)opyright 2005 - 2026'
       IsControl = True
     end
     object Label1: TLabel
-      Left = 45
+      Left = 18
       Top = 104
-      Width = 173
-      Height = 13
+      Width = 194
+      Height = 17
       Caption = 'Quaystone Business Solutions Ltd'
       IsControl = True
     end
     object Label2: TLabel
-      Left = 76
+      Left = 18
       Top = 136
-      Width = 132
-      Height = 13
+      Width = 152
+      Height = 17
       Caption = 'Telephone: 0844 488 9206'
     end
     object Label3: TLabel
-      Left = 26
-      Top = 152
-      Width = 198
-      Height = 13
+      Left = 18
+      Top = 153
+      Width = 217
+      Height = 17
       Caption = 'Email: info@quaystonesolutions.co.uk'
     end
   end
   object BitBtn1: TBitBtn
-    Left = 318
-    Top = 192
+    Left = 346
+    Top = 191
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET

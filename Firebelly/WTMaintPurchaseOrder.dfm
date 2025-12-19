@@ -2,25 +2,25 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
   Left = 181
   Top = 12
   Caption = 'Purchase Order'
-  ClientHeight = 601
-  ClientWidth = 886
+  ClientHeight = 602
+  ClientWidth = 888
   Color = clBtnFace
   Constraints.MinHeight = 640
   Constraints.MinWidth = 900
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 582
-    Width = 886
+    Top = 583
+    Width = 888
     Height = 19
     Panels = <
       item
@@ -29,29 +29,30 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       item
         Width = 50
       end>
+    ExplicitTop = 574
+    ExplicitWidth = 882
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 886
-    Height = 582
+    Width = 888
+    Height = 583
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 210
-    ExplicitTop = 54
-    ExplicitWidth = 495
-    ExplicitHeight = 97
+    ExplicitWidth = 882
+    ExplicitHeight = 574
     object pnlFooter: TPanel
       Left = 0
-      Top = 413
-      Width = 886
+      Top = 414
+      Width = 888
       Height = 128
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 416
       object Panel5: TPanel
-        Left = 719
+        Left = 721
         Top = 1
         Width = 166
         Height = 126
@@ -60,22 +61,23 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         BevelOuter = bvLowered
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 715
         DesignSize = (
           166
           126)
         object Label4: TLabel
           Left = 11
           Top = 16
-          Width = 34
-          Height = 13
+          Width = 39
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Goods'
         end
         object Label5: TLabel
-          Left = 14
+          Left = 11
           Top = 43
-          Width = 18
-          Height = 13
+          Width = 21
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'VAT'
@@ -84,8 +86,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Label8: TLabel
           Left = 11
           Top = 72
-          Width = 25
-          Height = 13
+          Width = 28
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total'
           Visible = False
@@ -169,12 +171,12 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Label6: TLabel
           Left = 17
           Top = 12
-          Width = 29
-          Height = 13
+          Width = 35
+          Height = 17
           Caption = 'Name'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -182,12 +184,12 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Label10: TLabel
           Left = 17
           Top = 34
-          Width = 30
-          Height = 13
+          Width = 34
+          Height = 17
           Caption = 'Street'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -195,12 +197,12 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Label11: TLabel
           Left = 17
           Top = 80
-          Width = 51
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Town/City'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -208,12 +210,12 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Label13: TLabel
           Left = 17
           Top = 103
-          Width = 47
-          Height = 13
+          Width = 54
+          Height = 17
           Caption = 'Postcode'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -221,15 +223,15 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Label14: TLabel
           Left = 184
           Top = 103
-          Width = 37
-          Height = 13
+          Width = 40
+          Height = 17
           Caption = 'County'
         end
         object edtdelPostcode: TEdit
           Left = 81
           Top = 99
           Width = 81
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           TabOrder = 5
         end
@@ -237,14 +239,14 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           Left = 234
           Top = 99
           Width = 147
-          Height = 21
+          Height = 25
           TabOrder = 6
         end
         object edtDelName: TEdit
           Left = 81
           Top = 8
           Width = 300
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnChange = CheckOK
         end
@@ -252,21 +254,21 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           Left = 81
           Top = 30
           Width = 300
-          Height = 21
+          Height = 25
           TabOrder = 2
         end
         object edtDelLocale: TEdit
           Left = 81
           Top = 53
           Width = 300
-          Height = 21
+          Height = 25
           TabOrder = 3
         end
         object edtDelTown: TEdit
           Left = 81
           Top = 76
           Width = 300
-          Height = 21
+          Height = 25
           TabOrder = 4
         end
         object BitBtn1: TBitBtn
@@ -291,17 +293,19 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     end
     object pnlBottom: TPanel
       Left = 0
-      Top = 541
-      Width = 886
+      Top = 542
+      Width = 888
       Height = 41
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 533
+      ExplicitWidth = 882
       DesignSize = (
-        886
+        888
         41)
       object lblDeleteprompt: TLabel
-        Left = 530
+        Left = 526
         Top = 12
         Width = 175
         Height = 16
@@ -313,9 +317,10 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
+        ExplicitLeft = 530
       end
       object btnOK: TBitBtn
-        Left = 714
+        Left = 710
         Top = 8
         Width = 75
         Height = 25
@@ -343,9 +348,10 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         NumGlyphs = 2
         TabOrder = 2
         OnClick = btnOKClick
+        ExplicitLeft = 704
       end
       object BitBtn2: TBitBtn
-        Left = 802
+        Left = 798
         Top = 8
         Width = 75
         Height = 25
@@ -353,19 +359,20 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Kind = bkCancel
         NumGlyphs = 2
         TabOrder = 3
+        ExplicitLeft = 792
       end
       object chkbxonHold: TCheckBox
         Left = 8
         Top = 12
-        Width = 105
+        Width = 133
         Height = 17
         Caption = 'Order ON HOLD'
         TabOrder = 0
       end
       object chkbxInactive: TCheckBox
-        Left = 128
+        Left = 147
         Top = 12
-        Width = 105
+        Width = 134
         Height = 17
         Caption = 'Order is Inactive'
         TabOrder = 1
@@ -373,118 +380,119 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     end
     object pnlHeader: TPanel
       Left = 0
-      Top = 36
-      Width = 886
-      Height = 197
+      Top = 40
+      Width = 888
+      Height = 205
       Align = alTop
       Anchors = [akRight, akBottom]
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 36
       DesignSize = (
-        886
-        197)
+        888
+        205)
       object Label7: TLabel
-        Left = 17
+        Left = 8
         Top = 126
-        Width = 40
-        Height = 13
+        Width = 47
+        Height = 17
         Caption = 'Contact'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label12: TLabel
-        Left = 515
-        Top = 12
-        Width = 51
-        Height = 13
+        Left = 511
+        Top = 8
+        Width = 60
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label16: TLabel
-        Left = 17
-        Top = 12
-        Width = 43
-        Height = 13
+        Left = 8
+        Top = 8
+        Width = 51
+        Height = 17
         Caption = 'Supplier'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label28: TLabel
-        Left = 17
+        Left = 8
         Top = 149
-        Width = 59
-        Height = 13
+        Width = 71
+        Height = 17
         Caption = 'Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label18: TLabel
-        Left = 17
+        Left = 8
         Top = 31
-        Width = 30
-        Height = 13
+        Width = 34
+        Height = 17
         Caption = 'Street'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
+        Font.Style = []
         ParentFont = False
       end
       object Label23: TLabel
-        Left = 17
+        Left = 8
         Top = 72
-        Width = 53
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Town/City'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
+        Font.Style = []
         ParentFont = False
       end
       object Label20: TLabel
-        Left = 17
+        Left = 8
         Top = 95
-        Width = 48
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Postcode'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label24: TLabel
-        Left = 184
+        Left = 182
         Top = 95
-        Width = 37
-        Height = 13
+        Width = 40
+        Height = 17
         Caption = 'County'
       end
       object btnSupplier: TBitBtn
-        Left = 470
-        Top = 6
+        Left = 466
+        Top = 4
         Width = 25
         Height = 25
         Hint = 'Select Supplier'
@@ -502,16 +510,16 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         OnClick = btnSupplierClick
       end
       object edtReference: TEdit
-        Left = 587
-        Top = 8
+        Left = 583
+        Top = 4
         Width = 294
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 4
         OnChange = edtReferenceChange
       end
       object btnContact: TBitBtn
-        Left = 470
+        Left = 466
         Top = 120
         Width = 25
         Height = 25
@@ -528,12 +536,13 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         ShowHint = True
         TabOrder = 2
         OnClick = btnContactClick
+        ExplicitLeft = 460
       end
       object edtContact: TEdit
         Left = 89
         Top = 122
-        Width = 373
-        Height = 21
+        Width = 369
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 1
@@ -541,19 +550,21 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object edtDescription: TMemo
         Left = 89
         Top = 149
-        Width = 571
-        Height = 45
+        Width = 567
+        Height = 53
         Anchors = [akLeft, akTop, akRight, akBottom]
         MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 3
         OnChange = edtDescriptionChange
+        ExplicitWidth = 561
+        ExplicitHeight = 45
       end
       object edtSupplierName: TEdit
         Left = 89
-        Top = 8
-        Width = 372
-        Height = 21
+        Top = 4
+        Width = 368
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 5
@@ -562,8 +573,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object edtStreet: TEdit
         Left = 89
         Top = 27
-        Width = 372
-        Height = 21
+        Width = 368
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 6
@@ -571,8 +582,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object edtLocale: TEdit
         Left = 89
         Top = 47
-        Width = 372
-        Height = 21
+        Width = 368
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 7
@@ -580,8 +591,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object edtTown: TEdit
         Left = 89
         Top = 68
-        Width = 372
-        Height = 21
+        Width = 368
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 8
@@ -590,7 +601,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Left = 89
         Top = 91
         Width = 81
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         ReadOnly = True
         TabOrder = 9
@@ -598,8 +609,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object edtCounty: TEdit
         Left = 228
         Top = 91
-        Width = 234
-        Height = 21
+        Width = 230
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 10
@@ -608,23 +619,23 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 886
-      Height = 36
+      Width = 888
+      Height = 40
       Align = alTop
       ParentBackground = False
       TabOrder = 3
       DesignSize = (
-        886
-        36)
+        888
+        40)
       object Label1: TLabel
         Left = 8
         Top = 12
-        Width = 79
-        Height = 13
+        Width = 94
+        Height = 17
         Caption = 'Purchase Order'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -632,57 +643,57 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object Label2: TLabel
         Left = 216
         Top = 12
-        Width = 61
-        Height = 13
+        Width = 73
+        Height = 17
         Caption = 'Date Raised'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 641
+        Left = 637
         Top = 12
-        Width = 73
-        Height = 13
+        Width = 88
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Office Contact'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label3: TLabel
-        Left = 396
+        Left = 392
         Top = 12
-        Width = 74
-        Height = 13
+        Width = 88
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Date Required'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object edtNumber: TEdit
-        Left = 104
+        Left = 106
         Top = 8
         Width = 97
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 737
+        Left = 733
         Top = 8
         Width = 145
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Operator'
         ListField = 'Operator_Name'
@@ -690,17 +701,17 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         TabOrder = 1
       end
       object edtDateRequired: TEdit
-        Left = 484
+        Left = 486
         Top = 8
         Width = 89
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 2
         OnChange = CheckOK
         OnExit = edtDateRequiredExit
       end
       object btnDateRequired: TBitBtn
-        Left = 580
+        Left = 582
         Top = 6
         Width = 25
         Height = 25
@@ -726,7 +737,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Left = 296
         Top = 8
         Width = 89
-        Height = 21
+        Height = 25
         Date = 37882.000000000000000000
         Time = 37882.000000000000000000
         TabOrder = 4
@@ -734,21 +745,21 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     end
     object pcDetails: TPageControl
       Left = 0
-      Top = 233
-      Width = 886
-      Height = 180
-      ActivePage = tbDetails
+      Top = 245
+      Width = 888
+      Height = 169
+      ActivePage = TabSheet1
       Align = alClient
       TabOrder = 4
-      ExplicitTop = 0
-      ExplicitHeight = 582
+      ExplicitTop = 233
+      ExplicitHeight = 181
       object tbDetails: TTabSheet
         Caption = 'Details'
         object dbgLines: TStringGrid
           Left = 0
           Top = 0
-          Width = 793
-          Height = 152
+          Width = 795
+          Height = 137
           Align = alClient
           ColCount = 10
           DefaultColWidth = 40
@@ -757,7 +768,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           PopupMenu = pmnLines
           TabOrder = 0
           OnDblClick = dbgLinesDblClick
-          ExplicitHeight = 554
+          ExplicitWidth = 789
+          ExplicitHeight = 144
           ColWidths = (
             40
             243
@@ -771,14 +783,15 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
             83)
         end
         object pnlFunctions: TPanel
-          Left = 793
+          Left = 795
           Top = 0
           Width = 85
-          Height = 152
+          Height = 137
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 554
+          ExplicitLeft = 789
+          ExplicitHeight = 144
           object btnAdd: TBitBtn
             Left = 8
             Top = 8
@@ -835,16 +848,16 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           Left = 0
           Top = 0
           Width = 305
-          Height = 554
+          Height = 137
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 152
+          ExplicitHeight = 149
           object sgEvents: TStringGrid
             Left = 1
             Top = 1
             Width = 303
-            Height = 552
+            Height = 135
             Align = alClient
             ColCount = 3
             DefaultColWidth = 40
@@ -853,7 +866,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
             TabOrder = 0
             OnClick = sgEventsClick
             OnDblClick = sgEventsDblClick
-            ExplicitHeight = 150
+            ExplicitHeight = 139
             ColWidths = (
               40
               107
@@ -863,12 +876,12 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Panel18: TPanel
           Left = 305
           Top = 0
-          Width = 132
-          Height = 554
+          Width = 134
+          Height = 137
           Align = alClient
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 152
+          ExplicitHeight = 149
           object btnAddEvents: TBitBtn
             Left = 8
             Top = 8
@@ -900,23 +913,24 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           end
         end
         object Panel8: TPanel
-          Left = 437
+          Left = 439
           Top = 0
           Width = 441
-          Height = 554
+          Height = 137
           Align = alRight
           ParentBackground = False
           TabOrder = 2
-          ExplicitHeight = 152
+          ExplicitHeight = 149
           object memEventNotes: TMemo
             Left = 1
             Top = 1
             Width = 439
-            Height = 552
+            Height = 135
             Align = alClient
             Color = clBtnFace
             ReadOnly = True
             TabOrder = 0
+            ExplicitHeight = 147
           end
         end
       end
@@ -927,20 +941,21 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           Left = 0
           Top = 0
           Width = 505
-          Height = 554
+          Height = 137
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 152
+          ExplicitHeight = 149
           object memNotes: TMemo
             Left = 1
             Top = 1
             Width = 503
-            Height = 552
+            Height = 135
             Align = alClient
             Lines.Strings = (
               'memNotes')
             TabOrder = 0
+            ExplicitHeight = 147
           end
         end
       end

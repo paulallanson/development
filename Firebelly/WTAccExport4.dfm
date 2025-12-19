@@ -7,15 +7,15 @@ object frmWTAccExport4: TfrmWTAccExport4
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object BitBtn1: TBitBtn
-    Left = 256
-    Top = 256
+    Left = 246
+    Top = 240
     Width = 75
     Height = 25
     Caption = 'Close'

@@ -8,14 +8,14 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlFunctions: TPanel
     Left = 0
     Top = 250
@@ -25,28 +25,27 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     ParentBackground = False
     TabOrder = 1
     TabStop = True
-    ExplicitTop = 182
+    ExplicitTop = 241
     ExplicitWidth = 616
     DesignSize = (
       622
       40)
     object lblDelete: TLabel
-      Left = 288
+      Left = 282
       Top = 12
-      Width = 145
-      Height = 15
+      Width = 166
+      Height = 16
       Anchors = [akRight, akBottom]
       Caption = 'Delete the above details ?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 302
     end
     object btnOK: TBitBtn
-      Left = 448
+      Left = 442
       Top = 7
       Width = 75
       Height = 25
@@ -56,7 +55,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -80,24 +79,24 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 442
+      ExplicitLeft = 436
     end
     object btnCancel: TBitBtn
-      Left = 528
+      Left = 522
       Top = 7
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 522
+      ExplicitLeft = 516
     end
   end
   object pnlDetails: TPanel
@@ -108,37 +107,38 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 1
+    ExplicitWidth = 616
+    ExplicitHeight = 241
     object Label1: TLabel
       Left = 10
       Top = 24
-      Width = 70
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'Product Code'
     end
     object Label3: TLabel
       Left = 10
       Top = 78
-      Width = 49
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Price/unit'
     end
     object Label2: TLabel
       Left = 210
       Top = 77
-      Width = 45
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Unit Size'
     end
     object OrdqtyLbl: TLabel
       Left = 10
       Top = 139
-      Width = 85
-      Height = 13
+      Width = 98
+      Height = 17
       Caption = 'Order Qty (units)'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -146,26 +146,26 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object Label4: TLabel
       Left = 10
       Top = 105
-      Width = 70
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'Sell Price/unit'
     end
     object Label5: TLabel
       Left = 210
       Top = 104
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Vat Rate'
     end
     object lblQtyDelivered: TLabel
       Left = 210
       Top = 139
-      Width = 83
-      Height = 13
+      Width = 94
+      Height = 17
       Caption = 'Delivered (units)'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -174,19 +174,19 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object Label7: TLabel
       Left = 10
       Top = 52
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object lblQtyInvoiced: TLabel
       Left = 410
       Top = 139
-      Width = 78
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'Invoiced (units)'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -195,19 +195,19 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     object Label6: TLabel
       Left = 10
       Top = 202
-      Width = 62
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Job Number'
     end
     object Label8: TLabel
       Left = 10
       Top = 170
-      Width = 75
-      Height = 13
+      Width = 95
+      Height = 16
       Caption = 'Allocated (units)'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'MS Sans Serif'
       Font.Style = []
       ParentFont = False
@@ -216,7 +216,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Left = 112
       Top = 21
       Width = 137
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = CheckOK
@@ -253,7 +253,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Left = 112
       Top = 49
       Width = 471
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -263,7 +263,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Left = 304
       Top = 74
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -286,7 +286,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Left = 304
       Top = 101
       Width = 144
-      Height = 21
+      Height = 25
       KeyField = 'Vat'
       ListField = 'Description'
       ListSource = dtmdlSalesOrder.dtsVAT

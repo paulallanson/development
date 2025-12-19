@@ -9,7 +9,7 @@ object frmWTMaintContract: TfrmWTMaintContract
   Constraints.MinWidth = 1000
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -20,7 +20,7 @@ object frmWTMaintContract: TfrmWTMaintContract
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 677
@@ -62,12 +62,12 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Label16: TLabel
         Left = 16
         Top = 11
-        Width = 50
-        Height = 13
+        Width = 59
+        Height = 17
         Caption = 'Customer'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -75,12 +75,12 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Label3: TLabel
         Left = 16
         Top = 90
-        Width = 53
-        Height = 13
+        Width = 63
+        Height = 17
         Caption = 'Developer'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -88,12 +88,12 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Label4: TLabel
         Left = 16
         Top = 117
-        Width = 45
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Location'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -101,38 +101,38 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Label5: TLabel
         Left = 16
         Top = 176
-        Width = 59
-        Height = 13
+        Width = 71
+        Height = 17
         Caption = 'Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label6: TLabel
         Left = 16
-        Top = 36
-        Width = 40
-        Height = 13
+        Top = 38
+        Width = 47
+        Height = 17
         Caption = 'Contact'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object btnContactClear: TSpeedButton
-        Left = 536
-        Top = 31
+        Left = 540
+        Top = 35
         Width = 23
         Height = 22
         Anchors = [akTop, akRight]
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         Glyph.Data = {
@@ -151,38 +151,37 @@ object frmWTMaintContract: TfrmWTMaintContract
         NumGlyphs = 2
         ParentFont = False
         OnClick = btnContactClearClick
-        ExplicitLeft = 616
       end
       object Label13: TLabel
         Left = 16
         Top = 149
-        Width = 62
-        Height = 13
+        Width = 69
+        Height = 17
         Caption = 'Site Contact'
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label14: TLabel
-        Left = 400
+        Left = 410
         Top = 149
-        Width = 63
-        Height = 13
+        Width = 73
+        Height = 17
         Caption = 'Site Number'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object btnCustomer: TBitBtn
-        Left = 624
+        Left = 628
         Top = 6
         Width = 22
         Height = 22
@@ -199,52 +198,47 @@ object frmWTMaintContract: TfrmWTMaintContract
         ShowHint = True
         TabOrder = 1
         OnClick = btnCustomerClick
-        ExplicitLeft = 618
       end
       object edtCustomerName: TEdit
-        Left = 104
+        Left = 114
         Top = 7
-        Width = 513
-        Height = 21
+        Width = 507
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 0
         OnClick = edtCustomerNameClick
-        ExplicitWidth = 507
       end
       object edtDeveloper: TEdit
-        Left = 104
+        Left = 114
         Top = 86
-        Width = 785
-        Height = 21
+        Width = 779
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 5
         OnChange = edtDeveloperChange
-        ExplicitWidth = 779
       end
       object edtLocation: TEdit
-        Left = 104
+        Left = 114
         Top = 115
-        Width = 785
-        Height = 21
+        Width = 779
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 6
         OnChange = edtLocationChange
-        ExplicitWidth = 779
       end
       object edtDescription: TEdit
-        Left = 104
+        Left = 114
         Top = 172
-        Width = 785
-        Height = 21
+        Width = 779
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 9
         OnChange = edtDescriptionChange
-        ExplicitWidth = 779
       end
       object btnContactSearch: TBitBtn
-        Left = 501
-        Top = 31
+        Left = 505
+        Top = 35
         Width = 22
         Height = 22
         Hint = 'Search for Customer'
@@ -259,31 +253,29 @@ object frmWTMaintContract: TfrmWTMaintContract
         ParentFont = False
         TabOrder = 3
         OnClick = btnContactSearchClick
-        ExplicitLeft = 495
       end
       object edtContact: TEdit
-        Left = 104
-        Top = 32
-        Width = 385
-        Height = 21
+        Left = 114
+        Top = 34
+        Width = 379
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 2
         OnChange = edtContactChange
-        ExplicitWidth = 379
       end
       object edtSiteContact: TEdit
-        Left = 104
+        Left = 114
         Top = 145
         Width = 265
-        Height = 21
+        Height = 25
         TabOrder = 7
         OnChange = edtSiteContactChange
       end
       object edtSitePhone: TEdit
-        Left = 472
-        Top = 145
+        Left = 489
+        Top = 146
         Width = 265
-        Height = 21
+        Height = 25
         TabOrder = 8
         OnChange = edtSitePhoneChange
       end
@@ -298,25 +290,25 @@ object frmWTMaintContract: TfrmWTMaintContract
         object Label59: TLabel
           Left = 15
           Top = 8
-          Width = 81
-          Height = 13
+          Width = 91
+          Height = 17
           Caption = 'Revenue Centre'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object SpeedButton1: TSpeedButton
-          Left = 315
-          Top = 3
+          Left = 325
+          Top = 6
           Width = 23
           Height = 22
           Hint = 'Clear Revenue Centre'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Glyph.Data = {
@@ -339,10 +331,10 @@ object frmWTMaintContract: TfrmWTMaintContract
           OnClick = SpeedButton1Click
         end
         object dblkpRevenueCentre: TDBLookupComboBox
-          Left = 103
-          Top = 4
+          Left = 113
+          Top = 5
           Width = 201
-          Height = 21
+          Height = 25
           KeyField = 'Revenue_Centre'
           ListField = 'Revenue_Centre_Descr'
           TabOrder = 0
@@ -365,12 +357,12 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Label1: TLabel
         Left = 16
         Top = 12
-        Width = 78
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Quote Number'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -378,40 +370,39 @@ object frmWTMaintContract: TfrmWTMaintContract
       object Label2: TLabel
         Left = 224
         Top = 12
-        Width = 61
-        Height = 13
+        Width = 73
+        Height = 17
         Caption = 'Date Raised'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 651
-        Top = 12
-        Width = 73
-        Height = 13
+        Left = 738
+        Top = 9
+        Width = 88
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Office Contact'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 701
       end
       object lblExpiryDate: TLabel
         Left = 440
         Top = 12
-        Width = 37
-        Height = 13
+        Width = 44
+        Height = 17
         Caption = 'Expires'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -424,7 +415,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Hint = 'Clear Expiry Date'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         Glyph.Data = {
@@ -445,30 +436,29 @@ object frmWTMaintContract: TfrmWTMaintContract
         OnClick = SpeedButton4Click
       end
       object edtNumber: TEdit
-        Left = 104
+        Left = 114
         Top = 8
         Width = 97
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 747
-        Top = 8
+        Left = 834
+        Top = 5
         Width = 145
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Operator'
         ListField = 'Operator_Name'
         ListSource = dtmdlSalesOrder.dtsOperator
         TabOrder = 2
-        ExplicitLeft = 741
       end
       object dtpckDate: TDateTimePicker
         Left = 304
         Top = 8
         Width = 89
-        Height = 21
+        Height = 25
         Date = 37882.000000000000000000
         Time = 37882.000000000000000000
         TabOrder = 1
@@ -477,7 +467,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Left = 491
         Top = 8
         Width = 89
-        Height = 21
+        Height = 25
         TabOrder = 3
         OnExit = edtExpiryDateExit
       end
@@ -518,7 +508,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         988
         59)
       object lblDeleteprompt: TLabel
-        Left = 588
+        Left = 582
         Top = 30
         Width = 132
         Height = 16
@@ -534,23 +524,22 @@ object frmWTMaintContract: TfrmWTMaintContract
         ExplicitTop = 12
       end
       object Label7: TLabel
-        Left = 407
+        Left = 401
         Top = 30
-        Width = 93
-        Height = 13
+        Width = 106
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Total Quote Value:'
-        ExplicitLeft = 413
       end
       object Label10: TLabel
         Left = 207
         Top = 30
-        Width = 106
-        Height = 13
+        Width = 119
+        Height = 17
         Caption = 'Lowest Price Option:'
       end
       object btnOK: TBitBtn
-        Left = 732
+        Left = 726
         Top = 26
         Width = 75
         Height = 25
@@ -577,10 +566,10 @@ object frmWTMaintContract: TfrmWTMaintContract
         NumGlyphs = 2
         TabOrder = 0
         OnClick = btnOKClick
-        ExplicitLeft = 726
+        ExplicitLeft = 720
       end
       object BitBtn2: TBitBtn
-        Left = 820
+        Left = 814
         Top = 26
         Width = 75
         Height = 25
@@ -588,7 +577,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         Kind = bkCancel
         NumGlyphs = 2
         TabOrder = 1
-        ExplicitLeft = 814
+        ExplicitLeft = 808
       end
       object chkbxInactive: TCheckBox
         Left = 7
@@ -599,7 +588,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         TabOrder = 2
       end
       object btnSave: TBitBtn
-        Left = 644
+        Left = 638
         Top = 26
         Width = 75
         Height = 25
@@ -623,10 +612,10 @@ object frmWTMaintContract: TfrmWTMaintContract
         NumGlyphs = 2
         TabOrder = 3
         OnClick = btnSaveClick
-        ExplicitLeft = 638
+        ExplicitLeft = 632
       end
       object edtQuoteValue: TMemo
-        Left = 503
+        Left = 497
         Top = 26
         Width = 79
         Height = 21
@@ -639,20 +628,19 @@ object frmWTMaintContract: TfrmWTMaintContract
         TabOrder = 4
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 497
+        ExplicitLeft = 491
       end
       object cmbOptions: TComboBox
         Left = 319
         Top = 26
-        Width = 81
-        Height = 21
+        Width = 75
+        Height = 25
         Style = csDropDownList
         Anchors = [akLeft, akTop, akRight]
         ParentShowHint = False
         ShowHint = True
         TabOrder = 5
         OnClick = cmbOptionsClick
-        ExplicitWidth = 75
       end
       object chkbxOverridePrices: TCheckBox
         Left = 8
@@ -669,18 +657,16 @@ object frmWTMaintContract: TfrmWTMaintContract
       Top = 235
       Width = 988
       Height = 383
-      ActivePage = tsDocuments
+      ActivePage = tsQuotes
       Align = alClient
       TabOrder = 3
-      ExplicitWidth = 982
-      ExplicitHeight = 374
       object tsQuotes: TTabSheet
         Caption = 'Quotes'
         object sgDetails: TStringGrid
           Left = 0
           Top = 0
           Width = 980
-          Height = 187
+          Height = 183
           Align = alClient
           ColCount = 2
           DefaultColWidth = 40
@@ -693,22 +679,18 @@ object frmWTMaintContract: TfrmWTMaintContract
           OnKeyPress = sgDetailsKeyPress
           OnKeyUp = sgDetailsKeyUp
           OnSelectCell = sgDetailsSelectCell
-          ExplicitWidth = 974
-          ExplicitHeight = 178
           ColWidths = (
             40
             118)
         end
         object pnlDrawings: TPanel
           Left = 0
-          Top = 241
+          Top = 237
           Width = 980
           Height = 114
           Align = alBottom
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 232
-          ExplicitWidth = 974
           object lstvwLineDocuments: TListView
             Left = 1
             Top = 1
@@ -735,7 +717,6 @@ object frmWTMaintContract: TfrmWTMaintContract
             SmallImages = imgDocuments
             TabOrder = 0
             OnDblClick = lstvwLineDocumentsDblClick
-            ExplicitWidth = 876
           end
           object Panel3: TPanel
             Left = 1
@@ -746,32 +727,31 @@ object frmWTMaintContract: TfrmWTMaintContract
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
-            ExplicitWidth = 972
             object Label8: TLabel
-              Left = 11
-              Top = 10
-              Width = 97
-              Height = 13
+              Left = 7
+              Top = 8
+              Width = 110
+              Height = 17
               Caption = 'Supplier Reference'
             end
             object Label11: TLabel
               Left = 467
-              Top = 10
-              Width = 85
-              Height = 13
+              Top = 8
+              Width = 97
+              Height = 17
               Caption = 'Number of Units'
             end
             object edtSupplierReference: TEdit
-              Left = 115
-              Top = 6
+              Left = 125
+              Top = 4
               Width = 305
-              Height = 21
+              Height = 25
               TabOrder = 0
               Text = 'edtSupplierReference'
               OnChange = edtSupplierReferenceChange
             end
             object memUnits: TMemo
-              Left = 560
+              Left = 569
               Top = 6
               Width = 81
               Height = 21
@@ -792,7 +772,6 @@ object frmWTMaintContract: TfrmWTMaintContract
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 2
-            ExplicitLeft = 877
             object btnLineAttach: TBitBtn
               Left = 13
               Top = 9
@@ -841,7 +820,7 @@ object frmWTMaintContract: TfrmWTMaintContract
         end
         object Panel4: TPanel
           Left = 0
-          Top = 222
+          Top = 218
           Width = 980
           Height = 19
           Align = alBottom
@@ -849,43 +828,39 @@ object frmWTMaintContract: TfrmWTMaintContract
           Caption = ' Drawing Details'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentBackground = False
           ParentFont = False
           TabOrder = 2
-          ExplicitTop = 213
-          ExplicitWidth = 974
         end
         object pnlPriceChange: TPanel
           Left = 0
-          Top = 187
+          Top = 183
           Width = 980
           Height = 35
           Align = alBottom
           ParentBackground = False
           TabOrder = 3
-          ExplicitTop = 178
-          ExplicitWidth = 974
           object Label12: TLabel
             Left = 5
-            Top = 12
-            Width = 122
-            Height = 13
+            Top = 10
+            Width = 144
+            Height = 17
             Caption = 'Selected Cell Markup %'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object edtMarkup: TCREditFloat
-            Left = 152
-            Top = 8
+            Left = 158
+            Top = 6
             Width = 65
-            Height = 21
+            Height = 25
             ReadOnly = True
             TabOrder = 0
             Text = 'edtMarkup'
@@ -904,31 +879,31 @@ object frmWTMaintContract: TfrmWTMaintContract
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 974
           DesignSize = (
             980
             17)
           object Label44: TLabel
             Left = 2
-            Top = 4
-            Width = 58
-            Height = 13
+            Top = -2
+            Width = 65
+            Height = 17
             Caption = 'Documents'
           end
           object lblNotes: TLabel
             Left = 541
-            Top = 0
-            Width = 30
-            Height = 13
+            Top = -2
+            Width = 35
+            Height = 17
             Anchors = [akTop, akRight]
             Caption = 'Notes'
-            ExplicitLeft = 533
           end
         end
         object lstvwDocuments: TListView
           Left = 0
           Top = 17
           Width = 548
-          Height = 338
+          Height = 334
           Align = alClient
           Columns = <
             item
@@ -951,22 +926,26 @@ object frmWTMaintContract: TfrmWTMaintContract
           OnColumnClick = lstvwDocumentsColumnClick
           OnCompare = lstvwDocumentsCompare
           OnDblClick = lstvwDocumentsDblClick
+          ExplicitWidth = 542
+          ExplicitHeight = 329
         end
         object Panel1: TPanel
           Left = 579
           Top = 17
           Width = 16
-          Height = 338
+          Height = 334
           Align = alRight
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 2
+          ExplicitLeft = 573
+          ExplicitHeight = 329
         end
         object ToolBar1: TToolBar
           Left = 548
           Top = 17
           Width = 31
-          Height = 338
+          Height = 334
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -976,6 +955,8 @@ object frmWTMaintContract: TfrmWTMaintContract
           ParentShowHint = False
           ShowHint = True
           TabOrder = 3
+          ExplicitLeft = 542
+          ExplicitHeight = 329
           object btnExcel: TToolButton
             Left = 0
             Top = 0
@@ -1024,29 +1005,33 @@ object frmWTMaintContract: TfrmWTMaintContract
           Left = 595
           Top = 17
           Width = 385
-          Height = 338
+          Height = 334
           Align = alRight
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 4
+          ExplicitLeft = 589
+          ExplicitHeight = 329
           object memNotes: TMemo
             Left = 0
             Top = 0
             Width = 350
-            Height = 338
+            Height = 334
             Align = alClient
             ScrollBars = ssVertical
             TabOrder = 0
+            ExplicitHeight = 329
           end
           object Panel2: TPanel
             Left = 350
             Top = 0
             Width = 35
-            Height = 338
+            Height = 334
             Align = alRight
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
+            ExplicitHeight = 329
             object bynSpecialInstructions: TBitBtn
               Left = 8
               Top = 2
@@ -1081,7 +1066,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           Left = 518
           Top = 17
           Width = 93
-          Height = 338
+          Height = 334
           Align = alRight
           ParentBackground = False
           TabOrder = 1
@@ -1119,7 +1104,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           Left = 611
           Top = 17
           Width = 369
-          Height = 338
+          Height = 334
           Align = alRight
           Caption = 'pnlEvents'
           ParentBackground = False
@@ -1128,7 +1113,7 @@ object frmWTMaintContract: TfrmWTMaintContract
             Left = 1
             Top = 1
             Width = 367
-            Height = 336
+            Height = 332
             Align = alClient
             Color = clBtnFace
             ReadOnly = True
@@ -1139,7 +1124,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           Left = 0
           Top = 17
           Width = 518
-          Height = 338
+          Height = 334
           Align = alClient
           ColCount = 3
           DefaultColWidth = 40

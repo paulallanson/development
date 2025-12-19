@@ -2,8 +2,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   Left = 176
   Top = 4
   Caption = ';'#39
-  ClientHeight = 726
-  ClientWidth = 1158
+  ClientHeight = 743
+  ClientWidth = 1154
   Color = clBtnFace
   Constraints.MinHeight = 550
   Constraints.MinWidth = 1170
@@ -21,8 +21,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 707
-    Width = 1158
+    Top = 724
+    Width = 1154
     Height = 19
     Panels = <
       item
@@ -31,35 +31,41 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       item
         Width = 50
       end>
-    ExplicitTop = 698
+    ExplicitTop = 714
     ExplicitWidth = 1152
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 1158
-    Height = 707
+    Width = 1154
+    Height = 724
     Align = alClient
     BevelOuter = bvNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 1
     ExplicitWidth = 1152
-    ExplicitHeight = 698
+    ExplicitHeight = 714
     object pnlBottom: TPanel
       Left = 0
-      Top = 666
+      Top = 684
       Width = 1158
       Height = 41
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 657
+      ExplicitTop = 673
       ExplicitWidth = 1152
       DesignSize = (
-        1158
+        1154
         41)
       object lblDeleteprompt: TLabel
-        Left = 764
+        Left = 800
         Top = 14
         Width = 149
         Height = 16
@@ -71,10 +77,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 818
+        ExplicitLeft = 814
       end
       object btnOK: TBitBtn
-        Left = 924
+        Left = 960
         Top = 10
         Width = 75
         Height = 25
@@ -102,10 +108,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         NumGlyphs = 2
         TabOrder = 2
         OnClick = btnOKClick
-        ExplicitLeft = 918
+        ExplicitLeft = 962
       end
       object BitBtn2: TBitBtn
-        Left = 1012
+        Left = 1048
         Top = 10
         Width = 75
         Height = 25
@@ -113,29 +119,29 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Kind = bkCancel
         NumGlyphs = 2
         TabOrder = 3
-        ExplicitLeft = 1006
+        ExplicitLeft = 1050
       end
       object chkbxonHold: TCheckBox
         Left = 8
         Top = 12
-        Width = 105
+        Width = 133
         Height = 17
         Caption = 'Order ON HOLD'
         TabOrder = 0
         OnClick = chkbxonHoldClick
       end
       object chkbxInactive: TCheckBox
-        Left = 128
+        Left = 147
         Top = 12
-        Width = 105
+        Width = 134
         Height = 17
         Caption = 'Order is Inactive'
         TabOrder = 1
       end
       object chkbxDoNotInvoice: TCheckBox
-        Left = 256
+        Left = 287
         Top = 12
-        Width = 97
+        Width = 130
         Height = 17
         Caption = 'Do NOT Invoice'
         TabOrder = 4
@@ -143,13 +149,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
     object pnlFooter: TPanel
       Left = 0
-      Top = 472
-      Width = 1158
+      Top = 489
+      Width = 1154
       Height = 194
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 463
+      ExplicitTop = 479
       ExplicitWidth = 1152
       object Panel5: TPanel
         Left = 804
@@ -168,16 +174,16 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label3: TLabel
           Left = 198
           Top = 106
-          Width = 34
-          Height = 13
+          Width = 39
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Goods'
         end
         object Label4: TLabel
-          Left = 202
+          Left = 198
           Top = 133
-          Width = 17
-          Height = 13
+          Width = 21
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'VAT'
@@ -185,32 +191,32 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label5: TLabel
           Left = 198
           Top = 162
-          Width = 24
-          Height = 13
+          Width = 28
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total'
         end
         object Label15: TLabel
           Left = 9
           Top = 109
-          Width = 83
-          Height = 13
+          Width = 99
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Deposit Terms %'
         end
         object Label14: TLabel
-          Left = 28
+          Left = 9
           Top = 164
-          Width = 65
-          Height = 13
+          Width = 74
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Deposit Paid'
         end
         object Label27: TLabel
-          Left = 6
+          Left = 9
           Top = 136
-          Width = 90
-          Height = 13
+          Width = 102
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Deposit Required'
         end
@@ -251,10 +257,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           TabOrder = 2
         end
         object edtDepositPaid: TCREditMoney
-          Left = 96
+          Left = 115
           Top = 160
           Width = 73
-          Height = 21
+          Height = 25
           Anchors = [akRight, akBottom]
           Enabled = False
           ReadOnly = True
@@ -262,10 +268,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           OnChange = edtDepositPaidChange
         end
         object edtDepositReqd: TCREditMoney
-          Left = 96
+          Left = 115
           Top = 132
           Width = 73
-          Height = 21
+          Height = 25
           Anchors = [akRight, akBottom]
           TabOrder = 4
           OnChange = edtDepositReqdChange
@@ -273,10 +279,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           OnExit = edtDepositReqdExit
         end
         object edtDepositTerms: TCREditMoney
-          Left = 96
+          Left = 115
           Top = 104
           Width = 73
-          Height = 21
+          Height = 25
           Anchors = [akRight, akBottom]
           TabOrder = 5
           OnChange = edtDepositTermsChange
@@ -294,8 +300,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           object Label31: TLabel
             Left = 8
             Top = 14
-            Width = 49
-            Height = 39
+            Width = 56
+            Height = 51
             Caption = 'Charge On Customer'
             WordWrap = True
           end
@@ -307,7 +313,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Hint = 'Clear Default Upstand Size'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -12
+            Font.Height = -13
             Font.Name = 'Arial'
             Font.Style = [fsBold]
             Glyph.Data = {
@@ -331,7 +337,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Left = 70
             Top = 21
             Width = 195
-            Height = 21
+            Height = 25
             ReadOnly = True
             TabOrder = 0
             Text = 'edtSubContractCustomer'
@@ -356,28 +362,28 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object pnlFitters: TPanel
         Left = 578
         Top = 1
-        Width = 226
+        Width = 222
         Height = 192
         Align = alClient
         ParentBackground = False
         TabOrder = 2
         ExplicitWidth = 220
         DesignSize = (
-          226
+          222
           192)
         object Label29: TLabel
           Left = 9
           Top = 3
-          Width = 49
-          Height = 13
+          Width = 58
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Templater'
         end
         object Label30: TLabel
           Left = 12
           Top = 47
-          Width = 27
-          Height = 13
+          Width = 29
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Fitter'
         end
@@ -389,7 +395,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Anchors = [akLeft, akBottom]
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Glyph.Data = {
@@ -417,7 +423,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Anchors = [akLeft, akBottom]
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Glyph.Data = {
@@ -441,7 +447,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 10
           Top = 21
           Width = 145
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akBottom]
           KeyField = 'Fitter'
           ListField = 'Fitter_Name'
@@ -452,7 +458,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 10
           Top = 62
           Width = 145
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akBottom]
           KeyField = 'Fitter'
           ListField = 'Fitter_Name'
@@ -481,7 +487,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object chkbxTemplateDocsReturned: TCheckBox
           Left = 10
           Top = 134
-          Width = 173
+          Width = 199
           Height = 17
           Caption = 'Template Documents Returned'
           TabOrder = 3
@@ -489,7 +495,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object chkbxFittingDocsReturned: TCheckBox
           Left = 10
           Top = 156
-          Width = 166
+          Width = 199
           Height = 17
           Caption = 'Fitting Documents Returned'
           TabOrder = 4
@@ -509,13 +515,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label6: TLabel
           Left = 3
           Top = 2
-          Width = 103
-          Height = 13
+          Width = 123
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Installation Address'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -523,12 +529,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label34: TLabel
           Left = 4
           Top = 80
-          Width = 30
-          Height = 13
+          Width = 36
+          Height = 17
           Caption = 'Street'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -536,12 +542,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label35: TLabel
           Left = 4
           Top = 137
-          Width = 50
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Town/City'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -549,12 +555,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label37: TLabel
           Left = 4
           Top = 168
-          Width = 48
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Postcode'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -562,25 +568,25 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label38: TLabel
           Left = 4
           Top = 53
-          Width = 29
-          Height = 13
+          Width = 35
+          Height = 17
           Caption = 'Name'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object Label39: TLabel
-          Left = 169
+          Left = 168
           Top = 168
-          Width = 37
-          Height = 13
+          Width = 40
+          Height = 17
           Caption = 'County'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -588,26 +594,26 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label40: TLabel
           Left = 4
           Top = 24
-          Width = 19
-          Height = 13
+          Width = 21
+          Height = 17
           Caption = 'Site'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object btnClearCustomerBranch: TSpeedButton
-          Left = 303
+          Left = 307
           Top = 18
-          Width = 25
+          Width = 26
           Height = 25
           Hint = 'Clear Customer Site'
           Anchors = [akLeft, akBottom]
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Glyph.Data = {
@@ -630,63 +636,63 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           OnClick = btnClearCustomerBranchClick
         end
         object edtInstallationName: TEdit
-          Left = 62
+          Left = 66
           Top = 49
-          Width = 267
-          Height = 21
+          Width = 268
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
           OnChange = edtInstallationNameChange
         end
         object edtInstallationStreet: TEdit
-          Left = 62
+          Left = 66
           Top = 76
-          Width = 267
-          Height = 21
+          Width = 268
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 1
           OnChange = edtInstallationNameChange
         end
         object edtInstallationLocale: TEdit
-          Left = 62
+          Left = 66
           Top = 104
-          Width = 267
-          Height = 21
+          Width = 268
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 2
           OnChange = edtInstallationNameChange
         end
         object edtInstallationTown: TEdit
-          Left = 62
+          Left = 66
           Top = 133
-          Width = 267
-          Height = 21
+          Width = 268
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 3
           OnChange = edtInstallationNameChange
         end
         object edtInstallationPostcode: TEdit
-          Left = 62
+          Left = 66
           Top = 164
-          Width = 91
-          Height = 21
+          Width = 92
+          Height = 25
           CharCase = ecUpperCase
           TabOrder = 4
           OnChange = edtInstallationNameChange
         end
         object edtInstallationCounty: TEdit
-          Left = 206
+          Left = 210
           Top = 164
-          Width = 123
-          Height = 21
+          Width = 124
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 5
           OnChange = edtInstallationNameChange
         end
         object btnCustomerBranch: TButton
-          Left = 272
+          Left = 276
           Top = 18
-          Width = 25
+          Width = 26
           Height = 25
           Caption = '...'
           Font.Charset = ANSI_CHARSET
@@ -699,10 +705,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           OnClick = btnCustomerBranchClick
         end
         object edtSiteName: TEdit
-          Left = 62
+          Left = 66
           Top = 20
-          Width = 203
-          Height = 21
+          Width = 204
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           ReadOnly = True
           TabOrder = 7
@@ -723,27 +729,27 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label21: TLabel
           Left = 9
           Top = 3
-          Width = 101
-          Height = 13
+          Width = 121
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Installation Contact'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Label22: TLabel
           Left = 9
-          Top = 90
-          Width = 104
-          Height = 13
+          Top = 93
+          Width = 124
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Installation Number'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -751,13 +757,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object Label33: TLabel
           Left = 9
           Top = 47
-          Width = 88
-          Height = 13
+          Width = 97
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Installation Email'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -766,25 +772,25 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 9
           Top = 21
           Width = 200
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akBottom]
           TabOrder = 0
           OnChange = CheckOK
         end
         object edtInstallPhone: TEdit
           Left = 9
-          Top = 105
+          Top = 108
           Width = 161
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akBottom]
           TabOrder = 2
           OnChange = CheckOK
         end
         object edtInstallEmail: TEdit
           Left = 9
-          Top = 61
+          Top = 65
           Width = 200
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akBottom]
           TabOrder = 1
         end
@@ -805,25 +811,26 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     object pnlHeader: TPanel
       Left = 0
       Top = 36
-      Width = 1158
-      Height = 269
+      Width = 1154
+      Height = 291
       Align = alTop
       Anchors = [akRight, akBottom]
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 1152
+      ExplicitTop = 35
+      ExplicitWidth = 1158
       DesignSize = (
-        1158
-        269)
+        1154
+        291)
       object Label11: TLabel
         Left = 17
         Top = 168
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Caption = 'Rep'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -831,49 +838,49 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object Label7: TLabel
         Left = 17
         Top = 134
-        Width = 40
-        Height = 13
+        Width = 44
+        Height = 17
         Caption = 'Contact'
       end
       object Label12: TLabel
-        Left = 585
+        Left = 750
         Top = 11
-        Width = 51
-        Height = 13
+        Width = 60
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 717
+        ExplicitLeft = 758
       end
       object Label13: TLabel
-        Left = 584
+        Left = 749
         Top = 38
-        Width = 68
-        Height = 13
+        Width = 81
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Customer PO'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 732
+        ExplicitLeft = 757
       end
       object Label16: TLabel
         Left = 17
         Top = 11
-        Width = 50
-        Height = 13
+        Width = 59
+        Height = 17
         Caption = 'Customer'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -881,13 +888,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object Label28: TLabel
         Left = 17
         Top = 201
-        Width = 59
-        Height = 13
+        Width = 71
+        Height = 17
         Caption = 'Description'
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentColor = False
@@ -895,146 +902,146 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
       object Label18: TLabel
         Left = 17
-        Top = 31
-        Width = 30
-        Height = 13
+        Top = 36
+        Width = 36
+        Height = 17
         Caption = 'Street'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label23: TLabel
         Left = 17
-        Top = 73
-        Width = 53
-        Height = 13
+        Top = 83
+        Width = 63
+        Height = 17
         Caption = 'Town/City'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label20: TLabel
         Left = 17
-        Top = 95
-        Width = 48
-        Height = 13
+        Top = 107
+        Width = 56
+        Height = 17
         Caption = 'Postcode'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object pnlAddress: TPanel
-        Left = 75
-        Top = 1
-        Width = 440
-        Height = 121
+        Left = 82
+        Top = 3
+        Width = 574
+        Height = 124
         Anchors = [akLeft, akTop, akRight]
         BevelOuter = bvNone
         Caption = 'pnlAddress'
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 434
+        ExplicitWidth = 582
         DesignSize = (
-          440
-          121)
+          574
+          124)
         object Label24: TLabel
           Left = 108
-          Top = 94
-          Width = 37
-          Height = 13
+          Top = 105
+          Width = 40
+          Height = 17
           Caption = 'County'
         end
         object edtCustomerName: TEdit
           Left = 14
-          Top = 7
-          Width = 418
-          Height = 21
+          Top = 5
+          Width = 553
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
           OnChange = CheckOK
-          ExplicitWidth = 412
+          ExplicitWidth = 561
         end
         object edtStreet: TEdit
           Left = 14
-          Top = 27
-          Width = 418
-          Height = 21
+          Top = 30
+          Width = 553
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 1
-          ExplicitWidth = 412
+          ExplicitWidth = 561
         end
         object edtLocale: TEdit
           Left = 14
-          Top = 47
-          Width = 418
-          Height = 21
+          Top = 54
+          Width = 553
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 2
-          ExplicitWidth = 412
+          ExplicitWidth = 561
         end
         object edtTown: TEdit
           Left = 14
-          Top = 69
-          Width = 418
-          Height = 21
+          Top = 78
+          Width = 553
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 3
-          ExplicitWidth = 412
+          ExplicitWidth = 561
         end
         object edtPostcode: TEdit
           Left = 14
-          Top = 91
+          Top = 102
           Width = 81
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           TabOrder = 4
         end
         object edtCounty: TEdit
           Left = 154
-          Top = 91
-          Width = 278
-          Height = 21
+          Top = 103
+          Width = 413
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 5
-          ExplicitWidth = 272
+          ExplicitWidth = 421
         end
       end
       object grpMaterials: TGroupBox
-        Left = 764
-        Top = 181
+        Left = 934
+        Top = 208
         Width = 193
         Height = 77
         Anchors = [akTop, akRight]
         Enabled = False
         ParentBackground = False
         TabOrder = 12
-        ExplicitLeft = 758
+        ExplicitLeft = 936
         DesignSize = (
           193
           77)
         object Label17: TLabel
-          Left = 10
+          Left = 5
           Top = 23
-          Width = 47
-          Height = 13
+          Width = 53
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'Required'
         end
         object Label19: TLabel
-          Left = 10
+          Left = 5
           Top = 52
-          Width = 45
-          Height = 13
+          Width = 52
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Received'
         end
@@ -1042,7 +1049,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 64
           Top = 19
           Width = 81
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnChange = CheckOK
           OnExit = edtTempDateExit
@@ -1095,14 +1102,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 64
           Top = 47
           Width = 81
-          Height = 21
+          Height = 25
           TabOrder = 3
           OnChange = CheckOK
           OnExit = edtTempDateExit
         end
       end
       object btnCustomer: TBitBtn
-        Left = 516
+        Left = 662
         Top = 6
         Width = 25
         Height = 25
@@ -1119,13 +1126,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ShowHint = True
         TabOrder = 1
         OnClick = btnCustomerClick
-        ExplicitLeft = 510
+        ExplicitLeft = 670
       end
       object dblkpRep: TDBLookupComboBox
-        Left = 89
+        Left = 96
         Top = 164
         Width = 248
-        Height = 21
+        Height = 25
         KeyField = 'Rep'
         ListField = 'Rep_Name'
         ListSource = dtmdlSalesOrder.dtsRep
@@ -1133,28 +1140,28 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         OnClick = CheckOK
       end
       object edtReference: TEdit
-        Left = 681
+        Left = 846
         Top = 8
         Width = 274
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 7
         OnChange = edtReferenceChange
-        ExplicitLeft = 675
+        ExplicitLeft = 854
       end
       object edtCustOrderNo: TEdit
-        Left = 681
+        Left = 846
         Top = 34
         Width = 274
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 8
         OnChange = edtCustOrderNoChange
-        ExplicitLeft = 675
+        ExplicitLeft = 854
       end
       object BitBtn3: TBitBtn
-        Left = 519
-        Top = 128
+        Left = 663
+        Top = 131
         Width = 25
         Height = 25
         Hint = 'Select Customer'
@@ -1170,10 +1177,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ShowHint = True
         TabOrder = 3
         OnClick = BitBtn3Click
-        ExplicitLeft = 513
+        ExplicitLeft = 671
       end
       object btnLUReps: TBitBtn
-        Left = 346
+        Left = 353
         Top = 162
         Width = 25
         Height = 25
@@ -1191,48 +1198,48 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         OnClick = btnLURepsClick
       end
       object edtContact: TEdit
-        Left = 89
-        Top = 130
-        Width = 418
-        Height = 21
+        Left = 96
+        Top = 131
+        Width = 553
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 2
         OnChange = edtContactChange
-        ExplicitWidth = 412
+        ExplicitWidth = 561
       end
       object edtDescription: TMemo
-        Left = 89
-        Top = 197
-        Width = 458
-        Height = 60
+        Left = 94
+        Top = 195
+        Width = 593
+        Height = 82
         Anchors = [akLeft, akTop, akRight, akBottom]
         MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 6
         OnChange = edtDescriptionChange
-        ExplicitWidth = 452
+        ExplicitWidth = 601
       end
       object chkbxMaterialRequired: TCheckBox
-        Left = 764
-        Top = 168
-        Width = 105
+        Left = 934
+        Top = 185
+        Width = 176
         Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Material Required'
         TabOrder = 11
         OnClick = chkbxMaterialRequiredClick
-        ExplicitLeft = 758
+        ExplicitLeft = 936
       end
       object rdgrpDateType: TRadioGroup
-        Left = 570
+        Left = 729
         Top = 61
-        Width = 185
-        Height = 77
+        Width = 198
+        Height = 90
         Anchors = [akTop, akRight]
         Caption = 'Date Type'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         Items.Strings = (
@@ -1243,10 +1250,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentFont = False
         TabOrder = 9
         OnClick = rdgrpDateTypeClick
-        ExplicitLeft = 564
+        ExplicitLeft = 737
       end
       object grpDates: TGroupBox
-        Left = 764
+        Left = 933
         Top = 61
         Width = 194
         Height = 77
@@ -1254,24 +1261,24 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Caption = 'Dates'
         ParentBackground = False
         TabOrder = 10
-        ExplicitLeft = 758
+        ExplicitLeft = 941
         DesignSize = (
           194
           77)
         object Label8: TLabel
-          Left = 13
+          Left = 5
           Top = 24
-          Width = 45
-          Height = 13
+          Width = 53
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'Template'
         end
         object Label10: TLabel
-          Left = 12
+          Left = 5
           Top = 53
-          Width = 34
-          Height = 13
+          Width = 35
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Fitting'
         end
@@ -1279,7 +1286,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 64
           Top = 21
           Width = 81
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnChange = CheckOK
           OnExit = edtTempDateExit
@@ -1310,7 +1317,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 64
           Top = 50
           Width = 81
-          Height = 21
+          Height = 25
           TabOrder = 2
           OnChange = CheckOK
           OnExit = edtTempDateExit
@@ -1339,15 +1346,15 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object rdgrpJobType: TRadioGroup
-        Left = 570
-        Top = 142
-        Width = 185
-        Height = 116
+        Left = 729
+        Top = 154
+        Width = 199
+        Height = 131
         Anchors = [akTop, akRight]
         Caption = 'Job Type'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ItemIndex = 0
@@ -1361,36 +1368,36 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentFont = False
         TabOrder = 13
         OnClick = rdgrpJobTypeClick
-        ExplicitLeft = 564
+        ExplicitLeft = 737
       end
       object pnlRevenueCentre: TPanel
-        Left = 376
-        Top = 155
-        Width = 170
-        Height = 41
+        Left = 383
+        Top = 157
+        Width = 340
+        Height = 38
         Anchors = [akLeft, akTop, akRight]
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 14
-        ExplicitWidth = 164
+        ExplicitWidth = 348
         DesignSize = (
-          170
-          41)
+          340
+          38)
         object Label59: TLabel
-          Left = 27
-          Top = 12
-          Width = 81
-          Height = 13
+          Left = 20
+          Top = 11
+          Width = 91
+          Height = 17
           Caption = 'Revenue Centre'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object SpeedButton2: TSpeedButton
-          Left = 145
+          Left = 315
           Top = 7
           Width = 23
           Height = 22
@@ -1424,43 +1431,43 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object dblkpRevenueCentre: TDBLookupComboBox
           Left = 116
           Top = 8
-          Width = 18
-          Height = 21
+          Width = 188
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Revenue_Centre'
           ListField = 'Revenue_Centre_Descr'
           TabOrder = 0
-          ExplicitWidth = 12
+          ExplicitWidth = 0
         end
       end
       object edtProject: TEdit
-        Left = 550
-        Top = 8
+        Left = 704
+        Top = 6
         Width = 21
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 15
         Visible = False
-        ExplicitLeft = 544
+        ExplicitLeft = 712
       end
     end
     object pcDetails: TPageControl
       Left = 0
-      Top = 305
-      Width = 1158
-      Height = 167
-      ActivePage = tbDocuments
+      Top = 327
+      Width = 1154
+      Height = 162
+      ActivePage = tbAssociateCharges
       Align = alClient
       TabOrder = 3
       ExplicitWidth = 1152
-      ExplicitHeight = 158
+      ExplicitHeight = 152
       object tbDetails: TTabSheet
         Caption = 'Details'
         object dbgLines: TStringGrid
           Left = 0
           Top = 0
           Width = 1150
-          Height = 139
+          Height = 131
           Align = alClient
           ColCount = 11
           DefaultColWidth = 40
@@ -1469,6 +1476,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           PopupMenu = pmnLines
           TabOrder = 0
           OnDblClick = dbgLinesDblClick
+          ExplicitHeight = 118
           ColWidths = (
             40
             89
@@ -1496,12 +1504,11 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 1144
           object Label44: TLabel
             Left = 2
             Top = 0
-            Width = 58
-            Height = 13
+            Width = 65
+            Height = 17
             Caption = 'Documents'
           end
         end
@@ -1509,7 +1516,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 1117
           Top = 17
           Width = 33
-          Height = 122
+          Height = 114
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -1519,8 +1526,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
-          ExplicitLeft = 1111
-          ExplicitHeight = 113
+          ExplicitHeight = 101
           object btnExcel: TToolButton
             Left = 0
             Top = 0
@@ -1528,13 +1534,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Caption = 'btnExcel'
             ImageIndex = 0
             ParentShowHint = False
-            Wrap = True
             ShowHint = True
             OnClick = btnWordClick
           end
           object btnWord: TToolButton
-            Left = 0
-            Top = 30
+            Left = 30
+            Top = 0
             Hint = 'Word'
             Caption = 'btnWord'
             ImageIndex = 1
@@ -1545,18 +1550,17 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           end
           object btnEmail: TToolButton
             Left = 0
-            Top = 60
+            Top = 30
             Hint = 'Email'
             Caption = 'btnEmail'
             ImageIndex = 2
             ParentShowHint = False
-            Wrap = True
             ShowHint = True
             OnClick = btnEmailClick
           end
           object btnAttach: TToolButton
-            Left = 0
-            Top = 90
+            Left = 30
+            Top = 30
             Hint = 'Attach Documents'
             Caption = 'btnAttach'
             ImageIndex = 3
@@ -1569,47 +1573,45 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 17
           Width = 1117
-          Height = 122
+          Height = 114
           Align = alClient
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 1111
-          ExplicitHeight = 113
+          ExplicitHeight = 101
           object pnlPlanDocument: TPanel
             Left = 0
-            Top = 81
+            Top = 73
             Width = 1117
             Height = 41
             Align = alBottom
             ParentBackground = False
             TabOrder = 0
-            ExplicitTop = 72
-            ExplicitWidth = 1111
+            ExplicitTop = 60
             DesignSize = (
-              1117
+              1113
               41)
             object Label32: TLabel
               Left = 8
               Top = 16
-              Width = 122
-              Height = 13
+              Width = 136
+              Height = 17
               Caption = 'Kitchen Plan Document:'
             end
             object edtPlansDocument: TEdit
               Left = 132
               Top = 13
-              Width = 411
-              Height = 21
+              Width = 391
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               ReadOnly = True
               TabOrder = 0
               OnChange = edtPlansDocumentChange
               OnDblClick = edtPlansDocumentDblClick
-              ExplicitWidth = 405
+              ExplicitWidth = 399
             end
             object Button5: TButton
-              Left = 550
+              Left = 530
               Top = 10
               Width = 75
               Height = 25
@@ -1617,10 +1619,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
               Caption = 'Browse'
               TabOrder = 1
               OnClick = Button5Click
-              ExplicitLeft = 544
+              ExplicitLeft = 538
             end
             object btnGenerateDocs: TButton
-              Left = 854
+              Left = 834
               Top = 8
               Width = 83
               Height = 25
@@ -1628,14 +1630,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
               Caption = 'Generate Docs'
               TabOrder = 2
               OnClick = btnGenerateDocsClick
-              ExplicitLeft = 848
+              ExplicitLeft = 842
             end
           end
           object stvDocuments: TShellTreeView
             Left = 0
             Top = 0
             Width = 185
-            Height = 81
+            Height = 72
             ObjectTypes = [otFolders]
             Root = 'C:\'
             ShellListView = slvDocuments
@@ -1649,13 +1651,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             TabOrder = 1
             OnDragDrop = stvDocumentsDragDrop
             OnDragOver = stvDocumentsDragOver
-            ExplicitHeight = 72
           end
           object slvDocuments: TShellListView
             Left = 185
             Top = 0
-            Width = 932
-            Height = 81
+            Width = 928
+            Height = 72
             ObjectTypes = [otFolders, otNonFolders]
             Root = 'C:\'
             ShellTreeView = stvDocuments
@@ -1667,6 +1668,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             OnMouseMove = stvDocumentsMouseMove
             TabOrder = 2
             ViewStyle = vsReport
+            ExplicitWidth = 936
+            ExplicitHeight = 73
           end
         end
       end
@@ -1683,54 +1686,58 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           ParentBackground = False
           TabOrder = 0
           DesignSize = (
-            1150
+            1146
             17)
           object lblApplianceDetails: TLabel
             Left = 0
             Top = 0
-            Width = 146
+            Width = 168
             Height = 17
             Align = alLeft
             Caption = 'Appliance Details (255 chars)'
-            ExplicitHeight = 13
+            ExplicitLeft = 1
           end
           object lblNotes: TLabel
-            Left = 486
-            Top = 0
-            Width = 30
-            Height = 13
+            Left = 463
+            Top = -1
+            Width = 35
+            Height = 17
             Anchors = [akTop, akRight]
             Caption = 'Notes'
-            ExplicitLeft = 492
+            ExplicitLeft = 467
           end
         end
         object edtApplianceDetails: TMemo
           Left = 0
           Top = 17
           Width = 449
-          Height = 122
+          Height = 113
           Align = alLeft
           MaxLength = 255
           TabOrder = 1
           OnChange = edtApplianceDetailsChange
+          ExplicitHeight = 101
         end
         object Panel1: TPanel
           Left = 449
           Top = 17
           Width = 16
-          Height = 122
+          Height = 113
           Align = alLeft
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 2
+          ExplicitHeight = 101
         end
         object memNotes: TMemo
           Left = 465
           Top = 17
-          Width = 685
-          Height = 122
+          Width = 681
+          Height = 113
           Align = alClient
           TabOrder = 3
+          ExplicitWidth = 685
+          ExplicitHeight = 101
         end
       end
       object tbContactDetails: TTabSheet
@@ -1740,40 +1747,42 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 1150
-          Height = 139
+          Height = 131
           Align = alClient
           BevelInner = bvNone
           BevelOuter = bvNone
           BorderStyle = bsNone
           TabOrder = 0
+          ExplicitHeight = 118
           object pnlContactInfo: TPanel
             Left = 0
             Top = 0
             Width = 473
-            Height = 139
+            Height = 131
             Align = alLeft
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 0
+            ExplicitHeight = 118
             object Label26: TLabel
               Left = 6
-              Top = 15
-              Width = 56
-              Height = 13
+              Top = 8
+              Width = 63
+              Height = 17
               Caption = 'Telephone:'
             end
             object Label25: TLabel
               Left = 6
               Top = 40
-              Width = 30
-              Height = 13
+              Width = 34
+              Height = 17
               Caption = 'Email:'
             end
             object edtTelephone: TEdit
               Left = 88
-              Top = 11
+              Top = 5
               Width = 266
-              Height = 21
+              Height = 25
               TabOrder = 0
               OnChange = edtContactChange
             end
@@ -1781,7 +1790,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
               Left = 88
               Top = 36
               Width = 266
-              Height = 21
+              Height = 25
               TabOrder = 1
               OnChange = edtContactChange
             end
@@ -1804,15 +1813,16 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 17
           Width = 305
-          Height = 122
+          Height = 114
           Align = alLeft
           ParentBackground = False
           TabOrder = 1
+          ExplicitHeight = 101
           object sgEvents: TStringGrid
             Left = 1
             Top = 1
             Width = 303
-            Height = 120
+            Height = 112
             Align = alClient
             ColCount = 3
             DefaultColWidth = 40
@@ -1821,6 +1831,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             TabOrder = 0
             OnClick = sgEventsClick
             OnDblClick = sgEventsDblClick
+            ExplicitHeight = 99
             ColWidths = (
               40
               107
@@ -1831,10 +1842,11 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 305
           Top = 17
           Width = 404
-          Height = 122
+          Height = 114
           Align = alClient
           ParentBackground = False
           TabOrder = 2
+          ExplicitHeight = 101
           object btnAddEvents: TBitBtn
             Left = 8
             Top = 8
@@ -1869,19 +1881,21 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 709
           Top = 17
           Width = 441
-          Height = 122
+          Height = 114
           Align = alRight
           ParentBackground = False
           TabOrder = 3
+          ExplicitHeight = 101
           object memEventNotes: TMemo
             Left = 1
             Top = 1
             Width = 439
-            Height = 120
+            Height = 112
             Align = alClient
             Color = clBtnFace
             ReadOnly = True
             TabOrder = 0
+            ExplicitHeight = 99
           end
         end
       end
@@ -1892,10 +1906,11 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 1057
           Top = 0
           Width = 93
-          Height = 139
+          Height = 131
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 118
           object btnJobChange: TBitBtn
             Left = 10
             Top = 8
@@ -1961,12 +1976,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 1057
-          Height = 139
+          Height = 131
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2028,12 +2043,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 1057
           Top = 0
           Width = 93
-          Height = 139
+          Height = 131
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 118
           object btnRemedialChange: TBitBtn
-            Left = 10
+            Left = 6
             Top = 40
             Width = 75
             Height = 25
@@ -2043,7 +2059,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             OnClick = btnRemedialChangeClick
           end
           object btnRemedialDelete: TBitBtn
-            Left = 10
+            Left = 6
             Top = 72
             Width = 75
             Height = 25
@@ -2062,7 +2078,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             OnClick = btnRemedialAddClick
           end
           object btnRemedialPrint: TBitBtn
-            Left = 10
+            Left = 6
             Top = 104
             Width = 75
             Height = 25
@@ -2086,12 +2102,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 1057
-          Height = 139
+          Height = 131
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2180,10 +2196,11 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 1057
           Top = 0
           Width = 93
-          Height = 116
+          Height = 108
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 95
           object btnPOChange: TBitBtn
             Left = 10
             Top = 40
@@ -2238,13 +2255,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 1057
-          Height = 116
+          Height = 108
           Align = alClient
           DataSource = dtmdlSalesOrder.dtsSOPurchases
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2309,12 +2326,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             item
               Expanded = False
               FieldName = 'Quantity'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Total_Cost'
               Title.Caption = 'Total'
+              Width = 64
               Visible = True
             end
             item
@@ -2333,13 +2352,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
         object pnlPurchasesFoot: TPanel
           Left = 0
-          Top = 116
+          Top = 108
           Width = 1150
           Height = 23
           Align = alBottom
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 2
+          ExplicitTop = 95
           object chkbxShowInactive: TCheckBox
             Left = 8
             Top = 4
@@ -2363,10 +2383,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           ParentBackground = False
           TabOrder = 0
           object Label36: TLabel
-            Left = 13
-            Top = 6
-            Width = 70
-            Height = 13
+            Left = 6
+            Top = 4
+            Width = 80
+            Height = 17
             Caption = 'Sales Invoices'
           end
         end
@@ -2374,13 +2394,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 25
           Width = 1065
-          Height = 86
+          Height = 78
           Align = alClient
           DataSource = dtmdlSalesOrder.dtsSalesInvoices
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2438,20 +2458,21 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
         object Panel19: TPanel
           Left = 0
-          Top = 111
+          Top = 103
           Width = 1150
           Height = 28
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
+          ExplicitTop = 90
           DesignSize = (
-            1150
+            1146
             28)
           object Label42: TLabel
             Left = 430
             Top = 8
-            Width = 99
-            Height = 13
+            Width = 114
+            Height = 17
             Anchors = [akLeft, akBottom]
             Caption = 'Total Invoiced Sales'
             Visible = False
@@ -2470,13 +2491,15 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           end
         end
         object Panel7: TPanel
-          Left = 1065
+          Left = 1061
           Top = 25
           Width = 85
-          Height = 86
+          Height = 77
           Align = alRight
           ParentBackground = False
           TabOrder = 3
+          ExplicitLeft = 1065
+          ExplicitHeight = 65
           object btnViewSI: TBitBtn
             Left = 8
             Top = 8
@@ -2506,13 +2529,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 1150
-          Height = 139
+          Height = 131
           Align = alClient
           DataSource = dtmdlSalesOrder.dtsGetLinkedQuotes
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2580,24 +2603,28 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
               Expanded = False
               FieldName = 'Installation_price'
               Title.Caption = 'Install'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Survey_price'
               Title.Caption = 'Survey'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Delivery_Price'
               Title.Caption = 'Delivery'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Total_Price'
               Title.Caption = 'Total'
+              Width = 64
               Visible = True
             end
             item
@@ -2639,10 +2666,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 1057
           Top = 0
           Width = 93
-          Height = 139
+          Height = 131
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 1051
+          ExplicitHeight = 120
           object btnChargesChange: TBitBtn
             Left = 10
             Top = 40
@@ -2687,7 +2716,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 1057
-          Height = 139
+          Height = 131
           Align = alClient
           ColCount = 17
           DefaultColWidth = 40
@@ -2695,6 +2724,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           TabOrder = 1
           OnDblClick = dbgAssociateChargesDblClick
+          ExplicitWidth = 1051
+          ExplicitHeight = 120
           ColWidths = (
             40
             184
@@ -2719,81 +2750,81 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 1158
+      Width = 1154
       Height = 36
       Align = alTop
       ParentBackground = False
       TabOrder = 4
       ExplicitWidth = 1152
       DesignSize = (
-        1158
+        1154
         36)
       object Label1: TLabel
         Left = 16
         Top = 12
-        Width = 58
-        Height = 13
+        Width = 70
+        Height = 17
         Caption = 'Sales Order'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label2: TLabel
-        Left = 200
-        Top = 12
-        Width = 61
-        Height = 13
+        Left = 208
+        Top = 10
+        Width = 73
+        Height = 17
         Caption = 'Date Raised'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 719
-        Top = 12
-        Width = 73
-        Height = 13
+        Left = 886
+        Top = 9
+        Width = 88
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Office Contact'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 867
+        ExplicitLeft = 900
       end
       object edtNumber: TEdit
-        Left = 88
-        Top = 8
+        Left = 96
+        Top = 6
         Width = 97
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 815
-        Top = 8
+        Left = 982
+        Top = 5
         Width = 145
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Operator'
         ListField = 'Operator_Name'
         ListSource = dtmdlSalesOrder.dtsOperator
         TabOrder = 2
-        ExplicitLeft = 809
+        ExplicitLeft = 984
       end
       object dtpckDate: TDateTimePicker
-        Left = 280
-        Top = 8
-        Width = 89
-        Height = 21
+        Left = 288
+        Top = 6
+        Width = 105
+        Height = 25
         Date = 37882.000000000000000000
         Time = 37882.000000000000000000
         TabOrder = 1
@@ -2802,7 +2833,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   end
   object pmnDummy: TPopupMenu
     Left = 580
-    Top = 250
+    Top = 186
   end
   object pmnLines: TPopupMenu
     OnPopup = pmnLinesPopup
@@ -3155,8 +3186,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Top = 184
   end
   object svDlgOfficeDoc: TSaveDialog
-    Left = 353
-    Top = 102
+    Left = 425
+    Top = 96
   end
   object pmnPurchases: TPopupMenu
     OnPopup = pmnPurchasesPopup
@@ -3216,8 +3247,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   end
   object opndlgPlans: TOpenDialog
     Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
-    Left = 828
-    Top = 448
+    Left = 876
+    Top = 376
   end
   object pmnuRemedials: TPopupMenu
     OnPopup = pmnuRemedialsPopup

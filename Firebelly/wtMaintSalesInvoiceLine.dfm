@@ -8,12 +8,12 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 178
@@ -22,6 +22,8 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 169
+    ExplicitWidth = 512
     DesignSize = (
       518
       41)
@@ -39,7 +41,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       ParentFont = False
     end
     object btnOK: TBitBtn
-      Left = 338
+      Left = 332
       Top = 8
       Width = 75
       Height = 25
@@ -49,9 +51,10 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 326
     end
     object BitBtn2: TBitBtn
-      Left = 426
+      Left = 431
       Top = 8
       Width = 75
       Height = 25
@@ -69,15 +72,16 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 512
     object lblOrderType: TLabel
       Left = 8
       Top = 8
-      Width = 72
-      Height = 15
+      Width = 82
+      Height = 16
       Caption = 'lblOrderType'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -86,20 +90,20 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     object lblOrderNumber: TLabel
       Left = 96
       Top = 8
-      Width = 84
-      Height = 13
+      Width = 97
+      Height = 17
       Caption = 'lblOrderNumber'
       Visible = False
     end
     object Label1: TLabel
       Left = 8
       Top = 32
-      Width = 68
-      Height = 15
+      Width = 75
+      Height = 16
       Caption = 'Description:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -108,7 +112,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Left = 96
       Top = 29
       Width = 393
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtDescriptionChange
     end
@@ -121,65 +125,66 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 56
     object Label2: TLabel
       Left = 5
-      Top = 16
-      Width = 44
-      Height = 13
+      Top = 12
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 5
-      Top = 43
-      Width = 24
-      Height = 13
+      Top = 39
+      Width = 28
+      Height = 17
       Caption = 'Price'
     end
     object Label16: TLabel
       Left = 5
-      Top = 97
-      Width = 43
-      Height = 13
+      Top = 92
+      Width = 49
+      Height = 17
       Caption = 'Nominal'
     end
     object Label5: TLabel
-      Left = 301
-      Top = 43
-      Width = 30
-      Height = 13
+      Left = 289
+      Top = 39
+      Width = 36
+      Height = 17
       Caption = 'VAT %'
     end
     object lblCreditType: TLabel
-      Left = 296
-      Top = 16
-      Width = 57
-      Height = 13
+      Left = 289
+      Top = 12
+      Width = 66
+      Height = 17
       Caption = 'Credit Type'
     end
     object lblPacks: TLabel
-      Left = 176
-      Top = 16
-      Width = 46
-      Height = 13
+      Left = 162
+      Top = 12
+      Width = 52
+      Height = 17
       Caption = 'packs of:'
     end
     object lblVatValue: TLabel
-      Left = 303
-      Top = 70
-      Width = 47
-      Height = 13
+      Left = 289
+      Top = 65
+      Width = 53
+      Height = 17
       Caption = 'Vat Value'
     end
     object lblCost: TLabel
       Left = 5
-      Top = 70
-      Width = 23
-      Height = 13
+      Top = 65
+      Width = 26
+      Height = 17
       Caption = 'Cost'
     end
     object memQuantity: TMemo
       Left = 57
-      Top = 8
+      Top = 9
       Width = 97
       Height = 23
       TabOrder = 0
@@ -191,7 +196,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     end
     object memPrice: TMemo
       Left = 57
-      Top = 35
+      Top = 36
       Width = 97
       Height = 23
       Alignment = taRightJustify
@@ -205,8 +210,8 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     object dblkpVat: TDBLookupComboBox
       Left = 361
       Top = 35
-      Width = 144
-      Height = 21
+      Width = 145
+      Height = 25
       KeyField = 'Vat'
       ListField = 'Description'
       ListSource = dsVAT
@@ -215,8 +220,8 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     object edtNominal: TEdit
       Left = 57
       Top = 89
-      Width = 96
-      Height = 21
+      Width = 97
+      Height = 25
       TabOrder = 2
       OnChange = edtNominalChange
     end
@@ -224,7 +229,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Left = 361
       Top = 8
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 4
       OnChange = cmbCreditTypeChange
@@ -266,8 +271,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       'select * from VAT'
       'where (inactive  = '#39'N'#39' or inactive is NULL) OR Vat = :Vat'
       'Order By Vat_Rate')
-    Left = 424
-    Top = 40
+    Left = 232
     ParamData = <
       item
         Name = 'Vat'
@@ -300,7 +304,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
   end
   object dsVAT: TDataSource
     DataSet = qryVAT
-    Left = 496
-    Top = 40
+    Left = 416
   end
 end
