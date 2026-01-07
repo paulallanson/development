@@ -14,10 +14,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
   OnCreate = FormCreate
   TextHeight = 13
   object qrpJobSheet: TQuickRep
-    Left = 240
-    Top = -2254
+    Left = 192
+    Top = -2400
     Width = 992
-    Height = 2839
+    Height = 3089
     ShowingPreview = False
     BeforePrint = qrpJobSheetBeforePrint
     DataSet = qryReport
@@ -3696,19 +3696,19 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       object gtQRLabel32: TQRLabel
         Left = 470
         Top = 309
-        Width = 122
+        Width = 118
         Height = 24
         Size.Values = (
           50.800000000000000000
           994.833333333333300000
           654.050000000000000000
-          258.233333333333300000)
+          249.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        Caption = 'Your Reference:'
+        Caption = 'Your Order Ref:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -3932,6 +3932,69 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
+        FontSize = 10
+      end
+      object QRLabel8: TQRLabel
+        Left = 470
+        Top = 260
+        Width = 82
+        Height = 24
+        Size.Values = (
+          50.800000000000000000
+          994.833333333333300000
+          550.333333333333300000
+          173.566666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Reference:'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRDBText1: TQRDBText
+        Left = 558
+        Top = 260
+        Width = 293
+        Height = 24
+        Size.Values = (
+          50.800000000000000000
+          1181.100000000000000000
+          550.333333333333300000
+          620.183333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = True
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Order_Reference'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end

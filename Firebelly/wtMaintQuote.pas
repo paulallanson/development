@@ -1575,6 +1575,7 @@ begin
             end;
         end;
 
+(* Don't bother checking upstands - According to Liam (Aktiv)
       iUpstandCount := 0;
       for iElements := 0 to pred(Quote.Upstands.count) do
         begin
@@ -1588,8 +1589,10 @@ begin
                 end;
             end;
         end;
+*)
 
-      bAllSlabsExists := (iElementCount = Quote.Elements.count) AND (iUpstandCount = Quote.Upstands.count);
+//      bAllSlabsExists := (iElementCount = Quote.Elements.count) AND (iUpstandCount = Quote.Upstands.count);
+      bAllSlabsExists := (iElementCount = Quote.Elements.count);
 
       if bAllSlabsExists = false then
         begin

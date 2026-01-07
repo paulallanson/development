@@ -186,6 +186,8 @@ type
     QRLabel3: TQRLabel;
     QRLabel6: TQRLabel;
     QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRDBText1: TQRDBText;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;
