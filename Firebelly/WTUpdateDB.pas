@@ -22,6 +22,11 @@ type
     sql240Q7: TFDQuery;
     sql240Q8: TFDQuery;
     sql240Q9: TFDQuery;
+    sql242Q1: TFDQuery;
+    sql242Q2: TFDQuery;
+    sql242Q3: TFDQuery;
+    sql242Q4: TFDQuery;
+    sql242Q5: TFDQuery;
   private
     QryFails :boolean;
     sDb_Version :String;
@@ -66,6 +71,12 @@ begin
   if (sDb_Version = '23.2') then
     begin
       QryFails := RunBatch('sql240', 9)
+    end;
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '24.0') then
+    begin
+      QryFails := RunBatch('sql242', 5)
     end;
 end;
 

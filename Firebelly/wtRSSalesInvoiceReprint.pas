@@ -585,7 +585,7 @@ begin
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
                   printFileName := GetAttachmentPrefix + EmailArray[irow,1];
-                  TPrinterTools.New.PrintToAttachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
+                  TPrinterTools.New.PrintToAttachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType,false);
 
                   if iInvoiceCount = 1 then
                     begin
@@ -653,7 +653,7 @@ begin
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
                   printFileName := GetAttachmentPrefix + EmailArray[irow,1];
-                  TPrinterTools.New.PrintToattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
+                  TPrinterTools.New.PrintToattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType, false);
 
                   sSubject := sSubject + ', ' + EmailArray[irow,1];
 

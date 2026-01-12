@@ -3,49 +3,49 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
   Top = 84
   BorderStyle = bsDialog
   Caption = 'Quote Search'
-  ClientHeight = 418
-  ClientWidth = 261
+  ClientHeight = 438
+  ClientWidth = 274
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    261
-    418)
-  TextHeight = 13
+    274
+    438)
+  TextHeight = 17
   object Label1: TLabel
     Left = 10
     Top = 36
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 10
     Top = 88
-    Width = 51
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Reference'
   end
   object lblMaterial: TLabel
     Left = 10
     Top = 116
-    Width = 42
-    Height = 13
+    Width = 48
+    Height = 17
     Caption = 'Material'
   end
   object Label3: TLabel
-    Left = 88
+    Left = 95
     Top = 8
-    Width = 123
-    Height = 13
+    Width = 143
+    Height = 17
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -53,83 +53,83 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
   object Label4: TLabel
     Left = 10
     Top = 144
-    Width = 32
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label5: TLabel
     Left = 10
     Top = 171
-    Width = 32
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Quote'
   end
   object Label6: TLabel
     Left = 10
     Top = 295
-    Width = 29
-    Height = 13
+    Width = 31
+    Height = 17
     Caption = 'Show'
   end
   object Label7: TLabel
-    Left = 186
+    Left = 193
     Top = 295
-    Width = 38
-    Height = 13
+    Width = 45
+    Height = 17
     Caption = 'records'
   end
   object Label8: TLabel
     Left = 10
     Top = 64
-    Width = 35
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'Project'
   end
   object Label9: TLabel
     Left = 10
     Top = 265
-    Width = 63
-    Height = 13
+    Width = 73
+    Height = 17
     Caption = 'Expires after'
   end
   object Label10: TLabel
     Left = 10
     Top = 234
-    Width = 67
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'Quotes Since'
   end
   object Label11: TLabel
     Left = 10
     Top = 202
-    Width = 52
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Show Last'
   end
   object Label12: TLabel
-    Left = 146
+    Left = 153
     Top = 202
-    Width = 79
-    Height = 13
+    Width = 88
+    Height = 17
     Caption = 'Months quotes'
   end
   object edtDescription: TEdit
-    Left = 88
+    Left = 95
     Top = 32
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtReference: TEdit
-    Left = 88
+    Left = 95
     Top = 83
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object btnSearch: TButton
     Left = 8
-    Top = 384
+    Top = 404
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -137,44 +137,47 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
     Default = True
     TabOrder = 7
     OnClick = btnSearchClick
+    ExplicitTop = 375
   end
   object edtMaterial: TEdit
-    Left = 88
+    Left = 95
     Top = 111
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtStatus: TEdit
-    Left = 88
+    Left = 95
     Top = 139
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object ClearButton: TButton
     Left = 170
-    Top = 384
+    Top = 404
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 8
     OnClick = ClearButtonClick
+    ExplicitTop = 375
   end
   object chkbxShowLive: TCheckBox
     Left = 8
-    Top = 324
+    Top = 344
     Width = 199
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY live Quotes'
     TabOrder = 5
+    ExplicitTop = 315
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
     Left = 9
-    Top = 347
+    Top = 367
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -182,41 +185,42 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
     Checked = True
     State = cbChecked
     TabOrder = 6
+    ExplicitTop = 338
   end
   object edtQuoteReference: TEdit
-    Left = 88
+    Left = 95
     Top = 167
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object spnedtRecords: TSpinEdit
-    Left = 88
+    Left = 95
     Top = 290
     Width = 73
-    Height = 22
+    Height = 27
     MaxValue = 0
     MinValue = 0
     TabOrder = 9
     Value = 0
   end
   object edtProjectReference: TEdit
-    Left = 88
+    Left = 95
     Top = 59
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 10
   end
   object edtExpiryDate: TEdit
-    Left = 88
+    Left = 95
     Top = 261
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 11
     OnExit = edtExpiryDateExit
   end
   object btnExpiryDate: TBitBtn
-    Left = 184
+    Left = 191
     Top = 259
     Width = 25
     Height = 25
@@ -238,15 +242,15 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
     OnClick = btnExpiryDateClick
   end
   object edtQuoteDate: TEdit
-    Left = 88
+    Left = 95
     Top = 229
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 13
     OnExit = edtExpiryDateExit
   end
   object btnQuoteDate: TBitBtn
-    Left = 184
+    Left = 191
     Top = 228
     Width = 25
     Height = 25
@@ -268,10 +272,10 @@ object frmWTQuoteSearch: TfrmWTQuoteSearch
     OnClick = btnQuoteDateClick
   end
   object spnedtMonths: TSpinEdit
-    Left = 88
+    Left = 95
     Top = 197
     Width = 49
-    Height = 22
+    Height = 27
     MaxValue = 0
     MinValue = 0
     TabOrder = 15

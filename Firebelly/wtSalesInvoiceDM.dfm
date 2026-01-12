@@ -696,7 +696,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     end
     object qrySIHeaderGridCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
-      Size = 50
+      Size = 100
     end
     object qrySIHeaderGridStatus_Description: TWideStringField
       FieldName = 'Status_Description'

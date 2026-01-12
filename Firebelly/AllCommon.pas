@@ -1353,6 +1353,11 @@ end;
 
 procedure FileCopy(const SourceFileName, DestinationFileName: string);
 begin
+  try
+    TFile.Delete(DestinationFileName);
+  except
+
+  end;
   TFile.Copy(SourceFileName, DestinationFileName);
 end;
 

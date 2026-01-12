@@ -3115,14 +3115,20 @@ var
   I: Integer;
   SourceFileName, DestFileName, DocDir: string;
 begin
-  {Find a document}
-  DocDir := GetFilesPath;
+  slvDocuments.AutoRefresh := true;
 
-  CopyDocuments(DocOpenDialog, DocDir,
-    procedure
-    begin
-      ShowDocuments(Sorder.dbKey);
-    end);
+  try
+    {Find a document}
+    DocDir := GetFilesPath;
+
+    CopyDocuments(DocOpenDialog, DocDir,
+      procedure
+      begin
+        ShowDocuments(Sorder.dbKey);
+      end);
+  finally
+    slvDocuments.AutoRefresh := false;
+  end;
 end;
 
 procedure TfrmWTMaintSalesOrder.btnEmailClick(Sender: TObject);
@@ -5585,15 +5591,21 @@ var
 begin
   if (messagedlg('Confirm generating order documents', mtConfirmation, [mbYes, mbNo], 0) = mrYes) then
     begin
-      for icount := 0 to pred(SOrder.Lines.count) do
-        begin
-          if SOrder.Lines[icount].Quote > 0 then
-            CreateQuoteDocument(SOrder.dbKey, SOrder.Lines[icount].Quote);
-          if SOrder.RemedialID <> 0 then
-            CreateRemedialDocument(SOrder.dbKey, SOrder.RemedialID)
-        end;
-      MoveSiteDocuments(SOrder.dbKey);
-      Messagedlg('Order documents created within the file structure', mtConfirmation,[mbOk], 0);
+      slvDocuments.AutoRefresh := true;
+
+      try
+        for icount := 0 to pred(SOrder.Lines.count) do
+          begin
+            if SOrder.Lines[icount].Quote > 0 then
+              CreateQuoteDocument(SOrder.dbKey, SOrder.Lines[icount].Quote);
+            if SOrder.RemedialID <> 0 then
+              CreateRemedialDocument(SOrder.dbKey, SOrder.RemedialID)
+          end;
+        MoveSiteDocuments(SOrder.dbKey);
+        Messagedlg('Order documents created within the file structure', mtConfirmation,[mbOk], 0);
+      finally
+        slvDocuments.AutoRefresh := false;
+      end;
     end;
 end;
 
@@ -5659,12 +5671,18 @@ end;
 procedure TfrmWTMaintSalesOrder.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  var TargetPath := GetFilesPath;
-  DropComboTarget1.SaveDroppedFiles(TargetPath,
-    procedure
-    begin
-      ShowDocuments(SOrder.dbKey);
-    end);
+  slvDocuments.AutoRefresh := true;
+
+  try
+    var TargetPath := GetFilesPath;
+    DropComboTarget1.SaveDroppedFiles(TargetPath,
+      procedure
+      begin
+        ShowDocuments(SOrder.dbKey);
+      end);
+  finally
+    slvDocuments.AutoRefresh := false;
+  end;
 end;
 
 procedure TfrmWTMaintSalesOrder.btnChargesAddClick(Sender: TObject);

@@ -1405,8 +1405,14 @@ end;
 procedure TfrmWTMaintJob.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  var TargetPath := GetFilesPath;
-  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
+  slvDocuments.AutoRefresh := true;
+
+  try
+    var TargetPath := GetFilesPath;
+    DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
+  finally
+    slvDocuments.AutoRefresh := false;
+  end;
 end;
 
 procedure TfrmWTMaintJob.EnableAddButtons;
@@ -2684,14 +2690,20 @@ var
   I: Integer;
   SourceFileName, DestFileName, DocDir: string;
 begin
-  {Find a document}
-  DocDir := GetFilesPath;
+  slvDocuments.AutoRefresh := true;
 
-  CopyDocuments(DocOpenDialog, DocDir,
-    procedure
-    begin
-      ShowDocuments;
-    end);
+  try
+    {Find a document}
+    DocDir := GetFilesPath;
+
+    CopyDocuments(DocOpenDialog, DocDir,
+      procedure
+      begin
+        ShowDocuments;
+      end);
+  finally
+    slvDocuments.AutoRefresh := false;
+  end;
 end;
 
 procedure TfrmWTMaintJob.btnEmailClick(Sender: TObject);

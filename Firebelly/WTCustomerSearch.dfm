@@ -8,44 +8,44 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
     263
     343)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 10
     Top = 36
-    Width = 30
-    Height = 13
+    Width = 34
+    Height = 17
     Caption = 'Street'
   end
   object Label2: TLabel
     Left = 10
     Top = 63
-    Width = 32
-    Height = 13
+    Width = 37
+    Height = 17
     Caption = 'Locale'
   end
   object lblMaterial: TLabel
     Left = 10
     Top = 90
-    Width = 28
-    Height = 13
+    Width = 30
+    Height = 17
     Caption = 'Town'
   end
   object Label3: TLabel
-    Left = 85
+    Left = 97
     Top = 8
-    Width = 123
-    Height = 13
+    Width = 143
+    Height = 17
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -53,50 +53,50 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
   object Label4: TLabel
     Left = 10
     Top = 118
-    Width = 47
-    Height = 13
+    Width = 54
+    Height = 17
     Caption = 'Postcode'
   end
   object Label5: TLabel
     Left = 10
     Top = 145
-    Width = 37
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'County'
   end
   object Label6: TLabel
     Left = 10
     Top = 172
-    Width = 33
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Phone'
   end
   object Label7: TLabel
     Left = 10
     Top = 200
-    Width = 23
-    Height = 13
+    Width = 27
+    Height = 17
     Caption = 'Type'
   end
   object Label8: TLabel
     Left = 10
     Top = 229
-    Width = 69
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'Created since'
   end
   object edtStreet: TEdit
-    Left = 85
+    Left = 97
     Top = 32
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtlocale: TEdit
-    Left = 85
+    Left = 97
     Top = 59
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object btnSearch: TButton
@@ -109,19 +109,20 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     Default = True
     TabOrder = 10
     OnClick = btnSearchClick
+    ExplicitTop = 294
   end
   object edtTown: TEdit
-    Left = 85
+    Left = 97
     Top = 86
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtPostcode: TEdit
-    Left = 85
+    Left = 97
     Top = 114
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object ClearButton: TButton
@@ -136,36 +137,36 @@ object frmWTCustomerSearch: TfrmWTCustomerSearch
     ExplicitTop = 294
   end
   object edtCounty: TEdit
-    Left = 85
+    Left = 97
     Top = 141
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object edtPhone: TEdit
-    Left = 85
+    Left = 97
     Top = 168
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtType: TEdit
-    Left = 85
+    Left = 97
     Top = 196
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtDate: TEdit
-    Left = 85
+    Left = 97
     Top = 225
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 7
     OnExit = edtDateExit
   end
   object btnDate: TBitBtn
-    Left = 181
+    Left = 193
     Top = 223
     Width = 25
     Height = 25
