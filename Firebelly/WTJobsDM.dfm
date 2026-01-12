@@ -199,7 +199,7 @@ object dtmdlJob: TdtmdlJob
     object qryAllJobsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Origin = 'WT.Job.Customer_Name'
-      Size = 50
+      Size = 100
     end
     object qryAllJobsMaterial_Description: TWideStringField
       FieldName = 'Material_Description'

@@ -129,4 +129,44 @@ object dtmdlUpdateDB: TdtmdlUpdateDB
     Left = 749
     Top = 8
   end
+  object sql242Q1: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Quote ALTER COLUMN'
+      '         Customer_Name nvarchar(100)  NOT NULL')
+    Left = 45
+    Top = 80
+  end
+  object sql242Q2: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Job ALTER COLUMN'
+      '         Customer_Name nvarchar(100)  NOT NULL')
+    Left = 117
+    Top = 80
+  end
+  object sql242Q3: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Order ALTER COLUMN'
+      '         Customer_Name nvarchar(100)  NOT NULL')
+    Left = 197
+    Top = 80
+  end
+  object sql242Q4: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'ALTER TABLE Sales_Invoice ALTER COLUMN'
+      '         Customer_Name nvarchar(100)  NOT NULL')
+    Left = 277
+    Top = 80
+  end
+  object sql242Q5: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'Update Company'
+      'set Database_Version = '#39'24.2'#39)
+    Left = 357
+    Top = 80
+  end
 end

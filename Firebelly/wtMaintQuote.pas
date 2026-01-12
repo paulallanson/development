@@ -3932,18 +3932,24 @@ var
   I: Integer;
   SourceFileName, DestFileName, DocDir: string;
 begin
-  DocDir := dtmdlWorktops.GetCompanyQuoteDirectory;
-  DocDir := IncludeTrailingPathDelimiter(DocDir) + IntToStr(Quote.dbKey);
+  slvDocuments.AutoRefresh := true;
 
-  if stvDocuments.TopItem.Text <> stvDocuments.Selected.Text then
-    DocDir := IncludeTrailingPathDelimiter(DocDir) + stvDocuments.Selected.Text;
+  try
+    DocDir := dtmdlWorktops.GetCompanyQuoteDirectory;
+    DocDir := IncludeTrailingPathDelimiter(DocDir) + IntToStr(Quote.dbKey);
 
-  {Find a document}
-  CopyDocuments(DocOpenDialog, DocDir,
-    procedure
-    begin
-      ShowDocuments(Quote.dbKey);
-    end);
+    if stvDocuments.TopItem.Text <> stvDocuments.Selected.Text then
+      DocDir := IncludeTrailingPathDelimiter(DocDir) + stvDocuments.Selected.Text;
+
+    {Find a document}
+    CopyDocuments(DocOpenDialog, DocDir,
+      procedure
+      begin
+        ShowDocuments(Quote.dbKey);
+      end);
+  finally
+    slvDocuments.AutoRefresh := false;
+  end;
 end;
 
 procedure TfrmWTMaintQuote.FormResize(Sender: TObject);
@@ -4246,12 +4252,18 @@ end;
 procedure TfrmWTMaintQuote.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  var TargetPath := GetFilesPath;
-  DropComboTarget1.SaveDroppedFiles(TargetPath,
-    procedure
-    begin
-      ShowDocuments(Quote.dbKey);
-    end);
+  slvDocuments.AutoRefresh := true;
+
+  try
+    var TargetPath := GetFilesPath;
+    DropComboTarget1.SaveDroppedFiles(TargetPath,
+      procedure
+      begin
+        ShowDocuments(Quote.dbKey);
+      end);
+  finally
+    slvDocuments.AutoRefresh := false;
+  end;
 end;
 
 procedure TfrmWTMaintQuote.btnExpiryDateClick(Sender: TObject);

@@ -146,7 +146,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     object qryAllSalesCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
       Origin = 'Customer_Name'
-      Size = 50
+      Size = 100
     end
     object qryAllSalesInactive_Reason: TIntegerField
       FieldName = 'Inactive_Reason'

@@ -111,7 +111,7 @@ object dtmdlQuote: TdtmdlQuote
     end
     object qryAllQuotesCustomer_name: TWideStringField
       FieldName = 'Customer_name'
-      Size = 50
+      Size = 100
     end
     object qryAllQuotesContact_Name: TWideStringField
       FieldName = 'Contact_Name'
