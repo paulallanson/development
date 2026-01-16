@@ -445,7 +445,7 @@ begin
   stsbrStatus.Panels[0].Text := TempUser;
 
   SWVersion := '24.2.';
-  SWSubVersion := '26.01.09a';
+  SWSubVersion := '26.01.14b';
 
   IniFile := TIniFile.create(ChangeFileExt(Application.ExeName, '.INI' ) );
   try

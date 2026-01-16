@@ -3,8 +3,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   Top = 139
   BorderStyle = bsDialog
   Caption = 'Fitting Sheet Print'
-  ClientHeight = 465
-  ClientWidth = 522
+  ClientHeight = 456
+  ClientWidth = 516
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,17 +28,16 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 385
-    Width = 522
+    Top = 376
+    Width = 516
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
     ExplicitTop = 362
-    ExplicitWidth = 516
     DesignSize = (
-      522
+      516
       80)
     object btnPrint: TButton
       Left = 8
@@ -95,14 +94,13 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 158
-    Width = 522
+    Width = 516
     Height = 63
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
     ExplicitTop = 138
-    ExplicitWidth = 516
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -127,11 +125,12 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 522
+    Width = 516
     Height = 158
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 522
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -181,13 +180,12 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 221
-    Width = 522
-    Height = 164
+    Width = 516
+    Height = 155
     Align = alClient
     ParentBackground = False
     TabOrder = 4
     ExplicitTop = 201
-    ExplicitWidth = 516
     ExplicitHeight = 161
     object pcDocumentDetails: TPageControl
       Left = 1
