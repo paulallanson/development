@@ -14,8 +14,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 112
-    Top = -416
+    Left = 128
+    Top = -56
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -180,13 +180,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         VertAdjust = 0
       end
       object qrlblSOCaption: TQRLabel
-        Left = 373
+        Left = 357
         Top = -9
         Width = 545
         Height = 54
         Size.Values = (
           114.300000000000000000
-          789.516666666666700000
+          755.650000000000000000
           -19.050000000000000000
           1153.583333333333000000)
         XLColumn = 0
@@ -567,16 +567,16 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         FontSize = 8
       end
       object memAddress: TQRRichText
-        Left = 246
+        Left = 251
         Top = 40
-        Width = 665
+        Width = 650
         Height = 20
         Enabled = False
         Size.Values = (
-          42.333333333333340000
-          521.229166666666800000
-          84.666666666666680000
-          1407.583333333333000000)
+          42.333333333333330000
+          531.283333333333300000
+          84.666666666666670000
+          1375.833333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

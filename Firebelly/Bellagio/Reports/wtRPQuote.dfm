@@ -14,8 +14,8 @@ object frmwtRPQuote: TfrmwtRPQuote
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 254
-    Top = -571
+    Left = 198
+    Top = 106
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -23,7 +23,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     Functions.Strings = (
@@ -1572,7 +1572,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     end
     object qrcbAvailability: TQRChildBand
       Left = 47
-      Top = 907
+      Top = 910
       Width = 898
       Height = 64
       AfterPrint = qrcbAvailabilityAfterPrint

@@ -8,6 +8,8 @@ object dtmdlWorktops: TdtmdlWorktops
     Params.Strings = (
       'ConnectionDef=Worktop'
       'User_Name=sa')
+    FormatOptions.AssignedValues = [fvStrsTrim2Len]
+    FormatOptions.StrsTrim2Len = True
     LoginPrompt = False
     OnError = dtbsWorktopsError
     AfterConnect = dtbsWorktopsAfterConnect

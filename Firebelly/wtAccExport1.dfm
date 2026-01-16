@@ -3,29 +3,29 @@ object frmWTAccExport1: TfrmWTAccExport1
   Top = 120
   BorderStyle = bsSingle
   Caption = 'Import and Export Wizard'
-  ClientHeight = 512
-  ClientWidth = 434
+  ClientHeight = 522
+  ClientWidth = 437
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -13
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 16
+  TextHeight = 17
   object pnlFooter: TPanel
     Left = 0
-    Top = 471
-    Width = 434
+    Top = 481
+    Width = 437
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 422
-    ExplicitWidth = 340
+    ExplicitTop = 462
+    ExplicitWidth = 428
     object NextBitBtn: TBitBtn
       Left = 176
       Top = 8
@@ -66,26 +66,26 @@ object frmWTAccExport1: TfrmWTAccExport1
   object pnlMain: TPanel
     Left = 0
     Top = 81
-    Width = 434
-    Height = 390
+    Width = 437
+    Height = 400
     Align = alClient
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 73
-    ExplicitWidth = 340
-    ExplicitHeight = 349
+    ExplicitWidth = 428
+    ExplicitHeight = 381
     object Label1: TLabel
       Left = 16
       Top = 3
-      Width = 170
-      Height = 16
+      Width = 172
+      Height = 17
       Caption = 'Choose an action to perform:'
     end
     object ActionListBox: TListBox
       Left = 16
       Top = 24
       Width = 401
-      Height = 251
+      Height = 267
+      ItemHeight = 17
       Items.Strings = (
         'Export Customer details'
         'Export Supplier details'
@@ -106,16 +106,16 @@ object frmWTAccExport1: TfrmWTAccExport1
       OnClick = ActionListBoxClick
     end
     object GroupBox1: TGroupBox
-      Left = 16
-      Top = 281
+      Left = 15
+      Top = 297
       Width = 401
       Height = 89
       Caption = 'Description'
       ParentBackground = False
       TabOrder = 1
       object DescriptionLbl: TLabel
-        Left = 8
-        Top = 17
+        Left = 16
+        Top = 22
         Width = 289
         Height = 64
         AutoSize = False
@@ -129,13 +129,13 @@ object frmWTAccExport1: TfrmWTAccExport1
   object pnlRevenueCentre: TPanel
     Left = 0
     Top = 0
-    Width = 434
+    Width = 437
     Height = 81
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 346
+    ExplicitWidth = 428
     object rdgrpRevenueCentre: TRadioGroup
       Left = 3
       Top = 3
@@ -151,9 +151,9 @@ object frmWTAccExport1: TfrmWTAccExport1
       OnClick = rdgrpRevenueCentreClick
     end
     object grpbxRevCentre: TGroupBox
-      Left = 134
-      Top = 11
-      Width = 283
+      Left = 130
+      Top = 13
+      Width = 305
       Height = 62
       ParentBackground = False
       TabOrder = 1
@@ -161,15 +161,15 @@ object frmWTAccExport1: TfrmWTAccExport1
       object Label3: TLabel
         Left = 8
         Top = 12
-        Width = 97
-        Height = 16
+        Width = 91
+        Height = 17
         Caption = 'Revenue Centre'
       end
       object dblkpRevCentre: TDBLookupComboBox
         Left = 8
         Top = 32
         Width = 233
-        Height = 24
+        Height = 25
         KeyField = 'Revenue_Centre'
         ListField = 'Revenue_Centre_Descr'
         TabOrder = 0

@@ -1311,6 +1311,21 @@ begin
           else
               FEmailAttachment.add(sSource + SearchRec.Name);
         end;
+      // The following code has been extracted from AI
+(*      if (SearchRec.Attr and faDirectory = 0) then // If it is NOT a directory
+        begin
+          if chkbxMerge.Checked then
+            begin
+              // SameText is case-insensitive, replacing the need for multiple 'pos' checks
+              if SameText(ExtractFileExt(SearchRec.Name), '.pdf') then
+                FEmailAttachment.Add(IncludeTrailingPathDelimiter(sSource) + SearchRec.Name);
+            end
+          else
+            begin
+              FEmailAttachment.Add(IncludeTrailingPathDelimiter(sSource) + SearchRec.Name);
+            end;
+        end;
+*)
       iCount := FindNext(SearchRec);
     end;
 end;
