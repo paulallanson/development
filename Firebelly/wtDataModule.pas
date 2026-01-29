@@ -810,6 +810,8 @@ begin
   { Find out what kind of database this is, Access or SQL Server }
   DriverName := dtbsWorktops.DriverName;
   FIsSQL := DriverName.Contains('MSSQL');
+  if FIsSQL then
+    dtbsWorktops.ExecSQL('SET ANSI_WARNINGS OFF');
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);

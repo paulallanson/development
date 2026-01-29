@@ -49,9 +49,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Top = 0
       Width = 838
       Height = 574
-      ActivePage = tbsDocuments
+      ActivePage = tsGeneral
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 832
+      ExplicitHeight = 565
       object tsGeneral: TTabSheet
         Caption = 'General'
         object pnlDetails: TPanel
@@ -62,7 +64,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 546
           DesignSize = (
             830
             542)
@@ -678,7 +679,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 400
             Top = 211
-            Width = 376
+            Width = 370
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
@@ -2156,7 +2157,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           ParentBackground = False
           TabOrder = 0
           ExplicitWidth = 824
-          ExplicitHeight = 520
+          ExplicitHeight = 516
           object lstvwDocuments: TListView
             Left = 1
             Top = 1
@@ -2185,7 +2186,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             OnCompare = lstvwDocumentsCompare
             OnDblClick = lstvwDocumentsDblClick
             ExplicitWidth = 793
-            ExplicitHeight = 518
+            ExplicitHeight = 514
           end
           object ToolBar1: TToolBar
             Left = 800
@@ -2202,7 +2203,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             ShowHint = True
             TabOrder = 1
             ExplicitLeft = 794
-            ExplicitHeight = 518
+            ExplicitHeight = 514
             object btnExcel: TToolButton
               Left = 0
               Top = 0

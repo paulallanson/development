@@ -437,6 +437,7 @@ object dtmdlQuote: TdtmdlQuote
       end
       item
         Name = 'Reference'
+        DataType = ftString
       end
       item
         Name = 'Customer'

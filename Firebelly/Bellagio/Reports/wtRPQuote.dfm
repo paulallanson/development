@@ -3,7 +3,7 @@ object frmwtRPQuote: TfrmwtRPQuote
   Top = 34
   Caption = 'Quote Print'
   ClientHeight = 741
-  ClientWidth = 1230
+  ClientWidth = 1285
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmwtRPQuote: TfrmwtRPQuote
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 198
-    Top = 106
+    Left = 230
+    Top = 144
     Width = 992
     Height = 1403
     ShowingPreview = False

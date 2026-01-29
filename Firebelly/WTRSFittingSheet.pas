@@ -1311,7 +1311,7 @@ begin
           else
               FEmailAttachment.add(sSource + SearchRec.Name);
         end;
-      // The following code has been extracted from AI
+      // The following code has been extracted from Artificial Intelligence - Could use this to resolve a lot of the Warning messages.
 (*      if (SearchRec.Attr and faDirectory = 0) then // If it is NOT a directory
         begin
           if chkbxMerge.Checked then

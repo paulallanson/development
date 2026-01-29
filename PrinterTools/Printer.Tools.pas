@@ -179,6 +179,7 @@ var
   PDF: TQRPDFDocumentFilter;
 begin
   PDF := TQRPDFDocumentFilter.Create(fileName + '.PDF');
+  PDF.CompressionOn := false;
   try
     Report.ExportToFilter(PDF);
   finally

@@ -8,7 +8,8 @@ uses
   QrExport, StrUtils, ShellAPI, wtRPQuoteSummary,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, CRControls;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, CRControls, QuickRpt,
+  QRCtrls;
 
 type
   TfrmWTRSQuote = class(TForm)
@@ -315,6 +316,7 @@ begin
             sEmail := Trim(frmWTEmailList.EmailListGrid.cells[3, irow]);
 
             frmwtRPQuote := TfrmwtRPQuote.Create(Self);
+
             try
               frmwtRPQuote.bPreview := false;
               frmwtRPQuote.Quote := strtoint(EmailArray[irow,1]);

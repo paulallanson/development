@@ -301,6 +301,8 @@ begin
   { Find out what kind of database this is, Access or SQL Server }
   DriverName := PBLDatabase.DriverName;
   FIsSQL := DriverName.Contains('MSSQL');
+  if FIsSQL then
+    PBLDatabase.ExecSQL('SET ANSI_WARNINGS OFF');
 end;
 
 procedure TdmBroker.PBLDatabaseBeforeConnect(Sender: TObject);

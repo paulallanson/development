@@ -28,7 +28,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 14
     OnClick = btnPrintClick
-    ExplicitTop = 347
+    ExplicitTop = 355
   end
   object Button4: TButton
     Left = 451
@@ -39,6 +39,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Caption = 'Close'
     TabOrder = 17
     OnClick = Button4Click
+    ExplicitTop = 355
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -77,7 +78,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 15
     OnClick = btnPreviewClick
-    ExplicitTop = 347
+    ExplicitTop = 355
   end
   object btnEmail: TButton
     Left = 184
@@ -89,6 +90,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 16
     OnClick = btnEmailClick
+    ExplicitTop = 355
   end
   object chkbxOnlyShowGrandTotal: TCheckBox
     Left = 8
