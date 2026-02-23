@@ -7,7 +7,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,7 +19,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
     Top = 274
@@ -50,22 +50,21 @@ object frmwtLUPurchases: TfrmwtLUPurchases
     object Label1: TLabel
       Left = 8
       Top = 13
-      Width = 80
-      Height = 13
+      Width = 91
+      Height = 17
       Caption = 'Supplier Search'
     end
     object Label3: TLabel
-      Left = 625
+      Left = 607
       Top = 13
-      Width = 79
-      Height = 13
+      Width = 91
+      Height = 17
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Purchase Order'
-      ExplicitLeft = 697
     end
     object Button1: TButton
-      Left = 806
+      Left = 800
       Top = 7
       Width = 75
       Height = 25
@@ -78,15 +77,15 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       Left = 104
       Top = 9
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 710
+      Left = 704
       Top = 9
       Width = 73
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
@@ -118,8 +117,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       Top = 0
       Width = 918
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 59
+      ButtonHeight = 40
+      ButtonWidth = 67
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -132,7 +131,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 59
+        Left = 67
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -140,7 +139,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 118
+        Left = 134
         Top = 0
         Caption = 'C&opy'
         Enabled = False
@@ -148,7 +147,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnCopyClick
       end
       object btnDelete: TToolButton
-        Left = 177
+        Left = 201
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -156,7 +155,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnDeleteClick
       end
       object ToolButton6: TToolButton
-        Left = 236
+        Left = 268
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -164,7 +163,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 244
+        Left = 276
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -172,7 +171,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnPrintClick
       end
       object ToolButton3: TToolButton
-        Left = 303
+        Left = 343
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -180,7 +179,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Style = tbsSeparator
       end
       object btnReceipts: TToolButton
-        Left = 311
+        Left = 351
         Top = 0
         Caption = 'Receipts'
         Enabled = False
@@ -189,14 +188,14 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         OnClick = btnReceiptsClick
       end
       object btnReceipts1: TToolButton
-        Left = 370
+        Left = 418
         Top = 0
         Caption = 'Receipts'
         ImageIndex = 5
         OnClick = btnReceipts1Click
       end
       object ToolButton1: TToolButton
-        Left = 429
+        Left = 485
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -204,7 +203,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 437
+        Left = 493
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -222,7 +221,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]

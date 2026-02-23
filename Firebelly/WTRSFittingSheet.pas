@@ -559,7 +559,7 @@ begin
             begin
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
               printFileName := 'FS' + EmailArray[irow,1];
-              TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printfilename, sAttachmentType);
+              TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printfilename, sAttachmentType, false);
             end;
 
           if self.chkbxPrint.checked then
@@ -589,7 +589,7 @@ begin
                           begin
                             frmWTRPJobRemedialSheet.bPreview := false;
                             printFileName := 'FS' + EmailArray[irow,1];
-                            TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
+                            TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1], false);
                           end;
                       finally
                         frmWTRPJobRemedialSheet.Free;
@@ -775,7 +775,7 @@ begin
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
                   printFileName := 'FS' + EmailArray[irow,1];
-                  TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType);
+                  TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType, false);
                 end;
 
               if iOrderCount = 1 then
@@ -818,7 +818,7 @@ begin
                             begin
                               frmWTRPJobRemedialSheet.bPreview := false;
                               printFileName := 'FS' + EmailArray[irow,1];
-                              TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
+                              TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, printFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1], false);
                             end;
                         finally
                           frmWTRPJobRemedialSheet.Free;
@@ -885,7 +885,7 @@ begin
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
                   printFileName := 'FS' + EmailArray[irow,1];
-                  TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType);
+                  TPrinterTools.New.PrintToattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, printFilename, sAttachmentType, false);
                 end;
 
               sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
@@ -923,7 +923,7 @@ begin
                           else
                             begin
                               frmWTRPJobRemedialSheet.bPreview := false;
-                              TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
+                              TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1], false);
                             end;
                         finally
                           frmWTRPJobRemedialSheet.Free;

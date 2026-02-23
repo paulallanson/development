@@ -35,8 +35,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Width = 50
       end>
-    ExplicitTop = 336
-    ExplicitWidth = 1227
   end
   object Panel1: TPanel
     Left = 0
@@ -46,8 +44,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 295
-    ExplicitWidth = 1227
     DesignSize = (
       1328
       41)
@@ -59,13 +55,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1037
+      Left = 1031
       Top = 13
       Width = 69
       Height = 17
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
+      ExplicitLeft = 1037
     end
     object Label6: TLabel
       Left = 528
@@ -75,7 +72,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1222
+      Left = 1216
       Top = 9
       Width = 75
       Height = 25
@@ -83,7 +80,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 1121
     end
     object edtSearch: TEdit
       Left = 56
@@ -94,7 +90,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1114
+      Left = 1108
       Top = 9
       Width = 73
       Height = 25
@@ -202,8 +198,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         MinHeight = 41
         Width = 1322
       end>
-    ExplicitTop = 32
-    ExplicitWidth = 1227
     object btnDocuments: TToolBar
       Left = 11
       Top = 0
@@ -330,6 +324,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Expanded = False
         FieldName = 'Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -357,6 +352,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
+        Width = 64
         Visible = True
       end
       item
@@ -425,6 +421,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Expanded = False
         FieldName = 'Quote'
+        Width = 64
         Visible = True
       end
       item

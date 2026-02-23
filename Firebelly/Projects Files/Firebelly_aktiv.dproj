@@ -103,9 +103,6 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\wtWin7.pas"/>
-        <DCCReference Include="..\wtSplash.pas">
-            <Form>frmWTSplash</Form>
-        </DCCReference>
         <DCCReference Include="..\wtDatabase.pas">
             <Form>frmWTDatabase</Form>
         </DCCReference>
@@ -777,6 +774,10 @@
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
         <DCCReference Include="..\..\Components\CRPackage\CRControls.pas"/>
         <DCCReference Include="..\..\Shared\Shared.DragDrop.Helper.pas"/>
+        <DCCReference Include="..\wtLUPurchases.pas">
+            <Form>frmwtLUPurchases</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -814,7 +815,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\Aktiv\Win32\Release\Firebelly_aktiv.exe" Configuration="Release" Class="ProjectOutput">
+                <DeployFile LocalName="..\Firebelly_aktiv.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Firebelly_aktiv.exe</RemoteName>
                         <Overwrite>true</Overwrite>

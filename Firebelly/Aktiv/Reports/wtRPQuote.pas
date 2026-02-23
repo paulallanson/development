@@ -163,6 +163,8 @@ type
       var PrintBand: Boolean);
     procedure qrcbSubTotalBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
+    procedure qrcbAcceptanceHeaderBeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
   private
     sWorktop: string;
     function BuildNotes(const iNotes: integer): string;
@@ -583,6 +585,12 @@ procedure TfrmwtRPQuote.qrcbAcceptanceHeaderAfterPrint(
   Sender: TQRCustomBand; BandPrinted: Boolean);
 begin
 //  qrbPageFooter.Enabled := false;
+end;
+
+procedure TfrmwtRPQuote.qrcbAcceptanceHeaderBeforePrint(Sender: TQRCustomBand;
+  var PrintBand: Boolean);
+begin
+  qrpDetails.NewPage(true);
 end;
 
 function TfrmwtRPQuote.GetCompanyAddress: string;

@@ -1114,7 +1114,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     end
     object qrsdSOLines: TQRSubDetail
       Left = 47
-      Top = 559
+      Top = 562
       Width = 945
       Height = 30
       AlignToBottom = False

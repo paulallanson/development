@@ -3503,6 +3503,8 @@ begin
               self.NettPrice - self.DiscountValue + self.MarkupValue + self.WasteValue
   else
     result := (UnitPrice * (Quantity/SellUnit));
+
+  result := roundfloat(Result,2);
 end;
 
 procedure TSOLine.UpdateJobCustomer(tmpCode: double; tmpCustomer, tmpContact: integer; tmpName: string);
