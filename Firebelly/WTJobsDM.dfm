@@ -2549,4 +2549,18 @@ object dtmdlJob: TdtmdlJob
         Name = 'Remedial_Number'
       end>
   end
+  object qryGetQuoteSlabWorktop: TFDQuery
+    ConnectionName = 'WT'
+    SQL.Strings = (
+      'SELECT TOP 1 Worktop, Thickness'
+      'FROM Quote_Slab'
+      'WHERE Quote_Slab.Quote = :Quote')
+    Left = 930
+    Top = 326
+    ParamData = <
+      item
+        Name = 'QUOTE'
+        ParamType = ptInput
+      end>
+  end
 end

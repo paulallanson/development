@@ -14,8 +14,8 @@ object frmwtRPQuote: TfrmwtRPQuote
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 200
-    Top = 34
+    Left = 192
+    Top = -334
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -2227,6 +2227,7 @@ object frmwtRPQuote: TfrmwtRPQuote
       Height = 176
       AfterPrint = qrcbAcceptanceHeaderAfterPrint
       AlignToBottom = False
+      BeforePrint = qrcbAcceptanceHeaderBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True

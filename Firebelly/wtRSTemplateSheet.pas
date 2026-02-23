@@ -662,7 +662,7 @@ begin
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
           printFileName := 'TS' + EmailArray[irow,1];
 
-          TPrinterTools.New.PrintToAttachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
+          TPrinterTools.New.PrintToAttachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType, false);
 
           if self.chkbxPrint.checked then
           begin
@@ -692,8 +692,7 @@ begin
                   sFileName := printFileName + '-Q' + qryGetSOQuotesEmails.fieldbyname('Quote').asinteger.ToString + 'L' + iRow.ToString;
                   frmwtRPQuote.bEndUser := false;
                   frmWTRPQuote.bPreview := false;
-                  TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails,
-                    FEmailAttachment, sFileName, frmWTEmailList.EmailListGrid.Cells[5, irow], False);
+                  TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, sFileName, frmWTEmailList.EmailListGrid.Cells[5, irow], False);
                 end;
               finally
                 frmWTRPQuote.Free;
@@ -882,7 +881,7 @@ begin
 
             sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
             printFileName := 'TS' + EmailArray[irow,1];
-            TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFilename, sAttachmentType);
+            TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFilename, sAttachmentType, false);
 
             if iOrderCount = 1 then
             begin
@@ -926,10 +925,7 @@ begin
                   frmwtRPQuote.bEndUser := false;
                   frmWTRPQuote.bPreview := false;
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails,
-                    FEmailAttachment,
-                    printFileName + '-Q' + qryGetSOQuotesEmails.fieldbyname('Quote').AsString + 'L' + iRow.ToString,
-                    sAttachmentType, False);
+                  TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + '-Q' + qryGetSOQuotesEmails.fieldbyname('Quote').AsString + 'L' + iRow.ToString, sAttachmentType, False);
                 end;
               finally
                 frmWTRPQuote.Free;
@@ -1034,7 +1030,7 @@ begin
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
               printFileName := 'TS' + EmailArray[irow,1];
-              TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
+              TPrinterTools.New.PrintToattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, printFileName, sAttachmentType, false);
 
               sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
 //              sSubject := 'Template Documents: ' + EmailArray[irow,1];
@@ -1075,7 +1071,7 @@ begin
                             frmwtRPQuote.bEndUser := false ;
                             frmWTRPQuote.bPreview := false;
                             sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString, sAttachmentType);
+                            TPrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, printFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString, sAttachmentType, false);
                           end;
                       finally
                         frmWTRPQuote.Free;

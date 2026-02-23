@@ -67,14 +67,21 @@ begin
         QryFails := RunBatch('Acc231', 2);
     end;
 
-  sDb_Version := GetDBVersion;
+(*  sDb_Version := GetDBVersion;
   if (sDb_Version = '23.2') then
+    begin
+      QryFails := RunBatch('sql240', 9)
+    end;
+*)
+
+  sDb_Version := GetDBVersion;
+  if (sDb_Version = '24.0') then
     begin
       QryFails := RunBatch('sql240', 9)
     end;
 
   sDb_Version := GetDBVersion;
-  if (sDb_Version = '24.0') then
+  if (sDb_Version = '24.1') then
     begin
       QryFails := RunBatch('sql242', 5)
     end;

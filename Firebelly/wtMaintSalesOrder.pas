@@ -448,6 +448,7 @@ type
     procedure CopyOriginalSalesOrderDocuments;
     procedure CopyOriginalToRemedialDocuments(iSource, iDest: integer);
     procedure CopyOriginalPlanToRemedialDocuments(iSource, iDest: integer);
+    procedure CopyOriginalConfirmedDrawingToRemedialDocuments(iSource, iDest: integer);
     procedure SetOriginalSalesOrderFromCopy(const Value: integer);
     procedure ClearAddressFields;
     procedure ClearInstallationAddressFields;
@@ -4316,6 +4317,52 @@ begin
     end;
 end;
 
+procedure TfrmWTMaintSalesOrder.CopyOriginalConfirmedDrawingToRemedialDocuments(iSource, iDest: integer);
+var
+  sSource, sDest: string;
+  irow: integer;
+  SearchRec: TSearchRec;
+  FileInfo: SHFILEINFO;
+  sFilename: string;
+  sFolderName: string;
+begin
+  sFolderName := 'Confirmed Drawing';
+
+  if trim(sFolderName) = ''
+    then exit;
+
+  sSource := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSource) + '\'+ sFolderName + '\';
+
+  if trim(sFolderName) <> '' then
+    sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iDest) + '\' + sFolderName + '\'
+  else
+    sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iDest) + '\';
+
+  try
+    CreateDir(sDest);
+  except
+  end;
+
+  // search for the first file
+  irow := FindFirst(sSource + '*.*', faArchive, SearchRec);
+
+  while irow = 0 do
+    begin
+      // On directories and volumes
+      if ((SearchRec.Attr and FaDirectory <> FaDirectory) and
+        (SearchRec.Attr and FaVolumeId <> FaVolumeID)) then
+        begin
+          //Get The DisplayName
+          SHGetFileInfo(PChar(sSource + SearchRec.Name), 0, FileInfo, SizeOf(FileInfo), SHGFI_DISPLAYNAME);
+
+          sFilename := SearchRec.Name;
+
+          filecopy(sSource+sFilename, sDest+sFilename);
+        end;
+      irow := FindNext(SearchRec);
+    end;
+end;
+
 procedure TfrmWTMaintSalesOrder.CopyOriginalSalesOrderDocuments;
 var
   sSource, sDest: string;
@@ -5263,6 +5310,7 @@ begin
               Result := aSOrder.dbkey;
 //              CopyOriginalToRemedialDocuments(sOrder.dbKey, Result);
               CopyOriginalPlanToRemedialDocuments(sOrder.dbKey, Result);
+              CopyOriginalConfirmedDrawingToRemedialDocuments(sOrder.dbKey, Result);
               CreateandCopyRemedialSheet(Result, Job.dbKey, JRemedial.RemedialNumber);
             end
           else

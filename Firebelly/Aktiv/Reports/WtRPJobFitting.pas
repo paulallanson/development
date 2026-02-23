@@ -63,8 +63,6 @@ type
     qrlblCustomerSignature: TQRLabel;
     qrshpSignature: TQRShape;
     qrlblterms3: TQRRichText;
-    qrlblterms1: TQRLabel;
-    qrlblterms2: TQRLabel;
     qrlblDeliveryComplete: TQRLabel;
     qrlblNoComponents: TQRLabel;
     qrlblDate: TQRLabel;
@@ -153,7 +151,7 @@ procedure TfrmWTRPJobFitting.qrgJobBeforePrint(Sender: TQRCustomBand;
 begin
   ElementNo := 0;
   qrlblJobNumber.caption := 'Job Number: '+ qryreport.fieldbyname('job').AsString;
-  qrlblDateRequired.caption := 'Fitting Date: '+ paDateStr(qryreport.fieldbyname('Installation_Date').Asdatetime);
+  qrlblDateRequired.caption := 'Fitting Date: '+ paDateStr(qryreport.fieldbyname('Order_Date_Required').Asdatetime);
   qrlblSalesOrder.caption := 'Sales Order: '+ qryreport.fieldbyname('sales_order').AsString;
 end;
 
@@ -191,7 +189,7 @@ procedure TfrmWTRPJobFitting.QRBand1BeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
   qrrchTextInstallAddress.lines.Clear;
-  qrrchTextInstallAddress.lines.add(BuildNotes(qryReport.fieldbyname('Install_Address').asinteger));
+  qrrchTextInstallAddress.lines.add(BuildNotes(qryReport.fieldbyname('Order_Install_Address').asinteger));
 
   qrmemRiskNotes.lines.Clear;
   qrmemRiskNotes.lines.add(BuildNotes(qryReport.fieldbyname('Risk_Notes').asinteger));
@@ -201,8 +199,6 @@ begin
   qrlblDeliveryComplete.Enabled := false;
   qrlblNoComponents.enabled := false;
   qrlblCustomerSignature.enabled := false;
-  qrlblTerms1.enabled := false;
-  qrlblTerms2.enabled := false;
   qrlblTerms3.enabled := false;
   qrlblDate.caption := 'PAGE TO FOLLOW';
   qrshpSignature.Enabled := false;
@@ -215,8 +211,6 @@ begin
   qrlblDeliveryComplete.Enabled := true;
   qrlblNoComponents.enabled  := true;
   qrlblCustomerSignature.enabled := true;
-  qrlblTerms1.enabled := true;
-  qrlblTerms2.enabled := true;
   qrlblTerms3.enabled := true;
   qrlblDate.caption := 'DATE:';
   qrshpSignature.Enabled := true;

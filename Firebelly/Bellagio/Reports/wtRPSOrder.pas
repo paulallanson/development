@@ -464,7 +464,9 @@ begin
 //  qrlblTotalPrice.caption := formatfloat('0.00',totalPrice);
   qrlblTotalPrice.caption := formatfloat('0.00',fullLineTotal);
 
-  rLineTotal := rLineTotal + totalPrice;
+//  rLineTotal := rLineTotal + totalPrice;
+  rLineTotal := rLineTotal + StrToFloatDef(qrlblTotalPrice.caption, 0, FormatSettings);
+
   rInstallTotal := rInstallTotal + qrySOLine.FieldByName('Installation_Price').Asfloat;
   rSurveyTotal := rSurveyTotal + qrySOLine.FieldByName('Survey_Price').Asfloat;
   rDeliveryTotal := rDeliveryTotal + qrySOLine.FieldByName('Delivery_Price').Asfloat;

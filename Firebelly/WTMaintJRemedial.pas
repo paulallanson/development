@@ -787,13 +787,15 @@ begin
       Frm.MaterialType := '';
 
       try
-        frm.Worktop := jRemedial.parent.Elements[0].worktop;
+//        frm.Worktop := jRemedial.parent.Elements[0].worktop;
+        frm.Worktop := jRemedial.Parent.DataModule.GetQuoteSlabWorktop(jremedial.Parent.Quote);
       except
         frm.Worktop := 0;
       end;
 
       try
-        frm.thickness := jRemedial.parent.Elements[0].thickness;
+//        frm.thickness := jRemedial.parent.Elements[0].thickness;
+        frm.thickness := jRemedial.Parent.DataModule.GetQuoteSlabThickness(jremedial.Parent.Quote);
       except
         frm.Thickness := 0;
       end;

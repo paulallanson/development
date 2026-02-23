@@ -3,7 +3,6 @@ program Firebelly_aktiv;
 uses
   Forms,
   wtWin7 in '..\wtWin7.pas',
-  wtSplash in '..\wtSplash.pas' {frmWTSplash},
   wtDatabase in '..\wtDatabase.pas' {frmWTDatabase},
   wtCustomerDM in '..\wtCustomerDM.pas' {dtmdlCustomers: TDataModule},
   wtDataModule in '..\wtDataModule.pas' {dtmdlWorktops: TDataModule},
@@ -226,16 +225,18 @@ uses
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
-  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas';
+  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
+  wtLUPurchases in '..\wtLUPurchases.pas' {frmwtLUPurchases};
 
 {$R *.RES}
 
 begin
   Application.Initialize;
-  frmWTSplash := TfrmWTSplash.Create( Application );
+(*  frmWTSplash := TfrmWTSplash.Create( Application );
   frmWTSplash.Show;
   frmWTSplash.Refresh;
-  Application.Title := 'Worktop Manufacturing';
+*)
+  Application.Title := 'Firebelly - Worktop Manufacturing';
   Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);

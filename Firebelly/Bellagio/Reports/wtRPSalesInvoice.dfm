@@ -17,7 +17,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   TextHeight = 15
   object InvoiceReport: TQuickRep
     Left = 251
-    Top = 24
+    Top = -448
     Width = 992
     Height = 1403
     ShowingPreview = False

@@ -130,6 +130,7 @@ type
     qryAllJobsIs_Retail_Customer: TWideStringField;
     qryAllJobsGross_Price_Incl_Vat: TFloatField;
     qryAllJobsWorktop_Weight: TFloatField;
+    qryGetQuoteSlabWorktop: TFDQuery;
   private
     function GetHeaderCount: integer;
     function GetHeaderCountAll: integer;
@@ -181,6 +182,8 @@ type
     function GetInstallName(tempQuote: integer): string;
     function GetInstallPhone(tempQuote: integer): string;
     function GetNarrative(const iNarrative: integer): string;
+    function GetQuoteSlabWorktop(tempQuote: integer): integer;
+    function GetQuoteSlabThickness(tempQuote: integer): integer;
     function GetTemplateDate(tempQuote: integer): TDateTime;
     function GetVatRate(tempVat: integer): real;
     function UsingSearch: boolean;
@@ -1659,6 +1662,28 @@ begin
   finally
     Narrative.Free;
   end;
+end;
+
+function TdtmdlJob.GetQuoteSlabWorktop(tempQuote: integer): integer;
+begin
+  with qryGetQuoteSlabWorktop do
+    begin
+      close;
+      parambyname('Quote').asinteger := tempQuote;
+      open;
+      result := fieldbyname('Worktop').asinteger;
+    end;
+end;
+
+function TdtmdlJob.GetQuoteSlabThickness(tempQuote: integer): integer;
+begin
+  with qryGetQuoteSlabWorktop do
+    begin
+      close;
+      parambyname('Quote').asinteger := tempQuote;
+      open;
+      result := fieldbyname('Thickness').asinteger;
+    end;
 end;
 
 { TJob }
