@@ -29,7 +29,6 @@ type
     QRDBText2: TQRDBText;
     QRLabel3: TQRLabel;
     qrlblNett: TQRLabel;
-    QRLabel1: TQRLabel;
     qryPOLine: TFDQuery;
     QRDBText7: TQRDBText;
     qrlblTotalLineCost: TQRLabel;
@@ -45,7 +44,6 @@ type
     QRShape1: TQRShape;
     gtQRLabel1: TQRLabel;
     gtQRDBText1: TQRDBText;
-    gtQRLabel2: TQRLabel;
     QRShape7: TQRShape;
     QRShape10: TQRShape;
     gtQRShape9: TQRShape;
@@ -100,6 +98,7 @@ type
     qrlblCustomerReference: TQRLabel;
     qriHeadLogo: TQRImage;
     qrbPurchaseOrderFooter: TQRBand;
+    gtQRLabel2: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgPurchaseOrderBeforePrint(Sender: TQRCustomBand;

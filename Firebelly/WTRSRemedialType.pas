@@ -12,11 +12,8 @@ uses
 
 type
   TfrmWTRSRemedialType = class(TForm)
-    PrintBitBtn: TBitBtn;
-    PreviewBitBtn: TBitBtn;
     pnlReasonSearch: TPanel;
     lblCustBran: TLabel;
-    CancelBitBtn: TBitBtn;
     GroupBox1: TGroupBox;
     Label1: TLabel;
     edtDateFrom: TEdit;
@@ -45,13 +42,14 @@ type
     qryType: TFDQuery;
     qryDept: TFDQuery;
     rdgrpShow: TRadioGroup;
+    btnPrint: TButton;
+    btnPreview: TButton;
+    Button4: TButton;
     procedure rdgrpReasonClick(Sender: TObject);
     procedure rdgrpDeptClick(Sender: TObject);
     procedure btbtnDateFromClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure PreviewBitBtnClick(Sender: TObject);
-    procedure PrintBitBtnClick(Sender: TObject);
     procedure btbtnDateToClick(Sender: TObject);
     procedure edtDateFromExit(Sender: TObject);
     procedure edtDateToExit(Sender: TObject);
@@ -62,6 +60,8 @@ type
     procedure cmbCategoryChange(Sender: TObject);
     procedure cmbReasonChange(Sender: TObject);
     procedure cmbDeptChange(Sender: TObject);
+    procedure btnPrintClick(Sender: TObject);
+    procedure btnPreviewClick(Sender: TObject);
   private
     category: integer;
     reason: integer;
@@ -147,14 +147,14 @@ begin
      ((rdgrpReason.ItemIndex = 1) and (cmbReason.text = ''))  or
      ((rdgrpDept.ItemIndex = 1) and (cmbDept.text = '')) then
   begin
-    PreviewBitBtn.Enabled := false;
-    PrintBitBtn.Enabled := false;
+    btnPreview.Enabled := false;
+    btnPrint.Enabled := false;
     btnExcel.Enabled := false;
   end
   else
   begin
-    PreviewBitBtn.Enabled := true;
-    PrintBitBtn.Enabled := true;
+    btnPreview.Enabled := true;
+    btnPrint.Enabled := true;
     btnExcel.Enabled := true;
   end;
 end;
@@ -246,16 +246,6 @@ begin
   end;
 end;
 
-procedure TfrmWTRSRemedialType.PreviewBitBtnClick(Sender: TObject);
-begin
-  self.RunReport(true);
-end;
-
-procedure TfrmWTRSRemedialType.PrintBitBtnClick(Sender: TObject);
-begin
-  self.RunReport(false);
-end;
-
 procedure TfrmWTRSRemedialType.btbtnDateToClick(Sender: TObject);
 begin
   {Access the date component}
@@ -315,6 +305,16 @@ end;
 procedure TfrmWTRSRemedialType.btnExcelClick(Sender: TObject);
 begin
   RuntoExcel;
+end;
+
+procedure TfrmWTRSRemedialType.btnPreviewClick(Sender: TObject);
+begin
+  self.RunReport(true);
+end;
+
+procedure TfrmWTRSRemedialType.btnPrintClick(Sender: TObject);
+begin
+  self.RunReport(false);
 end;
 
 procedure TfrmWTRSRemedialType.RuntoExcel;

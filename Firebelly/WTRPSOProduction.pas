@@ -445,6 +445,8 @@ end;
 procedure TfrmWTRPSOProduction.qrgrpEdgeProfileBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
+  qrpDetails.NewPage(true);
+
   qrlblCategoryTitle.Caption := qrlblEdgeTitle.caption;
   qrlblCategoryCount.Caption := qrlblEdgeCount.caption;
 end;
@@ -459,6 +461,8 @@ end;
 procedure TfrmWTRPSOProduction.qrgrpHeadCutOutsBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
+  qrpDetails.NewPage(true);
+
   qrlblCategoryTitle.Caption := qrlblCutOutTitle.caption;
   qrlblCategoryCount.Caption := qrlblCutOutCount.caption;
 end;

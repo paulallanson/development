@@ -480,8 +480,18 @@ begin
       if qryReport.FieldByName('Revenue_Centre').AsInteger <> 0 then
         begin
           sNewLogo := dtmdlWorktops.LoadRevenueCentreLogo(qryReport.FieldByName('Revenue_Centre').AsInteger);
-          qriHeadlogo.picture.loadfromfile(sNewLogo);
-          qriHeadlogo1.picture.loadfromfile(sNewLogo);
+          try
+            qriHeadlogo.picture.loadfromfile(sNewLogo);
+          except
+            qriHeadlogo.picture.loadfromfile('wtHeadLogo.bmp');
+          end;
+
+          try
+            qriHeadlogo1.picture.loadfromfile(sNewLogo);
+          except
+            qriHeadlogo1.picture.loadfromfile('wtHeadLogo.bmp');
+          end;
+
           GetRevenueCentreAddress;
         end
       else

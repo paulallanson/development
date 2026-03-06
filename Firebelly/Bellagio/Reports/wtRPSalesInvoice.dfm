@@ -16,8 +16,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   OnCreate = FormCreate
   TextHeight = 15
   object InvoiceReport: TQuickRep
-    Left = 251
-    Top = -448
+    Left = 219
+    Top = -8
     Width = 992
     Height = 1403
     ShowingPreview = False

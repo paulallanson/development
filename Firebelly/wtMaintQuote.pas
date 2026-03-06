@@ -25,15 +25,15 @@ type
     sgEdges: TStringGrid;
     sgExtras: TStringGrid;
     pnlFoot: TPanel;
-    Panel5: TPanel;
+    pnlCutOuts: TPanel;
     btnAddCutOuts: TBitBtn;
     btnChangeCutOuts: TBitBtn;
     btnDeleteCutOuts: TBitBtn;
-    Panel6: TPanel;
+    pnlEdges: TPanel;
     btnAddEdges: TBitBtn;
     btnChangeEdges: TBitBtn;
     btnDeleteEdges: TBitBtn;
-    Panel7: TPanel;
+    pnlCharges: TPanel;
     btnAddExtras: TBitBtn;
     btnChangeExtras: TBitBtn;
     btnDeleteExtras: TBitBtn;
@@ -59,7 +59,7 @@ type
     edtEmail: TEdit;
     Telephone: TLabel;
     Email: TLabel;
-    Panel1: TPanel;
+    pnlUpstands: TPanel;
     btnAddUpstds: TBitBtn;
     btnChangeUpstds: TBitBtn;
     btnDeleteUpstds: TBitBtn;
@@ -124,7 +124,7 @@ type
     Panel2: TPanel;
     lblWTTotalArea: TLabel;
     lblWTTotalSales: TLabel;
-    Panel10: TPanel;
+    pnlWorktops: TPanel;
     btnAddElts: TBitBtn;
     btnChangeElts: TBitBtn;
     btnDeleteElts: TBitBtn;
@@ -210,7 +210,7 @@ type
     memDiscountValueAnalysis: TMemo;
     lblDiscountMarkup: TLabel;
     tbSlabs: TTabSheet;
-    Panel24: TPanel;
+    pnlSlabs: TPanel;
     btnAddSlabs: TBitBtn;
     btnChangeSlabs: TBitBtn;
     btnDeleteSlabs: TBitBtn;
@@ -558,12 +558,17 @@ begin
   pnlTop.Enabled := (FMode <> qView);
   pnlTotals.Enabled := (FMode <> qView);
   tbCustomer.Enabled := (FMode <> qView) and (FMode <> qRestrict);
-  tbWorktops.Enabled := (FMode <> qView) and (FMode <> qRestrict);
-  tbEdges.Enabled := (FMode <> qView) and (FMode <> qRestrict);
-  tbCutOuts.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+//  tbWorktops.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+  pnlWorktops.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+//  tbEdges.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+  pnlEdges.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+//  tbCutOuts.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+  pnlCutOuts.Enabled := (FMode <> qView) and (FMode <> qRestrict);
   tbInstallation.Enabled := (FMode <> qView) and (FMode <> qRestrict);
-  tbUpstands.Enabled := (FMode <> qView) and (FMode <> qRestrict);
-  tbCharges.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+//  tbUpstands.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+  pnlUpstands.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+//  tbCharges.Enabled := (FMode <> qView) and (FMode <> qRestrict);
+  pnlCharges.Enabled := (FMode <> qView) and (FMode <> qRestrict);
 //  tbDocuments.Enabled := FMode <> qView;
   tbEvents.Enabled := FMode <> qView;
 
@@ -1539,6 +1544,7 @@ begin
       if ((Mode = qAdd) or (Mode = qcopy) or (Mode = qRequote)) and (dblkpLeadSource.Text = '') then
         begin
           messagedlg('Cannot save this quote, you must enter a Sales Lead Source', mterror, [mbOk], 0);
+          bOK := false;
           dblkpLeadSource.SetFocus;
           exit;
         end;
@@ -1550,6 +1556,7 @@ begin
       if Quote.Slabs.count = 0 then
         begin
           MessageDlg('Cost Analysis is in use, slab details for this quote must be provided', mterror, [mbOk], 0);
+          bOK := false;
           pcDetails.ActivePage := tbSlabs;
           CallMaintSlab(qslAdd);
           exit;
@@ -1559,6 +1566,7 @@ begin
       if Quote.Slabs.TotalArea < (Quote.Elements.TotalArea + Quote.Upstands.TotalArea) then
         begin
           MessageDlg('The slab requirements doesn''t cover the total material requirement for this quote', mterror, [mbOk], 0);
+          bOK := false;
           exit;
         end;
 
@@ -1597,6 +1605,7 @@ begin
       if bAllSlabsExists = false then
         begin
           MessageDlg('The slab details entered don''t match the element requirements for the quote', mterror, [mbOk], 0);
+          bOK := false;
           exit;
         end;
     end;
@@ -1606,6 +1615,7 @@ begin
       if trim(edtFollowUpDate.text) = '' then
         begin
           MessageDlg('Please enter a follow up date for this quote', mterror, [mbOk], 0);
+          bOK := false;
           edtFollowUpDate.SetFocus;
           exit;
         end;
@@ -1613,6 +1623,7 @@ begin
       if chkbxDeclined.Checked and (dblkpReason.Text = '') then
         begin
           messagedlg('If the quote is to be declined then please select a reason', mtError, [mbOk], 0);
+          bOK := false;
           dblkpReason.setfocus;
           exit;
         end;
@@ -2669,27 +2680,32 @@ end;
 
 procedure TfrmWTMaintQuote.sgElementsDblClick(Sender: TObject);
 begin
-  btnChangeEltsClick(self);
+  if (Mode <> qRestrict) then
+    btnChangeEltsClick(self);
 end;
 
 procedure TfrmWTMaintQuote.sgCutOutsDblClick(Sender: TObject);
 begin
-  btnChangeCutOutsClick(self);
+  if (Mode <> qRestrict) then
+    btnChangeCutOutsClick(self);
 end;
 
 procedure TfrmWTMaintQuote.sgEdgesDblClick(Sender: TObject);
 begin
-  btnChangeEdgesClick(self);
+  if (Mode <> qRestrict) then
+    btnChangeEdgesClick(self);
 end;
 
 procedure TfrmWTMaintQuote.sgUpstandsDblClick(Sender: TObject);
 begin
-  btnChangeUpstdsClick(self);
+  if (Mode <> qRestrict) then
+    btnChangeUpstdsClick(self);
 end;
 
 procedure TfrmWTMaintQuote.sgExtrasDblClick(Sender: TObject);
 begin
-  btnChangeExtrasClick(self);
+  if (Mode <> qRestrict) then
+    btnChangeExtrasClick(self);
 end;
 
 procedure TfrmWTMaintQuote.ShowEvents;
@@ -2772,7 +2788,10 @@ begin
     [mbYes, mbNo, mbCancel], 0) ;
 
   if TempWord = mrNo then
-      Exit
+      begin
+        bOK := false;
+        Exit
+      end
   else
   if TempWord = mrCancel then
       Action := caNone
@@ -2782,6 +2801,7 @@ end;
 
 procedure TfrmWTMaintQuote.btnCancelClick(Sender: TObject);
 begin
+  bOK := false;
   close;
 end;
 

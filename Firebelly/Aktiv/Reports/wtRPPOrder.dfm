@@ -10,14 +10,14 @@ object frmwtRPPOrder: TfrmwtRPPOrder
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 24
     Top = 10
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -79,18 +79,18 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     PreviewLeft = 0
     PreviewTop = 0
     object qrgPurchaseOrder: TQRGroup
-      Left = 38
-      Top = 369
-      Width = 1047
-      Height = 2
+      Left = 47
+      Top = 461
+      Width = 1309
+      Height = 3
       AlignToBottom = False
       BeforePrint = qrgPurchaseOrderBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
-        2770.187500000000000000)
+        6.350000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'purchase_order'
@@ -99,31 +99,31 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       ReprintOnNewPage = False
     end
     object qrbPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 331
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 414
       AlignToBottom = False
       BeforePrint = qrbPageHeaderBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        875.770833333333300000
-        2770.187500000000000000)
+        876.300000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRShape7: TQRShape
         Left = 0
-        Top = 299
-        Width = 1041
-        Height = 31
+        Top = 374
+        Width = 1301
+        Height = 36
         Size.Values = (
-          82.020833333333330000
+          76.200000000000000000
           0.000000000000000000
-          791.104166666666700000
-          2754.312500000000000000)
+          791.633333333333300000
+          2753.783333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -131,10 +131,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object QRShape2: TQRShape
-        Left = 675
-        Top = 65
-        Width = 366
-        Height = 90
+        Left = 844
+        Top = 81
+        Width = 458
+        Height = 113
         Size.Values = (
           238.125000000000000000
           1785.937500000000000000
@@ -147,15 +147,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object qrlblSOCaption: TQRLabel
-        Left = 613
-        Top = 2
-        Width = 417
-        Height = 56
+        Left = 762
+        Top = 3
+        Width = 529
+        Height = 70
         Size.Values = (
           148.166666666666700000
-          1621.895833333333000000
-          5.291666666666667000
-          1103.312500000000000000)
+          1612.900000000000000000
+          6.350000000000000000
+          1119.716666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -165,7 +165,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -48
+        Font.Height = -60
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -176,15 +176,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 36
       end
       object QRLabel2: TQRLabel
-        Left = 691
-        Top = 102
-        Width = 77
-        Height = 14
+        Left = 864
+        Top = 128
+        Width = 91
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          269.875000000000000000
-          203.729166666666700000)
+          38.100000000000000000
+          1828.800000000000000000
+          270.933333333333300000
+          192.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -194,7 +194,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -205,15 +205,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object QRDBText1: TQRDBText
-        Left = 945
-        Top = 101
-        Width = 82
-        Height = 16
+        Left = 1186
+        Top = 126
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2500.312500000000000000
-          267.229166666666700000
-          216.958333333333300000)
+          2510.366666666667000000
+          266.700000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -224,7 +224,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Date_Raised'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -237,15 +237,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object QRDBText2: TQRDBText
-        Left = 920
-        Top = 73
-        Width = 107
-        Height = 16
+        Left = 1149
+        Top = 91
+        Width = 135
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2434.166666666667000000
-          193.145833333333300000
-          283.104166666666700000)
+          2432.050000000000000000
+          192.616666666666700000
+          285.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -256,7 +256,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Purchase_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -269,15 +269,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 691
-        Top = 73
-        Width = 124
-        Height = 14
+        Left = 864
+        Top = 91
+        Width = 147
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          193.145833333333300000
-          328.083333333333300000)
+          38.100000000000000000
+          1828.800000000000000000
+          192.616666666666700000
+          311.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -287,7 +287,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -297,45 +297,16 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VerticalAlignment = tlTop
         FontSize = 9
       end
-      object QRLabel1: TQRLabel
-        Left = 19
-        Top = 180
-        Width = 57
-        Height = 17
-        Size.Values = (
-          44.979166666666670000
-          50.270833333333330000
-          476.250000000000000000
-          150.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Customer'
-        Color = clWhite
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Lucida Sans'
-        Font.Style = []
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
       object QRLabel9: TQRLabel
-        Left = 30
-        Top = 309
-        Width = 221
-        Height = 14
+        Left = 38
+        Top = 386
+        Width = 255
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          79.375000000000000000
-          817.562500000000000000
-          584.729166666666700000)
+          38.100000000000000000
+          80.433333333333330000
+          817.033333333333300000
+          539.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -345,7 +316,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -356,15 +327,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object QRLabel12: TQRLabel
-        Left = 678
-        Top = 309
-        Width = 65
-        Height = 14
+        Left = 848
+        Top = 386
+        Width = 73
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1793.875000000000000000
-          817.562500000000000000
-          171.979166666666700000)
+          38.100000000000000000
+          1794.933333333333000000
+          817.033333333333300000
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -374,7 +345,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -385,15 +356,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object QRLabel14: TQRLabel
-        Left = 802
-        Top = 309
-        Width = 64
-        Height = 14
+        Left = 1002
+        Top = 386
+        Width = 75
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          2121.958333333333000000
-          817.562500000000000000
-          169.333333333333300000)
+          38.100000000000000000
+          2120.900000000000000000
+          817.033333333333300000
+          158.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -403,7 +374,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -414,15 +385,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object QRLabel15: TQRLabel
-        Left = 965
-        Top = 309
-        Width = 71
-        Height = 14
+        Left = 1214
+        Top = 386
+        Width = 81
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          2553.229166666667000000
-          817.562500000000000000
-          187.854166666666700000)
+          38.100000000000000000
+          2569.633333333333000000
+          817.033333333333300000
+          171.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -432,7 +403,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -443,10 +414,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object memAddress: TQRRichText
-        Left = 56
-        Top = 83
-        Width = 281
-        Height = 62
+        Left = 70
+        Top = 104
+        Width = 351
+        Height = 78
         Size.Values = (
           164.041666666666700000
           148.166666666666700000
@@ -468,10 +439,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         YIncrement = 50
       end
       object QRShape6: TQRShape
-        Left = 821
-        Top = 64
-        Width = 9
-        Height = 90
+        Left = 1026
+        Top = 80
+        Width = 11
+        Height = 113
         Size.Values = (
           238.125000000000000000
           2172.229166666667000000
@@ -484,10 +455,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object QRShape3: TQRShape
-        Left = 675
-        Top = 93
-        Width = 366
-        Height = 5
+        Left = 844
+        Top = 116
+        Width = 458
+        Height = 6
         Size.Values = (
           13.229166666666670000
           1785.937500000000000000
@@ -500,10 +471,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object gtQRShape1: TQRShape
-        Left = 675
-        Top = 123
-        Width = 366
-        Height = 3
+        Left = 844
+        Top = 154
+        Width = 458
+        Height = 4
         Size.Values = (
           7.937500000000000000
           1785.937500000000000000
@@ -516,14 +487,14 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object QRShape1: TQRShape
-        Left = 0
-        Top = 152
-        Width = 336
-        Height = 140
+        Left = 2
+        Top = 188
+        Width = 420
+        Height = 175
         Size.Values = (
           370.416666666666700000
-          0.000000000000000000
-          402.166666666666700000
+          4.233333333333333000
+          397.933333333333300000
           889.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -532,14 +503,14 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object qrmAddress: TQRMemo
-        Left = 9
-        Top = 175
-        Width = 320
-        Height = 109
+        Left = 11
+        Top = 222
+        Width = 400
+        Height = 136
         Size.Values = (
-          288.395833333333300000
-          23.812500000000000000
-          463.020833333333300000
+          287.866666666666700000
+          23.283333333333330000
+          469.900000000000000000
           846.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -550,7 +521,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -560,15 +531,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel1: TQRLabel
-        Left = 691
-        Top = 134
-        Width = 99
-        Height = 14
+        Left = 864
+        Top = 168
+        Width = 115
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          354.541666666666700000
-          261.937500000000000000)
+          38.100000000000000000
+          1828.800000000000000000
+          355.600000000000000000
+          243.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -578,7 +549,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -589,10 +560,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRDBText1: TQRDBText
-        Left = 888
-        Top = 133
-        Width = 139
-        Height = 14
+        Left = 1110
+        Top = 166
+        Width = 174
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2349.500000000000000000
@@ -609,7 +580,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Date_Required'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -621,45 +592,16 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VerticalAlignment = tlTop
         FontSize = 9
       end
-      object gtQRLabel2: TQRLabel
-        Left = 9
-        Top = 156
-        Width = 54
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          23.812500000000000000
-          412.750000000000000000
-          142.875000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Supplier'
-        Color = clWhite
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Lucida Sans'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 9
-      end
       object gtQRLabel5: TQRLabel
-        Left = 888
-        Top = 309
-        Width = 61
-        Height = 14
+        Left = 1110
+        Top = 386
+        Width = 69
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           2349.500000000000000000
-          817.562500000000000000
-          161.395833333333300000)
+          817.033333333333300000
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -669,7 +611,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -680,15 +622,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel6: TQRLabel
-        Left = 616
-        Top = 309
-        Width = 25
-        Height = 14
+        Left = 770
+        Top = 386
+        Width = 29
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           1629.833333333333000000
-          817.562500000000000000
-          66.145833333333330000)
+          817.033333333333300000
+          61.383333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -698,7 +640,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -709,15 +651,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel7: TQRLabel
-        Left = 4
-        Top = 309
-        Width = 19
-        Height = 14
+        Left = 5
+        Top = 386
+        Width = 22
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           10.583333333333330000
-          817.562500000000000000
-          50.270833333333330000)
+          817.033333333333300000
+          46.566666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -727,7 +669,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -738,15 +680,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel9: TQRLabel
-        Left = 411
-        Top = 309
-        Width = 95
-        Height = 14
+        Left = 514
+        Top = 386
+        Width = 113
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1087.437500000000000000
-          817.562500000000000000
-          251.354166666666700000)
+          38.100000000000000000
+          1087.966666666667000000
+          817.033333333333300000
+          239.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -756,7 +698,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -767,15 +709,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel10: TQRLabel
-        Left = 520
-        Top = 309
-        Width = 64
-        Height = 14
+        Left = 650
+        Top = 386
+        Width = 76
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           1375.833333333333000000
-          817.562500000000000000
-          169.333333333333300000)
+          817.033333333333300000
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -785,7 +727,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -796,10 +738,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRShape3: TQRShape
-        Left = 675
-        Top = 173
-        Width = 366
-        Height = 119
+        Left = 844
+        Top = 216
+        Width = 458
+        Height = 149
         Size.Values = (
           314.854166666666700000
           1785.937500000000000000
@@ -812,15 +754,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object gtQRLabel11: TQRLabel
-        Left = 691
-        Top = 211
-        Width = 74
-        Height = 14
+        Left = 864
+        Top = 264
+        Width = 84
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          558.270833333333300000
-          195.791666666666700000)
+          38.100000000000000000
+          1828.800000000000000000
+          558.800000000000000000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -830,7 +772,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -841,10 +783,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRDBText6: TQRDBText
-        Left = 832
-        Top = 210
-        Width = 195
-        Height = 14
+        Left = 1040
+        Top = 262
+        Width = 244
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2201.333333333333000000
@@ -861,7 +803,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Office_Contact_Telephone'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -874,15 +816,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRDBText7: TQRDBText
-        Left = 879
-        Top = 180
-        Width = 148
-        Height = 16
+        Left = 1094
+        Top = 225
+        Width = 190
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2325.687500000000000000
+          2315.633333333333000000
           476.250000000000000000
-          391.583333333333300000)
+          402.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -893,7 +835,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Office_Contact_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -906,15 +848,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 10
       end
       object gtQRLabel12: TQRLabel
-        Left = 691
-        Top = 180
-        Width = 86
-        Height = 14
+        Left = 864
+        Top = 225
+        Width = 100
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
+          38.100000000000000000
+          1828.800000000000000000
           476.250000000000000000
-          227.541666666666700000)
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -924,7 +866,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -935,10 +877,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRShape4: TQRShape
-        Left = 821
-        Top = 173
-        Width = 9
-        Height = 119
+        Left = 1026
+        Top = 216
+        Width = 11
+        Height = 149
         Size.Values = (
           314.854166666666700000
           2172.229166666667000000
@@ -951,10 +893,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object gtQRShape5: TQRShape
-        Left = 675
-        Top = 201
-        Width = 366
-        Height = 4
+        Left = 844
+        Top = 251
+        Width = 458
+        Height = 5
         Size.Values = (
           10.583333333333330000
           1785.937500000000000000
@@ -967,10 +909,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object gtQRShape6: TQRShape
-        Left = 675
-        Top = 231
-        Width = 366
-        Height = 2
+        Left = 844
+        Top = 289
+        Width = 458
+        Height = 3
         Size.Values = (
           5.291666666666667000
           1785.937500000000000000
@@ -983,15 +925,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object gtQRLabel13: TQRLabel
-        Left = 691
-        Top = 239
-        Width = 40
-        Height = 14
+        Left = 864
+        Top = 299
+        Width = 46
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          632.354166666666700000
-          105.833333333333300000)
+          38.100000000000000000
+          1828.800000000000000000
+          632.883333333333300000
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1001,7 +943,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1012,10 +954,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRShape7: TQRShape
-        Left = 675
-        Top = 261
-        Width = 366
-        Height = 2
+        Left = 844
+        Top = 326
+        Width = 458
+        Height = 3
         Size.Values = (
           5.291666666666667000
           1785.937500000000000000
@@ -1028,15 +970,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object gtQRLabel14: TQRLabel
-        Left = 691
-        Top = 270
-        Width = 94
-        Height = 14
+        Left = 864
+        Top = 338
+        Width = 109
+        Height = 18
         Size.Values = (
-          37.041666666666670000
-          1828.270833333333000000
-          714.375000000000000000
-          248.708333333333300000)
+          38.100000000000000000
+          1828.800000000000000000
+          715.433333333333300000
+          230.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1046,7 +988,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1057,10 +999,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRDBText10: TQRDBText
-        Left = 832
-        Top = 270
-        Width = 195
-        Height = 14
+        Left = 1040
+        Top = 338
+        Width = 244
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2201.333333333333000000
@@ -1077,7 +1019,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Reference'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1090,10 +1032,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRDBText2: TQRDBText
-        Left = 832
-        Top = 239
-        Width = 195
-        Height = 14
+        Left = 1040
+        Top = 299
+        Width = 244
+        Height = 18
         Size.Values = (
           37.041666666666670000
           2201.333333333333000000
@@ -1110,7 +1052,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Office_Contact_Email'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1123,10 +1065,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object qriHeadLogo: TQRImage
-        Left = 3
+        Left = 4
         Top = 0
-        Width = 385
-        Height = 81
+        Width = 481
+        Height = 101
         Size.Values = (
           214.312500000000000000
           7.937500000000000000
@@ -1137,20 +1079,49 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         ActiveInPreview = False
         Stretch = True
       end
+      object gtQRLabel2: TQRLabel
+        Left = 11
+        Top = 196
+        Width = 62
+        Height = 20
+        Size.Values = (
+          42.333333333333330000
+          23.283333333333330000
+          414.866666666666700000
+          131.233333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Supplier'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Lucida Sans'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 9
+      end
     end
     object qrsdPOLines: TQRSubDetail
-      Left = 38
-      Top = 371
-      Width = 1047
-      Height = 23
+      Left = 47
+      Top = 464
+      Width = 1309
+      Height = 29
       AlignToBottom = False
       BeforePrint = qrsdPOLinesBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        60.854166666666670000
-        2770.187500000000000000)
+        61.383333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -1158,10 +1129,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       PrintBefore = False
       PrintIfEmpty = True
       object gtQRDBText8: TQRDBText
-        Left = 521
-        Top = 4
-        Width = 71
-        Height = 16
+        Left = 651
+        Top = 5
+        Width = 89
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1378.479166666667000000
@@ -1178,7 +1149,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Sales_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1191,15 +1162,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object qrlblSlabDescription: TQRLabel
-        Left = 388
-        Top = 4
-        Width = 119
-        Height = 16
+        Left = 486
+        Top = 5
+        Width = 148
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1026.583333333333000000
+          1028.700000000000000000
           10.583333333333330000
-          314.854166666666700000)
+          313.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1209,7 +1180,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1220,15 +1191,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object qrlblTotalLineCost: TQRLabel
-        Left = 928
-        Top = 4
-        Width = 107
-        Height = 16
+        Left = 1160
+        Top = 5
+        Width = 134
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2455.333333333333000000
           10.583333333333330000
-          283.104166666666700000)
+          283.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1238,7 +1209,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1249,15 +1220,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object QRDBText7: TQRDBText
-        Left = 590
-        Top = 4
-        Width = 51
-        Height = 16
+        Left = 739
+        Top = 5
+        Width = 63
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1561.041666666667000000
+          1564.216666666667000000
           10.583333333333330000
-          134.937500000000000000)
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1268,7 +1239,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         DataField = 'Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1281,10 +1252,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtlblLineCount: TQRLabel
-        Left = 9
-        Top = 4
-        Width = 86
-        Height = 16
+        Left = 11
+        Top = 5
+        Width = 108
+        Height = 20
         Size.Values = (
           42.333333333333330000
           23.812500000000000000
@@ -1300,7 +1271,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1311,15 +1282,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object qrlblUnitCost: TQRLabel
-        Left = 667
-        Top = 4
-        Width = 77
-        Height = 16
+        Left = 833
+        Top = 5
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1764.770833333333000000
+          1763.183333333333000000
           10.583333333333330000
-          203.729166666666700000)
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1329,7 +1300,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1340,15 +1311,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object qrlblLineCost: TQRLabel
-        Left = 790
-        Top = 4
-        Width = 77
-        Height = 16
+        Left = 986
+        Top = 5
+        Width = 97
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2090.208333333333000000
+          2087.033333333333000000
           10.583333333333330000
-          203.729166666666700000)
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1358,7 +1329,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1369,10 +1340,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object qrlblDiscountValue: TQRLabel
-        Left = 836
-        Top = 4
-        Width = 112
-        Height = 16
+        Left = 1045
+        Top = 5
+        Width = 140
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2211.916666666667000000
@@ -1387,7 +1358,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1398,10 +1369,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object qrlblDescription: TQRLabel
-        Left = 30
-        Top = 4
-        Width = 355
-        Height = 16
+        Left = 38
+        Top = 5
+        Width = 444
+        Height = 20
         Size.Values = (
           42.333333333333330000
           79.375000000000000000
@@ -1418,7 +1389,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1430,25 +1401,25 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       end
     end
     object qrbPOFooter: TQRBand
-      Left = 38
-      Top = 418
-      Width = 1047
-      Height = 150
+      Left = 46
+      Top = 523
+      Width = 1309
+      Height = 188
       AlignToBottom = True
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        396.875000000000000000
-        2770.187500000000000000)
+        397.933333333333300000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageFooter
       object qrshpPayment: TQRShape
-        Left = 368
-        Top = 22
-        Width = 370
-        Height = 123
+        Left = 460
+        Top = 27
+        Width = 462
+        Height = 154
         Size.Values = (
           325.437500000000000000
           973.666666666666700000
@@ -1461,10 +1432,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object QRShape10: TQRShape
-        Left = 882
-        Top = 9
-        Width = 159
-        Height = 32
+        Left = 1102
+        Top = 11
+        Width = 199
+        Height = 40
         Size.Values = (
           84.666666666666670000
           2333.625000000000000000
@@ -1477,15 +1448,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object qrlblNett: TQRLabel
-        Left = 972
-        Top = 17
-        Width = 61
-        Height = 16
+        Left = 1222
+        Top = 21
+        Width = 69
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2571.750000000000000000
-          44.979166666666670000
-          161.395833333333300000)
+          2586.566666666667000000
+          44.450000000000000000
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1495,7 +1466,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1506,15 +1477,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel4: TQRLabel
-        Left = 760
-        Top = 17
-        Width = 116
-        Height = 16
+        Left = 957
+        Top = 21
+        Width = 138
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2010.833333333333000000
-          44.979166666666670000
-          306.916666666666700000)
+          2025.650000000000000000
+          44.450000000000000000
+          292.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1524,7 +1495,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1536,9 +1507,9 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       end
       object QRShape9: TQRShape
         Left = 0
-        Top = 6
-        Width = 1042
-        Height = 7
+        Top = 8
+        Width = 1302
+        Height = 9
         Size.Values = (
           18.520833333333330000
           0.000000000000000000
@@ -1551,10 +1522,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object memDeliveryNotes: TQRMemo
-        Left = 374
-        Top = 41
-        Width = 355
-        Height = 90
+        Left = 468
+        Top = 51
+        Width = 444
+        Height = 113
         Size.Values = (
           238.125000000000000000
           989.541666666666700000
@@ -1569,7 +1540,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         Lines.Strings = (
@@ -1581,15 +1552,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel16: TQRLabel
-        Left = 374
-        Top = 25
-        Width = 98
-        Height = 16
+        Left = 468
+        Top = 31
+        Width = 113
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          989.541666666666700000
-          66.145833333333330000
-          259.291666666666700000)
+          990.600000000000000000
+          65.616666666666670000
+          239.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1599,7 +1570,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1611,9 +1582,9 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       end
       object gtQRShape2: TQRShape
         Left = 0
-        Top = 22
-        Width = 336
-        Height = 123
+        Top = 27
+        Width = 420
+        Height = 154
         Size.Values = (
           325.437500000000000000
           0.000000000000000000
@@ -1626,10 +1597,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         VertAdjust = 0
       end
       object qrmDeliveryAddress: TQRMemo
-        Left = 12
-        Top = 46
-        Width = 313
-        Height = 90
+        Left = 15
+        Top = 57
+        Width = 391
+        Height = 113
         Size.Values = (
           238.125000000000000000
           31.750000000000000000
@@ -1644,7 +1615,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1654,15 +1625,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         FontSize = 9
       end
       object gtQRLabel3: TQRLabel
-        Left = 12
-        Top = 27
-        Width = 75
-        Height = 14
+        Left = 15
+        Top = 34
+        Width = 88
+        Height = 18
         Size.Values = (
-          37.041666666666670000
+          38.100000000000000000
           31.750000000000000000
-          71.437500000000000000
-          198.437500000000000000)
+          71.966666666666670000
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1672,7 +1643,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1684,10 +1655,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       end
     end
     object gtQRShape9: TQRShape
-      Left = 1078
-      Top = 337
+      Left = 1347
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2852.208333333333000000
@@ -1700,15 +1671,15 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape10: TQRShape
-      Left = 38
-      Top = 337
+      Left = 47
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
-        735.541666666666700000
-        100.541666666666700000
-        891.645833333333300000
-        2.645833333333333000)
+        736.600000000000000000
+        99.483333333333330000
+        891.116666666666700000
+        2.116666666666667000)
       XLColumn = 0
       XLNumFormat = nfGeneral
       ActiveInPreview = False
@@ -1716,10 +1687,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape11: TQRShape
-      Left = 993
-      Top = 337
+      Left = 1241
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2627.312500000000000000
@@ -1732,10 +1703,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape8: TQRShape
-      Left = 920
-      Top = 337
+      Left = 1150
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2434.166666666667000000
@@ -1748,10 +1719,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape12: TQRShape
-      Left = 798
-      Top = 337
+      Left = 998
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         2111.375000000000000000
@@ -1764,10 +1735,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape15: TQRShape
-      Left = 628
-      Top = 337
+      Left = 785
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1661.583333333333000000
@@ -1780,10 +1751,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape16: TQRShape
-      Left = 551
-      Top = 337
+      Left = 689
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1457.854166666667000000
@@ -1796,10 +1767,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape17: TQRShape
-      Left = 427
-      Top = 337
+      Left = 534
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1129.770833333333000000
@@ -1812,10 +1783,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape18: TQRShape
-      Left = 63
-      Top = 337
+      Left = 79
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         166.687500000000000000
@@ -1828,10 +1799,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object gtQRShape13: TQRShape
-      Left = 687
-      Top = 337
+      Left = 859
+      Top = 421
       Width = 1
-      Height = 278
+      Height = 348
       Size.Values = (
         735.541666666666700000
         1817.687500000000000000
@@ -1844,27 +1815,27 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
     object ChildBand1: TQRChildBand
-      Left = 38
-      Top = 394
-      Width = 1047
-      Height = 22
+      Left = 47
+      Top = 493
+      Width = 1309
+      Height = 27
       AlignToBottom = False
       BeforePrint = ChildBand1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        58.208333333333330000
-        2770.187500000000000000)
+        57.150000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrsdPOLines
       PrintOrder = cboAfterParent
       object qrlblCustomerReference: TQRLabel
-        Left = 30
-        Top = 4
-        Width = 355
-        Height = 16
+        Left = 38
+        Top = 5
+        Width = 444
+        Height = 20
         Size.Values = (
           42.333333333333330000
           79.375000000000000000
@@ -1881,7 +1852,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -1893,10 +1864,10 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       end
     end
     object qrbPurchaseOrderFooter: TQRBand
-      Left = 38
-      Top = 416
-      Width = 1047
-      Height = 2
+      Left = 47
+      Top = 520
+      Width = 1309
+      Height = 3
       AfterPrint = qrbPurchaseOrderFooterAfterPrint
       AlignToBottom = True
       BeforePrint = qrbPurchaseOrderFooterBeforePrint
@@ -1904,8 +1875,8 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
-        2770.187500000000000000)
+        6.350000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter

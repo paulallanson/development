@@ -3,91 +3,41 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   Top = 127
   BorderStyle = bsDialog
   Caption = 'Remedial Reason Type Report'
-  ClientHeight = 340
-  ClientWidth = 621
+  ClientHeight = 392
+  ClientWidth = 623
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    621
-    340)
-  TextHeight = 13
-  object PrintBitBtn: TBitBtn
-    Left = 541
-    Top = 307
-    Width = 75
-    Height = 25
-    Anchors = [akLeft, akBottom]
-    Caption = 'Print'
-    Glyph.Data = {
-      76010000424D7601000000000000760000002800000020000000100000000100
-      04000000000000010000130B0000130B00001000000000000000000000000000
-      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-      00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
-      8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
-      8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
-      8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
-      03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
-      03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
-      33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
-      33333337FFFF7733333333300000033333333337777773333333}
-    NumGlyphs = 2
-    TabOrder = 11
-    OnClick = PrintBitBtnClick
-    ExplicitTop = 298
-  end
-  object PreviewBitBtn: TBitBtn
-    Left = 452
-    Top = 307
-    Width = 75
-    Height = 25
-    Anchors = [akLeft, akBottom]
-    Caption = 'Preview'
-    Glyph.Data = {
-      76010000424D7601000000000000760000002800000020000000100000000100
-      04000000000000010000130B0000130B00001000000000000000000000000000
-      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
-      33033333333333333F7F3333333333333000333333333333F777333333333333
-      000333333333333F777333333333333000333333333333F77733333333333300
-      033333333FFF3F777333333700073B703333333F7773F77733333307777700B3
-      33333377333777733333307F8F8F7033333337F333F337F3333377F8F9F8F773
-      3333373337F3373F3333078F898F870333337F33F7FFF37F333307F99999F703
-      33337F377777337F3333078F898F8703333373F337F33373333377F8F9F8F773
-      333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
-      333333773FF77333333333370007333333333333777333333333}
-    NumGlyphs = 2
-    TabOrder = 10
-    OnClick = PreviewBitBtnClick
-    ExplicitTop = 298
-  end
+    623
+    392)
+  TextHeight = 17
   object pnlReasonSearch: TPanel
-    Left = 139
-    Top = 88
+    Left = 142
+    Top = 100
     Width = 286
-    Height = 57
+    Height = 65
     ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 64
-      Height = 13
+      Width = 74
+      Height = 17
       Caption = 'Reason Type'
     end
     object cmbReason: TComboBox
       Left = 8
       Top = 27
       Width = 257
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -99,21 +49,10 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
         'All Reasons')
     end
   end
-  object CancelBitBtn: TBitBtn
-    Left = 8
-    Top = 307
-    Width = 75
-    Height = 25
-    Anchors = [akLeft, akBottom]
-    Kind = bkCancel
-    NumGlyphs = 2
-    TabOrder = 12
-    ExplicitTop = 298
-  end
   object GroupBox1: TGroupBox
-    Left = 5
-    Top = 219
-    Width = 180
+    Left = 4
+    Top = 253
+    Width = 200
     Height = 89
     Caption = 'Remedial Fitting Date Range'
     ParentBackground = False
@@ -121,22 +60,22 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'To: '
     end
     object edtDateFrom: TEdit
       Left = 48
       Top = 24
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtDateFromExit
     end
@@ -166,7 +105,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       Left = 48
       Top = 56
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtDateToExit
     end
@@ -194,10 +133,10 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpReason: TRadioGroup
-    Left = 5
-    Top = 80
+    Left = 4
+    Top = 92
     Width = 129
-    Height = 65
+    Height = 73
     Caption = 'Reason Type'
     ItemIndex = 0
     Items.Strings = (
@@ -209,24 +148,24 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object pnlDeptSearch: TPanel
     Left = 139
-    Top = 157
+    Top = 182
     Width = 286
-    Height = 57
+    Height = 65
     ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 53
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Caused by'
     end
     object cmbDept: TComboBox
       Left = 8
       Top = 27
       Width = 257
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -239,10 +178,10 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpDept: TRadioGroup
-    Left = 5
-    Top = 149
+    Left = 4
+    Top = 174
     Width = 129
-    Height = 65
+    Height = 73
     Caption = 'Caused By: '
     ItemIndex = 0
     Items.Strings = (
@@ -253,10 +192,10 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = rdgrpDeptClick
   end
   object TotByRadioGroup: TRadioGroup
-    Left = 480
+    Left = 461
     Top = 8
     Width = 137
-    Height = 129
+    Height = 153
     Caption = 'Report Totals'
     ItemIndex = 4
     Items.Strings = (
@@ -270,27 +209,27 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     OnClick = TotByRadioGroupClick
   end
   object chkbxPageBreak: TCheckBox
-    Left = 480
-    Top = 147
-    Width = 118
+    Left = 469
+    Top = 178
+    Width = 154
     Height = 17
     Caption = 'Page break by total'
     Enabled = False
     TabOrder = 8
   end
   object pnlExportPrgrss: TPanel
-    Left = 180
-    Top = 132
+    Left = 150
+    Top = 119
     Width = 289
     Height = 61
     ParentBackground = False
-    TabOrder = 13
+    TabOrder = 10
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -303,18 +242,18 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object OleContainer1: TOleContainer
-    Left = 256
-    Top = 56
+    Left = 216
+    Top = 37
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
     Color = clBtnFace
-    TabOrder = 14
+    TabOrder = 11
     Visible = False
   end
   object btnExcel: TBitBtn
-    Left = 354
-    Top = 307
+    Left = 192
+    Top = 359
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -364,13 +303,13 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
-    ExplicitTop = 298
+    ExplicitTop = 348
   end
   object rdgrpCategory: TRadioGroup
-    Left = 5
+    Left = 4
     Top = 8
     Width = 129
-    Height = 65
+    Height = 73
     Caption = 'Reported By: '
     ItemIndex = 0
     Items.Strings = (
@@ -384,22 +323,22 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Left = 139
     Top = 16
     Width = 286
-    Height = 57
+    Height = 65
     ParentBackground = False
     TabOrder = 1
     Visible = False
     object Label4: TLabel
       Left = 8
       Top = 8
-      Width = 62
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Reported By'
     end
     object cmbCategory: TComboBox
       Left = 8
       Top = 27
       Width = 257
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -412,10 +351,10 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     end
   end
   object rdgrpShow: TRadioGroup
-    Left = 480
+    Left = 461
     Top = 216
     Width = 137
-    Height = 89
+    Height = 92
     Caption = 'Show: '
     ItemIndex = 0
     Items.Strings = (
@@ -423,8 +362,40 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       'Completed'
       'Outstanding')
     ParentBackground = False
-    TabOrder = 15
+    TabOrder = 12
     OnClick = TotByRadioGroupClick
+  end
+  object btnPrint: TButton
+    Left = 4
+    Top = 358
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = 'Print'
+    TabOrder = 13
+    OnClick = btnPrintClick
+    ExplicitTop = 348
+  end
+  object btnPreview: TButton
+    Left = 98
+    Top = 358
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = 'Preview'
+    TabOrder = 14
+    OnClick = btnPreviewClick
+    ExplicitTop = 348
+  end
+  object Button4: TButton
+    Left = 523
+    Top = 359
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = 'Close'
+    ModalResult = 2
+    TabOrder = 15
   end
   object qryCategory: TFDQuery
     ConnectionName = 'WT'

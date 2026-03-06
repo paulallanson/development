@@ -217,7 +217,7 @@ begin
   end;
 
   try
-    qrlblCost.caption := formatfloat('0.00',qrySalesOrders.fieldbyname('Total_Materials').asfloat);
+    qrlblCost.caption := formatfloat('#,##0.00',qrySalesOrders.fieldbyname('Total_Materials').asfloat);
   except
     qrlblCost.caption := '0.00';
   end;
@@ -229,8 +229,8 @@ begin
   else
     rCostPerc := (qrySalesOrders.fieldbyname('Total_Materials').asfloat/qrySalesOrders.fieldbyname('Goods_Value').asfloat)*100;
 
-  qrlblMargin.caption := formatfloat('0.00',rMargin);
-  qrlblCostPerc.caption := formatfloat('0.00%',rCostPerc);
+  qrlblMargin.caption := formatfloat('#,##0.00',rMargin);
+  qrlblCostPerc.caption := formatfloat('#,##0.00%',rCostPerc);
 
   CustomerGoods := CustomerGoods + qrySalesOrders.fieldbyname('Goods_Value').asfloat;
   CustomerCost := CustomerCost + qrySalesOrders.fieldbyname('Total_Materials').asfloat;
@@ -254,18 +254,18 @@ end;
 procedure TfrmWTRPSOCostAnalysis.qrbGroupFooterBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 begin
-  qrlblCustGoods.caption := formatfloat('0.00',CustomerGoods);
-  qrlblCustCost.caption := formatfloat('0.00',CustomerCost);
+  qrlblCustGoods.caption := formatfloat('#,##0.00',CustomerGoods);
+  qrlblCustCost.caption := formatfloat('#,##0.00',CustomerCost);
 
-  qrlblCustMargin.caption := formatfloat('0.00',CustomerMargin);
+  qrlblCustMargin.caption := formatfloat('#,##0.00',CustomerMargin);
 
   try
     if CustomerGoods = 0 then
       qrlblCustPerc.caption := '999.99%'
     else
-      qrlblCustPerc.caption := formatfloat('0.00%',(CustomerCost/CustomerGoods)*100);
+      qrlblCustPerc.caption := formatfloat('#,##0.00%',(CustomerCost/CustomerGoods)*100);
   except
-    qrlblCustPerc.caption := formatfloat('0.00%',999.99);
+    qrlblCustPerc.caption := formatfloat('#,##0.00%',999.99);
   end;
 end;
 
@@ -366,17 +366,17 @@ end;
 procedure TfrmWTRPSOCostAnalysis.QRBand2BeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-  qrlblReportGoods.caption := formatfloat('0.00',ReportGoods);
-  qrlblReportCost.caption := formatfloat('0.00',ReportCost);
-  qrlblReportMargin.caption := formatfloat('0.00',ReportMargin);
+  qrlblReportGoods.caption := formatfloat('#,##0.00',ReportGoods);
+  qrlblReportCost.caption := formatfloat('#,##0.00',ReportCost);
+  qrlblReportMargin.caption := formatfloat('#,##0.00',ReportMargin);
 
   try
     if ReportGoods = 0 then
       qrlblReportPerc.caption := '999.99%'
     else
-      qrlblReportPerc.caption := formatfloat('0.00%',(ReportCost/ReportGoods)*100);
+      qrlblReportPerc.caption := formatfloat('#,##0.00%',(ReportCost/ReportGoods)*100);
   except
-    qrlblReportPerc.caption := formatfloat('0.00%',999.99);
+    qrlblReportPerc.caption := formatfloat('#,##0.00%',999.99);
   end;
 
 end;

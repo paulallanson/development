@@ -116,6 +116,7 @@ type
     qrlblLabourCharge: TQRLabel;
     qryGetReverseCharge: TFDQuery;
     qrlblReverseCharge: TQRLabel;
+    QRLabel1: TQRLabel;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:

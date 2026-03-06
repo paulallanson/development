@@ -1220,9 +1220,9 @@ var
 begin
   DirDlg := TDirDlg.Create(Self);
   try
-     DirDlg.InitialPath := edtCustomerDocumentDirectory.Text;
+     DirDlg.InitialPath := edtSupplierDocumentDirectory.Text;
     if DirDlg.Execute then
-      edtCustomerDocumentDirectory.text := DirDlg.Pathname;
+      edtSupplierDocumentDirectory.text := DirDlg.Pathname;
   finally
     DirDlg.Free;
   end;

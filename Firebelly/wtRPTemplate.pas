@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, Printers, QrExport,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -103,6 +103,8 @@ var
 
 implementation
 
+uses wtDataModule, qrprntr, AllCommon;
+
 {$R *.dfm}
 
 function TfrmwtRPTemplate.Getdetails: integer;
@@ -131,10 +133,25 @@ end;
 
 procedure TfrmwtRPTemplate.qrpDetailsBeforePrint(Sender: TCustomQuickRep;
   var PrintReport: Boolean);
+var
+  TopMar, BottomMar, LeftMar, RightMar: Double;
+  Copies: Integer;
+  Bin: TQRBin;
+  Size: TQRPaperSize;
+  Duplex: Boolean;
 begin
+  {set the printer to what the user selected}
+  qrpDetails.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
+  GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
+  GetPrinterValues(Copies, Bin, Size, Duplex);
+  qrpDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }
+  qrpDetails.PrinterSettings.copies := Copies;   {set the number of copies }
+  qrpDetails.PrinterSettings.PaperSize := Size;   {set the number of copies }
+
   qrbPageHeader.Enabled := true;
 
   sWorktop := '';
+
   with qryCompany do
     begin
       close;

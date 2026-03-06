@@ -2,8 +2,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   Left = 86
   Top = 116
   Caption = 'Job details'
-  ClientHeight = 386
-  ClientWidth = 1052
+  ClientHeight = 377
+  ClientWidth = 1046
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 367
-    Width = 1052
+    Top = 358
+    Width = 1046
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmwtLUJobs: TfrmwtLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 326
-    Width = 1052
+    Top = 317
+    Width = 1046
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1052
+      1046
       41)
     object Label1: TLabel
       Left = 6
@@ -55,16 +55,17 @@ object frmwtLUJobs: TfrmwtLUJobs
       Caption = 'Customer Search'
     end
     object Label3: TLabel
-      Left = 764
+      Left = 752
       Top = 12
       Width = 73
       Height = 17
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Job Number'
+      ExplicitLeft = 764
     end
     object Button1: TButton
-      Left = 951
+      Left = 939
       Top = 8
       Width = 75
       Height = 25
@@ -82,7 +83,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 843
+      Left = 831
       Top = 8
       Width = 73
       Height = 25
@@ -103,20 +104,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 41
-    Width = 1052
+    Width = 1046
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1046
+        Width = 1040
       end>
-    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1037
+      Width = 1031
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 68
@@ -223,14 +223,14 @@ object frmwtLUJobs: TfrmwtLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 86
-    Width = 1052
-    Height = 240
+    Width = 1046
+    Height = 231
     Align = alClient
     DataSource = dtmdlJob.dtsAllJobs
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -288,7 +288,6 @@ object frmwtLUJobs: TfrmwtLUJobs
         Expanded = False
         FieldName = 'Installation_price'
         Title.Caption = 'Install Price'
-        Width = 74
         Visible = True
       end
       item
@@ -376,19 +375,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1052
+    Width = 1046
     Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 41
-        Width = 1046
+        Width = 1040
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1037
+      Width = 1031
       Height = 41
       Align = alLeft
       BevelOuter = bvNone
@@ -396,7 +395,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1037
+        1031
         41)
       object Label2: TLabel
         Left = 0
@@ -427,7 +426,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 771
+        Left = 765
         Top = 12
         Width = 81
         Height = 15
@@ -439,9 +438,10 @@ object frmwtLUJobs: TfrmwtLUJobs
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 771
       end
       object cmbCustomerFilter: TComboBox
-        Left = 863
+        Left = 857
         Top = 7
         Width = 145
         Height = 25

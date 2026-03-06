@@ -3,35 +3,35 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Sales Order Production Report'
-  ClientHeight = 296
-  ClientWidth = 500
+  ClientHeight = 311
+  ClientWidth = 528
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    500
-    296)
-  TextHeight = 13
+    528
+    311)
+  TextHeight = 17
   object lstbxCustomersCode: TListBox
     Left = 96
     Top = 16
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 10
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
-    Top = 136
+    Top = 141
     Width = 105
-    Height = 90
+    Height = 121
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -44,17 +44,18 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
   end
   object btnPrint: TButton
     Left = 8
-    Top = 259
+    Top = 274
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 259
   end
   object Button4: TButton
     Left = 416
-    Top = 259
+    Top = 274
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -62,12 +63,13 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 259
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 16
     Width = 105
-    Height = 57
+    Height = 73
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -79,47 +81,47 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
   end
   object grpbxDateSelect: TGroupBox
     Left = 8
-    Top = 136
+    Top = 141
     Width = 209
-    Height = 73
+    Height = 81
     Caption = 'Fitting Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Top = 24
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Top = 54
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 20
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 50
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 20
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -141,7 +143,7 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 50
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -164,7 +166,7 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
   end
   object grpbxCustomer: TGroupBox
     Left = 120
-    Top = 16
+    Top = 23
     Width = 249
     Height = 113
     Enabled = False
@@ -172,9 +174,9 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 10
-      Width = 49
-      Height = 13
+      Top = 5
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object btnCustomer: TButton
@@ -197,7 +199,7 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Customers')
       MultiSelect = True
@@ -207,23 +209,25 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
   end
   object btnPreview: TButton
     Left = 96
-    Top = 259
+    Top = 274
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 5
     OnClick = btnPreviewClick
+    ExplicitTop = 259
   end
   object btnExcel: TButton
     Left = 184
-    Top = 259
+    Top = 274
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 6
     OnClick = btnExcelClick
+    ExplicitTop = 259
   end
   object OleContainer1: TOleContainer
     Left = 180
@@ -246,8 +250,8 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -262,8 +266,8 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
   object rdgrpSelectBy: TRadioGroup
     Left = 384
     Top = 16
-    Width = 105
-    Height = 73
+    Width = 121
+    Height = 105
     Caption = 'Select by '
     ItemIndex = 0
     Items.Strings = (
@@ -276,8 +280,8 @@ object frmWTRSSOProduction: TfrmWTRSSOProduction
   end
   object chkbxSplitByMaterialType: TCheckBox
     Left = 8
-    Top = 215
-    Width = 153
+    Top = 228
+    Width = 218
     Height = 18
     Caption = 'Show split by Material Type'
     Checked = True

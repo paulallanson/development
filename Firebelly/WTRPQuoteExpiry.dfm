@@ -13,8 +13,8 @@ object frmwtRPQuoteExpiry: TfrmwtRPQuoteExpiry
   Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 16
-    Top = 16
+    Left = -24
+    Top = 8
     Width = 1403
     Height = 992
     ShowingPreview = False
@@ -1273,7 +1273,7 @@ object frmwtRPQuoteExpiry: TfrmwtRPQuoteExpiry
     end
     object QRBand2: TQRBand
       Left = 47
-      Top = 232
+      Top = 233
       Width = 1309
       Height = 32
       AfterPrint = QRBand2AfterPrint
@@ -1443,7 +1443,7 @@ object frmwtRPQuoteExpiry: TfrmwtRPQuoteExpiry
       '                (ReQuote.Quote <> ReQuote.Original_Quote) and'
       
         '                ((ReQuote.Original_Quote <> 0) and (ReQuote.Orig' +
-        'inal_Quote <> NULL))) as Requote_Count'
+        'inal_Quote IS NOT NULL))) as Requote_Count'
       'FROM Address'
       '      RIGHT JOIN (Operator'
       '      INNER JOIN (Vat'
@@ -1478,33 +1478,29 @@ object frmwtRPQuoteExpiry: TfrmwtRPQuoteExpiry
       item
         Name = 'Customer'
         DataType = ftInteger
-      end
-      item
-        Name = 'Customer'
-        DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Operator'
-      end
-      item
-        Name = 'Operator'
+        ParamType = ptInput
       end
       item
         Name = 'Date_From'
         DataType = ftDateTime
+        ParamType = ptInput
       end
       item
         Name = 'Date_To'
         DataType = ftDateTime
+        ParamType = ptInput
       end
       item
         Name = 'Is_Retail_Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Is_Commercial_Customer'
-      end
-      item
-        Name = 'Is_Retail_Customer'
+        ParamType = ptInput
       end>
   end
   object qryReQuote: TFDQuery

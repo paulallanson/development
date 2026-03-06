@@ -33,11 +33,6 @@ type
     QRLabel3: TQRLabel;
     QRDBText4: TQRDBText;
     QRLabel5: TQRLabel;
-    QRLabel17: TQRLabel;
-    QRLabel18: TQRLabel;
-    qrlblVAT: TQRLabel;
-    qrlblGross: TQRLabel;
-    qrlblNett: TQRLabel;
     qryEndUser: TFDQuery;
     QRLabel1: TQRLabel;
     qrySOLine: TFDQuery;
@@ -63,8 +58,6 @@ type
     qrlblUnitPrice: TQRLabel;
     qrlblTotalPrice: TQRLabel;
     qrySOLineQuote: TIntegerField;
-    qrlblDeposit: TQRLabel;
-    qrlblBalance: TQRLabel;
     QRLabel9: TQRLabel;
     QRLabel12: TQRLabel;
     QRLabel14: TQRLabel;
@@ -86,25 +79,12 @@ type
     gtQRLabel2: TQRLabel;
     gtQRLabel3: TQRLabel;
     QRShape7: TQRShape;
-    qrshpTotal: TQRShape;
-    QRShape13: TQRShape;
-    QRShape14: TQRShape;
-    QRShape15: TQRShape;
-    gtQRShape7: TQRShape;
     gtQRShape8: TQRShape;
     gtQRShape9: TQRShape;
     gtQRShape10: TQRShape;
     gtQRShape11: TQRShape;
-    gtQRLabel4: TQRLabel;
-    qrlblDepositToPay: TQRLabel;
-    QRShape9: TQRShape;
-    qrlblToPay: TQRLabel;
-    gtQRShape12: TQRShape;
-    memPayment: TQRMemo;
-    qrshpPayment: TQRShape;
     qryCompanyAddress: TFDQuery;
     GetNarrSQL: TFDQuery;
-    qrlblDepositTerms: TQRLabel;
     gtQRLabel7: TQRLabel;
     qrlblDescription: TQRLabel;
     gtQRDBText2: TQRDBText;
@@ -130,6 +110,26 @@ type
     qrlblExtraQuantity: TQRDBText;
     qrlblExtraDescription: TQRLabel;
     qriHeadLogo: TQRImage;
+    qrshpPayment: TQRShape;
+    qrshpTotal: TQRShape;
+    gtQRShape7: TQRShape;
+    QRShape15: TQRShape;
+    QRShape14: TQRShape;
+    QRShape13: TQRShape;
+    QRLabel17: TQRLabel;
+    QRLabel18: TQRLabel;
+    qrlblVAT: TQRLabel;
+    qrlblGross: TQRLabel;
+    qrlblNett: TQRLabel;
+    qrlblDeposit: TQRLabel;
+    qrlblBalance: TQRLabel;
+    gtQRLabel4: TQRLabel;
+    qrlblDepositToPay: TQRLabel;
+    QRShape9: TQRShape;
+    qrlblToPay: TQRLabel;
+    gtQRShape12: TQRShape;
+    memPayment: TQRMemo;
+    qrlblDepositTerms: TQRLabel;
     qrlblDepositPaid: TQRLabel;
     qrlblBalanceCaption: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
@@ -350,29 +350,6 @@ var
   rTotal, rNettTotal, rBalance, rToPay, rDeposit: real;
   sNett, sVat: string;
 begin
-(*  rTotal := qryReport.FieldByName('Nett_Price').Asfloat - qryReport.FieldByName('Discount_Value').Asfloat;
-  qrlblGrossPrice.Caption := formatfloat('#,##0.00',rTotal);
-  qrlblInstallation.Caption := formatfloat('#,##0.00',qryReport.FieldByName('Installation_Price').Asfloat);
-  qrlblSurvey.Caption := formatfloat('#,##0.00',qryReport.FieldByName('Survey_Price').Asfloat);
-  qrlblDelivery.Caption := formatfloat('#,##0.00',qryReport.FieldByName('Delivery_Price').Asfloat);
-
-  rNettTotal := (qryReport.FieldByName('Nett_Price').Asfloat - qryReport.FieldByName('Discount_Value').Asfloat)
-                + qryReport.FieldByName('Installation_Price').Asfloat
-                + qryReport.FieldByName('Survey_Price').Asfloat
-                + qryReport.FieldByName('Delivery_Price').Asfloat;
-  rVat := rNettTotal * (qryCustomer.fieldbyname('VAT_Rate').asfloat/100);
-*)
-
-(*  qrlblGrossPrice.Caption := formatfloat('#,##0.00',rLineTotal);
-  qrlblInstallation.Caption := formatfloat('#,##0.00',rInstallTotal);
-  qrlblSurvey.Caption := formatfloat('#,##0.00',rSurveyTotal);
-  qrlblDelivery.Caption := formatfloat('#,##0.00',rDeliveryTotal);
-
-  rNettTotal := rLineTotal
-                + rInstallTotal
-                + rDeliveryTotal
-                + rSurveyTotal;
-*)
 
   rNettTotal := rLineTotal;
 
@@ -530,6 +507,13 @@ end;
 procedure TfrmwtRPSOrder.qrbPageHeaderBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
+  qrlblNett.Caption := '';
+  qrlblVat.Caption := '';
+  qrlblGross.Caption := 'Page to Follow';
+  qrlblToPay.caption := '';
+  qrlblDeposit.caption := '';
+  qrlblBalance.caption := '';
+
   {Set the labels depending on the date type}
   if qryReport.fieldbyname('Date_Type').asstring = 'C' then
     begin
@@ -666,11 +650,11 @@ begin
       qrlblBalanceCaption.visible := false;
       qrlblBalance.enabled := false;
       qrlblBalance.visible := false;
-      qrshpTotal.Height := 154;
+      qrshpTotal.Height := 191;
 
-      qrlblToPay.Top := 107;
-      qrlblDepositToPay.Top := 107;
-      qrlblDepositTerms.Top := 107;
+      qrlblToPay.Top := 175;
+      qrlblDepositToPay.Top := 175;
+      qrlblDepositTerms.Top := 175;
 
       qrlblDepositPaid.Top := 140;
       qrlblDeposit.Top := 140;

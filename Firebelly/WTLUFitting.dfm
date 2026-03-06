@@ -35,8 +35,6 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Width = 50
       end>
-    ExplicitTop = 368
-    ExplicitWidth = 1247
   end
   object Panel1: TPanel
     Left = 0
@@ -46,7 +44,6 @@ object frmWTLUFitting: TfrmWTLUFitting
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 368
     DesignSize = (
       1288
       41)
@@ -58,13 +55,14 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1020
+      Left = 1008
       Top = 13
       Width = 69
       Height = 17
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
+      ExplicitLeft = 1020
     end
     object Label6: TLabel
       Left = 534
@@ -74,7 +72,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1193
+      Left = 1181
       Top = 9
       Width = 75
       Height = 25
@@ -92,7 +90,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1095
+      Left = 1083
       Top = 9
       Width = 73
       Height = 25
@@ -200,8 +198,6 @@ object frmWTLUFitting: TfrmWTLUFitting
         MinHeight = 41
         Width = 1282
       end>
-    ExplicitTop = 32
-    ExplicitWidth = 1247
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -338,6 +334,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Expanded = False
         FieldName = 'Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -365,6 +362,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
+        Width = 64
         Visible = True
       end
       item
@@ -433,6 +431,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Expanded = False
         FieldName = 'Quote'
+        Width = 64
         Visible = True
       end
       item
@@ -453,18 +452,21 @@ object frmWTLUFitting: TfrmWTLUFitting
         Expanded = False
         FieldName = 'Job'
         Title.Caption = 'Job Number'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
+        Width = 64
         Visible = True
       end>
   end
@@ -480,9 +482,6 @@ object frmWTLUFitting: TfrmWTLUFitting
         MinHeight = 41
         Width = 1282
       end>
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 1247
     object Panel3: TPanel
       Left = 11
       Top = 0
