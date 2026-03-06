@@ -3,33 +3,34 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Work in Progress Report'
-  ClientHeight = 183
-  ClientWidth = 486
+  ClientHeight = 223
+  ClientWidth = 510
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    486
-    183)
-  TextHeight = 13
+    510
+    223)
+  TextHeight = 17
   object btnRun: TButton
     Left = 8
-    Top = 150
+    Top = 190
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnRunClick
+    ExplicitTop = 141
   end
   object Button4: TButton
     Left = 400
-    Top = 150
+    Top = 190
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -37,12 +38,13 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 141
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 123
+    Height = 73
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -54,47 +56,47 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 72
+    Top = 92
     Width = 225
-    Height = 73
+    Height = 81
     Caption = 'Fitting Date selection'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Top = 25
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Top = 55
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 21
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 51
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 21
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -116,7 +118,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 51
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -138,25 +140,25 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 8
+    Left = 137
+    Top = 13
     Width = 233
-    Height = 57
+    Height = 68
     Enabled = False
     ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 12
-      Width = 49
-      Height = 13
+      Top = 4
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -165,7 +167,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     end
     object btnCustomer: TButton
       Left = 184
-      Top = 24
+      Top = 28
       Width = 25
       Height = 25
       Caption = '...'
@@ -180,10 +182,10 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 368
+    Left = 389
     Top = 8
     Width = 113
-    Height = 97
+    Height = 117
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -195,8 +197,8 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 368
-    Top = 112
+    Left = 389
+    Top = 142
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -204,8 +206,8 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   end
   object rdgrpValueBy: TRadioGroup
     Left = 240
-    Top = 72
-    Width = 113
+    Top = 92
+    Width = 143
     Height = 73
     Caption = 'Value by: '
     ItemIndex = 0
@@ -217,27 +219,29 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   end
   object Button1: TButton
     Left = 96
-    Top = 150
+    Top = 190
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 8
     OnClick = Button1Click
+    ExplicitTop = 141
   end
   object Button2: TButton
     Left = 184
-    Top = 150
+    Top = 190
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 9
     OnClick = Button2Click
+    ExplicitTop = 141
   end
   object OleContainer1: TOleContainer
-    Left = 212
-    Top = 27
+    Left = 224
+    Top = 166
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -246,8 +250,8 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 100
-    Top = 55
+    Left = 113
+    Top = 71
     Width = 289
     Height = 61
     ParentBackground = False
@@ -256,8 +260,8 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

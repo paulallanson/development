@@ -363,8 +363,10 @@ begin
   if QSlab.Parent.ContractQuote then
     begin
       dblkpWTThickness.keyvalue := QSlab.Parent.thickness;
-    end;
-    
+    end
+  else
+    dblkpWTThickness.keyvalue := self.thickness;
+
   enableok(self);
 end;
 
@@ -991,6 +993,7 @@ begin
   RefreshWorktops;
 
   dblkpWorktop.KeyValue := -1;
+  dblkpWTThickness.KeyValue := self.thickness;
   edtDepth.text := '';
   edtLength.text := '';
   edtWastePercentage.Text := '0';

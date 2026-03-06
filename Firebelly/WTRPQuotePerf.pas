@@ -70,10 +70,10 @@ type
     gtQRLabel1: TQRLabel;
     qryReQuote: TFDQuery;
     qrlblStatus: TQRLabel;
-    procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
-      var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
+    procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
+      var PrintReport: Boolean);
     procedure qrbCustomerFooterAfterPrint(Sender: TQRCustomBand;
       BandPrinted: Boolean);
     procedure qrbCustomerFooterBeforePrint(Sender: TQRCustomBand;
@@ -126,7 +126,7 @@ begin
 end;
 
 procedure TfrmwtRPQuotePerf.qrsbDetailsBeforePrint(Sender: TQRCustomBand;
-  var PrintBand: Boolean);
+      var PrintBand: Boolean);
 var
   CompleteTotal, QuoteTotal, VATTotal: real;
   RequoteCompleteTotal, RequoteCount: real;
@@ -138,8 +138,9 @@ begin
       PrintBand := false;
       exit;
     end;
-    
+
   RequoteCompleteTotal := 0.00;
+  ReQuoteTotal := 0.00;
   ReQuoteInstall := 0.00;
   ReQuoteSurvey := 0.00;
   ReQuoteDelivery := 0.00;
@@ -173,6 +174,7 @@ begin
 
   CompleteTotal := (CompleteTotal + RequoteCompleteTotal);
 
+  QuoteTotal := 0.00;
   QuoteTotal := CompleteTotal + ReQuoteTotal +
                       qryQuotes.fieldbyname('Installation_Price').asfloat +
                       qryQuotes.fieldbyname('Survey_Price').asfloat +

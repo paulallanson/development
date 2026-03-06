@@ -3,7 +3,7 @@ object frmwtRPQuoteDecline: TfrmwtRPQuoteDecline
   Top = 110
   Caption = 'Quote Decline Reason Report'
   ClientHeight = 579
-  ClientWidth = 1157
+  ClientWidth = 1289
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

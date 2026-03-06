@@ -14,8 +14,8 @@ object frmwtRPQuote: TfrmwtRPQuote
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 192
-    Top = -334
+    Left = 232
+    Top = -646
     Width = 992
     Height = 1403
     ShowingPreview = False

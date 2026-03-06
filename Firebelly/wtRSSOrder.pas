@@ -26,6 +26,7 @@ type
     rdgrpType: TRadioGroup;
     chkbxAttachTemplate: TCheckBox;
     chkbxAttachTerms: TCheckBox;
+    chkbxGrayscale: TCheckBox;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure EnableRun(Sender: TObject);
@@ -57,8 +58,10 @@ type
     procedure SetDefaultBin(const Value: integer);
     procedure SetDefaultPrinter(const Value: string);
     procedure SetPrinterBin(BinCode: integer);
+    procedure SetPrinterGrayScale;
     { Private declarations }
   public
+    bGrayscale: boolean;
     bRetail: boolean;
     bSpeculative: boolean;
     iCustomer: integer;
@@ -234,6 +237,14 @@ begin
 *)
               if SetUpPrinter(PrinterSettings) then
                 begin
+                  if chkbxGrayscale.checked then
+                    begin
+//                      SetPrinterGrayscale;
+                      frmwtRPSOrder.qrpDetails.PrinterSettings.ColorOption := 1
+                    end
+                  else
+                    frmwtRPSOrder.qrpDetails.PrinterSettings.ColorOption := 0;
+
                   frmwtRPSOrder.qrpDetails.Print;
                 end;
               close;
@@ -634,6 +645,11 @@ begin
       else
         WriteString('Sales Order', 'Attach Terms', 'N');
 
+      if chkbxGrayscale.checked then
+        WriteString('Sales Order', 'Print in Grayscale', 'Y')
+      else
+        WriteString('Sales Order', 'Print in Grayscale', 'N');
+
       if rdgrpType.ItemIndex = 1 then
         WriteString('Sales Order', 'Detailed Print', 'Y')
       else
@@ -655,6 +671,7 @@ begin
       chkbxPrintLogo.Checked := (ReadString('Sales Order', 'Print Logo', 'N') = 'Y');
       chkbxAttachTemplate.Checked := (ReadString('Sales Order', 'Attach Template', 'N') = 'Y');
       chkbxAttachTerms.Checked := (ReadString('Sales Order', 'Attach Terms', 'N') = 'Y');
+      chkbxGrayscale.checked := (ReadString('Sales Order', 'Print in Grayscale', 'N') = 'Y');
 
       if ReadString('Sales Order', 'Detailed Print', 'N') = 'Y' then
         rdgrpType.itemindex := 1
@@ -689,6 +706,26 @@ begin
         // here we can catch members of DevMode
         DevMode^.DMDEFAULTSOURCE := BinCode;
         GlobalUnlock (hDevMode);
+  end;
+end;
+
+procedure TfrmWTRSSOrder.SetPrinterGrayScale;
+var
+  DevMode : PDeviceMode;
+  hDevMode: THandle;
+  Device,Driver,Port: array [0..1024] of Char;
+begin
+  Printer.GetPrinter(Device, Driver, Port, hDevMode);
+  if hDevMode <> 0 then
+  begin
+    DevMode := GlobalLock(hDevMode);
+    try
+      // Explicitly tell the driver the Color field is being changed
+      DevMode^.dmFields := DevMode^.dmFields or DM_COLOR;
+      DevMode^.dmColor := DMCOLOR_MONOCHROME; // 1
+    finally
+      GlobalUnlock(hDevMode);
+    end;
   end;
 end;
 

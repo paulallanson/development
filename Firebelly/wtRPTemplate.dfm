@@ -13,8 +13,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
   Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 296
-    Top = -30
+    Left = 240
+    Top = 18
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -1669,15 +1669,23 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       '        Quote.Install_address,'
       '        Quote,Install_Name,'
       '        Quote.Install_Phone,'
-      '        Quote.Extra_Notes'
-      'from Quote'
-      'where quote.quote = :Quote'
-      'order by Quote.quote')
+      '        Quote.Extra_Notes,'
+      '        '#39#39' as Appliance_Details,'
+      '        Quote.Revenue_Centre,'
+      '        Operator.Operator_Name as Account_Manager_Name,'
+      '        Operator.Telephone_number'
+      'FROM Operator'
+      '      RIGHT JOIN Quote'
+      '        ON Operator.Operator = Quote.Account_Manager'
+      'WHERE Quote.Quote = :Quote'
+      'ORDER BY Quote.Quote'
+      '')
     Left = 283
     Top = 14
     ParamData = <
       item
         Name = 'Quote'
+        ParamType = ptInput
       end>
   end
 end

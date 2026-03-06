@@ -3,92 +3,92 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
   Top = 125
   BorderStyle = bsDialog
   Caption = 'Set Job Complete'
-  ClientHeight = 278
-  ClientWidth = 724
+  ClientHeight = 291
+  ClientWidth = 774
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 24
     Top = 24
-    Width = 39
-    Height = 13
+    Width = 46
+    Height = 17
     Caption = 'Job No.'
   end
   object Label2: TLabel
     Left = 24
     Top = 80
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label3: TLabel
     Left = 24
     Top = 53
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object Label4: TLabel
     Left = 24
     Top = 188
-    Width = 52
-    Height = 39
+    Width = 57
+    Height = 51
     Caption = 'Proposed Fitting Date'
     WordWrap = True
   end
   object Label5: TLabel
-    Left = 232
-    Top = 196
-    Width = 96
-    Height = 13
+    Left = 389
+    Top = 195
+    Width = 105
+    Height = 17
     Caption = 'Actual Fitting Date'
   end
   object Label6: TLabel
-    Left = 368
-    Top = 53
-    Width = 51
-    Height = 13
+    Left = 389
+    Top = 52
+    Width = 58
+    Height = 17
     Caption = 'Reference'
   end
   object Label7: TLabel
-    Left = 368
-    Top = 80
-    Width = 102
-    Height = 13
+    Left = 389
+    Top = 79
+    Width = 114
+    Height = 17
     Caption = 'Installation Address'
   end
   object Label8: TLabel
-    Left = 216
+    Left = 232
     Top = 24
-    Width = 24
-    Height = 13
+    Width = 27
+    Height = 17
     Caption = 'Date'
   end
   object Label9: TLabel
-    Left = 368
-    Top = 24
-    Width = 47
-    Height = 13
+    Left = 389
+    Top = 23
+    Width = 54
+    Height = 17
     Caption = 'Operator'
   end
   object edtJobNumber: TEdit
-    Left = 88
+    Left = 104
     Top = 20
     Width = 105
-    Height = 21
+    Height = 25
     Color = clBtnFace
     TabOrder = 0
     Text = 'edtJobNumber'
   end
   object edtDescription: TMemo
-    Left = 88
+    Left = 104
     Top = 80
     Width = 265
     Height = 89
@@ -98,16 +98,16 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
     TabOrder = 1
   end
   object edtCustomerName: TEdit
-    Left = 88
+    Left = 104
     Top = 49
     Width = 265
-    Height = 21
+    Height = 25
     Color = clBtnFace
     TabOrder = 2
     Text = 'edtCustomerName'
   end
   object btnOK: TButton
-    Left = 280
+    Left = 298
     Top = 240
     Width = 75
     Height = 25
@@ -117,7 +117,7 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
     OnClick = btnOKClick
   end
   object btnCancel: TButton
-    Left = 368
+    Left = 386
     Top = 240
     Width = 75
     Height = 25
@@ -126,34 +126,34 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
     TabOrder = 4
   end
   object edtFittingDate: TEdit
-    Left = 88
+    Left = 104
     Top = 192
     Width = 121
-    Height = 21
+    Height = 25
     Color = clBtnFace
     TabOrder = 5
     Text = 'edtFittingDate'
   end
   object dtpckFitting: TDateTimePicker
-    Left = 336
+    Left = 512
     Top = 192
     Width = 121
-    Height = 21
+    Height = 25
     Date = 38361.000000000000000000
     Time = 0.793762291672464900
     TabOrder = 6
   end
   object edtReference: TEdit
-    Left = 472
+    Left = 512
     Top = 49
     Width = 161
-    Height = 21
+    Height = 25
     Color = clBtnFace
     TabOrder = 7
     Text = 'edtReference'
   end
   object memInstallAdd: TMemo
-    Left = 472
+    Left = 512
     Top = 80
     Width = 233
     Height = 89
@@ -163,19 +163,19 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
     TabOrder = 8
   end
   object edtDate: TEdit
-    Left = 256
+    Left = 272
     Top = 20
     Width = 97
-    Height = 21
+    Height = 25
     Color = clBtnFace
     TabOrder = 9
     Text = 'edtDate'
   end
   object dblkpOperator: TDBLookupComboBox
-    Left = 472
+    Left = 512
     Top = 20
     Width = 145
-    Height = 21
+    Height = 25
     Color = clBtnFace
     KeyField = 'Operator'
     ListField = 'Operator_Name'

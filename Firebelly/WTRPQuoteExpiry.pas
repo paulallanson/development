@@ -334,6 +334,7 @@ begin
   ReQuoteInstall := 0.00;
   ReQuoteSurvey := 0.00;
   ReQuoteDelivery := 0.00;
+  ReQuoteTotal := 0.00;
   RequoteStatus := 0;
   RequoteCount := 0;
 

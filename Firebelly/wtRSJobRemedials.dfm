@@ -3,34 +3,35 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Job Remedials'
-  ClientHeight = 189
-  ClientWidth = 350
+  ClientHeight = 223
+  ClientWidth = 372
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    350
-    189)
-  TextHeight = 13
+    372
+    223)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 150
+    Top = 184
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 150
   end
   object Button4: TButton
     Left = 264
-    Top = 150
+    Top = 184
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -38,50 +39,51 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 150
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 72
+    Top = 83
     Width = 225
-    Height = 73
+    Height = 86
     Caption = 'Installation Date'
     ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Top = 24
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Top = 54
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 20
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 50
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 20
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -103,7 +105,7 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 50
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -125,8 +127,8 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     end
   end
   object OleContainer1: TOleContainer
-    Left = 108
-    Top = 67
+    Left = 227
+    Top = 8
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -135,18 +137,18 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 36
-    Top = 71
+    Left = 57
+    Top = 70
     Width = 289
     Height = 61
     ParentBackground = False
     TabOrder = 4
     Visible = False
     object lblExporting: TLabel
-      Left = 16
-      Top = 12
-      Width = 59
-      Height = 13
+      Left = 12
+      Top = 9
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -160,7 +162,7 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
   end
   object btnExcel: TBitBtn
     Left = 177
-    Top = 151
+    Top = 185
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -210,22 +212,24 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 5
     OnClick = btnExcelClick
+    ExplicitTop = 151
   end
   object btnPreview: TButton
     Left = 93
-    Top = 150
+    Top = 184
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 6
     OnClick = btnPreviewClick
+    ExplicitTop = 150
   end
   object rdgrpContacts: TRadioGroup
     Left = 8
     Top = 8
     Width = 105
-    Height = 57
+    Height = 69
     Caption = 'Office Contact'
     ItemIndex = 0
     Items.Strings = (
@@ -237,24 +241,24 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
   end
   object grpbxContacts: TGroupBox
     Left = 125
-    Top = 8
-    Width = 219
-    Height = 57
+    Top = 13
+    Width = 239
+    Height = 64
     Enabled = False
     ParentBackground = False
     TabOrder = 8
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 79
-      Height = 13
+      Width = 88
+      Height = 17
       Caption = 'Office Contacts'
     end
     object cmbContacts: TComboBox
       Left = 8
       Top = 32
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       ItemIndex = 0
@@ -271,12 +275,12 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
       'select *'
       'from Operator'
       'order by Operator_Name')
-    Left = 184
-    Top = 16
+    Left = 246
+    Top = 100
   end
   object dtsReason: TDataSource
     DataSet = qryContacts
-    Left = 240
-    Top = 16
+    Left = 268
+    Top = 108
   end
 end

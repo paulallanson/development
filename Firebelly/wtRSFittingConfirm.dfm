@@ -3,8 +3,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   Top = 115
   BorderStyle = bsDialog
   Caption = 'Fitting Confirmation'
-  ClientHeight = 423
-  ClientWidth = 536
+  ClientHeight = 448
+  ClientWidth = 571
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,15 +28,17 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 343
-    Width = 536
+    Top = 368
+    Width = 571
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 343
+    ExplicitWidth = 536
     DesignSize = (
-      536
+      571
       80)
     object btnPrint: TButton
       Left = 8
@@ -92,13 +94,15 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlDocumentDetails: TPanel
     Left = 0
-    Top = 193
-    Width = 536
+    Top = 218
+    Width = 571
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 193
+    ExplicitWidth = 536
     object lstbxDocuments: TListBox
       Left = 8
       Top = 15
@@ -112,7 +116,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     object chkbxAllDocuments: TCheckBox
       Left = 296
       Top = 15
-      Width = 201
+      Width = 248
       Height = 17
       Caption = 'Select ALL additional order documents'
       TabOrder = 1
@@ -121,13 +125,16 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlDocuments: TPanel
     Left = 0
-    Top = 138
-    Width = 536
-    Height = 55
+    Top = 158
+    Width = 571
+    Height = 60
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 138
+    ExplicitWidth = 536
+    ExplicitHeight = 55
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -152,8 +159,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 536
-    Height = 138
+    Width = 571
+    Height = 158
     Align = alTop
     ParentBackground = False
     TabOrder = 4
@@ -161,7 +168,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       Left = 8
       Top = 7
       Width = 273
-      Height = 121
+      Height = 138
       Caption = 'Sales Order Selection'
       ParentBackground = False
       TabOrder = 0

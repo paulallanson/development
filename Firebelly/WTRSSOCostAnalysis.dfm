@@ -3,35 +3,35 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Sales Order Cost Analysis Report'
-  ClientHeight = 365
-  ClientWidth = 492
+  ClientHeight = 375
+  ClientWidth = 539
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    492
-    365)
-  TextHeight = 13
+    539
+    375)
+  TextHeight = 17
   object lstbxCustomersCode: TListBox
     Left = 96
     Top = 80
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 14
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
-    Top = 200
+    Top = 205
     Width = 105
-    Height = 90
+    Height = 121
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -44,17 +44,18 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object btnPrint: TButton
     Left = 8
-    Top = 328
+    Top = 338
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 328
   end
   object Button4: TButton
     Left = 416
-    Top = 328
+    Top = 338
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -62,12 +63,13 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 328
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 80
     Width = 105
-    Height = 57
+    Height = 73
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -79,47 +81,47 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object grpbxDateSelect: TGroupBox
     Left = 8
-    Top = 200
+    Top = 205
     Width = 209
-    Height = 73
+    Height = 84
     Caption = 'Order Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Top = 23
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Top = 53
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 19
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 49
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 19
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -141,7 +143,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 49
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -164,7 +166,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object grpbxCustomer: TGroupBox
     Left = 120
-    Top = 80
+    Top = 87
     Width = 249
     Height = 113
     Enabled = False
@@ -172,9 +174,9 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 10
-      Width = 49
-      Height = 13
+      Top = 4
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object btnCustomer: TButton
@@ -197,7 +199,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Customers')
       MultiSelect = True
@@ -206,10 +208,10 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 376
+    Left = 375
     Top = 8
-    Width = 113
-    Height = 137
+    Width = 138
+    Height = 160
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -223,8 +225,8 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 376
-    Top = 160
+    Left = 384
+    Top = 177
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -232,27 +234,29 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object btnPreview: TButton
     Left = 96
-    Top = 328
+    Top = 338
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 328
   end
   object btnExcel: TButton
     Left = 184
-    Top = 328
+    Top = 338
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 328
   end
   object OleContainer1: TOleContainer
-    Left = 180
-    Top = 19
+    Left = 271
+    Top = 216
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -261,8 +265,8 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 76
-    Top = 111
+    Left = 119
+    Top = 107
     Width = 289
     Height = 61
     ParentBackground = False
@@ -271,8 +275,8 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -286,9 +290,9 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object rdgrpReps: TRadioGroup
     Left = 8
-    Top = 8
+    Top = 1
     Width = 105
-    Height = 57
+    Height = 73
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -302,21 +306,21 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     Left = 120
     Top = 8
     Width = 249
-    Height = 57
+    Height = 66
     ParentBackground = False
     TabOrder = 13
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 20
-      Height = 13
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object cmbReps: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -329,10 +333,10 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     end
   end
   object rdgrpSelectBy: TRadioGroup
-    Left = 378
-    Top = 184
-    Width = 111
-    Height = 89
+    Left = 375
+    Top = 205
+    Width = 138
+    Height = 121
     Caption = 'Select by '
     ItemIndex = 0
     Items.Strings = (

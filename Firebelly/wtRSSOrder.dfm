@@ -3,7 +3,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   Top = 243
   BorderStyle = bsDialog
   Caption = 'Print Sales Order'
-  ClientHeight = 210
+  ClientHeight = 247
   ClientWidth = 364
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,7 +18,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   OnDestroy = FormDestroy
   DesignSize = (
     364
-    210)
+    247)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -38,7 +38,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object btnPrint: TButton
     Left = 8
-    Top = 174
+    Top = 211
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -46,16 +46,18 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
+    ExplicitTop = 165
   end
   object Button4: TButton
     Left = 283
-    Top = 174
+    Top = 211
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
+    ExplicitTop = 165
   end
   object SelectLst: TListBox
     Left = 200
@@ -69,7 +71,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object btnPreview: TButton
     Left = 99
-    Top = 174
+    Top = 211
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -77,10 +79,11 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 4
     OnClick = btnPreviewClick
+    ExplicitTop = 165
   end
   object btnEmail: TButton
     Left = 191
-    Top = 174
+    Top = 211
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -88,6 +91,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 5
     OnClick = btnEmailClick
+    ExplicitTop = 165
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -125,6 +129,14 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Height = 17
     Caption = 'Attach Sales Terms && Conditions document'
     TabOrder = 9
+  end
+  object chkbxGrayscale: TCheckBox
+    Left = 8
+    Top = 176
+    Width = 249
+    Height = 17
+    Caption = 'Print in Grayscale'
+    TabOrder = 10
   end
   object qryGetQuotes: TFDQuery
     ConnectionName = 'WT'

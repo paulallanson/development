@@ -307,7 +307,7 @@ begin
           sBodyText := 'Please find attached Delivery Note.' + #13#10#13#10;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          var printFileName := 'TS' + EmailArray[irow,1];
+          var printFileName := 'DEL' + EmailArray[irow,1];
           TPrinterTools.New.PrintToattachment(frmWTRPSODeliveryNote.qrpDetails, FEmailAttachment, printFileName, sAttachmentType);
 
           EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
