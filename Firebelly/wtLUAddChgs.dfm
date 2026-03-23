@@ -3,29 +3,29 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Additional charges'
-  ClientHeight = 393
-  ClientWidth = 684
+  ClientHeight = 404
+  ClientWidth = 705
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 684
-    Height = 311
+    Width = 705
+    Height = 322
     Align = alClient
     DataSource = srclkpExtras
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
@@ -74,8 +74,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 374
-    Width = 684
+    Top = 385
+    Width = 705
     Height = 19
     Panels = <
       item
@@ -84,21 +84,25 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       item
         Width = 50
       end>
+    ExplicitTop = 365
+    ExplicitWidth = 678
   end
   object Panel1: TPanel
     Left = 0
-    Top = 311
-    Width = 684
+    Top = 322
+    Width = 705
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 302
+    ExplicitWidth = 678
     object Label4: TLabel
       Left = 16
       Top = 16
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
@@ -160,7 +164,7 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       Left = 64
       Top = 12
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtNameChange
     end

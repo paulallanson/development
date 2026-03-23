@@ -68,6 +68,7 @@ type
     OLDqrySalesOrders: TFDQuery;
     qryGetStockCode: TFDQuery;
     qrlblStockCode: TQRLabel;
+    qrlblAllocated: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;
@@ -280,6 +281,11 @@ begin
       qrlblStockCode.caption := fieldbyname('Stock_Code').asstring;
     end;
 
+  qrlblAllocated.Caption := '';
+
+  if qrySalesOrders.FieldByName('Slab_Allocated_Quantity').Asfloat > 0 then
+    qrlblAllocated.caption := 'Order Allocated';
+
 (*
   CustomerVAT := CustomerVat + qrySalesOrders.fieldbyname('Vat_Value').asfloat;
   CustomerTotal := CustomerTotal + qrySalesOrders.fieldbyname('Total_Value').asfloat;
@@ -472,6 +478,7 @@ begin
     + ',"Worktop Colour"'
     + ',"Worktop Material"'
     + ',"Status"'
+    + ',"Allocated"'
     + ',"Stock Code"';
 
 
@@ -549,6 +556,9 @@ begin
 
     //Status
     tempStr := tempStr + ',"' + qrySalesOrders.fieldbyname('Sales_Order_Status_Desc').asstring + '"';
+
+    //Allocated
+    tempStr := tempStr + ',"' + qrlblAllocated.caption + '"';
 
     //Stock Code
     tempStr := tempStr + ',"' + qrlblStockCode.caption + '"';

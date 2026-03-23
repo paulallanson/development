@@ -8,13 +8,13 @@ object frmwtLUPayments: TfrmwtLUPayments
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlBody: TPanel
     Left = 0
     Top = 0
@@ -22,6 +22,8 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 505
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 779
+    ExplicitHeight = 496
     object dbgDetails: TDBGrid
       Left = 1
       Top = 90
@@ -32,7 +34,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -96,15 +98,17 @@ object frmwtLUPayments: TfrmwtLUPayments
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 244
+      ExplicitWidth = 777
       object lblCreditNotes: TLabel
         Left = 8
-        Top = 13
-        Width = 65
-        Height = 13
+        Top = 9
+        Width = 77
+        Height = 17
         Caption = 'Credit Notes'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -120,7 +124,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -174,120 +178,116 @@ object frmwtLUPayments: TfrmwtLUPayments
       Align = alBottom
       ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 2
+      ExplicitTop = 386
       DesignSize = (
         783
         79)
       object Label1: TLabel
         Left = 558
-        Top = 13
-        Width = 82
-        Height = 13
+        Top = 11
+        Width = 99
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Total Payments:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 566
       end
       object lblTotalPayments: TLabel
         Left = 662
-        Top = 13
-        Width = 86
-        Height = 13
+        Top = 11
+        Width = 97
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'lblTotalPayments'
-        ExplicitLeft = 670
       end
       object lblDeposit: TLabel
         Left = 8
-        Top = 62
-        Width = 96
-        Height = 13
+        Top = 57
+        Width = 115
+        Height = 17
         Caption = 'Deposit Required: '
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object lblDepositRequired: TLabel
         Left = 136
-        Top = 62
-        Width = 100
-        Height = 13
+        Top = 57
+        Width = 112
+        Height = 17
         Caption = 'lblDepositRequired'
       end
       object lblTotalValueLabel: TLabel
         Left = 8
-        Top = 13
-        Width = 91
-        Height = 13
+        Top = 11
+        Width = 112
+        Height = 17
         Caption = 'Total Order Value:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object lblOrderValue: TLabel
         Left = 136
-        Top = 13
-        Width = 71
-        Height = 13
+        Top = 11
+        Width = 80
+        Height = 17
         Caption = 'lblOrderValue'
       end
       object Label3: TLabel
         Left = 558
-        Top = 61
-        Width = 68
-        Height = 13
+        Top = 57
+        Width = 81
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Outstanding:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 566
       end
       object lblOutstanding: TLabel
         Left = 662
-        Top = 61
-        Width = 79
-        Height = 13
+        Top = 57
+        Width = 85
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'lblOutstanding'
-        ExplicitLeft = 670
       end
       object lblCredits: TLabel
         Left = 558
-        Top = 38
-        Width = 64
-        Height = 13
+        Top = 34
+        Width = 78
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Total Credits'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 566
       end
       object lblTotalCredits: TLabel
         Left = 662
-        Top = 38
-        Width = 74
-        Height = 13
+        Top = 34
+        Width = 83
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'lblTotalCredits'
-        ExplicitLeft = 670
       end
     end
     object pnlControls: TPanel
@@ -299,6 +299,8 @@ object frmwtLUPayments: TfrmwtLUPayments
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 4
+      ExplicitTop = 452
+      ExplicitWidth = 777
       DesignSize = (
         783
         43)
@@ -342,6 +344,7 @@ object frmwtLUPayments: TfrmwtLUPayments
         NumGlyphs = 2
         TabOrder = 3
         OnClick = BitBtn4Click
+        ExplicitLeft = 661
       end
       object btnExcel: TBitBtn
         Left = 254
@@ -363,16 +366,17 @@ object frmwtLUPayments: TfrmwtLUPayments
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 5
+      ExplicitWidth = 777
       object lblSalesOrder: TLabel
-        Left = 682
+        Left = 668
         Top = 14
-        Width = 68
-        Height = 13
+        Width = 82
+        Height = 17
         Alignment = taRightJustify
         Caption = 'lblSalesOrder'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -386,7 +390,7 @@ object frmwtLUPayments: TfrmwtLUPayments
         Caption = 'lblDescription'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -395,26 +399,26 @@ object frmwtLUPayments: TfrmwtLUPayments
       object lblCustomer: TLabel
         Left = 8
         Top = 14
-        Width = 63
-        Height = 13
+        Width = 75
+        Height = 17
         Caption = 'lblCustomer'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object lblSalesInvoice: TLabel
-        Left = 674
+        Left = 659
         Top = 43
-        Width = 76
-        Height = 13
+        Width = 91
+        Height = 17
         Alignment = taRightJustify
         Caption = 'lblSalesInvoice'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -422,12 +426,12 @@ object frmwtLUPayments: TfrmwtLUPayments
       object lblAccountCode: TLabel
         Left = 464
         Top = 14
-        Width = 83
-        Height = 13
+        Width = 97
+        Height = 17
         Caption = 'lblAccountCode'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -446,6 +450,8 @@ object frmwtLUPayments: TfrmwtLUPayments
       item
         Width = 50
       end>
+    ExplicitTop = 496
+    ExplicitWidth = 779
   end
   object srcPayments: TDataSource
     DataSet = qryPayments
@@ -729,8 +735,8 @@ object frmwtLUPayments: TfrmwtLUPayments
       
         '      ((sales_invoice.inactive = '#39'N'#39') or (sales_invoice.inactive' +
         ' is NULL))')
-    Left = 440
-    Top = 320
+    Left = 526
+    Top = 272
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -757,8 +763,8 @@ object frmwtLUPayments: TfrmwtLUPayments
         '      ((sales_invoice.inactive = '#39'N'#39') or (sales_invoice.inactive' +
         ' is NULL))'
       '')
-    Left = 536
-    Top = 320
+    Left = 654
+    Top = 272
     ParamData = <
       item
         Name = 'Invoice_No'

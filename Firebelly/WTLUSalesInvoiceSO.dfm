@@ -7,7 +7,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stbrDetails: TStatusBar
     Left = 0
     Top = 422
@@ -47,12 +47,12 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       Left = 0
       Top = 0
       Width = 977
-      Height = 284
+      Height = 282
       Align = alClient
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -123,14 +123,12 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
     end
     object pnlControls: TPanel
       Left = 0
-      Top = 284
+      Top = 282
       Width = 977
-      Height = 138
+      Height = 140
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 275
-      ExplicitWidth = 971
       object chkbxShow: TCheckBox
         Left = 8
         Top = 41
@@ -151,54 +149,55 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       end
       object pnlFooter: TPanel
         Left = 1
-        Top = 84
+        Top = 88
         Width = 975
-        Height = 53
+        Height = 51
         Align = alBottom
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 969
+        ExplicitLeft = 2
+        ExplicitTop = 93
         DesignSize = (
           975
-          53)
+          51)
         object Label1: TLabel
-          Left = 639
-          Top = 18
-          Width = 59
-          Height = 13
+          Left = 619
+          Top = 16
+          Width = 69
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Sales Order'
-          ExplicitLeft = 652
+          ExplicitTop = 18
         end
         object CustomerGroupBox: TGroupBox
-          Left = 8
-          Top = 0
-          Width = 385
-          Height = 49
+          Left = 7
+          Top = -4
+          Width = 403
+          Height = 55
           Caption = 'Type here to narrow the search'
           ParentBackground = False
           TabOrder = 0
           object Label2: TLabel
             Left = 17
-            Top = 22
-            Width = 49
-            Height = 13
+            Top = 26
+            Width = 56
+            Height = 17
             Caption = 'Customer'
           end
           object edtCustomerName: TEdit
-            Left = 72
-            Top = 18
+            Left = 92
+            Top = 23
             Width = 209
-            Height = 21
+            Height = 26
             TabOrder = 0
             OnChange = edtCustomerNameChange
           end
           object btnSweep: TBitBtn
-            Left = 296
-            Top = 16
+            Left = 316
+            Top = 21
             Width = 75
-            Height = 25
+            Height = 26
             Caption = 'S&weep'
             Enabled = False
             TabOrder = 1
@@ -206,8 +205,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           end
         end
         object btnExcel: TBitBtn
-          Left = 406
-          Top = 12
+          Left = 438
+          Top = 17
           Width = 75
           Height = 25
           Caption = 'Excel'
@@ -230,18 +229,18 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           OnClick = btnExcelClick
         end
         object edtSONumber: TEdit
-          Left = 703
-          Top = 14
+          Left = 697
+          Top = 12
           Width = 89
-          Height = 21
+          Height = 25
           Anchors = [akRight, akBottom]
           TabOrder = 2
           OnKeyPress = edtSONumberKeyPress
-          ExplicitLeft = 697
+          ExplicitTop = 14
         end
         object btnSelect: TBitBtn
-          Left = 802
-          Top = 12
+          Left = 796
+          Top = 10
           Width = 75
           Height = 25
           Anchors = [akRight, akBottom]
@@ -249,11 +248,12 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           ModalResult = 1
           TabOrder = 3
           OnClick = btnSelectClick
-          ExplicitLeft = 796
+          ExplicitLeft = 790
+          ExplicitTop = 12
         end
         object btnClose: TBitBtn
-          Left = 883
-          Top = 12
+          Left = 877
+          Top = 10
           Width = 75
           Height = 25
           Anchors = [akRight, akBottom]
@@ -261,24 +261,26 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           ModalResult = 2
           TabOrder = 4
           OnClick = btnCloseClick
-          ExplicitLeft = 877
+          ExplicitLeft = 871
+          ExplicitTop = 12
         end
       end
       object pnlRevenueCentre: TPanel
         Left = 593
         Top = 1
         Width = 383
-        Height = 83
+        Height = 87
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
         ExplicitLeft = 587
+        ExplicitHeight = 83
         object rdgrpRevenueCentre: TRadioGroup
-          Left = 40
+          Left = 28
           Top = 3
           Width = 121
-          Height = 73
+          Height = 83
           Caption = 'Revenue Centre '
           ItemIndex = 0
           Items.Strings = (
@@ -290,25 +292,25 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
           OnClick = rdgrpRevenueCentreClick
         end
         object grpbxRevCentre: TGroupBox
-          Left = 166
-          Top = 9
-          Width = 203
-          Height = 67
+          Left = 155
+          Top = 13
+          Width = 211
+          Height = 73
           ParentBackground = False
           TabOrder = 1
           Visible = False
           object Label3: TLabel
             Left = 8
-            Top = 12
-            Width = 81
-            Height = 13
+            Top = 8
+            Width = 91
+            Height = 17
             Caption = 'Revenue Centre'
           end
           object dblkpRevCentre: TDBLookupComboBox
             Left = 8
             Top = 32
             Width = 185
-            Height = 21
+            Height = 25
             KeyField = 'Revenue_Centre'
             ListField = 'Revenue_Centre_Descr'
             TabOrder = 0

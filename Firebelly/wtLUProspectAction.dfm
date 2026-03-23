@@ -8,13 +8,13 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -59,6 +59,8 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
       item
         Width = 50
       end>
+    ExplicitTop = 290
+    ExplicitWidth = 417
   end
   object Panel1: TPanel
     Left = 0
@@ -68,6 +70,8 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 239
+    ExplicitWidth = 417
     DesignSize = (
       423
       51)

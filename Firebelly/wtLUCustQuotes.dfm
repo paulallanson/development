@@ -2,12 +2,12 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   Left = 77
   Top = 91
   Caption = 'Customer Quote details'
-  ClientHeight = 381
-  ClientWidth = 645
+  ClientHeight = 372
+  ClientWidth = 639
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -17,11 +17,11 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 362
-    Width = 645
+    Top = 353
+    Width = 639
     Height = 19
     Panels = <
       item
@@ -36,24 +36,24 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 321
-    Width = 645
+    Top = 312
+    Width = 639
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      645
+      639
       41)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 96
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = 'Description Search'
     end
     object Button1: TButton
-      Left = 564
+      Left = 552
       Top = 8
       Width = 75
       Height = 25
@@ -63,10 +63,10 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
       OnClick = Button1Click
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 8
+      Left = 129
+      Top = 10
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtSearchChange
     end
@@ -74,22 +74,22 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 645
+    Width = 639
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 639
+        Width = 633
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 630
+      Width = 624
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 47
+      ButtonHeight = 40
+      ButtonWidth = 51
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -102,7 +102,7 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 47
+        Left = 51
         Top = 0
         Caption = '&Change'
         Enabled = False
@@ -110,21 +110,21 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 94
+        Left = 102
         Top = 0
         Caption = 'C&opy'
         Enabled = False
         ImageIndex = 8
       end
       object btnDelete: TToolButton
-        Left = 141
+        Left = 153
         Top = 0
         Caption = '&Delete'
         Enabled = False
         ImageIndex = 6
       end
       object ToolButton6: TToolButton
-        Left = 188
+        Left = 204
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -132,7 +132,7 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 196
+        Left = 212
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -143,14 +143,14 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 45
-    Width = 645
-    Height = 276
+    Width = 639
+    Height = 267
     Align = alClient
     DataSource = dtmdlQuote.dtsAllQuotes
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

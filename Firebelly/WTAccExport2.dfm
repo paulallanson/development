@@ -7,12 +7,12 @@ object frmWTAccExport2: TfrmWTAccExport2
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object BackBitBtn: TBitBtn
     Left = 16
     Top = 256

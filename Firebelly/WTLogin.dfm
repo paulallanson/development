@@ -94,7 +94,7 @@ object frmWTLogin: TfrmWTLogin
   object cmbAliasList: TComboBox
     Left = 114
     Top = 136
-    Width = 161
+    Width = 180
     Height = 25
     Style = csDropDownList
     TabOrder = 2

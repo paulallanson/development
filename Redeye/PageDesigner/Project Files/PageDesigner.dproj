@@ -3,7 +3,7 @@
         <ProjectGuid>{D99A6F63-BC0E-42A9-AC60-A411670E9762}</ProjectGuid>
         <MainSource>PageDesigner.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

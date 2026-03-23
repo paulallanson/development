@@ -7,13 +7,13 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 15
+  TextHeight = 17
   object pnlFooter: TPanel
     Left = 0
     Top = 536
@@ -22,8 +22,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 508
+    ExplicitTop = 527
     ExplicitWidth = 1267
     DesignSize = (
       1273
@@ -64,7 +63,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       OnClick = btnExcelClick
     end
     object btnClose: TButton
-      Left = 1144
+      Left = 1138
       Top = 16
       Width = 75
       Height = 25
@@ -72,10 +71,10 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       Caption = '&Close'
       ModalResult = 2
       TabOrder = 2
-      ExplicitLeft = 1138
+      ExplicitLeft = 1132
     end
     object btnSelect: TButton
-      Left = 1039
+      Left = 1033
       Top = 16
       Width = 75
       Height = 25
@@ -84,13 +83,13 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       Enabled = False
       TabOrder = 3
       OnClick = btnSelectClick
-      ExplicitLeft = 1033
+      ExplicitLeft = 1027
     end
     object edtSearch: TEdit
       Left = 48
       Top = 16
       Width = 193
-      Height = 23
+      Height = 25
       TabOrder = 4
       OnChange = edtSearchChange
     end
@@ -121,15 +120,15 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
     object CustomerLbl: TLabel
       Left = 8
       Top = 30
-      Width = 105
-      Height = 15
+      Width = 115
+      Height = 17
       Caption = 'Associate Customer'
     end
     object edtCustomer: TEdit
       Left = 128
       Top = 26
       Width = 233
-      Height = 23
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -149,7 +148,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       OnClick = btnCustomerClick
     end
     object grpInvDate: TGroupBox
-      Left = 968
+      Left = 962
       Top = 18
       Width = 233
       Height = 73
@@ -157,23 +156,23 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
       Caption = 'Fitting Date'
       ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 962
+      ExplicitLeft = 956
       DesignSize = (
         233
         73)
       object Label4: TLabel
         Left = 20
         Top = 21
-        Width = 31
-        Height = 15
+        Width = 33
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'From:'
       end
       object Label5: TLabel
         Left = 19
         Top = 49
-        Width = 16
-        Height = 15
+        Width = 17
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'To:'
       end
@@ -225,7 +224,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
         Left = 87
         Top = 13
         Width = 98
-        Height = 23
+        Height = 25
         Anchors = [akRight, akBottom]
         MaxLength = 10
         TabOrder = 0
@@ -235,7 +234,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
         Left = 87
         Top = 41
         Width = 98
-        Height = 23
+        Height = 25
         Anchors = [akRight, akBottom]
         MaxLength = 10
         TabOrder = 1
@@ -252,7 +251,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -350,11 +349,13 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
     Align = alBottom
     Caption = 'pnlBottom'
     TabOrder = 3
+    ExplicitTop = 580
+    ExplicitWidth = 1267
     object Label2: TLabel
       Left = 64
       Top = 16
-      Width = 48
-      Height = 15
+      Width = 51
+      Height = 17
       Caption = 'BOTTOM'
     end
     object stBrDetails: TStatusBar
@@ -369,7 +370,7 @@ object frmWTLUSalesOrderCharges: TfrmWTLUSalesOrderCharges
         item
           Width = 250
         end>
-      ExplicitTop = 8
+      ExplicitWidth = 1265
     end
   end
   object tmrSearch: TTimer

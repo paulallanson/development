@@ -8,13 +8,13 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -56,6 +56,8 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 239
+    ExplicitWidth = 505
     DesignSize = (
       511
       50)
@@ -127,6 +129,8 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
       item
         Width = 50
       end>
+    ExplicitTop = 289
+    ExplicitWidth = 505
   end
   object srcPaymentTerms: TDataSource
     DataSet = qryPaymentTerms

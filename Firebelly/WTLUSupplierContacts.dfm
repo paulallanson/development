@@ -3,23 +3,23 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
   Top = 163
   BorderStyle = bsDialog
   Caption = 'Supplier Contacts'
-  ClientHeight = 366
-  ClientWidth = 367
+  ClientHeight = 382
+  ClientWidth = 383
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 312
-    Width = 77
-    Height = 13
+    Width = 87
+    Height = 17
     Caption = 'Contact Search'
   end
   object dbgdetails: TDBGrid
@@ -31,7 +31,7 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -53,7 +53,7 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
       end>
   end
   object btnAdd: TBitBtn
-    Left = 272
+    Left = 282
     Top = 8
     Width = 75
     Height = 25
@@ -62,7 +62,7 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     OnClick = btnAddClick
   end
   object btnChange: TBitBtn
-    Left = 272
+    Left = 282
     Top = 40
     Width = 75
     Height = 25
@@ -72,7 +72,7 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     OnClick = btnChangeClick
   end
   object btnDelete: TBitBtn
-    Left = 272
+    Left = 282
     Top = 72
     Width = 75
     Height = 25
@@ -82,8 +82,8 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     OnClick = btnDeleteClick
   end
   object btnSelect: TBitBtn
-    Left = 272
-    Top = 292
+    Left = 282
+    Top = 309
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -92,8 +92,8 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     OnClick = btnSelectClick
   end
   object BitBtn2: TBitBtn
-    Left = 272
-    Top = 321
+    Left = 282
+    Top = 338
     Width = 75
     Height = 25
     Caption = '&Close'
@@ -103,9 +103,9 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
   end
   object edtSearch: TEdit
     Left = 8
-    Top = 325
+    Top = 335
     Width = 257
-    Height = 21
+    Height = 25
     TabOrder = 6
     OnChange = edtSearchChange
   end
@@ -154,7 +154,7 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
   end
   object qryDelete: TFDQuery
     ConnectionName = 'WT'
-    Left = 272
-    Top = 112
+    Left = 292
+    Top = 140
   end
 end

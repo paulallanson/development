@@ -3,29 +3,26 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
   Top = 191
   BorderStyle = bsDialog
   Caption = 'Delete Contract Quotes'
-  ClientHeight = 207
-  ClientWidth = 260
+  ClientHeight = 230
+  ClientWidth = 288
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  DesignSize = (
-    260
-    207)
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 16
     Top = 20
-    Width = 182
-    Height = 13
+    Width = 217
+    Height = 17
     Caption = 'Delete unattached Contract Quotes'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -33,22 +30,22 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
   object Label1: TLabel
     Left = 16
     Top = 84
-    Width = 91
-    Height = 13
+    Width = 105
+    Height = 17
     Caption = 'Delete records to:'
   end
   object lblnoRecords: TLabel
     Left = 16
     Top = 160
-    Width = 68
-    Height = 13
+    Width = 77
+    Height = 17
     Caption = 'lblnoRecords'
   end
   object Label3: TLabel
     Left = 16
     Top = 52
-    Width = 104
-    Height = 13
+    Width = 121
+    Height = 17
     Caption = 'Delete records from:'
   end
   object prgbrRecords: TProgressBar
@@ -59,8 +56,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     TabOrder = 4
   end
   object btnOK: TBitBtn
-    Left = 50
-    Top = 181
+    Left = 60
+    Top = 187
     Width = 75
     Height = 25
     Caption = 'Run'
@@ -70,8 +67,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 138
-    Top = 181
+    Left = 148
+    Top = 187
     Width = 75
     Height = 25
     Cancel = True
@@ -81,21 +78,19 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     TabOrder = 6
   end
   object edtDateTo: TEdit
-    Left = 122
+    Left = 146
     Top = 80
     Width = 89
-    Height = 21
-    Anchors = [akTop, akRight]
+    Height = 25
     TabOrder = 2
     OnChange = CheckOK
     OnExit = edtDateToExit
   end
   object btnDateRequired: TBitBtn
-    Left = 218
+    Left = 242
     Top = 78
     Width = 25
     Height = 25
-    Anchors = [akTop, akRight]
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -114,21 +109,19 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     OnClick = btnDateRequiredClick
   end
   object edtDateFrom: TEdit
-    Left = 122
+    Left = 146
     Top = 48
     Width = 89
-    Height = 21
-    Anchors = [akTop, akRight]
+    Height = 25
     TabOrder = 0
     OnChange = CheckOK
     OnExit = edtDateToExit
   end
   object BitBtn1: TBitBtn
-    Left = 218
+    Left = 242
     Top = 46
     Width = 25
     Height = 25
-    Anchors = [akTop, akRight]
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -162,8 +155,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
         ') AND'
       '      (Quote.Contract_Quote = '#39'Y'#39')'
       'ORDER BY Quote.Quote')
-    Left = 48
-    Top = 8
+    Left = 28
+    Top = 90
     ParamData = <
       item
         Name = 'Date_From'
@@ -178,8 +171,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
       'select *'
       'from Quote_Internal_Note'
       'where Quote = :Quote')
-    Left = 144
-    Top = 8
+    Left = 172
+    Top = 98
     ParamData = <
       item
         Name = 'Quote'
@@ -192,8 +185,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
       'from Sales_Order_Line, Sales_Order'
       'where Sales_order_Line.Job = :Job and'
       'Sales_order_line.sales_order = sales_order.sales_order')
-    Left = 200
-    Top = 88
+    Left = 144
+    Top = 56
     ParamData = <
       item
         Name = 'Job'
@@ -205,8 +198,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
       'select *'
       'from Job_Internal_Note'
       'where Job = :Job')
-    Left = 200
-    Top = 136
+    Left = 144
+    Top = 104
     ParamData = <
       item
         Name = 'Job'
@@ -221,8 +214,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
       'from Sales_Invoice_Line, Sales_Invoice'
       'where Sales_Invoice_Line.Sales_Order = :Sales_Order and'
       'Sales_Invoice_Line.Sales_Invoice = Sales_Invoice.Sales_Invoice')
-    Left = 136
-    Top = 144
+    Left = 80
+    Top = 112
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -230,8 +223,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
   end
   object qryDelete: TFDQuery
     ConnectionName = 'Wt'
-    Left = 80
-    Top = 136
+    Left = 24
+    Top = 104
   end
   object qryGetCQOption: TFDQuery
     ConnectionName = 'Wt'

@@ -9,14 +9,14 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
   Constraints.MinWidth = 751
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
@@ -27,7 +27,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -99,6 +99,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       item
         Width = 50
       end>
+    ExplicitTop = 354
+    ExplicitWidth = 741
   end
   object pnlFoot: TPanel
     Left = 0
@@ -111,19 +113,21 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Constraints.MinWidth = 741
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 297
+    ExplicitWidth = 741
     DesignSize = (
       747
       57)
     object Label4: TLabel
       Left = 16
       Top = 15
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object BitBtn4: TBitBtn
-      Left = 653
-      Top = 9
+      Left = 647
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -133,8 +137,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       TabOrder = 0
     end
     object btnDelete: TBitBtn
-      Left = 477
-      Top = 9
+      Left = 471
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -144,8 +148,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnClick = btnDeleteClick
     end
     object btnEdit: TBitBtn
-      Left = 389
-      Top = 9
+      Left = 383
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -155,8 +159,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnClick = btnEditClick
     end
     object BitBtn1: TBitBtn
-      Left = 301
-      Top = 9
+      Left = 295
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -177,13 +181,13 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Left = 64
       Top = 11
       Width = 217
-      Height = 21
+      Height = 25
       TabOrder = 5
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
-      Left = 565
-      Top = 9
+      Left = 559
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -202,35 +206,35 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 741
     DesignSize = (
       747
       65)
     object Label1: TLabel
       Left = 16
-      Top = 16
-      Width = 68
-      Height = 13
+      Top = 8
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object Label2: TLabel
       Left = 216
-      Top = 16
-      Width = 51
-      Height = 13
+      Top = 8
+      Width = 59
+      Height = 17
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 478
-      Top = 16
-      Width = 123
-      Height = 13
+      Left = 472
+      Top = 8
+      Width = 143
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Copy Edge Details from '
-      ExplicitLeft = 484
     end
     object SpeedButton2: TSpeedButton
       Left = 165
-      Top = 31
+      Top = 33
       Width = 23
       Height = 22
       Hint = 'Clear Material Type'
@@ -258,7 +262,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     end
     object SpeedButton1: TSpeedButton
       Left = 365
-      Top = 31
+      Top = 33
       Width = 23
       Height = 22
       Hint = 'Clear Edge Type'
@@ -288,7 +292,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Left = 16
       Top = 32
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = srclkpMatType
@@ -299,7 +303,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Left = 216
       Top = 32
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Edge_Type'
       ListField = 'Edge_Type_Description'
       ListSource = srclkpEdgeType
@@ -307,10 +311,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyMaterial: TDBLookupComboBox
-      Left = 478
+      Left = 472
       Top = 32
       Width = 145
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       KeyField = 'Material_Type'
       ListField = 'Description'
@@ -319,8 +323,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnClick = dblkpCopyMaterialClick
     end
     object btnGo: TButton
-      Left = 654
-      Top = 30
+      Left = 648
+      Top = 32
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -335,8 +339,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     SQL.Strings = (
       'delete from edge_thickness'
       'where price_pointer = :price_pointer')
-    Left = 552
-    Top = 224
+    Left = 562
+    Top = 216
     ParamData = <
       item
         Name = 'price_pointer'
@@ -402,8 +406,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       
         'ORDER BY Material_Type.Description, Edge_Type_Description, Edge_' +
         'Profile.Description')
-    Left = 40
-    Top = 214
+    Left = 58
+    Top = 220
     ParamData = <
       item
         Name = 'Material_Type'
@@ -488,8 +492,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
   object srclkpEdgeThickness: TDataSource
     DataSet = lkpEdgeThickness
     OnDataChange = srclkpEdgeThicknessDataChange
-    Left = 148
-    Top = 214
+    Left = 169
+    Top = 188
   end
   object lkpMatType: TFDQuery
     ConnectionName = 'WT'
@@ -612,8 +616,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Enabled = False
     Interval = 250
     OnTimer = tmrRefreshTimer
-    Left = 384
-    Top = 232
+    Left = 464
+    Top = 218
   end
   object lkpCopyMatType: TFDQuery
     ConnectionName = 'WT'

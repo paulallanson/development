@@ -8,13 +8,13 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 346
@@ -27,6 +27,8 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       item
         Width = 50
       end>
+    ExplicitTop = 337
+    ExplicitWidth = 720
   end
   object Panel1: TPanel
     Left = 0
@@ -37,19 +39,21 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 250
+    ExplicitWidth = 720
     DesignSize = (
       726
       87)
     object Label4: TLabel
-      Left = 16
+      Left = 5
       Top = 16
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object btnAdd: TBitBtn
       Left = 280
-      Top = 6
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -59,7 +63,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     end
     object btnEdit: TBitBtn
       Left = 368
-      Top = 6
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -69,7 +73,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     end
     object btnDelete: TBitBtn
       Left = 456
-      Top = 6
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -79,7 +83,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     end
     object BitBtn4: TBitBtn
       Left = 632
-      Top = 6
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -89,7 +93,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       TabOrder = 3
     end
     object chkbxShowInactive: TCheckBox
-      Left = 16
+      Left = 5
       Top = 66
       Width = 169
       Height = 17
@@ -99,7 +103,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     end
     object btnExcel: TBitBtn
       Left = 544
-      Top = 6
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -108,7 +112,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       OnClick = btnExcelClick
     end
     object chkbxShowOnline: TCheckBox
-      Left = 16
+      Left = 5
       Top = 45
       Width = 169
       Height = 17
@@ -117,10 +121,10 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       OnClick = chkbxShowInactiveClick
     end
     object edtName: TEdit
-      Left = 64
+      Left = 53
       Top = 12
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 7
       OnChange = edtNameChange
     end
@@ -135,7 +139,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

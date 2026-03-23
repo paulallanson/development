@@ -8,14 +8,14 @@ object frmWtLUWorktops: TfrmWtLUWorktops
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
@@ -26,7 +26,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -122,13 +122,13 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     object Label4: TLabel
       Left = 16
       Top = 16
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object BitBtn1: TBitBtn
-      Left = 337
-      Top = 10
+      Left = 331
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -137,8 +137,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = BitBtn1Click
     end
     object btnEdit: TBitBtn
-      Left = 423
-      Top = 10
+      Left = 417
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -148,8 +148,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = btnEditClick
     end
     object btnDelete: TBitBtn
-      Left = 510
-      Top = 10
+      Left = 504
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -159,8 +159,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 683
-      Top = 10
+      Left = 677
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -170,8 +170,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       TabOrder = 3
     end
     object btnThickness: TBitBtn
-      Left = 251
-      Top = 10
+      Left = 245
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -193,13 +193,13 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Left = 64
       Top = 12
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
-      Left = 596
-      Top = 10
+      Left = 590
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -220,13 +220,13 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     ExplicitWidth = 771
     object Label1: TLabel
       Left = 16
-      Top = 16
-      Width = 67
-      Height = 13
+      Top = 11
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object SpeedButton2: TSpeedButton
-      Left = 173
+      Left = 185
       Top = 31
       Width = 23
       Height = 22
@@ -254,10 +254,10 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = SpeedButton2Click
     end
     object dblkpMaterialType: TDBLookupComboBox
-      Left = 16
+      Left = 17
       Top = 32
-      Width = 145
-      Height = 21
+      Width = 158
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = srclkpMatType

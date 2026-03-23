@@ -8,24 +8,24 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 57
+    Top = 65
     Width = 630
-    Height = 197
+    Height = 189
     Align = alClient
     DataSource = srclkpWTGPrices
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -151,21 +151,20 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Left = 0
     Top = 0
     Width = 630
-    Height = 57
+    Height = 65
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 624
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object SpeedButton2: TSpeedButton
-      Left = 157
-      Top = 22
+      Left = 194
+      Top = 32
       Width = 25
       Height = 25
       Hint = 'Clear Material Type'
@@ -193,9 +192,9 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     end
     object dblkpMaterialType: TDBLookupComboBox
       Left = 8
-      Top = 24
-      Width = 145
-      Height = 21
+      Top = 32
+      Width = 180
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = srclkpMatType
@@ -203,8 +202,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       OnClick = dblkpMaterialTypeClick
     end
     object Button1: TButton
-      Left = 192
-      Top = 22
+      Left = 229
+      Top = 32
       Width = 25
       Height = 25
       Caption = '...'

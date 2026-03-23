@@ -3,29 +3,29 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
   Top = 175
   BorderStyle = bsDialog
   Caption = 'Product Groups'
-  ClientHeight = 246
-  ClientWidth = 409
+  ClientHeight = 260
+  ClientWidth = 420
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 409
-    Height = 167
+    Width = 420
+    Height = 168
     Align = alClient
     DataSource = srcDetails
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -54,8 +54,8 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 227
-    Width = 409
+    Top = 241
+    Width = 420
     Height = 19
     Panels = <
       item
@@ -64,19 +64,22 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
       item
         Width = 50
       end>
+    ExplicitTop = 218
+    ExplicitWidth = 403
   end
   object Panel1: TPanel
     Left = 0
-    Top = 167
-    Width = 409
-    Height = 60
+    Top = 168
+    Width = 420
+    Height = 73
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 409
     DesignSize = (
-      409
-      60)
+      420
+      73)
     object chkbxShowInactive: TCheckBox
       Left = 8
       Top = 7
@@ -88,17 +91,18 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
     end
     object BitBtn1: TBitBtn
       Left = 8
-      Top = 27
+      Top = 40
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Add'
       TabOrder = 1
       OnClick = BitBtn1Click
+      ExplicitTop = 27
     end
     object btnEdit: TBitBtn
       Left = 88
-      Top = 27
+      Top = 40
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -106,10 +110,11 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
+      ExplicitTop = 27
     end
     object btnDelete: TBitBtn
       Left = 168
-      Top = 27
+      Top = 40
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -117,10 +122,11 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
       Enabled = False
       TabOrder = 3
       OnClick = btnDeleteClick
+      ExplicitTop = 27
     end
     object btnExcel: TBitBtn
       Left = 248
-      Top = 27
+      Top = 40
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -128,10 +134,11 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
       Enabled = False
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitTop = 27
     end
     object BitBtn4: TBitBtn
       Left = 329
-      Top = 27
+      Top = 40
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -139,6 +146,7 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
+      ExplicitTop = 27
     end
   end
   object srcDetails: TDataSource
