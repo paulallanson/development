@@ -2,7 +2,7 @@ object frmWTContractSearch: TfrmWTContractSearch
   Left = 440
   Top = 109
   Caption = 'Contract Quote Search'
-  ClientHeight = 310
+  ClientHeight = 306
   ClientWidth = 263
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,7 +13,7 @@ object frmWTContractSearch: TfrmWTContractSearch
   Position = poScreenCenter
   DesignSize = (
     263
-    310)
+    306)
   TextHeight = 17
   object Label1: TLabel
     Left = 10
@@ -85,8 +85,8 @@ object frmWTContractSearch: TfrmWTContractSearch
     TabOrder = 0
   end
   object btnSearch: TButton
-    Left = 17
-    Top = 280
+    Left = 11
+    Top = 276
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -94,8 +94,8 @@ object frmWTContractSearch: TfrmWTContractSearch
     Default = True
     TabOrder = 7
     OnClick = btnSearchClick
-    ExplicitLeft = -2
-    ExplicitTop = 247
+    ExplicitLeft = 5
+    ExplicitTop = 271
   end
   object edtSiteLocation: TEdit
     Left = 99
@@ -105,38 +105,38 @@ object frmWTContractSearch: TfrmWTContractSearch
     TabOrder = 1
   end
   object ClearButton: TButton
-    Left = 173
-    Top = 280
+    Left = 167
+    Top = 276
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Caption = 'Clear Search'
     TabOrder = 8
     OnClick = ClearButtonClick
-    ExplicitLeft = 154
-    ExplicitTop = 247
+    ExplicitLeft = 161
+    ExplicitTop = 271
   end
   object chkbxShowLive: TCheckBox
-    Left = 17
-    Top = 222
+    Left = 11
+    Top = 218
     Width = 199
     Height = 17
     Anchors = [akRight, akBottom]
     Caption = 'Show ONLY live Quotes'
     TabOrder = 5
-    ExplicitLeft = -2
-    ExplicitTop = 189
+    ExplicitLeft = 5
+    ExplicitTop = 213
   end
   object chkbxShowinactive: TCheckBox
-    Left = 17
-    Top = 246
+    Left = 11
+    Top = 242
     Width = 199
     Height = 17
     Anchors = [akRight, akBottom]
     Caption = 'Show inactive Quotes'
     TabOrder = 6
-    ExplicitLeft = -2
-    ExplicitTop = 213
+    ExplicitLeft = 5
+    ExplicitTop = 237
   end
   object edtOfficeContact: TEdit
     Left = 99

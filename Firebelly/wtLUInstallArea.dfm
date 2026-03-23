@@ -8,13 +8,13 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -70,19 +70,21 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 232
+    ExplicitWidth = 746
     DesignSize = (
       752
       67)
     object Label4: TLabel
       Left = 8
       Top = 17
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object btnAdd: TBitBtn
       Left = 288
-      Top = 10
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -92,7 +94,7 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     end
     object btnEdit: TBitBtn
       Left = 376
-      Top = 10
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -102,7 +104,7 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     end
     object btnDelete: TBitBtn
       Left = 464
-      Top = 10
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -112,7 +114,7 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     end
     object BitBtn4: TBitBtn
       Left = 640
-      Top = 10
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -132,7 +134,7 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     end
     object btnExcel: TBitBtn
       Left = 552
-      Top = 10
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -144,7 +146,7 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
       Left = 56
       Top = 13
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNameChange
     end
@@ -161,6 +163,8 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
       item
         Width = 50
       end>
+    ExplicitTop = 299
+    ExplicitWidth = 746
   end
   object dtsInstallationAreas: TDataSource
     DataSet = qryInstallationArea

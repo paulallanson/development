@@ -2,37 +2,37 @@ object frmWTLicence: TfrmWTLicence
   Left = 155
   Top = 167
   BorderStyle = bsDialog
-  Caption = 'myWorktops Licence Activation'
-  ClientHeight = 116
-  ClientWidth = 311
+  Caption = 'Firebelly Licence Activation'
+  ClientHeight = 138
+  ClientWidth = 318
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 27
-    Height = 13
+    Width = 31
+    Height = 17
     Caption = 'Code'
   end
   object Label2: TLabel
     Left = 8
     Top = 56
-    Width = 26
-    Height = 13
+    Width = 29
+    Height = 17
     Caption = 'Entry'
   end
   object CodeEdit: TEdit
     Left = 48
     Top = 16
     Width = 257
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 0
   end
@@ -40,12 +40,12 @@ object frmWTLicence: TfrmWTLicence
     Left = 48
     Top = 56
     Width = 257
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object OKBitBtn: TBitBtn
-    Left = 136
-    Top = 88
+    Left = 132
+    Top = 100
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -119,8 +119,8 @@ object frmWTLicence: TfrmWTLicence
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 232
-    Top = 88
+    Left = 228
+    Top = 100
     Width = 75
     Height = 25
     Kind = bkCancel

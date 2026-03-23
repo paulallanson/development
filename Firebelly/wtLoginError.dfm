@@ -8,11 +8,11 @@ object frmWTLoginError: TfrmWTLoginError
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Memo1: TMemo
     Left = 8
     Top = 8
@@ -25,7 +25,7 @@ object frmWTLoginError: TfrmWTLoginError
     Font.Name = 'Arial'
     Font.Style = []
     Lines.Strings = (
-      'The myWorktops demonstration software cannot be '
+      'The Firebelly demonstration software cannot be '
       'run. This may be because:'
       ''
       '(1)    You do not have at least Office '#39'97 or Access '

@@ -2,12 +2,12 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   Left = 72
   Top = 108
   Caption = 'Customer invoice details'
-  ClientHeight = 415
-  ClientWidth = 678
+  ClientHeight = 406
+  ClientWidth = 672
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -15,26 +15,26 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 678
+    Width = 672
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 672
+        Width = 666
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 663
+      Width = 657
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 47
+      ButtonHeight = 40
+      ButtonWidth = 51
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -46,25 +46,25 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
         ImageIndex = 0
       end
       object btnChange: TToolButton
-        Left = 47
+        Left = 51
         Top = 0
         Caption = '&Change'
         ImageIndex = 1
       end
       object btnCopy: TToolButton
-        Left = 94
+        Left = 102
         Top = 0
         Caption = 'C&opy'
         ImageIndex = 8
       end
       object btnDelete: TToolButton
-        Left = 141
+        Left = 153
         Top = 0
         Caption = '&Delete'
         ImageIndex = 6
       end
       object ToolButton6: TToolButton
-        Left = 188
+        Left = 204
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -72,7 +72,7 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 196
+        Left = 212
         Top = 0
         Caption = '&Print'
         ImageIndex = 7
@@ -82,13 +82,13 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   object DBGrid1: TDBGrid
     Left = 0
     Top = 45
-    Width = 678
-    Height = 310
+    Width = 672
+    Height = 301
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -143,24 +143,24 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 355
-    Width = 678
+    Top = 346
+    Width = 672
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      678
+      672
       41)
     object Label1: TLabel
       Left = 11
       Top = 11
-      Width = 96
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = 'Description Search'
     end
     object Button1: TButton
-      Left = 597
+      Left = 585
       Top = 6
       Width = 75
       Height = 25
@@ -170,17 +170,17 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
       OnClick = Button1Click
     end
     object edtSearch: TEdit
-      Left = 113
+      Left = 126
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 1
     end
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 396
-    Width = 678
+    Top = 387
+    Width = 672
     Height = 19
     Panels = <
       item

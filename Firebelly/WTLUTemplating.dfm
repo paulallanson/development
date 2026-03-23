@@ -2,8 +2,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   Left = 186
   Top = 121
   Caption = 'Templating Details'
-  ClientHeight = 405
-  ClientWidth = 1328
+  ClientHeight = 396
+  ClientWidth = 1322
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 386
-    Width = 1328
+    Top = 377
+    Width = 1322
     Height = 19
     Panels = <
       item
@@ -38,14 +38,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   end
   object Panel1: TPanel
     Left = 0
-    Top = 345
-    Width = 1328
+    Top = 336
+    Width = 1322
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1328
+      1322
       41)
     object Label1: TLabel
       Left = 8
@@ -55,7 +55,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1031
+      Left = 1019
       Top = 13
       Width = 69
       Height = 17
@@ -72,7 +72,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1216
+      Left = 1204
       Top = 9
       Width = 75
       Height = 25
@@ -90,7 +90,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1108
+      Left = 1096
       Top = 9
       Width = 73
       Height = 25
@@ -172,7 +172,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     object cmbActionDate: TComboBox
       Left = 625
       Top = 9
-      Width = 177
+      Width = 215
       Height = 25
       Style = csDropDownList
       TabOrder = 6
@@ -189,19 +189,19 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar1: TCoolBar
     Left = 0
     Top = 41
-    Width = 1328
+    Width = 1322
     Height = 45
     Bands = <
       item
         Control = btnDocuments
         ImageIndex = -1
         MinHeight = 41
-        Width = 1322
+        Width = 1316
       end>
     object btnDocuments: TToolBar
       Left = 11
       Top = 0
-      Width = 1313
+      Width = 1307
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 67
@@ -272,8 +272,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object dbgDetails: TDBGrid
     Left = 0
     Top = 86
-    Width = 1328
-    Height = 259
+    Width = 1322
+    Height = 250
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     DrawingStyle = gdsGradient
@@ -449,19 +449,19 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1328
+    Width = 1322
     Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 41
-        Width = 1322
+        Width = 1316
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1313
+      Width = 1307
       Height = 41
       Align = alLeft
       BevelOuter = bvNone
@@ -469,7 +469,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1313
+        1307
         41)
       object Label2: TLabel
         Left = 0
@@ -485,7 +485,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1057
+        Left = 1051
         Top = 12
         Width = 81
         Height = 15
@@ -497,6 +497,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 1057
       end
       object lblWorkinProgress: TLabel
         Left = 120
@@ -514,7 +515,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1144
+        Left = 1138
         Top = 7
         Width = 145
         Height = 25

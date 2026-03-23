@@ -3,29 +3,29 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
   Top = 159
   BorderStyle = bsDialog
   Caption = 'Edge types'
-  ClientHeight = 226
+  ClientHeight = 256
   ClientWidth = 409
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
     Width = 409
-    Height = 151
+    Height = 168
     Align = alClient
     DataSource = srcEdgeType
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -54,7 +54,7 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 207
+    Top = 237
     Width = 409
     Height = 19
     Panels = <
@@ -64,22 +64,24 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
       item
         Width = 50
       end>
+    ExplicitTop = 198
+    ExplicitWidth = 403
   end
   object Panel1: TPanel
     Left = 0
-    Top = 151
+    Top = 168
     Width = 409
-    Height = 56
+    Height = 69
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
       409
-      56)
+      69)
     object chkbxShowInactive: TCheckBox
       Left = 8
-      Top = 4
+      Top = 8
       Width = 169
       Height = 17
       Caption = 'Show inactive edge types'
@@ -88,17 +90,18 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
     end
     object BitBtn1: TBitBtn
       Left = 8
-      Top = 26
+      Top = 39
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Add'
       TabOrder = 1
       OnClick = BitBtn1Click
+      ExplicitTop = 26
     end
     object btnEdit: TBitBtn
       Left = 88
-      Top = 26
+      Top = 39
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -106,10 +109,11 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
+      ExplicitTop = 26
     end
     object btndelete: TBitBtn
       Left = 168
-      Top = 26
+      Top = 39
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -117,20 +121,22 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
       Enabled = False
       TabOrder = 3
       OnClick = btndeleteClick
+      ExplicitTop = 26
     end
     object BitBtn4: TBitBtn
       Left = 331
-      Top = 26
+      Top = 39
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
       TabOrder = 4
+      ExplicitTop = 26
     end
     object btnExcel: TBitBtn
       Left = 250
-      Top = 26
+      Top = 39
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -138,6 +144,7 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
       Enabled = False
       TabOrder = 5
       OnClick = btnExcelClick
+      ExplicitTop = 26
     end
   end
   object srcEdgeType: TDataSource

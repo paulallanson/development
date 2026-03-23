@@ -3,50 +3,53 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   Top = 66
   BorderStyle = bsDialog
   Caption = 'Global Price changes'
-  ClientHeight = 388
-  ClientWidth = 383
+  ClientHeight = 442
+  ClientWidth = 376
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  DesignSize = (
+    376
+    442)
+  TextHeight = 17
   object lblPriceChange: TLabel
-    Left = 16
-    Top = 286
-    Width = 67
-    Height = 13
+    Left = 18
+    Top = 330
+    Width = 76
+    Height = 17
     Caption = 'Price Change'
   end
   object Label2: TLabel
-    Left = 16
-    Top = 316
-    Width = 70
-    Height = 13
+    Left = 18
+    Top = 360
+    Width = 79
+    Height = 17
     Caption = 'Effective Date'
   end
   object Label4: TLabel
     Left = 16
-    Top = 16
-    Width = 67
-    Height = 13
+    Top = 11
+    Width = 79
+    Height = 17
     Caption = 'Material Type'
   end
   object Label5: TLabel
-    Left = 224
-    Top = 316
-    Width = 23
-    Height = 13
+    Left = 226
+    Top = 360
+    Width = 28
+    Height = 17
     Caption = 'Time'
   end
   object rdgrpPriceChange: TRadioGroup
     Left = 16
     Top = 64
     Width = 145
-    Height = 129
+    Height = 154
     Caption = 'Price Selection'
     ItemIndex = 0
     Items.Strings = (
@@ -62,9 +65,9 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   end
   object BasisGroup: TRadioGroup
     Left = 16
-    Top = 200
+    Top = 224
     Width = 145
-    Height = 73
+    Height = 90
     Caption = 'Price Change type'
     ItemIndex = 0
     Items.Strings = (
@@ -76,10 +79,11 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     OnClick = BasisGroupClick
   end
   object btnOK: TBitBtn
-    Left = 104
-    Top = 352
+    Left = 106
+    Top = 404
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
     Enabled = False
@@ -89,10 +93,11 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     OnExit = edtChangeChange
   end
   object BitBtn2: TBitBtn
-    Left = 192
-    Top = 352
+    Left = 194
+    Top = 404
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
@@ -100,27 +105,27 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     TabOrder = 3
   end
   object dtpckEffective: TDateTimePicker
-    Left = 104
-    Top = 312
+    Left = 106
+    Top = 356
     Width = 105
-    Height = 21
+    Height = 25
     Date = 37563.000000000000000000
     Time = 0.834117939812131200
     TabOrder = 4
   end
   object edtChange: TCREditFloat
-    Left = 104
-    Top = 280
+    Left = 106
+    Top = 324
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 5
     OnChange = edtChangeChange
   end
   object rdGrpWTGroups: TRadioGroup
-    Left = 168
+    Left = 167
     Top = 64
     Width = 185
-    Height = 57
+    Height = 67
     Caption = 'Worktop Group selection'
     ItemIndex = 0
     Items.Strings = (
@@ -131,8 +136,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     OnClick = rdGrpWTGroupsClick
   end
   object grpbxWTGroups: TGroupBox
-    Left = 168
-    Top = 128
+    Left = 167
+    Top = 153
     Width = 185
     Height = 65
     ParentBackground = False
@@ -140,16 +145,16 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     Visible = False
     object Label3: TLabel
       Left = 10
-      Top = 13
-      Width = 82
-      Height = 13
+      Top = 7
+      Width = 91
+      Height = 17
       Caption = 'Worktop Group'
     end
     object dblkpWTGroup: TDBLookupComboBox
       Left = 10
       Top = 29
       Width = 167
-      Height = 21
+      Height = 25
       KeyField = 'Worktop_Group'
       ListField = 'Worktop_Group_Description'
       ListSource = dtsWTGroup
@@ -160,7 +165,7 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     Left = 16
     Top = 32
     Width = 145
-    Height = 21
+    Height = 25
     KeyField = 'Material_Type'
     ListField = 'Description'
     ListSource = dtsMaterial
@@ -169,7 +174,7 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   end
   object grpbxThickness: TGroupBox
     Left = 168
-    Top = 200
+    Top = 231
     Width = 185
     Height = 73
     ParentBackground = False
@@ -177,16 +182,16 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     Visible = False
     object Label1: TLabel
       Left = 10
-      Top = 13
-      Width = 49
-      Height = 13
+      Top = 8
+      Width = 55
+      Height = 17
       Caption = 'Thickness'
     end
     object dblkpthickness: TDBLookupComboBox
       Left = 10
       Top = 29
       Width = 167
-      Height = 21
+      Height = 25
       KeyField = 'Thickness'
       ListField = 'Thickness_mm'
       ListSource = dtsThickness
@@ -194,10 +199,10 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
     end
   end
   object edtTime: TMaskEdit
-    Left = 252
-    Top = 312
+    Left = 260
+    Top = 357
     Width = 51
-    Height = 21
+    Height = 25
     EditMask = '!90:00;1;_'
     MaxLength = 5
     TabOrder = 10
@@ -220,8 +225,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       ' ((Thickness = :Thickness) or (:Thickness = 0)) and'
       '      (Material_Type = :Material_Type)'
       'order by price_pointer')
-    Left = 336
-    Top = 82
+    Left = 312
+    Top = 98
     ParamData = <
       item
         Name = 'Worktop_Group'
@@ -247,8 +252,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'where (Price_pointer = :Price_pointer) and'
       #9#9'(effective_date <= now())'
       'order by effective_date desc')
-    Left = 248
-    Top = 254
+    Left = 112
+    Top = 286
     ParamData = <
       item
         Name = 'Price_pointer'
@@ -262,8 +267,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'from edge_Thickness'
       'WHERE (Material_Type = :Material_Type)'
       'order by Price_pointer')
-    Left = 336
-    Top = 302
+    Left = 312
+    Top = 294
     ParamData = <
       item
         Name = 'Material_Type'
@@ -276,8 +281,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'from Cutout_Thickness'
       'WHERE (Material_Type = :Material_Type)'
       'order by Price_pointer')
-    Left = 336
-    Top = 222
+    Left = 312
+    Top = 342
     ParamData = <
       item
         Name = 'Material_Type'
@@ -289,8 +294,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'select *'
       'from Extra_Charge'
       'order by Price_pointer')
-    Left = 336
-    Top = 152
+    Left = 312
+    Top = 168
   end
   object qryWTGroups: TFDQuery
     ConnectionName = 'wt'
@@ -299,8 +304,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'from Worktop_Group'
       'where material_type = :Material_Type'
       'order by worktop_group_description')
-    Left = 168
-    Top = 96
+    Left = 234
+    Top = 80
     ParamData = <
       item
         Name = 'Material_Type'
@@ -308,8 +313,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroups
-    Left = 208
-    Top = 96
+    Left = 276
+    Top = 72
   end
   object qryMaterial: TFDQuery
     ConnectionName = 'WT'
@@ -336,8 +341,8 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       '((Thickness = :Thickness) or (:Thickness = 0)) and'
       '(Material_Type = :Material_Type)'
       'order by price_pointer')
-    Left = 336
-    Top = 12
+    Left = 312
+    Top = 28
     ParamData = <
       item
         Name = 'Worktop_Group'
@@ -361,12 +366,12 @@ object frmWTAutoPriceChange: TfrmWTAutoPriceChange
       'select *'
       'from thickness'
       'order by thickness_mm')
-    Left = 271
-    Top = 264
+    Left = 135
+    Top = 312
   end
   object dtsThickness: TDataSource
     DataSet = qryThickness
-    Left = 164
-    Top = 256
+    Left = 199
+    Top = 284
   end
 end

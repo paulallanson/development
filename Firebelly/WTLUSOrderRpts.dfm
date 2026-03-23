@@ -4,21 +4,21 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsDialog
   Caption = 'Sales Order Reports'
-  ClientHeight = 314
-  ClientWidth = 430
+  ClientHeight = 370
+  ClientWidth = 453
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 430
-    Height = 273
+    Width = 453
+    Height = 329
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
@@ -28,8 +28,8 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 430
-      Height = 273
+      Width = 453
+      Height = 329
       Align = alClient
       Columns = <
         item
@@ -102,14 +102,14 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
       ViewStyle = vsReport
       OnClick = enableSelect
       OnDblClick = lstvwReportsDblClick
-      ExplicitWidth = 442
-      ExplicitHeight = 264
+      ExplicitWidth = 430
+      ExplicitHeight = 273
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 273
-    Width = 430
+    Top = 329
+    Width = 453
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -118,7 +118,7 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
     ExplicitTop = 264
     ExplicitWidth = 424
     DesignSize = (
-      430
+      453
       41)
     object btnselect: TButton
       Left = 16
@@ -131,7 +131,7 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
       OnClick = btnselectClick
     end
     object Button2: TButton
-      Left = 333
+      Left = 350
       Top = 8
       Width = 75
       Height = 25
@@ -139,7 +139,7 @@ object frmWTLUSOrderRpts: TfrmWTLUSOrderRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitLeft = 327
+      ExplicitLeft = 321
     end
   end
 end

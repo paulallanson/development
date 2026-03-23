@@ -8,14 +8,14 @@ object frmWTLUMatType: TfrmWTLUMatType
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -26,7 +26,7 @@ object frmWTLUMatType: TfrmWTLUMatType
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -64,6 +64,8 @@ object frmWTLUMatType: TfrmWTLUMatType
       item
         Width = 50
       end>
+    ExplicitTop = 386
+    ExplicitWidth = 680
   end
   object Panel1: TPanel
     Left = 0
@@ -73,20 +75,22 @@ object frmWTLUMatType: TfrmWTLUMatType
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 299
+    ExplicitWidth = 680
     DesignSize = (
       686
       87)
     object Label4: TLabel
       Left = 8
       Top = 24
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
       Top = 56
-      Width = 169
+      Width = 225
       Height = 17
       Caption = 'Show inactive material types'
       TabOrder = 1
@@ -94,7 +98,7 @@ object frmWTLUMatType: TfrmWTLUMatType
     end
     object BitBtn1: TBitBtn
       Left = 272
-      Top = 18
+      Top = 20
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -104,7 +108,7 @@ object frmWTLUMatType: TfrmWTLUMatType
     end
     object btnEdit: TBitBtn
       Left = 352
-      Top = 18
+      Top = 20
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -114,7 +118,7 @@ object frmWTLUMatType: TfrmWTLUMatType
     end
     object btnDelete: TBitBtn
       Left = 432
-      Top = 18
+      Top = 20
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -124,7 +128,7 @@ object frmWTLUMatType: TfrmWTLUMatType
     end
     object BitBtn4: TBitBtn
       Left = 592
-      Top = 18
+      Top = 20
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -135,7 +139,7 @@ object frmWTLUMatType: TfrmWTLUMatType
     end
     object btnExcel: TBitBtn
       Left = 512
-      Top = 18
+      Top = 20
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -147,7 +151,7 @@ object frmWTLUMatType: TfrmWTLUMatType
       Left = 56
       Top = 20
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNameChange
     end

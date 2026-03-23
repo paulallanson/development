@@ -8,21 +8,21 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 49
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Worktop:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -35,7 +35,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     DataField = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -49,7 +49,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -95,7 +95,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   end
   object BitBtn1: TBitBtn
     Left = 80
-    Top = 208
+    Top = 218
     Width = 75
     Height = 25
     Caption = '&Add'
@@ -104,7 +104,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   end
   object btnPrices: TBitBtn
     Left = 160
-    Top = 208
+    Top = 218
     Width = 75
     Height = 25
     Caption = '&Prices'
@@ -114,7 +114,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   end
   object btnDelete: TBitBtn
     Left = 240
-    Top = 208
+    Top = 218
     Width = 75
     Height = 25
     Caption = '&Delete'
@@ -124,7 +124,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   end
   object BitBtn4: TBitBtn
     Left = 320
-    Top = 208
+    Top = 218
     Width = 75
     Height = 25
     Caption = '&Close'
@@ -144,8 +144,8 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   object srclkpWTThickness: TDataSource
     DataSet = lkpWTThickness
     OnDataChange = srclkpWTThicknessDataChange
-    Left = 80
-    Top = 16
+    Left = 108
+    Top = 52
   end
   object lkpWTThickness: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
@@ -188,8 +188,8 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
         'inactive IS NULL) OR (Worktop_thickness.inactive = :Inactive))'
       'ORDER BY Thickness.Thickness_mm'
       '')
-    Left = 32
-    Top = 16
+    Left = 48
+    Top = 52
     ParamData = <
       item
         Name = 'Worktop'

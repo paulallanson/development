@@ -2,12 +2,12 @@ object frmWTLUStock: TfrmWTLUStock
   Left = 147
   Top = 140
   Caption = 'Products'
-  ClientHeight = 369
-  ClientWidth = 696
+  ClientHeight = 360
+  ClientWidth = 690
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -17,23 +17,23 @@ object frmWTLUStock: TfrmWTLUStock
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 696
+    Width = 690
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 30
-        Width = 690
+        Width = 684
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 681
+      Width = 675
       Height = 30
       Align = alLeft
       BevelOuter = bvNone
@@ -58,14 +58,14 @@ object frmWTLUStock: TfrmWTLUStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 696
-    Height = 232
+    Width = 690
+    Height = 223
     Align = alClient
     DataSource = dtmdlStock.dtsAllStock
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
@@ -116,24 +116,24 @@ object frmWTLUStock: TfrmWTLUStock
   end
   object Panel1: TPanel
     Left = 0
-    Top = 309
-    Width = 696
+    Top = 300
+    Width = 690
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      696
+      690
       41)
     object Label1: TLabel
-      Left = 56
+      Left = 10
       Top = 12
-      Width = 58
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Stock Code'
     end
     object Button1: TButton
-      Left = 587
+      Left = 575
       Top = 8
       Width = 75
       Height = 25
@@ -143,18 +143,18 @@ object frmWTLUStock: TfrmWTLUStock
       OnClick = Button1Click
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 85
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtSearchChange
     end
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 350
-    Width = 696
+    Top = 341
+    Width = 690
     Height = 19
     Panels = <
       item
@@ -170,22 +170,22 @@ object frmWTLUStock: TfrmWTLUStock
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 696
+    Width = 690
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 690
+        Width = 684
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 681
+      Width = 675
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 47
+      ButtonHeight = 40
+      ButtonWidth = 51
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -198,7 +198,7 @@ object frmWTLUStock: TfrmWTLUStock
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 47
+        Left = 51
         Top = 0
         Caption = '&Change'
         Enabled = False
@@ -206,21 +206,21 @@ object frmWTLUStock: TfrmWTLUStock
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 94
+        Left = 102
         Top = 0
         Caption = 'C&opy'
         Enabled = False
         ImageIndex = 8
       end
       object btnDelete: TToolButton
-        Left = 141
+        Left = 153
         Top = 0
         Caption = '&Delete'
         Enabled = False
         ImageIndex = 6
       end
       object ToolButton6: TToolButton
-        Left = 188
+        Left = 204
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -228,7 +228,7 @@ object frmWTLUStock: TfrmWTLUStock
         Style = tbsSeparator
       end
       object btnPrint: TToolButton
-        Left = 196
+        Left = 212
         Top = 0
         Caption = '&Print'
         Enabled = False

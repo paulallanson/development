@@ -8,13 +8,13 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -65,6 +65,8 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
       item
         Width = 50
       end>
+    ExplicitTop = 281
+    ExplicitWidth = 428
   end
   object Panel1: TPanel
     Left = 0
@@ -75,12 +77,14 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 208
+    ExplicitWidth = 428
     DesignSize = (
       434
       73)
     object chkbxShowInactive: TCheckBox
       Left = 8
-      Top = 16
+      Top = 12
       Width = 169
       Height = 17
       Caption = 'Show inactive sales leads'

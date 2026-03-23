@@ -7,13 +7,13 @@ object frmWTEmailList: TfrmWTEmailList
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -23,6 +23,8 @@ object frmWTEmailList: TfrmWTEmailList
     Caption = 'Panel1'
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 679
+    ExplicitHeight = 208
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -38,6 +40,8 @@ object frmWTEmailList: TfrmWTEmailList
       OnClick = EmailListGridClick
       OnDrawCell = EmailListGridDrawCell
       OnSelectCell = EmailListGridSelectCell
+      ExplicitWidth = 677
+      ExplicitHeight = 206
       ColWidths = (
         64
         186
@@ -50,7 +54,7 @@ object frmWTEmailList: TfrmWTEmailList
       Left = 432
       Top = 88
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'ExportFilter'
       ListField = 'Description'
       ListSource = ExFilterSRC
@@ -62,7 +66,7 @@ object frmWTEmailList: TfrmWTEmailList
       Left = 216
       Top = 88
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = dtsContacts
@@ -80,6 +84,8 @@ object frmWTEmailList: TfrmWTEmailList
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 208
+    ExplicitWidth = 679
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8

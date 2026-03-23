@@ -2,40 +2,42 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
   Left = 469
   Top = 120
   Caption = 'Sales Invoice selection'
-  ClientHeight = 458
+  ClientHeight = 475
   ClientWidth = 799
   Color = clBtnFace
   Constraints.MinHeight = 422
   Constraints.MinWidth = 650
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetail: TPanel
     Left = 0
     Top = 0
     Width = 799
-    Height = 359
+    Height = 360
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 793
+    ExplicitHeight = 350
     object dbgSalesInvoice: TDBGrid
       Left = 0
       Top = 0
       Width = 799
-      Height = 359
+      Height = 360
       Align = alClient
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -110,63 +112,62 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
   end
   object pnlSelection: TPanel
     Left = 0
-    Top = 359
+    Top = 360
     Width = 799
-    Height = 80
+    Height = 96
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
       799
-      80)
+      96)
     object lblSalesInvNo: TLabel
-      Left = 426
-      Top = 62
-      Width = 65
-      Height = 13
+      Left = 456
+      Top = 58
+      Width = 74
+      Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'Sales Invoice'
-      ExplicitLeft = 438
     end
     object GroupBox1: TGroupBox
       Left = 4
       Top = 11
       Width = 285
-      Height = 66
+      Height = 79
       Caption = 'Type here to narrow the search'
       ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 16
-        Top = 16
-        Width = 49
-        Height = 13
+        Top = 21
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object NameEdit: TEdit
         Left = 16
-        Top = 32
+        Top = 44
         Width = 257
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = NameEditChange
       end
     end
     object edtSalesInvNo: TEdit
-      Left = 510
+      Left = 540
       Top = 54
       Width = 110
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtSalesInvNoKeyPress
     end
     object GroupBox2: TGroupBox
-      Left = 672
-      Top = 1
+      Left = 676
+      Top = 2
       Width = 105
-      Height = 76
+      Height = 86
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       ParentBackground = False
@@ -240,7 +241,7 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       end
       object btnClose: TBitBtn
         Left = 14
-        Top = 47
+        Top = 51
         Width = 75
         Height = 25
         Caption = 'Close'
@@ -253,7 +254,7 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 439
+    Top = 456
     Width = 799
     Height = 19
     Panels = <
@@ -263,6 +264,8 @@ object frmWTLUSalesInvoiceCN: TfrmWTLUSalesInvoiceCN
       item
         Width = 50
       end>
+    ExplicitTop = 430
+    ExplicitWidth = 793
   end
   object SearchTimer: TTimer
     Enabled = False

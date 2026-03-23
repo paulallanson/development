@@ -9,14 +9,14 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
   Constraints.MinWidth = 751
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClick = FormClick
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
@@ -27,7 +27,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -101,8 +101,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     object Label4: TLabel
       Left = 16
       Top = 20
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
@@ -118,12 +118,12 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Left = 64
       Top = 16
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtNameChange
     end
     object BitBtn1: TBitBtn
-      Left = 303
+      Left = 297
       Top = 14
       Width = 75
       Height = 25
@@ -131,10 +131,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
-      ExplicitLeft = 297
+      ExplicitLeft = 291
     end
     object btnEdit: TBitBtn
-      Left = 391
+      Left = 385
       Top = 14
       Width = 75
       Height = 25
@@ -143,10 +143,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
-      ExplicitLeft = 385
+      ExplicitLeft = 379
     end
     object btnDelete: TBitBtn
-      Left = 479
+      Left = 473
       Top = 14
       Width = 75
       Height = 25
@@ -155,10 +155,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
-      ExplicitLeft = 473
+      ExplicitLeft = 467
     end
     object BitBtn4: TBitBtn
-      Left = 655
+      Left = 649
       Top = 14
       Width = 75
       Height = 25
@@ -167,10 +167,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
-      ExplicitLeft = 649
+      ExplicitLeft = 643
     end
     object btnExcel: TBitBtn
-      Left = 567
+      Left = 561
       Top = 14
       Width = 75
       Height = 25
@@ -179,7 +179,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
-      ExplicitLeft = 561
+      ExplicitLeft = 555
     end
   end
   object stsbrDetails: TStatusBar
@@ -212,30 +212,29 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       73)
     object Label1: TLabel
       Left = 16
-      Top = 16
-      Width = 67
-      Height = 13
+      Top = 9
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object Label2: TLabel
       Left = 216
-      Top = 16
-      Width = 51
-      Height = 13
+      Top = 9
+      Width = 59
+      Height = 17
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 495
-      Top = 16
-      Width = 138
-      Height = 13
+      Left = 489
+      Top = 9
+      Width = 157
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Copy Cut Out Details from '
-      ExplicitLeft = 501
     end
     object SpeedButton2: TSpeedButton
       Left = 165
-      Top = 31
+      Top = 36
       Width = 23
       Height = 22
       Hint = 'Clear Material Type'
@@ -263,7 +262,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     end
     object SpeedButton1: TSpeedButton
       Left = 365
-      Top = 31
+      Top = 36
       Width = 23
       Height = 22
       Hint = 'Clear Edge Type'
@@ -291,9 +290,9 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     end
     object dblkpMaterialType: TDBLookupComboBox
       Left = 16
-      Top = 32
+      Top = 35
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = srclkpMatType
@@ -302,9 +301,9 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     end
     object dblkpEdgeType: TDBLookupComboBox
       Left = 216
-      Top = 32
+      Top = 35
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Edge_Type'
       ListField = 'Edge_Type_Description'
       ListSource = srclkpEdgeType
@@ -312,10 +311,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyMaterial: TDBLookupComboBox
-      Left = 497
+      Left = 491
       Top = 35
       Width = 145
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       KeyField = 'Material_Type'
       ListField = 'Description'
@@ -324,8 +323,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       OnClick = dblkpCopyMaterialClick
     end
     object btnGo: TButton
-      Left = 656
-      Top = 30
+      Left = 650
+      Top = 35
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -333,14 +332,13 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
-      ExplicitLeft = 650
     end
   end
   object srclkpCOutThickness: TDataSource
     DataSet = lkpCOutThickness
     OnDataChange = srclkpCOutThicknessDataChange
-    Left = 216
-    Top = 256
+    Left = 254
+    Top = 208
   end
   object lkpCOutThickness: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
@@ -401,8 +399,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       
         'ORDER BY Material_Type.Description, Edge_Type.Edge_Type_Descript' +
         'ion, CutOut.Description')
-    Left = 128
-    Top = 256
+    Left = 64
+    Top = 224
     ParamData = <
       item
         Name = 'Material_Type'
@@ -492,13 +490,13 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       
         'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
         ')')
-    Left = 68
-    Top = 218
+    Left = 141
+    Top = 177
   end
   object srclkpMatType: TDataSource
     DataSet = lkpMatType
-    Left = 174
-    Top = 218
+    Left = 250
+    Top = 169
   end
   object qryDelCOutThick: TFDQuery
     ConnectionName = 'wt'
@@ -621,8 +619,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
   end
   object srclkpMatTypeCopy: TDataSource
     DataSet = lkpMatTypeCopy
-    Left = 390
-    Top = 218
+    Left = 480
+    Top = 177
   end
   object lkpMatTypeCopy: TFDQuery
     ConnectionName = 'WT'
@@ -631,7 +629,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       
         'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
         ')')
-    Left = 300
-    Top = 218
+    Left = 383
+    Top = 201
   end
 end

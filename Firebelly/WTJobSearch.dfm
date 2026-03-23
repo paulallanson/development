@@ -18,7 +18,7 @@ object frmWTJobSearch: TfrmWTJobSearch
   TextHeight = 17
   object Label3: TLabel
     Left = 114
-    Top = 19
+    Top = 14
     Width = 143
     Height = 17
     Caption = 'Type search criteria here'
@@ -31,7 +31,7 @@ object frmWTJobSearch: TfrmWTJobSearch
   end
   object Label1: TLabel
     Left = 18
-    Top = 44
+    Top = 42
     Width = 66
     Height = 17
     Caption = 'Description'
@@ -80,7 +80,7 @@ object frmWTJobSearch: TfrmWTJobSearch
   end
   object edtDescription: TEdit
     Left = 114
-    Top = 40
+    Top = 38
     Width = 153
     Height = 25
     TabOrder = 0

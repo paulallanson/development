@@ -8,13 +8,13 @@ object frmwtLUVat: TfrmwtLUVat
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmwtLUVat: TfrmwtLUVat
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -70,6 +70,8 @@ object frmwtLUVat: TfrmwtLUVat
       item
         Width = 50
       end>
+    ExplicitTop = 248
+    ExplicitWidth = 414
   end
   object Panel1: TPanel
     Left = 0
@@ -80,6 +82,8 @@ object frmwtLUVat: TfrmwtLUVat
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 174
+    ExplicitWidth = 414
     DesignSize = (
       420
       74)
@@ -127,7 +131,7 @@ object frmwtLUVat: TfrmwtLUVat
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
-      Top = 17
+      Top = 13
       Width = 169
       Height = 17
       Caption = 'Show inactive vat rates'

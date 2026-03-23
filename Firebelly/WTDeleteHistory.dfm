@@ -3,51 +3,51 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
   Top = 187
   BorderStyle = bsDialog
   Caption = 'Historical Records'
-  ClientHeight = 225
-  ClientWidth = 257
+  ClientHeight = 233
+  ClientWidth = 313
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    257
-    225)
-  TextHeight = 13
+    313
+    233)
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 52
-    Width = 119
-    Height = 13
+    Width = 138
+    Height = 17
     Caption = 'Delete records prior to:'
   end
   object lblnoRecords: TLabel
     Left = 16
     Top = 160
-    Width = 68
-    Height = 13
+    Width = 77
+    Height = 17
     Caption = 'lblnoRecords'
   end
   object Label2: TLabel
     Left = 16
     Top = 20
-    Width = 128
-    Height = 13
+    Width = 155
+    Height = 17
     Caption = 'Delete Historical Records'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 50
-    Top = 181
+    Left = 75
+    Top = 189
     Width = 75
     Height = 25
     Caption = 'Run'
@@ -57,8 +57,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 138
-    Top = 181
+    Left = 163
+    Top = 189
     Width = 75
     Height = 25
     Cancel = True
@@ -92,10 +92,10 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     TabOrder = 4
   end
   object edtDateRequired: TEdit
-    Left = 116
+    Left = 166
     Top = 48
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akTop, akRight]
     TabOrder = 5
     OnChange = CheckOK
@@ -103,7 +103,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     ExplicitLeft = 110
   end
   object btnDateRequired: TBitBtn
-    Left = 212
+    Left = 262
     Top = 46
     Width = 25
     Height = 25
@@ -124,7 +124,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     NumGlyphs = 2
     TabOrder = 6
     OnClick = btnDateRequiredClick
-    ExplicitLeft = 206
+    ExplicitLeft = 200
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'WT'
@@ -162,8 +162,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       'from Sales_Order_Line, Sales_Order'
       'where Sales_order_Line.Quote = :Quote and'
       'Sales_order_line.sales_order = sales_order.sales_order')
-    Left = 80
-    Top = 144
+    Left = 52
+    Top = 124
     ParamData = <
       item
         Name = 'Quote'
@@ -178,8 +178,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       'from Sales_Invoice_Line, Sales_Invoice'
       'where Sales_Invoice_Line.Sales_Order = :Sales_Order and'
       'Sales_Invoice_Line.Sales_Invoice = Sales_Invoice.Sales_Invoice')
-    Left = 136
-    Top = 144
+    Left = 202
+    Top = 132
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -187,8 +187,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
   end
   object qryDelete: TFDQuery
     ConnectionName = 'Wt'
-    Left = 80
-    Top = 136
+    Left = 100
+    Top = 114
   end
   object qryJobs: TFDQuery
     ConnectionName = 'WT'
@@ -201,8 +201,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       '        Address'
       'from Job'
       'where (Date_Raised < :Date_From)')
-    Left = 208
-    Top = 8
+    Left = 276
+    Top = 34
     ParamData = <
       item
         Name = 'Date_From'
@@ -214,8 +214,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       'select *'
       'from Quote_Internal_Note'
       'where Quote = :Quote')
-    Left = 144
-    Top = 8
+    Left = 196
+    Top = 82
     ParamData = <
       item
         Name = 'Quote'
@@ -228,8 +228,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       'from Sales_Order_Line, Sales_Order'
       'where Sales_order_Line.Job = :Job and'
       'Sales_order_line.sales_order = sales_order.sales_order')
-    Left = 200
-    Top = 88
+    Left = 210
+    Top = 38
     ParamData = <
       item
         Name = 'Job'
@@ -241,8 +241,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       'select *'
       'from Job_Internal_Note'
       'where Job = :Job')
-    Left = 200
-    Top = 136
+    Left = 258
+    Top = 122
     ParamData = <
       item
         Name = 'Job'
@@ -263,8 +263,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
         'R (Date_Raised < :Date_From))'
       'ORDER BY Sales_Order.Sales_Order'
       '')
-    Left = 32
-    Top = 72
+    Left = 40
+    Top = 58
     ParamData = <
       item
         Name = 'SALES_ORDER_STATUS'

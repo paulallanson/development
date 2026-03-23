@@ -8,13 +8,13 @@ object frmWTLUFitters: TfrmWTLUFitters
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUFitters: TfrmWTLUFitters
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -65,8 +65,8 @@ object frmWTLUFitters: TfrmWTLUFitters
       item
         Width = 50
       end>
-    ExplicitTop = 290
-    ExplicitWidth = 445
+    ExplicitTop = 327
+    ExplicitWidth = 462
   end
   object Panel1: TPanel
     Left = 0
@@ -77,15 +77,16 @@ object frmWTLUFitters: TfrmWTLUFitters
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 252
+    ExplicitTop = 249
+    ExplicitWidth = 462
     DesignSize = (
       468
       78)
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
@@ -106,7 +107,6 @@ object frmWTLUFitters: TfrmWTLUFitters
       Caption = '&Add'
       TabOrder = 1
       OnClick = btnAddClick
-      ExplicitTop = 36
     end
     object btnEdit: TBitBtn
       Left = 96
@@ -118,7 +118,6 @@ object frmWTLUFitters: TfrmWTLUFitters
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
-      ExplicitTop = 36
     end
     object btnDelete: TBitBtn
       Left = 184
@@ -130,7 +129,6 @@ object frmWTLUFitters: TfrmWTLUFitters
       Enabled = False
       TabOrder = 3
       OnClick = btnDeleteClick
-      ExplicitTop = 36
     end
     object btnExcel: TBitBtn
       Left = 272
@@ -142,7 +140,6 @@ object frmWTLUFitters: TfrmWTLUFitters
       Enabled = False
       TabOrder = 4
       OnClick = btnExcelClick
-      ExplicitTop = 36
     end
     object BitBtn4: TBitBtn
       Left = 384
@@ -160,7 +157,7 @@ object frmWTLUFitters: TfrmWTLUFitters
       Left = 56
       Top = 6
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtNameChange
     end

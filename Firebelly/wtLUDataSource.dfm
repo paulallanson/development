@@ -8,13 +8,13 @@ object frmWTLUDataSource: TfrmWTLUDataSource
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUDataSource: TfrmWTLUDataSource
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -60,6 +60,8 @@ object frmWTLUDataSource: TfrmWTLUDataSource
       item
         Width = 50
       end>
+    ExplicitTop = 287
+    ExplicitWidth = 369
   end
   object Panel1: TPanel
     Left = 0
@@ -69,13 +71,15 @@ object frmWTLUDataSource: TfrmWTLUDataSource
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 206
+    ExplicitWidth = 369
     DesignSize = (
       375
       81)
     object chkbxShowInactive: TCheckBox
       Left = 16
       Top = 16
-      Width = 169
+      Width = 209
       Height = 17
       Caption = 'Show inactive data sources'
       TabOrder = 0

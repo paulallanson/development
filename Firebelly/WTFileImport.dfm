@@ -3,34 +3,35 @@ object frmWTFileImport: TfrmWTFileImport
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Import Quickbooks data'
-  ClientHeight = 413
-  ClientWidth = 378
+  ClientHeight = 435
+  ClientWidth = 402
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlCustomer: TPanel
     Left = 0
     Top = 0
-    Width = 378
+    Width = 402
     Height = 65
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 372
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 129
-      Height = 13
+      Width = 156
+      Height = 17
       Caption = '1. Select the Import type.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -38,15 +39,15 @@ object frmWTFileImport: TfrmWTFileImport
     object LblCustName: TLabel
       Left = 32
       Top = 32
-      Width = 18
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = '      '
     end
     object cmbImportType: TComboBox
       Left = 11
       Top = 32
       Width = 193
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 0
       OnClick = cmbImportTypeClick
@@ -62,36 +63,37 @@ object frmWTFileImport: TfrmWTFileImport
   object pnlImportFile: TPanel
     Left = 0
     Top = 65
-    Width = 378
+    Width = 402
     Height = 80
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 372
     object lblStep3: TLabel
       Left = 8
-      Top = 8
-      Width = 164
-      Height = 13
+      Top = 3
+      Width = 187
+      Height = 17
       Caption = '2. Select the file to be imported.'
     end
     object Label2: TLabel
       Left = 8
       Top = 56
-      Width = 74
-      Height = 13
+      Width = 85
+      Height = 17
       Caption = '3. Data Source'
     end
     object edtImportFileName: TEdit
       Left = 8
       Top = 24
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object btnFindFile: TButton
       Left = 304
-      Top = 22
-      Width = 59
+      Top = 24
+      Width = 75
       Height = 25
       Caption = 'Find File'
       TabOrder = 1
@@ -101,7 +103,7 @@ object frmWTFileImport: TfrmWTFileImport
       Left = 104
       Top = 52
       Width = 193
-      Height = 21
+      Height = 25
       KeyField = 'Data_Source'
       ListField = 'Data_Source_Title'
       ListSource = dtsDataSource
@@ -111,16 +113,17 @@ object frmWTFileImport: TfrmWTFileImport
   object pnlImport: TPanel
     Left = 0
     Top = 145
-    Width = 378
+    Width = 402
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 372
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 90
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = '4. Run the Import'
     end
     object ImportBtn: TButton
@@ -137,44 +140,45 @@ object frmWTFileImport: TfrmWTFileImport
   object pnlProgress: TPanel
     Left = 0
     Top = 186
-    Width = 378
+    Width = 402
     Height = 55
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 372
     object Label1: TLabel
       Left = 8
-      Top = 8
-      Width = 50
-      Height = 13
+      Top = 3
+      Width = 59
+      Height = 17
       Caption = 'Progress: '
     end
     object lblProgress: TLabel
       Left = 257
-      Top = 8
-      Width = 5
-      Height = 13
+      Top = 3
+      Width = 6
+      Height = 17
       Caption = 'x'
       Visible = False
     end
     object lblRecordCount: TLabel
       Left = 299
-      Top = 8
-      Width = 67
-      Height = 13
+      Top = 3
+      Width = 79
+      Height = 17
       Caption = 'records read.'
       Visible = False
     end
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 91
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Reading data file.'
     end
     object prgrsbrImport: TProgressBar
       Left = 8
-      Top = 24
+      Top = 29
       Width = 353
       Height = 17
       TabOrder = 0
@@ -183,21 +187,25 @@ object frmWTFileImport: TfrmWTFileImport
   object mmErrorRecords: TMemo
     Left = 0
     Top = 241
-    Width = 378
-    Height = 131
+    Width = 402
+    Height = 153
     Align = alClient
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 4
+    ExplicitWidth = 372
+    ExplicitHeight = 122
   end
   object pnlCancel: TPanel
     Left = 0
-    Top = 372
-    Width = 378
+    Top = 394
+    Width = 402
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 363
+    ExplicitWidth = 372
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8
@@ -221,12 +229,12 @@ object frmWTFileImport: TfrmWTFileImport
     SQL.Strings = (
       'select * from Data_Source'
       'order by Data_Source_Title')
-    Left = 232
-    Top = 65
+    Left = 338
+    Top = 9
   end
   object dtsDataSource: TDataSource
     DataSet = qryDataSource
-    Left = 288
-    Top = 65
+    Left = 376
+    Top = 9
   end
 end

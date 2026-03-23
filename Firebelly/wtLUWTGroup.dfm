@@ -3,29 +3,29 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   Top = 119
   BorderStyle = bsDialog
   Caption = 'Worktop Groups'
-  ClientHeight = 297
-  ClientWidth = 435
+  ClientHeight = 328
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 57
-    Width = 435
-    Height = 166
+    Top = 65
+    Width = 433
+    Height = 167
     Align = alClient
     DataSource = srcWTGroup
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -54,8 +54,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 278
-    Width = 435
+    Top = 309
+    Width = 433
     Height = 19
     Panels = <
       item
@@ -65,22 +65,20 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
         Width = 50
       end>
     ExplicitTop = 269
-    ExplicitWidth = 414
+    ExplicitWidth = 429
   end
   object Panel1: TPanel
     Left = 0
-    Top = 223
-    Width = 435
-    Height = 55
+    Top = 232
+    Width = 433
+    Height = 77
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 214
-    ExplicitWidth = 414
     object BitBtn1: TBitBtn
       Left = 8
-      Top = 25
+      Top = 46
       Width = 75
       Height = 25
       Caption = '&Add'
@@ -89,7 +87,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     end
     object btnEdit: TBitBtn
       Left = 90
-      Top = 25
+      Top = 46
       Width = 75
       Height = 25
       Caption = '&Edit'
@@ -99,7 +97,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     end
     object btnDelete: TBitBtn
       Left = 172
-      Top = 25
+      Top = 46
       Width = 75
       Height = 25
       Caption = '&Delete'
@@ -109,7 +107,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     end
     object BitBtn4: TBitBtn
       Left = 336
-      Top = 25
+      Top = 46
       Width = 75
       Height = 25
       Caption = '&Close'
@@ -121,14 +119,14 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
       Left = 8
       Top = 6
       Width = 169
-      Height = 17
+      Height = 25
       Caption = 'Show inactive groups'
       TabOrder = 4
       OnClick = chkbxShowInactiveClick
     end
     object btnExcel: TBitBtn
       Left = 254
-      Top = 25
+      Top = 46
       Width = 75
       Height = 25
       Caption = '&Excel'
@@ -140,25 +138,24 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 435
-    Height = 57
+    Width = 433
+    Height = 65
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 414
     object Label1: TLabel
       Left = 8
-      Top = 8
-      Width = 68
-      Height = 13
+      Top = 6
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object dblkpMaterialType: TDBLookupComboBox
       Left = 8
-      Top = 24
-      Width = 145
-      Height = 21
+      Top = 30
+      Width = 178
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = srclkpMatType
@@ -166,8 +163,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
       OnClick = dblkpMaterialTypeClick
     end
     object btnLUMatType: TBitBtn
-      Left = 160
-      Top = 23
+      Left = 192
+      Top = 31
       Width = 22
       Height = 22
       Caption = '...'

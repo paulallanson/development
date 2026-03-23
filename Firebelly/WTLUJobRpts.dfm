@@ -9,11 +9,11 @@ object frmWTLUJobRpts: TfrmWTLUJobRpts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -23,6 +23,8 @@ object frmWTLUJobRpts: TfrmWTLUJobRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 406
+    ExplicitHeight = 134
     object lstvwReports: TListView
       Left = 0
       Top = 0
@@ -63,6 +65,8 @@ object frmWTLUJobRpts: TfrmWTLUJobRpts
       ViewStyle = vsReport
       OnClick = enableSelect
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 406
+      ExplicitHeight = 134
     end
   end
   object Panel2: TPanel
@@ -74,6 +78,8 @@ object frmWTLUJobRpts: TfrmWTLUJobRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 134
+    ExplicitWidth = 406
     DesignSize = (
       412
       41)
@@ -88,7 +94,7 @@ object frmWTLUJobRpts: TfrmWTLUJobRpts
       OnClick = btnselectClick
     end
     object Button2: TButton
-      Left = 327
+      Left = 321
       Top = 8
       Width = 75
       Height = 25
@@ -96,6 +102,7 @@ object frmWTLUJobRpts: TfrmWTLUJobRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 315
     end
   end
 end

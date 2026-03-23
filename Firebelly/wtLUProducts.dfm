@@ -7,7 +7,7 @@ object frmWTLUProducts: TfrmWTLUProducts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,7 +15,7 @@ object frmWTLUProducts: TfrmWTLUProducts
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -26,7 +26,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -91,6 +91,8 @@ object frmWTLUProducts: TfrmWTLUProducts
       item
         Width = 50
       end>
+    ExplicitTop = 468
+    ExplicitWidth = 833
   end
   object Panel1: TPanel
     Left = 0
@@ -100,21 +102,23 @@ object frmWTLUProducts: TfrmWTLUProducts
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 400
+    ExplicitWidth = 833
     DesignSize = (
       839
       68)
     object Label1: TLabel
       Left = 8
       Top = 15
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object edtSearch: TEdit
       Left = 56
       Top = 11
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
@@ -128,8 +132,8 @@ object frmWTLUProducts: TfrmWTLUProducts
       OnClick = chkbxShowInactiveClick
     end
     object BitBtn4: TBitBtn
-      Left = 744
-      Top = 6
+      Left = 755
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -140,7 +144,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     end
     object BitBtn2: TBitBtn
       Left = 264
-      Top = 9
+      Top = 11
       Width = 75
       Height = 25
       Caption = 'S&weep'
@@ -156,6 +160,8 @@ object frmWTLUProducts: TfrmWTLUProducts
     Align = alRight
     ParentBackground = False
     TabOrder = 3
+    ExplicitLeft = 743
+    ExplicitHeight = 400
     DesignSize = (
       90
       409)
@@ -188,6 +194,7 @@ object frmWTLUProducts: TfrmWTLUProducts
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitTop = 370
     end
     object btnDelete: TBitBtn
       Left = 7

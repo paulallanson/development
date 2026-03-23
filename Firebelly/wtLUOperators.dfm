@@ -8,13 +8,13 @@ object frmWTLUOperators: TfrmWTLUOperators
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUOperators: TfrmWTLUOperators
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -72,8 +72,8 @@ object frmWTLUOperators: TfrmWTLUOperators
       item
         Width = 50
       end>
-    ExplicitTop = 322
-    ExplicitWidth = 412
+    ExplicitTop = 348
+    ExplicitWidth = 436
   end
   object Panel1: TPanel
     Left = 0
@@ -83,23 +83,23 @@ object frmWTLUOperators: TfrmWTLUOperators
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 256
-    ExplicitWidth = 418
+    ExplicitTop = 262
+    ExplicitWidth = 436
     DesignSize = (
       442
       86)
     object Label4: TLabel
       Left = 8
       Top = 16
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
-      Left = 281
-      Top = 14
-      Width = 152
-      Height = 17
+      Left = 264
+      Top = 6
+      Width = 171
+      Height = 37
       Caption = 'Show inactive operators'
       TabOrder = 0
       OnClick = chkbxShowInactiveClick
@@ -113,7 +113,6 @@ object frmWTLUOperators: TfrmWTLUOperators
       Caption = '&Add'
       TabOrder = 1
       OnClick = btnAddClick
-      ExplicitTop = 42
     end
     object btnEdit: TBitBtn
       Left = 90
@@ -125,7 +124,6 @@ object frmWTLUOperators: TfrmWTLUOperators
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
-      ExplicitTop = 42
     end
     object btnDelete: TBitBtn
       Left = 172
@@ -137,7 +135,6 @@ object frmWTLUOperators: TfrmWTLUOperators
       Enabled = False
       TabOrder = 3
       OnClick = btnDeleteClick
-      ExplicitTop = 42
     end
     object BitBtn4: TBitBtn
       Left = 358
@@ -161,13 +158,12 @@ object frmWTLUOperators: TfrmWTLUOperators
       Enabled = False
       TabOrder = 5
       OnClick = btnExcelClick
-      ExplicitTop = 42
     end
     object edtName: TEdit
       Left = 56
       Top = 12
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtNameChange
     end

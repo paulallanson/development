@@ -8,13 +8,13 @@ object frmWTLUReps: TfrmWTLUReps
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUReps: TfrmWTLUReps
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -65,6 +65,8 @@ object frmWTLUReps: TfrmWTLUReps
       item
         Width = 50
       end>
+    ExplicitTop = 322
+    ExplicitWidth = 408
   end
   object Panel1: TPanel
     Left = 0
@@ -75,6 +77,8 @@ object frmWTLUReps: TfrmWTLUReps
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 246
+    ExplicitWidth = 408
     DesignSize = (
       414
       76)

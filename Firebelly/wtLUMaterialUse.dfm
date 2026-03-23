@@ -8,14 +8,14 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -26,7 +26,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -72,6 +72,8 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       item
         Width = 50
       end>
+    ExplicitTop = 277
+    ExplicitWidth = 704
   end
   object Panel1: TPanel
     Left = 0
@@ -82,20 +84,22 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 199
+    ExplicitWidth = 704
     DesignSize = (
       710
       78)
     object Label4: TLabel
       Left = 8
       Top = 20
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
       Top = 50
-      Width = 169
+      Width = 225
       Height = 17
       Caption = 'Show inactive material uses'
       TabOrder = 1
@@ -103,7 +107,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     end
     object BitBtn1: TBitBtn
       Left = 264
-      Top = 13
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -113,7 +117,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     end
     object btnEdit: TBitBtn
       Left = 348
-      Top = 13
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -123,7 +127,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     end
     object BitBtn3: TBitBtn
       Left = 432
-      Top = 13
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -133,7 +137,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     end
     object BitBtn4: TBitBtn
       Left = 600
-      Top = 13
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -144,7 +148,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     end
     object btnExcel: TBitBtn
       Left = 516
-      Top = 13
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -157,7 +161,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       Left = 56
       Top = 16
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNameChange
     end

@@ -9,12 +9,12 @@ object frmWTLUSOLines: TfrmWTLUSOLines
   Constraints.MinWidth = 570
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 217
@@ -29,7 +29,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       638
       41)
     object btnSelect: TButton
-      Left = 447
+      Left = 441
       Top = 8
       Width = 75
       Height = 25
@@ -38,10 +38,10 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Enabled = False
       TabOrder = 0
       OnClick = btnSelectClick
-      ExplicitLeft = 441
+      ExplicitLeft = 435
     end
     object btnCancel: TButton
-      Left = 543
+      Left = 537
       Top = 8
       Width = 75
       Height = 25
@@ -49,7 +49,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Caption = 'Cancel'
       TabOrder = 1
       OnClick = btnCancelClick
-      ExplicitLeft = 537
+      ExplicitLeft = 531
     end
   end
   object dbgDetails: TDBGrid
@@ -62,7 +62,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -125,22 +125,22 @@ object frmWTLUSOLines: TfrmWTLUSOLines
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Sales Order'
     end
     object Label2: TLabel
       Left = 184
       Top = 12
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtSalesOrder: TEdit
-      Left = 72
+      Left = 83
       Top = 8
       Width = 81
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -150,7 +150,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Left = 248
       Top = 8
       Width = 305
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
