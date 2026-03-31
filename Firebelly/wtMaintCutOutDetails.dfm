@@ -4,25 +4,25 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
   BorderStyle = bsDialog
   Caption = 'Cut Outs details'
   ClientHeight = 159
-  ClientWidth = 386
+  ClientWidth = 401
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 59
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,12 +30,12 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
   object Label4: TLabel
     Left = 8
     Top = 52
-    Width = 51
-    Height = 13
+    Width = 61
+    Height = 17
     Caption = 'Cost Price'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -43,21 +43,21 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
   object Label3: TLabel
     Left = 8
     Top = 84
-    Width = 63
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'Selling Price'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object dblkpDescription: TDBLookupComboBox
-    Left = 88
+    Left = 93
     Top = 16
     Width = 249
-    Height = 21
+    Height = 25
     KeyField = 'CutOut'
     ListField = 'Description'
     ListSource = srclkpCutOuts
@@ -65,8 +65,8 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
     OnClick = EnableOK
   end
   object btnCutOuts: TBitBtn
-    Left = 343
-    Top = 14
+    Left = 348
+    Top = 16
     Width = 25
     Height = 25
     Hint = 'Select Customer'
@@ -83,18 +83,18 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
     OnClick = btnCutOutsClick
   end
   object edtmnyCost: TCREditMoney
-    Left = 88
+    Left = 93
     Top = 48
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = '0.00'
   end
   object edtmnySell: TCREditMoney
-    Left = 88
+    Left = 93
     Top = 80
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = '0.00'
   end
@@ -133,8 +133,8 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
         ') and'
       '((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null))'
       'order by Description')
-    Left = 72
-    Top = 8
+    Left = 250
+    Top = 58
     ParamData = <
       item
         Name = 'Material_type'
@@ -145,8 +145,8 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
   end
   object srclkpCutOuts: TDataSource
     DataSet = lkpCutOuts
-    Left = 128
-    Top = 8
+    Left = 333
+    Top = 66
   end
   object qryAdd: TFDQuery
     ConnectionName = 'wt'
@@ -166,8 +166,8 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
       '  :Price_Pointer'
       ')'
       '')
-    Left = 64
-    Top = 96
+    Left = 192
+    Top = 56
     ParamData = <
       item
         Name = 'CutOut'

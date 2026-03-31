@@ -8,7 +8,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,16 +17,16 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   DesignSize = (
     397
     308)
-  TextHeight = 13
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 59
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,12 +34,12 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 71
-    Height = 13
+    Width = 84
+    Height = 17
     Caption = 'Material Type'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -47,12 +47,12 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   object Label3: TLabel
     Left = 8
     Top = 108
-    Width = 43
-    Height = 13
+    Width = 48
+    Height = 17
     Caption = 'Supplier'
   end
   object SpeedButton4: TSpeedButton
-    Left = 314
+    Left = 326
     Top = 102
     Width = 25
     Height = 25
@@ -82,22 +82,22 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
   object Label4: TLabel
     Left = 8
     Top = 140
-    Width = 70
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'Effective Date'
   end
   object Label5: TLabel
     Left = 8
     Top = 172
-    Width = 80
-    Height = 13
+    Width = 89
+    Height = 17
     Caption = 'Ineffective Date'
   end
   object lblGroupID: TLabel
     Left = 8
     Top = 81
-    Width = 47
-    Height = 13
+    Width = 53
+    Height = 17
     Caption = 'Group ID'
   end
   object btnOK: TBitBtn
@@ -112,7 +112,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     NumGlyphs = 2
     TabOrder = 10
     OnClick = btnOKClick
-    ExplicitTop = 235
+    ExplicitTop = 254
   end
   object BitBtn2: TBitBtn
     Left = 280
@@ -125,7 +125,7 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 11
-    ExplicitTop = 235
+    ExplicitTop = 254
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -135,13 +135,13 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 9
-    ExplicitTop = 235
+    ExplicitTop = 254
   end
   object dblkpMaterialType: TDBLookupComboBox
-    Left = 96
+    Left = 108
     Top = 48
     Width = 169
-    Height = 21
+    Height = 25
     KeyField = 'Material_Type'
     ListField = 'Description'
     ListSource = srcMaterialtype
@@ -149,10 +149,10 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     OnClick = dblkpMaterialTypeClick
   end
   object dblkpSupplier: TDBLookupComboBox
-    Left = 96
+    Left = 108
     Top = 104
     Width = 169
-    Height = 21
+    Height = 25
     KeyField = 'Supplier'
     ListField = 'Supplier_Name'
     ListSource = srcSupplier
@@ -187,20 +187,19 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Anchors = [akLeft, akBottom]
     Caption = 'Use for General Quoting'
     TabOrder = 8
-    ExplicitTop = 195
+    ExplicitTop = 214
   end
   object edtDateEffective: TEdit
-    Left = 96
+    Left = 108
     Top = 136
     Width = 106
-    Height = 21
+    Height = 25
     Anchors = [akTop, akRight]
     TabOrder = 4
     OnExit = edtDateEffectiveExit
-    ExplicitLeft = 90
   end
   object btnDateEffective: TBitBtn
-    Left = 214
+    Left = 226
     Top = 134
     Width = 25
     Height = 25
@@ -221,20 +220,18 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnDateEffectiveClick
-    ExplicitLeft = 208
   end
   object edtDateInEffective: TEdit
-    Left = 96
+    Left = 108
     Top = 168
     Width = 106
-    Height = 21
+    Height = 25
     Anchors = [akTop, akRight]
     TabOrder = 6
     OnExit = edtDateEffectiveExit
-    ExplicitLeft = 90
   end
   object btnDateInEffective: TBitBtn
-    Left = 214
+    Left = 226
     Top = 166
     Width = 25
     Height = 25
@@ -255,22 +252,21 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     NumGlyphs = 2
     TabOrder = 7
     OnClick = btnDateInEffectiveClick
-    ExplicitLeft = 208
   end
   object edtGroupDescription: TEdit
-    Left = 96
+    Left = 108
     Top = 16
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtGroupDescription'
     OnChange = EnableOK
   end
   object edtID: TCREditInt
-    Left = 96
+    Left = 108
     Top = 77
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 12
     Text = 'edtID'
   end
@@ -329,8 +325,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'WHERE'
       '  Customer = :Customer AND'
       '  Group_Number = :Group_Number')
-    Left = 26
-    Top = 162
+    Left = 41
+    Top = 123
     ParamData = <
       item
         Name = 'Group_Description'
@@ -372,8 +368,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'Select :Customer, Max(Group_Number)+1, :GUID, :Material_Type'
       'From Customer_Worktop_Group'
       ' ')
-    Left = 96
-    Top = 162
+    Left = 104
+    Top = 131
     ParamData = <
       item
         Name = 'Customer'
@@ -424,8 +420,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
       'Values (:Customer, :Group_Number, '#39'Patch'#39', :Material_Type)'
       ''
       ' ')
-    Left = 156
-    Top = 162
+    Left = 171
+    Top = 123
     ParamData = <
       item
         Name = 'Customer'

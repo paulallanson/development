@@ -3,35 +3,35 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
   Top = 153
   BorderStyle = bsDialog
   Caption = 'Set Quote Expiry Date'
-  ClientHeight = 257
+  ClientHeight = 316
   ClientWidth = 247
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Label62: TLabel
-    Left = 8
-    Top = 184
-    Width = 86
-    Height = 13
+    Left = 4
+    Top = 234
+    Width = 98
+    Height = 17
     Caption = 'Quotes Expiry in:'
   end
   object Label63: TLabel
-    Left = 208
-    Top = 184
-    Width = 23
-    Height = 13
+    Left = 203
+    Top = 234
+    Width = 27
+    Height = 17
     Caption = 'days'
   end
   object Label3: TLabel
     Left = 8
-    Top = 112
-    Width = 219
-    Height = 52
+    Top = 111
+    Width = 217
+    Height = 106
     Caption = 
       'This utility will set the expiry date of every quote within the ' +
       'selected date range. The expiry date will be the date of the quo' +
@@ -49,22 +49,22 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 29
-      Height = 13
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
       Top = 56
-      Width = 15
-      Height = 13
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
       Top = 24
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
@@ -73,7 +73,7 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
       Left = 56
       Top = 52
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
@@ -124,8 +124,8 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     end
   end
   object btnOK: TBitBtn
-    Left = 40
-    Top = 219
+    Left = 34
+    Top = 275
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -137,8 +137,8 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 128
-    Top = 219
+    Left = 122
+    Top = 275
     Width = 75
     Height = 25
     Cancel = True
@@ -148,10 +148,10 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     TabOrder = 2
   end
   object spnExpiryDays: TSpinEdit
-    Left = 112
-    Top = 179
+    Left = 107
+    Top = 231
     Width = 90
-    Height = 22
+    Height = 27
     MaxValue = 0
     MinValue = 0
     TabOrder = 3

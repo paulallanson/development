@@ -8,13 +8,13 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlFunctions: TPanel
     Left = 0
     Top = 168
@@ -28,7 +28,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       758
       40)
     object btnOK: TBitBtn
-      Left = 590
+      Left = 584
       Top = 7
       Width = 75
       Height = 25
@@ -38,7 +38,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -64,14 +64,14 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
-      Left = 670
+      Left = 664
       Top = 7
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
@@ -92,29 +92,30 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
     Left = 0
     Top = 25
     Width = 758
-    Height = 78
+    Height = 73
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitHeight = 78
     object Label1: TLabel
       Left = 18
       Top = 13
-      Width = 70
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 18
       Top = 45
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object edtProductCode: TEdit
       Left = 112
       Top = 8
       Width = 385
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtProductCode'
       OnChange = CheckOK
@@ -123,7 +124,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       Left = 112
       Top = 40
       Width = 625
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtDescription'
       OnChange = CheckOK
@@ -140,50 +141,51 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
   end
   object pnlCosts: TPanel
     Left = 0
-    Top = 103
+    Top = 98
     Width = 758
-    Height = 65
+    Height = 70
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 103
     object Label12: TLabel
       Left = 18
       Top = 10
-      Width = 48
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Unit Cost'
     end
     object Label3: TLabel
       Left = 226
       Top = 10
-      Width = 96
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Cost Pack Quantity'
     end
     object Label4: TLabel
       Left = 18
       Top = 42
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Unit Price'
     end
     object Label5: TLabel
       Left = 226
       Top = 42
-      Width = 97
-      Height = 13
+      Width = 110
+      Height = 17
       Caption = 'Price Pack Quantity'
     end
     object edtUnitCost: TCREditMoney
       Left = 112
       Top = 6
       Width = 80
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = CheckOK
     end
     object edtCostUnit: TMemo
-      Left = 328
+      Left = 352
       Top = 6
       Width = 80
       Height = 21
@@ -196,12 +198,12 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       Left = 112
       Top = 38
       Width = 80
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = CheckOK
     end
     object edtpriceUnit: TMemo
-      Left = 328
+      Left = 352
       Top = 38
       Width = 80
       Height = 21
@@ -218,8 +220,8 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       'FROM Supplier_Product'
       'WHERE Supplier = :Supplier AND'
       '      Supplier_Product_Code = :Supplier_Product_Code')
-    Left = 560
-    Top = 24
+    Left = 628
+    Top = 14
     ParamData = <
       item
         Name = 'Supplier'

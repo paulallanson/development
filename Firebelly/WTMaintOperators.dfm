@@ -3,81 +3,81 @@ object frmWTMaintOperators: TfrmWTMaintOperators
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Operator details'
-  ClientHeight = 496
-  ClientWidth = 364
+  ClientHeight = 504
+  ClientWidth = 388
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    364
-    496)
-  TextHeight = 13
+    388
+    504)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 15
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 8
     Top = 45
-    Width = 61
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Login Name'
   end
   object Label3: TLabel
     Left = 8
     Top = 169
-    Width = 36
-    Height = 13
+    Width = 41
+    Height = 17
     Caption = 'Mobile'
   end
   object Label5: TLabel
     Left = 8
     Top = 108
-    Width = 43
-    Height = 13
+    Width = 49
+    Height = 17
     Caption = 'Job Title'
   end
   object Label6: TLabel
     Left = 8
     Top = 140
-    Width = 54
-    Height = 13
+    Width = 60
+    Height = 17
     Caption = 'Telephone'
   end
   object Label7: TLabel
     Left = 8
     Top = 198
-    Width = 27
-    Height = 13
+    Width = 31
+    Height = 17
     Caption = 'Email'
   end
   object Label8: TLabel
     Left = 8
     Top = 77
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Password'
   end
   object Label9: TLabel
     Left = 8
     Top = 230
-    Width = 47
-    Height = 26
+    Width = 49
+    Height = 34
     Caption = 'Revenue Centre'
     WordWrap = True
   end
   object SpeedButton6: TSpeedButton
-    Left = 298
-    Top = 230
+    Left = 304
+    Top = 232
     Width = 25
     Height = 25
     Hint = 'Clear Default Upstand Size'
@@ -105,7 +105,7 @@ object frmWTMaintOperators: TfrmWTMaintOperators
   end
   object btnOK: TBitBtn
     Left = 184
-    Top = 461
+    Top = 469
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -116,10 +116,11 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     NumGlyphs = 2
     TabOrder = 11
     OnClick = btnOKClick
+    ExplicitTop = 452
   end
   object BitBtn2: TBitBtn
     Left = 272
-    Top = 461
+    Top = 469
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -128,15 +129,17 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 12
+    ExplicitTop = 452
   end
   object chkbxEnabled: TCheckBox
     Left = 8
-    Top = 465
+    Top = 473
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Login Enabled'
     TabOrder = 10
+    ExplicitTop = 456
   end
   object grpbxReminders: TGroupBox
     Left = 8
@@ -149,15 +152,15 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     object Label4: TLabel
       Left = 16
       Top = 36
-      Width = 37
-      Height = 13
+      Width = 42
+      Height = 17
       Caption = 'Quotes'
     end
     object cmbQuoteFollowUp: TComboBox
       Left = 64
       Top = 32
       Width = 161
-      Height = 21
+      Height = 25
       Style = csDropDownList
       ItemIndex = 0
       TabOrder = 0
@@ -171,12 +174,13 @@ object frmWTMaintOperators: TfrmWTMaintOperators
   end
   object chkbxEndUser: TCheckBox
     Left = 8
-    Top = 435
+    Top = 443
     Width = 257
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'This is an end user operator'
     TabOrder = 9
+    ExplicitTop = 426
   end
   object grpbxScheduling: TGroupBox
     Left = 8
@@ -196,69 +200,69 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     end
   end
   object edtOperatorName: TEdit
-    Left = 88
+    Left = 94
     Top = 11
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtOperatorName'
     OnChange = EnableOK
   end
   object edtTelephoneNumber: TEdit
-    Left = 88
+    Left = 94
     Top = 136
     Width = 121
-    Height = 21
+    Height = 25
     TabOrder = 4
     Text = 'edtTelephoneNumber'
   end
   object edtMobileNumber: TEdit
-    Left = 88
+    Left = 94
     Top = 165
     Width = 121
-    Height = 21
+    Height = 25
     TabOrder = 5
     Text = 'edtMobileNumber'
   end
   object edtEmailAddress: TEdit
-    Left = 88
+    Left = 94
     Top = 194
     Width = 265
-    Height = 21
+    Height = 25
     TabOrder = 6
     Text = 'edtEmailAddress'
   end
   object edtLoginPassword: TEdit
-    Left = 88
+    Left = 94
     Top = 73
     Width = 201
-    Height = 21
+    Height = 25
     PasswordChar = '*'
     TabOrder = 2
     Text = 'edtLoginPassword'
   end
   object edtJobTitle: TEdit
-    Left = 88
+    Left = 94
     Top = 104
     Width = 201
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = 'edtJobTitle'
   end
   object edtLoginName: TEdit
-    Left = 88
+    Left = 94
     Top = 40
     Width = 201
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtLoginName'
     OnChange = EnableOK
   end
   object dblkpRevenueCentre: TDBLookupComboBox
-    Left = 88
+    Left = 94
     Top = 232
     Width = 201
-    Height = 21
+    Height = 25
     KeyField = 'REvenue_Centre'
     ListField = 'Revenue_Centre_Descr'
     ListSource = dtsRevCentre
@@ -283,8 +287,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
       '  Revenue_Centre = :Revenue_Centre'
       'WHERE'
       '  Operator = :Operator')
-    Left = 96
-    Top = 40
+    Left = 126
+    Top = 50
     ParamData = <
       item
         Name = 'Operator_Name'
@@ -338,8 +342,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
       'Select Max(Operator)+1, '#39'NAME'#39', :GUID, '#39'Y'#39
       'From Operator'
       ' ')
-    Left = 152
-    Top = 40
+    Left = 196
+    Top = 50
     ParamData = <
       item
         Name = 'GUID'
@@ -375,8 +379,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
       'Where'
       '(Category = :Category) '
       '')
-    Left = 312
-    Top = 40
+    Left = 310
+    Top = 98
     ParamData = <
       item
         Name = 'Description'
@@ -406,12 +410,12 @@ object frmWTMaintOperators: TfrmWTMaintOperators
       'SELECT *'
       'FROM Revenue_Centre'
       'ORDER BY Revenue_Centre_Descr')
-    Left = 264
-    Top = 144
+    Left = 274
+    Top = 132
   end
   object dtsRevCentre: TDataSource
     DataSet = qryRevCentre
     Left = 320
-    Top = 144
+    Top = 276
   end
 end

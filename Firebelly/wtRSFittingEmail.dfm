@@ -4,24 +4,24 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   BorderStyle = bsDialog
   Caption = 'Template Sheet Print'
   ClientHeight = 417
-  ClientWidth = 499
+  ClientWidth = 571
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object SelectLst: TListBox
     Left = 176
     Top = 24
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 0
     Visible = False
@@ -29,13 +29,14 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlFooter: TPanel
     Left = 0
     Top = 337
-    Width = 499
+    Width = 571
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 499
     DesignSize = (
-      499
+      571
       80)
     object btnPrint: TButton
       Left = 8
@@ -71,7 +72,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       OnClick = btnEmailClick
     end
     object Button4: TButton
-      Left = 424
+      Left = 478
       Top = 47
       Width = 75
       Height = 25
@@ -83,7 +84,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object chkbxMerge: TCheckBox
       Left = 8
       Top = 5
-      Width = 345
+      Width = 433
       Height = 17
       Caption = 'Merge all selected documents to create single PDF in email'
       TabOrder = 4
@@ -92,25 +93,26 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 187
-    Width = 499
+    Width = 571
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitWidth = 499
     object lstbxDocuments: TListBox
       Left = 8
       Top = 15
       Width = 273
       Height = 129
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
       OnDblClick = lstbxDocumentsDblClick
     end
     object chkbxAllDocuments: TCheckBox
-      Left = 296
+      Left = 298
       Top = 15
-      Width = 201
+      Width = 263
       Height = 17
       Caption = 'Select ALL additional order documents'
       TabOrder = 1
@@ -119,17 +121,20 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlDocuments: TPanel
     Left = 0
-    Top = 138
-    Width = 499
-    Height = 49
+    Top = 158
+    Width = 571
+    Height = 29
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 138
+    ExplicitWidth = 499
+    ExplicitHeight = 49
     object Label2: TLabel
       Left = 8
       Top = 5
-      Width = 207
-      Height = 13
+      Width = 235
+      Height = 17
       Caption = 'Include documents from selected folder:'
     end
     object cmbDocuments: TComboBox
@@ -149,22 +154,23 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 499
-    Height = 138
+    Width = 571
+    Height = 158
     Align = alTop
     TabOrder = 4
+    ExplicitWidth = 1039
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
       Width = 273
-      Height = 121
+      Height = 145
       Caption = 'Sales Order Selection'
       TabOrder = 0
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 244
-        Height = 39
+        Width = 257
+        Height = 51
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'
@@ -183,7 +189,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object chkbxPrint: TCheckBox
       Left = 296
       Top = 16
-      Width = 209
+      Width = 257
       Height = 17
       Caption = 'Print/Email associated quote details'
       TabOrder = 1
@@ -191,7 +197,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object chkbxPrintPlan: TCheckBox
       Left = 296
       Top = 40
-      Width = 209
+      Width = 257
       Height = 17
       Caption = 'Print/Email associated Kitchen Plan'
       TabOrder = 2
@@ -206,8 +212,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       '        INNER JOIN Int_Sel'
       '          ON Sales_Order_Line.Sales_Order = Int_Sel.Sel1'
       'WHERE Int_Sel.Int_Sel_Code = :Int_Sel')
-    Left = 264
-    Top = 24
+    Left = 234
+    Top = 22
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -253,8 +259,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       
         '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
         '<> 0)')
-    Left = 48
-    Top = 24
+    Left = 44
+    Top = 22
     ParamData = <
       item
         Name = 'Int_sel'
@@ -302,8 +308,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       '    Fitter.Fitter_Name,'
       '    sales_order_line.Sales_Order'
       '')
-    Left = 56
-    Top = 200
+    Left = 230
+    Top = 106
     ParamData = <
       item
         Name = 'Int_sel'
@@ -316,8 +322,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       'FROM Sales_Order_Line'
       'WHERE Sales_Order_Line.Sales_Order = :Sales_Order AND'
       'Sales_Order_Line.Quote <> 0')
-    Left = 176
-    Top = 200
+    Left = 324
+    Top = 18
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -362,8 +368,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
         '<> 0)'
       'ORDER BY sales_order_line.quote')
-    Left = 56
-    Top = 288
+    Left = 62
+    Top = 200
     ParamData = <
       item
         Name = 'Int_sel'
@@ -375,8 +381,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       'SELECT Location_Plan_Document'
       'FROM Sales_Order'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 152
-    Top = 24
+    Left = 142
+    Top = 22
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -426,8 +432,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       '    sales_order_line.Sales_Order,'
       '    sales_order_line.Sales_Order_Line_No'
       '')
-    Left = 56
-    Top = 248
+    Left = 326
+    Top = 110
     ParamData = <
       item
         Name = 'Int_sel'
@@ -440,8 +446,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       'FROM Document_Structure'
       'WHERE Module_Id = 40'
       'ORDER BY Folder_Name')
-    Left = 48
-    Top = 88
+    Left = 44
+    Top = 110
   end
   object qryGetSalesOrdersOld: TFDQuery
     ConnectionName = 'Wt'
@@ -480,8 +486,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
         '<> 0)'
       'ORDER BY sales_order_line.quote')
-    Left = 376
-    Top = 80
+    Left = 142
+    Top = 108
     ParamData = <
       item
         Name = 'Int_sel'

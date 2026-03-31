@@ -8,7 +8,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,16 +17,16 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   DesignSize = (
     849
     380)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 20
-    Width = 59
-    Height = 13
+    Top = 16
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object btnOK: TBitBtn
-    Left = 266
+    Left = 343
     Top = 343
     Width = 75
     Height = 25
@@ -38,10 +38,9 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    ExplicitTop = 334
   end
   object BitBtn2: TBitBtn
-    Left = 354
+    Left = 431
     Top = 343
     Width = 75
     Height = 25
@@ -52,7 +51,6 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 5
     OnClick = BitBtn2Click
-    ExplicitTop = 334
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -76,44 +74,44 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       object Label10: TLabel
         Left = 8
         Top = 63
-        Width = 72
-        Height = 13
+        Width = 83
+        Height = 17
         Caption = 'Sales Nominal'
       end
       object Label22: TLabel
         Left = 8
         Top = 95
-        Width = 92
-        Height = 13
+        Width = 105
+        Height = 17
         Caption = 'Purchase Nominal'
       end
       object Label7: TLabel
         Left = 368
-        Top = 9
-        Width = 31
-        Height = 13
+        Top = 5
+        Width = 36
+        Height = 17
         Caption = 'Image'
       end
       object Label3: TLabel
         Left = 8
         Top = 28
-        Width = 66
-        Height = 13
+        Width = 74
+        Height = 17
         Caption = 'Composition'
       end
       object dblkpWorktopType: TDBLookupComboBox
-        Left = 104
+        Left = 118
         Top = 24
         Width = 161
-        Height = 21
+        Height = 25
         KeyField = 'Worktop_Type'
         ListField = 'Description'
         ListSource = srclkpWorktopType
         TabOrder = 0
       end
       object btnWorktopType: TButton
-        Left = 280
-        Top = 22
+        Left = 288
+        Top = 26
         Width = 25
         Height = 25
         Caption = '...'
@@ -128,15 +126,15 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       end
       object edtImagePath: TEdit
         Left = 368
-        Top = 24
+        Top = 26
         Width = 289
-        Height = 21
+        Height = 25
         TabOrder = 4
         Text = 'edtImagePath'
       end
       object Button3: TButton
         Left = 670
-        Top = 22
+        Top = 24
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -145,7 +143,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       end
       object Panel1: TPanel
         Left = 368
-        Top = 58
+        Top = 60
         Width = 289
         Height = 100
         BorderStyle = bsSingle
@@ -1202,18 +1200,18 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         end
       end
       object edtSalesNominal: TEdit
-        Left = 104
+        Left = 118
         Top = 57
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 2
         Text = 'edtSalesNominal'
       end
       object edtPurchaseNominal: TEdit
-        Left = 104
+        Left = 118
         Top = 91
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 3
         Text = 'edtPurchaseNominal'
       end
@@ -1224,28 +1222,28 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       object Label9: TLabel
         Left = 8
         Top = 16
-        Width = 90
-        Height = 13
+        Width = 101
+        Height = 17
         Caption = 'Short Description'
       end
       object Label2: TLabel
         Left = 8
         Top = 56
-        Width = 88
-        Height = 13
+        Width = 99
+        Height = 17
         Caption = 'Long Description'
       end
       object edtShortDescription: TEdit
-        Left = 104
-        Top = 12
+        Left = 116
+        Top = 13
         Width = 481
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'edtShortDescription'
       end
       object memLongDescription: TMemo
-        Left = 104
-        Top = 50
+        Left = 116
+        Top = 55
         Width = 385
         Height = 146
         Lines.Strings = (
@@ -1258,24 +1256,24 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       ImageIndex = 2
       DesignSize = (
         833
-        229)
+        225)
       object Label4: TLabel
         Left = 8
         Top = 28
-        Width = 93
-        Height = 13
+        Width = 107
+        Height = 17
         Caption = 'Preferred Supplier'
       end
       object Label5: TLabel
-        Left = 392
-        Top = 20
-        Width = 77
-        Height = 13
+        Left = 394
+        Top = 17
+        Width = 92
+        Height = 17
         Caption = 'Slab Sizes (mm)'
       end
       object Button1: TButton
-        Left = 328
-        Top = 22
+        Left = 334
+        Top = 26
         Width = 25
         Height = 25
         Caption = '...'
@@ -1354,7 +1352,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -1370,27 +1368,42 @@ object frmWtMaintMatType: TfrmWtMaintMatType
             item
               Expanded = False
               FieldName = 'Length'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Depth'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Slab_Size_Description'
               Title.Caption = 'Description'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 137
               Visible = True
             end>
         end
       end
       object dblkpSupplier: TDBLookupComboBox
-        Left = 104
+        Left = 121
         Top = 24
         Width = 209
-        Height = 21
+        Height = 25
         KeyField = 'Supplier'
         ListField = 'Supplier_Name'
         ListSource = dtsSuppliers
@@ -1398,7 +1411,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       end
       object chkbxAllowBespokeSlabSizes: TCheckBox
         Left = 393
-        Top = 203
+        Top = 199
         Width = 216
         Height = 17
         Anchors = [akLeft, akBottom]
@@ -1412,19 +1425,19 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       object Label8: TLabel
         Left = 8
         Top = 6
-        Width = 47
-        Height = 13
+        Width = 52
+        Height = 17
         Caption = 'Warranty'
       end
       object Label11: TLabel
         Left = 0
         Top = 126
-        Width = 67
-        Height = 13
+        Width = 74
+        Height = 17
         Caption = 'Maintenance'
       end
       object memMaintenance: TMemo
-        Left = 72
+        Left = 88
         Top = 124
         Width = 700
         Height = 97
@@ -1433,13 +1446,13 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         TabOrder = 0
       end
       object memWarranty: TRichEdit
-        Left = 72
+        Left = 88
         Top = 8
         Width = 700
         Height = 97
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Lines.Strings = (
@@ -1452,18 +1465,17 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   object chkbxShowOnline: TCheckBox
     Left = 8
     Top = 311
-    Width = 161
+    Width = 201
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show Material Type Online'
     TabOrder = 2
-    ExplicitTop = 302
   end
   object edtDescription: TEdit
     Left = 85
-    Top = 16
+    Top = 12
     Width = 380
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -1477,8 +1489,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         ') OR'
       'Worktop_Type = :Worktop_Type'
       'Order By Worktop_Type.Description')
-    Left = 160
-    Top = 128
+    Left = 248
+    Top = 176
     ParamData = <
       item
         Name = 'Worktop_Type'
@@ -1942,16 +1954,16 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   end
   object dtsSuppliers: TDataSource
     DataSet = qrySuppliers
-    Left = 348
-    Top = 192
+    Left = 563
+    Top = 184
   end
   object qryDelSlabSize: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Material_Type_Slab_Size'
       'where Slab_Size = :Slab_Size')
-    Left = 128
-    Top = 160
+    Left = 160
+    Top = 216
     ParamData = <
       item
         Name = 'Slab_Size'

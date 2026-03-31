@@ -9,7 +9,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   Constraints.MinWidth = 1170
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,7 +18,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 769
@@ -1455,7 +1455,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Top = 327
       Width = 1194
       Height = 207
-      ActivePage = tbDocuments
+      ActivePage = tbDetails
       Align = alClient
       TabOrder = 3
       ExplicitWidth = 1188
@@ -1475,8 +1475,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           PopupMenu = pmnLines
           TabOrder = 0
           OnDblClick = dbgLinesDblClick
-          ExplicitWidth = 1180
-          ExplicitHeight = 166
           ColWidths = (
             40
             89
@@ -1504,6 +1502,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1180
           object Label44: TLabel
             Left = 2
             Top = 0
@@ -1526,6 +1525,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
+          ExplicitLeft = 1147
+          ExplicitHeight = 149
           object btnExcel: TToolButton
             Left = 0
             Top = 0
@@ -1579,6 +1580,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 1147
+          ExplicitHeight = 149
           object pnlPlanDocument: TPanel
             Left = 0
             Top = 117
@@ -1587,6 +1590,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Align = alBottom
             ParentBackground = False
             TabOrder = 0
+            ExplicitTop = 108
+            ExplicitWidth = 1147
             DesignSize = (
               1153
               41)
@@ -1607,6 +1612,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
               TabOrder = 0
               OnChange = edtPlansDocumentChange
               OnDblClick = edtPlansDocumentDblClick
+              ExplicitWidth = 395
             end
             object Button5: TButton
               Left = 540
@@ -1617,6 +1623,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
               Caption = 'Browse'
               TabOrder = 1
               OnClick = Button5Click
+              ExplicitLeft = 534
             end
             object btnGenerateDocs: TButton
               Left = 844
@@ -1627,6 +1634,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
               Caption = 'Generate Docs'
               TabOrder = 2
               OnClick = btnGenerateDocsClick
+              ExplicitLeft = 838
             end
           end
           object stvDocuments: TShellTreeView
@@ -1647,6 +1655,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             TabOrder = 1
             OnDragDrop = stvDocumentsDragDrop
             OnDragOver = stvDocumentsDragOver
+            ExplicitHeight = 108
           end
           object slvDocuments: TShellListView
             Left = 185
@@ -1971,7 +1980,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDblClick = dbgJobsDblClick
@@ -2097,7 +2106,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDblClick = dbgRemedialsDblClick
@@ -2250,7 +2259,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDblClick = dbgPurchasesDblClick
@@ -2387,7 +2396,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
@@ -2519,7 +2528,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           Columns = <

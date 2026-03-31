@@ -7,15 +7,15 @@ object frmWTMaintContractCopyQuote: TfrmWTMaintContractCopyQuote
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   DesignSize = (
     912
     441)
-  TextHeight = 13
+  TextHeight = 17
   object btnOK: TBitBtn
-    Left = 79
+    Left = 73
     Top = 222
     Width = 75
     Height = 25
@@ -42,9 +42,11 @@ object frmWTMaintContractCopyQuote: TfrmWTMaintContractCopyQuote
       0000}
     NumGlyphs = 2
     TabOrder = 0
+    ExplicitLeft = 67
+    ExplicitTop = 213
   end
   object BitBtn2: TBitBtn
-    Left = 167
+    Left = 161
     Top = 222
     Width = 75
     Height = 25
@@ -52,12 +54,14 @@ object frmWTMaintContractCopyQuote: TfrmWTMaintContractCopyQuote
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitLeft = 155
+    ExplicitTop = 213
   end
   object dblkpWorktops: TDBLookupComboBox
     Left = 56
     Top = 12
     Width = 217
-    Height = 21
+    Height = 25
     KeyField = 'Worktop'
     ListField = 'Description'
     TabOrder = 2

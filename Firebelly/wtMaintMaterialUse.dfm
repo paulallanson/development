@@ -8,7 +8,7 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,12 +17,12 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
   DesignSize = (
     380
     221)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object btnOK: TBitBtn
@@ -38,6 +38,7 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
+    ExplicitTop = 159
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,20 +51,21 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitTop = 159
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 160
+    Top = 165
     Width = 97
     Height = 17
     Caption = 'Inactive'
     TabOrder = 2
   end
   object edtUseDescription: TEdit
-    Left = 72
+    Left = 81
     Top = 20
     Width = 273
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = 'edtUseDescription'
     OnChange = EnableOK
@@ -72,7 +74,7 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
     Left = 8
     Top = 56
     Width = 185
-    Height = 81
+    Height = 98
     Caption = 'Use for:'
     ItemIndex = 0
     Items.Strings = (

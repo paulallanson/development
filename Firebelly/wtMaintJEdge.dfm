@@ -7,21 +7,21 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
-    Left = 40
-    Top = 200
-    Width = 106
-    Height = 13
+    Left = 36
+    Top = 193
+    Width = 128
+    Height = 17
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -59,53 +59,54 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 483
     object Label1: TLabel
       Left = 16
-      Top = 16
-      Width = 42
-      Height = 13
+      Top = 11
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
-      Top = 48
-      Width = 52
-      Height = 13
+      Top = 44
+      Width = 61
+      Height = 17
       Caption = 'Edge Type'
     end
     object Label3: TLabel
       Left = 16
       Top = 76
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'Edge'
     end
     object Label8: TLabel
       Left = 16
       Top = 108
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Length'
     end
     object Label7: TLabel
-      Left = 331
+      Left = 323
       Top = 145
-      Width = 53
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Total price'
     end
     object Label4: TLabel
       Left = 16
       Top = 145
-      Width = 50
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Unit price'
     end
     object edtMaterial: TEdit
       Left = 88
       Top = 8
       Width = 145
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -115,7 +116,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       Left = 88
       Top = 40
       Width = 193
-      Height = 21
+      Height = 25
       KeyField = 'Edge_Type'
       ListField = 'Edge_Type_Description'
       ListSource = dtsEdgeType
@@ -126,7 +127,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       Left = 88
       Top = 72
       Width = 345
-      Height = 21
+      Height = 25
       KeyField = 'edge_profile'
       ListField = 'description'
       ListSource = dtsEdgeThickness
@@ -137,7 +138,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       Left = 88
       Top = 104
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 3
       Text = 'edtLength'
       OnChange = edtLengthChange
@@ -146,7 +147,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       Left = 88
       Top = 141
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = edtUnitPriceChange
     end
@@ -154,7 +155,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       Left = 392
       Top = 141
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -162,7 +163,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     end
     object btnEdge: TBitBtn
       Left = 448
-      Top = 71
+      Top = 72
       Width = 25
       Height = 25
       Hint = 'maintain edge details'
@@ -203,8 +204,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       'Material_Type = :Material_Type and'
       'Edge_thickness.Edge_profile = Edge_profile.Edge_profile'
       'order by Edge_profile.description')
-    Left = 90
-    Top = 34
+    Left = 225
+    Top = 59
     ParamData = <
       item
         Name = 'Edge_Type'
@@ -239,8 +240,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'Edge_profile = :Edge_profile')
-    Left = 408
-    Top = 146
+    Left = 382
+    Top = 95
     ParamData = <
       item
         Name = 'Material_type'

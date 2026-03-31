@@ -3,11 +3,11 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   Top = 114
   Caption = 'Maintain Purchase Order Receipts'
   ClientHeight = 428
-  ClientWidth = 832
+  ClientWidth = 871
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -17,11 +17,11 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 409
-    Width = 832
+    Width = 871
     Height = 19
     Panels = <
       item
@@ -30,19 +30,21 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       item
         Width = 50
       end>
+    ExplicitWidth = 832
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 832
+    Width = 871
     Height = 409
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 832
     object dbgLines: TStringGrid
       Left = 0
       Top = 145
-      Width = 832
+      Width = 871
       Height = 223
       Align = alClient
       ColCount = 6
@@ -53,6 +55,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       OnDrawCell = dbgLinesDrawCell
       OnKeyPress = dbgLinesKeyPress
       OnSelectCell = dbgLinesSelectCell
+      ExplicitWidth = 832
       ColWidths = (
         47
         314
@@ -64,15 +67,16 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
     object Panel2: TPanel
       Left = 0
       Top = 368
-      Width = 832
+      Width = 871
       Height = 41
       Align = alBottom
       TabOrder = 1
+      ExplicitWidth = 832
       DesignSize = (
-        832
+        871
         41)
       object btbtnClose: TBitBtn
-        Left = 720
+        Left = 759
         Top = 8
         Width = 75
         Height = 25
@@ -80,9 +84,10 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
         Kind = bkCancel
         NumGlyphs = 2
         TabOrder = 0
+        ExplicitLeft = 720
       end
       object btnOK: TBitBtn
-        Left = 632
+        Left = 671
         Top = 8
         Width = 75
         Height = 25
@@ -110,90 +115,92 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
         NumGlyphs = 2
         TabOrder = 1
         OnClick = btnOKClick
+        ExplicitLeft = 632
       end
     end
     object Panel3: TPanel
       Left = 0
       Top = 0
-      Width = 832
+      Width = 871
       Height = 145
       Align = alTop
       TabOrder = 2
+      ExplicitWidth = 832
       object Label3: TLabel
         Left = 16
         Top = 52
-        Width = 65
-        Height = 13
+        Width = 74
+        Height = 17
         Caption = 'Receipt Date'
       end
       object Label1: TLabel
         Left = 16
         Top = 116
-        Width = 67
-        Height = 13
+        Width = 79
+        Height = 17
         Caption = 'GRN Number'
       end
       object Label5: TLabel
         Left = 16
         Top = 84
-        Width = 86
-        Height = 13
+        Width = 101
+        Height = 17
         Caption = 'Delivery Note No'
       end
       object Label4: TLabel
         Left = 16
         Top = 20
-        Width = 43
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Supplier'
       end
       object Label6: TLabel
         Left = 648
         Top = 20
-        Width = 79
-        Height = 13
+        Width = 91
+        Height = 17
         Caption = 'Purchase Order'
       end
       object Label7: TLabel
-        Left = 480
+        Left = 473
         Top = 116
-        Width = 74
-        Height = 13
+        Width = 84
+        Height = 17
         Caption = 'Our Reference'
       end
       object dtTransaction: TDateTimePicker
-        Left = 104
+        Left = 125
         Top = 48
         Width = 97
-        Height = 21
+        Height = 25
         Date = 39470.000000000000000000
         Time = 0.402405902779719300
         TabOrder = 1
         OnChange = CheckOK
       end
       object edtGRN: TEdit
-        Left = 104
+        Left = 125
         Top = 112
         Width = 121
-        Height = 21
+        Height = 25
         TabOrder = 3
         Text = 'edtGRN'
         OnChange = CheckOK
       end
       object edtDeliveryNote: TEdit
-        Left = 104
+        Left = 125
         Top = 80
         Width = 121
-        Height = 21
+        Height = 25
         TabOrder = 2
         Text = 'edtDeliveryNote'
         OnChange = CheckOK
       end
       object edtSupplierName: TEdit
-        Left = 104
-        Top = 16
-        Width = 273
-        Height = 21
+        Left = 125
+        Top = 17
+        Width = 356
+        Height = 25
         Color = clBtnFace
         Enabled = False
         ReadOnly = True
@@ -203,7 +210,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
         Left = 744
         Top = 16
         Width = 97
-        Height = 21
+        Height = 25
         TabStop = False
         Enabled = False
         ReadOnly = True
@@ -213,7 +220,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
         Left = 568
         Top = 112
         Width = 273
-        Height = 21
+        Height = 25
         Enabled = False
         ReadOnly = True
         TabOrder = 5

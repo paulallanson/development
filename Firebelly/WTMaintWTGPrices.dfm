@@ -8,59 +8,59 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 24
     Top = 20
-    Width = 33
-    Height = 13
+    Width = 37
+    Height = 17
     Caption = 'Group'
   end
   object Label3: TLabel
     Left = 24
     Top = 55
-    Width = 49
-    Height = 13
+    Width = 55
+    Height = 17
     Caption = 'Thickness'
   end
   object Label4: TLabel
     Left = 24
     Top = 88
-    Width = 50
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Cost Price'
   end
   object Label5: TLabel
     Left = 24
     Top = 120
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Selling Price'
   end
   object Label6: TLabel
     Left = 224
     Top = 88
-    Width = 67
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'per sq. metre'
   end
   object Label7: TLabel
     Left = 224
     Top = 120
-    Width = 64
-    Height = 13
+    Width = 75
+    Height = 17
     Caption = 'per sq.metre'
   end
   object dblkpWorktopGroup: TDBLookupComboBox
     Left = 104
     Top = 16
     Width = 145
-    Height = 21
+    Height = 25
     KeyField = 'Worktop_Group'
     ListField = 'Worktop_Group_Description'
     ListSource = stclkpWTGroup
@@ -71,7 +71,7 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Left = 104
     Top = 47
     Width = 105
-    Height = 21
+    Height = 25
     KeyField = 'Thickness'
     ListField = 'Thickness_mm'
     ListSource = srclkpThickness
@@ -82,7 +82,7 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Left = 104
     Top = 80
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = '0.00'
     OnClick = EnableOK
@@ -91,14 +91,14 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Left = 104
     Top = 112
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = '0.00'
     OnClick = EnableOK
   end
   object btnOK: TBitBtn
-    Left = 152
-    Top = 184
+    Left = 135
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -110,8 +110,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 246
-    Top = 184
+    Left = 233
+    Top = 168
     Width = 75
     Height = 25
     Cancel = True
@@ -151,8 +151,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
         ') or'
       '      Thickness = :thickness'
       'order by thickness_mm')
-    Left = 176
-    Top = 56
+    Left = 236
+    Top = 86
     ParamData = <
       item
         Name = 'worktop_group'
@@ -166,8 +166,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
   end
   object srclkpThickness: TDataSource
     DataSet = lkpThickness
-    Left = 224
-    Top = 56
+    Left = 160
+    Top = 62
   end
   object lkpWTGroup: TFDQuery
     ConnectionName = 'WT'
@@ -179,8 +179,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
         '((inactive = '#39'N'#39') or (inactive = '#39#39'))) or Worktop_group = :Workt' +
         'op_Group'
       'order by worktop_group_description')
-    Left = 176
-    Top = 16
+    Left = 140
+    Top = 60
     ParamData = <
       item
         Name = 'Material_type'
@@ -191,8 +191,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
   end
   object stclkpWTGroup: TDataSource
     DataSet = lkpWTGroup
-    Left = 224
-    Top = 16
+    Left = 176
+    Top = 12
   end
   object qryWTThickness: TFDQuery
     ConnectionName = 'WT'
@@ -231,8 +231,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
       'WHERE Worktop.Worktop_Group = :Worktop_Group AND'
       '      Worktop.Material_Type = :Material_Type'
       'ORDER BY worktop.Worktop')
-    Left = 24
-    Top = 32
+    Left = 54
+    Top = 8
     ParamData = <
       item
         Name = 'Worktop_Group'
@@ -248,8 +248,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
       'FROM Worktop_Thickness'
       'WHERE Worktop = :Worktop AND'
       '      Thickness = :Thickness')
-    Left = 104
-    Top = 104
+    Left = 50
+    Top = 58
     ParamData = <
       item
         Name = 'Worktop'
@@ -265,8 +265,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
         'insert into Worktop_Thickness (Worktop, Thickness, Price_Pointer' +
         ')'
       'values (:Worktop, :Thickness, :Price_Pointer)')
-    Left = 248
-    Top = 120
+    Left = 214
+    Top = 46
     ParamData = <
       item
         Name = 'Worktop'

@@ -8,7 +8,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,7 +17,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
   DesignSize = (
     635
     659)
-  TextHeight = 13
+  TextHeight = 17
   object OKBitBtn: TBitBtn
     Left = 235
     Top = 618
@@ -57,88 +57,88 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
     Left = 8
     Top = 8
     Width = 617
-    Height = 593
+    Height = 604
     ActivePage = tbsGeneral
     TabOrder = 0
     object tbsGeneral: TTabSheet
       Caption = 'Details'
       DesignSize = (
         609
-        565)
+        572)
       object Label1: TLabel
         Left = 8
         Top = 20
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object Label2: TLabel
         Left = 8
         Top = 60
-        Width = 35
-        Height = 13
+        Width = 39
+        Height = 17
         Caption = 'Colour'
       end
       object Label7: TLabel
         Left = 8
         Top = 108
-        Width = 31
-        Height = 13
+        Width = 36
+        Height = 17
         Caption = 'Image'
       end
       object Label3: TLabel
         Left = 8
         Top = 284
-        Width = 43
-        Height = 26
+        Width = 107
+        Height = 34
         Caption = 'Payment Details'
         WordWrap = True
       end
       object Label4: TLabel
         Left = 8
         Top = 380
-        Width = 55
-        Height = 39
+        Width = 120
+        Height = 51
         Caption = 'Registered Address Details'
         WordWrap = True
       end
       object Label5: TLabel
         Left = 8
         Top = 508
-        Width = 86
-        Height = 26
+        Width = 120
+        Height = 51
         Caption = 'VAT Registration No.'
         WordWrap = True
       end
       object Label25: TLabel
         Left = 8
         Top = 540
-        Width = 92
-        Height = 13
+        Width = 104
+        Height = 17
         Caption = 'Accounts Package'
       end
       object Label6: TLabel
         Left = 8
         Top = 474
-        Width = 92
-        Height = 13
+        Width = 107
+        Height = 17
         Caption = 'Company Reg No.'
       end
       object DescrEdit: TEdit
-        Left = 118
+        Left = 132
         Top = 16
         Width = 411
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 0
         Text = 'DescrEdit'
         OnChange = CheckOK
       end
       object edtColor: TEdit
-        Left = 118
+        Left = 132
         Top = 56
         Width = 131
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 1
@@ -164,10 +164,10 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         OnClick = Button2Click
       end
       object edtLogoPath: TEdit
-        Left = 120
+        Left = 134
         Top = 104
         Width = 329
-        Height = 21
+        Height = 25
         TabOrder = 4
         Text = 'edtLogoPath'
       end
@@ -181,7 +181,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         OnClick = Button3Click
       end
       object Panel1: TPanel
-        Left = 120
+        Left = 134
         Top = 136
         Width = 217
         Height = 135
@@ -198,7 +198,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         end
       end
       object memRegistered: TMemo
-        Left = 120
+        Left = 134
         Top = 381
         Width = 433
         Height = 76
@@ -208,7 +208,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         TabOrder = 7
       end
       object memPayment: TMemo
-        Left = 120
+        Left = 134
         Top = 281
         Width = 433
         Height = 88
@@ -217,30 +217,30 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
         TabOrder = 6
       end
       object edtVATRegistrationNo: TEdit
-        Left = 120
+        Left = 134
         Top = 504
         Width = 315
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 9
         Text = 'edtVATRegistrationNo'
         OnChange = CheckOK
       end
       object dblkpAccountsPackage: TDBLookupComboBox
-        Left = 120
+        Left = 134
         Top = 536
         Width = 185
-        Height = 21
+        Height = 25
         KeyField = 'Accounts_Package'
         ListField = 'Accounts_Package_Description'
         ListSource = dtsAccounts
         TabOrder = 10
       end
       object edtCompanyRegNo: TEdit
-        Left = 120
+        Left = 134
         Top = 470
         Width = 315
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 8
         Text = 'edtVATRegistrationNo'
@@ -253,52 +253,52 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       object grpbxNumbers: TGroupBox
         Left = 16
         Top = 24
-        Width = 265
-        Height = 121
+        Width = 282
+        Height = 137
         ParentBackground = False
         TabOrder = 0
         object Label21: TLabel
           Left = 24
           Top = 28
-          Width = 103
-          Height = 13
+          Width = 119
+          Height = 17
           Caption = 'Last Invoice Number'
         end
         object Label50: TLabel
           Left = 24
           Top = 60
-          Width = 98
-          Height = 13
+          Width = 114
+          Height = 17
           Caption = 'Last Credit Number'
         end
         object Label8: TLabel
           Left = 24
           Top = 92
-          Width = 28
-          Height = 13
+          Width = 32
+          Height = 17
           Caption = 'Prefix'
         end
         object edtLastInvoiceNumber: TCREditInt
-          Left = 133
-          Top = 24
+          Left = 157
+          Top = 25
           Width = 100
-          Height = 21
+          Height = 25
           TabOrder = 0
           Text = 'edtLastInvoiceNumber'
         end
         object edtLastCreditNoteNumber: TCREditInt
-          Left = 133
-          Top = 56
+          Left = 157
+          Top = 57
           Width = 100
-          Height = 21
+          Height = 25
           TabOrder = 1
           Text = 'edtLastCreditNoteNumber'
         end
         object edtPrefixValue: TEdit
-          Left = 133
-          Top = 88
+          Left = 157
+          Top = 89
           Width = 100
-          Height = 21
+          Height = 25
           TabOrder = 2
           Text = 'edtPrefixValue'
         end
@@ -306,7 +306,7 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       object chkbxUseSeparateInvoiceSeq: TCheckBox
         Left = 26
         Top = 21
-        Width = 143
+        Width = 175
         Height = 17
         Caption = 'Use Seperate Numbering'
         TabOrder = 1
@@ -343,8 +343,8 @@ object frmWTMaintRevenueCentre: TfrmWTMaintRevenueCentre
       'Where'
       '(Revenue_Centre = :Revenue_Centre)'
       '')
-    Left = 144
-    Top = 16
+    Left = 508
+    Top = 332
     ParamData = <
       item
         Name = 'Revenue_Centre_Descr'

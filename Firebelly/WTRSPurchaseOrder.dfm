@@ -3,42 +3,43 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Purchase Order Report'
-  ClientHeight = 325
-  ClientWidth = 500
+  ClientHeight = 390
+  ClientWidth = 566
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    500
-    325)
-  TextHeight = 13
+    566
+    390)
+  TextHeight = 17
   object lstbxSuppliersCode: TListBox
     Left = 96
     Top = 80
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 13
     Visible = False
   end
   object btnPrint: TButton
     Left = 8
-    Top = 288
+    Top = 353
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 288
   end
   object Button4: TButton
-    Left = 416
-    Top = 288
+    Left = 462
+    Top = 353
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -50,8 +51,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
   object rdgrpSupplier: TRadioGroup
     Left = 8
     Top = 80
-    Width = 105
-    Height = 57
+    Width = 123
+    Height = 68
     Caption = 'Suppliers'
     ItemIndex = 0
     Items.Strings = (
@@ -63,47 +64,47 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 200
+    Top = 232
     Width = 209
-    Height = 73
+    Height = 105
     Caption = 'Order Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 33
+      Top = 67
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 63
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 32
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -124,8 +125,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 63
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -147,8 +148,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     end
   end
   object grpbxSupplier: TGroupBox
-    Left = 120
-    Top = 80
+    Left = 137
+    Top = 89
     Width = 249
     Height = 113
     Enabled = False
@@ -156,9 +157,9 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 10
-      Width = 48
-      Height = 13
+      Top = 2
+      Width = 54
+      Height = 17
       Caption = 'Suppliers'
     end
     object btnSupplier: TButton
@@ -181,7 +182,7 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Suppliers')
       MultiSelect = True
@@ -190,10 +191,10 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 376
+    Left = 392
     Top = 8
-    Width = 113
-    Height = 121
+    Width = 145
+    Height = 151
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -206,8 +207,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 384
-    Top = 152
+    Left = 400
+    Top = 179
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -215,27 +216,29 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
   end
   object btnPreview: TButton
     Left = 96
-    Top = 288
+    Top = 353
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 288
   end
   object btnExcel: TButton
     Left = 184
-    Top = 288
+    Top = 353
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 288
   end
   object OleContainer1: TOleContainer
-    Left = 316
-    Top = 11
+    Left = 180
+    Top = 91
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -244,8 +247,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 76
-    Top = 111
+    Left = 84
+    Top = 143
     Width = 289
     Height = 61
     ParentBackground = False
@@ -254,8 +257,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -268,10 +271,10 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     end
   end
   object rdgrpOperators: TRadioGroup
-    Left = 8
+    Left = 9
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 122
+    Height = 68
     Caption = 'Office Contact'
     ItemIndex = 0
     Items.Strings = (
@@ -282,24 +285,24 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     OnClick = rdgrpOperatorsClick
   end
   object grpbxOperators: TGroupBox
-    Left = 120
-    Top = 8
+    Left = 137
+    Top = 12
     Width = 249
-    Height = 57
+    Height = 62
     ParentBackground = False
     TabOrder = 12
     object Label3: TLabel
       Left = 8
-      Top = 12
-      Width = 74
-      Height = 13
+      Top = 4
+      Width = 82
+      Height = 17
       Caption = 'Office Contact'
     end
     object cmbOperators: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -317,18 +320,18 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
       'select *'
       'from Operator'
       'order by Operator_Name')
-    Left = 184
-    Top = 16
+    Left = 238
+    Top = 52
   end
   object dtsOperators: TDataSource
     DataSet = qryOperators
-    Left = 240
-    Top = 16
+    Left = 308
+    Top = 52
   end
   object pmnSuppliers: TPopupMenu
     OnPopup = pmnSuppliersPopup
-    Left = 376
-    Top = 136
+    Left = 286
+    Top = 154
     object Delete1: TMenuItem
       Caption = 'Delete'
       OnClick = Delete1Click

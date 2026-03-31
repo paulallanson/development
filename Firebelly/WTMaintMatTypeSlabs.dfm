@@ -8,7 +8,7 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,44 +16,44 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
   DesignSize = (
     332
     204)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 36
-    Height = 13
+    Width = 39
+    Height = 17
     Caption = 'Length'
   end
   object Label3: TLabel
     Left = 16
     Top = 60
-    Width = 32
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Depth'
   end
   object Label2: TLabel
-    Left = 171
+    Left = 179
     Top = 24
-    Width = 18
-    Height = 13
+    Width = 22
+    Height = 17
     Caption = 'mm'
   end
   object Label4: TLabel
-    Left = 171
+    Left = 179
     Top = 64
-    Width = 18
-    Height = 13
+    Width = 22
+    Height = 17
     Caption = 'mm'
   end
   object Label5: TLabel
     Left = 16
     Top = 100
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object btnOK: TBitBtn
-    Left = 120
+    Left = 89
     Top = 151
     Width = 75
     Height = 25
@@ -67,7 +67,7 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 200
+    Left = 169
     Top = 151
     Width = 75
     Height = 25
@@ -79,28 +79,28 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
     TabOrder = 1
   end
   object edtLength: TCREditInt
-    Left = 88
+    Left = 96
     Top = 16
     Width = 80
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = 'edtLength'
     OnChange = EnableOK
   end
   object edtDepth: TCREditInt
-    Left = 88
+    Left = 96
     Top = 56
     Width = 80
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = 'edtDepth'
     OnChange = EnableOK
   end
   object edtSlabSizeDescription: TEdit
-    Left = 88
+    Left = 96
     Top = 96
     Width = 185
-    Height = 21
+    Height = 25
     TabOrder = 4
     Text = 'edtSlabSizeDescription'
   end

@@ -3,34 +3,35 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Payment Comparison Report'
-  ClientHeight = 288
-  ClientWidth = 470
+  ClientHeight = 340
+  ClientWidth = 541
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    470
-    288)
-  TextHeight = 13
+    541
+    340)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 253
+    Top = 305
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 253
   end
   object Button4: TButton
-    Left = 384
-    Top = 253
+    Left = 437
+    Top = 305
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -38,12 +39,13 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 350
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
-    Top = 72
-    Width = 105
-    Height = 57
+    Top = 90
+    Width = 121
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -55,47 +57,47 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 136
+    Top = 170
     Width = 209
-    Height = 73
+    Height = 113
     Caption = 'Invoice Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 33
+      Top = 67
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 63
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 32
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -116,8 +118,8 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 63
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -139,25 +141,25 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 72
+    Left = 142
+    Top = 96
     Width = 219
-    Height = 57
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 12
-      Width = 49
-      Height = 13
+      Top = 8
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -181,10 +183,10 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 352
+    Left = 367
     Top = 8
-    Width = 121
-    Height = 145
+    Width = 145
+    Height = 156
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -198,8 +200,8 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 357
-    Top = 161
+    Left = 367
+    Top = 170
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -207,27 +209,29 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   end
   object btnPreview: TButton
     Left = 96
-    Top = 253
+    Top = 305
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 253
   end
   object btnExcel: TButton
     Left = 184
-    Top = 253
+    Top = 305
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 253
   end
   object OleContainer1: TOleContainer
     Left = 172
-    Top = 67
+    Top = 83
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -237,9 +241,9 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
-    Top = 136
+    Top = 170
     Width = 105
-    Height = 90
+    Height = 113
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -252,7 +256,7 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   end
   object pnlExportPrgrss: TPanel
     Left = 100
-    Top = 79
+    Top = 95
     Width = 289
     Height = 61
     ParentBackground = False
@@ -261,8 +265,8 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -277,8 +281,8 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   object rdgrpReps: TRadioGroup
     Left = 8
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 121
+    Height = 68
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -289,24 +293,24 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
     OnClick = rdgrpRepsClick
   end
   object grpbxReps: TGroupBox
-    Left = 120
-    Top = 8
+    Left = 142
+    Top = 14
     Width = 219
-    Height = 57
+    Height = 62
     ParentBackground = False
     TabOrder = 13
     object Label3: TLabel
       Left = 8
-      Top = 12
-      Width = 20
-      Height = 13
+      Top = 7
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object cmbReps: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -319,9 +323,9 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
     end
   end
   object chkbxOnlyShowUnpaid: TCheckBox
-    Left = 357
-    Top = 185
-    Width = 113
+    Left = 367
+    Top = 194
+    Width = 145
     Height = 17
     Caption = 'Only Show Unpaid'
     TabOrder = 14
@@ -332,12 +336,12 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
       'select *'
       'from Rep'
       'order by Rep_Name')
-    Left = 184
-    Top = 16
+    Left = 230
+    Top = 36
   end
   object dtsReps: TDataSource
     DataSet = qryReps
-    Left = 240
-    Top = 16
+    Left = 980
+    Top = 28
   end
 end

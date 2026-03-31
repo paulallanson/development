@@ -8,7 +8,7 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,12 +16,12 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
   DesignSize = (
     356
     111)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object btnOK: TBitBtn
@@ -37,6 +37,7 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 65
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -49,6 +50,7 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 65
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -62,7 +64,7 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     Left = 80
     Top = 20
     Width = 265
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtProductGroupDescription'
     OnChange = EnableOK
@@ -76,8 +78,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
       '  inActive = :inactive'
       'WHERE'
       '  Product_Group = :Product_Group')
-    Left = 64
-    Top = 24
+    Left = 112
+    Top = 22
     ParamData = <
       item
         Name = 'Product_Group_Description'
@@ -99,8 +101,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
       'Select Max(Product_Group)+1, :GUID, '#39'N'#39
       'From Product_Group'
       ' ')
-    Left = 120
-    Top = 24
+    Left = 174
+    Top = 6
     ParamData = <
       item
         Name = 'GUID'
@@ -114,8 +116,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
       'Select Product_Group'
       'From Product_Group'
       'Where Product_Group_Description = :GUID')
-    Left = 232
-    Top = 24
+    Left = 282
+    Top = 6
     ParamData = <
       item
         Name = 'GUID'

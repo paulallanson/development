@@ -9,7 +9,7 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,40 +17,40 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
   DesignSize = (
     322
     213)
-  TextHeight = 13
+  TextHeight = 17
   object Label3: TLabel
     Left = 24
     Top = 27
-    Width = 49
-    Height = 13
+    Width = 55
+    Height = 17
     Caption = 'Thickness'
   end
   object Label5: TLabel
     Left = 24
     Top = 128
-    Width = 88
-    Height = 13
+    Width = 108
+    Height = 17
     Caption = 'Selling Price/ sq m'
   end
   object Label4: TLabel
     Left = 24
     Top = 60
-    Width = 78
-    Height = 13
+    Width = 96
+    Height = 17
     Caption = 'Cost Price/ sq m'
   end
   object Label15: TLabel
     Left = 24
     Top = 93
-    Width = 47
-    Height = 13
+    Width = 60
+    Height = 17
     Caption = 'Markup %'
   end
   object dblkpThickness: TDBLookupComboBox
-    Left = 120
-    Top = 23
+    Left = 141
+    Top = 25
     Width = 105
-    Height = 21
+    Height = 25
     KeyField = 'Thickness'
     ListField = 'Thickness_mm'
     ListSource = srclkpThickness
@@ -58,10 +58,10 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     OnClick = EnableOK
   end
   object edtmnySell: TCREditMoney
-    Left = 120
+    Left = 141
     Top = 124
     Width = 88
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = '0.00'
     OnChange = edtmnySellChange
@@ -95,19 +95,19 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     TabOrder = 5
   end
   object edtmnyCost: TCREditMoney
-    Left = 120
+    Left = 141
     Top = 56
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = '0.00'
     OnChange = edtmnyCostChange
   end
   object edtMarkupPercentage: TCREditMoney
-    Left = 120
+    Left = 141
     Top = 88
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = '0.00'
     OnChange = edtMarkupPercentageChange

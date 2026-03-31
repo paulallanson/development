@@ -3,7 +3,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   Top = 127
   BorderStyle = bsDialog
   Caption = 'Remedial Reason Type Report'
-  ClientHeight = 392
+  ClientHeight = 396
   ClientWidth = 623
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -16,13 +16,13 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   OnShow = FormShow
   DesignSize = (
     623
-    392)
+    396)
   TextHeight = 17
   object pnlReasonSearch: TPanel
     Left = 142
-    Top = 100
+    Top = 98
     Width = 286
-    Height = 65
+    Height = 62
     ParentBackground = False
     TabOrder = 3
     Visible = False
@@ -136,7 +136,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Left = 4
     Top = 92
     Width = 129
-    Height = 73
+    Height = 68
     Caption = 'Reason Type'
     ItemIndex = 0
     Items.Strings = (
@@ -148,9 +148,9 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object pnlDeptSearch: TPanel
     Left = 139
-    Top = 182
+    Top = 180
     Width = 286
-    Height = 65
+    Height = 62
     ParentBackground = False
     TabOrder = 5
     Visible = False
@@ -181,7 +181,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Left = 4
     Top = 174
     Width = 129
-    Height = 73
+    Height = 68
     Caption = 'Caused By: '
     ItemIndex = 0
     Items.Strings = (
@@ -195,7 +195,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Left = 461
     Top = 8
     Width = 137
-    Height = 153
+    Height = 144
     Caption = 'Report Totals'
     ItemIndex = 4
     Items.Strings = (
@@ -253,7 +253,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object btnExcel: TBitBtn
     Left = 192
-    Top = 359
+    Top = 363
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -303,13 +303,13 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
-    ExplicitTop = 348
+    ExplicitTop = 359
   end
   object rdgrpCategory: TRadioGroup
     Left = 4
     Top = 8
     Width = 129
-    Height = 73
+    Height = 68
     Caption = 'Reported By: '
     ItemIndex = 0
     Items.Strings = (
@@ -321,9 +321,9 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object pnlCategorySearch: TPanel
     Left = 139
-    Top = 16
+    Top = 14
     Width = 286
-    Height = 65
+    Height = 62
     ParentBackground = False
     TabOrder = 1
     Visible = False
@@ -352,7 +352,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object rdgrpShow: TRadioGroup
     Left = 461
-    Top = 216
+    Top = 210
     Width = 137
     Height = 92
     Caption = 'Show: '
@@ -367,35 +367,36 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object btnPrint: TButton
     Left = 4
-    Top = 358
+    Top = 362
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Print'
     TabOrder = 13
     OnClick = btnPrintClick
-    ExplicitTop = 348
+    ExplicitTop = 358
   end
   object btnPreview: TButton
     Left = 98
-    Top = 358
+    Top = 362
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Preview'
     TabOrder = 14
     OnClick = btnPreviewClick
-    ExplicitTop = 348
+    ExplicitTop = 358
   end
   object Button4: TButton
     Left = 523
-    Top = 359
+    Top = 363
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     ModalResult = 2
     TabOrder = 15
+    ExplicitTop = 359
   end
   object qryCategory: TFDQuery
     ConnectionName = 'WT'
@@ -412,8 +413,8 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       'SELECT * '
       'FROM Remedial_Type'
       'ORDER BY Remedial_Type_Descr')
-    Left = 235
-    Top = 88
+    Left = 339
+    Top = 24
   end
   object qryDept: TFDQuery
     ConnectionName = 'WT'
@@ -421,7 +422,7 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       'SELECT * '
       'FROM Remedial_Dept'
       'ORDER BY Remedial_Dept_Descr')
-    Left = 235
-    Top = 152
+    Left = 363
+    Top = 24
   end
 end

@@ -3,12 +3,12 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
   Top = 193
   BorderStyle = bsDialog
   Caption = 'Stock System Details'
-  ClientHeight = 346
+  ClientHeight = 368
   ClientWidth = 424
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,25 +16,25 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
   OnShow = FormShow
   DesignSize = (
     424
-    346)
-  TextHeight = 13
+    368)
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 52
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 8
     Top = 20
-    Width = 66
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'Stock System'
   end
   object btnOK: TBitBtn
     Left = 132
-    Top = 308
+    Top = 330
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -45,10 +45,11 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
+    ExplicitTop = 308
   end
   object BitBtn2: TBitBtn
     Left = 220
-    Top = 308
+    Top = 330
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -57,12 +58,13 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
+    ExplicitTop = 308
   end
   object edtStockSystemDescription: TEdit
     Left = 96
     Top = 48
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtStockSystemDescription'
     OnChange = EnableOK
@@ -71,7 +73,7 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     Left = 96
     Top = 16
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtStockSystem'
     OnChange = EnableOK
@@ -80,85 +82,85 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
     Left = 8
     Top = 112
     Width = 409
-    Height = 185
+    Height = 212
     TabOrder = 3
     object Label3: TLabel
       Left = 19
-      Top = 24
-      Width = 75
-      Height = 13
+      Top = 30
+      Width = 86
+      Height = 17
       Caption = 'Database Alias'
     end
     object Label4: TLabel
       Left = 19
-      Top = 48
-      Width = 51
-      Height = 13
+      Top = 61
+      Width = 59
+      Height = 17
       Caption = 'Username'
     end
     object Label5: TLabel
       Left = 19
-      Top = 72
-      Width = 49
-      Height = 13
+      Top = 92
+      Width = 56
+      Height = 17
       Caption = 'Password'
     end
     object Label6: TLabel
       Left = 19
-      Top = 130
-      Width = 116
-      Height = 13
+      Top = 154
+      Width = 135
+      Height = 17
       Caption = 'Order Import Directory'
     end
     object Label7: TLabel
       Left = 19
-      Top = 100
-      Width = 129
-      Height = 13
+      Top = 124
+      Width = 148
+      Height = 17
       Caption = 'Order Processing Interval'
     end
     object Label8: TLabel
-      Left = 200
-      Top = 100
-      Width = 24
-      Height = 13
+      Left = 232
+      Top = 124
+      Width = 28
+      Height = 17
       Caption = 'secs.'
     end
     object edtDatabaseAlias: TEdit
-      Left = 153
-      Top = 20
+      Left = 185
+      Top = 27
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtDatabaseAlias'
     end
     object edtUsername: TEdit
-      Left = 153
-      Top = 44
+      Left = 185
+      Top = 58
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtUsername'
     end
     object edtPassword: TEdit
-      Left = 153
-      Top = 68
+      Left = 185
+      Top = 89
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 2
       Text = 'edtPassword'
     end
     object edtOrderImportDirectory: TEdit
       Left = 19
-      Top = 149
+      Top = 173
       Width = 297
-      Height = 21
+      Height = 25
       TabOrder = 4
       Text = 'edtOrderImportDirectory'
     end
     object Button3: TButton
       Left = 323
-      Top = 147
+      Top = 173
       Width = 75
       Height = 25
       Caption = 'Browse'
@@ -166,10 +168,10 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       OnClick = Button3Click
     end
     object spnInterval: TSpinEdit
-      Left = 153
-      Top = 95
+      Left = 185
+      Top = 119
       Width = 41
-      Height = 22
+      Height = 27
       MaxValue = 0
       MinValue = 0
       TabOrder = 3
@@ -199,8 +201,8 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       '  Sales_Order_Import_Directory = :Sales_Order_Import_Directory'
       'WHERE'
       '  Stock_System = :Stock_System')
-    Left = 176
-    Top = 64
+    Left = 364
+    Top = 16
     ParamData = <
       item
         Name = 'Stock_System_Description'
@@ -238,8 +240,8 @@ object frmWTMaintStockSystem: TfrmWTMaintStockSystem
       '         :Stock_System_Description)'
       ''
       ' ')
-    Left = 120
-    Top = 64
+    Left = 358
+    Top = 168
     ParamData = <
       item
         Name = 'Stock_System'

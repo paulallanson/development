@@ -8,7 +8,7 @@ object frmWTMaintParams: TfrmWTMaintParams
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,12 +17,12 @@ object frmWTMaintParams: TfrmWTMaintParams
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label8: TLabel
     Left = 16
     Top = 12
-    Width = 80
-    Height = 13
+    Width = 94
+    Height = 17
     Caption = 'Company Name'
   end
   object pcDetails: TPageControl
@@ -30,85 +30,85 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 40
     Width = 705
     Height = 622
-    ActivePage = TabSheet2
+    ActivePage = tsGeneral
     TabOrder = 0
     object tsGeneral: TTabSheet
       Caption = 'General'
       object Label11: TLabel
         Left = 16
         Top = 20
-        Width = 41
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Address'
       end
       object Label13: TLabel
         Left = 16
         Top = 81
-        Width = 27
-        Height = 13
+        Width = 30
+        Height = 17
         Caption = 'Town'
       end
       object Label14: TLabel
         Left = 16
         Top = 112
-        Width = 47
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Postcode'
       end
       object Label15: TLabel
         Left = 16
         Top = 143
-        Width = 37
-        Height = 13
+        Width = 40
+        Height = 17
         Caption = 'County'
       end
       object Label16: TLabel
         Left = 16
         Top = 174
-        Width = 53
-        Height = 13
+        Width = 60
+        Height = 17
         Caption = 'Telephone'
       end
       object Label12: TLabel
         Left = 16
         Top = 204
-        Width = 60
-        Height = 13
+        Width = 68
+        Height = 17
         Caption = 'Fax number'
       end
       object Label17: TLabel
         Left = 16
         Top = 235
-        Width = 68
-        Height = 13
+        Width = 78
+        Height = 17
         Caption = 'Web Address'
       end
       object Label18: TLabel
         Left = 16
         Top = 264
-        Width = 71
-        Height = 13
+        Width = 83
+        Height = 17
         Caption = 'Email Address'
       end
       object Label28: TLabel
         Left = 16
         Top = 341
-        Width = 84
-        Height = 13
+        Width = 100
+        Height = 17
         Caption = 'VAT Reg Number'
       end
       object Label70: TLabel
         Left = 16
         Top = 368
-        Width = 76
-        Height = 13
+        Width = 87
+        Height = 17
         Caption = 'Unique Tax Ref'
       end
       object Label81: TLabel
         Left = 16
         Top = 314
-        Width = 92
-        Height = 13
+        Width = 107
+        Height = 17
         Caption = 'Company Reg No.'
       end
       object chkbxTradeDetails: TCheckBox
@@ -120,98 +120,98 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 12
       end
       object edtStreet: TEdit
-        Left = 112
+        Left = 132
         Top = 16
-        Width = 249
-        Height = 21
+        Width = 350
+        Height = 25
         TabOrder = 0
         Text = 'edtStreet'
       end
       object edtLocale: TEdit
-        Left = 112
+        Left = 132
         Top = 48
-        Width = 249
-        Height = 21
+        Width = 350
+        Height = 25
         TabOrder = 1
         Text = 'edtLocale'
       end
       object edtTownCity: TEdit
-        Left = 112
+        Left = 132
         Top = 77
         Width = 169
-        Height = 21
+        Height = 25
         TabOrder = 2
         Text = 'edtTownCity'
       end
       object edtPostcode: TEdit
-        Left = 112
+        Left = 132
         Top = 108
         Width = 121
-        Height = 21
+        Height = 25
         TabOrder = 3
         Text = 'edtPostcode'
       end
       object edtCountyState: TEdit
-        Left = 112
+        Left = 132
         Top = 139
         Width = 169
-        Height = 21
+        Height = 25
         TabOrder = 4
         Text = 'edtCountyState'
       end
       object edtTelephoneNumber: TEdit
-        Left = 112
+        Left = 132
         Top = 170
         Width = 241
-        Height = 21
+        Height = 25
         TabOrder = 5
         Text = 'edtTelephoneNumber'
       end
       object edtFaxNumber: TEdit
-        Left = 112
+        Left = 132
         Top = 200
         Width = 241
-        Height = 21
+        Height = 25
         TabOrder = 6
         Text = 'edtFaxNumber'
       end
       object edtWebAddress: TEdit
-        Left = 112
+        Left = 132
         Top = 231
-        Width = 297
-        Height = 21
+        Width = 350
+        Height = 25
         TabOrder = 7
         Text = 'edtWebAddress'
       end
       object edtEmailAddress: TEdit
-        Left = 112
+        Left = 132
         Top = 260
-        Width = 297
-        Height = 21
+        Width = 350
+        Height = 25
         TabOrder = 8
         Text = 'edtEmailAddress'
       end
       object edtVatNumber: TEdit
-        Left = 112
+        Left = 132
         Top = 337
         Width = 169
-        Height = 21
+        Height = 25
         TabOrder = 10
         Text = 'edtVatNumber'
       end
       object edtUniqueTaxReference: TEdit
-        Left = 112
+        Left = 132
         Top = 364
         Width = 169
-        Height = 21
+        Height = 25
         TabOrder = 11
         Text = 'edtUniqueTaxReference'
       end
       object edtCompanyNumber: TEdit
-        Left = 112
+        Left = 132
         Top = 310
         Width = 169
-        Height = 21
+        Height = 25
         TabOrder = 9
         Text = 'edtCompanyNumber'
       end
@@ -222,71 +222,71 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label1: TLabel
         Left = 8
         Top = 20
-        Width = 131
-        Height = 13
+        Width = 146
+        Height = 17
         Caption = 'Daily Installation Charges'
       end
       object Label2: TLabel
         Left = 8
         Top = 52
-        Width = 127
-        Height = 13
+        Width = 148
+        Height = 17
         Caption = 'Survey/Template Charges'
       end
       object Label7: TLabel
         Left = 8
         Top = 148
-        Width = 135
-        Height = 13
+        Width = 159
+        Height = 17
         Caption = 'Customer Deposit Terms %'
       end
       object Label29: TLabel
         Left = 8
         Top = 228
-        Width = 118
-        Height = 13
+        Width = 135
+        Height = 17
         Caption = 'Upstand Polish Price/m'
       end
       object Label33: TLabel
         Left = 8
         Top = 116
-        Width = 129
-        Height = 13
+        Width = 147
+        Height = 17
         Caption = 'Default Trade Discount %'
       end
       object Label9: TLabel
         Left = 8
         Top = 197
-        Width = 96
-        Height = 13
+        Width = 108
+        Height = 17
         Caption = 'Upstand Thickness'
       end
       object Label3: TLabel
         Left = 11
         Top = 398
-        Width = 63
-        Height = 13
+        Width = 72
+        Height = 17
         Caption = 'Quote Prefix'
         Visible = False
       end
       object Label6: TLabel
         Left = 11
         Top = 428
-        Width = 49
-        Height = 13
+        Width = 57
+        Height = 17
         Caption = 'Job Prefix'
         Visible = False
       end
       object Label43: TLabel
-        Left = 345
+        Left = 367
         Top = 228
-        Width = 117
-        Height = 13
+        Width = 133
+        Height = 17
         Caption = 'Upstand Polish Cost/m'
       end
       object SpeedButton4: TSpeedButton
-        Left = 250
-        Top = 192
+        Left = 272
+        Top = 194
         Width = 23
         Height = 22
         Hint = 'Clear Default Upstand Size'
@@ -315,48 +315,48 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label62: TLabel
         Left = 11
         Top = 288
-        Width = 81
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Quote Valid for:'
       end
       object Label63: TLabel
-        Left = 243
+        Left = 265
         Top = 287
-        Width = 23
-        Height = 13
+        Width = 27
+        Height = 17
         Caption = 'days'
       end
       object Label71: TLabel
         Left = 8
         Top = 84
-        Width = 85
-        Height = 13
+        Width = 98
+        Height = 17
         Caption = 'Delivery Charges'
       end
       object Label74: TLabel
         Left = 11
         Top = 320
-        Width = 114
-        Height = 13
+        Width = 128
+        Height = 17
         Caption = 'Quote follow up days:'
       end
       object Label75: TLabel
-        Left = 243
+        Left = 265
         Top = 319
-        Width = 23
-        Height = 13
+        Width = 27
+        Height = 17
         Caption = 'days'
       end
       object Label76: TLabel
         Left = 11
         Top = 352
-        Width = 105
-        Height = 13
+        Width = 122
+        Height = 17
         Caption = 'Customer Sales Lead'
       end
       object SpeedButton2: TSpeedButton
-        Left = 362
-        Top = 347
+        Left = 384
+        Top = 349
         Width = 23
         Height = 22
         Hint = 'Clear Default Upstand Size'
@@ -383,114 +383,114 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = SpeedButton2Click
       end
       object dblkpUpstand: TDBLookupComboBox
-        Left = 152
+        Left = 174
         Top = 193
         Width = 81
-        Height = 21
+        Height = 25
         KeyField = 'Thickness'
         ListField = 'Thickness_mm'
         ListSource = srclkpThickness
         TabOrder = 0
       end
       object spnQuoteValidDays: TSpinEdit
-        Left = 152
+        Left = 174
         Top = 282
         Width = 78
-        Height = 22
+        Height = 27
         MaxValue = 0
         MinValue = 0
         TabOrder = 1
         Value = 0
       end
       object spnQuoteFollowUpDays: TSpinEdit
-        Left = 152
+        Left = 174
         Top = 314
         Width = 78
-        Height = 22
+        Height = 27
         MaxValue = 0
         MinValue = 0
         TabOrder = 2
         Value = 0
       end
       object edtInstallRate: TCREditMoney
-        Left = 152
+        Left = 174
         Top = 16
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 3
         Text = 'edtInstallRate'
       end
       object edtSurveyRate: TCREditMoney
-        Left = 152
+        Left = 174
         Top = 48
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 4
         Text = 'edtSurveyRate'
       end
       object edtDeliveryRate: TCREditMoney
-        Left = 152
+        Left = 174
         Top = 80
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 5
         Text = 'edtDeliveryRate'
       end
       object edtDiscountRate: TCREditFloat
-        Left = 152
+        Left = 174
         Top = 112
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 6
         Text = 'edtDiscountRate'
       end
       object edtUpstandPolishPrice: TCREditMoney
-        Left = 151
+        Left = 173
         Top = 224
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 7
         Text = 'edtUpstandPolishPrice'
       end
       object edtDepositTerms: TCREditFloat
-        Left = 152
+        Left = 174
         Top = 144
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 8
         Text = 'edtDepositTerms'
       end
       object edtUpstandPolishCost: TCREditMoney
-        Left = 471
+        Left = 519
         Top = 224
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 9
         Text = 'edtUpstandPolishCost'
       end
       object edtQuotePrefix: TEdit
-        Left = 152
+        Left = 174
         Top = 392
         Width = 50
-        Height = 21
+        Height = 25
         TabOrder = 10
         Text = 'edtQuotePrefix'
         Visible = False
       end
       object edtJobPrefix: TEdit
-        Left = 152
+        Left = 174
         Top = 424
         Width = 50
-        Height = 21
+        Height = 25
         TabOrder = 11
         Text = 'edtJobPrefi'
         Visible = False
       end
       object dblkpCustSalesLeadSource: TDBLookupComboBox
-        Left = 152
+        Left = 174
         Top = 348
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Sales_Lead_Source'
         ListField = 'Sales_Lead_Source_Descr'
         ListSource = dtsSalesSource
@@ -502,37 +502,37 @@ object frmWTMaintParams: TfrmWTMaintParams
       ImageIndex = 4
       object Label23: TLabel
         Left = 16
-        Top = 4
-        Width = 55
-        Height = 13
+        Top = 0
+        Width = 61
+        Height = 17
         Caption = 'Availability'
       end
       object Label24: TLabel
         Left = 16
-        Top = 100
-        Width = 74
-        Height = 13
+        Top = 96
+        Width = 88
+        Height = 17
         Caption = 'Payment Terms'
       end
       object Label35: TLabel
         Left = 16
-        Top = 291
-        Width = 120
-        Height = 13
+        Top = 287
+        Width = 136
+        Height = 17
         Caption = 'Invoice Payment Details'
       end
       object Label42: TLabel
         Left = 16
-        Top = 387
-        Width = 152
-        Height = 13
+        Top = 382
+        Width = 172
+        Height = 17
         Caption = 'Retail Invoice Payment Details'
       end
       object Label52: TLabel
         Left = 16
-        Top = 196
-        Width = 106
-        Height = 13
+        Top = 192
+        Width = 124
+        Height = 17
         Caption = 'Retail Payment Terms'
       end
       object memAvail: TMemo
@@ -627,74 +627,74 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label10: TLabel
         Left = 16
         Top = 190
-        Width = 72
-        Height = 13
+        Width = 83
+        Height = 17
         Caption = 'Sales Nominal'
       end
       object Label22: TLabel
         Left = 16
         Top = 220
-        Width = 92
-        Height = 13
+        Width = 105
+        Height = 17
         Caption = 'Purchase Nominal'
       end
       object Label25: TLabel
         Left = 16
         Top = 260
-        Width = 92
-        Height = 13
+        Width = 104
+        Height = 17
         Caption = 'Accounts Package'
       end
       object Label26: TLabel
         Left = 16
         Top = 288
-        Width = 81
-        Height = 13
+        Width = 94
+        Height = 17
         Caption = 'Export directory'
       end
       object Label27: TLabel
         Left = 16
         Top = 316
-        Width = 76
-        Height = 13
+        Width = 87
+        Height = 17
         Caption = 'Last export no.'
       end
       object Label36: TLabel
         Left = 16
         Top = 158
-        Width = 71
-        Height = 13
+        Width = 82
+        Height = 17
         Caption = 'Nominal Level'
       end
       object Label40: TLabel
         Left = 16
         Top = 120
-        Width = 84
-        Height = 13
+        Width = 96
+        Height = 17
         Caption = 'Default VAT Rate'
       end
       object Label67: TLabel
         Left = 16
         Top = 436
-        Width = 78
-        Height = 13
+        Width = 89
+        Height = 17
         Caption = 'Delivery Details'
       end
       object dblkpAccountsPackage: TDBLookupComboBox
-        Left = 112
+        Left = 128
         Top = 256
         Width = 185
-        Height = 21
+        Height = 25
         KeyField = 'Accounts_Package'
         ListField = 'Accounts_Package_Description'
         ListSource = dtsAccounts
         TabOrder = 0
       end
       object dblkpDefaultVat: TDBLookupComboBox
-        Left = 112
+        Left = 128
         Top = 116
         Width = 90
-        Height = 21
+        Height = 25
         KeyField = 'Vat'
         ListField = 'Vat_Rate'
         ListSource = dtsVat
@@ -728,7 +728,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object chkbxMandatoryDates: TCheckBox
         Left = 16
         Top = 56
-        Width = 225
+        Width = 257
         Height = 17
         Caption = 'Mandatory Templating/Fitting Dates'
         TabOrder = 5
@@ -736,7 +736,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object chkbxUseOnstop: TCheckBox
         Left = 16
         Top = 80
-        Width = 225
+        Width = 297
         Height = 17
         Caption = 'Do not process orders if customer Onstop'
         TabOrder = 6
@@ -745,29 +745,29 @@ object frmWTMaintParams: TfrmWTMaintParams
         Left = 408
         Top = 17
         Width = 273
-        Height = 104
+        Height = 112
         Color = clMenu
         ParentBackground = False
         ParentColor = False
         TabOrder = 7
         object Label77: TLabel
-          Left = 24
+          Left = 16
           Top = 81
-          Width = 112
-          Height = 13
+          Width = 128
+          Height = 17
           Caption = 'Drawing Folder Name'
         end
         object Label4: TLabel
-          Left = 24
+          Left = 16
           Top = 49
-          Width = 80
-          Height = 13
+          Width = 90
+          Height = 17
           Caption = 'Inactive Reason'
         end
         object chkbxContractQuoteBySlab: TCheckBox
-          Left = 24
+          Left = 16
           Top = 22
-          Width = 143
+          Width = 177
           Height = 17
           Caption = 'Quote by Slab Details'
           TabOrder = 0
@@ -776,7 +776,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           Left = 160
           Top = 77
           Width = 97
-          Height = 21
+          Height = 25
           TabOrder = 1
           Text = 'edtDrawingFolderName'
         end
@@ -784,7 +784,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           Left = 112
           Top = 45
           Width = 145
-          Height = 21
+          Height = 25
           KeyField = 'Inactive_Reason'
           ListField = 'Inactive_Reason_Descr'
           ListSource = dtsInactiveReason
@@ -794,48 +794,48 @@ object frmWTMaintParams: TfrmWTMaintParams
       object chkbxUsePurchaseOrdering: TCheckBox
         Left = 410
         Top = 152
-        Width = 143
+        Width = 223
         Height = 17
         Caption = 'Use Purchase Ordering'
         TabOrder = 8
       end
       object edtDefaultSalesNominal: TEdit
-        Left = 112
+        Left = 128
         Top = 184
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 9
         Text = 'edtDefaultSalesNominal'
       end
       object edtDefaultPurchaseNominal: TEdit
-        Left = 112
+        Left = 128
         Top = 216
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 10
         Text = 'edtDefaultPurchaseNominal'
       end
       object edtDataExportDirectory: TEdit
-        Left = 112
+        Left = 128
         Top = 284
         Width = 275
-        Height = 21
+        Height = 25
         TabOrder = 11
         Text = 'edtDataExportDirectory'
       end
       object edtLastFileNoInv: TCREditInt
-        Left = 112
+        Left = 128
         Top = 312
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 12
         Text = 'edtLastFileNoInv'
       end
       object dblkpNominalLevel: TComboBox
-        Left = 112
+        Left = 128
         Top = 152
         Width = 145
-        Height = 21
+        Height = 25
         TabOrder = 13
         Text = 'dblkpNominalLevel'
         Items.Strings = (
@@ -863,15 +863,15 @@ object frmWTMaintParams: TfrmWTMaintParams
         ParentColor = False
         TabOrder = 15
         object Label5: TLabel
-          Left = 24
+          Left = 19
           Top = 30
-          Width = 90
-          Height = 13
+          Width = 103
+          Height = 17
           Caption = 'Remedial Product'
         end
         object btnClearProduct: TSpeedButton
-          Left = 346
-          Top = 24
+          Left = 353
+          Top = 26
           Width = 25
           Height = 25
           Hint = 'Clear Default Upstand Size'
@@ -898,16 +898,16 @@ object frmWTMaintParams: TfrmWTMaintParams
           OnClick = btnClearProductClick
         end
         object edtRemedialProduct: TEdit
-          Left = 120
+          Left = 127
           Top = 26
           Width = 185
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           TabOrder = 0
         end
         object btnLUProducts: TButton
-          Left = 312
-          Top = 24
+          Left = 319
+          Top = 26
           Width = 25
           Height = 25
           Caption = '...'
@@ -924,7 +924,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object chkbxUseRemedialsAsOrders: TCheckBox
         Left = 26
         Top = 345
-        Width = 143
+        Width = 182
         Height = 17
         Caption = 'Use Remedial As Orders'
         TabOrder = 16
@@ -942,15 +942,15 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label80: TLabel
           Left = 24
           Top = 27
-          Width = 66
-          Height = 13
+          Width = 76
+          Height = 17
           Caption = 'Stock System'
         end
         object dblkpStockSystem: TDBLookupComboBox
           Left = 112
           Top = 23
           Width = 145
-          Height = 21
+          Height = 25
           KeyField = 'Stock_System'
           ListField = 'Stock_System_Description'
           ListSource = dtsStockSystem
@@ -960,7 +960,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object chkbxUseStockSystem: TCheckBox
         Left = 418
         Top = 210
-        Width = 111
+        Width = 135
         Height = 17
         Caption = 'Use Stock System'
         TabOrder = 18
@@ -969,7 +969,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object chkbxUseContractQuoting: TCheckBox
         Left = 417
         Top = 8
-        Width = 136
+        Width = 160
         Height = 17
         Caption = 'Use Contract Quoting'
         TabOrder = 19
@@ -982,61 +982,61 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label30: TLabel
         Left = 8
         Top = 48
-        Width = 87
-        Height = 13
+        Width = 98
+        Height = 17
         Caption = 'Production Email'
       end
       object Label31: TLabel
         Left = 8
         Top = 208
-        Width = 79
-        Height = 13
+        Width = 90
+        Height = 17
         Caption = 'Job Documents'
       end
       object Label32: TLabel
         Left = 8
         Top = 177
-        Width = 87
-        Height = 13
+        Width = 99
+        Height = 17
         Caption = 'Sales Documents'
       end
       object Label34: TLabel
         Left = 8
         Top = 85
-        Width = 110
-        Height = 13
+        Width = 125
+        Height = 17
         Caption = 'Customer Documents'
       end
       object Label41: TLabel
         Left = 8
         Top = 147
-        Width = 93
-        Height = 13
+        Width = 105
+        Height = 17
         Caption = 'Quote Documents'
       end
       object Label54: TLabel
         Left = 8
         Top = 240
-        Width = 105
-        Height = 13
+        Width = 118
+        Height = 17
         Caption = 'Contract Documents'
       end
       object Label56: TLabel
         Left = 8
         Top = 16
-        Width = 56
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Sales Email'
       end
       object Label68: TLabel
         Left = 8
         Top = 115
-        Width = 104
-        Height = 13
+        Width = 117
+        Height = 17
         Caption = 'Supplier Documents'
       end
       object Button2: TButton
-        Left = 430
+        Left = 454
         Top = 202
         Width = 75
         Height = 25
@@ -1045,7 +1045,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button2Click
       end
       object Button1: TButton
-        Left = 430
+        Left = 454
         Top = 171
         Width = 75
         Height = 25
@@ -1054,7 +1054,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button1Click
       end
       object Button3: TButton
-        Left = 430
+        Left = 454
         Top = 79
         Width = 75
         Height = 25
@@ -1072,70 +1072,70 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label37: TLabel
           Left = 24
           Top = 32
-          Width = 149
-          Height = 13
+          Width = 171
+          Height = 17
           Caption = 'Default Mileage Rate (p/mile)'
         end
         object Label38: TLabel
           Left = 24
           Top = 64
-          Width = 141
-          Height = 13
+          Width = 160
+          Height = 17
           Caption = 'Default Labour Rate (/hour)'
         end
         object Label39: TLabel
           Left = 24
           Top = 96
-          Width = 172
-          Height = 13
+          Width = 196
+          Height = 17
           Caption = 'Default Handling Rate (/sq metre)'
         end
         object Label20: TLabel
           Left = 24
           Top = 128
-          Width = 111
-          Height = 13
+          Width = 124
+          Height = 17
           Caption = 'Waste Cost Multiplier'
         end
         object edtDefaultMileageRate: TCREditMoney
-          Left = 200
+          Left = 228
           Top = 28
           Width = 81
-          Height = 21
+          Height = 25
           Enabled = False
           TabOrder = 0
           Text = 'edtDefaultMileageRate'
         end
         object edtDefaultLabourRate: TCREditMoney
-          Left = 200
+          Left = 228
           Top = 60
           Width = 81
-          Height = 21
+          Height = 25
           Enabled = False
           TabOrder = 1
           Text = 'edtDefaultLabourRate'
         end
         object edtDefaultHandlingRate: TCREditMoney
-          Left = 200
+          Left = 228
           Top = 92
           Width = 81
-          Height = 21
+          Height = 25
           Enabled = False
           TabOrder = 2
           Text = 'edtDefaultHandlingRate'
         end
         object edtWasteCostMultiplier: TCREditInt
-          Left = 200
+          Left = 228
           Top = 124
           Width = 50
-          Height = 21
+          Height = 25
           Enabled = False
           TabOrder = 3
           Text = 'edtWasteCostMultiplier'
         end
       end
       object Button4: TButton
-        Left = 430
+        Left = 454
         Top = 141
         Width = 75
         Height = 25
@@ -1144,7 +1144,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button4Click
       end
       object Button8: TButton
-        Left = 430
+        Left = 454
         Top = 234
         Width = 75
         Height = 25
@@ -1153,7 +1153,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button8Click
       end
       object Button10: TButton
-        Left = 430
+        Left = 454
         Top = 109
         Width = 75
         Height = 25
@@ -1162,72 +1162,72 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button10Click
       end
       object edtSalesEmail: TEdit
-        Left = 120
+        Left = 144
         Top = 12
         Width = 385
-        Height = 21
+        Height = 25
         TabOrder = 7
         Text = 'edtSalesEmail'
       end
       object edtProductionEmail: TEdit
-        Left = 120
+        Left = 144
         Top = 44
         Width = 385
-        Height = 21
+        Height = 25
         TabOrder = 8
         Text = 'edtProductionEmail'
       end
       object edtCustomerDocumentDirectory: TEdit
-        Left = 120
+        Left = 144
         Top = 81
         Width = 290
-        Height = 21
+        Height = 25
         TabOrder = 9
         Text = 'edtCustomerDocumentDirectory'
       end
       object edtSupplierDocumentDirectory: TEdit
-        Left = 120
+        Left = 144
         Top = 111
         Width = 290
-        Height = 21
+        Height = 25
         TabOrder = 10
         Text = 'edtSupplierDocumentDirectory'
       end
       object edtQuoteDocumentDirectory: TEdit
-        Left = 120
+        Left = 144
         Top = 143
         Width = 290
-        Height = 21
+        Height = 25
         TabOrder = 11
         Text = 'edtQuoteDocumentDirectory'
       end
       object edtSalesDocumentDirectory: TEdit
-        Left = 120
+        Left = 144
         Top = 173
         Width = 290
-        Height = 21
+        Height = 25
         TabOrder = 12
         Text = 'edtSalesDocumentDirectory'
       end
       object edtJobDocumentDirectory: TEdit
-        Left = 120
+        Left = 144
         Top = 204
         Width = 290
-        Height = 21
+        Height = 25
         TabOrder = 13
         Text = 'edtJobDocumentDirectory'
       end
       object edtContractDocumentDirectory: TEdit
-        Left = 120
+        Left = 144
         Top = 236
         Width = 290
-        Height = 21
+        Height = 25
         TabOrder = 14
         Text = 'edtContractDocumentDirectory'
       end
       object Button11: TButton
         Tag = 10
-        Left = 542
+        Left = 566
         Top = 79
         Width = 75
         Height = 25
@@ -1237,7 +1237,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object Button12: TButton
         Tag = 20
-        Left = 542
+        Left = 566
         Top = 109
         Width = 75
         Height = 25
@@ -1247,7 +1247,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object Button13: TButton
         Tag = 30
-        Left = 542
+        Left = 566
         Top = 141
         Width = 75
         Height = 25
@@ -1257,7 +1257,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object Button14: TButton
         Tag = 40
-        Left = 542
+        Left = 566
         Top = 171
         Width = 75
         Height = 25
@@ -1267,7 +1267,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object Button15: TButton
         Tag = 50
-        Left = 542
+        Left = 566
         Top = 202
         Width = 75
         Height = 25
@@ -1277,7 +1277,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object Button16: TButton
         Tag = 60
-        Left = 542
+        Left = 566
         Top = 234
         Width = 75
         Height = 25
@@ -1296,15 +1296,15 @@ object frmWTMaintParams: TfrmWTMaintParams
         object Label53: TLabel
           Left = 16
           Top = 28
-          Width = 96
-          Height = 13
+          Width = 108
+          Height = 17
           Caption = 'Scheduling System'
         end
         object Label73: TLabel
           Left = 16
           Top = 60
-          Width = 72
-          Height = 13
+          Width = 82
+          Height = 17
           Caption = 'Shared Folder'
         end
         object grpbxDocumentTransfer: TGroupBox
@@ -1317,36 +1317,36 @@ object frmWTMaintParams: TfrmWTMaintParams
           object Label65: TLabel
             Left = 16
             Top = 19
-            Width = 53
-            Height = 13
+            Width = 58
+            Height = 17
             Caption = 'Quotation'
           end
           object Label78: TLabel
             Left = 16
             Top = 47
-            Width = 80
-            Height = 13
+            Width = 90
+            Height = 17
             Caption = 'Health && Safety'
           end
           object Label79: TLabel
             Left = 16
             Top = 75
-            Width = 52
-            Height = 13
+            Width = 60
+            Height = 17
             Caption = 'Remedials'
           end
           object Label82: TLabel
             Left = 16
             Top = 104
-            Width = 27
-            Height = 13
+            Width = 30
+            Height = 17
             Caption = 'Plans'
           end
           object edtQuotationDocumentFolder: TEdit
             Left = 104
             Top = 15
             Width = 193
-            Height = 21
+            Height = 25
             TabOrder = 0
             Text = 'edtQuotationDocumentFolder'
           end
@@ -1354,7 +1354,7 @@ object frmWTMaintParams: TfrmWTMaintParams
             Left = 104
             Top = 43
             Width = 193
-            Height = 21
+            Height = 25
             TabOrder = 1
             Text = 'edtSharedFolder'
           end
@@ -1362,7 +1362,7 @@ object frmWTMaintParams: TfrmWTMaintParams
             Left = 104
             Top = 73
             Width = 193
-            Height = 21
+            Height = 25
             TabOrder = 2
             Text = 'edtRemedialDocumentFolder'
           end
@@ -1370,23 +1370,23 @@ object frmWTMaintParams: TfrmWTMaintParams
             Left = 104
             Top = 100
             Width = 193
-            Height = 21
+            Height = 25
             TabOrder = 3
             Text = 'edtPlanDocumentFolder'
           end
         end
         object dblkpSchedulePackage: TDBLookupComboBox
-          Left = 120
+          Left = 130
           Top = 24
           Width = 193
-          Height = 21
+          Height = 25
           KeyField = 'Schedule_Package'
           ListField = 'Schedule_Package_Name'
           ListSource = dtsScheduling
           TabOrder = 0
         end
         object DirectClrBitBtn: TBitBtn
-          Left = 318
+          Left = 328
           Top = 22
           Width = 25
           Height = 25
@@ -1415,7 +1415,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           OnClick = DirectClrBitBtnClick
         end
         object BitBtn1: TBitBtn
-          Left = 318
+          Left = 328
           Top = 54
           Width = 25
           Height = 25
@@ -1444,17 +1444,17 @@ object frmWTMaintParams: TfrmWTMaintParams
           OnClick = BitBtn1Click
         end
         object edtSharedFolder: TEdit
-          Left = 120
+          Left = 130
           Top = 56
           Width = 193
-          Height = 21
+          Height = 25
           TabOrder = 3
           Text = 'edtSharedFolder'
         end
         object chkbxUseDocumentTransfer: TCheckBox
           Left = 378
           Top = 13
-          Width = 143
+          Width = 175
           Height = 17
           Caption = 'Use Document Transfer'
           TabOrder = 4
@@ -1464,7 +1464,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       object chkbxUseCosting: TCheckBox
         Left = 18
         Top = 275
-        Width = 127
+        Width = 185
         Height = 17
         Caption = 'Use Costing System'
         TabOrder = 22
@@ -1477,34 +1477,34 @@ object frmWTMaintParams: TfrmWTMaintParams
       object Label44: TLabel
         Left = 8
         Top = 16
-        Width = 105
-        Height = 13
+        Width = 119
+        Height = 17
         Caption = 'Template Conditions'
       end
       object Label45: TLabel
         Left = 8
         Top = 56
-        Width = 61
-        Height = 13
+        Width = 73
+        Height = 17
         Caption = 'Sales T && Cs'
       end
       object Label46: TLabel
         Left = 8
         Top = 96
-        Width = 55
-        Height = 13
+        Width = 61
+        Height = 17
         Caption = 'Availability'
       end
       object Label55: TLabel
         Left = 8
         Top = 156
-        Width = 101
-        Height = 13
+        Width = 114
+        Height = 17
         Caption = 'Order Confirmation'
       end
       object Button5: TButton
-        Left = 446
-        Top = 11
+        Left = 588
+        Top = 13
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1512,8 +1512,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button5Click
       end
       object Button6: TButton
-        Left = 446
-        Top = 51
+        Left = 588
+        Top = 53
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1521,8 +1521,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button6Click
       end
       object Button7: TButton
-        Left = 446
-        Top = 91
+        Left = 588
+        Top = 93
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1531,7 +1531,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       end
       object memConfirm: TMemo
         Left = 8
-        Top = 172
+        Top = 179
         Width = 457
         Height = 75
         Lines.Strings = (
@@ -1540,26 +1540,26 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 3
       end
       object edtTemplateConditionsFile: TEdit
-        Left = 128
+        Left = 136
         Top = 13
-        Width = 313
-        Height = 21
+        Width = 430
+        Height = 25
         TabOrder = 4
         Text = 'edtTemplateConditionsFile'
       end
       object edtSalesOrderTermsFile: TEdit
-        Left = 128
+        Left = 136
         Top = 53
-        Width = 313
-        Height = 21
+        Width = 430
+        Height = 25
         TabOrder = 5
         Text = 'edtSalesOrderTermsFile'
       end
       object edtSalesAvailabilityFile: TEdit
-        Left = 128
+        Left = 136
         Top = 93
-        Width = 313
-        Height = 21
+        Width = 430
+        Height = 25
         TabOrder = 6
         Text = 'edtSalesAvailabilityFile'
       end
@@ -1571,7 +1571,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         Left = 0
         Top = 0
         Width = 697
-        Height = 594
+        Height = 590
         ActivePage = TabSheet8
         Align = alClient
         TabOrder = 0
@@ -1579,20 +1579,20 @@ object frmWTMaintParams: TfrmWTMaintParams
           Caption = 'Quotes'
           object Label47: TLabel
             Left = 15
-            Top = 13
-            Width = 103
-            Height = 13
+            Top = 8
+            Width = 117
+            Height = 17
             Caption = 'Quotation Preamble'
           end
           object Label60: TLabel
             Left = 15
-            Top = 196
-            Width = 177
-            Height = 13
+            Top = 191
+            Width = 201
+            Height = 17
             Caption = 'Retail Specific Quotation Preamble'
           end
           object btnEmailHelp: TSpeedButton
-            Left = 650
+            Left = 634
             Top = 29
             Width = 23
             Height = 22
@@ -1638,20 +1638,20 @@ object frmWTMaintParams: TfrmWTMaintParams
           ImageIndex = 1
           object Label48: TLabel
             Left = 15
-            Top = 14
-            Width = 147
-            Height = 13
+            Top = 9
+            Width = 168
+            Height = 17
             Caption = 'Sales Confirmation Preamble'
           end
           object Label69: TLabel
             Left = 15
-            Top = 190
-            Width = 272
-            Height = 13
+            Top = 185
+            Width = 312
+            Height = 17
             Caption = 'Retail/Proforma Specific Sales Confirmation Preamble'
           end
           object SpeedButton1: TSpeedButton
-            Left = 650
+            Left = 634
             Top = 30
             Width = 23
             Height = 22
@@ -1673,9 +1673,9 @@ object frmWTMaintParams: TfrmWTMaintParams
           end
           object Label72: TLabel
             Left = 15
-            Top = 366
-            Width = 155
-            Height = 13
+            Top = 360
+            Width = 173
+            Height = 17
             Caption = 'Fitting Confirmation Preamble'
           end
           object memEmailSalesConfirm: TMemo
@@ -1714,13 +1714,13 @@ object frmWTMaintParams: TfrmWTMaintParams
           ImageIndex = 2
           object Label66: TLabel
             Left = 15
-            Top = 15
-            Width = 129
-            Height = 13
+            Top = 10
+            Width = 150
+            Height = 17
             Caption = 'Purchase Order Preamble'
           end
           object SpeedButton5: TSpeedButton
-            Left = 650
+            Left = 635
             Top = 30
             Width = 23
             Height = 22
@@ -1756,13 +1756,13 @@ object frmWTMaintParams: TfrmWTMaintParams
           ImageIndex = 3
           object Label49: TLabel
             Left = 15
-            Top = 15
-            Width = 86
-            Height = 13
+            Top = 11
+            Width = 99
+            Height = 17
             Caption = 'Invoice Preamble'
           end
           object SpeedButton3: TSpeedButton
-            Left = 650
+            Left = 635
             Top = 30
             Width = 23
             Height = 22
@@ -1800,68 +1800,68 @@ object frmWTMaintParams: TfrmWTMaintParams
       ImageIndex = 8
       DesignSize = (
         697
-        594)
+        590)
       object Label57: TLabel
         Left = 16
         Top = 28
-        Width = 115
-        Height = 13
+        Width = 129
+        Height = 17
         Caption = 'Default Web Operator'
       end
       object Label58: TLabel
         Left = 16
         Top = 68
-        Width = 132
-        Height = 13
+        Width = 148
+        Height = 17
         Caption = 'Default Account Manager'
       end
       object Label59: TLabel
         Left = 16
         Top = 108
-        Width = 91
-        Height = 13
+        Width = 106
+        Height = 17
         Caption = 'Sales Lead Source'
       end
       object Label61: TLabel
         Left = 16
         Top = 148
-        Width = 116
-        Height = 13
+        Width = 134
+        Height = 17
         Caption = 'Image Parent Directory'
       end
       object Label19: TLabel
         Left = 16
         Top = 260
-        Width = 132
-        Height = 13
+        Width = 151
+        Height = 17
         Caption = 'Template Documents  Out'
       end
       object Label21: TLabel
         Left = 16
         Top = 292
-        Width = 122
-        Height = 13
+        Width = 140
+        Height = 17
         Caption = 'Template Documents  In'
       end
       object Label50: TLabel
         Left = 16
         Top = 324
-        Width = 118
-        Height = 13
+        Width = 129
+        Height = 17
         Caption = 'Fitting Documents Out'
       end
       object Label51: TLabel
         Left = 16
         Top = 356
-        Width = 108
-        Height = 13
+        Width = 118
+        Height = 17
         Caption = 'Fitting Documents In'
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 151
+        Left = 172
         Top = 24
         Width = 146
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Operator'
         ListField = 'Operator_Name'
@@ -1869,10 +1869,10 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 0
       end
       object dblkpAccountManager: TDBLookupComboBox
-        Left = 151
+        Left = 172
         Top = 64
         Width = 146
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Operator'
         ListField = 'Operator_Name'
@@ -1880,18 +1880,18 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 1
       end
       object dblkpSalesLeadSource: TDBLookupComboBox
-        Left = 152
+        Left = 173
         Top = 102
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Sales_Lead_Source'
         ListField = 'Sales_Lead_Source_Descr'
         ListSource = dtsSalesSource
         TabOrder = 2
       end
       object btnSalesLead: TBitBtn
-        Left = 363
-        Top = 101
+        Left = 384
+        Top = 103
         Width = 22
         Height = 22
         Hint = 'Search for Customer'
@@ -1907,7 +1907,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = btnSalesLeadClick
       end
       object Button9: TButton
-        Left = 502
+        Left = 523
         Top = 143
         Width = 75
         Height = 25
@@ -1916,42 +1916,42 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button9Click
       end
       object edtWebsiteImageDirectory: TEdit
-        Left = 152
+        Left = 173
         Top = 144
         Width = 337
-        Height = 21
+        Height = 25
         TabOrder = 5
         Text = 'edtWebsiteImageDirectory'
       end
       object edtTemplateDocsOut: TEdit
-        Left = 152
+        Left = 173
         Top = 256
         Width = 226
-        Height = 21
+        Height = 25
         TabOrder = 6
         Text = 'edtTemplateDocsOut'
       end
       object edtTemplateDocsIn: TEdit
-        Left = 152
+        Left = 173
         Top = 288
         Width = 226
-        Height = 21
+        Height = 25
         TabOrder = 7
         Text = 'edtTemplateDocsIn'
       end
       object edtFittingDocsOut: TEdit
-        Left = 152
+        Left = 173
         Top = 320
         Width = 226
-        Height = 21
+        Height = 25
         TabOrder = 8
         Text = 'edtFittingDocsOut'
       end
       object edtFittingDocsIn: TEdit
-        Left = 152
+        Left = 173
         Top = 352
         Width = 226
-        Height = 21
+        Height = 25
         TabOrder = 9
         Text = 'edtFittingDocsIn'
       end
@@ -1993,10 +1993,10 @@ object frmWTMaintParams: TfrmWTMaintParams
     end
   end
   object edtCompanyName: TEdit
-    Left = 104
+    Left = 121
     Top = 8
-    Width = 289
-    Height = 21
+    Width = 388
+    Height = 25
     TabOrder = 2
     Text = 'edtCompanyName'
   end
@@ -2078,13 +2078,13 @@ object frmWTMaintParams: TfrmWTMaintParams
       'select *'
       'from Thickness'
       'order by thickness_mm')
-    Left = 352
-    Top = 112
+    Left = 600
+    Top = 76
   end
   object srclkpThickness: TDataSource
     DataSet = lkpThickness
-    Left = 288
-    Top = 96
+    Left = 618
+    Top = 160
   end
   object qryAccounts: TFDQuery
     ConnectionName = 'wt'
@@ -2106,7 +2106,7 @@ object frmWTMaintParams: TfrmWTMaintParams
       'select * from VAT'
       'order by Vat_Rate')
     Left = 629
-    Top = 128
+    Top = 216
     object qryVatVat: TIntegerField
       FieldName = 'Vat'
       Origin = 'Vat'
@@ -2134,8 +2134,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       'select * '
       'from Schedule_Package'
       'order by Schedule_Package_Name')
-    Left = 316
-    Top = 144
+    Left = 499
+    Top = 372
   end
   object dtsScheduling: TDataSource
     DataSet = qryScheduling
@@ -2150,8 +2150,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       'FROM Operator'
       'WHERE (Operator_Can_Login = '#39'Y'#39') OR (Operator = :Operator)'
       'ORDER BY Operator_Name')
-    Left = 412
-    Top = 328
+    Left = 76
+    Top = 552
     ParamData = <
       item
         Name = 'Operator'
@@ -2721,8 +2721,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         'WHERE (Inactive = '#39'N'#39') OR (Sales_Lead_Source = :Sales_Lead_Sourc' +
         'e)'
       'ORDER BY Sales_Lead_Source_Descr')
-    Left = 316
-    Top = 216
+    Left = 547
+    Top = 286
     ParamData = <
       item
         Name = 'Sales_Lead_Source'
@@ -2771,7 +2771,7 @@ object frmWTMaintParams: TfrmWTMaintParams
   end
   object dtsStockSystem: TDataSource
     DataSet = qryStockSystem
-    Left = 348
-    Top = 256
+    Left = 147
+    Top = 424
   end
 end

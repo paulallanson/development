@@ -8,13 +8,13 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 331
@@ -153,15 +153,15 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object lblCustomerName: TLabel
       Left = 64
       Top = 8
-      Width = 91
-      Height = 13
+      Width = 105
+      Height = 17
       Caption = 'lblCustomerName'
     end
   end
@@ -175,7 +175,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

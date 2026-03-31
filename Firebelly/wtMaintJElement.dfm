@@ -8,22 +8,22 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
-    Left = 24
-    Top = 229
-    Width = 154
-    Height = 13
-    Caption = 'Delete these element details ?'
+    Left = 19
+    Top = 226
+    Width = 182
+    Height = 17
+    Caption = 'Delete these element details?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -61,65 +61,65 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 520
+    ExplicitWidth = 573
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
-      Top = 72
-      Width = 46
-      Height = 13
+      Top = 68
+      Width = 50
+      Height = 17
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 97
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Thickness'
     end
     object Label6: TLabel
       Left = 16
-      Top = 124
-      Width = 63
-      Height = 13
+      Top = 127
+      Width = 73
+      Height = 17
       Caption = 'Length (mm)'
     end
     object Label5: TLabel
       Left = 16
       Top = 156
-      Width = 59
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Depth (mm)'
     end
     object Label8: TLabel
-      Left = 200
+      Left = 209
       Top = 156
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label4: TLabel
-      Left = 200
-      Top = 96
-      Width = 50
-      Height = 13
+      Left = 209
+      Top = 97
+      Width = 56
+      Height = 17
       Caption = 'Unit price'
     end
     object Label7: TLabel
-      Left = 352
+      Left = 361
       Top = 156
-      Width = 52
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Total price'
     end
     object SpeedButton1: TSpeedButton
-      Left = 346
+      Left = 355
       Top = 63
       Width = 23
       Height = 22
@@ -134,14 +134,14 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     end
     object Label9: TLabel
       Left = 16
-      Top = 44
-      Width = 60
-      Height = 13
+      Top = 40
+      Width = 69
+      Height = 17
       Caption = 'Price Group'
     end
     object SpeedButton2: TSpeedButton
-      Left = 250
-      Top = 39
+      Left = 259
+      Top = 37
       Width = 23
       Height = 22
       Font.Charset = ANSI_CHARSET
@@ -169,13 +169,13 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object Label10: TLabel
       Left = 16
       Top = 188
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object btnMaterialUse: TSpeedButton
-      Left = 282
-      Top = 183
+      Left = 291
+      Top = 185
       Width = 23
       Height = 22
       Caption = '...'
@@ -188,26 +188,26 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       OnClick = btnMaterialUseClick
     end
     object edtDepth: TCREditInt
-      Left = 88
+      Left = 97
       Top = 152
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtDepthChange
     end
     object edtLength: TCREditInt
-      Left = 88
-      Top = 120
+      Left = 97
+      Top = 123
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 5
       OnChange = edtDepthChange
     end
     object dblkpWTThickness: TDBLookupComboBox
-      Left = 88
+      Left = 97
       Top = 93
       Width = 89
-      Height = 21
+      Height = 25
       KeyField = 'Thickness'
       ListField = 'Thickness_mm'
       ListSource = dtsWTThickness
@@ -215,10 +215,10 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       OnClick = dblkpWTThicknessClick
     end
     object dblkpWorktop: TDBLookupComboBox
-      Left = 88
+      Left = 97
       Top = 64
       Width = 450
-      Height = 21
+      Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
       ListSource = dtsWorktops
@@ -226,28 +226,28 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       OnClick = dblkpWorktopClick
     end
     object edtMaterial: TEdit
-      Left = 88
+      Left = 97
       Top = 8
       Width = 145
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
     end
     object edtUnitPrice: TCREditMoney
-      Left = 256
-      Top = 92
+      Left = 272
+      Top = 93
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = edtDepthChange
     end
     object spnQuantity: TSpinEdit
-      Left = 256
+      Left = 272
       Top = 151
       Width = 73
-      Height = 22
+      Height = 27
       MaxValue = 1000
       MinValue = 1
       TabOrder = 7
@@ -255,20 +255,20 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       OnChange = spnQuantityChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 408
+      Left = 433
       Top = 152
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 8
     end
     object dblkpWTGroup: TDBLookupComboBox
-      Left = 88
-      Top = 40
+      Left = 97
+      Top = 36
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Worktop_Group'
       ListField = 'Worktop_Group_Description'
       ListSource = dtsWTGroup
@@ -276,10 +276,10 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       OnClick = dblkpWTGroupClick
     end
     object cmbMaterialUse: TComboBox
-      Left = 88
+      Left = 97
       Top = 184
       Width = 185
-      Height = 21
+      Height = 25
       TabOrder = 9
       Text = 'cmbMaterialUse'
     end
@@ -303,8 +303,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group))'
       'Order by Description')
-    Left = 164
-    Top = 72
+    Left = 469
+    Top = 74
     ParamData = <
       item
         Name = 'material_type'
@@ -327,8 +327,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'where worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness'
       'order by thickness_mm')
-    Left = 144
-    Top = 104
+    Left = 516
+    Top = 154
     ParamData = <
       item
         Name = 'worktop'
@@ -336,13 +336,13 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 438
-    Top = 8
+    Left = 508
+    Top = 34
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 184
-    Top = 104
+    Left = 398
+    Top = 34
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -385,8 +385,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
         'where ((Material_Type = :Material_type) or (Material_Type is NUL' +
         'L))'
       'order by Worktop_group_description')
-    Left = 64
-    Top = 32
+    Left = 528
+    Top = 120
     ParamData = <
       item
         Name = 'Material_type'
@@ -394,8 +394,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 114
-    Top = 32
+    Left = 463
   end
   object qryMaterialUse: TFDQuery
     ConnectionName = 'WT'

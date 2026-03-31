@@ -38,7 +38,7 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
   object Label4: TLabel
     Left = 24
     Top = 188
-    Width = 57
+    Width = 74
     Height = 51
     Caption = 'Proposed Fitting Date'
     WordWrap = True

@@ -3,29 +3,29 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
   Top = 211
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Material Types'
-  ClientHeight = 185
-  ClientWidth = 443
+  ClientHeight = 173
+  ClientWidth = 431
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    443
-    185)
-  TextHeight = 13
+    431
+    173)
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 71
-    Height = 13
+    Width = 84
+    Height = 17
     Caption = 'Material Type'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -33,19 +33,19 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
   object Label2: TLabel
     Left = 8
     Top = 56
-    Width = 83
-    Height = 13
+    Width = 100
+    Height = 17
     Caption = 'Retail Multiplier'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object btnOK: TBitBtn
     Left = 136
-    Top = 148
+    Top = 136
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -56,10 +56,11 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
+    ExplicitTop = 139
   end
   object BitBtn2: TBitBtn
     Left = 232
-    Top = 148
+    Top = 136
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -68,6 +69,7 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 4
+    ExplicitTop = 139
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -81,7 +83,7 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Left = 120
     Top = 16
     Width = 273
-    Height = 21
+    Height = 25
     KeyField = 'Material_Type'
     ListField = 'Description'
     ListSource = dftsMaterialType
@@ -92,7 +94,7 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Left = 119
     Top = 52
     Width = 84
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtRetailMultiplier'
     OnChange = EnableOK
@@ -106,8 +108,8 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
       '  inActive = :inactive'
       'WHERE'
       '  ID = :ID')
-    Left = 168
-    Top = 104
+    Left = 250
+    Top = 42
     ParamData = <
       item
         Name = 'Retail_Multiplier'
@@ -187,8 +189,8 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
       'SELECT *'
       'FROM Customer_Material_Type'
       'WHERE ID = :ID')
-    Left = 96
-    Top = 88
+    Left = 296
+    Top = 46
     ParamData = <
       item
         Name = 'ID'

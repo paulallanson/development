@@ -8,7 +8,7 @@ object frmWtMaintThickness: TfrmWtMaintThickness
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,13 +17,19 @@ object frmWtMaintThickness: TfrmWtMaintThickness
   DesignSize = (
     286
     153)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 77
-    Height = 13
+    Width = 89
+    Height = 17
     Caption = 'Thickness (mm)'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
   end
   object btnOK: TBitBtn
     Left = 64
@@ -38,6 +44,7 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
+    ExplicitTop = 103
   end
   object BitBtn2: TBitBtn
     Left = 152
@@ -50,6 +57,7 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 4
+    ExplicitTop = 103
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -58,21 +66,40 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
+    ExplicitTop = 75
   end
   object chkbxShowOnline: TCheckBox
     Left = 16
-    Top = 50
+    Top = 55
     Width = 161
     Height = 17
     Caption = 'Show Thickness Online'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object edtThicknessmm: TEdit
-    Left = 104
+    Left = 112
     Top = 20
     Width = 75
-    Height = 21
+    Height = 25
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
     Text = 'edtThicknessmm'
     OnChange = EnableOK
@@ -87,8 +114,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
       '      inActive = :inactive'
       'WHERE'
       '  Thickness = :Thickness')
-    Left = 72
-    Top = 72
+    Left = 106
+    Top = 18
     ParamData = <
       item
         Name = 'Thickness_mm'
@@ -113,8 +140,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
       'Select Max(Thickness)+1, :GUID, '#39'N'#39
       'From Thickness'
       ' ')
-    Left = 128
-    Top = 72
+    Left = 176
+    Top = 18
     ParamData = <
       item
         Name = 'GUID'
@@ -128,8 +155,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
       'Select Thickness'
       'From Thickness'
       'Where Thickness_mm = :GUID')
-    Left = 184
-    Top = 72
+    Left = 222
+    Top = 10
     ParamData = <
       item
         Name = 'GUID'

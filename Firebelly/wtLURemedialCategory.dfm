@@ -8,13 +8,13 @@ object frmWTLURemedialCategory: TfrmWTLURemedialCategory
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLURemedialCategory: TfrmWTLURemedialCategory
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -81,8 +81,8 @@ object frmWTLURemedialCategory: TfrmWTLURemedialCategory
     object Label4: TLabel
       Left = 8
       Top = 20
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object btnAdd: TBitBtn
@@ -132,7 +132,7 @@ object frmWTLURemedialCategory: TfrmWTLURemedialCategory
     object chkbxShowInactive: TCheckBox
       Left = 8
       Top = 54
-      Width = 169
+      Width = 225
       Height = 17
       Caption = 'Show inactive Remedial Category'
       TabOrder = 5
@@ -153,7 +153,7 @@ object frmWTLURemedialCategory: TfrmWTLURemedialCategory
       Left = 56
       Top = 16
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNameChange
     end

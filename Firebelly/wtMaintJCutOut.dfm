@@ -8,21 +8,21 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
-    Left = 40
-    Top = 200
-    Width = 106
-    Height = 13
+    Left = 34
+    Top = 196
+    Width = 128
+    Height = 17
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -60,53 +60,54 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 485
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 48
-      Width = 50
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Thickness'
     end
     object Label3: TLabel
       Left = 16
       Top = 76
-      Width = 36
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Cutout'
     end
     object Label8: TLabel
       Left = 16
       Top = 108
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 16
       Top = 139
-      Width = 50
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Unit price'
     end
     object Label7: TLabel
-      Left = 331
-      Top = 139
-      Width = 53
-      Height = 13
+      Left = 315
+      Top = 138
+      Width = 61
+      Height = 17
       Caption = 'Total price'
     end
     object edtMaterial: TEdit
       Left = 88
       Top = 8
       Width = 145
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -116,7 +117,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       Left = 88
       Top = 40
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Edge_Type'
       ListField = 'Edge_Type_Description'
       ListSource = dtsEdgeType
@@ -127,7 +128,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       Left = 88
       Top = 72
       Width = 350
-      Height = 21
+      Height = 25
       KeyField = 'cutout'
       ListField = 'description'
       ListSource = dtsCOThickness
@@ -138,7 +139,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       Left = 88
       Top = 103
       Width = 65
-      Height = 22
+      Height = 27
       MaxValue = 1000
       MinValue = 1
       TabOrder = 3
@@ -149,7 +150,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       Left = 88
       Top = 135
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = edtUnitPriceChange
     end
@@ -157,7 +158,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       Left = 392
       Top = 135
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -187,13 +188,13 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     SQL.Strings = (
       'select *'
       'from Edge_Type')
-    Left = 9
-    Top = 19
+    Left = 291
+    Top = 56
   end
   object dtsEdgeType: TDataSource
     DataSet = qryEdgeType
-    Left = 72
-    Top = 19
+    Left = 362
+    Top = 64
   end
   object qryCOThickness: TFDQuery
     ConnectionName = 'wt'

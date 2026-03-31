@@ -7,7 +7,7 @@ object frmWTQuotes: TfrmWTQuotes
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -16,7 +16,7 @@ object frmWTQuotes: TfrmWTQuotes
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
@@ -34,8 +34,8 @@ object frmWTQuotes: TfrmWTQuotes
       Top = 0
       Width = 590
       Height = 36
-      ButtonHeight = 36
-      ButtonWidth = 47
+      ButtonHeight = 40
+      ButtonWidth = 51
       Caption = 'ToolBar1'
       EdgeInner = esNone
       EdgeOuter = esNone
@@ -50,20 +50,20 @@ object frmWTQuotes: TfrmWTQuotes
         OnClick = ToolButton1Click
       end
       object ToolButton2: TToolButton
-        Left = 47
+        Left = 51
         Top = 0
         Caption = 'Change'
         ImageIndex = 1
         OnClick = ToolButton2Click
       end
       object ToolButton4: TToolButton
-        Left = 94
+        Left = 102
         Top = 0
         Caption = 'Repeat'
         ImageIndex = 3
       end
       object ToolButton5: TToolButton
-        Left = 141
+        Left = 153
         Top = 0
         Width = 8
         Caption = 'ToolButton5'
@@ -71,7 +71,7 @@ object frmWTQuotes: TfrmWTQuotes
         Style = tbsSeparator
       end
       object ToolButton3: TToolButton
-        Left = 149
+        Left = 161
         Top = 0
         Caption = 'Print'
         ImageIndex = 2
@@ -95,7 +95,7 @@ object frmWTQuotes: TfrmWTQuotes
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -103,7 +103,7 @@ object frmWTQuotes: TfrmWTQuotes
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -116,6 +116,7 @@ object frmWTQuotes: TfrmWTQuotes
           Expanded = False
           FieldName = 'Quote_Date'
           Title.Caption = 'Quote Date'
+          Width = 97
           Visible = True
         end
         item

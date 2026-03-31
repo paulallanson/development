@@ -9,13 +9,13 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   Constraints.MinWidth = 530
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
     Top = 533
@@ -37,21 +37,21 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     ExplicitHeight = 524
     object pgDetails: TPageControl
       Left = 0
-      Top = 257
+      Top = 265
       Width = 518
-      Height = 235
+      Height = 227
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 1
-      ExplicitWidth = 512
-      ExplicitHeight = 226
+      ExplicitTop = 257
+      ExplicitHeight = 235
       object TabSheet1: TTabSheet
         Caption = 'Installation Notes'
         object memInstallationNotes: TMemo
           Left = 0
           Top = 0
           Width = 510
-          Height = 207
+          Height = 195
           Align = alClient
           MaxLength = 255
           TabOrder = 0
@@ -74,8 +74,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           object Label44: TLabel
             Left = 2
             Top = 4
-            Width = 58
-            Height = 13
+            Width = 65
+            Height = 17
             Caption = 'Documents'
           end
         end
@@ -83,7 +83,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           Left = 477
           Top = 17
           Width = 33
-          Height = 190
+          Height = 178
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -93,6 +93,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
+          ExplicitHeight = 186
           object btnAttach: TToolButton
             Left = 0
             Top = 0
@@ -108,7 +109,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           Left = 0
           Top = 17
           Width = 477
-          Height = 190
+          Height = 178
           Align = alClient
           Columns = <
             item
@@ -129,6 +130,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           SmallImages = imgDocuments
           TabOrder = 2
           OnDblClick = lstvwDocumentsDblClick
+          ExplicitHeight = 186
         end
       end
     end
@@ -184,20 +186,19 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       Left = 0
       Top = 0
       Width = 518
-      Height = 257
+      Height = 265
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 512
       object lblName: TLabel
         Left = 8
         Top = 20
-        Width = 53
-        Height = 13
+        Width = 63
+        Height = 17
         Caption = 'Site Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -205,12 +206,12 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       object Label1: TLabel
         Left = 8
         Top = 235
-        Width = 36
-        Height = 13
+        Width = 42
+        Height = 17
         Caption = 'Site QS'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -218,12 +219,12 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       object Label2: TLabel
         Left = 8
         Top = 203
-        Width = 101
-        Height = 13
+        Width = 110
+        Height = 17
         Caption = 'Installation Contact'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -244,12 +245,12 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       object Label35: TLabel
         Left = 8
         Top = 108
-        Width = 50
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Town/City'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -270,18 +271,18 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       object Label39: TLabel
         Left = 8
         Top = 171
-        Width = 37
-        Height = 13
+        Width = 40
+        Height = 17
         Caption = 'County'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object btnClearGroup: TSpeedButton
-        Left = 361
+        Left = 374
         Top = 198
         Width = 23
         Height = 22
@@ -308,7 +309,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         OnClick = btnClearGroupClick
       end
       object SpeedButton1: TSpeedButton
-        Left = 329
+        Left = 342
         Top = 230
         Width = 23
         Height = 22
@@ -335,7 +336,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         OnClick = SpeedButton1Click
       end
       object SpeedButton3: TSpeedButton
-        Left = 330
+        Left = 343
         Top = 198
         Width = 23
         Height = 22
@@ -349,67 +350,67 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         OnClick = SpeedButton3Click
       end
       object edtCounty: TEdit
-        Left = 112
+        Left = 125
         Top = 167
         Width = 356
-        Height = 21
+        Height = 25
         TabOrder = 5
       end
       object edtLocale: TEdit
-        Left = 112
+        Left = 125
         Top = 75
         Width = 356
-        Height = 21
+        Height = 25
         TabOrder = 2
       end
       object edtName: TEdit
-        Left = 112
+        Left = 125
         Top = 16
         Width = 249
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'edtName'
         OnChange = EnableOK
       end
       object edtPostcode: TEdit
-        Left = 112
+        Left = 125
         Top = 135
         Width = 99
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         TabOrder = 4
         OnChange = EnableOK
       end
       object edtStreet: TEdit
-        Left = 112
+        Left = 125
         Top = 47
         Width = 356
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnChange = EnableOK
       end
       object edtTown: TEdit
-        Left = 112
+        Left = 125
         Top = 104
         Width = 355
-        Height = 21
+        Height = 25
         TabOrder = 3
       end
       object dblkpInstallationContact: TDBLookupComboBox
-        Left = 112
+        Left = 125
         Top = 199
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Contact_No'
         ListField = 'Contact_Name'
         ListSource = dtsContacts
         TabOrder = 6
       end
       object dblkpQSContact: TDBLookupComboBox
-        Left = 112
+        Left = 125
         Top = 231
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Contact_No'
         ListField = 'Contact_Name'
         ListSource = dtsSiteQS
@@ -596,8 +597,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       ':Telephone_number,'
       ':email_address,'
       ':Installation_Address)')
-    Left = 24
-    Top = 128
+    Left = 390
+    Top = 88
     ParamData = <
       item
         Name = 'Address'
@@ -645,8 +646,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       '  Telephone_number = :Telephone_number,'
       '  Email_Address = :email_Address'
       'where Address = :Address')
-    Left = 48
-    Top = 128
+    Left = 332
+    Top = 72
     ParamData = <
       item
         Name = 'Address_Name'

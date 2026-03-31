@@ -3,24 +3,24 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   Top = 153
   BorderStyle = bsDialog
   Caption = 'Allocate Documents'
-  ClientHeight = 259
+  ClientHeight = 292
   ClientWidth = 241
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
     241
-    259)
-  TextHeight = 13
+    292)
+  TextHeight = 17
   object Label3: TLabel
     Left = 8
     Top = 88
     Width = 219
-    Height = 65
+    Height = 131
     Caption = 
       'This utility will allocate the quotation and health && safety do' +
       'cuments to the relevant folders in each sales order based on the' +
@@ -30,9 +30,9 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   end
   object lblnoRecords: TLabel
     Left = 8
-    Top = 184
-    Width = 50
-    Height = 13
+    Top = 225
+    Width = 59
+    Height = 17
     Caption = '0 Records'
   end
   object GroupBox1: TGroupBox
@@ -46,15 +46,15 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 29
-      Height = 13
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object edtDateFrom: TEdit
       Left = 56
       Top = 24
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
@@ -84,7 +84,7 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   end
   object btnOK: TBitBtn
     Left = 40
-    Top = 215
+    Top = 248
     Width = 75
     Height = 26
     Anchors = [akLeft, akBottom]
@@ -99,7 +99,7 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   end
   object BitBtn2: TBitBtn
     Left = 128
-    Top = 215
+    Top = 248
     Width = 75
     Height = 26
     Anchors = [akLeft, akBottom]
@@ -112,7 +112,7 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   end
   object prgbrRecords: TProgressBar
     Left = 8
-    Top = 160
+    Top = 202
     Width = 225
     Height = 17
     TabOrder = 3
@@ -144,8 +144,8 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
       
         '      ((IsFittingInOutlook = '#39'Y'#39') OR (IsTemplateInOutlook = '#39'Y'#39')' +
         ')')
-    Left = 32
-    Top = 120
+    Left = 168
+    Top = 30
     ParamData = <
       item
         Name = 'Date_Required'

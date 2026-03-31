@@ -7,11 +7,11 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
@@ -21,24 +21,24 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
     ParentBackground = False
     TabOrder = 0
     object Label3: TLabel
-      Left = 664
+      Left = 654
       Top = 20
-      Width = 74
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Date Required'
     end
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Order Due before:'
     end
     object dtTransaction: TDateTimePicker
       Left = 744
       Top = 16
       Width = 97
-      Height = 21
+      Height = 25
       Date = 39470.000000000000000000
       Time = 0.402405902779719300
       TabOrder = 0
@@ -47,7 +47,7 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
       Left = 144
       Top = 16
       Width = 97
-      Height = 21
+      Height = 25
       Date = 39470.000000000000000000
       Time = 0.402405902779719300
       TabOrder = 1
@@ -87,15 +87,15 @@ object frmWTLUPOrderSalesOrders: TfrmWTLUPOrderSalesOrders
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object edtSearch: TEdit
       Left = 64
       Top = 16
       Width = 209
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
     end

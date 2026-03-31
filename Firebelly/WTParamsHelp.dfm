@@ -2,25 +2,25 @@ object frmWTParamsHelp: TfrmWTParamsHelp
   Left = 520
   Top = 90
   BorderStyle = bsDialog
-  Caption = 'frmWTParamsHelp'
-  ClientHeight = 408
-  ClientWidth = 308
+  Caption = 'Keyword Help'
+  ClientHeight = 562
+  ClientWidth = 314
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    308
-    408)
-  TextHeight = 13
+    314
+    562)
+  TextHeight = 17
   object DispMemo: TMemo
     Left = 8
     Top = 8
     Width = 289
-    Height = 385
+    Height = 539
     Anchors = [akLeft, akTop, akBottom]
     Lines.Strings = (
       'Key words for email narrative'
@@ -53,5 +53,6 @@ object frmWTParamsHelp: TfrmWTParamsHelp
       '                        <Telephone>')
     ScrollBars = ssVertical
     TabOrder = 0
+    ExplicitHeight = 385
   end
 end

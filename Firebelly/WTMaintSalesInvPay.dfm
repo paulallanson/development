@@ -3,23 +3,23 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
   Top = 108
   BorderStyle = bsDialog
   Caption = 'Invoice Payment Details'
-  ClientHeight = 294
+  ClientHeight = 312
   ClientWidth = 494
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     494
-    294)
-  TextHeight = 13
+    312)
+  TextHeight = 17
   object btnOK: TBitBtn
     Left = 165
-    Top = 250
+    Top = 268
     Width = 75
     Height = 28
     Anchors = [akLeft, akBottom]
@@ -46,42 +46,44 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
+    ExplicitTop = 250
   end
   object btnCancel: TBitBtn
     Left = 253
-    Top = 250
+    Top = 268
     Width = 75
     Height = 28
     Anchors = [akLeft, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitTop = 250
   end
   object GroupBox1: TGroupBox
     Left = 8
     Top = 187
     Width = 481
-    Height = 54
+    Height = 75
     Caption = 'Payment Details'
     Enabled = False
     TabOrder = 2
     object Label5: TLabel
-      Left = 267
-      Top = 22
-      Width = 48
-      Height = 13
+      Left = 277
+      Top = 33
+      Width = 57
+      Height = 17
       Caption = 'Total Paid'
     end
     object Label10: TLabel
-      Left = 8
-      Top = 22
-      Width = 47
-      Height = 13
+      Left = 18
+      Top = 33
+      Width = 56
+      Height = 17
       Caption = 'Paid Date'
     end
     object btnDate: TSpeedButton
-      Left = 216
-      Top = 16
+      Left = 226
+      Top = 29
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -101,17 +103,17 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
       OnClick = btnDateClick
     end
     object edtDatePaid: TEdit
-      Left = 112
-      Top = 18
+      Left = 122
+      Top = 29
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = edtDatePaidExit
     end
     object memTotalPaid: TMemo
-      Left = 345
-      Top = 17
+      Left = 355
+      Top = 30
       Width = 80
       Height = 23
       Alignment = taRightJustify
@@ -124,7 +126,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     end
     object chkbxPaid: TCheckBox
       Left = 112
-      Top = -3
+      Top = 0
       Width = 97
       Height = 17
       Caption = 'Fully Paid ?'
@@ -135,7 +137,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
   end
   object GroupBox2: TGroupBox
     Left = 8
-    Top = 0
+    Top = 5
     Width = 481
     Height = 113
     Caption = 'Invoice Details'
@@ -143,43 +145,43 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 44
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 8
       Top = 56
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Invoice No'
     end
     object Label3: TLabel
       Left = 267
       Top = 56
-      Width = 61
-      Height = 13
+      Width = 71
+      Height = 17
       Caption = 'Invoice Date'
     end
     object Label4: TLabel
       Left = 267
       Top = 84
-      Width = 58
-      Height = 13
+      Width = 71
+      Height = 17
       Caption = 'Total Goods'
     end
     object Label6: TLabel
       Left = 8
       Top = 84
-      Width = 55
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Sales Order'
     end
     object edtCustomer: TEdit
       Left = 112
       Top = 24
       Width = 353
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -188,7 +190,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
       Left = 112
       Top = 52
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 1
@@ -197,7 +199,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
       Left = 344
       Top = 52
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
@@ -206,7 +208,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
       Left = 344
       Top = 80
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 3
@@ -215,7 +217,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
       Left = 112
       Top = 80
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 4
@@ -231,19 +233,19 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     object Label7: TLabel
       Left = 11
       Top = 26
-      Width = 87
-      Height = 13
+      Width = 106
+      Height = 17
       Caption = 'Total Deposit Paid'
     end
     object Label8: TLabel
       Left = 267
       Top = 26
-      Width = 62
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Invoice Total'
     end
     object memDepositPaid: TMemo
-      Left = 113
+      Left = 128
       Top = 21
       Width = 80
       Height = 23

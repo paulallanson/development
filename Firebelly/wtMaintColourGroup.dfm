@@ -8,7 +8,7 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,30 +16,30 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
   DesignSize = (
     388
     234)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 50
-    Height = 13
+    Width = 57
+    Height = 17
     Caption = 'Hex Value'
   end
   object Label3: TLabel
-    Left = 248
-    Top = 47
-    Width = 75
-    Height = 13
+    Left = 272
+    Top = 52
+    Width = 86
+    Height = 17
     Caption = 'Sample Colour'
   end
   object btnOK: TBitBtn
-    Left = 184
+    Left = 199
     Top = 197
     Width = 75
     Height = 25
@@ -51,10 +51,9 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    ExplicitTop = 188
   end
   object BitBtn2: TBitBtn
-    Left = 272
+    Left = 287
     Top = 197
     Width = 75
     Height = 25
@@ -64,7 +63,6 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
-    ExplicitTop = 188
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -74,7 +72,6 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 3
-    ExplicitTop = 193
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
@@ -85,8 +82,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     TabOrder = 2
   end
   object memColour: TMemo
-    Left = 248
-    Top = 64
+    Left = 272
+    Top = 79
     Width = 89
     Height = 73
     Color = 16514043
@@ -94,19 +91,19 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     OnDblClick = memColourDblClick
   end
   object edtColourCode: TEdit
-    Left = 72
+    Left = 81
     Top = 48
     Width = 121
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtColourCode'
     OnChange = edtColourCodeChange
   end
   object edtDescription: TEdit
-    Left = 72
+    Left = 81
     Top = 16
     Width = 185
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -126,8 +123,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
       '      inActive = :inactive'
       'WHERE'
       '  Colour_Group = :Colour_Group')
-    Left = 40
-    Top = 104
+    Left = 42
+    Top = 74
     ParamData = <
       item
         Name = 'Description'
@@ -155,8 +152,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
       'Select Max(Colour_Group)+1, :GUID, '#39'N'#39
       'From Colour_Group'
       ' ')
-    Left = 120
-    Top = 104
+    Left = 134
+    Top = 66
     ParamData = <
       item
         Name = 'GUID'

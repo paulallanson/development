@@ -3,23 +3,23 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Search for Supplier contacts'
-  ClientHeight = 354
+  ClientHeight = 385
   ClientWidth = 358
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 312
-    Width = 77
-    Height = 13
+    Top = 317
+    Width = 87
+    Height = 17
     Caption = 'Contact Search'
   end
   object dbgdetails: TDBGrid
@@ -31,7 +31,7 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -39,7 +39,7 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgdetailsDblClick
@@ -54,9 +54,9 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
   end
   object edtSearch: TEdit
     Left = 8
-    Top = 325
+    Top = 339
     Width = 257
-    Height = 21
+    Height = 25
     TabOrder = 1
     OnChange = edtSearchChange
   end
@@ -72,7 +72,7 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
   end
   object BitBtn2: TBitBtn
     Left = 272
-    Top = 321
+    Top = 339
     Width = 75
     Height = 25
     Caption = '&Close'

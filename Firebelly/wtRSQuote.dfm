@@ -3,8 +3,8 @@ object frmWTRSQuote: TfrmWTRSQuote
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Quote'
-  ClientHeight = 393
-  ClientWidth = 548
+  ClientHeight = 411
+  ClientWidth = 586
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSQuote: TfrmWTRSQuote
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    548
-    393)
+    586
+    411)
   TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 356
+    Top = 374
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -28,30 +28,29 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 14
     OnClick = btnPrintClick
-    ExplicitTop = 355
+    ExplicitTop = 347
   end
   object Button4: TButton
-    Left = 451
-    Top = 356
+    Left = 478
+    Top = 374
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 17
     OnClick = Button4Click
-    ExplicitTop = 355
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
-    Top = 160
+    Top = 176
     Width = 200
     Height = 17
     Caption = 'Print your logo'
     TabOrder = 2
   end
   object SelectLst: TListBox
-    Left = 408
-    Top = 168
+    Left = 448
+    Top = 184
     Width = 25
     Height = 105
     ItemHeight = 17
@@ -61,7 +60,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxShowDetail: TCheckBox
     Left = 8
-    Top = 184
+    Top = 200
     Width = 200
     Height = 17
     Caption = 'Show price breakdown'
@@ -70,7 +69,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object btnPreview: TButton
     Left = 96
-    Top = 356
+    Top = 374
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -78,11 +77,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 15
     OnClick = btnPreviewClick
-    ExplicitTop = 355
+    ExplicitTop = 347
   end
   object btnEmail: TButton
     Left = 184
-    Top = 356
+    Top = 374
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -90,11 +89,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 16
     OnClick = btnEmailClick
-    ExplicitTop = 355
+    ExplicitTop = 347
   end
   object chkbxOnlyShowGrandTotal: TCheckBox
     Left = 8
-    Top = 280
+    Top = 296
     Width = 200
     Height = 17
     Caption = 'ONLY Show Grand Total'
@@ -105,7 +104,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Left = 11
     Top = 8
     Width = 316
-    Height = 146
+    Height = 153
     Caption = 'Quote Number Selection'
     ParentBackground = False
     TabOrder = 0
@@ -130,8 +129,8 @@ object frmWTRSQuote: TfrmWTRSQuote
     end
   end
   object chkbxIncludeConfirm: TCheckBox
-    Left = 245
-    Top = 184
+    Left = 285
+    Top = 200
     Width = 281
     Height = 17
     Caption = 'Include Order Confirmation'
@@ -139,7 +138,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxExcludeTemplate: TCheckBox
     Left = 8
-    Top = 232
+    Top = 249
     Width = 251
     Height = 17
     Caption = 'Exclude Template && Fitting Charges'
@@ -147,15 +146,15 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxShowDiscount: TCheckBox
     Left = 8
-    Top = 208
+    Top = 224
     Width = 200
     Height = 17
     Caption = 'Highlight Discount offered'
     TabOrder = 4
   end
   object chkbxPrintTemplate: TCheckBox
-    Left = 245
-    Top = 208
+    Left = 285
+    Top = 224
     Width = 281
     Height = 17
     Caption = 'Print/Email Template Conditions Document'
@@ -164,8 +163,8 @@ object frmWTRSQuote: TfrmWTRSQuote
     TabOrder = 11
   end
   object chkbxPrintAvailability: TCheckBox
-    Left = 245
-    Top = 232
+    Left = 285
+    Top = 248
     Width = 281
     Height = 17
     Caption = 'Print/Email Availability Terms Document'
@@ -174,8 +173,8 @@ object frmWTRSQuote: TfrmWTRSQuote
     TabOrder = 12
   end
   object chkbxPrintTerms: TCheckBox
-    Left = 245
-    Top = 256
+    Left = 285
+    Top = 315
     Width = 281
     Height = 17
     Caption = 'Print/Email Terms && Conditions Document'
@@ -184,18 +183,18 @@ object frmWTRSQuote: TfrmWTRSQuote
     TabOrder = 13
   end
   object chkbxShowOffer: TCheckBox
-    Left = 245
-    Top = 160
+    Left = 285
+    Top = 176
     Width = 281
     Height = 17
     Caption = 'Show Offer Image'
     TabOrder = 9
   end
   object rdgrpType: TRadioGroup
-    Left = 328
+    Left = 344
     Top = 8
     Width = 105
-    Height = 65
+    Height = 68
     Caption = 'Type '
     ItemIndex = 0
     Items.Strings = (
@@ -206,7 +205,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxEndUserMarkup: TCheckBox
     Left = 8
-    Top = 256
+    Top = 272
     Width = 225
     Height = 17
     Caption = 'Apply End User Markup/Multiplier'
@@ -214,7 +213,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object chkbxHideAllPrices: TCheckBox
     Left = 8
-    Top = 304
+    Top = 320
     Width = 200
     Height = 17
     Caption = 'Hide ALL prices and totals'
@@ -222,10 +221,10 @@ object frmWTRSQuote: TfrmWTRSQuote
     OnClick = chkbxHideAllPricesClick
   end
   object grpbxPrint: TGroupBox
-    Left = 245
-    Top = 279
-    Width = 237
-    Height = 49
+    Left = 285
+    Top = 295
+    Width = 268
+    Height = 58
     Caption = 'Print  '
     TabOrder = 19
     object Label1: TLabel
@@ -298,8 +297,8 @@ object frmWTRSQuote: TfrmWTRSQuote
       'WHERE Int_Sel.Int_Sel_Code = :Int_Sel_Code'
       'ORDER BY Quote.Customer_Name, Quote.Quote'
       '')
-    Left = 144
-    Top = 10
+    Left = 92
+    Top = 141
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -332,8 +331,8 @@ object frmWTRSQuote: TfrmWTRSQuote
         'e'
       'WHERE Quote = :Quote'
       'ORDER BY Quote, Element_Number')
-    Left = 502
-    Top = 36
+    Left = 86
+    Top = 44
     ParamData = <
       item
         Name = 'Quote'
@@ -368,8 +367,8 @@ object frmWTRSQuote: TfrmWTRSQuote
         '        ON Sales_Lead_Source.Sales_Lead_Source = Quote.Sales_Lea' +
         'd_Source'
       'WHERE Int_Sel.Int_Sel_Code = :Int_Sel')
-    Left = 267
-    Top = 6
+    Left = 230
+    Top = 48
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -405,8 +404,8 @@ object frmWTRSQuote: TfrmWTRSQuote
       '        ON Vat.Vat = Quote.Vat)'
       '        ON Customer.Customer = Quote.Customer'
       'WHERE Int_Sel.Int_Sel_Code = :Int_Sel')
-    Left = 347
-    Top = 6
+    Left = 234
+    Top = 152
     ParamData = <
       item
         Name = 'Int_Sel'

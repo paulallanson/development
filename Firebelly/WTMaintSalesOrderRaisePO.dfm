@@ -20,11 +20,9 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 288
-    ExplicitTop = 8
     object Label3: TLabel
       Left = 13
-      Top = 17
+      Top = 15
       Width = 84
       Height = 17
       Caption = 'Date Required'
@@ -75,8 +73,6 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 299
-    ExplicitWidth = 689
     DesignSize = (
       695
       46)
@@ -113,8 +109,6 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     Width = 695
     Height = 19
     Panels = <>
-    ExplicitTop = 345
-    ExplicitWidth = 689
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -133,7 +127,7 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -162,7 +156,7 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
         Expanded = False
         FieldName = 'Thickness_mm'
         Title.Caption = 'Thickness'
-        Width = 58
+        Width = 85
         Visible = True
       end
       item

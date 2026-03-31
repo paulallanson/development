@@ -7,23 +7,23 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 59
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -31,12 +31,12 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
   object Label4: TLabel
     Left = 8
     Top = 52
-    Width = 51
-    Height = 13
+    Width = 61
+    Height = 17
     Caption = 'Cost Price'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -44,30 +44,30 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
   object Label3: TLabel
     Left = 8
     Top = 84
-    Width = 63
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'Selling Price'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object edtmnyCost: TCREditMoney
-    Left = 88
+    Left = 93
     Top = 48
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = '0.00'
     OnChange = EnableOK
   end
   object edtmnySell: TCREditMoney
-    Left = 88
+    Left = 93
     Top = 80
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = '0.00'
   end
@@ -112,10 +112,10 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     TabOrder = 3
   end
   object edtDescription: TEdit
-    Left = 88
+    Left = 93
     Top = 16
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -124,13 +124,13 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Price_basis')
-    Left = 34
-    Top = 28
+    Left = 331
+    Top = 19
   end
   object dtsPriceBasis: TDataSource
     DataSet = lkpPriceBasis
-    Left = 84
-    Top = 28
+    Left = 313
+    Top = 75
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'

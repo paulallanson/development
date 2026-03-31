@@ -3,27 +3,27 @@ object WTMaintDBAliasFrm: TWTMaintDBAliasFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Database Aliases'
-  ClientHeight = 196
-  ClientWidth = 413
+  ClientHeight = 199
+  ClientWidth = 422
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 117
-    Top = 171
-    Width = 125
-    Height = 13
-    Caption = 'Delete these details ?'
+    Top = 167
+    Width = 128
+    Height = 17
+    Caption = 'Delete these details?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -34,57 +34,57 @@ object WTMaintDBAliasFrm: TWTMaintDBAliasFrm
     Height = 137
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 53
-      Height = 13
+      Top = 19
+      Width = 66
+      Height = 17
       Caption = 'Alias Name'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 46
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Database'
     end
     object Label3: TLabel
       Left = 16
       Top = 92
-      Width = 62
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Server Name'
     end
     object edtAliasName: TEdit
-      Left = 94
+      Left = 110
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'edtAliasName'
       OnChange = CheckOK
     end
     object edtDatabaseName: TEdit
-      Left = 94
+      Left = 110
       Top = 56
       Width = 139
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'edtDatabaseName'
       OnChange = CheckOK
     end
     object edtServerName: TEdit
-      Left = 94
+      Left = 110
       Top = 88
       Width = 139
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
       Text = 'edtServerName'

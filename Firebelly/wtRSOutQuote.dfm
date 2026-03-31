@@ -3,23 +3,23 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Outstanding Quote Report'
-  ClientHeight = 299
-  ClientWidth = 361
+  ClientHeight = 347
+  ClientWidth = 408
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    361
-    299)
-  TextHeight = 13
+    408
+    347)
+  TextHeight = 17
   object pnlExportPrgrss: TPanel
-    Left = 36
-    Top = 95
+    Left = 49
+    Top = 96
     Width = 289
     Height = 61
     ParentBackground = False
@@ -28,8 +28,8 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -43,17 +43,18 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   end
   object btnPrint: TButton
     Left = 8
-    Top = 253
+    Top = 301
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 244
   end
   object Button4: TButton
-    Left = 267
-    Top = 253
+    Left = 302
+    Top = 301
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -65,8 +66,8 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   object rdgrpContacts: TRadioGroup
     Left = 8
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 130
+    Height = 68
     Caption = 'Office Contacts'
     ItemIndex = 0
     Items.Strings = (
@@ -78,9 +79,9 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
-    Top = 72
-    Width = 105
-    Height = 57
+    Top = 82
+    Width = 130
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -92,47 +93,47 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 136
+    Top = 156
     Width = 209
-    Height = 73
+    Height = 103
     Caption = 'Follow Up date selection'
     ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 33
+      Top = 67
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 63
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 30
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -153,8 +154,8 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 63
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -176,24 +177,24 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     end
   end
   object grpbxContacts: TGroupBox
-    Left = 120
-    Top = 8
-    Width = 219
-    Height = 57
+    Left = 144
+    Top = 16
+    Width = 233
+    Height = 62
     ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
-      Left = 8
-      Top = 12
-      Width = 79
-      Height = 13
+      Left = 3
+      Top = 9
+      Width = 88
+      Height = 17
       Caption = 'Office Contacts'
     end
     object cmbContacts: TComboBox
       Left = 8
       Top = 32
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -206,25 +207,25 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 72
-    Width = 219
-    Height = 57
+    Left = 144
+    Top = 89
+    Width = 233
+    Height = 61
     Enabled = False
     ParentBackground = False
     TabOrder = 6
     object Label4: TLabel
       Left = 8
-      Top = 12
-      Width = 49
-      Height = 13
+      Top = 6
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
-      Width = 169
-      Height = 21
+      Width = 186
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -232,8 +233,8 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
       Text = 'All Customers'
     end
     object btnCustomer: TButton
-      Left = 184
-      Top = 24
+      Left = 200
+      Top = 27
       Width = 25
       Height = 25
       Caption = '...'
@@ -249,27 +250,29 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   end
   object btnPreview: TButton
     Left = 96
-    Top = 253
+    Top = 301
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 244
   end
   object btnExcel: TButton
     Left = 184
-    Top = 253
+    Top = 301
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnPrintClick
+    ExplicitTop = 244
   end
   object OleContainer1: TOleContainer
-    Left = 148
-    Top = 67
+    Left = 105
+    Top = 117
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -278,10 +281,10 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    Left = 232
-    Top = 136
-    Width = 105
-    Height = 90
+    Left = 247
+    Top = 156
+    Width = 130
+    Height = 117
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -298,12 +301,12 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
       'select *'
       'from Operator'
       'order by Operator_Name')
-    Left = 184
-    Top = 16
+    Left = 187
+    Top = 70
   end
   object dtsContacts: TDataSource
     DataSet = qryContacts
-    Left = 240
-    Top = 16
+    Left = 257
+    Top = 70
   end
 end

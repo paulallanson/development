@@ -3,42 +3,43 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Contract Detail Report'
-  ClientHeight = 317
-  ClientWidth = 498
+  ClientHeight = 343
+  ClientWidth = 536
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    498
-    317)
-  TextHeight = 13
+    536
+    343)
+  TextHeight = 17
   object lstbxCustomersCode: TListBox
     Left = 96
     Top = 80
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 13
     Visible = False
   end
   object btnPrint: TButton
     Left = 8
-    Top = 280
+    Top = 306
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 280
   end
   object Button4: TButton
-    Left = 416
-    Top = 280
+    Left = 432
+    Top = 306
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -48,10 +49,10 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
-    Left = 8
+    Left = 9
     Top = 80
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -63,47 +64,47 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 200
-    Width = 209
-    Height = 73
+    Top = 198
+    Width = 241
+    Height = 91
     Caption = 'Contract Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Top = 29
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Top = 57
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 25
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 53
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 23
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -125,7 +126,7 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 51
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -148,7 +149,7 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
   end
   object grpbxCustomer: TGroupBox
     Left = 120
-    Top = 80
+    Top = 85
     Width = 249
     Height = 113
     Enabled = False
@@ -156,9 +157,9 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 10
-      Width = 49
-      Height = 13
+      Top = 4
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object btnCustomer: TButton
@@ -181,7 +182,7 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Customers')
       MultiSelect = True
@@ -190,10 +191,10 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 376
+    Left = 375
     Top = 8
-    Width = 113
-    Height = 105
+    Width = 132
+    Height = 121
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -205,8 +206,8 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 376
-    Top = 120
+    Left = 377
+    Top = 143
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -214,27 +215,29 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
   end
   object btnPreview: TButton
     Left = 96
-    Top = 280
+    Top = 306
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 280
   end
   object btnExcel: TButton
     Left = 184
-    Top = 280
+    Top = 306
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 280
   end
   object OleContainer1: TOleContainer
-    Left = 364
-    Top = 147
+    Left = 223
+    Top = 120
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -243,8 +246,8 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 76
-    Top = 111
+    Left = 108
+    Top = 99
     Width = 289
     Height = 61
     ParentBackground = False
@@ -253,8 +256,8 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -270,7 +273,7 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     Left = 8
     Top = 8
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -282,7 +285,7 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
   end
   object grpbxReps: TGroupBox
     Left = 120
-    Top = 8
+    Top = 15
     Width = 249
     Height = 57
     ParentBackground = False
@@ -290,15 +293,15 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 20
-      Height = 13
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object cmbReps: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -316,13 +319,13 @@ object frmWTRSContractDetails: TfrmWTRSContractDetails
       'select *'
       'from Rep'
       'order by Rep_Name')
-    Left = 184
-    Top = 16
+    Left = 318
+    Top = 12
   end
   object dtsReps: TDataSource
     DataSet = qryReps
-    Left = 240
-    Top = 16
+    Left = 364
+    Top = 28
   end
   object pmnCustomers: TPopupMenu
     OnPopup = pmnCustomersPopup

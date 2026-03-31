@@ -3,35 +3,35 @@ object frmWTPOrderSearch: TfrmWTPOrderSearch
   Top = 165
   BorderStyle = bsDialog
   Caption = 'Purchase Order Search'
-  ClientHeight = 312
-  ClientWidth = 315
+  ClientHeight = 323
+  ClientWidth = 359
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    315
-    312)
-  TextHeight = 13
+    359
+    323)
+  TextHeight = 17
   object Label2: TLabel
     Left = 18
     Top = 82
-    Width = 51
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Reference'
   end
   object Label3: TLabel
-    Left = 96
-    Top = 24
-    Width = 123
-    Height = 13
+    Left = 109
+    Top = 16
+    Width = 192
+    Height = 17
     Caption = 'Type search criteria here'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -39,41 +39,41 @@ object frmWTPOrderSearch: TfrmWTPOrderSearch
   object Label4: TLabel
     Left = 18
     Top = 176
-    Width = 32
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label1: TLabel
     Left = 18
     Top = 52
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label5: TLabel
     Left = 18
     Top = 113
-    Width = 74
-    Height = 13
+    Width = 82
+    Height = 17
     Caption = 'Office Contact'
   end
   object Label6: TLabel
     Left = 18
     Top = 144
-    Width = 47
-    Height = 13
+    Width = 54
+    Height = 17
     Caption = 'Operator'
   end
   object edtReference: TEdit
-    Left = 96
+    Left = 109
     Top = 78
     Width = 209
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object btnSearch: TButton
     Left = 16
-    Top = 275
+    Top = 286
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -81,27 +81,29 @@ object frmWTPOrderSearch: TfrmWTPOrderSearch
     Default = True
     TabOrder = 7
     OnClick = btnSearchClick
+    ExplicitTop = 275
   end
   object edtStatus: TEdit
-    Left = 96
+    Left = 109
     Top = 172
     Width = 209
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object ClearButton: TButton
     Left = 226
-    Top = 275
+    Top = 286
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 8
     OnClick = ClearButtonClick
+    ExplicitTop = 275
   end
   object chkbxShowLive: TCheckBox
     Left = 18
-    Top = 221
+    Top = 224
     Width = 153
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -110,7 +112,7 @@ object frmWTPOrderSearch: TfrmWTPOrderSearch
   end
   object chkbxShowInactive: TCheckBox
     Left = 18
-    Top = 245
+    Top = 248
     Width = 215
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -118,24 +120,24 @@ object frmWTPOrderSearch: TfrmWTPOrderSearch
     TabOrder = 6
   end
   object edtDescription: TEdit
-    Left = 96
+    Left = 109
     Top = 48
     Width = 209
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtOfficeContact: TEdit
-    Left = 96
+    Left = 109
     Top = 109
     Width = 209
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtOperatorName: TEdit
-    Left = 96
+    Left = 109
     Top = 140
     Width = 209
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
 end

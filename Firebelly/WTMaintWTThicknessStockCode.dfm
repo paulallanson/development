@@ -6,36 +6,36 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
   ClientHeight = 143
   ClientWidth = 341
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     341
     143)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 36
-    Width = 56
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Stock Code'
   end
   object edtStockCode: TEdit
     Left = 88
     Top = 32
     Width = 225
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 0
     Text = 'EDTSTOCKCODE'
     OnChange = EnableOK
   end
   object btnOK: TBitBtn
-    Left = 108
+    Left = 115
     Top = 102
     Width = 75
     Height = 25
@@ -47,7 +47,6 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    ExplicitTop = 104
   end
   object BitBtn2: TBitBtn
     Left = 196
@@ -60,7 +59,6 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitTop = 104
   end
   object qryAdd: TFDQuery
     ConnectionName = 'WT'
@@ -123,8 +121,8 @@ object frmWTMaintWTThicknessStockCode: TfrmWTMaintWTThicknessStockCode
       'Select Stock_Item'
       'From Stock_Item'
       'Where Stock_Description = :GUID')
-    Left = 160
-    Top = 56
+    Left = 184
+    Top = 22
     ParamData = <
       item
         Name = 'GUID'

@@ -8,28 +8,28 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 24
     Top = 55
-    Width = 50
-    Height = 13
+    Width = 55
+    Height = 17
     Caption = 'Thickness'
   end
   object Label2: TLabel
     Left = 24
     Top = 16
-    Width = 49
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Worktop:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -37,40 +37,40 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
   object Label3: TLabel
     Left = 24
     Top = 120
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Selling Price'
   end
   object Label4: TLabel
     Left = 24
     Top = 88
-    Width = 50
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Cost Price'
   end
   object Label5: TLabel
     Left = 224
     Top = 88
-    Width = 67
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'per sq. metre'
   end
   object Label6: TLabel
     Left = 224
     Top = 120
-    Width = 64
-    Height = 13
+    Width = 75
+    Height = 17
     Caption = 'per sq.metre'
   end
   object lblWorktop: TLabel
     Left = 104
     Top = 16
-    Width = 59
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'lblWorktop'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -79,7 +79,7 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Left = 104
     Top = 47
     Width = 105
-    Height = 21
+    Height = 25
     KeyField = 'Thickness'
     ListField = 'Thickness_mm'
     ListSource = srclkpThickness
@@ -113,7 +113,7 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Left = 104
     Top = 80
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = '0.00'
   end
@@ -121,7 +121,7 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Left = 104
     Top = 112
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = '0.00'
   end
@@ -158,8 +158,8 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
   end
   object srclkpThickness: TDataSource
     DataSet = lkpThickness
-    Left = 312
-    Top = 16
+    Left = 224
+    Top = 24
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'wt'
@@ -167,8 +167,8 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
       'UPDATE Worktop_Thickness'
       'SET inactive = :inactive'
       'WHERE Price_Pointer = :Price_Pointer')
-    Left = 312
-    Top = 72
+    Left = 304
+    Top = 32
     ParamData = <
       item
         Name = 'inactive'
@@ -196,7 +196,7 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
       ')'
       '')
     Left = 232
-    Top = 72
+    Top = 32
     ParamData = <
       item
         Name = 'Worktop'

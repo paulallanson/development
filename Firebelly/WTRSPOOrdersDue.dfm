@@ -3,44 +3,43 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Orders Due for Delivery Report'
-  ClientHeight = 326
-  ClientWidth = 504
+  ClientHeight = 395
+  ClientWidth = 572
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    504
-    326)
-  PixelsPerInch = 96
-  TextHeight = 13
+    572
+    395)
+  TextHeight = 17
   object lstbxSuppliersCode: TListBox
     Left = 96
     Top = 80
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 13
     Visible = False
   end
   object btnPrint: TButton
     Left = 8
-    Top = 289
+    Top = 358
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 289
   end
   object Button4: TButton
-    Left = 416
-    Top = 289
+    Left = 478
+    Top = 358
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -51,9 +50,9 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
   end
   object rdgrpSupplier: TRadioGroup
     Left = 8
-    Top = 80
-    Width = 105
-    Height = 57
+    Top = 90
+    Width = 121
+    Height = 68
     Caption = 'Suppliers'
     ItemIndex = 0
     Items.Strings = (
@@ -64,50 +63,48 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 200
+    Top = 223
     Width = 209
-    Height = 73
+    Height = 106
     Caption = 'Delivery Date'
     TabOrder = 3
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 26
-      Height = 13
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 16
-      Height = 13
+      Top = 67
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 63
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 32
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -122,14 +119,14 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 63
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -144,20 +141,22 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxSupplier: TGroupBox
-    Left = 120
-    Top = 80
-    Width = 249
-    Height = 113
+    Left = 143
+    Top = 97
+    Width = 257
+    Height = 120
     Enabled = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 10
-      Width = 43
-      Height = 13
+      Top = 1
+      Width = 54
+      Height = 17
       Caption = 'Suppliers'
     end
     object btnSupplier: TButton
@@ -180,7 +179,7 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Suppliers')
       MultiSelect = True
@@ -189,10 +188,10 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 376
+    Left = 416
     Top = 8
-    Width = 113
-    Height = 121
+    Width = 137
+    Height = 147
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -204,8 +203,8 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 384
-    Top = 152
+    Left = 424
+    Top = 161
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -213,27 +212,29 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
   end
   object btnPreview: TButton
     Left = 96
-    Top = 289
+    Top = 358
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 289
   end
   object btnExcel: TButton
     Left = 184
-    Top = 289
+    Top = 358
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 289
   end
   object OleContainer1: TOleContainer
-    Left = 316
-    Top = 11
+    Left = 148
+    Top = 74
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -242,8 +243,8 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 76
-    Top = 111
+    Left = 100
+    Top = 137
     Width = 289
     Height = 61
     TabOrder = 10
@@ -251,8 +252,8 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -266,9 +267,9 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
   end
   object rdgrpOperators: TRadioGroup
     Left = 8
-    Top = 8
-    Width = 105
-    Height = 57
+    Top = 6
+    Width = 121
+    Height = 68
     Caption = 'Office Contact'
     ItemIndex = 0
     Items.Strings = (
@@ -278,27 +279,26 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
     OnClick = rdgrpOperatorsClick
   end
   object grpbxOperators: TGroupBox
-    Left = 120
-    Top = 8
-    Width = 249
-    Height = 57
+    Left = 143
+    Top = 13
+    Width = 257
+    Height = 62
     TabOrder = 12
     object Label3: TLabel
-      Left = 8
-      Top = 12
-      Width = 68
-      Height = 13
+      Left = 15
+      Top = 4
+      Width = 82
+      Height = 17
       Caption = 'Office Contact'
     end
     object cmbOperators: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Contacts'
@@ -313,18 +313,18 @@ object frmWTRSPOOrdersDue: TfrmWTRSPOOrdersDue
       'select *'
       'from Operator'
       'order by Operator_Name')
-    Left = 184
-    Top = 16
+    Left = 254
+    Top = 46
   end
   object dtsOperators: TDataSource
     DataSet = qryOperators
-    Left = 240
-    Top = 16
+    Left = 324
+    Top = 46
   end
   object pmnSuppliers: TPopupMenu
     OnPopup = pmnSuppliersPopup
-    Left = 376
-    Top = 136
+    Left = 304
+    Top = 112
     object Delete1: TMenuItem
       Caption = 'Delete'
       OnClick = Delete1Click

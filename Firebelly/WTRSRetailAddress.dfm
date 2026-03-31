@@ -9,12 +9,12 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 474
@@ -39,29 +39,25 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 993
-    ExplicitHeight = 401
     object pnlControls: TPanel
       Left = 0
       Top = 0
       Width = 1022
-      Height = 65
+      Height = 81
       Align = alTop
       ParentBackground = False
       TabOrder = 0
       object Label7: TLabel
         Left = 264
-        Top = 10
-        Width = 73
-        Height = 13
+        Top = 18
+        Width = 84
+        Height = 17
         Caption = 'Ordered Since'
       end
       object chkbxShowOnlyMailing: TCheckBox
         Left = 15
-        Top = 34
-        Width = 137
+        Top = 44
+        Width = 210
         Height = 17
         Caption = 'Show Only Mailing List'
         Checked = True
@@ -71,7 +67,7 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
       end
       object chkbxShowOnlyOrdered: TCheckBox
         Left = 15
-        Top = 8
+        Top = 18
         Width = 226
         Height = 17
         Caption = 'Show Only Ordered Customers'
@@ -81,17 +77,17 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
         OnClick = chkbxShowOnlyOrderedClick
       end
       object edtDateFrom: TEdit
-        Left = 344
-        Top = 8
+        Left = 360
+        Top = 14
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 2
         OnExit = edtDateFromExit
         OnKeyPress = edtDateFromKeyPress
       end
       object btnDatefrom: TBitBtn
-        Left = 456
-        Top = 6
+        Left = 472
+        Top = 14
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -112,8 +108,8 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
         OnClick = btnDatefromClick
       end
       object btnClearDate: TBitBtn
-        Left = 493
-        Top = 6
+        Left = 509
+        Top = 14
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -136,22 +132,22 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     end
     object dbgrdContStatus: TDBGrid
       Left = 0
-      Top = 65
+      Top = 81
       Width = 1022
-      Height = 323
+      Height = 307
       Align = alClient
       DataSource = dtsrcCurrentContStatus
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 1
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -316,8 +312,8 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Exporting...'
       end
       object prgbrExport: TProgressBar
@@ -347,88 +343,86 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
       Align = alBottom
       ParentBackground = False
       TabOrder = 5
-      ExplicitTop = 272
-      ExplicitWidth = 993
       DesignSize = (
         1022
         45)
       object Label1: TLabel
         Left = 16
-        Top = 18
-        Width = 29
-        Height = 13
+        Top = 16
+        Width = 35
+        Height = 17
         Caption = 'Name'
       end
       object Label3: TLabel
         Left = 160
-        Top = 18
-        Width = 30
-        Height = 13
+        Top = 16
+        Width = 34
+        Height = 17
         Caption = 'Street'
       end
       object Label5: TLabel
         Left = 312
-        Top = 18
-        Width = 32
-        Height = 13
+        Top = 16
+        Width = 37
+        Height = 17
         Caption = 'Locale'
       end
       object Label6: TLabel
         Left = 448
-        Top = 18
-        Width = 28
-        Height = 13
+        Top = 16
+        Width = 30
+        Height = 17
         Caption = 'Town'
       end
       object Label2: TLabel
         Left = 592
-        Top = 18
-        Width = 47
-        Height = 13
+        Top = 16
+        Width = 54
+        Height = 17
         Caption = 'Postcode'
       end
       object Label4: TLabel
         Left = 760
-        Top = 18
-        Width = 37
-        Height = 13
+        Top = 16
+        Width = 40
+        Height = 17
         Caption = 'County'
       end
       object edtName: TEdit
         Left = 56
-        Top = 14
+        Top = 12
         Width = 85
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = edtNameChange
       end
       object edtStreet: TEdit
         Left = 200
-        Top = 14
+        Top = 12
         Width = 85
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnChange = edtNameChange
       end
       object edtLocale: TEdit
         Left = 360
-        Top = 14
+        Top = 12
         Width = 73
-        Height = 21
+        Height = 25
         TabOrder = 2
         OnChange = edtNameChange
       end
       object edtTown: TEdit
         Left = 488
-        Top = 14
+        Top = 12
         Width = 85
-        Height = 21
+        Height = 25
         TabOrder = 3
         OnChange = edtNameChange
       end
       object btnClear: TBitBtn
-        Left = 939
-        Top = 12
+        Left = 930
+        Top = 13
         Width = 75
         Height = 25
         Anchors = [akTop, akRight]
@@ -438,17 +432,17 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
       end
       object edtPostcode: TEdit
         Left = 648
-        Top = 14
+        Top = 12
         Width = 85
-        Height = 21
+        Height = 25
         TabOrder = 5
         OnChange = edtNameChange
       end
       object edtCounty: TEdit
         Left = 808
-        Top = 14
+        Top = 12
         Width = 85
-        Height = 21
+        Height = 25
         TabOrder = 6
         OnChange = edtNameChange
       end

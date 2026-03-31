@@ -8,21 +8,21 @@ object frmWTMaintCompanyDocStructure: TfrmWTMaintCompanyDocStructure
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDocuments: TLabel
     Left = 11
     Top = 8
-    Width = 81
-    Height = 13
+    Width = 96
+    Height = 17
     Caption = 'Job Documents'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -51,7 +51,7 @@ object frmWTMaintCompanyDocStructure: TfrmWTMaintCompanyDocStructure
     Top = 32
     Width = 201
     Height = 201
-    ItemHeight = 13
+    ItemHeight = 17
     Items.Strings = (
       'Assets'
       'Data'
@@ -67,7 +67,7 @@ object frmWTMaintCompanyDocStructure: TfrmWTMaintCompanyDocStructure
     Top = 32
     Width = 25
     Height = 201
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 3
     Visible = False
   end

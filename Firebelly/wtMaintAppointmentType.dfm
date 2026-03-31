@@ -8,7 +8,7 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,19 +16,19 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
   DesignSize = (
     436
     145)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 16
     Top = 60
-    Width = 35
-    Height = 13
+    Width = 39
+    Height = 17
     Caption = 'Colour'
   end
   object btnOK: TBitBtn
@@ -44,6 +44,7 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 98
   end
   object BitBtn2: TBitBtn
     Left = 221
@@ -56,12 +57,13 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 98
   end
   object edtColor: TEdit
     Left = 94
     Top = 56
     Width = 131
-    Height = 21
+    Height = 25
     MaxLength = 40
     ReadOnly = True
     TabOrder = 3
@@ -89,7 +91,7 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
     Left = 94
     Top = 20
     Width = 185
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtName'
     OnChange = EnableOK
@@ -106,8 +108,8 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
       '  Name = :Name'
       'WHERE'
       '  ID = :ID')
-    Left = 64
-    Top = 24
+    Left = 312
+    Top = 30
     ParamData = <
       item
         Name = 'Name'

@@ -2,20 +2,20 @@ object frmWTEnvSel: TfrmWTEnvSel
   Left = 139
   Top = 130
   Caption = 'Enviroment Selection'
-  ClientHeight = 125
-  ClientWidth = 223
+  ClientHeight = 145
+  ClientWidth = 243
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  TextHeight = 17
   object DBRadioGroup: TRadioGroup
     Left = 8
     Top = 8
     Width = 81
-    Height = 65
+    Height = 67
     Caption = 'Database'
     Items.Strings = (
       'Live'
@@ -44,7 +44,7 @@ object frmWTEnvSel: TfrmWTEnvSel
     Left = 96
     Top = 8
     Width = 129
-    Height = 65
+    Height = 67
     Caption = 'Fax System'
     Items.Strings = (
       'Server'

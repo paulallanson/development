@@ -4,29 +4,29 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   BorderStyle = bsDialog
   Caption = 'Products'
   ClientHeight = 353
-  ClientWidth = 438
+  ClientWidth = 452
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    438
+    452
     353)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 60
-    Width = 59
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,12 +34,12 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   object Label2: TLabel
     Left = 16
     Top = 28
-    Width = 71
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Product Code'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -47,19 +47,19 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   object Label3: TLabel
     Left = 16
     Top = 92
-    Width = 76
-    Height = 13
+    Width = 86
+    Height = 17
     Caption = 'Product Group'
   end
   object Label6: TLabel
     Left = 16
     Top = 124
-    Width = 58
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'VAT Rate %'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -67,43 +67,43 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   object Label4: TLabel
     Left = 16
     Top = 232
-    Width = 72
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Sales Nominal'
   end
   object Label5: TLabel
     Left = 216
     Top = 232
-    Width = 92
-    Height = 13
+    Width = 105
+    Height = 17
     Caption = 'Purchase Nominal'
   end
   object Label9: TLabel
     Left = 16
     Top = 196
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Selling Price'
   end
   object Label10: TLabel
     Left = 16
     Top = 164
-    Width = 50
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Cost Price'
   end
   object Label8: TLabel
     Left = 248
     Top = 196
-    Width = 55
-    Height = 13
+    Width = 62
+    Height = 17
     Caption = 'Selling Qty'
   end
   object Label7: TLabel
-    Left = 247
+    Left = 248
     Top = 164
-    Width = 55
-    Height = 13
+    Width = 62
+    Height = 17
     Caption = 'Buying Qty'
   end
   object btnOK: TBitBtn
@@ -119,6 +119,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     NumGlyphs = 2
     TabOrder = 12
     OnClick = btnOKClick
+    ExplicitTop = 299
   end
   object BitBtn2: TBitBtn
     Left = 226
@@ -131,12 +132,13 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 13
+    ExplicitTop = 299
   end
   object dblkpProductGroup: TDBLookupComboBox
     Left = 112
     Top = 88
     Width = 193
-    Height = 21
+    Height = 25
     KeyField = 'Product_Group'
     ListField = 'Product_Group_Description'
     ListSource = dtsProductGroup
@@ -146,7 +148,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 112
     Top = 120
     Width = 145
-    Height = 21
+    Height = 25
     KeyField = 'Vat'
     ListField = 'Description'
     ListSource = dtsVAT
@@ -157,7 +159,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 112
     Top = 160
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 5
     Text = '0.00'
   end
@@ -165,23 +167,23 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 112
     Top = 192
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 7
     Text = '0.00'
   end
   object edtPackSize: TCREditInt
-    Left = 317
+    Left = 330
     Top = 192
     Width = 71
-    Height = 21
+    Height = 25
     TabOrder = 8
     Text = '1'
   end
   object edtCostQty: TCREditInt
-    Left = 317
+    Left = 330
     Top = 160
     Width = 71
-    Height = 21
+    Height = 25
     TabOrder = 6
     Text = '1'
   end
@@ -204,7 +206,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   end
   object chkbxInactive: TCheckBox
     Left = 16
-    Top = 264
+    Top = 267
     Width = 97
     Height = 17
     Caption = 'Inactive'
@@ -214,7 +216,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 112
     Top = 24
     Width = 265
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 0
     Text = 'EDTPRODUCTCODE'
@@ -224,7 +226,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 112
     Top = 56
     Width = 265
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtProductDescription'
     OnChange = EnableOK
@@ -233,15 +235,15 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 112
     Top = 228
     Width = 90
-    Height = 21
+    Height = 25
     TabOrder = 9
     Text = 'edtDefaultSalesNominal'
   end
   object edtDefaultPurchaseNominal: TEdit
-    Left = 317
+    Left = 330
     Top = 228
     Width = 90
-    Height = 21
+    Height = 25
     TabOrder = 10
     Text = 'edtDefaultPurchaseNominal'
   end

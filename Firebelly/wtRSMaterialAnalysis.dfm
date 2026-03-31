@@ -3,24 +3,24 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   Top = 91
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Material Analysis'
-  ClientHeight = 417
-  ClientWidth = 631
+  ClientHeight = 453
+  ClientWidth = 692
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    631
-    417)
-  TextHeight = 13
+    692
+    453)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 16
-    Top = 378
+    Top = 414
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -30,8 +30,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ExplicitTop = 369
   end
   object Button4: TButton
-    Left = 534
-    Top = 378
+    Left = 578
+    Top = 414
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -39,13 +39,13 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 369
+    ExplicitTop = 408
   end
   object rdgrpReps: TRadioGroup
     Left = 16
-    Top = 72
-    Width = 105
-    Height = 57
+    Top = 82
+    Width = 116
+    Height = 68
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -57,9 +57,9 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object rdgrpCustomer: TRadioGroup
     Left = 16
-    Top = 136
-    Width = 105
-    Height = 57
+    Top = 156
+    Width = 116
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -73,45 +73,45 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Left = 16
     Top = 272
     Width = 209
-    Height = 73
+    Height = 100
     Caption = 'Invoice Date'
     ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Top = 27
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 14
-      Height = 13
+      Top = 60
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 23
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 56
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 23
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -133,7 +133,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 56
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -155,8 +155,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     end
   end
   object OleContainer1: TOleContainer
-    Left = 148
-    Top = 83
+    Left = 268
+    Top = 128
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -166,7 +166,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object btnExcel: TBitBtn
     Left = 198
-    Top = 378
+    Top = 414
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -220,7 +220,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object btnPreview: TButton
     Left = 104
-    Top = 378
+    Top = 414
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -230,24 +230,24 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ExplicitTop = 369
   end
   object grpbxReps: TGroupBox
-    Left = 128
-    Top = 72
+    Left = 138
+    Top = 88
     Width = 219
-    Height = 57
+    Height = 62
     ParentBackground = False
     TabOrder = 9
     object Label3: TLabel
       Left = 8
-      Top = 12
-      Width = 20
-      Height = 13
+      Top = 5
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object cmbReps: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -262,8 +262,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   object rdgrpSortBy1: TRadioGroup
     Left = 400
     Top = 8
-    Width = 113
-    Height = 105
+    Width = 129
+    Height = 121
     Caption = 'Sort by: '
     ItemIndex = 3
     Items.Strings = (
@@ -275,17 +275,17 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     TabOrder = 10
   end
   object chkbxPageBreak: TCheckBox
-    Left = 408
-    Top = 120
+    Left = 403
+    Top = 145
     Width = 113
     Height = 17
     Caption = 'Page Break'
     TabOrder = 11
   end
   object GroupBox3: TGroupBox
-    Left = 522
-    Top = 280
-    Width = 105
+    Left = 535
+    Top = 308
+    Width = 118
     Height = 65
     Caption = 'Select Top '
     ParentBackground = False
@@ -296,7 +296,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       Left = 25
       Top = 27
       Width = 50
-      Height = 22
+      Height = 27
       MaxValue = 99999
       MinValue = 0
       TabOrder = 0
@@ -306,8 +306,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   object rdgrpContacts: TRadioGroup
     Left = 16
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 116
+    Height = 68
     Caption = 'Office Contact'
     ItemIndex = 0
     Items.Strings = (
@@ -318,24 +318,24 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     OnClick = rdgrpContactsClick
   end
   object grpbxContacts: TGroupBox
-    Left = 128
-    Top = 8
+    Left = 138
+    Top = 14
     Width = 219
-    Height = 57
+    Height = 62
     ParentBackground = False
     TabOrder = 14
     object Label6: TLabel
       Left = 8
-      Top = 12
-      Width = 74
-      Height = 13
+      Top = 5
+      Width = 82
+      Height = 17
       Caption = 'Office Contact'
     end
     object cmbContacts: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -349,9 +349,9 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object rdgrpSortBy2: TRadioGroup
     Left = 400
-    Top = 168
-    Width = 113
-    Height = 81
+    Top = 181
+    Width = 129
+    Height = 93
     Caption = 'Sort by: '
     ItemIndex = 2
     Items.Strings = (
@@ -363,9 +363,9 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object rdgrpDetailed: TRadioGroup
     Left = 400
-    Top = 280
-    Width = 113
-    Height = 65
+    Top = 307
+    Width = 128
+    Height = 68
     Caption = 'Type:'
     ItemIndex = 0
     Items.Strings = (
@@ -375,10 +375,10 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     TabOrder = 16
   end
   object rdgrpCategory: TRadioGroup
-    Left = 522
-    Top = 168
-    Width = 105
-    Height = 90
+    Left = 535
+    Top = 181
+    Width = 118
+    Height = 121
     Caption = 'Category'
     Enabled = False
     ItemIndex = 0
@@ -392,8 +392,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Visible = False
   end
   object grpbxCustomer: TGroupBox
-    Left = 128
-    Top = 136
+    Left = 139
+    Top = 160
     Width = 249
     Height = 113
     Enabled = False
@@ -401,9 +401,9 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     TabOrder = 18
     object Label4: TLabel
       Left = 8
-      Top = 10
-      Width = 49
-      Height = 13
+      Top = 5
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object btnCustomer: TButton
@@ -426,7 +426,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Customers')
       MultiSelect = True
@@ -435,8 +435,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     end
   end
   object pnlExportPrgrss: TPanel
-    Left = 148
-    Top = 135
+    Left = 140
+    Top = 159
     Width = 289
     Height = 61
     ParentBackground = False
@@ -445,8 +445,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -460,18 +460,18 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object lstbxCustomersCode: TListBox
     Left = 96
-    Top = 144
+    Top = 164
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 19
     Visible = False
   end
   object rdgrpValueBy: TRadioGroup
-    Left = 522
+    Left = 535
     Top = 8
-    Width = 105
-    Height = 65
+    Width = 118
+    Height = 68
     Caption = 'Value by '
     ItemIndex = 0
     Items.Strings = (
@@ -486,18 +486,18 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'select *'
       'from Rep'
       'order by Rep_Name')
-    Left = 192
-    Top = 96
+    Left = 232
+    Top = 144
   end
   object dtsReps: TDataSource
     DataSet = qryReps
-    Left = 248
-    Top = 96
+    Left = 302
+    Top = 144
   end
   object qryReport: TFDQuery
     ConnectionName = 'WT'
-    Left = 304
-    Top = 216
+    Left = 372
+    Top = 54
   end
   object qryContacts: TFDQuery
     ConnectionName = 'WT'
@@ -506,13 +506,13 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'from Operator'
       'order by Operator_Name'
       '')
-    Left = 192
-    Top = 24
+    Left = 232
+    Top = 54
   end
   object dtsContacts: TDataSource
     DataSet = qryContacts
-    Left = 248
-    Top = 24
+    Left = 302
+    Top = 54
   end
   object qrySOReport: TFDQuery
     ConnectionName = 'WT'
@@ -557,8 +557,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       '        Worktop.Worktop,'
       '        Sales_Order.Sales_Order,'
       '        Sales_Order.Goods_Value')
-    Left = 368
-    Top = 216
+    Left = 452
+    Top = 54
     ParamData = <
       item
         Name = 'Date_From'
@@ -570,8 +570,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       end>
   end
   object pmnCustomers: TPopupMenu
-    Left = 304
-    Top = 336
+    Left = 252
+    Top = 244
     object Delete1: TMenuItem
       Caption = 'Delete'
       OnClick = Delete1Click
@@ -625,8 +625,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       '        Worktop.Worktop,'
       '        Sales_Invoice.Sales_Invoice,'
       '        Sales_Invoice.Goods_Value')
-    Left = 368
-    Top = 280
+    Left = 452
+    Top = 134
     ParamData = <
       item
         Name = 'Date_From'

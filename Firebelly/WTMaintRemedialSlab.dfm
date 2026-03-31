@@ -3,115 +3,115 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
   Top = 102
   BorderStyle = bsDialog
   Caption = 'Maintain Slab'
-  ClientHeight = 433
-  ClientWidth = 742
+  ClientHeight = 444
+  ClientWidth = 811
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 742
-    Height = 387
+    Width = 811
+    Height = 398
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 736
-    ExplicitHeight = 378
+    ExplicitWidth = 1207
+    ExplicitHeight = 391
     object Label1: TLabel
       Left = 16
       Top = 14
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 76
-      Width = 46
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 106
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Thickness'
     end
     object Label6: TLabel
       Left = 16
       Top = 166
-      Width = 63
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Length (mm)'
     end
     object Label5: TLabel
       Left = 16
       Top = 196
-      Width = 59
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Depth (mm)'
     end
     object Label4: TLabel
-      Left = 208
+      Left = 220
       Top = 224
-      Width = 76
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'Unit Cost/sq m'
     end
     object Label7: TLabel
-      Left = 563
+      Left = 599
       Top = 224
-      Width = 75
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'Total Slab Cost'
     end
     object Label8: TLabel
       Left = 16
       Top = 45
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object Label9: TLabel
       Left = 16
       Top = 136
-      Width = 45
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Slab Size'
     end
     object Label10: TLabel
       Left = 16
       Top = 252
-      Width = 44
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Waste %'
     end
     object Label11: TLabel
-      Left = 208
+      Left = 220
       Top = 252
-      Width = 85
-      Height = 13
+      Width = 94
+      Height = 17
       Caption = 'Waste Multiplier'
     end
     object Label12: TLabel
-      Left = 392
+      Left = 420
       Top = 252
-      Width = 58
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Waste Cost'
     end
     object SpeedButton1: TSpeedButton
-      Left = 290
+      Left = 302
       Top = 11
       Width = 23
       Height = 22
@@ -127,55 +127,55 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
     object Label13: TLabel
       Left = 16
       Top = 224
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label14: TLabel
-      Left = 400
+      Left = 428
       Top = 224
-      Width = 48
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Slab Cost'
     end
     object Label26: TLabel
-      Left = 588
+      Left = 624
       Top = 252
-      Width = 43
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Area m2'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object edtDepth: TCREditInt
-      Left = 96
+      Left = 108
       Top = 192
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtDepthChange
       OnEnter = edtDepthEnter
       OnExit = edtDepthExit
     end
     object edtLength: TCREditInt
-      Left = 96
+      Left = 108
       Top = 162
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 5
       OnChange = edtDepthChange
       OnEnter = edtLengthEnter
       OnExit = edtLengthExit
     end
     object dblkpWTThickness: TDBLookupComboBox
-      Left = 96
+      Left = 108
       Top = 102
       Width = 89
-      Height = 21
+      Height = 25
       KeyField = 'Thickness'
       ListField = 'Thickness_mm'
       ListSource = dtsWTThickness
@@ -183,10 +183,10 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnClick = dblkpWTThicknessClick
     end
     object dblkpWorktop: TDBLookupComboBox
-      Left = 96
+      Left = 108
       Top = 72
       Width = 249
-      Height = 21
+      Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
       ListSource = dtsWorktops
@@ -194,20 +194,20 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnClick = dblkpWorktopClick
     end
     object edtUnitCost: TCREditMoney
-      Left = 288
+      Left = 316
       Top = 220
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 8
       OnChange = edtDepthChange
       OnEnter = edtUnitCostEnter
       OnExit = edtUnitCostExit
     end
     object edtTotalCost: TCREditMoney
-      Left = 640
+      Left = 693
       Top = 220
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -215,10 +215,10 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnChange = edtTotalCostChange
     end
     object dblkpMaterial: TDBLookupComboBox
-      Left = 96
+      Left = 108
       Top = 10
       Width = 177
-      Height = 21
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = dtsMaterial
@@ -226,10 +226,10 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnClick = dblkpMaterialClick
     end
     object dblkpSupplier: TDBLookupComboBox
-      Left = 96
+      Left = 108
       Top = 41
       Width = 249
-      Height = 21
+      Height = 25
       KeyField = 'Supplier'
       ListField = 'Supplier_Name'
       ListSource = dtsSupplier
@@ -237,18 +237,18 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnClick = dblkpSupplierClick
     end
     object edtWastePercentage: TCREditInt
-      Left = 96
+      Left = 108
       Top = 248
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 11
       OnChange = edtWastePercentageChange
     end
     object spnWasteMultiplier: TSpinEdit
-      Left = 288
+      Left = 316
       Top = 248
       Width = 41
-      Height = 22
+      Height = 27
       MaxValue = 10
       MinValue = 0
       TabOrder = 12
@@ -256,20 +256,20 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnChange = edtWastePercentageChange
     end
     object edtTotalWasteCost: TCREditMoney
-      Left = 456
+      Left = 492
       Top = 248
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 13
     end
     object dblkpSlabSize: TDBLookupComboBox
-      Left = 96
+      Left = 108
       Top = 132
       Width = 249
-      Height = 21
+      Height = 25
       KeyField = 'Slab_Size'
       ListField = 'Slab_Description'
       ListSource = dtsSlabSize
@@ -277,10 +277,10 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnClick = dblkpSlabSizeClick
     end
     object edtSlabCost: TCREditMoney
-      Left = 456
+      Left = 492
       Top = 220
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 9
       OnChange = edtSlabCostChange
       OnEnter = edtSlabCostEnter
@@ -288,38 +288,38 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
     end
     object pnlAdhesive: TPanel
       Left = 0
-      Top = 299
-      Width = 742
+      Top = 304
+      Width = 811
       Height = 64
       Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 14
-      ExplicitTop = 290
-      ExplicitWidth = 736
+      ExplicitTop = 299
+      ExplicitWidth = 742
       object Label19: TLabel
         Left = 16
         Top = 13
-        Width = 76
-        Height = 13
+        Width = 87
+        Height = 17
         Caption = 'Adhesive Code'
       end
       object Label20: TLabel
-        Left = 410
+        Left = 435
         Top = 45
-        Width = 44
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Quantity'
       end
       object Label21: TLabel
-        Left = 406
+        Left = 431
         Top = 13
-        Width = 48
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Unit Cost'
       end
       object btnLUProducts: TSpeedButton
-        Left = 317
+        Left = 329
         Top = 8
         Width = 23
         Height = 23
@@ -333,31 +333,31 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         OnClick = btnLUProductsClick
       end
       object Label22: TLabel
-        Left = 539
-        Top = 45
-        Width = 99
-        Height = 13
+        Left = 574
+        Top = 42
+        Width = 114
+        Height = 17
         Caption = 'Total Adhesive Cost'
       end
       object Label24: TLabel
-        Left = 590
+        Left = 597
         Top = 13
-        Width = 48
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Cost Unit'
       end
       object Label25: TLabel
         Left = 16
         Top = 45
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object spnAdhesiveQuantity: TSpinEdit
-        Left = 456
+        Left = 492
         Top = 40
         Width = 50
-        Height = 22
+        Height = 27
         MaxValue = 1000
         MinValue = 0
         TabOrder = 0
@@ -365,15 +365,15 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         OnChange = spnAdhesiveQuantityChange
       end
       object edtAdhesiveCost: TCREditMoney
-        Left = 456
+        Left = 492
         Top = 9
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnChange = spnAdhesiveQuantityChange
       end
       object edtAdhesiveDescription: TMemo
-        Left = 96
+        Left = 108
         Top = 41
         Width = 273
         Height = 21
@@ -385,10 +385,10 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         WordWrap = False
       end
       object edtAdhesiveTotalCost: TCREditMoney
-        Left = 640
-        Top = 41
+        Left = 693
+        Top = 38
         Width = 81
-        Height = 21
+        Height = 25
         TabStop = False
         Color = clBtnFace
         ReadOnly = True
@@ -396,7 +396,7 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         OnChange = edtAdhesiveTotalCostChange
       end
       object edtAdhesiveProduct: TMemo
-        Left = 96
+        Left = 108
         Top = 9
         Width = 217
         Height = 21
@@ -408,7 +408,7 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         WordWrap = False
       end
       object btnClear: TBitBtn
-        Left = 347
+        Left = 359
         Top = 7
         Width = 25
         Height = 25
@@ -430,7 +430,7 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         OnClick = btnClearClick
       end
       object edtAdhesiveCostUnit: TMemo
-        Left = 640
+        Left = 691
         Top = 9
         Width = 80
         Height = 21
@@ -442,78 +442,78 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
     end
     object pnlPrices: TPanel
       Left = 0
-      Top = 275
-      Width = 742
+      Top = 280
+      Width = 811
       Height = 24
       Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 15
-      ExplicitTop = 266
-      ExplicitWidth = 736
+      ExplicitTop = 275
+      ExplicitWidth = 742
       object Label15: TLabel
         Left = 16
         Top = 5
-        Width = 52
-        Height = 13
+        Width = 60
+        Height = 17
         Caption = 'Markup %'
       end
       object Label16: TLabel
-        Left = 208
+        Left = 220
         Top = 5
-        Width = 77
-        Height = 13
+        Width = 89
+        Height = 17
         Caption = 'Unit Price/sq m'
       end
       object Label17: TLabel
-        Left = 400
+        Left = 428
         Top = 5
-        Width = 49
-        Height = 13
+        Width = 57
+        Height = 17
         Caption = 'Slab Price'
       end
       object Label18: TLabel
-        Left = 560
+        Left = 596
         Top = 5
-        Width = 76
-        Height = 13
+        Width = 89
+        Height = 17
         Caption = 'Total Slab Price'
       end
       object edtMarkupPercentage: TCREditInt
-        Left = 96
+        Left = 108
         Top = 1
         Width = 89
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = edtMarkupPercentageChange
         OnEnter = edtMarkupPercentageEnter
         OnExit = edtMarkupPercentageExit
       end
       object edtUnitPrice: TCREditMoney
-        Left = 288
+        Left = 316
         Top = 1
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnChange = edtUnitPriceChange
         OnEnter = edtUnitPriceEnter
         OnExit = edtUnitPriceExit
       end
       object edtSlabPrice: TCREditMoney
-        Left = 456
+        Left = 492
         Top = 1
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 2
         OnChange = edtSlabPriceChange
         OnEnter = edtSlabPriceEnter
         OnExit = edtSlabPriceExit
       end
       object edtTotalPrice: TCREditMoney
-        Left = 640
-        Top = 1
+        Left = 691
+        Top = 2
         Width = 81
-        Height = 21
+        Height = 25
         TabStop = False
         Color = clBtnFace
         ReadOnly = True
@@ -522,33 +522,32 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
     end
     object pnlTotal: TPanel
       Left = 0
-      Top = 363
-      Width = 742
-      Height = 24
+      Top = 368
+      Width = 811
+      Height = 30
       Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 16
-      ExplicitTop = 354
-      ExplicitWidth = 736
+      ExplicitWidth = 1207
       object Label23: TLabel
-        Left = 574
-        Top = 5
-        Width = 51
-        Height = 13
+        Left = 628
+        Top = 7
+        Width = 62
+        Height = 17
         Caption = 'Total Cost'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object edtTotalOverallCost: TCREditMoney
-        Left = 640
+        Left = 696
         Top = 1
         Width = 81
-        Height = 21
+        Height = 25
         TabStop = False
         Color = clBtnFace
         ReadOnly = True
@@ -556,20 +555,20 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       end
     end
     object edtQuantity: TCREditFloat
-      Left = 96
+      Left = 108
       Top = 220
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 7
       OnChange = edtQuantityChange
       OnEnter = edtQuantityEnter
       OnExit = edtQuantityExit
     end
     object edtSlabArea: TCREditMoney
-      Left = 640
+      Left = 693
       Top = 248
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -579,34 +578,34 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 387
-    Width = 742
+    Top = 398
+    Width = 811
     Height = 46
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 378
-    ExplicitWidth = 736
+    ExplicitTop = 387
+    ExplicitWidth = 742
     DesignSize = (
-      742
+      811
       46)
     object lblDelete: TLabel
-      Left = 112
-      Top = 17
-      Width = 133
-      Height = 13
+      Left = 152
+      Top = 15
+      Width = 157
+      Height = 17
       Anchors = [akLeft, akBottom]
-      Caption = 'Delete these slab details ?'
+      Caption = 'Delete these slab details?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object btnOK: TBitBtn
-      Left = 289
+      Left = 324
       Top = 11
       Width = 75
       Height = 25
@@ -620,7 +619,7 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
-      Left = 377
+      Left = 412
       Top = 11
       Width = 75
       Height = 25
@@ -642,8 +641,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 448
-    Top = 96
+    Left = 256
+    Top = 120
     ParamData = <
       item
         Name = 'material_type'
@@ -664,8 +663,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       'where (worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness)'
       'order by thickness_mm')
-    Left = 400
-    Top = 128
+    Left = 196
+    Top = 160
     ParamData = <
       item
         Name = 'worktop'
@@ -673,13 +672,13 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 440
-    Top = 56
+    Left = 246
+    Top = 70
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 520
-    Top = 112
+    Left = 346
+    Top = 140
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -704,8 +703,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       'where supplier = :supplier and'
       '      worktop = :Worktop and'
       '      thickness = :Thickness')
-    Left = 496
-    Top = 56
+    Left = 316
+    Top = 70
     ParamData = <
       item
         Name = 'supplier'
@@ -724,13 +723,13 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       'from Material_Type'
       'where (inactive = '#39'N'#39' or inactive is null) '
       'order by Description')
-    Left = 488
-    Top = 8
+    Left = 306
+    Top = 10
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 440
-    Top = 8
+    Left = 246
+    Top = 10
   end
   object qrySupplier: TFDQuery
     ConnectionName = 'wt'
@@ -741,7 +740,7 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         'where ((inactive = '#39'N'#39') or (inactive is null)) OR ((Supplier = :' +
         'Supplier) OR (:Supplier = 0))'
       'order by Supplier_Name')
-    Left = 344
+    Left = 126
     ParamData = <
       item
         Name = 'Supplier'
@@ -752,8 +751,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
   end
   object dtsSupplier: TDataSource
     DataSet = qrySupplier
-    Left = 368
-    Top = 32
+    Left = 156
+    Top = 40
   end
   object qrySlabSize: TFDQuery
     ConnectionName = 'wt'
@@ -762,13 +761,13 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       'from Slab_Size'
       'where (inactive = '#39'N'#39' or inactive is null) '
       'order by Slab_Size_Description')
-    Left = 360
-    Top = 88
+    Left = 146
+    Top = 110
   end
   object dtsSlabSize: TDataSource
     DataSet = qryMTSlabSize
-    Left = 352
-    Top = 160
+    Left = 136
+    Top = 200
   end
   object qryMTSlabSize: TFDQuery
     ConnectionName = 'wt'
@@ -784,8 +783,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       'FROM Material_Type_Slab_Size'
       'WHERE Material_Type = :Material_Type'
       'ORDER BY Length')
-    Left = 488
-    Top = 248
+    Left = 306
+    Top = 310
     ParamData = <
       item
         Name = 'Material_Type'
@@ -818,8 +817,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
         '      (worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR Wo' +
         'rktop.worktop = :worktop'
       'ORDER BY Worktop.Description')
-    Left = 520
-    Top = 176
+    Left = 346
+    Top = 220
     ParamData = <
       item
         Name = 'Customer'
@@ -870,8 +869,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 664
-    Top = 184
+    Left = 526
+    Top = 230
     ParamData = <
       item
         Name = 'Customer'
@@ -890,8 +889,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       'FROM  Customer_Worktop_Group'
       'WHERE Customer_Worktop_Group.Customer = :Customer AND'
       '      Customer_Worktop_Group.Group_Number = :Group_Number')
-    Left = 664
-    Top = 128
+    Left = 526
+    Top = 160
     ParamData = <
       item
         Name = 'Customer'
@@ -948,8 +947,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       
         'WHERE Supplier_Worktop.Supplier = :Supplier AND Supplier_Worktop' +
         '.Worktop = :Worktop')
-    Left = 600
-    Top = 8
+    Left = 446
+    Top = 10
     ParamData = <
       item
         Name = 'Supplier'
@@ -965,8 +964,8 @@ object frmWTMaintRemedialSlab: TfrmWTMaintRemedialSlab
       '        Allow_Bespoke_Slab_Sizes'
       'FROM Material_Type'
       'WHERE Material_Type = :Material_Type')
-    Left = 512
-    Top = 347
+    Left = 288
+    Top = 259
     ParamData = <
       item
         Name = 'MATERIAL_TYPE'

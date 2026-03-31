@@ -3,19 +3,19 @@ object frmWTUtilities: TfrmWTUtilities
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Database Utilities'
-  ClientHeight = 159
-  ClientWidth = 266
+  ClientHeight = 198
+  ClientWidth = 278
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object btnOK: TBitBtn
-    Left = 40
-    Top = 115
+    Left = 56
+    Top = 155
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -25,8 +25,8 @@ object frmWTUtilities: TfrmWTUtilities
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 128
-    Top = 115
+    Left = 144
+    Top = 155
     Width = 75
     Height = 25
     Cancel = True
@@ -38,8 +38,8 @@ object frmWTUtilities: TfrmWTUtilities
   object rdgUtilities: TRadioGroup
     Left = 8
     Top = 8
-    Width = 233
-    Height = 97
+    Width = 249
+    Height = 113
     Caption = 'Action'
     ItemIndex = 0
     Items.Strings = (
@@ -57,8 +57,8 @@ object frmWTUtilities: TfrmWTUtilities
       
         'where price_pointer not in (select distinct price_pointer from p' +
         'rices)')
-    Left = 200
-    Top = 16
+    Left = 194
+    Top = 28
   end
   object qryCheckOrder: TFDQuery
     ConnectionName = 'Wt'
@@ -78,8 +78,8 @@ object frmWTUtilities: TfrmWTUtilities
         '(sales_order_line.sales_order_line_no = sales_invoice_line.sales' +
         '_order_line_no)'
       ')) > 0')
-    Left = 160
-    Top = 16
+    Left = 120
+    Top = 36
   end
   object qryCheckOrders: TFDQuery
     ConnectionName = 'wt'
@@ -92,7 +92,7 @@ object frmWTUtilities: TfrmWTUtilities
         'here Sales_invoice_Line.sales_order = Sales_Order.Sales_order)) ' +
         'and'
       'Sales_Order_Status <= 90')
-    Left = 160
-    Top = 64
+    Left = 152
+    Top = 88
   end
 end

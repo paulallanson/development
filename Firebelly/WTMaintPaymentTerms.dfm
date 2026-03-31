@@ -8,7 +8,7 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,16 +16,16 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
   DesignSize = (
     451
     152)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 79
-    Height = 13
+    Width = 95
+    Height = 17
     Caption = 'Payment Terms'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -33,12 +33,12 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
   object Label2: TLabel
     Left = 8
     Top = 56
-    Width = 85
-    Height = 13
+    Width = 101
+    Height = 17
     Caption = 'Number of Days'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -51,6 +51,7 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 2
+    ExplicitTop = 85
   end
   object btnOK: TBitBtn
     Left = 272
@@ -65,6 +66,7 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
+    ExplicitTop = 101
   end
   object BitBtn2: TBitBtn
     Left = 360
@@ -77,20 +79,21 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 4
+    ExplicitTop = 101
   end
   object edtNumberofDays: TCREditInt
-    Left = 112
+    Left = 119
     Top = 52
     Width = 65
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtNumberofDays'
   end
   object edtPaymentTermsDescription: TEdit
-    Left = 112
+    Left = 119
     Top = 16
     Width = 321
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtPaymentTermsDescription'
     OnChange = EnableOK
@@ -104,8 +107,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
       '      Number_of_Days = :Number_of_Days'
       'WHERE'
       '  Payment_Terms = :Payment_Terms')
-    Left = 80
-    Top = 40
+    Left = 228
+    Top = 58
     ParamData = <
       item
         Name = 'Payment_Terms_Description'

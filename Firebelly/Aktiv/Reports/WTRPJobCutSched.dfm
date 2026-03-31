@@ -10,13 +10,13 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpCutSchedule: TQuickRep
     Left = 40
     Top = -24
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = qrpCutScheduleBeforePrint
     DataSet = qryReport
@@ -71,14 +71,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0
     object qrgJob: TQRGroup
-      Left = 30
-      Top = 345
-      Width = 741
+      Left = 38
+      Top = 431
+      Width = 926
       Height = 0
       Frame.DrawBottom = True
       AfterPrint = qrgJobAfterPrint
@@ -89,7 +89,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       ForceNewPage = False
       Size.Values = (
         0.000000000000000000
-        1960.562500000000000000)
+        1960.033333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'Job'
@@ -97,10 +97,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       ReprintOnNewPage = False
     end
     object qrsdElement: TQRSubDetail
-      Left = 30
-      Top = 345
-      Width = 741
-      Height = 21
+      Left = 38
+      Top = 431
+      Width = 926
+      Height = 26
       Frame.DrawBottom = True
       Frame.DrawLeft = True
       Frame.DrawRight = True
@@ -110,8 +110,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        55.562500000000000000
-        1960.562500000000000000)
+        55.033333333333330000
+        1960.033333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpCutSchedule
@@ -119,15 +119,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBText6: TQRDBText
-        Left = 416
+        Left = 520
         Top = 0
-        Width = 313
-        Height = 19
+        Width = 391
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           1100.666666666667000000
           0.000000000000000000
-          828.145833333333200000)
+          827.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -139,7 +139,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -152,15 +152,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText5: TQRDBText
-        Left = 325
+        Left = 402
         Top = 0
-        Width = 81
-        Height = 19
+        Width = 105
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          859.895833333333300000
+          55.033333333333330000
+          850.900000000000000000
           0.000000000000000000
-          214.312500000000000000)
+          222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -171,7 +171,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Thickness_mm'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -184,15 +184,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText4: TQRDBText
-        Left = 315
+        Left = 392
         Top = 0
-        Width = 35
-        Height = 19
+        Width = 46
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          833.437500000000000000
+          55.033333333333330000
+          829.733333333333300000
           0.000000000000000000
-          92.604166666666670000)
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -203,7 +203,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Depth'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -216,15 +216,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText3: TQRDBText
-        Left = 256
+        Left = 317
         Top = 0
-        Width = 37
-        Height = 19
+        Width = 49
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          677.333333333333300000
+          55.033333333333330000
+          670.983333333333300000
           0.000000000000000000
-          97.895833333333330000)
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -235,7 +235,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Length'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -248,15 +248,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 187
+        Left = 232
         Top = 0
-        Width = 49
-        Height = 19
+        Width = 63
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          494.770833333333300000
+          55.033333333333330000
+          491.066666666666700000
           0.000000000000000000
-          129.645833333333300000)
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -267,7 +267,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -280,10 +280,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRShape1: TQRShape
-        Left = 38
+        Left = 48
         Top = 0
-        Width = 2
-        Height = 19
+        Width = 3
+        Height = 24
         Size.Values = (
           50.270833333333330000
           100.541666666666700000
@@ -297,10 +297,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         VertAdjust = 0
       end
       object QRShape2: TQRShape
-        Left = 242
+        Left = 303
         Top = 0
-        Width = 6
-        Height = 19
+        Width = 8
+        Height = 24
         Size.Values = (
           50.270833333333330000
           640.291666666666800000
@@ -314,10 +314,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         VertAdjust = 0
       end
       object QRShape3: TQRShape
-        Left = 204
+        Left = 255
         Top = 0
-        Width = 6
-        Height = 19
+        Width = 8
+        Height = 24
         Size.Values = (
           50.270833333333330000
           539.750000000000000000
@@ -331,10 +331,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         VertAdjust = 0
       end
       object QRShape4: TQRShape
-        Left = 299
+        Left = 374
         Top = 0
-        Width = 6
-        Height = 19
+        Width = 8
+        Height = 24
         Size.Values = (
           50.270833333333330000
           791.104166666666800000
@@ -348,10 +348,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         VertAdjust = 0
       end
       object QRShape6: TQRShape
-        Left = 356
+        Left = 445
         Top = 0
-        Width = 6
-        Height = 19
+        Width = 8
+        Height = 24
         Size.Values = (
           50.270833333333330000
           941.916666666666800000
@@ -365,10 +365,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         VertAdjust = 0
       end
       object QRShape8: TQRShape
-        Left = 408
+        Left = 510
         Top = 0
-        Width = 6
-        Height = 19
+        Width = 8
+        Height = 24
         Size.Values = (
           50.270833333333330000
           1079.500000000000000000
@@ -382,15 +382,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         VertAdjust = 0
       end
       object qrlblCount: TQRLabel
-        Left = -27
+        Left = -38
         Top = 0
-        Width = 60
-        Height = 19
+        Width = 79
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          -71.437500000000000000
+          55.033333333333330000
+          -80.433333333333330000
           0.000000000000000000
-          158.750000000000000000)
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -400,7 +400,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -411,15 +411,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object qrlblDescription: TQRLabel
-        Left = 48
+        Left = 60
         Top = 0
-        Width = 145
-        Height = 19
+        Width = 181
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           127.000000000000000000
           0.000000000000000000
-          383.645833333333400000)
+          383.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -430,7 +430,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -442,31 +442,31 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       end
     end
     object QRBand1: TQRBand
-      Left = 30
-      Top = 38
-      Width = 741
-      Height = 307
+      Left = 38
+      Top = 47
+      Width = 926
+      Height = 384
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        812.270833333333300000
-        1960.562500000000000000)
+        812.800000000000000000
+        1960.033333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRLabel1: TQRLabel
-        Left = 215
+        Left = 270
         Top = 0
-        Width = 284
-        Height = 35
+        Width = 352
+        Height = 44
         Size.Values = (
-          92.604166666666670000
-          568.854166666666700000
+          93.133333333333330000
+          571.500000000000000000
           0.000000000000000000
-          751.416666666666700000)
+          745.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -476,7 +476,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -30
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -488,14 +488,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       end
       object QRLabel2: TQRLabel
         Left = 0
-        Top = 44
-        Width = 83
-        Height = 19
+        Top = 55
+        Width = 108
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           0.000000000000000000
           116.416666666666700000
-          219.604166666666700000)
+          228.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -505,7 +505,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -516,15 +516,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText1: TQRDBText
-        Left = 92
-        Top = 44
-        Width = 107
-        Height = 19
+        Left = 115
+        Top = 55
+        Width = 138
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           243.416666666666700000
           116.416666666666700000
-          283.104166666666700000)
+          292.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -535,7 +535,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Customer_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -548,15 +548,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 4
-        Top = 285
-        Width = 30
-        Height = 19
+        Left = 5
+        Top = 356
+        Width = 38
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           10.583333333333330000
-          754.062500000000000000
-          79.375000000000000000)
+          753.533333333333300000
+          80.433333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -566,7 +566,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -577,15 +577,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel4: TQRLabel
-        Left = 48
-        Top = 285
-        Width = 64
-        Height = 19
+        Left = 60
+        Top = 356
+        Width = 84
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           127.000000000000000000
-          754.062500000000000000
-          169.333333333333300000)
+          753.533333333333300000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -595,7 +595,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -606,15 +606,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 214
-        Top = 285
-        Width = 22
-        Height = 19
+        Left = 267
+        Top = 356
+        Width = 28
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          566.208333333333300000
-          754.062500000000000000
-          58.208333333333330000)
+          55.033333333333330000
+          565.150000000000000000
+          753.533333333333300000
+          59.266666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -624,7 +624,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -635,15 +635,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 256
-        Top = 285
-        Width = 37
-        Height = 19
+        Left = 320
+        Top = 356
+        Width = 49
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           677.333333333333300000
-          754.062500000000000000
-          97.895833333333330000)
+          753.533333333333300000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -653,7 +653,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -664,15 +664,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel8: TQRLabel
-        Left = 315
-        Top = 285
-        Width = 35
-        Height = 19
+        Left = 394
+        Top = 356
+        Width = 46
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          833.437500000000000000
-          754.062500000000000000
-          92.604166666666670000)
+          55.033333333333330000
+          833.966666666666700000
+          753.533333333333300000
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -682,7 +682,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -693,15 +693,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel10: TQRLabel
-        Left = 368
-        Top = 285
-        Width = 31
-        Height = 19
+        Left = 460
+        Top = 356
+        Width = 39
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           973.666666666666700000
-          754.062500000000000000
-          82.020833333333330000)
+          753.533333333333300000
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -711,7 +711,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -722,15 +722,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel11: TQRLabel
-        Left = 416
-        Top = 285
-        Width = 44
-        Height = 19
+        Left = 520
+        Top = 356
+        Width = 57
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           1100.666666666667000000
-          754.062500000000000000
-          116.416666666666700000)
+          753.533333333333300000
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -740,7 +740,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -751,15 +751,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRSysData1: TQRSysData
-        Left = 643
-        Top = 8
-        Width = 95
-        Height = 19
+        Left = 798
+        Top = 10
+        Width = 125
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1701.270833333333000000
+          55.033333333333330000
+          1689.100000000000000000
           21.166666666666670000
-          251.354166666666700000)
+          264.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -769,7 +769,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -780,15 +780,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object qrlblDateRequired: TQRLabel
-        Left = 637
-        Top = 76
-        Width = 101
-        Height = 19
+        Left = 790
+        Top = 95
+        Width = 132
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1685.395833333333000000
+          55.033333333333330000
+          1672.166666666667000000
           201.083333333333300000
-          267.229166666666700000)
+          279.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -798,7 +798,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -809,15 +809,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object qrlblJobNumber: TQRLabel
-        Left = 635
-        Top = 51
-        Width = 103
-        Height = 19
+        Left = 791
+        Top = 64
+        Width = 132
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1680.104166666667000000
-          134.937500000000000000
-          272.520833333333300000)
+          55.033333333333330000
+          1674.283333333333000000
+          135.466666666666700000
+          279.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -827,7 +827,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False
@@ -838,15 +838,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object qrlblSalesOrder: TQRLabel
-        Left = 652
-        Top = 104
-        Width = 86
-        Height = 19
+        Left = 810
+        Top = 130
+        Width = 113
+        Height = 26
         Size.Values = (
-          50.270833333333330000
-          1725.083333333333000000
+          55.033333333333330000
+          1714.500000000000000000
           275.166666666666700000
-          227.541666666666700000)
+          239.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -856,7 +856,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -868,14 +868,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       end
       object QRLabel22: TQRLabel
         Left = 0
-        Top = 66
-        Width = 86
-        Height = 19
+        Top = 83
+        Width = 111
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           0.000000000000000000
-          174.625000000000000000
-          227.541666666666700000)
+          175.683333333333300000
+          234.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -885,7 +885,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -896,10 +896,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText7: TQRDBText
-        Left = 92
-        Top = 66
-        Width = 510
-        Height = 37
+        Left = 115
+        Top = 83
+        Width = 638
+        Height = 46
         Size.Values = (
           97.895833333333340000
           243.416666666666700000
@@ -916,7 +916,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -930,14 +930,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       end
       object QRLabel7: TQRLabel
         Left = 0
-        Top = 106
-        Width = 73
-        Height = 19
+        Top = 132
+        Width = 94
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           0.000000000000000000
-          280.458333333333300000
-          193.145833333333300000)
+          279.400000000000000000
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -947,7 +947,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -958,15 +958,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText8: TQRDBText
-        Left = 92
-        Top = 106
-        Width = 54
-        Height = 22
+        Left = 115
+        Top = 132
+        Width = 70
+        Height = 27
         Size.Values = (
-          58.208333333333330000
+          57.150000000000000000
           243.416666666666700000
-          280.458333333333300000
-          142.875000000000000000)
+          279.400000000000000000
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -977,7 +977,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Reference'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -991,14 +991,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       end
       object QRLabel9: TQRLabel
         Left = 0
-        Top = 133
-        Width = 88
-        Height = 19
+        Top = 166
+        Width = 113
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           0.000000000000000000
-          351.895833333333300000
-          232.833333333333300000)
+          351.366666666666700000
+          239.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1008,7 +1008,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1020,9 +1020,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       end
       object QRShape35: TQRShape
         Left = 0
-        Top = 252
-        Width = 740
-        Height = 8
+        Top = 315
+        Width = 925
+        Height = 10
         Size.Values = (
           21.166666666666670000
           0.000000000000000000
@@ -1036,10 +1036,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         VertAdjust = 0
       end
       object qrrchTextInstallAddress: TQRRichText
-        Left = 92
-        Top = 133
-        Width = 193
-        Height = 119
+        Left = 115
+        Top = 166
+        Width = 241
+        Height = 149
         Size.Values = (
           314.854166666666700000
           243.416666666666700000
@@ -1061,15 +1061,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         YIncrement = 50
       end
       object QRLabel75: TQRLabel
-        Left = 376
-        Top = 133
-        Width = 108
-        Height = 19
+        Left = 470
+        Top = 166
+        Width = 138
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           994.833333333333300000
-          351.895833333333300000
-          285.750000000000000000)
+          351.366666666666700000
+          292.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1079,7 +1079,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1090,15 +1090,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText9: TQRDBText
-        Left = 488
-        Top = 133
-        Width = 185
-        Height = 19
+        Left = 610
+        Top = 166
+        Width = 231
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           1291.166666666667000000
-          351.895833333333400000
-          489.479166666666700000)
+          351.366666666666700000
+          488.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1110,7 +1110,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Install_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1123,15 +1123,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel76: TQRLabel
-        Left = 376
-        Top = 164
-        Width = 103
-        Height = 19
+        Left = 470
+        Top = 205
+        Width = 134
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           994.833333333333300000
           433.916666666666700000
-          272.520833333333300000)
+          283.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1141,7 +1141,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1152,15 +1152,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRDBText10: TQRDBText
-        Left = 488
-        Top = 164
-        Width = 185
-        Height = 19
+        Left = 610
+        Top = 205
+        Width = 231
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           1291.166666666667000000
-          433.916666666666800000
-          489.479166666666700000)
+          433.916666666666700000
+          488.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1172,7 +1172,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         DataField = 'Install_Phone'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -1185,15 +1185,15 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         FontSize = 10
       end
       object QRLabel13: TQRLabel
-        Left = 4
-        Top = 263
-        Width = 70
-        Height = 19
+        Left = 5
+        Top = 329
+        Width = 91
+        Height = 26
         Size.Values = (
-          50.270833333333330000
+          55.033333333333330000
           10.583333333333330000
-          695.854166666666700000
-          185.208333333333300000)
+          696.383333333333300000
+          192.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1203,7 +1203,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Gill Sans MT'
         Font.Style = [fsBold]
         ParentFont = False

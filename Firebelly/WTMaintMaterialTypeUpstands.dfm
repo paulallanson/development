@@ -8,46 +8,46 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label4: TLabel
     Left = 8
     Top = 52
-    Width = 50
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Cost Price'
   end
   object Label3: TLabel
     Left = 8
     Top = 84
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Selling Price'
   end
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object edtmnyCost: TCREditMoney
-    Left = 80
+    Left = 86
     Top = 48
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = '0.00'
   end
   object edtmnySell: TCREditMoney
-    Left = 80
+    Left = 86
     Top = 80
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = '0.00'
   end
@@ -76,10 +76,10 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
     TabOrder = 3
   end
   object edtDescription: TEdit
-    Left = 80
-    Top = 12
+    Left = 86
+    Top = 13
     Width = 313
-    Height = 21
+    Height = 25
     TabOrder = 4
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -90,8 +90,8 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
       'Update Worktop_Type_Upstand'
       'Set Description = :Description'
       'Where Price_Pointer = :Price_Pointer')
-    Left = 224
-    Top = 48
+    Left = 296
+    Top = 28
     ParamData = <
       item
         Name = 'Description'

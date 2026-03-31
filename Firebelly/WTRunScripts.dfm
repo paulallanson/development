@@ -8,14 +8,14 @@ object frmWTRunScripts: TfrmWTRunScripts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   DesignSize = (
     483
     273)
-  TextHeight = 13
+  TextHeight = 17
   object memQuery: TMemo
     Left = 24
     Top = 8

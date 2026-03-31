@@ -3,28 +3,29 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
   Top = 97
   Caption = 'Purchase Order Receipt'
   ClientHeight = 449
-  ClientWidth = 882
+  ClientWidth = 904
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 408
-    Width = 882
+    Width = 904
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 882
     DesignSize = (
-      882
+      904
       41)
     object btnOK: TBitBtn
-      Left = 714
+      Left = 730
       Top = 8
       Width = 75
       Height = 25
@@ -51,9 +52,10 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
         0000}
       NumGlyphs = 2
       TabOrder = 0
+      ExplicitLeft = 708
     end
     object BitBtn2: TBitBtn
-      Left = 802
+      Left = 818
       Top = 8
       Width = 75
       Height = 25
@@ -61,59 +63,61 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 796
     end
   end
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 882
+    Width = 904
     Height = 81
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 882
     DesignSize = (
-      882
+      904
       81)
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 79
-      Height = 13
+      Width = 91
+      Height = 17
       Caption = 'Purchase Order'
     end
     object Label2: TLabel
       Left = 264
       Top = 16
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object Label3: TLabel
       Left = 664
       Top = 16
-      Width = 72
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Date Received'
     end
     object Label4: TLabel
       Left = 8
       Top = 48
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'GRN Number'
     end
     object Label5: TLabel
       Left = 664
       Top = 48
-      Width = 62
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Reecived By:'
     end
     object Edit1: TEdit
-      Left = 96
+      Left = 102
       Top = 12
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'Edit1'
     end
@@ -121,20 +125,21 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
       Left = 320
       Top = 12
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'Edit1'
     end
     object edtDateRequired: TEdit
-      Left = 756
+      Left = 772
       Top = 12
       Width = 89
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       TabOrder = 2
+      ExplicitLeft = 750
     end
     object btnDateRequired: TBitBtn
-      Left = 852
+      Left = 868
       Top = 10
       Width = 25
       Height = 25
@@ -154,35 +159,38 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
       TabOrder = 3
+      ExplicitLeft = 846
     end
     object Edit3: TEdit
-      Left = 96
+      Left = 102
       Top = 44
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 4
       Text = 'Edit1'
     end
     object dblkpOperator: TDBLookupComboBox
-      Left = 732
+      Left = 748
       Top = 44
       Width = 145
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       KeyField = 'Operator'
       ListField = 'Operator_Name'
       ListSource = dtmdlPurchaseOrder.dtsOperator
       TabOrder = 5
+      ExplicitLeft = 726
     end
   end
   object pnlFunctions: TPanel
-    Left = 784
+    Left = 806
     Top = 81
     Width = 98
     Height = 327
     Align = alRight
     ParentBackground = False
     TabOrder = 2
+    ExplicitLeft = 784
     object btnAdd: TBitBtn
       Left = 14
       Top = 8
@@ -204,13 +212,13 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
   object DBGrid1: TDBGrid
     Left = 0
     Top = 81
-    Width = 784
+    Width = 806
     Height = 327
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False

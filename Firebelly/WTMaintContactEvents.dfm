@@ -4,12 +4,12 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Maintain Customer Contact Events'
-  ClientHeight = 418
-  ClientWidth = 336
+  ClientHeight = 439
+  ClientWidth = 352
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,23 +17,23 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 16
-    Top = 387
-    Width = 133
-    Height = 13
+    Left = 8
+    Top = 393
+    Width = 160
+    Height = 17
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
-    Left = 168
-    Top = 382
+    Left = 183
+    Top = 390
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -107,8 +107,8 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 248
-    Top = 382
+    Left = 263
+    Top = 390
     Width = 75
     Height = 25
     Cancel = True
@@ -185,55 +185,55 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
   object DetsGrpBox: TGroupBox
     Left = 9
     Top = 8
-    Width = 312
+    Width = 328
     Height = 369
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
-      Left = 8
+      Left = 15
       Top = 44
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
     end
     object Label2: TLabel
-      Left = 8
+      Left = 15
       Top = 76
-      Width = 24
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Date'
     end
     object Label3: TLabel
-      Left = 192
+      Left = 196
       Top = 76
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Time'
       Visible = False
     end
     object Label5: TLabel
-      Left = 8
+      Left = 15
       Top = 16
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label4: TLabel
-      Left = 8
+      Left = 15
       Top = 104
-      Width = 33
-      Height = 13
+      Width = 36
+      Height = 17
       Caption = 'Action'
     end
     object SpeedButton4: TSpeedButton
-      Left = 272
-      Top = 99
+      Left = 288
+      Top = 101
       Width = 23
       Height = 22
       Caption = '...'
@@ -246,7 +246,7 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
       OnClick = SpeedButton4Click
     end
     object DispMemo: TMemo
-      Left = 8
+      Left = 15
       Top = 136
       Width = 297
       Height = 225
@@ -256,10 +256,10 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
       OnClick = CheckOK
     end
     object dblkpContact: TDBLookupComboBox
-      Left = 64
+      Left = 80
       Top = 40
       Width = 200
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Contact_Name'
       ListSource = dtsContacts
@@ -267,10 +267,10 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
       OnClick = dblkpContactClick
     end
     object TimeDateTimePicker: TDateTimePicker
-      Left = 224
+      Left = 228
       Top = 72
       Width = 81
-      Height = 21
+      Height = 25
       Date = 45147.000000000000000000
       Time = 0.434360891202231900
       ShowCheckbox = True
@@ -280,17 +280,17 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
       Visible = False
     end
     object DateDateTimePicker: TDateTimePicker
-      Left = 64
+      Left = 80
       Top = 72
       Width = 97
-      Height = 21
+      Height = 25
       Date = 37453.000000000000000000
       Time = 37453.000000000000000000
       TabOrder = 3
     end
     object Button1: TButton
-      Left = 272
-      Top = 39
+      Left = 288
+      Top = 43
       Width = 22
       Height = 22
       Caption = '...'
@@ -304,20 +304,20 @@ object frmWTMaintContactEvents: TfrmWTMaintContactEvents
       OnClick = Button1Click
     end
     object edtCustomer: TEdit
-      Left = 64
+      Left = 80
       Top = 12
       Width = 229
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
       Text = 'edtCustomer'
     end
     object dblkpProspectAction: TDBLookupComboBox
-      Left = 64
+      Left = 80
       Top = 100
       Width = 200
-      Height = 21
+      Height = 25
       KeyField = 'Prospect_Action'
       ListField = 'Prospect_Action_Description'
       ListSource = dtsAction

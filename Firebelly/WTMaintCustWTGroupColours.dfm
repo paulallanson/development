@@ -7,12 +7,12 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -20,19 +20,18 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 579
     DesignSize = (
       681
       41)
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 36
-      Height = 13
+      Width = 42
+      Height = 17
       Caption = 'Group:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -40,45 +39,43 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
     object lblGroupName: TLabel
       Left = 60
       Top = 16
-      Width = 77
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'lblGroupName'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 446
+      Left = 440
       Top = 16
-      Width = 74
-      Height = 13
+      Width = 88
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Material Type:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 344
     end
     object lblMaterialType: TLabel
-      Left = 530
+      Left = 524
       Top = 16
-      Width = 81
-      Height = 13
+      Width = 96
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'lblMaterialType'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 428
     end
   end
   object Panel3: TPanel
@@ -88,8 +85,6 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
     Height = 296
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 579
-    ExplicitHeight = 234
   end
   object Panel2: TPanel
     Left = 0
@@ -98,8 +93,6 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 275
-    ExplicitWidth = 579
     object btnOK: TBitBtn
       Left = 14
       Top = 8
@@ -158,8 +151,6 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
         Value = 100.000000000000000000
       end>
     TabOrder = 3
-    ExplicitWidth = 513
-    ExplicitHeight = 234
     object Panel4: TPanel
       Left = 1
       Top = 1
@@ -167,37 +158,35 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
       Height = 294
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 264
       object Label1: TLabel
         Left = 1
         Top = 1
         Width = 268
-        Height = 13
+        Height = 21
         Align = alTop
         Alignment = taCenter
         Caption = 'Currently Selected Colours'
-        ExplicitWidth = 230
       end
       object lstbxMembers: TListBox
         Left = 1
-        Top = 14
+        Top = 22
         Width = 268
-        Height = 279
+        Height = 271
         Align = alClient
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnClick = lstbxMembersClick
         OnDblClick = lstbxMembersDblClick
-        ExplicitTop = 18
-        ExplicitWidth = 186
+        ExplicitTop = 40
+        ExplicitHeight = 253
       end
       object lstbxMembersCodes: TListBox
         Left = 128
         Top = 28
         Width = 41
         Height = 140
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 1
         Visible = False
       end
@@ -209,8 +198,6 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
       Height = 294
       Align = alClient
       TabOrder = 1
-      ExplicitLeft = 79
-      ExplicitTop = 18
       DesignSize = (
         139
         294)
@@ -272,43 +259,35 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
       Height = 294
       Align = alClient
       TabOrder = 2
-      ExplicitLeft = 366
-      ExplicitWidth = 250
-      ExplicitHeight = 232
       object Label4: TLabel
         Left = 1
         Top = 1
         Width = 268
-        Height = 13
+        Height = 21
         Align = alTop
         Alignment = taCenter
         Caption = 'Un-Selected Colours'
-        ExplicitLeft = -23
-        ExplicitTop = 5
-        ExplicitWidth = 248
       end
       object lstbxNonMembers: TListBox
         Left = 1
-        Top = 14
+        Top = 22
         Width = 268
-        Height = 279
+        Height = 271
         Align = alClient
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnClick = lstbxNonMembersClick
         OnDblClick = lstbxNonMembersDblClick
-        ExplicitLeft = -31
-        ExplicitTop = 18
-        ExplicitWidth = 248
-        ExplicitHeight = 101
+        ExplicitTop = 14
+        ExplicitHeight = 279
       end
       object lstbxNonMembersCodes: TListBox
         Left = 128
         Top = 28
         Width = 41
         Height = 140
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 1
         Visible = False
       end

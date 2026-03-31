@@ -8,59 +8,59 @@ object WTMaintContAppfrm: TWTMaintContAppfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 23
-    Height = 13
+    Width = 27
+    Height = 17
     Caption = 'Date'
   end
   object Label2: TLabel
     Left = 160
     Top = 8
-    Width = 23
-    Height = 13
+    Width = 28
+    Height = 17
     Caption = 'Time'
   end
   object dtpckAppTime: TDateTimePicker
     Left = 160
-    Top = 24
+    Top = 29
     Width = 81
-    Height = 21
-    Date = 37565.539912500000000000
-    Time = 37565.539912500000000000
+    Height = 25
+    Date = 37565.000000000000000000
+    Time = 0.539912499996717100
     Kind = dtkTime
     TabOrder = 0
   end
   object BitBtn1: TBitBtn
     Left = 40
-    Top = 72
+    Top = 76
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object BitBtn2: TBitBtn
     Left = 128
-    Top = 72
+    Top = 76
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object DateTimePicker: TDateTimePicker
     Left = 16
-    Top = 24
+    Top = 29
     Width = 121
-    Height = 21
+    Height = 25
     Date = 37568.000000000000000000
     Time = 37568.000000000000000000
     TabOrder = 3

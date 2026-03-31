@@ -7,13 +7,13 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 471
@@ -41,14 +41,14 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       70)
     object Label4: TLabel
       Left = 16
-      Top = 21
-      Width = 34
-      Height = 13
+      Top = 15
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object BitBtn1: TBitBtn
       Left = 556
-      Top = 15
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -58,7 +58,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     end
     object btnEdit: TBitBtn
       Left = 639
-      Top = 15
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -68,7 +68,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     end
     object btnDelete: TBitBtn
       Left = 722
-      Top = 15
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -78,7 +78,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     end
     object BitBtn4: TBitBtn
       Left = 889
-      Top = 15
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -89,7 +89,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     end
     object btnThickness: TBitBtn
       Left = 473
-      Top = 15
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -108,15 +108,15 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     end
     object edtName: TEdit
       Left = 64
-      Top = 17
+      Top = 11
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
       Left = 805
-      Top = 15
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -135,16 +135,17 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitLeft = 8
     object Label1: TLabel
       Left = 16
-      Top = 16
-      Width = 68
-      Height = 13
+      Top = 9
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object SpeedButton2: TSpeedButton
-      Left = 165
-      Top = 31
+      Left = 170
+      Top = 32
       Width = 23
       Height = 22
       Hint = 'Clear Material Type'
@@ -174,7 +175,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
       Left = 16
       Top = 32
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = srclkpMatType
@@ -192,7 +193,7 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

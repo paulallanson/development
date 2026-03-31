@@ -9,12 +9,12 @@ object frmWTSendtoExcel: TfrmWTSendtoExcel
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object OleContainer1: TOleContainer
     Left = 101
     Top = 16
@@ -37,8 +37,8 @@ object frmWTSendtoExcel: TfrmWTSendtoExcel
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

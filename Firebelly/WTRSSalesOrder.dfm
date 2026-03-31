@@ -4,33 +4,33 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
   BorderStyle = bsDialog
   Caption = 'Sales Order Report'
   ClientHeight = 366
-  ClientWidth = 500
+  ClientWidth = 528
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    500
+    528
     366)
-  TextHeight = 13
+  TextHeight = 17
   object lstbxCustomersCode: TListBox
     Left = 96
     Top = 80
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 14
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    Left = 232
+    Left = 252
     Top = 200
-    Width = 105
-    Height = 90
+    Width = 121
+    Height = 105
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -50,9 +50,10 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 320
   end
   object Button4: TButton
-    Left = 416
+    Left = 430
     Top = 329
     Width = 75
     Height = 25
@@ -66,7 +67,7 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     Left = 8
     Top = 80
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -79,46 +80,46 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
   object GroupBox1: TGroupBox
     Left = 8
     Top = 200
-    Width = 209
-    Height = 73
+    Width = 225
+    Height = 105
     Caption = 'Order Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 40
+      Top = 67
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 63
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 30
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -139,8 +140,8 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 63
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -162,8 +163,8 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 80
+    Left = 124
+    Top = 89
     Width = 249
     Height = 113
     Enabled = False
@@ -171,9 +172,9 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 10
-      Width = 49
-      Height = 13
+      Top = 3
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object btnCustomer: TButton
@@ -196,7 +197,7 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Customers')
       MultiSelect = True
@@ -205,10 +206,10 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 376
+    Left = 379
     Top = 8
-    Width = 113
-    Height = 121
+    Width = 126
+    Height = 140
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -221,7 +222,7 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 376
+    Left = 384
     Top = 168
     Width = 113
     Height = 17
@@ -237,6 +238,7 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 320
   end
   object btnExcel: TButton
     Left = 184
@@ -247,10 +249,11 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 320
   end
   object OleContainer1: TOleContainer
-    Left = 356
-    Top = 203
+    Left = 183
+    Top = 115
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -259,8 +262,8 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 76
-    Top = 111
+    Left = 96
+    Top = 144
     Width = 289
     Height = 61
     ParentBackground = False
@@ -269,8 +272,8 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -286,7 +289,7 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     Left = 8
     Top = 8
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -297,24 +300,24 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
     OnClick = rdgrpRepsClick
   end
   object grpbxReps: TGroupBox
-    Left = 120
-    Top = 8
+    Left = 124
+    Top = 14
     Width = 249
-    Height = 57
+    Height = 62
     ParentBackground = False
     TabOrder = 13
     object Label3: TLabel
       Left = 8
-      Top = 12
-      Width = 20
-      Height = 13
+      Top = 6
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object cmbReps: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -332,18 +335,18 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
       'select *'
       'from Rep'
       'order by Rep_Name')
-    Left = 184
-    Top = 16
+    Left = 204
+    Top = 49
   end
   object dtsReps: TDataSource
     DataSet = qryReps
-    Left = 240
-    Top = 16
+    Left = 260
+    Top = 49
   end
   object pmnCustomers: TPopupMenu
     OnPopup = pmnCustomersPopup
-    Left = 376
-    Top = 136
+    Left = 396
+    Top = 169
     object Delete1: TMenuItem
       Caption = 'Delete'
       OnClick = Delete1Click

@@ -4,26 +4,26 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
   ClientHeight = 287
-  ClientWidth = 599
+  ClientWidth = 605
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 24
     Top = 245
-    Width = 154
-    Height = 13
+    Width = 186
+    Height = 17
     Caption = 'Delete these element details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -54,67 +54,68 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 599
+    Width = 605
     Height = 225
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 532
+    ExplicitTop = 16
+    ExplicitWidth = 1017
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 76
-      Width = 46
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 105
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Thickness'
     end
     object Label6: TLabel
       Left = 16
       Top = 132
-      Width = 63
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Length (mm)'
     end
     object Label5: TLabel
       Left = 16
       Top = 164
-      Width = 59
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Depth (mm)'
     end
     object Label8: TLabel
       Left = 208
       Top = 164
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 208
       Top = 104
-      Width = 50
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Unit price'
     end
     object Label7: TLabel
-      Left = 352
+      Left = 359
       Top = 164
-      Width = 52
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Total price'
     end
     object btnWorktops: TSpeedButton
@@ -125,7 +126,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Caption = '...'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -134,18 +135,18 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     object Label9: TLabel
       Left = 16
       Top = 44
-      Width = 60
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Price Group'
     end
     object btnPriceGroup: TSpeedButton
       Left = 250
-      Top = 39
+      Top = 43
       Width = 23
       Height = 22
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       Glyph.Data = {
@@ -168,19 +169,19 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     object Label10: TLabel
       Left = 16
       Top = 196
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object SpeedButton1: TSpeedButton
       Left = 290
-      Top = 191
+      Top = 193
       Width = 23
       Height = 22
       Caption = '...'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -190,7 +191,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Left = 96
       Top = 160
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtDepthChange
     end
@@ -198,7 +199,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Left = 96
       Top = 128
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 5
       OnChange = edtDepthChange
     end
@@ -206,7 +207,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Left = 96
       Top = 101
       Width = 89
-      Height = 21
+      Height = 25
       KeyField = 'Thickness'
       ListField = 'Thickness_mm'
       ListSource = dtsWTThickness
@@ -217,7 +218,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Left = 96
       Top = 72
       Width = 450
-      Height = 21
+      Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
       ListSource = dtsWorktops
@@ -225,18 +226,18 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       OnClick = dblkpWorktopClick
     end
     object edtUnitPrice: TCREditMoney
-      Left = 264
+      Left = 271
       Top = 100
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = edtDepthChange
     end
     object spnQuantity: TSpinEdit
-      Left = 264
+      Left = 271
       Top = 159
       Width = 65
-      Height = 22
+      Height = 27
       MaxValue = 1000
       MinValue = 1
       TabOrder = 7
@@ -244,10 +245,10 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       OnChange = spnQuantityChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 408
+      Left = 430
       Top = 160
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -255,9 +256,9 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     end
     object dblkpWTGroup: TDBLookupComboBox
       Left = 96
-      Top = 40
+      Top = 42
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Worktop_Group'
       ListField = 'Worktop_Group_Description'
       ListSource = dtsWTGroup
@@ -268,7 +269,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Left = 96
       Top = 12
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = dtsMaterial
@@ -279,7 +280,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Left = 96
       Top = 192
       Width = 185
-      Height = 21
+      Height = 25
       TabOrder = 9
       Text = 'cmbMaterialUse'
     end
@@ -306,8 +307,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 22
-    Top = 218
+    Left = 220
+    Top = 137
     ParamData = <
       item
         Name = 'material_type'
@@ -336,8 +337,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '  ((worktop_thickness.inactive = '#39'N'#39') OR (worktop_thickness.inac' +
         'tive IS NULL) OR (worktop_thickness.thickness = :Thickness))'
       'order by thickness_mm')
-    Left = 192
-    Top = 120
+    Left = 320
+    Top = 158
     ParamData = <
       item
         Name = 'worktop'
@@ -350,13 +351,13 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 124
-    Top = 214
+    Left = 315
+    Top = 36
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 232
-    Top = 120
+    Left = 370
+    Top = 158
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -380,8 +381,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 276
-    Top = 10
+    Left = 425
+    Top = 21
     ParamData = <
       item
         Name = 'Worktop'
@@ -402,8 +403,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '(inactive = '#39'N'#39' or inactive is null)) OR Worktop_Group = :Workto' +
         'p_Group'
       'order by Worktop_group_description')
-    Left = 145
-    Top = 105
+    Left = 261
+    Top = 139
     ParamData = <
       item
         Name = 'Material_type'
@@ -414,8 +415,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 212
-    Top = 108
+    Left = 345
+    Top = 143
   end
   object qryMaterial: TFDQuery
     ConnectionName = 'wt'
@@ -439,8 +440,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         'where (inactive = '#39'N'#39' or inactive is null) OR Material_Type = :M' +
         'aterial_Type'
       'order by Description')
-    Left = 336
-    Top = 10
+    Left = 500
+    Top = 21
     ParamData = <
       item
         Name = 'Material_Type'
@@ -449,8 +450,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 296
-    Top = 10
+    Left = 450
+    Top = 21
   end
   object qryContractWorktops: TFDQuery
     ConnectionName = 'WT'
@@ -479,8 +480,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '      (worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR Wo' +
         'rktop.worktop = :worktop'
       'ORDER BY Worktop.Description')
-    Left = 29
-    Top = 142
+    Left = 476
+    Top = 170
     ParamData = <
       item
         Name = 'Customer'
@@ -524,8 +525,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 467
-    Top = 182
+    Left = 256
+    Top = 60
     ParamData = <
       item
         Name = 'Customer'
@@ -569,8 +570,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         '      ((Worktop.inactive = '#39'N'#39') or (Worktop.inactive is null) OR' +
         ' (Worktop.worktop = :worktop))'
       'ORDER BY Worktop.Description')
-    Left = 199
-    Top = 150
+    Left = 329
+    Top = 124
     ParamData = <
       item
         Name = 'Customer'
@@ -621,8 +622,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
       '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
       '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
-    Left = 296
-    Top = 80
+    Left = 450
+    Top = 108
     ParamData = <
       item
         Name = 'Customer'
@@ -641,12 +642,12 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       'FROM Material_Use'
       'WHERE Use_Type <= 1'
       'ORDER BY Use_Description ASC')
-    Left = 32
-    Top = 70
+    Left = 192
+    Top = 96
   end
   object dtsMaterialUse: TDataSource
     DataSet = qryMaterialUse
-    Left = 32
-    Top = 6
+    Left = 192
+    Top = 16
   end
 end

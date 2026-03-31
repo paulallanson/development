@@ -7,12 +7,12 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 292
@@ -70,39 +70,39 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Operator'
     end
     object Label2: TLabel
       Left = 8
       Top = 44
-      Width = 24
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Date'
     end
     object Label3: TLabel
       Left = 184
       Top = 44
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Time'
       Visible = False
     end
     object edtOperator: TEdit
-      Left = 56
+      Left = 67
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
       Text = 'edtOperator'
     end
     object dtpckDate: TDateTimePicker
-      Left = 56
+      Left = 67
       Top = 40
       Width = 90
-      Height = 21
+      Height = 25
       Date = 38114.000000000000000000
       Time = 0.892242361107491900
       TabOrder = 1
@@ -111,7 +111,7 @@ object frmWTMaintSOEvents: TfrmWTMaintSOEvents
       Left = 231
       Top = 40
       Width = 82
-      Height = 21
+      Height = 25
       Date = 38114.000000000000000000
       Time = 0.892714699082716800
       Kind = dtkTime

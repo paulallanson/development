@@ -10,7 +10,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,7 +18,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetails: TPanel
     Left = 0
     Top = 0
@@ -31,57 +31,57 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label1: TLabel
       Left = 8
       Top = 112
-      Width = 80
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'Application No:'
     end
     object Label2: TLabel
       Left = 240
       Top = 112
-      Width = 27
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'Date:'
     end
     object lblDateRange: TLabel
       Left = 8
       Top = 77
-      Width = 60
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Date Range'
     end
     object Label4: TLabel
       Left = 288
       Top = 77
-      Width = 14
-      Height = 13
+      Width = 15
+      Height = 17
       Caption = 'to:'
     end
     object Label5: TLabel
       Left = 112
       Top = 77
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'from:'
     end
     object Label6: TLabel
       Left = 8
       Top = 48
-      Width = 22
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = 'Site:'
     end
     object edtCustomerName: TEdit
       Left = 112
       Top = 12
       Width = 313
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -90,21 +90,21 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
       Left = 112
       Top = 108
       Width = 97
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = EnableOK
     end
     object edtDate: TEdit
-      Left = 272
+      Left = 279
       Top = 108
       Width = 97
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = EnableOK
       OnExit = edtDateExit
     end
     object btnDateSel: TBitBtn
-      Left = 376
+      Left = 383
       Top = 106
       Width = 25
       Height = 25
@@ -135,7 +135,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
       Left = 160
       Top = 73
       Width = 97
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 4
@@ -144,7 +144,7 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
       Left = 304
       Top = 73
       Width = 97
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 5
@@ -153,15 +153,15 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
       Left = 112
       Top = 44
       Width = 313
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 6
     end
   end
   object pnlExportPrgrss: TPanel
-    Left = 99
-    Top = 46
+    Left = 82
+    Top = 41
     Width = 289
     Height = 61
     ParentBackground = False
@@ -170,8 +170,8 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -184,8 +184,8 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     end
   end
   object OleContainer1: TOleContainer
-    Left = 155
-    Top = 42
+    Left = 203
+    Top = 135
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -208,13 +208,13 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
     object Label7: TLabel
       Left = 8
       Top = 12
-      Width = 67
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Labour Value'
     end
     object memValue: TMemo
       Left = 112
-      Top = 7
+      Top = 10
       Width = 89
       Height = 22
       Alignment = taRightJustify
@@ -305,8 +305,8 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
       'select Last_Application_ref'
       'from Customer'
       'where Customer = :Customer')
-    Left = 400
-    Top = 8
+    Left = 404
+    Top = 18
     ParamData = <
       item
         Name = 'Customer'
@@ -319,8 +319,8 @@ object frmWTRSCustomerRFP: TfrmWTRSCustomerRFP
       'set Application_reference = NULL,'
       'Application_date = NULL'
       'where Sales_invoice = :sales_invoice')
-    Left = 400
-    Top = 64
+    Left = 404
+    Top = 72
     ParamData = <
       item
         Name = 'sales_invoice'

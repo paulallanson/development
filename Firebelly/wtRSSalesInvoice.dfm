@@ -4,17 +4,17 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
   BorderStyle = bsDialog
   Caption = 'Print Sales Invoices'
   ClientHeight = 143
-  ClientWidth = 305
+  ClientWidth = 312
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
     Top = 104
@@ -37,7 +37,7 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     Left = 8
     Top = 10
     Width = 161
-    Height = 73
+    Height = 68
     Caption = 'Invoice Selection'
     ItemIndex = 0
     Items.Strings = (
@@ -59,7 +59,7 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     Left = 184
     Top = 10
     Width = 113
-    Height = 73
+    Height = 68
     Caption = 'Print Type'
     ItemIndex = 0
     Items.Strings = (

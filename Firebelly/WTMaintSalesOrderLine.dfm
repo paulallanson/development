@@ -31,7 +31,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       622
       40)
     object lblDelete: TLabel
-      Left = 282
+      Left = 276
       Top = 12
       Width = 166
       Height = 16
@@ -43,9 +43,10 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 282
     end
     object btnOK: TBitBtn
-      Left = 442
+      Left = 436
       Top = 7
       Width = 75
       Height = 25
@@ -79,10 +80,10 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 436
+      ExplicitLeft = 430
     end
     object btnCancel: TBitBtn
-      Left = 522
+      Left = 516
       Top = 7
       Width = 75
       Height = 25
@@ -96,7 +97,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 516
+      ExplicitLeft = 510
     end
   end
   object pnlDetails: TPanel
@@ -107,8 +108,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 616
-    ExplicitHeight = 241
+    ExplicitTop = 1
     object Label1: TLabel
       Left = 10
       Top = 24
@@ -118,14 +118,14 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     end
     object Label3: TLabel
       Left = 10
-      Top = 78
+      Top = 81
       Width = 54
       Height = 17
       Caption = 'Price/unit'
     end
     object Label2: TLabel
       Left = 210
-      Top = 77
+      Top = 80
       Width = 50
       Height = 17
       Caption = 'Unit Size'
@@ -145,14 +145,14 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     end
     object Label4: TLabel
       Left = 10
-      Top = 105
+      Top = 108
       Width = 78
       Height = 17
       Caption = 'Sell Price/unit'
     end
     object Label5: TLabel
       Left = 210
-      Top = 104
+      Top = 108
       Width = 48
       Height = 17
       Caption = 'Vat Rate'
@@ -179,7 +179,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Caption = 'Description'
     end
     object lblQtyInvoiced: TLabel
-      Left = 410
+      Left = 418
       Top = 139
       Width = 87
       Height = 17
@@ -239,7 +239,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     end
     object memPrice: TMemo
       Left = 112
-      Top = 75
+      Top = 78
       Width = 81
       Height = 21
       TabStop = False
@@ -260,10 +260,10 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       TabOrder = 2
     end
     object edtPackSize: TEdit
-      Left = 304
-      Top = 74
+      Left = 312
+      Top = 77
       Width = 81
-      Height = 25
+      Height = 21
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -271,7 +271,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     end
     object memSellPrice: TMemo
       Left = 112
-      Top = 102
+      Top = 106
       Width = 81
       Height = 21
       Alignment = taRightJustify
@@ -283,8 +283,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnExit = ValidateMoney
     end
     object dblkpVAT: TDBLookupComboBox
-      Left = 304
-      Top = 101
+      Left = 312
+      Top = 104
       Width = 144
       Height = 25
       KeyField = 'Vat'
@@ -305,8 +305,8 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnExit = ValidateQty
     end
     object Button1: TButton
-      Left = 456
-      Top = 99
+      Left = 464
+      Top = 104
       Width = 25
       Height = 25
       Caption = '...'
@@ -320,7 +320,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnClick = Button1Click
     end
     object edtDelivered: TMemo
-      Left = 304
+      Left = 312
       Top = 135
       Width = 81
       Height = 21
@@ -333,7 +333,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       OnExit = ValidateQty
     end
     object edtInvoiced: TMemo
-      Left = 504
+      Left = 512
       Top = 135
       Width = 81
       Height = 21

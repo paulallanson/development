@@ -3,46 +3,44 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Delivery Note'
-  ClientHeight = 198
-  ClientWidth = 349
+  ClientHeight = 217
+  ClientWidth = 375
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object SelectLst: TListBox
     Left = 176
     Top = 24
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 0
     Visible = False
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 118
-    Width = 349
-    Height = 80
+    Top = 160
+    Width = 375
+    Height = 57
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 127
-    ExplicitWidth = 355
     DesignSize = (
-      349
-      80)
+      375
+      57)
     object btnPrint: TButton
       Left = 8
-      Top = 39
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -50,10 +48,11 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
       Enabled = False
       TabOrder = 0
       OnClick = btnPrintClick
+      ExplicitTop = 39
     end
     object btnPreview: TButton
       Left = 96
-      Top = 39
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -61,10 +60,11 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
       Enabled = False
       TabOrder = 1
       OnClick = btnPreviewClick
+      ExplicitTop = 39
     end
     object btnEmail: TButton
       Left = 184
-      Top = 39
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -72,41 +72,42 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
       Enabled = False
       TabOrder = 2
       OnClick = btnEmailClick
+      ExplicitTop = 39
     end
     object Button4: TButton
       Left = 272
-      Top = 39
+      Top = 16
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = 'Close'
       TabOrder = 3
       OnClick = Button4Click
+      ExplicitTop = 39
     end
   end
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 349
-    Height = 138
+    Width = 375
+    Height = 161
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 355
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
       Width = 345
-      Height = 121
+      Height = 154
       Caption = 'Sales Order Selection'
       ParentBackground = False
       TabOrder = 0
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 244
-        Height = 39
+        Width = 225
+        Height = 71
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'

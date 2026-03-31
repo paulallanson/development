@@ -4,53 +4,53 @@ object frmWTMaintReps: TfrmWTMaintReps
   BorderStyle = bsDialog
   Caption = 'Reps details'
   ClientHeight = 237
-  ClientWidth = 374
+  ClientWidth = 394
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    374
+    394
     237)
-  TextHeight = 13
+  TextHeight = 17
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 52
-    Height = 13
+    Width = 62
+    Height = 17
     Caption = 'Rep Name'
   end
   object Label1: TLabel
     Left = 8
     Top = 140
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object lblCommissionRate: TLabel
     Left = 8
     Top = 79
-    Width = 85
-    Height = 13
+    Width = 98
+    Height = 17
     Caption = 'Commission rate'
   end
   object Label3: TLabel
     Left = 8
     Top = 52
-    Width = 82
-    Height = 13
+    Width = 94
+    Height = 17
     Caption = 'Commision type'
   end
   object lblCommissionPerc: TLabel
     Left = 184
     Top = 80
-    Width = 9
-    Height = 13
+    Width = 11
+    Height = 17
     Caption = '%'
   end
   object btnOK: TBitBtn
@@ -66,6 +66,7 @@ object frmWTMaintReps: TfrmWTMaintReps
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
+    ExplicitTop = 190
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -78,6 +79,7 @@ object frmWTMaintReps: TfrmWTMaintReps
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 5
+    ExplicitTop = 190
   end
   object chkbxIsCustomer: TCheckBox
     Left = 8
@@ -89,10 +91,10 @@ object frmWTMaintReps: TfrmWTMaintReps
     OnClick = chkbxIsCustomerClick
   end
   object cmbCommissionType: TComboBox
-    Left = 104
+    Left = 115
     Top = 48
     Width = 201
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = EnableOK
     OnClick = cmbCommissionTypeClick
@@ -102,17 +104,17 @@ object frmWTMaintReps: TfrmWTMaintReps
       'Fixed Amount per invoice')
   end
   object edtCustomerName: TEdit
-    Left = 104
+    Left = 115
     Top = 136
     Width = 225
-    Height = 21
+    Height = 25
     Color = clBtnFace
     ReadOnly = True
     TabOrder = 2
   end
   object btnCustomerSearch: TBitBtn
-    Left = 338
-    Top = 135
+    Left = 346
+    Top = 138
     Width = 22
     Height = 22
     Hint = 'Search for Customer'
@@ -137,19 +139,19 @@ object frmWTMaintReps: TfrmWTMaintReps
     TabOrder = 6
   end
   object edtRepName: TEdit
-    Left = 104
+    Left = 115
     Top = 16
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 7
     Text = 'edtRepName'
     OnChange = EnableOK
   end
   object edtCommissionRate: TCREditFloat
-    Left = 104
+    Left = 115
     Top = 75
     Width = 73
-    Height = 21
+    Height = 25
     TabOrder = 8
     Text = 'edtCommissionRate'
   end
@@ -158,8 +160,8 @@ object frmWTMaintReps: TfrmWTMaintReps
     SQL.Strings = (
       'select Customer_Name'
       'from Customer where Customer = :Customer')
-    Left = 312
-    Top = 112
+    Left = 102
+    Top = 100
     ParamData = <
       item
         Name = 'Customer'
@@ -178,8 +180,8 @@ object frmWTMaintReps: TfrmWTMaintReps
       '  inActive = :inactive'
       'WHERE'
       '  Rep = :Rep')
-    Left = 80
-    Top = 40
+    Left = 188
+    Top = 74
     ParamData = <
       item
         Name = 'Rep_Name'
@@ -228,8 +230,8 @@ object frmWTMaintReps: TfrmWTMaintReps
       'Select Rep'
       'From Rep'
       'Where Rep_Name = :GUID')
-    Left = 248
-    Top = 40
+    Left = 286
+    Top = 66
     ParamData = <
       item
         Name = 'GUID'
@@ -250,8 +252,8 @@ object frmWTMaintReps: TfrmWTMaintReps
       'Where'
       '(Category = :Category) '
       '')
-    Left = 312
-    Top = 40
+    Left = 94
+    Top = 26
     ParamData = <
       item
         Name = 'Description'

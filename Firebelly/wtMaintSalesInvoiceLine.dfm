@@ -4,7 +4,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Line details'
   ClientHeight = 219
-  ClientWidth = 518
+  ClientWidth = 531
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -17,7 +17,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
   object Panel1: TPanel
     Left = 0
     Top = 178
-    Width = 518
+    Width = 531
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -25,7 +25,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     ExplicitTop = 169
     ExplicitWidth = 512
     DesignSize = (
-      518
+      531
       41)
     object lblDelete: TLabel
       Left = 192
@@ -41,7 +41,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       ParentFont = False
     end
     object btnOK: TBitBtn
-      Left = 332
+      Left = 339
       Top = 8
       Width = 75
       Height = 25
@@ -51,10 +51,10 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 326
+      ExplicitLeft = 320
     end
     object BitBtn2: TBitBtn
-      Left = 431
+      Left = 438
       Top = 8
       Width = 75
       Height = 25
@@ -62,12 +62,13 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 419
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 518
+    Width = 531
     Height = 57
     Align = alTop
     ParentBackground = False
@@ -111,7 +112,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     object edtDescription: TEdit
       Left = 96
       Top = 29
-      Width = 393
+      Width = 410
       Height = 25
       TabOrder = 0
       OnChange = edtDescriptionChange
@@ -120,12 +121,13 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
   object pnlDetails: TPanel
     Left = 0
     Top = 57
-    Width = 518
+    Width = 531
     Height = 121
     Align = alClient
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 56
+    ExplicitWidth = 512
+    ExplicitHeight = 112
     object Label2: TLabel
       Left = 5
       Top = 12
@@ -162,7 +164,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Caption = 'Credit Type'
     end
     object lblPacks: TLabel
-      Left = 162
+      Left = 169
       Top = 12
       Width = 52
       Height = 17
@@ -183,7 +185,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Caption = 'Cost'
     end
     object memQuantity: TMemo
-      Left = 57
+      Left = 64
       Top = 9
       Width = 97
       Height = 23
@@ -195,7 +197,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       OnExit = ValidateQty
     end
     object memPrice: TMemo
-      Left = 57
+      Left = 64
       Top = 36
       Width = 97
       Height = 23
@@ -218,7 +220,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       TabOrder = 3
     end
     object edtNominal: TEdit
-      Left = 57
+      Left = 64
       Top = 89
       Width = 97
       Height = 25
@@ -252,7 +254,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       OnExit = ValidateMoney
     end
     object memCost: TMemo
-      Left = 57
+      Left = 64
       Top = 62
       Width = 97
       Height = 23
@@ -304,6 +306,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
   end
   object dsVAT: TDataSource
     DataSet = qryVAT
-    Left = 416
+    Left = 208
   end
 end

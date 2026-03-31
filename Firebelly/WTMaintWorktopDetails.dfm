@@ -2,95 +2,95 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
   Left = 477
   Top = 112
   Caption = 'Worktops'
-  ClientHeight = 376
-  ClientWidth = 364
+  ClientHeight = 278
+  ClientWidth = 410
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 24
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label3: TLabel
     Left = 8
     Top = 52
-    Width = 68
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'Material Type'
   end
   object Label2: TLabel
     Left = 8
     Top = 84
-    Width = 33
-    Height = 13
+    Width = 37
+    Height = 17
     Caption = 'Group'
   end
   object Label4: TLabel
     Left = 8
     Top = 119
-    Width = 50
-    Height = 13
+    Width = 55
+    Height = 17
     Caption = 'Thickness'
   end
   object Label5: TLabel
     Left = 8
     Top = 152
-    Width = 50
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Cost Price'
   end
   object Label6: TLabel
     Left = 8
     Top = 184
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Selling Price'
   end
   object Label7: TLabel
-    Left = 200
+    Left = 216
     Top = 152
-    Width = 67
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'per sq. metre'
   end
   object Label8: TLabel
-    Left = 200
+    Left = 216
     Top = 184
-    Width = 67
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'per sq. metre'
   end
   object edtDescription: TDBEdit
-    Left = 80
+    Left = 96
     Top = 16
     Width = 273
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object dblkpMatType: TDBLookupComboBox
-    Left = 80
+    Left = 96
     Top = 48
     Width = 161
-    Height = 21
+    Height = 25
     KeyField = 'Material_Type'
     ListField = 'Description'
     ListSource = srclkpMatType
     TabOrder = 1
   end
   object dblkpWTGroup: TDBLookupComboBox
-    Left = 80
+    Left = 96
     Top = 80
     Width = 161
-    Height = 21
+    Height = 25
     KeyField = 'Worktop_Group'
     ListField = 'Worktop_Group_Description'
     ListSource = dtsGroup
@@ -98,7 +98,7 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     OnClick = dblkpWTGroupClick
   end
   object btnOK: TBitBtn
-    Left = 192
+    Left = 208
     Top = 224
     Width = 75
     Height = 25
@@ -111,7 +111,7 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 280
+    Left = 296
     Top = 224
     Width = 75
     Height = 25
@@ -122,7 +122,7 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     TabOrder = 4
   end
   object Button1: TButton
-    Left = 248
+    Left = 264
     Top = 78
     Width = 25
     Height = 25
@@ -137,7 +137,7 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     OnClick = Button1Click
   end
   object btnClear: TBitBtn
-    Left = 280
+    Left = 296
     Top = 78
     Width = 25
     Height = 25
@@ -159,27 +159,27 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     OnClick = btnClearClick
   end
   object dblkpThickness: TDBLookupComboBox
-    Left = 80
+    Left = 96
     Top = 111
     Width = 105
-    Height = 21
+    Height = 25
     KeyField = 'Thickness'
     ListField = 'Thickness_mm'
     TabOrder = 7
   end
   object edtmnyCost: TCREditMoney
-    Left = 80
+    Left = 96
     Top = 144
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 8
     Text = '0.00'
   end
   object edtmnySell: TCREditMoney
-    Left = 80
+    Left = 96
     Top = 176
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 9
     Text = '0.00'
   end
@@ -188,8 +188,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     IndexFieldNames = 'Description'
     ConnectionName = 'WT'
     TableName = 'Worktop'
-    Left = 16
-    Top = 224
+    Left = 252
+    Top = 16
     object tblWorktopsWorktop: TIntegerField
       FieldName = 'Worktop'
     end
@@ -226,8 +226,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     SQL.Strings = (
       'select max(val(worktop))+1'
       'from worktop')
-    Left = 72
-    Top = 224
+    Left = 322
+    Top = 16
   end
   object lkpGroup: TFDQuery
     ConnectionName = 'WT'
@@ -238,8 +238,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
       '((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is NULL)) OR'
       'Worktop_Group = :Worktop_Group'
       'order by worktop_group_description')
-    Left = 8
-    Top = 320
+    Left = 242
+    Top = 136
     ParamData = <
       item
         Name = 'Material_type'
@@ -256,8 +256,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
         'where ((inactive = '#39'N'#39') or (inactive is NULL) or (inactive = '#39#39')' +
         ') OR'
       'Material_Type = :Material_Type')
-    Left = 16
-    Top = 272
+    Left = 252
+    Top = 76
     ParamData = <
       item
         Name = 'Material_Type'
@@ -265,12 +265,12 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
   end
   object srclkpMatType: TDataSource
     DataSet = lkpMatType
-    Left = 72
-    Top = 272
+    Left = 322
+    Top = 76
   end
   object dtsGroup: TDataSource
     DataSet = lkpGroup
-    Left = 72
-    Top = 320
+    Left = 322
+    Top = 136
   end
 end

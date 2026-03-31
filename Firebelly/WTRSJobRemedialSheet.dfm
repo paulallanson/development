@@ -7,12 +7,12 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlHead: TPanel
     Left = 0
     Top = 0
@@ -24,12 +24,12 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object Label1: TLabel
       Left = 24
       Top = 16
-      Width = 68
-      Height = 13
+      Width = 81
+      Height = 17
       Caption = 'Job Number:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -37,12 +37,12 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object Label2: TLabel
       Left = 24
       Top = 40
-      Width = 53
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Customer:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -50,18 +50,18 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object Label3: TLabel
       Left = 24
       Top = 64
-      Width = 62
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'Description:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object DBText1: TDBText
-      Left = 104
+      Left = 114
       Top = 16
       Width = 121
       Height = 17
@@ -69,13 +69,13 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
       DataSource = dtsJob
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object DBText2: TDBText
-      Left = 104
+      Left = 114
       Top = 40
       Width = 489
       Height = 17
@@ -83,13 +83,13 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
       DataSource = dtsJob
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object DBText3: TDBText
-      Left = 104
+      Left = 114
       Top = 64
       Width = 481
       Height = 41
@@ -97,7 +97,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
       DataSource = dtsJob
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -105,12 +105,12 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object Label4: TLabel
       Left = 352
       Top = 16
-      Width = 54
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Reference:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -124,7 +124,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
       DataSource = dtsJob
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -142,20 +142,20 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
       628
       41)
     object Panel3: TPanel
-      Left = 325
+      Left = 504
       Top = 1
-      Width = 302
+      Width = 123
       Height = 39
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        302
+        123
         39)
       object Button4: TButton
-        Left = 203
-        Top = 6
+        Left = 27
+        Top = 9
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
@@ -200,7 +200,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     object chkbxSelectAll: TCheckBox
       Left = 296
       Top = 16
-      Width = 97
+      Width = 137
       Height = 17
       Caption = 'Select All'
       TabOrder = 4
@@ -223,7 +223,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -231,7 +231,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <

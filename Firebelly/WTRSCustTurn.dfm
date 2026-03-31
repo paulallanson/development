@@ -3,29 +3,27 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
   Top = 202
   BorderStyle = bsDialog
   Caption = 'Customer Turnover selection'
-  ClientHeight = 310
-  ClientWidth = 490
+  ClientHeight = 340
+  ClientWidth = 519
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    490
-    310)
-  PixelsPerInch = 96
-  TextHeight = 13
+    519
+    340)
+  TextHeight = 17
   object Label3: TLabel
     Left = 24
     Top = 235
-    Width = 33
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Sort by'
   end
   object GroupBox1: TGroupBox
@@ -45,14 +43,14 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     TabOrder = 0
     object Label2: TLabel
       Left = 16
-      Top = 66
-      Width = 80
-      Height = 13
+      Top = 74
+      Width = 92
+      Height = 17
       Caption = 'To Invoice Date:'
     end
     object DateToButton: TSpeedButton
       Left = 119
-      Top = 80
+      Top = 96
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -74,13 +72,13 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object Label1: TLabel
       Left = 16
       Top = 23
-      Width = 90
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'From Invoice Date:'
     end
     object DateFromButton: TSpeedButton
       Left = 119
-      Top = 39
+      Top = 45
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -101,37 +99,35 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     end
     object DateToEdit: TEdit
       Left = 15
-      Top = 82
+      Top = 96
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 1
       OnExit = DateToEditExit
     end
     object DateFromEdit: TEdit
       Left = 15
-      Top = 39
+      Top = 45
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = DateFromEditExit
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 408
-    Top = 280
+    Left = 410
+    Top = 296
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Caption = '&Print'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -146,12 +142,15 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PrintBitBtnClick
   end
   object TotByRadioGroup: TRadioGroup
     Left = 256
     Top = 96
     Width = 115
-    Height = 65
+    Height = 68
     Caption = 'Report Totals'
     ItemIndex = 1
     Items.Strings = (
@@ -160,12 +159,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     TabOrder = 2
   end
   object cbSort1: TComboBox
-    Left = 24
-    Top = 249
+    Left = 22
+    Top = 255
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 3
     Items.Strings = (
       'Total Sales'
@@ -175,13 +173,12 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'Name')
   end
   object PreviewReportBitBtn: TBitBtn
-    Left = 326
-    Top = 280
+    Left = 328
+    Top = 296
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Caption = 'Preview'
-    TabOrder = 4
-    OnClick = PreviewReportBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -196,21 +193,25 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PreviewReportBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 22
-    Top = 280
+    Left = 24
+    Top = 296
     Width = 75
     Height = 25
-    TabOrder = 5
+    Anchors = [akLeft, akBottom]
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 5
   end
   object NoofCustSpin: TSpinEdit
     Tag = 108
     Left = 278
     Top = 192
     Width = 50
-    Height = 22
+    Height = 27
     MaxValue = 99999
     MinValue = 0
     TabOrder = 6
@@ -219,7 +220,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
   object chkbxExcludeCosts: TCheckBox
     Left = 200
     Top = 256
-    Width = 185
+    Width = 223
     Height = 17
     Caption = 'exclude printing costs && profit'
     TabOrder = 8
@@ -228,7 +229,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Left = 16
     Top = 16
     Width = 129
-    Height = 65
+    Height = 68
     Caption = 'Selection'
     ItemIndex = 0
     Items.Strings = (
@@ -239,23 +240,23 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
   end
   object pnlRep: TPanel
     Left = 158
-    Top = 24
+    Top = 26
     Width = 329
     Height = 57
     TabOrder = 10
     Visible = False
     object lblCustBran: TLabel
-      Left = 8
-      Top = 8
-      Width = 51
-      Height = 13
+      Left = 10
+      Top = 3
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -276,14 +277,12 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     end
   end
   object btnExcel: TBitBtn
-    Left = 240
-    Top = 280
+    Left = 242
+    Top = 296
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
+    Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 11
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -327,10 +326,12 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 11
+    OnClick = btnExcelClick
   end
   object OleContainer1: TOleContainer
-    Left = 232
-    Top = 104
+    Left = 211
+    Top = 98
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -339,8 +340,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 84
-    Top = 132
+    Left = 124
+    Top = 97
     Width = 289
     Height = 61
     TabOrder = 13
@@ -348,8 +349,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -368,8 +369,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'From Int_Sel'
       ' '
       ' ')
-    Left = 208
-    Top = 12
+    Left = 148
+    Top = 15
   end
   object DelWorkSQL: TFDQuery
     ConnectionName = 'WT'
@@ -377,13 +378,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
       ' ')
-    Left = 216
-    Top = 44
+    Left = 158
+    Top = 55
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -396,18 +395,14 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ''
       ' '
       ' ')
-    Left = 224
-    Top = 76
+    Left = 168
+    Top = 95
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -432,38 +427,27 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 224
-    Top = 104
+    Left = 216
+    Top = 154
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesByInv: TFDQuery
@@ -485,8 +469,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 136
-    Top = 8
+    Left = 218
+    Top = 74
     object qrySalesByInvCustomer: TIntegerField
       FieldName = 'Customer'
     end
@@ -542,13 +526,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ''
       ' '
       ' ')
-    Left = 48
-    Top = 120
+    Left = 276
+    Top = 134
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object AddCostsQuery: TFDQuery
@@ -565,13 +547,12 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 80
-    Top = 118
+    Left = 244
+    Top = 28
     ParamData = <
       item
-        DataType = ftFloat
         Name = 'PurchOrder'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end>
   end
   object qryGetPOCosts: TFDQuery
@@ -596,13 +577,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'Group By'
       'Purch_Ord.Purch_Ord, Purch_Ord.Purch_Ord_no'
       ' ')
-    Left = 112
-    Top = 120
+    Left = 244
+    Top = 190
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOCosts: TFDQuery
@@ -628,18 +607,14 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 144
-    Top = 96
+    Left = 268
+    Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPOCosts: TFDQuery
@@ -656,13 +631,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 176
-    Top = 118
+    Left = 212
+    Top = 228
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBCosts: TFDQuery
@@ -706,13 +679,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'WHERE Sales_Invoice = :Sales_Invoice'
       ' '
       ' ')
-    Left = 208
-    Top = 120
+    Left = 340
+    Top = 30
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object SQLUpdIntSel: TFDQuery
@@ -745,33 +716,23 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ''
       ' ')
-    Left = 376
-    Top = 64
+    Left = 278
+    Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sel4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end>
   end
   object qryCreditLines: TFDQuery
@@ -797,13 +758,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 418
-    Top = 118
+    Left = 331
+    Top = 92
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProdCosts: TFDQuery
@@ -817,18 +776,14 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'Line = :Line AND'
       '(Purchase_OrderLine.Order_unit = Price_unit.Price_Unit)'
       ' ')
-    Left = 418
-    Top = 150
+    Left = 331
+    Top = 132
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBCrCosts: TFDQuery
@@ -839,18 +794,14 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'WHERE Job_Bag_Line_Dets.Job_Bag = :Job_Bag and'
       'Job_Bag_Line_Dets.Job_Bag_line = :Job_Bag_Line'
       ' ')
-    Left = 416
-    Top = 184
+    Left = 328
+    Top = 174
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOCrCosts: TFDQuery
@@ -879,18 +830,14 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 416
-    Top = 216
+    Left = 328
+    Top = 214
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOCrCosts: TFDQuery
@@ -914,14 +861,10 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetInvAddChrg: TFDQuery
@@ -930,13 +873,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'select *'
       'from sales_invoice_add_charge'
       'where sales_invoice = :sales_invoice ')
-    Left = 450
-    Top = 120
+    Left = 371
+    Top = 94
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object SQLRep: TFDQuery
@@ -946,13 +887,11 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'from Rep'
       'where Rep = :Rep'
       ' ')
-    Left = 312
-    Top = 9
+    Left = 278
+    Top = 11
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

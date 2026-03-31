@@ -8,7 +8,7 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,19 +16,19 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
   DesignSize = (
     436
     166)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 16
     Top = 60
-    Width = 35
-    Height = 13
+    Width = 39
+    Height = 17
     Caption = 'Colour'
   end
   object btnOK: TBitBtn
@@ -69,7 +69,7 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     Left = 94
     Top = 56
     Width = 131
-    Height = 21
+    Height = 25
     MaxLength = 40
     ReadOnly = True
     TabOrder = 1
@@ -97,14 +97,14 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     Left = 94
     Top = 20
     Width = 185
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtImportanceDescription'
     OnChange = EnableOK
   end
   object ColorDialog1: TColorDialog
-    Left = 48
-    Top = 115
+    Left = 92
+    Top = 48
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'
@@ -117,8 +117,8 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
       '      inActive = :inactive'
       'WHERE'
       '  Level_of_Importance = :Level_of_Importance')
-    Left = 80
-    Top = 40
+    Left = 340
+    Top = 18
     ParamData = <
       item
         Name = 'Importance_Description'
@@ -154,8 +154,8 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
       '        :inactive'
       ')'
       ' ')
-    Left = 136
-    Top = 40
+    Left = 338
+    Top = 90
     ParamData = <
       item
         Name = 'Importance_Description'
@@ -175,7 +175,7 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     SQL.Strings = (
       'Select max(Level_of_Importance) as Level_of_Importance'
       'From Level_of_Importance')
-    Left = 200
-    Top = 40
+    Left = 298
+    Top = 10
   end
 end

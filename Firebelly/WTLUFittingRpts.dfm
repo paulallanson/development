@@ -9,11 +9,11 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -22,8 +22,6 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 436
-    ExplicitHeight = 192
     object lstvwReports: TListView
       Left = 0
       Top = 0
@@ -74,8 +72,6 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 192
-    ExplicitWidth = 436
     DesignSize = (
       442
       41)
@@ -98,7 +94,6 @@ object frmWTLUFittingRpts: TfrmWTLUFittingRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitLeft = 339
     end
   end
 end

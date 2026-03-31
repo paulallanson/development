@@ -3,12 +3,12 @@ object frmWTRSContract: TfrmWTRSContract
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Contract Quotes'
-  ClientHeight = 210
-  ClientWidth = 443
+  ClientHeight = 266
+  ClientWidth = 465
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,19 +17,19 @@ object frmWTRSContract: TfrmWTRSContract
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    443
-    210)
-  TextHeight = 13
+    465
+    266)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 58
-    Height = 13
+    Width = 67
+    Height = 17
     Caption = 'Quote No'#39's'
   end
   object memSelection: TMemo
     Left = 8
-    Top = 24
+    Top = 31
     Width = 337
     Height = 73
     ReadOnly = True
@@ -38,7 +38,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnPrint: TButton
     Left = 8
-    Top = 173
+    Top = 229
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -46,38 +46,40 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
+    ExplicitTop = 164
   end
   object Button4: TButton
     Left = 360
-    Top = 173
+    Top = 229
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
+    ExplicitTop = 164
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
-    Top = 104
-    Width = 97
+    Top = 111
+    Width = 153
     Height = 17
     Caption = 'Print your logo'
     TabOrder = 3
   end
   object SelectLst: TListBox
     Left = 200
-    Top = 8
+    Top = 15
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 4
     Visible = False
   end
   object btnPreview: TButton
     Left = 96
-    Top = 173
+    Top = 229
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -85,10 +87,11 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 5
     OnClick = btnPreviewClick
+    ExplicitTop = 164
   end
   object btnEmail: TButton
     Left = 184
-    Top = 173
+    Top = 229
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -96,10 +99,11 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 6
     OnClick = btnEmailClick
+    ExplicitTop = 164
   end
   object chkbxIncludeTemplating: TCheckBox
     Left = 8
-    Top = 128
+    Top = 135
     Width = 345
     Height = 17
     Caption = 'Include Template && Fitting Charges in Option prices'
@@ -108,11 +112,11 @@ object frmWTRSContract: TfrmWTRSContract
     TabOrder = 7
   end
   object btnExcel: TBitBtn
-    Left = 273
-    Top = 173
+    Left = 270
+    Top = 229
     Width = 75
     Height = 25
-    Anchors = [akRight, akBottom]
+    Anchors = [akLeft, akBottom]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -159,10 +163,11 @@ object frmWTRSContract: TfrmWTRSContract
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 173
   end
   object pnlExportPrgrss: TPanel
-    Left = 84
-    Top = 55
+    Left = 56
+    Top = 68
     Width = 289
     Height = 61
     ParentBackground = False
@@ -171,8 +176,8 @@ object frmWTRSContract: TfrmWTRSContract
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -186,7 +191,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object OleContainer1: TOleContainer
     Left = 196
-    Top = 27
+    Top = 34
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -196,7 +201,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object chkbxValue: TCheckBox
     Left = 8
-    Top = 152
+    Top = 159
     Width = 345
     Height = 17
     Caption = 'Value document based on Units per Drawing'
@@ -224,8 +229,8 @@ object frmWTRSContract: TfrmWTRSContract
       '        Address.Address = Quote.Address) ON'
       '        Int_Sel.Sel1 = Quote.Quote'
       'WHERE Int_Sel.Int_Sel_Code = :Int_Sel_Code')
-    Left = 136
-    Top = 50
+    Left = 618
+    Top = 63
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -239,8 +244,8 @@ object frmWTRSContract: TfrmWTRSContract
       'WHERE'
       '  (Quote >= :From_Quote) and'
       '  (Quote <= :To_Quote)')
-    Left = 264
-    Top = 48
+    Left = 690
+    Top = 28
     ParamData = <
       item
         Name = 'From_Quote'
@@ -276,8 +281,8 @@ object frmWTRSContract: TfrmWTRSContract
         'e'
       'WHERE Quote = :Quote'
       'ORDER BY Quote, Element_Number')
-    Left = 51
-    Top = 38
+    Left = 512
+    Top = 48
     ParamData = <
       item
         Name = 'Quote'

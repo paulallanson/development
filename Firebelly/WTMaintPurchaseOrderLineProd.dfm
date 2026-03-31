@@ -4,31 +4,32 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
   BorderStyle = bsDialog
   Caption = 'Purchase Order Line - Products'
   ClientHeight = 290
-  ClientWidth = 758
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlFunctions: TPanel
     Left = 0
     Top = 250
-    Width = 758
+    Width = 784
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
     TabStop = True
+    ExplicitWidth = 758
     DesignSize = (
-      758
+      784
       40)
     object lblDelete: TLabel
-      Left = 434
+      Left = 454
       Top = 12
       Width = 145
       Height = 15
@@ -40,9 +41,10 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 434
     end
     object btnOK: TBitBtn
-      Left = 594
+      Left = 614
       Top = 7
       Width = 75
       Height = 25
@@ -75,9 +77,10 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 588
     end
     object btnCancel: TBitBtn
-      Left = 674
+      Left = 694
       Top = 7
       Width = 75
       Height = 25
@@ -91,63 +94,73 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
+      ExplicitLeft = 668
     end
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 758
+    Width = 784
     Height = 250
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 296
-    ExplicitTop = 144
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 758
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 758
+      Width = 784
       Height = 25
       Align = alTop
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 758
     end
     object pnlDetails: TPanel
       Left = 0
       Top = 25
-      Width = 758
+      Width = 784
       Height = 142
       Align = alClient
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 0
-      ExplicitHeight = 167
+      ExplicitWidth = 758
       object Label1: TLabel
         Left = 18
         Top = 13
-        Width = 70
-        Height = 13
+        Width = 80
+        Height = 17
         Caption = 'Product Code'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
       object Label2: TLabel
         Left = 18
         Top = 45
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
       object btnLUProducts: TSpeedButton
-        Left = 562
+        Left = 584
         Top = 8
         Width = 23
         Height = 23
         Caption = '...'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -156,39 +169,39 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       object OrdqtyLbl: TLabel
         Left = 18
         Top = 104
-        Width = 95
-        Height = 13
+        Width = 111
+        Height = 17
         Caption = 'Order Qty (singles)'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object lblQtyDelivered: TLabel
-        Left = 202
+        Left = 224
         Top = 104
-        Width = 93
-        Height = 13
+        Width = 107
+        Height = 17
         Caption = 'Delivered (singles)'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         Visible = False
       end
       object lblQtyInvoiced: TLabel
-        Left = 423
+        Left = 445
         Top = 104
-        Width = 88
-        Height = 13
+        Width = 100
+        Height = 17
         Caption = 'Invoiced (singles)'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -197,29 +210,53 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
       object Label12: TLabel
         Left = 18
         Top = 74
-        Width = 48
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Unit Cost'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
       object Label3: TLabel
-        Left = 202
+        Left = 224
         Top = 74
-        Width = 93
-        Height = 13
+        Width = 105
+        Height = 17
         Caption = 'Cost Unit (singles)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
       object Label13: TLabel
-        Left = 442
+        Left = 474
         Top = 74
-        Width = 58
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Discount %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
       object edtOrderQty: TMemo
-        Left = 112
-        Top = 100
+        Left = 134
+        Top = 102
         Width = 80
         Height = 21
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 5
         WantReturns = False
         WordWrap = False
@@ -229,10 +266,16 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
         OnKeyPress = edtDescriptionKeyPress
       end
       object edtDeliveredQty: TMemo
-        Left = 296
-        Top = 100
+        Left = 339
+        Top = 102
         Width = 80
         Height = 21
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 6
         Visible = False
         WantReturns = False
@@ -241,10 +284,16 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
         OnKeyPress = edtDescriptionKeyPress
       end
       object edtInvoicedQty: TMemo
-        Left = 512
-        Top = 100
+        Left = 552
+        Top = 102
         Width = 80
         Height = 21
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 7
         Visible = False
         WantReturns = False
@@ -253,19 +302,31 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
         OnKeyPress = edtDescriptionKeyPress
       end
       object edtUnitCost: TCREditMoney
-        Left = 112
+        Left = 134
         Top = 70
         Width = 80
-        Height = 21
+        Height = 25
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 2
         OnChange = CheckOK
         OnKeyPress = edtDescriptionKeyPress
       end
       object edtCostUnit: TMemo
-        Left = 296
+        Left = 339
         Top = 70
         Width = 80
         Height = 21
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 3
         WantReturns = False
         WordWrap = False
@@ -273,19 +334,31 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
         OnKeyPress = edtDescriptionKeyPress
       end
       object edtDiscount: TCREditMoney
-        Left = 512
+        Left = 552
         Top = 70
         Width = 80
-        Height = 21
+        Height = 25
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 4
         OnChange = CheckOK
         OnKeyPress = edtDescriptionKeyPress
       end
       object cmbProducts: TComboBox
-        Left = 112
+        Left = 134
         Top = 9
         Width = 433
-        Height = 21
+        Height = 25
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 0
         Text = 'cmbProducts'
         OnEnter = cmbProductsEnter
@@ -293,12 +366,18 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
         OnKeyPress = cmbProductsKeyPress
       end
       object edtDescription: TMemo
-        Left = 112
+        Left = 134
         Top = 41
         Width = 625
         Height = 21
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Lines.Strings = (
           'edtDescription')
+        ParentFont = False
         TabOrder = 1
         WantReturns = False
         WordWrap = False
@@ -309,19 +388,20 @@ object frmWTMaintPurchaseOrderLineProd: TfrmWTMaintPurchaseOrderLineProd
     object pnlNotes: TPanel
       Left = 0
       Top = 167
-      Width = 758
+      Width = 784
       Height = 83
       Align = alBottom
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 758
       DesignSize = (
-        758
+        784
         83)
       object Label7: TLabel
         Left = 18
         Top = 13
-        Width = 30
-        Height = 13
+        Width = 35
+        Height = 17
         Caption = 'Notes'
       end
       object memNotes: TMemo

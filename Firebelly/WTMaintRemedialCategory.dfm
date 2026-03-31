@@ -8,7 +8,7 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,12 +16,12 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
   DesignSize = (
     443
     115)
-  TextHeight = 13
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 46
-    Height = 13
+    Width = 53
+    Height = 17
     Caption = 'Category'
   end
   object btnOK: TBitBtn
@@ -62,7 +62,7 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
     Left = 88
     Top = 16
     Width = 345
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK

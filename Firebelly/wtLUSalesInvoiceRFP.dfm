@@ -7,12 +7,12 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 515
@@ -80,7 +80,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -170,35 +170,35 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     object CustomerLbl: TLabel
       Left = 8
       Top = 14
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 360
       Top = 14
-      Width = 91
-      Height = 13
+      Width = 103
+      Height = 17
       Caption = 'Statement History'
     end
     object Label1: TLabel
       Left = 8
       Top = 46
-      Width = 19
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'Site'
     end
     object edtCustomer: TEdit
-      Left = 64
+      Left = 69
       Top = 10
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
     object btnCustomer: TBitBtn
-      Left = 304
-      Top = 9
+      Left = 309
+      Top = 11
       Width = 23
       Height = 23
       Caption = '...'
@@ -212,18 +212,18 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       OnClick = btnCustomerClick
     end
     object cmbApplications: TComboBox
-      Left = 464
+      Left = 471
       Top = 10
       Width = 233
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Enabled = False
       TabOrder = 2
       OnClick = cmbApplicationsClick
     end
     object btnClear: TBitBtn
-      Left = 704
-      Top = 9
+      Left = 711
+      Top = 11
       Width = 23
       Height = 23
       Hint = 'Clear Statement selection'
@@ -259,18 +259,18 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
         233
         73)
       object Label4: TLabel
-        Left = 20
-        Top = 21
-        Width = 56
-        Height = 13
+        Left = 13
+        Top = 18
+        Width = 64
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Date From:'
       end
       object Label5: TLabel
-        Left = 19
-        Top = 49
-        Width = 42
-        Height = 13
+        Left = 13
+        Top = 45
+        Width = 48
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Date To:'
       end
@@ -322,7 +322,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
         Left = 87
         Top = 13
         Width = 98
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         MaxLength = 10
         TabOrder = 0
@@ -332,7 +332,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
         Left = 87
         Top = 41
         Width = 98
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         MaxLength = 10
         TabOrder = 1
@@ -340,16 +340,16 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       end
     end
     object edtSiteName: TEdit
-      Left = 64
+      Left = 69
       Top = 42
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 5
     end
     object btnSite: TBitBtn
-      Left = 304
-      Top = 41
+      Left = 309
+      Top = 43
       Width = 23
       Height = 23
       Caption = '...'

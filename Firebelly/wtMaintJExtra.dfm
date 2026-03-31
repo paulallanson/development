@@ -7,28 +7,28 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 64
     Top = 159
-    Width = 106
-    Height = 13
+    Width = 128
+    Height = 17
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 195
-    Top = 151
+    Left = 199
+    Top = 156
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -40,8 +40,8 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 283
-    Top = 151
+    Left = 287
+    Top = 156
     Width = 75
     Height = 25
     Cancel = True
@@ -59,38 +59,38 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 446
+    ExplicitWidth = 526
     object Label3: TLabel
       Left = 16
       Top = 20
-      Width = 63
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Extra charge'
     end
     object Label8: TLabel
       Left = 16
       Top = 52
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 16
       Top = 84
-      Width = 50
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Unit price'
     end
     object Label7: TLabel
       Left = 283
       Top = 84
-      Width = 53
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Total price'
     end
     object btnWorktops: TSpeedButton
-      Left = 474
-      Top = 11
+      Left = 485
+      Top = 15
       Width = 23
       Height = 22
       Caption = '...'
@@ -103,10 +103,10 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
       OnClick = btnWorktopsClick
     end
     object dblkpExtras: TDBLookupComboBox
-      Left = 88
+      Left = 98
       Top = 16
       Width = 380
-      Height = 21
+      Height = 25
       KeyField = 'Extra_Charge'
       ListField = 'Description'
       ListSource = dtsExtra
@@ -114,29 +114,29 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
       OnClick = dblkpExtrasClick
     end
     object edtTotalPrice: TCREditMoney
-      Left = 343
+      Left = 355
       Top = 80
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 1
     end
     object edtQuantity: TCREditFloat
-      Left = 88
+      Left = 98
       Top = 48
       Width = 60
-      Height = 21
+      Height = 25
       TabOrder = 2
       Text = 'edtQuantity'
       OnChange = edtQuantityChange
     end
     object edtUnitPrice: TEdit
-      Left = 88
+      Left = 98
       Top = 80
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnChange = edtUnitPriceChange
       OnEnter = edtUnitPriceEnter
@@ -194,8 +194,8 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
       '         order by effective_Date desc) as Price_Unit'
       'from Extra_Charge'
       'where Extra_Charge = :Extra_Charge')
-    Left = 256
-    Top = 72
+    Left = 312
+    Top = 106
     ParamData = <
       item
         Name = 'Extra_Charge'

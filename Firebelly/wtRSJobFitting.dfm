@@ -3,24 +3,24 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Job Fitting Sheet'
-  ClientHeight = 148
+  ClientHeight = 158
   ClientWidth = 349
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
     349
-    148)
-  TextHeight = 13
+    158)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 8
-    Width = 44
-    Height = 13
+    Top = 5
+    Width = 52
+    Height = 17
     Caption = 'Job No'#39's'
   end
   object memSelection: TMemo
@@ -33,8 +33,8 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
     OnChange = EnableRun
   end
   object btnRun: TButton
-    Left = 8
-    Top = 116
+    Left = 7
+    Top = 126
     Width = 75
     Height = 25
     Anchors = [akBottom]
@@ -42,22 +42,24 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
     Enabled = False
     TabOrder = 1
     OnClick = btnRunClick
+    ExplicitTop = 116
   end
   object Button4: TButton
-    Left = 264
-    Top = 116
+    Left = 259
+    Top = 126
     Width = 75
     Height = 25
     Anchors = [akBottom]
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
+    ExplicitTop = 116
   end
   object rdgrpOutput: TRadioGroup
     Left = 248
     Top = 18
     Width = 92
-    Height = 63
+    Height = 68
     Caption = '&Output'
     ItemIndex = 1
     Items.Strings = (
@@ -69,7 +71,7 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
   object chkbxAccounts: TCheckBox
     Left = 8
     Top = 88
-    Width = 97
+    Width = 153
     Height = 17
     Caption = 'Accounts copy'
     TabOrder = 4

@@ -3,80 +3,80 @@ object frmWTMaintClient: TfrmWTMaintClient
   Top = 109
   BorderStyle = bsDialog
   Caption = 'Maintain Client Parameters'
-  ClientHeight = 237
+  ClientHeight = 270
   ClientWidth = 454
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
     454
-    237)
-  TextHeight = 13
+    270)
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 117
-    Height = 13
+    Width = 130
+    Height = 17
     Caption = 'Client Mail Application'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label2: TLabel
     Left = 16
-    Top = 56
-    Width = 144
-    Height = 13
+    Top = 61
+    Width = 160
+    Height = 17
     Caption = 'Default Attachment file type'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label3: TLabel
     Left = 16
-    Top = 152
-    Width = 108
-    Height = 13
+    Top = 170
+    Width = 125
+    Height = 17
     Caption = 'Fax storage Directory'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label4: TLabel
     Left = 16
-    Top = 104
-    Width = 108
-    Height = 13
+    Top = 117
+    Width = 120
+    Height = 17
     Caption = 'Default Mail Account'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object AttachDirecEdit: TEdit
     Left = 16
-    Top = 168
+    Top = 189
     Width = 305
-    Height = 21
+    Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -85,7 +85,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   end
   object BitBtn1: TBitBtn
     Left = 360
-    Top = 168
+    Top = 189
     Width = 75
     Height = 25
     Caption = 'Browse'
@@ -100,7 +100,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   end
   object BitBtn2: TBitBtn
     Left = 176
-    Top = 200
+    Top = 233
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -116,10 +116,11 @@ object frmWTMaintClient: TfrmWTMaintClient
     ParentFont = False
     TabOrder = 2
     OnClick = BitBtn2Click
+    ExplicitTop = 191
   end
   object CancelBitBtn: TBitBtn
     Left = 256
-    Top = 200
+    Top = 233
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -134,15 +135,16 @@ object frmWTMaintClient: TfrmWTMaintClient
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
+    ExplicitTop = 191
   end
   object ApplicDBLCB: TDBLookupComboBox
     Left = 16
-    Top = 24
+    Top = 28
     Width = 249
-    Height = 21
+    Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     KeyField = 'Email_Application'
@@ -153,13 +155,13 @@ object frmWTMaintClient: TfrmWTMaintClient
     OnClick = ApplicDBLCBClick
   end
   object TypeDBLCB: TDBLookupComboBox
-    Left = 16
-    Top = 72
+    Left = 15
+    Top = 82
     Width = 249
-    Height = 21
+    Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     KeyField = 'ExportFilter'
@@ -171,7 +173,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   end
   object ApplicClrBitBtn: TBitBtn
     Left = 270
-    Top = 24
+    Top = 28
     Width = 25
     Height = 25
     Hint = 'Clear Deafult Client Application'
@@ -200,7 +202,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   end
   object AttachClrBitBtn: TBitBtn
     Left = 270
-    Top = 71
+    Top = 82
     Width = 25
     Height = 25
     Hint = 'Clear Default Attachment file type'
@@ -229,7 +231,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   end
   object DirectClrBitBtn: TBitBtn
     Left = 326
-    Top = 167
+    Top = 189
     Width = 25
     Height = 25
     Hint = 'Clear Default Attachment Storage Directory'
@@ -258,12 +260,12 @@ object frmWTMaintClient: TfrmWTMaintClient
   end
   object edtEMailAccount: TEdit
     Left = 16
-    Top = 118
+    Top = 137
     Width = 305
-    Height = 21
+    Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -282,8 +284,8 @@ object frmWTMaintClient: TfrmWTMaintClient
     SQL.Strings = (
       'select * from'
       'ExportFilter')
-    Left = 280
-    Top = 64
+    Left = 358
+    Top = 16
   end
   object GepApplicDataSource: TDataSource
     DataSet = GetApplicQuery
