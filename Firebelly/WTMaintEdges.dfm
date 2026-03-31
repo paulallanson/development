@@ -3,37 +3,37 @@ object frmWTMaintEdges: TfrmWTMaintEdges
   Top = 184
   BorderStyle = bsDialog
   Caption = 'Edge profile'
-  ClientHeight = 234
-  ClientWidth = 784
+  ClientHeight = 243
+  ClientWidth = 776
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    784
-    234)
-  TextHeight = 13
+    776
+    243)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 20
-    Width = 59
-    Height = 13
+    Top = 34
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label7: TLabel
     Left = 368
-    Top = 1
-    Width = 31
-    Height = 13
+    Top = 7
+    Width = 36
+    Height = 17
     Caption = 'Image'
   end
   object btnOK: TBitBtn
     Left = 302
-    Top = 199
+    Top = 208
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -44,10 +44,11 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 190
   end
   object BitBtn2: TBitBtn
     Left = 390
-    Top = 199
+    Top = 208
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -56,19 +57,21 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 190
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 191
+    Top = 200
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 3
+    ExplicitTop = 182
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
-    Top = 154
+    Top = 171
     Width = 161
     Height = 17
     Caption = 'Show Edge Profile Online'
@@ -76,15 +79,15 @@ object frmWTMaintEdges: TfrmWTMaintEdges
   end
   object edtImagePath: TEdit
     Left = 368
-    Top = 16
+    Top = 30
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 5
     Text = 'edtImagePath'
   end
   object Button3: TButton
     Left = 677
-    Top = 14
+    Top = 30
     Width = 75
     Height = 25
     Caption = 'Browse'
@@ -93,7 +96,7 @@ object frmWTMaintEdges: TfrmWTMaintEdges
   end
   object Panel1: TPanel
     Left = 368
-    Top = 50
+    Top = 64
     Width = 289
     Height = 100
     BorderStyle = bsSingle
@@ -1151,9 +1154,9 @@ object frmWTMaintEdges: TfrmWTMaintEdges
   end
   object edtDescription: TEdit
     Left = 85
-    Top = 16
+    Top = 30
     Width = 244
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -1165,8 +1168,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Bi' +
       'tmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.em' +
       'f)|*.emf|Metafiles (*.wmf)|*.wmf'
-    Left = 616
-    Top = 56
+    Left = 666
+    Top = 102
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'
@@ -1179,8 +1182,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
       '      Image_Path = :Image_Path'
       'WHERE'
       '  Edge_Profile = :Edge_Profile')
-    Left = 24
-    Top = 56
+    Left = 30
+    Top = 84
     ParamData = <
       item
         Name = 'Description'
@@ -1207,8 +1210,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
       'Select Max(Edge_Profile)+1, :GUID'
       'From Edge_Profile'
       ' ')
-    Left = 80
-    Top = 56
+    Left = 100
+    Top = 84
     ParamData = <
       item
         Name = 'GUID'
@@ -1222,8 +1225,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
       'Select Edge_Profile'
       'From Edge_Profile'
       'Where Description = :GUID')
-    Left = 192
-    Top = 56
+    Left = 240
+    Top = 84
     ParamData = <
       item
         Name = 'GUID'
@@ -1244,8 +1247,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
       'Where'
       '(Category = :Category) '
       '')
-    Left = 256
-    Top = 56
+    Left = 320
+    Top = 84
     ParamData = <
       item
         Name = 'Description'

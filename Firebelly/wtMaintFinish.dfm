@@ -3,51 +3,51 @@ object frmWtMaintFinish: TfrmWtMaintFinish
   Top = 125
   BorderStyle = bsDialog
   Caption = 'Worktop Finish'
-  ClientHeight = 359
+  ClientHeight = 353
   ClientWidth = 867
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     867
-    359)
-  TextHeight = 13
+    353)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object Label7: TLabel
-    Left = 472
-    Top = 89
-    Width = 31
-    Height = 13
+    Left = 481
+    Top = 82
+    Width = 36
+    Height = 17
     Caption = 'Image'
   end
   object Label9: TLabel
     Left = 8
     Top = 54
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label10: TLabel
     Left = 8
     Top = 86
-    Width = 35
-    Height = 13
+    Width = 39
+    Height = 23
     Caption = 'Details'
   end
   object btnOK: TBitBtn
     Left = 352
-    Top = 322
+    Top = 316
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -58,10 +58,11 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     NumGlyphs = 2
     TabOrder = 7
     OnClick = btnOKClick
+    ExplicitTop = 322
   end
   object BitBtn2: TBitBtn
     Left = 440
-    Top = 322
+    Top = 316
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -70,30 +71,33 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 8
+    ExplicitTop = 322
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 327
+    Top = 321
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 6
+    ExplicitTop = 327
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
-    Top = 299
+    Top = 293
     Width = 161
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show Worktop Finish Online'
     TabOrder = 5
+    ExplicitTop = 299
   end
   object edtImagePath: TEdit
-    Left = 472
+    Left = 481
     Top = 104
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = 'edtImagePath'
   end
@@ -107,7 +111,7 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     OnClick = Button3Click
   end
   object Panel1: TPanel
-    Left = 472
+    Left = 481
     Top = 138
     Width = 289
     Height = 100
@@ -1165,24 +1169,24 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     end
   end
   object edtDescription: TEdit
-    Left = 72
+    Left = 81
     Top = 16
     Width = 380
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
   end
   object edtShortDescription: TEdit
-    Left = 72
+    Left = 81
     Top = 50
     Width = 481
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtShortDescription'
   end
   object memLongDescription: TMemo
-    Left = 72
+    Left = 81
     Top = 88
     Width = 385
     Height = 179
@@ -1213,8 +1217,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
       '      Image_Path = :Image_Path'
       'WHERE'
       '  Worktop_Finish = :Worktop_Finish')
-    Left = 576
-    Top = 256
+    Left = 640
+    Top = 248
     ParamData = <
       item
         Name = 'Description'
@@ -1247,8 +1251,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
       'Select Max(Worktop_Finish)+1, :GUID'
       'From Worktop_Finish'
       ' ')
-    Left = 632
-    Top = 256
+    Left = 718
+    Top = 248
     ParamData = <
       item
         Name = 'GUID'

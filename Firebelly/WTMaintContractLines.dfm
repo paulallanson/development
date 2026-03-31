@@ -3,30 +3,30 @@ object frmWTMaintContractLines: TfrmWTMaintContractLines
   Top = 141
   BorderStyle = bsDialog
   Caption = 'Add Drawing Lines'
-  ClientHeight = 131
-  ClientWidth = 387
+  ClientHeight = 135
+  ClientWidth = 363
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    387
-    131)
-  TextHeight = 13
+    363
+    135)
+  TextHeight = 17
   object Label1: TLabel
     Left = 24
     Top = 32
-    Width = 128
-    Height = 13
+    Width = 145
+    Height = 17
     Caption = 'Number of drawing lines'
   end
   object btnOK: TBitBtn
-    Left = 108
-    Top = 80
+    Left = 78
+    Top = 84
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -34,10 +34,12 @@ object frmWTMaintContractLines: TfrmWTMaintContractLines
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
+    ExplicitLeft = 96
+    ExplicitTop = 71
   end
   object BitBtn2: TBitBtn
-    Left = 204
-    Top = 80
+    Left = 174
+    Top = 84
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -45,12 +47,14 @@ object frmWTMaintContractLines: TfrmWTMaintContractLines
     NumGlyphs = 2
     TabOrder = 1
     OnClick = BitBtn2Click
+    ExplicitLeft = 192
+    ExplicitTop = 71
   end
   object spnLines: TSpinEdit
-    Left = 152
-    Top = 27
+    Left = 192
+    Top = 29
     Width = 57
-    Height = 22
+    Height = 27
     MaxValue = 1000
     MinValue = 1
     TabOrder = 2

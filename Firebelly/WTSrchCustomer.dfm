@@ -7,13 +7,13 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stbrDetails: TStatusBar
     Left = 0
     Top = 423
@@ -45,7 +45,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -53,7 +53,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -135,8 +135,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       object Label1: TLabel
         Left = 8
         Top = 36
-        Width = 86
-        Height = 13
+        Width = 99
+        Height = 17
         Anchors = [akLeft, akBottom]
         Caption = 'Customer Search'
       end
@@ -154,7 +154,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
         Left = 8
         Top = 56
         Width = 257
-        Height = 21
+        Height = 25
         Anchors = [akLeft, akBottom]
         TabOrder = 1
         OnChange = edtSearchChange

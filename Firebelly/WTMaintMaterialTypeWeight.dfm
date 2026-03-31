@@ -7,24 +7,24 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
-    Top = 32
-    Width = 77
-    Height = 13
+    Top = 27
+    Width = 89
+    Height = 17
     Caption = 'Thickness (mm)'
   end
   object Label2: TLabel
     Left = 16
     Top = 64
-    Width = 85
-    Height = 13
+    Width = 96
+    Height = 17
     Caption = 'Weight (kg)/sqm'
   end
   object btnOK: TBitBtn
@@ -52,10 +52,10 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     TabOrder = 1
   end
   object dblkpThickness: TDBLookupComboBox
-    Left = 112
-    Top = 32
+    Left = 121
+    Top = 23
     Width = 100
-    Height = 21
+    Height = 25
     KeyField = 'Thickness'
     ListField = 'Thickness_mm'
     ListSource = dtsThickness
@@ -63,10 +63,10 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     OnClick = EnableOK
   end
   object edtWeight: TCREditMoney
-    Left = 112
+    Left = 121
     Top = 60
     Width = 100
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = '0.00'
     OnChange = EnableOK

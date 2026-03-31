@@ -8,21 +8,21 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 29
-    Width = 59
-    Height = 13
+    Top = 36
+    Width = 71
+    Height = 17
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,14 +30,14 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
   object Label7: TLabel
     Left = 368
     Top = 10
-    Width = 31
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Image'
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
     Top = 146
-    Width = 161
+    Width = 257
     Height = 17
     Caption = 'Show Cut Out Feature Online'
     TabOrder = 1
@@ -86,15 +86,15 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
   end
   object edtImagePath: TEdit
     Left = 368
-    Top = 25
+    Top = 32
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 4
     Text = 'edtImagePath'
   end
   object Button3: TButton
     Left = 677
-    Top = 23
+    Top = 30
     Width = 75
     Height = 25
     Caption = 'Browse'
@@ -103,16 +103,16 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
   end
   object edtDescription: TEdit
     Left = 85
-    Top = 25
+    Top = 32
     Width = 244
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
   end
   object Panel1: TPanel
     Left = 368
-    Top = 55
+    Top = 65
     Width = 289
     Height = 100
     BorderStyle = bsSingle
@@ -1166,6 +1166,7 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
         298A5314A6294C5298A5314A6294C5298A5314A6294C5298A5314A6294C5298A
         5314A6294C5298A5314A6294C5298A5314A6295FFFD9}
       Stretch = True
+      ExplicitTop = 2
     end
   end
   object OpenPictureDialog1: TOpenPictureDialog
@@ -1175,8 +1176,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Bi' +
       'tmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.em' +
       'f)|*.emf|Metafiles (*.wmf)|*.wmf'
-    Left = 616
-    Top = 49
+    Left = 698
+    Top = 69
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'
@@ -1190,8 +1191,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
       '      Image_Path = :Image_Path'
       'WHERE'
       '  CutOut = :CutOut')
-    Left = 24
-    Top = 80
+    Left = 30
+    Top = 68
     ParamData = <
       item
         Name = 'Description'

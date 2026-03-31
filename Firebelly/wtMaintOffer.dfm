@@ -4,56 +4,56 @@ object frmwtMaintOffer: TfrmwtMaintOffer
   BorderStyle = bsDialog
   Caption = 'Offers'
   ClientHeight = 270
-  ClientWidth = 781
+  ClientWidth = 819
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    781
+    819
     270)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 28
-    Width = 22
-    Height = 13
+    Width = 24
+    Height = 17
     Caption = 'Title'
   end
   object Label2: TLabel
     Left = 16
     Top = 144
-    Width = 70
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'Effective Date'
   end
   object Label3: TLabel
     Left = 16
     Top = 176
-    Width = 80
-    Height = 13
+    Width = 89
+    Height = 17
     Caption = 'Ineffective Date'
   end
   object Label7: TLabel
-    Left = 389
+    Left = 414
     Top = 5
-    Width = 31
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Image'
   end
   object Label9: TLabel
     Left = 16
     Top = 62
-    Width = 90
-    Height = 13
+    Width = 101
+    Height = 17
     Caption = 'Short Description'
   end
   object btnOK: TBitBtn
-    Left = 308
+    Left = 324
     Top = 232
     Width = 75
     Height = 25
@@ -67,7 +67,7 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 404
+    Left = 420
     Top = 232
     Width = 75
     Height = 25
@@ -87,16 +87,16 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     TabOrder = 10
   end
   object edtImagePath: TEdit
-    Left = 389
+    Left = 414
     Top = 24
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 8
     Text = 'edtImagePath'
   end
   object Button3: TButton
-    Left = 689
-    Top = 22
+    Left = 714
+    Top = 24
     Width = 75
     Height = 25
     Caption = 'Browse'
@@ -104,7 +104,7 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     OnClick = Button3Click
   end
   object Panel1: TPanel
-    Left = 389
+    Left = 414
     Top = 59
     Width = 293
     Height = 113
@@ -1162,8 +1162,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     end
   end
   object btnEffectiveDate: TBitBtn
-    Left = 206
-    Top = 138
+    Left = 227
+    Top = 141
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -1184,8 +1184,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     OnClick = btnEffectiveDateClick
   end
   object BitBtn5: TBitBtn
-    Left = 240
-    Top = 138
+    Left = 261
+    Top = 141
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -1206,8 +1206,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     OnClick = BitBtn5Click
   end
   object BitBtn1: TBitBtn
-    Left = 206
-    Top = 170
+    Left = 227
+    Top = 173
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -1228,8 +1228,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     OnClick = BitBtn1Click
   end
   object BitBtn3: TBitBtn
-    Left = 240
-    Top = 170
+    Left = 261
+    Top = 173
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -1250,36 +1250,34 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     OnClick = BitBtn3Click
   end
   object edtEffectiveDate: TEdit
-    Left = 92
+    Left = 128
     Top = 140
     Width = 89
-    Height = 21
-    Anchors = [akTop, akRight]
+    Height = 25
     TabOrder = 2
     OnChange = EnableOK
     OnExit = edtEffectiveDateExit
   end
   object edtInEffectiveDate: TEdit
-    Left = 92
+    Left = 128
     Top = 172
     Width = 89
-    Height = 21
-    Anchors = [akTop, akRight]
+    Height = 25
     TabOrder = 5
     OnChange = EnableOK
     OnExit = edtEffectiveDateExit
   end
   object edtDescription: TEdit
-    Left = 104
+    Left = 129
     Top = 24
     Width = 267
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
   end
   object edtShortDescription: TMemo
-    Left = 104
+    Left = 129
     Top = 56
     Width = 265
     Height = 73
@@ -1294,8 +1292,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Bi' +
       'tmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.em' +
       'f)|*.emf|Metafiles (*.wmf)|*.wmf'
-    Left = 688
-    Top = 64
+    Left = 712
+    Top = 72
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'

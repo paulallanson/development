@@ -8,7 +8,7 @@ object frmWTMaintPayments: TfrmWTMaintPayments
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,33 +17,33 @@ object frmWTMaintPayments: TfrmWTMaintPayments
   DesignSize = (
     452
     196)
-  TextHeight = 13
+  TextHeight = 17
   object lblName: TLabel
     Left = 8
     Top = 24
-    Width = 24
-    Height = 13
+    Width = 27
+    Height = 17
     Caption = 'Date'
   end
   object Label2: TLabel
     Left = 8
     Top = 120
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label1: TLabel
     Left = 8
     Top = 56
-    Width = 41
-    Height = 13
+    Width = 45
+    Height = 17
     Caption = 'Amount'
   end
   object Label3: TLabel
     Left = 8
     Top = 88
-    Width = 41
-    Height = 13
+    Width = 46
+    Height = 17
     Caption = 'Method'
   end
   object btnOK: TBitBtn
@@ -59,6 +59,7 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
+    ExplicitTop = 148
   end
   object BitBtn2: TBitBtn
     Left = 236
@@ -71,12 +72,13 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 6
+    ExplicitTop = 148
   end
   object dblkpPaymentMethod: TDBLookupComboBox
     Left = 96
     Top = 84
     Width = 161
-    Height = 21
+    Height = 25
     KeyField = 'Payment_Method'
     ListField = 'Payment_Method_Description'
     ListSource = dtsPaymentMethod
@@ -87,14 +89,14 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Left = 96
     Top = 20
     Width = 81
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = EnableOK
     OnExit = edtDateExit
   end
   object btnDate: TBitBtn
     Left = 184
-    Top = 18
+    Top = 20
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -118,7 +120,7 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Left = 96
     Top = 120
     Width = 313
-    Height = 21
+    Height = 25
     TabOrder = 4
     Text = 'edtPaymentDescription'
     OnChange = EnableOK
@@ -127,7 +129,7 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Left = 96
     Top = 52
     Width = 80
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = 'edtPaidAmount'
   end

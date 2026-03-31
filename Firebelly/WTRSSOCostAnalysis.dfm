@@ -3,7 +3,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Sales Order Cost Analysis Report'
-  ClientHeight = 375
+  ClientHeight = 393
   ClientWidth = 539
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,7 +16,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   OnDestroy = FormDestroy
   DesignSize = (
     539
-    375)
+    393)
   TextHeight = 17
   object lstbxCustomersCode: TListBox
     Left = 96
@@ -44,18 +44,18 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object btnPrint: TButton
     Left = 8
-    Top = 338
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 328
+    ExplicitTop = 329
   end
   object Button4: TButton
-    Left = 416
-    Top = 338
+    Left = 438
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -63,13 +63,12 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 328
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 80
     Width = 105
-    Height = 73
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -83,27 +82,27 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     Left = 8
     Top = 205
     Width = 209
-    Height = 84
+    Height = 121
     Caption = 'Order Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
-      Top = 23
+      Top = 39
       Width = 33
       Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 53
+      Top = 69
       Width = 17
       Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 19
+      Top = 35
       Width = 100
       Height = 25
       TabOrder = 0
@@ -112,7 +111,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 49
+      Top = 65
       Width = 100
       Height = 25
       TabOrder = 1
@@ -121,7 +120,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 19
+      Top = 35
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -143,7 +142,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 49
+      Top = 65
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -234,29 +233,29 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object btnPreview: TButton
     Left = 96
-    Top = 338
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
-    ExplicitTop = 328
+    ExplicitTop = 329
   end
   object btnExcel: TButton
     Left = 184
-    Top = 338
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitTop = 328
+    ExplicitTop = 329
   end
   object OleContainer1: TOleContainer
-    Left = 271
-    Top = 216
+    Left = 263
+    Top = 91
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -290,9 +289,9 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object rdgrpReps: TRadioGroup
     Left = 8
-    Top = 1
+    Top = 8
     Width = 105
-    Height = 73
+    Height = 68
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -304,14 +303,14 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object grpbxReps: TGroupBox
     Left = 120
-    Top = 8
+    Top = 15
     Width = 249
-    Height = 66
+    Height = 62
     ParentBackground = False
     TabOrder = 13
     object Label3: TLabel
       Left = 8
-      Top = 12
+      Top = 7
       Width = 23
       Height = 17
       Caption = 'Rep'

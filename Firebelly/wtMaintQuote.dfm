@@ -10,7 +10,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
   Constraints.MinWidth = 1123
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -19,7 +19,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 645
@@ -33,7 +33,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Width = 50
       end>
     ExplicitTop = 636
-    ExplicitWidth = 1105
+    ExplicitWidth = 1231
   end
   object pnlBody: TPanel
     Left = 0
@@ -49,7 +49,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1105
+    ExplicitWidth = 1231
     ExplicitHeight = 636
     object pnlFoot: TPanel
       Left = 0
@@ -60,7 +60,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       ParentBackground = False
       TabOrder = 0
       ExplicitTop = 455
-      ExplicitWidth = 1105
+      ExplicitWidth = 1231
       DesignSize = (
         1237
         181)
@@ -163,7 +163,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
-        ExplicitLeft = 564
+        ExplicitLeft = 690
         DesignSize = (
           540
           179)
@@ -452,7 +452,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Align = alTop
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 1105
+      ExplicitWidth = 1231
       object pnlRevenueCentre: TPanel
         Left = 1
         Top = 128
@@ -461,7 +461,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Align = alBottom
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1103
+        ExplicitWidth = 1229
         DesignSize = (
           1235
           40)
@@ -534,7 +534,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1103
+        ExplicitWidth = 1229
         DesignSize = (
           1235
           127)
@@ -832,7 +832,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           KeyField = 'Operator'
           ListField = 'Operator_Name'
           TabOrder = 2
-          ExplicitLeft = 961
+          ExplicitLeft = 1087
         end
         object dblkpMaterial: TDBLookupComboBox
           Left = 85
@@ -852,7 +852,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Anchors = [akTop, akRight]
           TabOrder = 4
           OnChange = edtReferenceChange
-          ExplicitLeft = 618
+          ExplicitLeft = 744
         end
         object btnLUMatType: TBitBtn
           Left = 341
@@ -880,7 +880,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           MaxLength = 255
           TabOrder = 6
           OnChange = edtDescriptionChange
-          ExplicitWidth = 422
+          ExplicitWidth = 548
         end
         object edtFollowUpDate: TEdit
           Left = 773
@@ -890,7 +890,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Anchors = [akTop, akRight]
           TabOrder = 7
           OnExit = edtFollowUpDateExit
-          ExplicitLeft = 641
+          ExplicitLeft = 767
         end
         object btnFollowUpDate: TBitBtn
           Left = 869
@@ -914,7 +914,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           NumGlyphs = 2
           TabOrder = 8
           OnClick = btnFollowUpDateClick
-          ExplicitLeft = 737
+          ExplicitLeft = 863
         end
         object edtProject: TEdit
           Left = 750
@@ -924,7 +924,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Anchors = [akTop, akRight]
           TabOrder = 9
           OnChange = edtProjectChange
-          ExplicitLeft = 618
+          ExplicitLeft = 744
         end
         object edtExpiryDate: TEdit
           Left = 432
@@ -963,10 +963,10 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Top = 169
       Width = 1237
       Height = 295
-      ActivePage = tbCutOuts
+      ActivePage = tbCustomer
       Align = alClient
       TabOrder = 2
-      ExplicitWidth = 1105
+      ExplicitWidth = 1231
       ExplicitHeight = 286
       object tbCustomer: TTabSheet
         Caption = 'Customer'
@@ -1577,6 +1577,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
           TabOrder = 0
           OnDblClick = sgCutOutsDblClick
+          ExplicitWidth = 1137
+          ExplicitHeight = 226
           ColWidths = (
             40
             158
@@ -1594,6 +1596,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Align = alRight
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 1137
+          ExplicitHeight = 226
           object btnAddCutOuts: TBitBtn
             Left = 8
             Top = 8
@@ -1633,6 +1637,8 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
+          ExplicitTop = 226
+          ExplicitWidth = 1223
           object lblCOTotalSales: TLabel
             Left = 8
             Top = 7
@@ -2180,7 +2186,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 1097
           object Label25: TLabel
             Left = 2
             Top = 0
@@ -2204,8 +2209,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
-          ExplicitLeft = 1056
-          ExplicitHeight = 237
           object btnExcel: TToolButton
             Left = 0
             Top = 0
@@ -2268,7 +2271,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           TabOrder = 2
           OnDragDrop = stvDocumentsDragDrop
           OnDragOver = stvDocumentsDragOver
-          ExplicitHeight = 237
         end
         object slvDocuments: TShellListView
           Left = 161
@@ -2286,7 +2288,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           OnMouseMove = slvDocumentsMouseMove
           TabOrder = 3
           ViewStyle = vsReport
-          ExplicitWidth = 901
         end
       end
       object tbNotes: TTabSheet
@@ -3629,6 +3630,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
             item
               Expanded = False
               FieldName = 'Quote'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 70
               Visible = True
             end
@@ -3636,6 +3642,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Date_Raised'
               Title.Caption = 'Date'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 78
               Visible = True
             end
@@ -3643,12 +3654,22 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Quote_Number'
               Title.Caption = 'Quote Reference'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 91
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Description'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 257
               Visible = True
             end
@@ -3656,6 +3677,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Material_Type_Description'
               Title.Caption = 'Material'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 122
               Visible = True
             end
@@ -3663,12 +3689,22 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Original_Quote'
               Title.Caption = 'Original Quote'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Complete_Price'
               Title.Caption = 'Complete'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 69
               Visible = True
             end
@@ -3676,6 +3712,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Installation_price'
               Title.Caption = 'Install'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 68
               Visible = True
             end
@@ -3683,6 +3724,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Survey_price'
               Title.Caption = 'Survey'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 68
               Visible = True
             end
@@ -3690,6 +3736,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Delivery_Price'
               Title.Caption = 'Delivery'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 67
               Visible = True
             end
@@ -3697,6 +3748,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Total_Price'
               Title.Caption = 'Total'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 71
               Visible = True
             end
@@ -3704,6 +3760,11 @@ object frmWTMaintQuote: TfrmWTMaintQuote
               Expanded = False
               FieldName = 'Quote_status_description'
               Title.Caption = 'Status'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 204
               Visible = True
             end>

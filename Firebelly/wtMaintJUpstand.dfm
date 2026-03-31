@@ -3,24 +3,24 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   Top = 166
   BorderStyle = bsDialog
   Caption = 'Maintain upstand'
-  ClientHeight = 272
-  ClientWidth = 615
+  ClientHeight = 284
+  ClientWidth = 640
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    615
-    272)
-  TextHeight = 13
+    640
+    284)
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 88
-    Top = 244
+    Top = 256
     Width = 106
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -31,10 +31,11 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 244
   end
   object btnOK: TBitBtn
     Left = 222
-    Top = 236
+    Top = 248
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -49,7 +50,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   end
   object BitBtn2: TBitBtn
     Left = 318
-    Top = 236
+    Top = 248
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -63,7 +64,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 609
+    Width = 632
     Height = 225
     BevelOuter = bvNone
     ParentBackground = False
@@ -71,76 +72,76 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 48
-      Width = 46
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Worktop'
     end
     object Label3: TLabel
       Left = 16
       Top = 73
-      Width = 50
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Thickness'
     end
     object Label4: TLabel
-      Left = 416
+      Left = 437
       Top = 72
-      Width = 50
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Unit price'
     end
     object Label5: TLabel
       Left = 16
       Top = 100
-      Width = 62
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Height (mm)'
     end
     object Label6: TLabel
       Left = 16
       Top = 132
-      Width = 63
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Length (mm)'
     end
     object Label8: TLabel
       Left = 16
       Top = 164
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label7: TLabel
-      Left = 416
+      Left = 437
       Top = 164
-      Width = 53
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Total price'
     end
     object Label9: TLabel
-      Left = 416
+      Left = 437
       Top = 100
-      Width = 71
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'Polish Price/m'
     end
     object Label10: TLabel
       Left = 16
       Top = 200
-      Width = 64
-      Height = 13
+      Width = 74
+      Height = 17
       Caption = 'Material Use'
     end
     object SpeedButton1: TSpeedButton
-      Left = 290
-      Top = 195
+      Left = 306
+      Top = 197
       Width = 23
       Height = 22
       Caption = '...'
@@ -153,41 +154,41 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnClick = SpeedButton1Click
     end
     object Label12: TLabel
-      Left = 200
+      Left = 216
       Top = 100
-      Width = 113
-      Height = 13
+      Width = 130
+      Height = 17
       Caption = 'No. of Polished Edges'
     end
     object Label13: TLabel
-      Left = 200
+      Left = 216
       Top = 132
-      Width = 123
-      Height = 13
+      Width = 139
+      Height = 17
       Caption = 'No. of Polished Lengths'
     end
     object Label14: TLabel
-      Left = 416
+      Left = 437
       Top = 200
-      Width = 91
-      Height = 13
+      Width = 106
+      Height = 17
       Caption = 'Total No of Pieces'
     end
     object edtMaterial: TEdit
-      Left = 88
+      Left = 104
       Top = 8
       Width = 145
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
     end
     object dblkpWorktop: TDBLookupComboBox
-      Left = 88
+      Left = 104
       Top = 40
       Width = 390
-      Height = 21
+      Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
       ListSource = dtsWorktops
@@ -195,10 +196,10 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnClick = dblkpWorktopClick
     end
     object dblkpWTThickness: TDBLookupComboBox
-      Left = 88
+      Left = 104
       Top = 69
       Width = 89
-      Height = 21
+      Height = 25
       KeyField = 'Thickness'
       ListField = 'Thickness_mm'
       ListSource = dtsWTThickness
@@ -206,34 +207,34 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnClick = dblkpWTThicknessClick
     end
     object edtUnitPrice: TCREditMoney
-      Left = 496
+      Left = 528
       Top = 68
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnChange = edtDepthChange
     end
     object edtDepth: TCREditInt
-      Left = 88
+      Left = 104
       Top = 96
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 5
       OnChange = edtDepthChange
     end
     object edtLength: TCREditInt
-      Left = 88
+      Left = 104
       Top = 128
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = edtDepthChange
     end
     object spnQuantity: TSpinEdit
-      Left = 88
+      Left = 104
       Top = 159
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 100
       MinValue = 1
       TabOrder = 7
@@ -241,38 +242,38 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnChange = spnQuantityChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 496
+      Left = 528
       Top = 160
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 8
     end
     object edtPolishPrice: TCREditMoney
-      Left = 496
+      Left = 528
       Top = 96
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = edtDepthChange
     end
     object dblkpMaterialUse: TDBLookupComboBox
-      Left = 88
+      Left = 104
       Top = 196
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'Material_Use'
       ListField = 'Use_Description'
       ListSource = dtsMaterialUse
       TabOrder = 9
     end
     object spnNoOfDepths: TSpinEdit
-      Left = 320
+      Left = 360
       Top = 95
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 2
       MinValue = 0
       TabOrder = 10
@@ -280,10 +281,10 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnChange = spnQuantityChange
     end
     object spnNoOfLengths: TSpinEdit
-      Left = 320
+      Left = 360
       Top = 127
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 2
       MinValue = 0
       TabOrder = 11
@@ -291,10 +292,10 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnChange = spnQuantityChange
     end
     object spnNoOfPieces: TSpinEdit
-      Left = 528
+      Left = 560
       Top = 195
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 100
       MinValue = 1
       TabOrder = 12
@@ -320,8 +321,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       'from worktop'
       'where material_type = :material_type'
       'Order by Description')
-    Left = 266
-    Top = 72
+    Left = 205
+    Top = 10
     ParamData = <
       item
         Name = 'material_type'
@@ -340,8 +341,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       'where worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness'
       'order by thickness_mm')
-    Left = 418
-    Top = 124
+    Left = 235
+    Top = 91
     ParamData = <
       item
         Name = 'worktop'
@@ -349,13 +350,13 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 206
-    Top = 72
+    Left = 170
+    Top = 18
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 380
-    Top = 84
+    Left = 283
+    Top = 65
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -379,8 +380,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 338
-    Top = 114
+    Left = 263
+    Top = 55
     ParamData = <
       item
         Name = 'Worktop'
@@ -401,8 +402,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
         '      (inactive = '#39'N'#39' or inactive is null) OR Material_Use = :Ma' +
         'terial_Use'
       'order by Use_Description ASC')
-    Left = 360
-    Top = 112
+    Left = 210
+    Top = 100
     ParamData = <
       item
         Name = 'Material_Use'
@@ -410,7 +411,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   end
   object dtsMaterialUse: TDataSource
     DataSet = qryMaterialUse
-    Left = 360
-    Top = 64
+    Left = 130
+    Top = 80
   end
 end

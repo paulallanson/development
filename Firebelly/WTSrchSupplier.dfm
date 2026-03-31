@@ -7,13 +7,13 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -24,7 +24,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -32,7 +32,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -55,8 +55,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 298
-    ExplicitHeight = 239
+    ExplicitLeft = 303
+    ExplicitHeight = 257
     DesignSize = (
       98
       266)
@@ -98,6 +98,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       Enabled = False
       TabOrder = 3
       OnClick = btnSweepClick
+      ExplicitTop = 225
     end
   end
   object pnlBottom: TPanel
@@ -109,16 +110,16 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 239
-    ExplicitWidth = 396
+    ExplicitTop = 257
+    ExplicitWidth = 401
     DesignSize = (
       407
       89)
     object Label1: TLabel
       Left = 8
       Top = 36
-      Width = 80
-      Height = 13
+      Width = 91
+      Height = 17
       Anchors = [akLeft, akBottom]
       Caption = 'Supplier Search'
     end
@@ -136,14 +137,14 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       Left = 8
       Top = 56
       Width = 257
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akBottom]
       TabOrder = 1
       OnChange = edtSearchChange
     end
     object btnSelect: TBitBtn
-      Left = 319
-      Top = 6
+      Left = 324
+      Top = 10
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -153,8 +154,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       OnClick = btnSelectClick
     end
     object BitBtn2: TBitBtn
-      Left = 319
-      Top = 46
+      Left = 324
+      Top = 50
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -175,8 +176,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       item
         Width = 50
       end>
-    ExplicitTop = 337
-    ExplicitWidth = 402
+    ExplicitTop = 346
+    ExplicitWidth = 401
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

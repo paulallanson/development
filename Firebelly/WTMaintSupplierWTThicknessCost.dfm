@@ -7,20 +7,20 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 24
     Top = 80
-    Width = 53
-    Height = 13
+    Width = 64
+    Height = 17
     Caption = 'Thickness:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -28,12 +28,12 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object Label2: TLabel
     Left = 24
     Top = 48
-    Width = 49
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Worktop:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -41,26 +41,38 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object Label4: TLabel
     Left = 24
     Top = 116
-    Width = 50
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Cost Price'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
   end
   object Label5: TLabel
     Left = 224
     Top = 116
-    Width = 67
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'per sq. metre'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
   end
   object lblWorktop: TLabel
     Left = 104
     Top = 48
-    Width = 59
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'lblWorktop'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -68,12 +80,12 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object Label7: TLabel
     Left = 24
     Top = 16
-    Width = 46
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Supplier:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -81,12 +93,12 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object lblSupplierName: TLabel
     Left = 104
     Top = 16
-    Width = 87
-    Height = 13
+    Width = 103
+    Height = 17
     Caption = 'lblSupplierName'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -94,12 +106,12 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   object lblThickness: TLabel
     Left = 104
     Top = 80
-    Width = 63
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'lblThickness'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -111,8 +123,14 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
     Height = 25
     Caption = 'OK'
     Default = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ModalResult = 1
     NumGlyphs = 2
+    ParentFont = False
     TabOrder = 0
     OnClick = btnOKClick
   end
@@ -123,8 +141,14 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
     Height = 25
     Cancel = True
     Caption = 'Cancel'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ModalResult = 2
     NumGlyphs = 2
+    ParentFont = False
     TabOrder = 1
     OnClick = BitBtn2Click
   end
@@ -132,7 +156,13 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
     Left = 104
     Top = 112
     Width = 105
-    Height = 21
+    Height = 25
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
     Text = '0.00'
   end

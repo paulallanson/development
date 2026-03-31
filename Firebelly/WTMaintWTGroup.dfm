@@ -8,24 +8,24 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 52
-    Width = 33
-    Height = 13
+    Width = 37
+    Height = 17
     Caption = 'Group'
   end
   object Label2: TLabel
     Left = 8
     Top = 20
-    Width = 68
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'Material Type'
   end
   object btnOK: TBitBtn
@@ -61,10 +61,10 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     TabOrder = 2
   end
   object dblkpMaterialType: TDBLookupComboBox
-    Left = 80
-    Top = 16
+    Left = 93
+    Top = 17
     Width = 145
-    Height = 21
+    Height = 25
     Enabled = False
     KeyField = 'Material_Type'
     ListField = 'Description'
@@ -72,10 +72,10 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     TabOrder = 0
   end
   object edtWorktopGroupDescription: TEdit
-    Left = 80
+    Left = 93
     Top = 48
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtWorktopGroupDescription'
     OnChange = EnableOK
@@ -89,8 +89,8 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
     ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type')
-    Left = 232
-    Top = 16
+    Left = 210
+    Top = 12
   end
   object qryUpdate: TFDQuery
     ConnectionName = 'WT'
@@ -102,8 +102,8 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
       '  inActive = :inactive'
       'WHERE'
       '  Worktop_Group = :Worktop_Group')
-    Left = 56
-    Top = 56
+    Left = 142
+    Top = 22
     ParamData = <
       item
         Name = 'Worktop_Group_Description'
@@ -144,8 +144,8 @@ object frmWTMaintWTGroup: TfrmWTMaintWTGroup
       'Select Worktop_Group'
       'From Worktop_Group'
       'Where Worktop_Group_Description = :GUID')
-    Left = 224
-    Top = 56
+    Left = 296
+    Top = 14
     ParamData = <
       item
         Name = 'GUID'

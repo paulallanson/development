@@ -31,7 +31,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Left = 232
     Top = 206
     Width = 105
-    Height = 117
+    Height = 112
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -51,10 +51,9 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 325
   end
   object Button4: TButton
-    Left = 432
+    Left = 436
     Top = 337
     Width = 75
     Height = 25
@@ -63,13 +62,12 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 325
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 85
     Width = 105
-    Height = 73
+    Height = 62
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -83,27 +81,27 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Left = 8
     Top = 206
     Width = 209
-    Height = 91
+    Height = 112
     Caption = 'Order Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
-      Left = 16
-      Top = 25
+      Left = 23
+      Top = 33
       Width = 33
       Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 57
+      Left = 33
+      Top = 65
       Width = 17
       Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 21
+      Left = 63
+      Top = 29
       Width = 100
       Height = 25
       TabOrder = 0
@@ -111,8 +109,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 53
+      Left = 63
+      Top = 61
       Width = 100
       Height = 25
       TabOrder = 1
@@ -120,8 +118,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 21
+      Left = 175
+      Top = 29
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -142,8 +140,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 53
+      Left = 175
+      Top = 61
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -211,7 +209,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Left = 376
     Top = 8
     Width = 131
-    Height = 150
+    Height = 139
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -240,7 +238,6 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
-    ExplicitTop = 325
   end
   object btnExcel: TButton
     Left = 184
@@ -251,11 +248,10 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitTop = 325
   end
   object OleContainer1: TOleContainer
-    Left = 382
-    Top = 226
+    Left = 158
+    Top = 76
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -264,8 +260,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 142
-    Top = 126
+    Left = 96
+    Top = 117
     Width = 289
     Height = 61
     ParentBackground = False
@@ -291,7 +287,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Left = 8
     Top = 8
     Width = 105
-    Height = 73
+    Height = 62
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -303,9 +299,9 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object grpbxReps: TGroupBox
     Left = 121
-    Top = 16
+    Top = 8
     Width = 249
-    Height = 57
+    Height = 62
     ParentBackground = False
     TabOrder = 13
     object Label3: TLabel
@@ -355,8 +351,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object pmnCustomers: TPopupMenu
     OnPopup = pmnCustomersPopup
-    Left = 376
-    Top = 136
+    Left = 238
+    Top = 186
     object Delete1: TMenuItem
       Caption = 'Delete'
       OnClick = Delete1Click

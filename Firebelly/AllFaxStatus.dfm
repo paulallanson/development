@@ -7,11 +7,11 @@ object frmAllFaxStatus: TfrmAllFaxStatus
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label4: TLabel
     Left = 200
     Top = 64
@@ -148,7 +148,7 @@ object frmAllFaxStatus: TfrmAllFaxStatus
       DataSource = GetFaxesDataSource
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgColumnResize, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]

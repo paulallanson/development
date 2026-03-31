@@ -4,22 +4,22 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   BorderStyle = bsDialog
   Caption = 'Print Job Sheet'
   ClientHeight = 343
-  ClientWidth = 522
+  ClientWidth = 586
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlBottom: TPanel
     Left = 0
     Top = 254
-    Width = 522
+    Width = 586
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
@@ -28,7 +28,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     ExplicitTop = 245
     ExplicitWidth = 516
     DesignSize = (
-      522
+      586
       89)
     object btnPrint: TButton
       Left = 8
@@ -64,7 +64,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       OnClick = btnEmailClick
     end
     object Button4: TButton
-      Left = 440
+      Left = 487
       Top = 56
       Width = 75
       Height = 25
@@ -76,7 +76,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     object chkbxAccounts: TCheckBox
       Left = 8
       Top = 24
-      Width = 97
+      Width = 185
       Height = 17
       Caption = 'Client copy'
       TabOrder = 4
@@ -84,7 +84,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     object chkbxMerge: TCheckBox
       Left = 8
       Top = 2
-      Width = 345
+      Width = 553
       Height = 17
       Caption = 'Merge all selected documents to create single PDF in email'
       TabOrder = 5
@@ -93,7 +93,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 522
+    Width = 586
     Height = 254
     Align = alClient
     BevelOuter = bvNone
@@ -104,34 +104,33 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     object Panel2: TPanel
       Left = 0
       Top = 0
-      Width = 522
-      Height = 49
+      Width = 586
+      Height = 57
       Align = alTop
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 516
+      ExplicitWidth = 599
       DesignSize = (
-        522
-        49)
+        586
+        57)
       object Label1: TLabel
         Left = 8
         Top = 8
-        Width = 39
-        Height = 13
+        Width = 46
+        Height = 17
         Caption = 'Job No.'
       end
       object Label2: TLabel
-        Left = 336
+        Left = 432
         Top = 8
-        Width = 80
-        Height = 13
+        Width = 94
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Sales Order No.'
-        ExplicitLeft = 332
       end
       object memSelection: TMemo
         Left = 8
-        Top = 24
+        Top = 29
         Width = 130
         Height = 21
         ReadOnly = True
@@ -139,21 +138,20 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
         OnChange = EnableRun
       end
       object memSOrderNumber: TMemo
-        Left = 336
-        Top = 24
+        Left = 432
+        Top = 29
         Width = 130
         Height = 21
         Anchors = [akTop, akRight]
         ReadOnly = True
         TabOrder = 1
         OnChange = EnableRun
-        ExplicitLeft = 330
       end
     end
     object Panel3: TPanel
       Left = 0
       Top = 104
-      Width = 522
+      Width = 586
       Height = 150
       Align = alBottom
       BevelOuter = bvNone
@@ -166,7 +164,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
         Top = 14
         Width = 273
         Height = 129
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnDblClick = lstbxDocumentsDblClick
@@ -174,7 +172,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       object chkbxIncludeVoucher: TCheckBox
         Left = 314
         Top = 38
-        Width = 97
+        Width = 247
         Height = 17
         Caption = 'Include Voucher'
         TabOrder = 1
@@ -183,7 +181,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       object chkbxAllDocuments: TCheckBox
         Left = 314
         Top = 15
-        Width = 201
+        Width = 271
         Height = 17
         Caption = 'Select ALL additional order documents'
         TabOrder = 2
@@ -192,7 +190,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       object chkbxPrint: TCheckBox
         Left = 314
         Top = 64
-        Width = 209
+        Width = 247
         Height = 17
         Caption = 'Print/Email Remedial Sheet'
         TabOrder = 3
@@ -201,20 +199,21 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     end
     object pnlDocuments: TPanel
       Left = 0
-      Top = 49
-      Width = 522
-      Height = 55
+      Top = 57
+      Width = 586
+      Height = 47
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 49
       ExplicitWidth = 516
       ExplicitHeight = 46
       object Label3: TLabel
         Left = 8
         Top = 5
-        Width = 207
-        Height = 13
+        Width = 235
+        Height = 17
         Caption = 'Include documents from selected folder:'
       end
       object cmbDocuments: TComboBox

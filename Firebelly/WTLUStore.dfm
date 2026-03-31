@@ -8,13 +8,13 @@ object frmWTLUStore: TfrmWTLUStore
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 341
@@ -27,8 +27,6 @@ object frmWTLUStore: TfrmWTLUStore
       item
         Width = 50
       end>
-    ExplicitTop = 350
-    ExplicitWidth = 392
   end
   object pnlBody: TPanel
     Left = 0
@@ -39,13 +37,11 @@ object frmWTLUStore: TfrmWTLUStore
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 392
-    ExplicitHeight = 350
     object Panel2: TPanel
-      Left = 303
+      Left = 297
       Top = 0
       Width = 89
-      Height = 279
+      Height = 270
       Align = alRight
       TabOrder = 0
       DesignSize = (
@@ -53,58 +49,53 @@ object frmWTLUStore: TfrmWTLUStore
         270)
       object BitBtn1: TBitBtn
         Left = 6
-        Top = 78
+        Top = 69
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Add'
         TabOrder = 0
         OnClick = BitBtn1Click
-        ExplicitTop = 87
       end
       object btnEdit: TBitBtn
         Left = 6
-        Top = 118
+        Top = 109
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Edit'
         TabOrder = 1
         OnClick = btnEditClick
-        ExplicitTop = 127
       end
       object btnDelete: TBitBtn
         Left = 6
-        Top = 158
+        Top = 149
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Delete'
         TabOrder = 2
         OnClick = btnDeleteClick
-        ExplicitTop = 167
       end
       object btnExcel: TBitBtn
         Left = 6
-        Top = 198
+        Top = 189
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Excel'
         TabOrder = 3
         OnClick = btnExcelClick
-        ExplicitTop = 207
       end
       object btnSelect: TBitBtn
         Left = 6
-        Top = 236
+        Top = 227
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = '&Select'
         TabOrder = 4
         OnClick = btnSelectClick
-        ExplicitTop = 245
       end
     end
     object Panel1: TPanel
@@ -114,16 +105,14 @@ object frmWTLUStore: TfrmWTLUStore
       Height = 71
       Align = alBottom
       TabOrder = 1
-      ExplicitTop = 279
-      ExplicitWidth = 392
       DesignSize = (
         386
         71)
       object Label4: TLabel
         Left = 8
         Top = 13
-        Width = 34
-        Height = 13
+        Width = 39
+        Height = 17
         Caption = 'Search'
       end
       object chkbxShowInactive: TCheckBox
@@ -147,15 +136,15 @@ object frmWTLUStore: TfrmWTLUStore
         TabOrder = 1
       end
       object edtName: TEdit
-        Left = 52
+        Left = 57
         Top = 9
         Width = 177
-        Height = 21
+        Height = 25
         TabOrder = 2
         OnChange = edtNameChange
       end
       object BitBtn2: TBitBtn
-        Left = 309
+        Left = 302
         Top = 35
         Width = 75
         Height = 25
@@ -176,7 +165,7 @@ object frmWTLUStore: TfrmWTLUStore
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

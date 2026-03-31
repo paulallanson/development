@@ -8,7 +8,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,12 +16,12 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
   DesignSize = (
     888
     387)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object btnOK: TBitBtn
@@ -70,7 +70,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
   end
   object PageControl1: TPageControl
     Left = 8
-    Top = 48
+    Top = 47
     Width = 881
     Height = 257
     ActivePage = TabSheet1
@@ -79,22 +79,22 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       Caption = 'Details'
       object Label7: TLabel
         Left = 472
-        Top = 9
-        Width = 31
-        Height = 13
+        Top = 6
+        Width = 36
+        Height = 17
         Caption = 'Image'
       end
       object edtImagePath: TEdit
         Left = 472
         Top = 24
         Width = 289
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'edtImagePath'
       end
       object Button3: TButton
         Left = 773
-        Top = 22
+        Top = 24
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1170,30 +1170,30 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         object Label2: TLabel
           Left = 8
           Top = 28
-          Width = 72
-          Height = 13
+          Width = 83
+          Height = 17
           Caption = 'Sales Nominal'
         end
         object Label22: TLabel
           Left = 8
           Top = 63
-          Width = 92
-          Height = 13
+          Width = 105
+          Height = 17
           Caption = 'Purchase Nominal'
         end
         object edtSalesNominal: TEdit
-          Left = 120
+          Left = 124
           Top = 24
           Width = 80
-          Height = 21
+          Height = 25
           TabOrder = 0
           Text = 'edtSalesNominal'
         end
         object edtPurchaseNominal: TEdit
-          Left = 120
+          Left = 124
           Top = 59
           Width = 80
-          Height = 21
+          Height = 25
           TabOrder = 1
           Text = 'edtPurchaseNominal'
         end
@@ -1209,30 +1209,30 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
         object Label4: TLabel
           Left = 8
           Top = 28
-          Width = 72
-          Height = 13
+          Width = 83
+          Height = 17
           Caption = 'Sales Nominal'
         end
         object Label5: TLabel
           Left = 8
           Top = 63
-          Width = 92
-          Height = 13
+          Width = 105
+          Height = 17
           Caption = 'Purchase Nominal'
         end
         object edtSalesNominalRetail: TEdit
-          Left = 120
+          Left = 124
           Top = 24
           Width = 80
-          Height = 21
+          Height = 25
           TabOrder = 0
           Text = 'edtSalesNominalRetail'
         end
         object edtPurchaseNominalRetail: TEdit
-          Left = 120
+          Left = 124
           Top = 59
           Width = 80
-          Height = 21
+          Height = 25
           TabOrder = 1
           Text = 'edtPurchaseNominalRetail'
         end
@@ -1244,27 +1244,27 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       object Label9: TLabel
         Left = 8
         Top = 14
-        Width = 90
-        Height = 13
+        Width = 101
+        Height = 17
         Caption = 'Short Description'
       end
       object Label10: TLabel
         Left = 8
         Top = 46
-        Width = 88
-        Height = 13
+        Width = 99
+        Height = 17
         Caption = 'Long Description'
       end
       object edtShortDescription: TEdit
-        Left = 104
+        Left = 116
         Top = 10
         Width = 481
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'edtShortDescription'
       end
       object memLongDescription: TMemo
-        Left = 104
+        Left = 116
         Top = 48
         Width = 385
         Height = 179
@@ -1279,8 +1279,8 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       object Label3: TLabel
         Left = 8
         Top = 20
-        Width = 175
-        Height = 13
+        Width = 201
+        Height = 17
         Caption = 'Upstand Polish Prices per ln metre'
       end
       object Panel2: TPanel
@@ -1313,7 +1313,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
             TabOrder = 0
             object btnAdd: TToolButton
               Left = 0
-              Top = 2
+              Top = 0
               Hint = 'New'
               Caption = 'Add'
               ImageIndex = 0
@@ -1322,7 +1322,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
             end
             object btnChange: TToolButton
               Left = 0
-              Top = 24
+              Top = 22
               Hint = 'Change'
               Caption = 'Chnage'
               ImageIndex = 1
@@ -1331,7 +1331,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
             end
             object btnDelete: TToolButton
               Left = 0
-              Top = 46
+              Top = 44
               Hint = 'Delete'
               ImageIndex = 3
               OnClick = btnDeleteClick
@@ -1348,7 +1348,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -1365,6 +1365,11 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
             item
               Expanded = False
               FieldName = 'Description'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 137
               Visible = True
             end
@@ -1372,12 +1377,22 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
               Expanded = False
               FieldName = 'Unit_Price'
               Title.Caption = 'Price'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Unit_Cost'
               Title.Caption = 'Cost'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Visible = True
             end>
         end
@@ -1389,8 +1404,8 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       object Label6: TLabel
         Left = 8
         Top = 20
-        Width = 96
-        Height = 13
+        Width = 105
+        Height = 17
         Caption = 'Thickness Weights'
       end
       object Panel4: TPanel
@@ -1423,7 +1438,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
             TabOrder = 0
             object btnWeightAdd: TToolButton
               Left = 0
-              Top = 2
+              Top = 0
               Hint = 'New'
               Caption = 'Add'
               ImageIndex = 0
@@ -1432,7 +1447,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
             end
             object btnWeightChange: TToolButton
               Left = 0
-              Top = 24
+              Top = 22
               Hint = 'Change'
               Caption = 'Chnage'
               ImageIndex = 1
@@ -1441,7 +1456,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
             end
             object btnWeightDelete: TToolButton
               Left = 0
-              Top = 46
+              Top = 44
               Hint = 'Delete'
               ImageIndex = 3
               OnClick = btnWeightDeleteClick
@@ -1458,7 +1473,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -1475,6 +1490,11 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
               Expanded = False
               FieldName = 'Thickness_mm'
               Title.Caption = 'Thickness (mm)'
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
               Width = 137
               Visible = True
             end
@@ -1482,7 +1502,12 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
               Expanded = False
               FieldName = 'Weight_kg'
               Title.Caption = 'Weight (kg) per sqm'
-              Width = 113
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clWindowText
+              Title.Font.Height = -13
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = []
+              Width = 134
               Visible = True
             end>
         end
@@ -1497,14 +1522,14 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Left = 85
     Top = 16
     Width = 380
-    Height = 21
+    Height = 25
     TabOrder = 5
     Text = 'edtDescription'
     OnChange = EnableOK
   end
   object imglstButtons: TImageList
-    Left = 80
-    Top = 216
+    Left = 296
+    Top = 144
     Bitmap = {
       494C01010B000E00040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
@@ -1916,8 +1941,8 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Bi' +
       'tmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.em' +
       'f)|*.emf|Metafiles (*.wmf)|*.wmf'
-    Left = 672
-    Top = 64
+    Left = 688
+    Top = 216
   end
   object qryUpstands: TFDQuery
     ConnectionName = 'Wt'
@@ -1963,16 +1988,16 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
   end
   object dtsUpstands: TDataSource
     DataSet = qryUpstands
-    Left = 464
-    Top = 88
+    Left = 400
+    Top = 200
   end
   object qryDelUpstand: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Worktop_Type_Upstand'
       'where price_pointer = :price_pointer')
-    Left = 536
-    Top = 88
+    Left = 800
+    Top = 192
     ParamData = <
       item
         Name = 'price_pointer'

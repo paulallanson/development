@@ -8,7 +8,7 @@ object frmWTMaintReason: TfrmWTMaintReason
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,12 +17,12 @@ object frmWTMaintReason: TfrmWTMaintReason
   DesignSize = (
     361
     91)
-  TextHeight = 13
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 38
-    Height = 13
+    Width = 43
+    Height = 17
     Caption = 'Reason'
   end
   object btnOK: TBitBtn
@@ -55,7 +55,7 @@ object frmWTMaintReason: TfrmWTMaintReason
     Left = 64
     Top = 16
     Width = 281
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtInactiveReasonDescr'
     OnChange = EnableOK
@@ -69,8 +69,7 @@ object frmWTMaintReason: TfrmWTMaintReason
       '  Inactive_Type = :Inactive_Type'
       'WHERE'
       '  Inactive_Reason = :Inactive_Reason')
-    Left = 64
-    Top = 24
+    Top = 6
     ParamData = <
       item
         Name = 'Inactive_Reason_Descr'
@@ -92,8 +91,8 @@ object frmWTMaintReason: TfrmWTMaintReason
       'Select Max(Inactive_Reason)+1, :GUID, '#39'Q'#39
       'From Inactive_Reason'
       ' ')
-    Left = 120
-    Top = 24
+    Left = 94
+    Top = 6
     ParamData = <
       item
         Name = 'GUID'
@@ -107,8 +106,8 @@ object frmWTMaintReason: TfrmWTMaintReason
       'Select Inactive_Reason'
       'From Inactive_Reason'
       'Where Inactive_Reason_Descr = :GUID')
-    Left = 232
-    Top = 24
+    Left = 154
+    Top = 6
     ParamData = <
       item
         Name = 'GUID'
@@ -121,7 +120,7 @@ object frmWTMaintReason: TfrmWTMaintReason
     SQL.Strings = (
       ''
       '')
-    Left = 296
-    Top = 24
+    Left = 226
+    Top = 6
   end
 end

@@ -4,11 +4,11 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   BorderStyle = bsDialog
   Caption = 'Invoice Re-Print Selection'
   ClientHeight = 212
-  ClientWidth = 387
+  ClientWidth = 418
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,22 +17,22 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   DesignSize = (
-    387
+    418
     212)
-  TextHeight = 13
+  TextHeight = 17
   object selectionGrp: TGroupBox
     Left = 8
     Top = 8
     Width = 273
-    Height = 137
+    Height = 153
     Caption = 'Invoice Number Selection'
     ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 232
-      Height = 39
+      Width = 221
+      Height = 51
       Caption = 
         'Enter invoice numbers and/or invoice ranges separated by commas.' +
         ' For example, 1234, 1236, 1240-1245'
@@ -49,7 +49,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     end
   end
   object btnClose: TBitBtn
-    Left = 273
+    Left = 321
     Top = 175
     Width = 80
     Height = 25
@@ -58,14 +58,13 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnCloseClick
-    ExplicitTop = 166
   end
   object SelectLst: TListBox
     Left = 248
     Top = 16
     Width = 25
     Height = 73
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 2
     Visible = False
@@ -109,8 +108,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   object rdgrpType: TRadioGroup
     Left = 288
     Top = 8
-    Width = 81
-    Height = 73
+    Width = 113
+    Height = 68
     Caption = 'Print Type'
     ItemIndex = 0
     Items.Strings = (
@@ -123,8 +122,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
     ConnectionName = 'wt'
     SQL.Strings = (
       ' ')
-    Left = 32
-    Top = 32
+    Left = 24
+    Top = 40
   end
   object qryInvPrint: TFDQuery
     ConnectionName = 'wt'
@@ -165,8 +164,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '(Int_sel.Int_sel_Code = :Int_sel)'
       'order by'
       '  Sales_Invoice.Invoice_No asc')
-    Left = 32
-    Top = 88
+    Left = 24
+    Top = 110
     ParamData = <
       item
         Name = 'Int_sel'
@@ -212,8 +211,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '(Int_sel.Int_sel_Code = :Int_sel)'
       'ORDER BY'
       '  Sales_Invoice.Invoice_No asc')
-    Left = 72
-    Top = 104
+    Left = 74
+    Top = 130
     ParamData = <
       item
         Name = 'Int_sel'
@@ -223,8 +222,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object qryGetCustomers: TFDQuery
     ConnectionName = 'wt'
-    Left = 150
-    Top = 10
+    Left = 172
+    Top = 13
   end
   object GetInvCustSQL: TFDQuery
     ConnectionName = 'wt'
@@ -259,8 +258,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '  Sales_Invoice.Customer_Name,'
       '  Sales_Invoice.Invoice_no'
       '')
-    Left = 218
-    Top = 18
+    Left = 257
+    Top = 23
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -298,8 +297,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '  Sales_Invoice.Customer_Name,'
       '  Sales_Invoice.Invoice_no'
       '')
-    Left = 290
-    Top = 14
+    Left = 347
+    Top = 18
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -346,8 +345,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '(Sales_Invoice.invoice_no = :Invoice_no)'
       'ORDER BY'
       '  Sales_Invoice.Invoice_No asc')
-    Left = 172
-    Top = 82
+    Left = 199
+    Top = 103
     ParamData = <
       item
         Name = 'Int_sel'
@@ -403,8 +402,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       '(Sales_Invoice.invoice_no = :Invoice_no)'
       'ORDER BY'
       '  Sales_Invoice.Invoice_No asc')
-    Left = 332
-    Top = 50
+    Left = 319
+    Top = 71
     ParamData = <
       item
         Name = 'Int_sel'
@@ -426,8 +425,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
       'SELECT *'
       'FROM Address'
       'WHERE Address = :Address')
-    Left = 240
-    Top = 104
+    Left = 276
+    Top = 90
     ParamData = <
       item
         Name = 'Address'

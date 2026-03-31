@@ -3,25 +3,25 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   Top = 143
   Caption = 'Maintain Supplier Worktop Details'
   ClientHeight = 211
-  ClientWidth = 506
+  ClientWidth = 558
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 24
     Top = 44
-    Width = 49
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Worktop:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -29,19 +29,19 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object Label4: TLabel
     Left = 24
     Top = 76
-    Width = 76
-    Height = 13
+    Width = 87
+    Height = 17
     Caption = 'Adhesive Code'
   end
   object lblWorktop: TLabel
-    Left = 120
-    Top = 44
-    Width = 59
-    Height = 13
+    Left = 145
+    Top = 45
+    Width = 70
+    Height = 17
     Caption = 'lblWorktop'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -49,25 +49,25 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object Label7: TLabel
     Left = 24
     Top = 16
-    Width = 46
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Supplier:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblSupplierName: TLabel
-    Left = 120
-    Top = 16
-    Width = 87
-    Height = 13
+    Left = 145
+    Top = 17
+    Width = 103
+    Height = 17
     Caption = 'lblSupplierName'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -75,20 +75,20 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
   object Label1: TLabel
     Left = 24
     Top = 140
-    Width = 96
-    Height = 13
+    Width = 111
+    Height = 17
     Caption = 'Adhesives per Slab'
   end
   object Label3: TLabel
     Left = 24
     Top = 108
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object btnLUProducts: TSpeedButton
-    Left = 373
-    Top = 72
+    Left = 397
+    Top = 74
     Width = 23
     Height = 23
     Caption = '...'
@@ -125,34 +125,34 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
     OnClick = BitBtn2Click
   end
   object spnAdhesiveQuantity: TSpinEdit
-    Left = 121
-    Top = 136
+    Left = 146
+    Top = 137
     Width = 50
-    Height = 22
+    Height = 27
     MaxValue = 1000
     MinValue = 1
     TabOrder = 2
     Value = 1
   end
   object edtAdhesiveProduct: TEdit
-    Left = 120
-    Top = 72
+    Left = 145
+    Top = 73
     Width = 241
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = 'edtAdhesiveProduct'
   end
   object edtAdhesiveDescription: TEdit
-    Left = 120
-    Top = 104
+    Left = 145
+    Top = 105
     Width = 377
-    Height = 21
+    Height = 25
     TabOrder = 4
     Text = 'edtAdhesiveDescription'
   end
   object btnClear: TBitBtn
-    Left = 403
-    Top = 71
+    Left = 427
+    Top = 73
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -180,8 +180,8 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
       'Adhesive_Quantity_Per_Slab = :Adhesive_Quantity_Per_Slab'
       'WHERE Supplier = :Supplier AND'
       'Worktop = :Worktop')
-    Left = 376
-    Top = 32
+    Left = 278
+    Top = 128
     ParamData = <
       item
         Name = 'Adhesive_Product_Code'
@@ -215,8 +215,8 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
         'er_Worktop.Adhesive_Product_Code)'
       'WHERE Supplier_Worktop.Supplier = :Supplier AND'
       '      Supplier_Worktop.Worktop = :Worktop')
-    Left = 232
-    Top = 32
+    Left = 410
+    Top = 136
     ParamData = <
       item
         Name = 'Supplier'

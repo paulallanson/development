@@ -7,7 +7,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,17 +15,17 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   DesignSize = (
     508
     291)
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 40
     Top = 251
-    Width = 106
-    Height = 13
+    Width = 128
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -43,6 +43,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
+    ExplicitTop = 236
   end
   object BitBtn2: TBitBtn
     Left = 270
@@ -55,6 +56,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitTop = 236
   end
   object pnlDetails: TPanel
     Left = 0
@@ -65,92 +67,92 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 502
+    ExplicitTop = 6
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Material'
     end
     object Label2: TLabel
       Left = 16
       Top = 48
-      Width = 52
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Edge Type'
     end
     object Label3: TLabel
       Left = 16
       Top = 76
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'Edge'
     end
     object Label8: TLabel
       Left = 16
       Top = 204
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Length'
     end
     object Label7: TLabel
       Left = 339
       Top = 140
-      Width = 52
-      Height = 13
+      Width = 60
+      Height = 17
       Caption = 'Total Price'
     end
     object Label4: TLabel
       Left = 16
       Top = 140
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Unit Price'
     end
     object Label5: TLabel
       Left = 16
       Top = 172
-      Width = 48
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Unit Cost'
     end
     object Label6: TLabel
       Left = 341
       Top = 172
-      Width = 51
-      Height = 13
+      Width = 58
+      Height = 17
       Caption = 'Total Cost'
     end
     object Label9: TLabel
       Left = 16
       Top = 108
-      Width = 65
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'Std Sell Price'
     end
     object lblDiscount: TLabel
-      Left = 304
-      Top = 44
-      Width = 87
-      Height = 13
+      Left = 314
+      Top = 48
+      Width = 99
+      Height = 17
       Caption = 'Edge Discount %'
     end
     object edtMaterial: TEdit
-      Left = 88
+      Left = 96
       Top = 8
       Width = 145
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
     end
     object dblkpEdgeType: TDBLookupComboBox
-      Left = 88
+      Left = 96
       Top = 40
       Width = 161
-      Height = 21
+      Height = 25
       KeyField = 'Edge_Type'
       ListField = 'Edge_Type_Description'
       ListSource = dtsEdgeType
@@ -158,10 +160,10 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpEdge: TDBLookupComboBox
-      Left = 88
+      Left = 96
       Top = 72
       Width = 350
-      Height = 21
+      Height = 25
       KeyField = 'edge_profile'
       ListField = 'description'
       ListSource = dtsEdgeThickness
@@ -169,35 +171,35 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       OnClick = dblkpEdgeClick
     end
     object edtLength: TCREditInt
-      Left = 88
+      Left = 96
       Top = 200
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 4
       Text = 'edtLength'
       OnChange = edtLengthChange
     end
     object edtUnitPrice: TCREditMoney
-      Left = 88
+      Left = 96
       Top = 136
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 5
       OnChange = edtUnitPriceChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 400
+      Left = 406
       Top = 136
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 6
     end
     object btnEdge: TBitBtn
-      Left = 456
-      Top = 71
+      Left = 462
+      Top = 73
       Width = 25
       Height = 25
       Hint = 'maintain edge details'
@@ -214,29 +216,29 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       OnClick = btnEdgeClick
     end
     object edtUnitCost: TCREditMoney
-      Left = 88
+      Left = 96
       Top = 168
       Width = 81
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 7
     end
     object edtTotalCost: TCREditMoney
-      Left = 400
+      Left = 406
       Top = 168
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 8
     end
     object edtSellPrice: TCREditMoney
-      Left = 88
+      Left = 96
       Top = 104
       Width = 81
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -244,10 +246,10 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       OnChange = edtUnitPriceChange
     end
     object edtDiscount: TCREditMoney
-      Left = 408
-      Top = 40
+      Left = 424
+      Top = 44
       Width = 65
-      Height = 21
+      Height = 25
       TabOrder = 10
       OnChange = edtDiscountChange
     end
@@ -269,8 +271,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   end
   object dtsEdgeType: TDataSource
     DataSet = qryEdgeType
-    Left = 256
-    Top = 8
+    Left = 280
+    Top = 18
   end
   object qryEdgeThickness: TFDQuery
     ConnectionName = 'wt'
@@ -286,8 +288,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
         '(Edge_Profile.inactive = '#39'N'#39' or Edge_Profile.inactive is NULL or' +
         ' Edge_Profile.Edge_Profile = :Edge_Profile)'
       'order by Edge_profile.description')
-    Left = 50
-    Top = 96
+    Left = 159
+    Top = 118
     ParamData = <
       item
         Name = 'edge_type'
@@ -432,8 +434,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
         'and'
       '      Customer_Edge.Edge_Type = :Edge_Type and'
       '      Customer_Edge.Edge_Profile = :Edge_Profile')
-    Left = 280
-    Top = 104
+    Left = 238
+    Top = 114
     ParamData = <
       item
         Name = 'Customer'

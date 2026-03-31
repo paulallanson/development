@@ -1,16 +1,16 @@
 object frmWTLUWorktopPrices: TfrmWTLUWorktopPrices
   Left = 465
   Top = 122
-  Caption = 'frmWTLUWorktopPrices'
+  Caption = 'Maintain Worktop Prices'
   ClientHeight = 299
   ClientWidth = 696
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -21,7 +21,7 @@ object frmWTLUWorktopPrices: TfrmWTLUWorktopPrices
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

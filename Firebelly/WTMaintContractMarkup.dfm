@@ -8,17 +8,17 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label15: TLabel
     Left = 16
     Top = 21
-    Width = 52
-    Height = 13
+    Width = 60
+    Height = 17
     Caption = 'Markup %'
   end
   object pnlFooter: TPanel
@@ -30,6 +30,8 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 7
+    ExplicitTop = 199
+    ExplicitWidth = 358
     DesignSize = (
       364
       46)
@@ -62,8 +64,8 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   object rdgrpMarkupType: TRadioGroup
     Left = 212
     Top = 8
-    Width = 130
-    Height = 81
+    Width = 144
+    Height = 89
     Caption = 'Apply Markup to:'
     Items.Strings = (
       'Selected Column'
@@ -75,7 +77,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   object chkbxMarkupCutOuts: TCheckBox
     Left = 16
     Top = 64
-    Width = 97
+    Width = 185
     Height = 17
     Caption = 'Markup Cut Outs'
     Checked = True
@@ -85,7 +87,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   object chkbxMarkupEdges: TCheckBox
     Left = 16
     Top = 92
-    Width = 97
+    Width = 185
     Height = 17
     Caption = 'Markup Edges'
     Checked = True
@@ -95,7 +97,7 @@ object frmWTMaintContractMarkup: TfrmWTMaintContractMarkup
   object chkbxMarkupMaterials: TCheckBox
     Left = 16
     Top = 120
-    Width = 97
+    Width = 185
     Height = 17
     Caption = 'Markup Materials'
     Checked = True

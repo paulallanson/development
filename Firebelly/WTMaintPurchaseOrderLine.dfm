@@ -2,74 +2,74 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
   Left = 549
   Top = 128
   Caption = 'Purchase Order Line'
-  ClientHeight = 453
-  ClientWidth = 750
+  ClientHeight = 449
+  ClientWidth = 664
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 750
-    Height = 413
+    Width = 664
+    Height = 409
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 41
-    ExplicitHeight = 224
+    ExplicitWidth = 744
+    ExplicitHeight = 404
     object pnlCostDetails: TPanel
       Left = 0
-      Top = 265
-      Width = 750
-      Height = 65
+      Top = 272
+      Width = 664
+      Height = 60
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = -1
-      ExplicitTop = 150
+      ExplicitTop = 270
+      ExplicitWidth = 750
       object OrdqtyLbl: TLabel
         Left = 26
         Top = 40
-        Width = 85
-        Height = 13
+        Width = 98
+        Height = 17
         Caption = 'Order Qty (units)'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object lblQtyDelivered: TLabel
-        Left = 202
+        Left = 221
         Top = 40
-        Width = 83
-        Height = 13
+        Width = 95
+        Height = 17
         Caption = 'Delivered (units)'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         Visible = False
       end
       object lblQtyInvoiced: TLabel
-        Left = 423
+        Left = 435
         Top = 40
-        Width = 78
-        Height = 13
+        Width = 87
+        Height = 17
         Caption = 'Invoiced (units)'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -78,26 +78,26 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       object Label12: TLabel
         Left = 26
         Top = 10
-        Width = 48
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Unit Cost'
       end
       object Label3: TLabel
-        Left = 226
+        Left = 262
         Top = 10
-        Width = 48
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Cost Unit'
       end
       object Label13: TLabel
-        Left = 442
+        Left = 457
         Top = 10
-        Width = 58
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Discount %'
       end
       object edtOrderQty: TMemo
-        Left = 112
+        Left = 129
         Top = 36
         Width = 80
         Height = 21
@@ -107,7 +107,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnChange = CheckOK
       end
       object edtDeliveredQty: TMemo
-        Left = 288
+        Left = 324
         Top = 36
         Width = 80
         Height = 21
@@ -118,7 +118,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnChange = CheckOK
       end
       object edtInvoicedQty: TMemo
-        Left = 504
+        Left = 531
         Top = 36
         Width = 80
         Height = 21
@@ -129,15 +129,15 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnChange = CheckOK
       end
       object edtUnitCost: TCREditMoney
-        Left = 112
+        Left = 129
         Top = 6
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = CheckOK
       end
       object edtCostUnit: TMemo
-        Left = 288
+        Left = 324
         Top = 6
         Width = 80
         Height = 21
@@ -147,10 +147,10 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnChange = CheckOK
       end
       object edtDiscount: TCREditMoney
-        Left = 504
+        Left = 531
         Top = 6
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 2
         OnChange = edtLengthChange
       end
@@ -158,21 +158,23 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 750
+      Width = 664
       Height = 41
       Align = alTop
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 4
+      ExplicitWidth = 750
       object Label2: TLabel
         Left = 26
         Top = 14
-        Width = 59
-        Height = 13
+        Width = 69
+        Height = 17
         Caption = 'Sales Order'
       end
       object SpeedButton2: TSpeedButton
-        Left = 226
-        Top = 9
+        Left = 243
+        Top = 11
         Width = 23
         Height = 23
         Caption = '...'
@@ -185,38 +187,39 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnClick = SpeedButton2Click
       end
       object edtSalesOrder: TCREditInt
-        Left = 112
+        Left = 129
         Top = 10
         Width = 97
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
     end
     object pnlNotes: TPanel
       Left = 0
-      Top = 330
-      Width = 750
-      Height = 83
+      Top = 332
+      Width = 664
+      Height = 77
       Align = alBottom
       ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 370
+      ExplicitTop = 336
+      ExplicitWidth = 750
       DesignSize = (
-        750
-        83)
+        664
+        77)
       object Label7: TLabel
         Left = 26
         Top = 13
-        Width = 30
-        Height = 13
+        Width = 35
+        Height = 17
         Caption = 'Notes'
       end
       object memNotes: TMemo
-        Left = 112
-        Top = 8
-        Width = 473
-        Height = 66
+        Left = 129
+        Top = 11
+        Width = 482
+        Height = 60
         Anchors = [akLeft, akTop, akBottom]
         Lines.Strings = (
           'memNotes')
@@ -227,51 +230,51 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
     object pnlDetails: TPanel
       Left = 0
       Top = 41
-      Width = 750
-      Height = 224
+      Width = 664
+      Height = 231
       Align = alClient
       ParentBackground = False
       TabOrder = 3
-      ExplicitTop = 0
-      ExplicitHeight = 413
+      ExplicitWidth = 750
+      ExplicitHeight = 240
       object Label6: TLabel
         Left = 26
         Top = 14
-        Width = 42
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Material'
       end
       object Label8: TLabel
         Left = 26
         Top = 44
-        Width = 46
-        Height = 13
+        Width = 50
+        Height = 17
         Caption = 'Worktop'
       end
       object Label9: TLabel
         Left = 26
         Top = 74
-        Width = 50
-        Height = 13
+        Width = 55
+        Height = 17
         Caption = 'Thickness'
       end
       object Label10: TLabel
         Left = 26
         Top = 134
-        Width = 63
-        Height = 13
+        Width = 73
+        Height = 17
         Caption = 'Length (mm)'
       end
       object Label11: TLabel
         Left = 26
         Top = 164
-        Width = 59
-        Height = 13
+        Width = 69
+        Height = 17
         Caption = 'Depth (mm)'
       end
       object btnWorktops: TSpeedButton
-        Left = 378
-        Top = 39
+        Left = 383
+        Top = 41
         Width = 23
         Height = 23
         Caption = '...'
@@ -285,13 +288,13 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       object Label14: TLabel
         Left = 26
         Top = 104
-        Width = 45
-        Height = 13
+        Width = 52
+        Height = 17
         Caption = 'Slab Size'
       end
       object SpeedButton1: TSpeedButton
-        Left = 304
-        Top = 9
+        Left = 309
+        Top = 11
         Width = 23
         Height = 23
         Caption = '...'
@@ -306,20 +309,20 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       object Label4: TLabel
         Left = 26
         Top = 202
-        Width = 61
-        Height = 13
+        Width = 72
+        Height = 17
         Caption = 'Cost per m2'
       end
       object Label5: TLabel
-        Left = 227
+        Left = 259
         Top = 202
-        Width = 48
-        Height = 13
+        Width = 55
+        Height = 17
         Caption = 'Slab Cost'
       end
       object btnContactClear: TSpeedButton
-        Left = 378
-        Top = 99
+        Left = 383
+        Top = 101
         Width = 23
         Height = 23
         Font.Charset = ANSI_CHARSET
@@ -345,33 +348,33 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnClick = btnContactClearClick
       end
       object Label1: TLabel
-        Left = 222
+        Left = 254
         Top = 164
-        Width = 52
-        Height = 13
+        Width = 60
+        Height = 17
         Caption = 'Slab Label'
       end
       object edtDepth: TCREditInt
-        Left = 112
+        Left = 129
         Top = 160
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 5
         OnChange = edtLengthChange
       end
       object edtLength: TCREditInt
-        Left = 112
+        Left = 129
         Top = 130
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 4
         OnChange = edtLengthChange
       end
       object dblkpWTThickness: TDBLookupComboBox
-        Left = 112
+        Left = 129
         Top = 70
         Width = 89
-        Height = 21
+        Height = 25
         KeyField = 'Thickness'
         ListField = 'Thickness_mm'
         ListSource = dtmdlPurchaseOrder.dtsWTThickness
@@ -379,10 +382,10 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnClick = dblkpWTThicknessClick
       end
       object dblkpWorktop: TDBLookupComboBox
-        Left = 112
+        Left = 129
         Top = 40
         Width = 249
-        Height = 21
+        Height = 25
         KeyField = 'Worktop'
         ListField = 'Description'
         ListSource = dtmdlPurchaseOrder.dtsWorktops
@@ -390,10 +393,10 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnClick = dblkpWorktopClick
       end
       object dblkpMaterial: TDBLookupComboBox
-        Left = 112
+        Left = 129
         Top = 10
         Width = 170
-        Height = 21
+        Height = 25
         KeyField = 'Material_Type'
         ListField = 'Description'
         ListSource = dtmdlPurchaseOrder.dtsMaterial
@@ -401,10 +404,10 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnClick = dblkpMaterialClick
       end
       object dblkpSlabSize: TDBLookupComboBox
-        Left = 112
+        Left = 129
         Top = 100
         Width = 249
-        Height = 21
+        Height = 25
         KeyField = 'Slab_size'
         ListField = 'Slab_Description'
         ListSource = dtmdlPurchaseOrder.dtsMaterialSlab
@@ -412,15 +415,15 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         OnClick = dblkpSlabSizeClick
       end
       object edtSlabUnitCost: TCREditMoney
-        Left = 112
+        Left = 129
         Top = 198
         Width = 80
-        Height = 21
+        Height = 25
         TabOrder = 7
         OnChange = edtLengthChange
       end
       object edtSlabTotalCost: TMemo
-        Left = 280
+        Left = 324
         Top = 198
         Width = 80
         Height = 21
@@ -431,10 +434,10 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
         WordWrap = False
       end
       object edtSlabLabel: TEdit
-        Left = 280
+        Left = 324
         Top = 160
         Width = 121
-        Height = 21
+        Height = 25
         TabOrder = 6
         Text = 'edtSlabLabel'
       end
@@ -442,18 +445,20 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
   end
   object pnlFunctions: TPanel
     Left = 0
-    Top = 413
-    Width = 750
+    Top = 409
+    Width = 664
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     TabStop = True
+    ExplicitTop = 404
+    ExplicitWidth = 744
     DesignSize = (
-      750
+      664
       40)
     object lblDelete: TLabel
-      Left = 434
+      Left = 342
       Top = 12
       Width = 145
       Height = 15
@@ -465,9 +470,10 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 434
     end
     object btnOK: TBitBtn
-      Left = 594
+      Left = 502
       Top = 7
       Width = 75
       Height = 25
@@ -501,9 +507,10 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 582
     end
     object btnCancel: TBitBtn
-      Left = 674
+      Left = 582
       Top = 7
       Width = 75
       Height = 25
@@ -517,6 +524,7 @@ object frmWTMaintPurchaseOrderLine: TfrmWTMaintPurchaseOrderLine
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
+      ExplicitLeft = 662
     end
   end
 end

@@ -31,7 +31,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       649
       40)
     object lblDelete: TLabel
-      Left = 309
+      Left = 303
       Top = 12
       Width = 166
       Height = 16
@@ -43,9 +43,10 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 309
     end
     object btnOK: TBitBtn
-      Left = 469
+      Left = 463
       Top = 7
       Width = 75
       Height = 25
@@ -79,9 +80,10 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 457
     end
     object btnCancel: TBitBtn
-      Left = 555
+      Left = 549
       Top = 7
       Width = 75
       Height = 25
@@ -95,7 +97,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 549
+      ExplicitLeft = 543
     end
   end
   object pnlDetails: TPanel
@@ -123,16 +125,16 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       Caption = 'Total Price'
     end
     object Label2: TLabel
-      Left = 232
-      Top = 124
+      Left = 243
+      Top = 122
       Width = 53
       Height = 17
       Caption = 'Pack Size'
       Visible = False
     end
     object OrdqtyLbl: TLabel
-      Left = 386
-      Top = 130
+      Left = 421
+      Top = 122
       Width = 48
       Height = 17
       Caption = 'Quantity'
@@ -145,22 +147,22 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       Visible = False
     end
     object Label5: TLabel
-      Left = 234
+      Left = 242
       Top = 186
       Width = 48
       Height = 17
       Caption = 'Vat Rate'
     end
     object Label6: TLabel
-      Left = 483
-      Top = 187
+      Left = 491
+      Top = 186
       Width = 73
       Height = 17
       Caption = 'Job Number'
     end
     object lblJob: TLabel
-      Left = 562
-      Top = 188
+      Left = 570
+      Top = 186
       Width = 35
       Height = 17
       Caption = 'lblJob'
@@ -209,7 +211,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       Caption = 'Discount'
     end
     object edtQuote: TEdit
-      Left = 104
+      Left = 115
       Top = 20
       Width = 137
       Height = 25
@@ -220,7 +222,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       OnChange = CheckOK
     end
     object memPrice: TMemo
-      Left = 103
+      Left = 115
       Top = 182
       Width = 81
       Height = 21
@@ -232,7 +234,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       WordWrap = False
     end
     object edtDescription: TEdit
-      Left = 272
+      Left = 283
       Top = 20
       Width = 345
       Height = 25
@@ -242,8 +244,8 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       TabOrder = 2
     end
     object edtPackSize: TEdit
-      Left = 288
-      Top = 120
+      Left = 306
+      Top = 118
       Width = 81
       Height = 25
       TabStop = False
@@ -253,15 +255,15 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       Visible = False
     end
     object edtQtyPacks: TEdit
-      Left = 472
-      Top = 126
+      Left = 483
+      Top = 118
       Width = 81
       Height = 25
       TabOrder = 4
       Visible = False
     end
     object dblkpVAT: TDBLookupComboBox
-      Left = 289
+      Left = 297
       Top = 182
       Width = 144
       Height = 25
@@ -271,8 +273,8 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       TabOrder = 5
     end
     object Button1: TButton
-      Left = 443
-      Top = 180
+      Left = 451
+      Top = 182
       Width = 25
       Height = 25
       Caption = '...'
@@ -286,7 +288,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       OnClick = Button1Click
     end
     object memFixing: TMemo
-      Left = 104
+      Left = 115
       Top = 48
       Width = 81
       Height = 21
@@ -297,7 +299,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       OnChange = UpdateOrderLine
     end
     object memTemplate: TMemo
-      Left = 104
+      Left = 115
       Top = 72
       Width = 81
       Height = 21
@@ -308,7 +310,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       OnChange = UpdateOrderLine
     end
     object memDelivery: TMemo
-      Left = 104
+      Left = 115
       Top = 96
       Width = 81
       Height = 21
@@ -319,7 +321,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       OnChange = UpdateOrderLine
     end
     object memSupply: TMemo
-      Left = 104
+      Left = 115
       Top = 120
       Width = 81
       Height = 21
@@ -330,7 +332,7 @@ object frmWTMaintSalesOrderJobLine: TfrmWTMaintSalesOrderJobLine
       OnChange = UpdateOrderLine
     end
     object memDiscount: TMemo
-      Left = 104
+      Left = 115
       Top = 144
       Width = 81
       Height = 21

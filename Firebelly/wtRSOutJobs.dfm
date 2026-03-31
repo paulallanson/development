@@ -4,7 +4,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   BorderStyle = bsDialog
   Caption = 'Work in Progress Report'
   ClientHeight = 223
-  ClientWidth = 510
+  ClientWidth = 529
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,7 +14,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    510
+    529
     223)
   TextHeight = 17
   object btnRun: TButton
@@ -26,10 +26,10 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnRunClick
-    ExplicitTop = 141
+    ExplicitTop = 181
   end
   object Button4: TButton
-    Left = 400
+    Left = 427
     Top = 190
     Width = 75
     Height = 25
@@ -38,13 +38,12 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 141
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 8
     Width = 123
-    Height = 73
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -141,9 +140,9 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   end
   object grpbxCustomer: TGroupBox
     Left = 137
-    Top = 13
+    Top = 16
     Width = 233
-    Height = 68
+    Height = 60
     Enabled = False
     ParentBackground = False
     TabOrder = 4
@@ -185,7 +184,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Left = 389
     Top = 8
     Width = 113
-    Height = 117
+    Height = 121
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -208,7 +207,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Left = 240
     Top = 92
     Width = 143
-    Height = 73
+    Height = 68
     Caption = 'Value by: '
     ItemIndex = 0
     Items.Strings = (
@@ -226,7 +225,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Caption = 'P&review'
     TabOrder = 8
     OnClick = Button1Click
-    ExplicitTop = 141
+    ExplicitTop = 181
   end
   object Button2: TButton
     Left = 184
@@ -237,11 +236,11 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Caption = '&Excel'
     TabOrder = 9
     OnClick = Button2Click
-    ExplicitTop = 141
+    ExplicitTop = 181
   end
   object OleContainer1: TOleContainer
-    Left = 224
-    Top = 166
+    Left = 181
+    Top = 52
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -250,8 +249,8 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 113
-    Top = 71
+    Left = 94
+    Top = 43
     Width = 289
     Height = 61
     ParentBackground = False

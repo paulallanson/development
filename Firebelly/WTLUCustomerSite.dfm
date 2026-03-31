@@ -8,14 +8,14 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 33
@@ -26,7 +26,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -65,9 +65,6 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       item
         Width = 50
       end>
-    ExplicitLeft = 96
-    ExplicitTop = 376
-    ExplicitWidth = 491
   end
   object Panel1: TPanel
     Left = 0
@@ -77,17 +74,14 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 8
-    ExplicitTop = 281
-    ExplicitWidth = 491
     DesignSize = (
       497
       74)
     object Label4: TLabel
       Left = 8
-      Top = 20
-      Width = 34
-      Height = 13
+      Top = 15
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
@@ -111,10 +105,10 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       TabOrder = 1
     end
     object edtName: TEdit
-      Left = 48
-      Top = 23
+      Left = 58
+      Top = 11
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = edtNameChange
     end
@@ -127,8 +121,6 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     Align = alRight
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 402
-    ExplicitHeight = 277
     DesignSize = (
       89
       286)
@@ -141,7 +133,6 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
-      ExplicitTop = 31
     end
     object btnEdit: TBitBtn
       Left = 6
@@ -152,7 +143,6 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Edit'
       TabOrder = 1
       OnClick = btnEditClick
-      ExplicitTop = 71
     end
     object btnDelete: TBitBtn
       Left = 6
@@ -163,7 +153,6 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Delete'
       TabOrder = 2
       OnClick = btnDeleteClick
-      ExplicitTop = 111
     end
     object btnExcel: TBitBtn
       Left = 6
@@ -174,7 +163,6 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Excel'
       TabOrder = 3
       OnClick = btnExcelClick
-      ExplicitTop = 151
     end
     object btnSelect: TBitBtn
       Left = 6
@@ -185,7 +173,6 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Select'
       TabOrder = 4
       OnClick = btnSelectClick
-      ExplicitTop = 245
     end
   end
   object pnlTop: TPanel
@@ -197,25 +184,24 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 491
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 53
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Customer:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblCustomerName: TLabel
-      Left = 72
+      Left = 82
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
   end

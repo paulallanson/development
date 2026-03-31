@@ -8,15 +8,13 @@ object frmwtRptsQuotes: TfrmwtRptsQuotes
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Position = poDefault
   Visible = True
-  PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 17
   object ListView1: TListView
     Left = 8
     Top = 8

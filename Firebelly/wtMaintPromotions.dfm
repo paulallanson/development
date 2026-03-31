@@ -7,12 +7,12 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -20,16 +20,15 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Height = 73
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 614
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -37,31 +36,31 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     object Label2: TLabel
       Left = 8
       Top = 45
-      Width = 87
-      Height = 13
-      Caption = 'Maximum Entires'
+      Width = 100
+      Height = 17
+      Caption = 'Maximum Entries'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object spnMaxEntries: TSpinEdit
-      Left = 96
+      Left = 114
       Top = 40
       Width = 57
-      Height = 22
+      Height = 27
       MaxValue = 20
       MinValue = 0
       TabOrder = 0
       Value = 6
     end
     object edtPromotionDescription: TEdit
-      Left = 96
+      Left = 114
       Top = 12
       Width = 409
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtPromotionDescription'
       OnChange = EnableOK
@@ -74,42 +73,40 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Height = 389
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 614
-    ExplicitHeight = 383
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 136
-      Height = 13
+      Width = 154
+      Height = 17
       Caption = 'Currently Selected Colours'
     end
     object Label4: TLabel
       Left = 344
       Top = 8
-      Width = 105
-      Height = 13
+      Width = 119
+      Height = 17
       Caption = 'Un-Selected Colours'
     end
     object Label5: TLabel
       Left = 344
       Top = 36
-      Width = 71
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'Material Type:'
     end
     object Label6: TLabel
       Left = 344
-      Top = 340
-      Width = 34
-      Height = 13
+      Top = 347
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object lstbxMembers: TListBox
       Left = 8
-      Top = 64
+      Top = 68
       Width = 233
       Height = 177
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
       OnClick = lstbxMembersClick
@@ -117,16 +114,16 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     end
     object lstbxMembersCodes: TListBox
       Left = 128
-      Top = 68
+      Top = 72
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 1
       Visible = False
     end
     object btnAdd: TBitBtn
       Left = 253
-      Top = 72
+      Top = 76
       Width = 81
       Height = 25
       Caption = '&Add'
@@ -150,7 +147,7 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     end
     object btnRemove: TBitBtn
       Left = 253
-      Top = 112
+      Top = 116
       Width = 81
       Height = 25
       Caption = '&Remove'
@@ -174,10 +171,10 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     end
     object lstbxNonMembers: TListBox
       Left = 344
-      Top = 64
+      Top = 68
       Width = 233
       Height = 265
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 4
       OnClick = lstbxNonMembersClick
@@ -185,18 +182,18 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     end
     object lstbxNonMembersCodes: TListBox
       Left = 472
-      Top = 68
+      Top = 72
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 5
       Visible = False
     end
     object dblkpMaterialType: TDBLookupComboBox
-      Left = 416
+      Left = 436
       Top = 32
       Width = 161
-      Height = 21
+      Height = 25
       KeyField = 'Material_Type'
       ListField = 'Description'
       ListSource = dtsMaterialType
@@ -204,10 +201,10 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       OnClick = dblkpMaterialTypeClick
     end
     object edtSearch: TEdit
-      Left = 384
-      Top = 336
-      Width = 193
-      Height = 21
+      Left = 391
+      Top = 343
+      Width = 183
+      Height = 25
       TabOrder = 7
       Text = 'edtSearch'
       OnChange = edtSearchChange
@@ -220,8 +217,6 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 456
-    ExplicitWidth = 614
     object btnOK: TBitBtn
       Left = 212
       Top = 8
@@ -375,8 +370,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       '      Worktop.Material_Type = :Material_Type AND'
       '      Worktop.Description LIKE :Description'
       '')
-    Left = 252
-    Top = 296
+    Left = 267
+    Top = 354
     ParamData = <
       item
         Name = 'Material_Type'
@@ -400,8 +395,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         '      ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
         ')'
       'ORDER BY Material_Type.Description')
-    Left = 394
-    Top = 42
+    Left = 453
+    Top = 5
   end
   object tmrRefresh: TTimer
     Interval = 250
@@ -415,8 +410,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       'UPDATE Promotion'
       'SET inactive = '#39'Y'#39
       'WHERE Promotion_Code <> :Promotion_Code')
-    Left = 40
-    Top = 347
+    Left = 50
+    Top = 386
     ParamData = <
       item
         Name = 'Promotion_Code'
@@ -482,7 +477,7 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     SQL.Strings = (
       'Select max(Promotion_Code) as Promotion_Code'
       'From Promotion')
-    Left = 200
-    Top = 112
+    Left = 274
+    Top = 244
   end
 end

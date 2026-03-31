@@ -3,50 +3,50 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Product Price Changes'
-  ClientHeight = 411
+  ClientHeight = 438
   ClientWidth = 403
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblPriceChange: TLabel
     Left = 16
-    Top = 310
-    Width = 67
-    Height = 13
+    Top = 326
+    Width = 76
+    Height = 17
     Caption = 'Price Change'
   end
   object Label2: TLabel
     Left = 16
-    Top = 340
-    Width = 70
-    Height = 13
+    Top = 356
+    Width = 79
+    Height = 17
     Caption = 'Effective Date'
   end
   object Label5: TLabel
-    Left = 224
-    Top = 340
-    Width = 24
-    Height = 13
+    Left = 252
+    Top = 356
+    Width = 28
+    Height = 17
     Caption = 'Time'
   end
   object Label4: TLabel
     Left = 16
     Top = 16
-    Width = 76
-    Height = 13
+    Width = 86
+    Height = 17
     Caption = 'Product Group'
   end
   object rdGrpProducts: TRadioGroup
     Left = 16
     Top = 80
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Products'
     ItemIndex = 0
     Items.Strings = (
@@ -61,7 +61,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Top = 80
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 1
     Visible = False
   end
@@ -69,20 +69,20 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Left = 128
     Top = 80
     Width = 249
-    Height = 113
+    Height = 129
     Enabled = False
     ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 10
-      Width = 45
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Products'
     end
     object btnProducts: TButton
       Left = 216
-      Top = 24
+      Top = 33
       Width = 25
       Height = 25
       Caption = '...'
@@ -97,10 +97,10 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     end
     object lstbxProducts: TListBox
       Left = 8
-      Top = 24
+      Top = 33
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Products')
       MultiSelect = True
@@ -109,9 +109,9 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   end
   object BasisGroup: TRadioGroup
     Left = 16
-    Top = 216
-    Width = 141
-    Height = 73
+    Top = 215
+    Width = 189
+    Height = 90
     Caption = 'Price Change type'
     ItemIndex = 0
     Items.Strings = (
@@ -124,26 +124,26 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   end
   object edtChange: TCREditFloat
     Left = 104
-    Top = 304
+    Top = 320
     Width = 103
-    Height = 21
+    Height = 25
     TabOrder = 4
     OnChange = EnableOK
   end
   object dtpckEffective: TDateTimePicker
     Left = 104
-    Top = 336
+    Top = 352
     Width = 101
-    Height = 21
+    Height = 25
     Date = 37563.000000000000000000
     Time = 0.834117939812131200
     TabOrder = 5
   end
   object edtTime: TMaskEdit
-    Left = 252
-    Top = 336
+    Left = 286
+    Top = 353
     Width = 51
-    Height = 21
+    Height = 25
     EditMask = '!90:00;1;_'
     MaxLength = 5
     TabOrder = 6
@@ -151,7 +151,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   end
   object BitBtn2: TBitBtn
     Left = 207
-    Top = 376
+    Top = 392
     Width = 75
     Height = 25
     Cancel = True
@@ -162,7 +162,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   end
   object btnOK: TBitBtn
     Left = 119
-    Top = 376
+    Top = 392
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -173,10 +173,10 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     OnClick = btnOKClick
   end
   object dblkpProductGroup: TDBLookupComboBox
-    Left = 16
-    Top = 32
+    Left = 18
+    Top = 39
     Width = 169
-    Height = 21
+    Height = 25
     KeyField = 'Product_Group'
     ListField = 'Product_Group_Description'
     ListSource = dtsProductGroup
@@ -188,8 +188,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
       'select *'
       'from Product_Group'
       'ORDER BY Product_Group_Description')
-    Left = 232
-    Top = 24
+    Left = 336
+    Top = 16
   end
   object dtsProductGroup: TDataSource
     DataSet = qryProductGroup
@@ -225,7 +225,7 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
       #9#9'(effective_date <= now())'
       'order by effective_date desc')
     Left = 344
-    Top = 352
+    Top = 368
     ParamData = <
       item
         Name = 'Price_pointer'

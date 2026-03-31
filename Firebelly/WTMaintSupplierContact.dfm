@@ -8,13 +8,13 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetails: TPanel
     Left = 0
     Top = 0
@@ -24,21 +24,23 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 432
+    ExplicitHeight = 295
     object Label1: TLabel
       Left = 16
       Top = 106
-      Width = 53
-      Height = 13
+      Width = 63
+      Height = 17
       Caption = 'Full Name'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object SpeedButton4: TSpeedButton
-      Left = 314
+      Left = 322
       Top = 131
       Width = 23
       Height = 22
@@ -54,12 +56,12 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label8: TLabel
       Left = 16
       Top = 18
-      Width = 22
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = 'Title'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -67,12 +69,12 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label7: TLabel
       Left = 16
       Top = 47
-      Width = 56
-      Height = 13
+      Width = 67
+      Height = 17
       Caption = 'First Name'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -80,12 +82,12 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label6: TLabel
       Left = 16
       Top = 77
-      Width = 45
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Surname'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -93,12 +95,12 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label9: TLabel
       Left = 16
       Top = 136
-      Width = 44
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Job Title'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -106,35 +108,35 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     object Label3: TLabel
       Left = 16
       Top = 225
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Email'
     end
     object Label10: TLabel
       Left = 16
       Top = 195
-      Width = 36
-      Height = 13
+      Width = 41
+      Height = 17
       Caption = 'Mobile'
     end
     object Label11: TLabel
       Left = 16
       Top = 165
-      Width = 33
-      Height = 13
+      Width = 36
+      Height = 17
       Caption = 'Phone'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object dblkpJobTitle: TDBLookupComboBox
-      Left = 88
+      Left = 96
       Top = 132
       Width = 217
-      Height = 21
+      Height = 25
       DataField = 'Contact_type'
       KeyField = 'Contact_Type'
       ListField = 'Contact_Type_Description'
@@ -151,63 +153,63 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
       TabOrder = 8
     end
     object edtTitle: TEdit
-      Left = 88
+      Left = 96
       Top = 14
       Width = 73
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtTitle'
     end
     object edtForename: TEdit
-      Left = 88
+      Left = 96
       Top = 46
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtForename'
       OnChange = edtSurnameChange
       OnEnter = edtFirstNameEnter
     end
     object edtSurname: TEdit
-      Left = 88
+      Left = 96
       Top = 73
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 2
       Text = 'edtSurname'
       OnChange = edtSurnameChange
       OnEnter = edtFirstNameEnter
     end
     object edtContactName: TEdit
-      Left = 88
+      Left = 96
       Top = 102
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 3
       Text = 'edtContactName'
       OnChange = EnableOK
     end
     object edtTelephoneNumber: TEdit
-      Left = 88
+      Left = 96
       Top = 163
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 5
       Text = 'edtTelephoneNumber'
     end
     object edtMobileNumber: TEdit
-      Left = 88
+      Left = 96
       Top = 191
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 6
       Text = 'edtMobileNumber'
     end
     object edtEmailAddress: TEdit
-      Left = 88
+      Left = 96
       Top = 221
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 7
       Text = 'edtEmailAddress'
     end
@@ -220,16 +222,18 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 295
+    ExplicitWidth = 432
     DesignSize = (
       438
       41)
     object lbldelete: TLabel
-      Left = 118
+      Left = 112
       Top = 12
-      Width = 116
+      Width = 121
       Height = 17
       Anchors = [akRight, akBottom]
-      Caption = 'Delete this contact'
+      Caption = 'Delete this contact?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -238,7 +242,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
       ParentFont = False
     end
     object btnOK: TBitBtn
-      Left = 258
+      Left = 252
       Top = 8
       Width = 75
       Height = 25
@@ -250,9 +254,10 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 246
     end
     object BitBtn2: TBitBtn
-      Left = 346
+      Left = 340
       Top = 8
       Width = 75
       Height = 25
@@ -262,6 +267,7 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 334
     end
   end
   object qryUpdate: TFDQuery

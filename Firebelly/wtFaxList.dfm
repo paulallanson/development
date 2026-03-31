@@ -7,12 +7,12 @@ object frmWTFaxList: TfrmWTFaxList
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 168
@@ -22,6 +22,8 @@ object frmWTFaxList: TfrmWTFaxList
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 159
+    ExplicitWidth = 460
     object Panel2: TPanel
       Left = 286
       Top = 0
@@ -31,6 +33,7 @@ object frmWTFaxList: TfrmWTFaxList
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 280
       object BitBtn1: TBitBtn
         Left = 6
         Top = 8
@@ -60,6 +63,8 @@ object frmWTFaxList: TfrmWTFaxList
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 460
+    ExplicitHeight = 159
     object FaxListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -74,6 +79,8 @@ object frmWTFaxList: TfrmWTFaxList
       TabOrder = 0
       OnKeyPress = FaxListGridKeyPress
       OnSelectCell = FaxListGridSelectCell
+      ExplicitWidth = 458
+      ExplicitHeight = 157
       ColWidths = (
         64
         226

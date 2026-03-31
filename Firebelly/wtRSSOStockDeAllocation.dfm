@@ -7,14 +7,14 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlFooter: TPanel
     Left = 0
     Top = 430
@@ -79,7 +79,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -87,7 +87,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -153,44 +153,44 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       Left = 240
       Top = 16
       Width = 209
-      Height = 73
+      Height = 91
       Caption = 'Fitting Date'
       ParentBackground = False
       TabOrder = 0
       Visible = False
       object Label1: TLabel
         Left = 16
-        Top = 20
-        Width = 29
-        Height = 13
+        Top = 34
+        Width = 33
+        Height = 17
         Caption = 'From:'
       end
       object Label2: TLabel
         Left = 26
-        Top = 48
-        Width = 14
-        Height = 13
+        Top = 62
+        Width = 17
+        Height = 17
         Caption = 'To:'
       end
       object edtDateFrom: TEdit
         Left = 56
-        Top = 16
+        Top = 30
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnExit = edtDateFromExit
       end
       object edtDateTo: TEdit
         Left = 56
-        Top = 44
+        Top = 58
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnExit = edtDateFromExit
       end
       object btnDatefrom: TBitBtn
         Left = 168
-        Top = 14
+        Top = 30
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -212,7 +212,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       end
       object btnDateTo: TBitBtn
         Left = 168
-        Top = 42
+        Top = 58
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -237,43 +237,43 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       Left = 8
       Top = 16
       Width = 209
-      Height = 73
+      Height = 91
       Caption = 'Movement Date'
       ParentBackground = False
       TabOrder = 1
       object Label5: TLabel
         Left = 16
-        Top = 20
-        Width = 29
-        Height = 13
+        Top = 33
+        Width = 33
+        Height = 17
         Caption = 'From:'
       end
       object Label6: TLabel
         Left = 26
-        Top = 48
-        Width = 14
-        Height = 13
+        Top = 61
+        Width = 17
+        Height = 17
         Caption = 'To:'
       end
       object edtMoveDateFrom: TEdit
         Left = 56
-        Top = 16
+        Top = 29
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnExit = edtDateFromExit
       end
       object edtMoveDateTo: TEdit
         Left = 56
-        Top = 44
+        Top = 57
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnExit = edtDateFromExit
       end
       object BitBtn1: TBitBtn
         Left = 168
-        Top = 14
+        Top = 29
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -295,7 +295,7 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
       end
       object BitBtn2: TBitBtn
         Left = 168
-        Top = 42
+        Top = 57
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -338,8 +338,8 @@ object frmWTRSSOStockDeAllocation: TfrmWTRSSOStockDeAllocation
     object lblProcessing: TLabel
       Left = 16
       Top = 12
-      Width = 70
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'De-Allocating'
     end
     object prgbrRecords: TProgressBar

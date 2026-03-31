@@ -7,14 +7,14 @@ object frmWTMaintLogins: TfrmWTMaintLogins
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 461
@@ -64,7 +64,7 @@ object frmWTMaintLogins: TfrmWTMaintLogins
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
@@ -81,6 +81,11 @@ object frmWTMaintLogins: TfrmWTMaintLogins
         Expanded = False
         FieldName = 'Operator_name'
         Title.Caption = 'Operator'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 138
         Visible = True
       end
@@ -88,6 +93,11 @@ object frmWTMaintLogins: TfrmWTMaintLogins
         Expanded = False
         FieldName = 'Status_Descr'
         Title.Caption = 'Login Name'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 110
         Visible = True
       end
@@ -95,6 +105,11 @@ object frmWTMaintLogins: TfrmWTMaintLogins
         Expanded = False
         FieldName = 'Workstation_Name'
         Title.Caption = 'Workstation Name'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 121
         Visible = True
       end
@@ -102,6 +117,11 @@ object frmWTMaintLogins: TfrmWTMaintLogins
         Expanded = False
         FieldName = 'Logged_in'
         Title.Caption = 'Logged In'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 89
         Visible = True
       end
@@ -109,6 +129,11 @@ object frmWTMaintLogins: TfrmWTMaintLogins
         Expanded = False
         FieldName = 'Software_Version'
         Title.Caption = 'Software Version'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = []
         Width = 124
         Visible = True
       end>

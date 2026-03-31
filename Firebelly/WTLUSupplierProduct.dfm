@@ -8,14 +8,14 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlFunctions: TPanel
     Left = 528
     Top = 0
@@ -65,7 +65,7 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -106,8 +106,8 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
     object Label1: TLabel
       Left = 8
       Top = 36
-      Width = 77
-      Height = 13
+      Width = 88
+      Height = 17
       Anchors = [akLeft, akBottom]
       Caption = 'Product Search'
     end
@@ -125,13 +125,13 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       Left = 8
       Top = 56
       Width = 257
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akBottom]
       TabOrder = 1
       OnChange = edtSearchChange
     end
     object btnSelect: TBitBtn
-      Left = 531
+      Left = 541
       Top = 16
       Width = 75
       Height = 25
@@ -142,7 +142,7 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
       OnClick = btnSelectClick
     end
     object BitBtn2: TBitBtn
-      Left = 531
+      Left = 541
       Top = 54
       Width = 75
       Height = 25

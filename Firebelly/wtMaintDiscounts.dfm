@@ -8,36 +8,34 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     322
     197)
-  PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 71
-    Height = 13
+    Width = 85
+    Height = 17
     Caption = 'Discount Label'
   end
   object Label3: TLabel
     Left = 16
     Top = 60
-    Width = 24
-    Height = 13
+    Width = 27
+    Height = 17
     Caption = 'Type'
   end
   object Label2: TLabel
     Left = 16
     Top = 96
-    Width = 36
-    Height = 13
+    Width = 45
+    Height = 17
     Caption = 'Amount'
   end
   object btnOK: TBitBtn
@@ -50,9 +48,9 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 164
@@ -63,8 +61,8 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 5
     NumGlyphs = 2
+    TabOrder = 5
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -75,28 +73,27 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
     TabOrder = 3
   end
   object edtDiscountLabel: TEdit
-    Left = 104
+    Left = 109
     Top = 20
     Width = 185
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDiscountLabel'
     OnChange = EnableOK
   end
   object edtAmount: TCREditFloat
-    Left = 104
+    Left = 109
     Top = 92
     Width = 81
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = 'edtAmount'
   end
   object dblkpDiscountType: TComboBox
-    Left = 104
+    Left = 109
     Top = 56
     Width = 145
-    Height = 21
-    ItemHeight = 13
+    Height = 25
     TabOrder = 1
     Text = 'dblkpDiscountType'
     OnChange = EnableOK
@@ -115,33 +112,23 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
       '      inActive = :inactive'
       'WHERE'
       '  Discount = :Discount')
-    Left = 80
-    Top = 40
+    Left = 268
+    Top = 2
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Discount_Label'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -166,24 +153,16 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Discount_Label'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -191,7 +170,7 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
     SQL.Strings = (
       'Select max(Discount) as Discount'
       'From Discount')
-    Left = 200
-    Top = 40
+    Left = 250
+    Top = 106
   end
 end

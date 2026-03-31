@@ -7,7 +7,7 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -16,7 +16,7 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 595
@@ -28,15 +28,15 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 86
-      Height = 13
+      Width = 99
+      Height = 17
       Caption = 'Customer Search'
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 120
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object Panel2: TPanel
@@ -53,10 +53,10 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
         290
         39)
       object Label3: TLabel
-        Left = 22
+        Left = 10
         Top = 12
-        Width = 76
-        Height = 13
+        Width = 88
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'Quote Number'
@@ -65,7 +65,7 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
         Left = 105
         Top = 8
         Width = 73
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 0
       end
@@ -80,17 +80,17 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
       end
     end
     object btnSearch: TBitBtn
-      Left = 280
-      Top = 6
+      Left = 296
+      Top = 8
       Width = 75
       Height = 25
       Caption = '&Search'
       TabOrder = 2
     end
     object chkbxHighImportance: TCheckBox
-      Left = 368
-      Top = 10
-      Width = 193
+      Left = 384
+      Top = 12
+      Width = 241
       Height = 17
       Caption = 'Show only high importance quotes'
       TabOrder = 3
@@ -106,7 +106,7 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

@@ -3,27 +3,27 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Anticipated Material Ordering Report'
-  ClientHeight = 354
-  ClientWidth = 531
+  ClientHeight = 393
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    531
-    354)
-  TextHeight = 13
+    534
+    393)
+  TextHeight = 17
   object lstbxCustomersCode: TListBox
     Left = 96
     Top = 16
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 10
     Visible = False
   end
@@ -31,7 +31,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Left = 232
     Top = 136
     Width = 105
-    Height = 90
+    Height = 113
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -44,17 +44,18 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnPrint: TButton
     Left = 8
-    Top = 317
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 308
   end
   object Button4: TButton
-    Left = 416
-    Top = 317
+    Left = 422
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -67,7 +68,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Left = 8
     Top = 16
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -79,47 +80,47 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object grpbxDateSelect: TGroupBox
     Left = 8
-    Top = 136
+    Top = 137
     Width = 209
-    Height = 73
+    Height = 112
     Caption = 'Fitting Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
       Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Top = 64
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
       Left = 56
-      Top = 16
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
       Left = 56
-      Top = 44
+      Top = 60
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
       Left = 168
-      Top = 14
+      Top = 30
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -141,7 +142,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     end
     object btnDateTo: TBitBtn
       Left = 168
-      Top = 42
+      Top = 60
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -164,7 +165,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object grpbxCustomer: TGroupBox
     Left = 120
-    Top = 16
+    Top = 24
     Width = 249
     Height = 113
     Enabled = False
@@ -173,8 +174,8 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     object Label4: TLabel
       Left = 8
       Top = 10
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object btnCustomer: TButton
@@ -197,7 +198,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
       Top = 24
       Width = 201
       Height = 83
-      ItemHeight = 13
+      ItemHeight = 17
       Items.Strings = (
         'All Customers')
       MultiSelect = True
@@ -207,27 +208,29 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object btnPreview: TButton
     Left = 96
-    Top = 317
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 5
     OnClick = btnPreviewClick
+    ExplicitTop = 308
   end
   object btnExcel: TButton
     Left = 184
-    Top = 317
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 6
     OnClick = btnExcelClick
+    ExplicitTop = 308
   end
   object OleContainer1: TOleContainer
-    Left = 180
-    Top = -45
+    Left = 176
+    Top = 57
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -236,8 +239,8 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 108
-    Top = 63
+    Left = 100
+    Top = 167
     Width = 289
     Height = 61
     ParentBackground = False
@@ -246,8 +249,8 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -263,7 +266,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Left = 384
     Top = 136
     Width = 113
-    Height = 73
+    Height = 90
     Caption = 'Select by '
     ItemIndex = 0
     Items.Strings = (
@@ -278,7 +281,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Left = 384
     Top = 16
     Width = 113
-    Height = 89
+    Height = 113
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -291,7 +294,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object chkbxShowOnlyScheduled: TCheckBox
     Left = 8
-    Top = 224
+    Top = 264
     Width = 217
     Height = 17
     Caption = 'Only Show Scheduled Orders'
@@ -299,7 +302,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object chkbxIncludeInvoiced: TCheckBox
     Left = 8
-    Top = 248
+    Top = 288
     Width = 217
     Height = 17
     Caption = 'Include Orders up to Fully Invoiced'
@@ -307,7 +310,7 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object chkbxIncludeAllocated: TCheckBox
     Left = 8
-    Top = 272
+    Top = 312
     Width = 217
     Height = 17
     Caption = 'Include Allocated Order Lines'
@@ -315,8 +318,8 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
   end
   object pmnCustomers: TPopupMenu
     OnPopup = pmnCustomersPopup
-    Left = 376
-    Top = 72
+    Left = 198
+    Top = 114
     object Delete1: TMenuItem
       Caption = 'Delete'
       OnClick = Delete1Click

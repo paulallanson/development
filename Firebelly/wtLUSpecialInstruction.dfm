@@ -8,13 +8,13 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -59,9 +59,9 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
       40)
     object Label4: TLabel
       Left = 8
-      Top = 15
-      Width = 34
-      Height = 13
+      Top = 12
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object btnAdd: TBitBtn
@@ -120,9 +120,9 @@ object frmWTLUSpecialInstruction: TfrmWTLUSpecialInstruction
     end
     object edtName: TEdit
       Left = 56
-      Top = 11
+      Top = 8
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNameChange
     end

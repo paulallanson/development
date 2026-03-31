@@ -2,8 +2,8 @@ object frmWTMaintSalesOrderLineProperty: TfrmWTMaintSalesOrderLineProperty
   Left = 418
   Top = 119
   Caption = 'Maintain Order line Properties'
-  ClientHeight = 158
-  ClientWidth = 642
+  ClientHeight = 177
+  ClientWidth = 663
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

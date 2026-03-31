@@ -8,14 +8,14 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 15
+  TextHeight = 17
   object pnlDetails: TPanel
     Left = 0
     Top = 0
@@ -24,37 +24,37 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 841
-    ExplicitHeight = 292
+    ExplicitWidth = 692
+    ExplicitHeight = 249
     object Label1: TLabel
       Left = 10
       Top = 54
-      Width = 75
-      Height = 15
+      Width = 83
+      Height = 17
       Caption = 'Product Code'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label2: TLabel
       Left = 289
-      Top = 113
-      Width = 45
-      Height = 15
+      Top = 112
+      Width = 50
+      Height = 17
       Caption = 'Unit Size'
     end
     object Label4: TLabel
       Left = 10
       Top = 112
-      Width = 78
-      Height = 15
+      Width = 87
+      Height = 17
       Caption = 'Sell Price/unit'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -62,12 +62,12 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
     object Label5: TLabel
       Left = 10
       Top = 145
-      Width = 47
-      Height = 15
+      Width = 51
+      Height = 17
       Caption = 'Vat Rate'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -75,25 +75,25 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
     object Label7: TLabel
       Left = 10
       Top = 84
-      Width = 64
-      Height = 15
+      Width = 71
+      Height = 17
       Caption = 'Description'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label3: TLabel
       Left = 10
-      Top = 25
-      Width = 109
-      Height = 15
+      Top = 24
+      Width = 121
+      Height = 17
       Caption = 'Associate Customer'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -102,7 +102,7 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
       Left = 136
       Top = 49
       Width = 137
-      Height = 23
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = EnableOK
@@ -127,17 +127,17 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
       Left = 136
       Top = 80
       Width = 471
-      Height = 23
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
     end
     object edtPackSize: TEdit
-      Left = 340
-      Top = 109
+      Left = 351
+      Top = 108
       Width = 81
-      Height = 23
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -145,7 +145,7 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
     end
     object memSellPrice: TMemo
       Left = 136
-      Top = 109
+      Top = 110
       Width = 81
       Height = 21
       Alignment = taRightJustify
@@ -160,7 +160,7 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
       Left = 136
       Top = 141
       Width = 144
-      Height = 23
+      Height = 25
       KeyField = 'Vat'
       ListField = 'Description'
       ListSource = dtsVat
@@ -168,7 +168,7 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
     end
     object Button1: TButton
       Left = 286
-      Top = 139
+      Top = 141
       Width = 25
       Height = 25
       Caption = '...'
@@ -185,7 +185,7 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
       Left = 136
       Top = 20
       Width = 471
-      Height = 23
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -225,25 +225,24 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
     ParentBackground = False
     TabOrder = 1
     TabStop = True
-    ExplicitTop = 292
-    ExplicitWidth = 841
+    ExplicitTop = 249
+    ExplicitWidth = 692
     DesignSize = (
       698
       40)
     object lblDelete: TLabel
-      Left = 358
+      Left = 346
       Top = 12
-      Width = 145
-      Height = 15
+      Width = 162
+      Height = 16
       Anchors = [akRight, akBottom]
-      Caption = 'Delete the above details ?'
+      Caption = 'Delete the above details?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 302
     end
     object btnOK: TBitBtn
       Left = 518
@@ -280,7 +279,7 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 661
+      ExplicitLeft = 512
     end
     object btnCancel: TBitBtn
       Left = 598
@@ -298,7 +297,7 @@ object frmWTMaintCustAssociateCharge: TfrmWTMaintCustAssociateCharge
       ParentFont = False
       TabOrder = 1
       OnClick = btnCancelClick
-      ExplicitLeft = 741
+      ExplicitLeft = 592
     end
   end
   object qryGetCharge: TFDQuery

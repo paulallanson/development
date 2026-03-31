@@ -3,31 +3,31 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   Top = 114
   Caption = 'Maintain Customer Cut Out Details'
   ClientHeight = 382
-  ClientWidth = 739
+  ClientWidth = 765
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClick = FormClick
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 739
+    Width = 765
     Height = 221
     Align = alClient
     DataSource = dtsCustCutOut
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -81,20 +81,21 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   object Panel1: TPanel
     Left = 0
     Top = 294
-    Width = 739
+    Width = 765
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 739
     DesignSize = (
-      739
+      765
       69)
     object Label4: TLabel
       Left = 16
       Top = 20
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object chkbxShowInactive: TCheckBox
@@ -110,12 +111,12 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Left = 64
       Top = 16
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtNameChange
     end
     object BitBtn1: TBitBtn
-      Left = 307
+      Left = 324
       Top = 14
       Width = 75
       Height = 25
@@ -125,7 +126,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       OnClick = BitBtn1Click
     end
     object btnEdit: TBitBtn
-      Left = 395
+      Left = 412
       Top = 14
       Width = 75
       Height = 25
@@ -136,7 +137,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       OnClick = btnEditClick
     end
     object btnDelete: TBitBtn
-      Left = 483
+      Left = 500
       Top = 14
       Width = 75
       Height = 25
@@ -147,7 +148,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 659
+      Left = 676
       Top = 14
       Width = 75
       Height = 25
@@ -158,7 +159,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       TabOrder = 5
     end
     object btnExcel: TBitBtn
-      Left = 571
+      Left = 588
       Top = 14
       Width = 75
       Height = 25
@@ -172,7 +173,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 363
-    Width = 739
+    Width = 765
     Height = 19
     Panels = <
       item
@@ -181,47 +182,48 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       item
         Width = 50
       end>
+    ExplicitWidth = 739
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 739
+    Width = 765
     Height = 73
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 739
     DesignSize = (
-      739
+      765
       73)
     object Label1: TLabel
       Left = 16
-      Top = 16
-      Width = 68
-      Height = 13
+      Top = 8
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object Label2: TLabel
       Left = 216
-      Top = 16
-      Width = 51
-      Height = 13
+      Top = 8
+      Width = 59
+      Height = 17
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 499
-      Top = 16
-      Width = 138
-      Height = 13
+      Left = 513
+      Top = 8
+      Width = 157
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Copy Cut Out Details from '
-      ExplicitLeft = 501
     end
     object dblkpMaterialType: TDBLookupComboBox
       Left = 16
       Top = 32
       Width = 145
-      Height = 21
+      Height = 25
       Enabled = False
       KeyField = 'Material_Type'
       ListField = 'Description'
@@ -234,7 +236,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Left = 216
       Top = 32
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Edge_Type'
       ListField = 'Edge_Type_Description'
       ListSource = srclkpEdgeType
@@ -242,10 +244,10 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyGroup: TDBLookupComboBox
-      Left = 499
+      Left = 513
       Top = 32
       Width = 145
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       KeyField = 'Group_ID'
       ListField = 'Group_Description'
@@ -254,8 +256,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       OnClick = dblkpCopyGroupClick
     end
     object btnGo: TButton
-      Left = 660
-      Top = 30
+      Left = 676
+      Top = 32
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -321,8 +323,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
         'ut.inactive = :inactive)) AND'
       '  (CutOut.Description LIKE :Description)'
       'ORDER BY Edge_Type.Edge_Type_Description, CutOut.Description')
-    Left = 368
-    Top = 8
+    Left = 468
+    Top = 122
     ParamData = <
       item
         Name = 'Group_Id'
@@ -386,8 +388,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       
         'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
         ')')
-    Left = 168
-    Top = 8
+    Left = 154
+    Top = 90
   end
   object srclkpMatType: TDataSource
     DataSet = lkpMatType
@@ -473,8 +475,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
         'where ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is NULL)' +
         ')'
       'order by Edge_Type_Description')
-    Left = 248
-    Top = 8
+    Left = 310
+    Top = 130
   end
   object srclkpEdgeType: TDataSource
     DataSet = lkpEdgeType
@@ -500,8 +502,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       'FROM Customer_Cutout_Edge_Group'
       'WHERE Customer = :Customer'
       'ORDER BY Group_Description')
-    Left = 440
-    Top = 8
+    Left = 558
+    Top = 170
     ParamData = <
       item
         Name = 'Customer'

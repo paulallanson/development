@@ -3,31 +3,31 @@ object frmWTMaintContactType: TfrmWTMaintContactType
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Contact Type Details'
-  ClientHeight = 89
-  ClientWidth = 378
+  ClientHeight = 98
+  ClientWidth = 394
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    378
-    89)
-  TextHeight = 13
+    394
+    98)
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 66
-    Height = 13
+    Width = 75
+    Height = 17
     Caption = 'Contact Type'
   end
   object btnOK: TBitBtn
     Left = 184
-    Top = 52
+    Top = 61
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -38,10 +38,11 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 43
   end
   object BitBtn2: TBitBtn
     Left = 272
-    Top = 52
+    Top = 61
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -50,12 +51,13 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 43
   end
   object edtContactTypeDescription: TEdit
-    Left = 80
+    Left = 92
     Top = 16
     Width = 280
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtContactTypeDescription'
     OnChange = EnableOK

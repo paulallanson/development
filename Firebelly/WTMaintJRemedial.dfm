@@ -8,22 +8,20 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   Constraints.MinHeight = 660
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
     Top = 684
     Width = 899
     Height = 19
     Panels = <>
-    ExplicitTop = 675
-    ExplicitWidth = 893
   end
   object pnlBody: TPanel
     Left = 0
@@ -34,8 +32,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 893
-    ExplicitHeight = 675
     object SpeedButton1: TSpeedButton
       Left = 482
       Top = 280
@@ -53,8 +49,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     object Label10: TLabel
       Left = 8
       Top = 384
-      Width = 81
-      Height = 13
+      Width = 94
+      Height = 17
       Caption = 'Tools Required?'
     end
     object pnlbottom: TPanel
@@ -65,24 +61,22 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 618
-      ExplicitWidth = 893
       object lblDelete: TLabel
         Left = 245
         Top = 22
-        Width = 106
-        Height = 13
+        Width = 128
+        Height = 17
         Caption = 'Delete these details?'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object btnOK: TBitBtn
-        Left = 373
-        Top = 16
+        Left = 380
+        Top = 17
         Width = 75
         Height = 25
         Caption = 'OK'
@@ -93,8 +87,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = btnOKClick
       end
       object BitBtn2: TBitBtn
-        Left = 461
-        Top = 16
+        Left = 468
+        Top = 17
         Width = 75
         Height = 25
         Cancel = True
@@ -113,8 +107,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       end
       object chkbxCompleted: TCheckBox
         Left = 8
-        Top = 32
-        Width = 97
+        Top = 34
+        Width = 208
         Height = 17
         Caption = 'Work Completed'
         TabOrder = 3
@@ -127,7 +121,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         Caption = 'Internal'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Glyph.Data = {
@@ -157,64 +151,73 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 522
-      ExplicitWidth = 893
       DesignSize = (
         899
         96)
       object Label3: TLabel
-        Left = 672
-        Top = 46
-        Width = 89
-        Height = 13
+        Left = 653
+        Top = 43
+        Width = 102
+        Height = 17
         Caption = 'Proposed fit date'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
       object Label4: TLabel
-        Left = 607
-        Top = 75
-        Width = 77
-        Height = 13
+        Left = 590
+        Top = 73
+        Width = 87
+        Height = 17
         Caption = 'Remedial Fitter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
       end
       object Label5: TLabel
-        Left = 675
+        Left = 728
         Top = 13
-        Width = 23
-        Height = 13
+        Width = 27
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Cost'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 731
       end
       object Label18: TLabel
         Left = 8
-        Top = 15
-        Width = 94
-        Height = 13
+        Top = 14
+        Width = 108
+        Height = 17
         Caption = 'Original Templater'
       end
       object Label19: TLabel
         Left = 8
-        Top = 46
-        Width = 72
-        Height = 13
+        Top = 43
+        Width = 79
+        Height = 17
         Caption = 'Original Fitter'
       end
       object Label20: TLabel
         Left = 8
-        Top = 75
-        Width = 77
-        Height = 13
+        Top = 73
+        Width = 87
+        Height = 17
         Caption = 'Sub-contractor'
       end
       object SpeedButton6: TSpeedButton
-        Left = 324
-        Top = 68
+        Left = 336
+        Top = 69
         Width = 25
         Height = 25
         Hint = 'Clear Default Upstand Size'
@@ -242,39 +245,61 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       end
       object dblkpFitters: TDBLookupComboBox
         Left = 685
-        Top = 71
+        Top = 69
         Width = 171
-        Height = 21
+        Height = 25
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         KeyField = 'Fitter'
         ListField = 'Fitter_Name'
         ListSource = srcFitter3
+        ParentFont = False
         TabOrder = 0
         OnClick = EnableOK
       end
       object edtPrice: TCREditMoney
-        Left = 710
-        Top = 9
+        Left = 766
+        Top = 10
         Width = 89
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 1
         Text = 'edtPrice'
         OnChange = EnableOK
-        ExplicitLeft = 704
       end
       object edtInstallDate: TEdit
         Left = 766
-        Top = 42
+        Top = 39
         Width = 89
-        Height = 21
+        Height = 25
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 2
         OnExit = edtDateRaisedExit
       end
       object btnInstallDate: TBitBtn
-        Left = 869
-        Top = 40
+        Left = 863
+        Top = 39
         Width = 25
         Height = 25
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -289,11 +314,12 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        ParentFont = False
         TabOrder = 3
         OnClick = btnInstallDateClick
       end
       object BitBtn5: TBitBtn
-        Left = 869
+        Left = 863
         Top = 69
         Width = 25
         Height = 25
@@ -310,10 +336,10 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = BitBtn5Click
       end
       object dblkpOriginalTemplater: TDBLookupComboBox
-        Left = 110
+        Left = 122
         Top = 10
         Width = 171
-        Height = 21
+        Height = 25
         KeyField = 'Fitter'
         ListField = 'Fitter_Name'
         ListSource = srcFitter1
@@ -321,10 +347,10 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = EnableOK
       end
       object dblkpOriginalFitter: TDBLookupComboBox
-        Left = 110
-        Top = 42
+        Left = 122
+        Top = 39
         Width = 171
-        Height = 21
+        Height = 25
         KeyField = 'Fitter'
         ListField = 'Fitter_Name'
         ListSource = srcFitter2
@@ -332,16 +358,16 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = EnableOK
       end
       object edtCustomer: TEdit
-        Left = 110
-        Top = 71
+        Left = 122
+        Top = 69
         Width = 171
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 7
         Text = 'edtCustomer'
       end
       object btnCustomer: TButton
-        Left = 293
+        Left = 305
         Top = 69
         Width = 25
         Height = 25
@@ -356,8 +382,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = btnCustomerClick
       end
       object BitBtn6: TBitBtn
-        Left = 293
-        Top = 7
+        Left = 305
+        Top = 9
         Width = 25
         Height = 27
         Hint = 'Search for Customer'
@@ -381,77 +407,73 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Align = alTop
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 893
       DesignSize = (
         899
         81)
       object Label6: TLabel
         Left = 8
-        Top = 16
-        Width = 56
-        Height = 13
+        Top = 14
+        Width = 65
+        Height = 17
         Caption = 'Logged by'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 681
-        Top = 16
-        Width = 24
-        Height = 13
+        Left = 719
+        Top = 14
+        Width = 27
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Date'
-        ExplicitLeft = 734
       end
       object Label15: TLabel
         Left = 288
-        Top = 48
-        Width = 72
-        Height = 13
+        Top = 50
+        Width = 85
+        Height = 17
         Caption = 'Remedial Type'
       end
       object Label16: TLabel
         Left = 8
-        Top = 48
-        Width = 63
-        Height = 13
+        Top = 50
+        Width = 73
+        Height = 17
         Caption = 'Reported by'
       end
       object Label17: TLabel
-        Left = 596
-        Top = 48
-        Width = 53
-        Height = 13
+        Left = 623
+        Top = 50
+        Width = 61
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Caused by'
-        ExplicitLeft = 649
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 77
-        Top = 12
+        Left = 87
+        Top = 10
         Width = 129
-        Height = 21
+        Height = 25
         KeyField = 'Operator'
         ListField = 'Operator_Name'
         ListSource = srcOperator
         TabOrder = 0
       end
       object edtDateRaised: TEdit
-        Left = 718
-        Top = 12
+        Left = 756
+        Top = 10
         Width = 89
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 1
         OnExit = edtDateRaisedExit
-        ExplicitLeft = 712
       end
       object btnDateRequired: TBitBtn
-        Left = 818
+        Left = 856
         Top = 10
         Width = 25
         Height = 25
@@ -472,43 +494,41 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         NumGlyphs = 2
         TabOrder = 2
         OnClick = btnDateRequiredClick
-        ExplicitLeft = 812
       end
       object dblkpRemedialType: TDBLookupComboBox
-        Left = 368
-        Top = 44
-        Width = 209
-        Height = 21
+        Left = 381
+        Top = 46
+        Width = 200
+        Height = 25
         KeyField = 'Remedial_type'
         ListField = 'Remedial_type_descr'
         ListSource = dtsRemedialType
         TabOrder = 3
       end
       object dblkpRemedialCategory: TDBLookupComboBox
-        Left = 77
-        Top = 44
+        Left = 87
+        Top = 46
         Width = 153
-        Height = 21
+        Height = 25
         KeyField = 'Remedial_Category'
         ListField = 'Remedial_Category_Descr'
         ListSource = dtsRemedialCategory
         TabOrder = 4
       end
       object dblkpRemedialDept: TDBLookupComboBox
-        Left = 654
-        Top = 44
+        Left = 692
+        Top = 46
         Width = 153
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Remedial_Dept'
         ListField = 'Remedial_Dept_Descr'
         ListSource = dtsRemedailDept
         TabOrder = 5
-        ExplicitLeft = 648
       end
       object BitBtn1: TBitBtn
         Left = 584
-        Top = 43
+        Top = 50
         Width = 22
         Height = 22
         Hint = 'Search for Customer'
@@ -524,8 +544,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = BitBtn1Click
       end
       object BitBtn3: TBitBtn
-        Left = 240
-        Top = 43
+        Left = 245
+        Top = 49
         Width = 22
         Height = 22
         Hint = 'Search for Customer'
@@ -541,8 +561,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         OnClick = BitBtn3Click
       end
       object BitBtn4: TBitBtn
-        Left = 819
-        Top = 43
+        Left = 857
+        Top = 47
         Width = 22
         Height = 22
         Hint = 'Search for Customer'
@@ -557,7 +577,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ParentFont = False
         TabOrder = 8
         OnClick = BitBtn4Click
-        ExplicitLeft = 813
       end
     end
     object Panel2: TPanel
@@ -569,8 +588,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Caption = 'Panel2'
       ParentBackground = False
       TabOrder = 3
-      ExplicitWidth = 893
-      ExplicitHeight = 441
       object pcDetails: TPageControl
         Left = 1
         Top = 1
@@ -579,50 +596,47 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         ActivePage = tsDetails
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 891
-        ExplicitHeight = 439
         object tsDetails: TTabSheet
           Caption = 'Details'
           object pnlRight: TPanel
             Left = 448
             Top = 0
             Width = 441
-            Height = 420
+            Height = 416
             Align = alClient
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 435
-            ExplicitHeight = 411
+            ExplicitHeight = 420
             object Label9: TLabel
               Left = 10
-              Top = 112
-              Width = 204
-              Height = 13
+              Top = 107
+              Width = 234
+              Height = 17
               Caption = 'What items still on site? (255 characters)'
             end
             object Label12: TLabel
               Left = 10
-              Top = 216
-              Width = 261
-              Height = 13
+              Top = 212
+              Width = 299
+              Height = 17
               Caption = 'Site requirements before returning (255 characters)'
             end
             object Label14: TLabel
               Left = 10
-              Top = 320
-              Width = 186
-              Height = 13
+              Top = 317
+              Width = 210
+              Height = 17
               Caption = 'Factory/Manufacturing Notes/Issues'
             end
             object Label1: TLabel
               Left = 11
-              Top = 8
-              Width = 263
-              Height = 13
+              Top = 3
+              Width = 313
+              Height = 17
               Caption = 'Requirements to make good (include dimensions):'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -671,41 +685,41 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
             Left = 0
             Top = 0
             Width = 448
-            Height = 420
+            Height = 416
             Align = alLeft
             ParentBackground = False
             TabOrder = 1
-            ExplicitHeight = 411
+            ExplicitHeight = 420
             object Label8: TLabel
               Left = 8
-              Top = 112
-              Width = 266
-              Height = 13
+              Top = 107
+              Width = 304
+              Height = 17
               Caption = 'What items needs returning to site? (255 characters)'
             end
             object Label11: TLabel
               Left = 9
-              Top = 214
-              Width = 193
-              Height = 13
+              Top = 211
+              Width = 225
+              Height = 17
               Caption = 'Tools required on site (255 characters)'
             end
             object Label13: TLabel
               Left = 8
-              Top = 320
-              Width = 295
-              Height = 13
+              Top = 316
+              Width = 333
+              Height = 17
               Caption = 'Additional Notes (Additional labour/Silicone colour used)'
             end
             object Label2: TLabel
               Left = 8
-              Top = 8
-              Width = 80
-              Height = 13
+              Top = 3
+              Width = 96
+              Height = 17
               Caption = 'Remedial Issue:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -755,34 +769,32 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
           ImageIndex = 1
           object Panel25: TPanel
             Left = 0
-            Top = 392
+            Top = 388
             Width = 889
             Height = 28
             Align = alBottom
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 0
-            ExplicitTop = 383
-            ExplicitWidth = 883
             object lblSlabTotalArea: TLabel
               Left = 288
               Top = 7
-              Width = 87
-              Height = 13
+              Width = 100
+              Height = 17
               Caption = 'Total Sales Value:'
             end
             object lblSlabTotalCost: TLabel
               Left = 8
               Top = 7
-              Width = 87
-              Height = 13
+              Width = 100
+              Height = 17
               Caption = 'Total Cost Value: '
             end
             object lblSlabWasteCost: TLabel
-              Left = 630
+              Left = 617
               Top = 7
-              Width = 96
-              Height = 13
+              Width = 109
+              Height = 17
               Alignment = taRightJustify
               Caption = 'Total Waste Value: '
             end
@@ -791,13 +803,11 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
             Left = 803
             Top = 0
             Width = 86
-            Height = 339
+            Height = 335
             Align = alRight
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
-            ExplicitLeft = 797
-            ExplicitHeight = 330
             object btnAddSlabs: TBitBtn
               Left = 6
               Top = 9
@@ -830,21 +840,19 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
           end
           object Panel27: TPanel
             Left = 0
-            Top = 339
+            Top = 335
             Width = 889
             Height = 53
             Align = alBottom
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 2
-            ExplicitTop = 330
-            ExplicitWidth = 883
           end
           object sgSlabs: TStringGrid
             Left = 0
             Top = 0
             Width = 803
-            Height = 339
+            Height = 335
             Align = alClient
             ColCount = 11
             DefaultColWidth = 40
@@ -852,8 +860,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
             TabOrder = 3
             OnDblClick = sgSlabsDblClick
-            ExplicitWidth = 797
-            ExplicitHeight = 330
             ColWidths = (
               40
               200
@@ -901,12 +907,13 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     SQL.Strings = (
       'select * from Operator'
       'order by Operator_Name')
-    Left = 288
-    Top = 8
+    Left = 528
+    Top = 138
   end
   object srcOperator: TDataSource
     DataSet = qryOperator
-    Left = 320
+    Left = 488
+    Top = 160
   end
   object qryRemedialType: TFDQuery
     ConnectionName = 'WT'

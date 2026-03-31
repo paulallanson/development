@@ -3,36 +3,36 @@ object frmWTMaintWT: TfrmWTMaintWT
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Maintain Worktop details'
-  ClientHeight = 410
-  ClientWidth = 740
+  ClientHeight = 437
+  ClientWidth = 790
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    740
-    410)
-  TextHeight = 13
+    790
+    437)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 31
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 378
+    Top = 405
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -42,7 +42,7 @@ object frmWTMaintWT: TfrmWTMaintWT
   end
   object btnOK: TBitBtn
     Left = 264
-    Top = 373
+    Top = 400
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -57,7 +57,7 @@ object frmWTMaintWT: TfrmWTMaintWT
   end
   object BitBtn2: TBitBtn
     Left = 352
-    Top = 373
+    Top = 400
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -71,8 +71,8 @@ object frmWTMaintWT: TfrmWTMaintWT
   object pgDetails: TPageControl
     Left = 8
     Top = 64
-    Width = 721
-    Height = 273
+    Width = 753
+    Height = 300
     ActivePage = tbDetails
     TabOrder = 1
     object tbDetails: TTabSheet
@@ -80,12 +80,12 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label3: TLabel
         Left = 0
         Top = 12
-        Width = 71
-        Height = 13
+        Width = 84
+        Height = 17
         Caption = 'Material Type'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -93,36 +93,36 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label2: TLabel
         Left = 0
         Top = 84
-        Width = 33
-        Height = 13
+        Width = 37
+        Height = 17
         Caption = 'Group'
       end
       object Label5: TLabel
         Left = 0
         Top = 47
-        Width = 31
-        Height = 13
+        Width = 32
+        Height = 17
         Caption = 'Finish'
       end
       object Label7: TLabel
-        Left = 328
+        Left = 344
         Top = 1
-        Width = 31
-        Height = 13
+        Width = 36
+        Height = 17
         Caption = 'Image'
       end
       object Label8: TLabel
         Left = 0
         Top = 193
-        Width = 84
-        Height = 13
+        Width = 91
+        Height = 17
         Caption = 'Online Discount'
       end
       object dblkpMaterialType: TDBLookupComboBox
-        Left = 88
+        Left = 99
         Top = 8
         Width = 161
-        Height = 21
+        Height = 25
         KeyField = 'Material_Type'
         ListField = 'Description'
         ListSource = srclkpMatType
@@ -130,17 +130,17 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = dblkpMaterialTypeClick
       end
       object dblkpWorktopGroup: TDBLookupComboBox
-        Left = 88
+        Left = 99
         Top = 80
         Width = 161
-        Height = 21
+        Height = 25
         KeyField = 'Worktop_Group'
         ListField = 'Worktop_Group_Description'
         ListSource = dtsGroup
         TabOrder = 3
       end
       object btnWorktopGroup: TButton
-        Left = 256
+        Left = 267
         Top = 78
         Width = 25
         Height = 25
@@ -155,7 +155,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = btnWorktopGroupClick
       end
       object btnClear: TBitBtn
-        Left = 288
+        Left = 299
         Top = 78
         Width = 25
         Height = 25
@@ -177,10 +177,10 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = btnClearClick
       end
       object dblkpWorktopFinish: TDBLookupComboBox
-        Left = 88
+        Left = 99
         Top = 43
         Width = 161
-        Height = 21
+        Height = 25
         KeyField = 'Worktop_Finish'
         ListField = 'Description'
         ListSource = srclkpWorktopFinsih
@@ -188,7 +188,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = dblkpMaterialTypeClick
       end
       object Button2: TButton
-        Left = 256
+        Left = 267
         Top = 41
         Width = 25
         Height = 25
@@ -203,8 +203,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = Button2Click
       end
       object Button3: TButton
-        Left = 628
-        Top = 14
+        Left = 644
+        Top = 23
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -212,8 +212,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = Button1Click
       end
       object Panel1: TPanel
-        Left = 328
-        Top = 40
+        Left = 344
+        Top = 49
         Width = 200
         Height = 200
         BorderStyle = bsSingle
@@ -1270,18 +1270,18 @@ object frmWTMaintWT: TfrmWTMaintWT
         end
       end
       object edtImagePath: TEdit
-        Left = 328
-        Top = 16
+        Left = 344
+        Top = 25
         Width = 289
-        Height = 21
+        Height = 25
         TabOrder = 8
         Text = 'edtImagePath'
       end
       object dblkpDiscount: TDBLookupComboBox
-        Left = 88
+        Left = 99
         Top = 189
         Width = 161
-        Height = 21
+        Height = 25
         KeyField = 'Discount'
         ListField = 'Discount_Label'
         ListSource = scrlkpDiscounts
@@ -1289,7 +1289,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = dblkpMaterialTypeClick
       end
       object btnDiscounts: TButton
-        Left = 256
+        Left = 267
         Top = 187
         Width = 25
         Height = 25
@@ -1304,7 +1304,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         OnClick = btnDiscountsClick
       end
       object btnClearDiscount: TBitBtn
-        Left = 288
+        Left = 299
         Top = 187
         Width = 25
         Height = 25
@@ -1332,15 +1332,15 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label4: TLabel
         Left = 8
         Top = 8
-        Width = 136
-        Height = 13
+        Width = 154
+        Height = 17
         Caption = 'Currently Selected Colours'
       end
       object Label6: TLabel
         Left = 272
         Top = 8
-        Width = 105
-        Height = 13
+        Width = 119
+        Height = 17
         Caption = 'Un-Selected Colours'
       end
       object lstbxMembers: TListBox
@@ -1348,7 +1348,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         Top = 32
         Width = 153
         Height = 184
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnClick = lstbxMembersClick
@@ -1359,7 +1359,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         Top = 36
         Width = 41
         Height = 140
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 1
         Visible = False
       end
@@ -1416,7 +1416,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         Top = 32
         Width = 153
         Height = 184
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 4
         OnClick = lstbxNonMembersClick
@@ -1427,7 +1427,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         Top = 36
         Width = 41
         Height = 140
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 5
         Visible = False
       end
@@ -1453,28 +1453,28 @@ object frmWTMaintWT: TfrmWTMaintWT
       object Label9: TLabel
         Left = 8
         Top = 24
-        Width = 90
-        Height = 13
+        Width = 101
+        Height = 17
         Caption = 'Short Description'
       end
       object Label10: TLabel
         Left = 8
-        Top = 56
-        Width = 88
-        Height = 13
+        Top = 58
+        Width = 99
+        Height = 17
         Caption = 'Long Description'
       end
       object edtShortDescription: TEdit
-        Left = 104
-        Top = 20
+        Left = 119
+        Top = 21
         Width = 481
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'edtShortDescription'
       end
       object memLongDescription: TMemo
-        Left = 104
-        Top = 56
+        Left = 119
+        Top = 57
         Width = 481
         Height = 179
         Lines.Strings = (
@@ -1485,7 +1485,7 @@ object frmWTMaintWT: TfrmWTMaintWT
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
-    Top = 346
+    Top = 375
     Width = 161
     Height = 17
     Caption = 'Show Worktop Online'
@@ -1495,7 +1495,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 85
     Top = 16
     Width = 380
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -1509,8 +1509,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ') OR'
       'Material_Type = :Material_Type'
       'order by Description')
-    Left = 304
-    Top = 128
+    Left = 372
+    Top = 176
     ParamData = <
       item
         Name = 'Material_Type'
@@ -1519,8 +1519,8 @@ object frmWTMaintWT: TfrmWTMaintWT
   end
   object srclkpMatType: TDataSource
     DataSet = lkpMatType
-    Left = 336
-    Top = 128
+    Left = 412
+    Top = 176
   end
   object qryWTGPrices: TFDQuery
     ConnectionName = 'wt'
@@ -1553,8 +1553,8 @@ object frmWTMaintWT: TfrmWTMaintWT
       'from Worktop_group_prices'
       'where Material_type = :material_type and'
       'Worktop_group = :worktop_group')
-    Left = 200
-    Top = 16
+    Left = 242
+    Top = 36
     ParamData = <
       item
         Name = 'material_type'
@@ -1570,8 +1570,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         'insert into Worktop_Thickness (Worktop, Thickness, Price_Pointer' +
         ')'
       'values (:Worktop, :Thickness, :Price_Pointer)')
-    Left = 296
-    Top = 8
+    Left = 362
+    Top = 26
     ParamData = <
       item
         Name = 'Worktop'
@@ -1585,8 +1585,8 @@ object frmWTMaintWT: TfrmWTMaintWT
   end
   object srclkpWTThickness: TDataSource
     DataSet = lkpWTThickness
-    Left = 112
-    Top = 192
+    Left = 132
+    Top = 256
   end
   object lkpWTThickness: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
@@ -1625,8 +1625,8 @@ object frmWTMaintWT: TfrmWTMaintWT
       'WHERE (((Worktop_thickness.Worktop)=:Worktop))'
       'ORDER BY Thickness.Thickness_mm'
       '')
-    Left = 240
-    Top = 200
+    Left = 292
+    Top = 266
     ParamData = <
       item
         Name = 'Worktop'
@@ -1677,8 +1677,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     SQL.Strings = (
       'Delete from worktop_thickness'
       'where price_pointer = :price_pointer')
-    Left = 144
-    Top = 152
+    Left = 172
+    Top = 206
     ParamData = <
       item
         Name = 'price_pointer'
@@ -1692,8 +1692,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         'where ((inactive = '#39'N'#39') or (inactive is NULL) or (inactive = '#39#39')' +
         ') OR'
       'Worktop_Finish = :Worktop_Finish')
-    Left = 88
-    Top = 237
+    Left = 102
+    Top = 312
     ParamData = <
       item
         Name = 'Worktop_Finish'
@@ -1701,8 +1701,8 @@ object frmWTMaintWT: TfrmWTMaintWT
   end
   object srclkpWorktopFinsih: TDataSource
     DataSet = lkpWorktopFinish
-    Left = 76
-    Top = 198
+    Left = 263
+    Top = 232
   end
   object qryCheckWTThickness: TFDQuery
     ConnectionName = 'wT'
@@ -1711,8 +1711,8 @@ object frmWTMaintWT: TfrmWTMaintWT
       'From Worktop_Thickness'
       'Where Worktop = :Worktop AND'
       'Thickness = :Thickness')
-    Left = 208
-    Top = 157
+    Left = 252
+    Top = 212
     ParamData = <
       item
         Name = 'Worktop'
@@ -1762,8 +1762,8 @@ object frmWTMaintWT: TfrmWTMaintWT
       'FROM Colour_Group'
       'WHERE 1 = 1'
       '')
-    Left = 328
-    Top = 240
+    Left = 402
+    Top = 316
   end
   object qryNonMembers: TFDQuery
     ConnectionName = 'wt'
@@ -1806,8 +1806,8 @@ object frmWTMaintWT: TfrmWTMaintWT
       'WHERE Worktop_Colour_Group.Worktop = :Worktop'
       'ORDER BY Colour_Group.Description'
       '')
-    Left = 80
-    Top = 48
+    Left = 604
+    Top = 44
     ParamData = <
       item
         Name = 'Worktop'
@@ -1976,8 +1976,8 @@ object frmWTMaintWT: TfrmWTMaintWT
       '((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is NULL)) OR'
       'Worktop_Group = :Worktop_Group'
       'order by worktop_group_description')
-    Left = 208
-    Top = 248
+    Left = 252
+    Top = 326
     ParamData = <
       item
         Name = 'Material_type'
@@ -1988,8 +1988,8 @@ object frmWTMaintWT: TfrmWTMaintWT
   end
   object dtsGroup: TDataSource
     DataSet = lkpGroup
-    Left = 280
-    Top = 248
+    Left = 342
+    Top = 326
   end
   object qryAddColourSQL: TFDQuery
     ConnectionName = 'wt'

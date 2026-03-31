@@ -3,33 +3,34 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Quote Sales Lead Report'
-  ClientHeight = 315
-  ClientWidth = 364
+  ClientHeight = 397
+  ClientWidth = 400
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    364
-    315)
-  TextHeight = 13
+    400
+    397)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 278
+    Top = 360
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 269
   end
   object Button4: TButton
-    Left = 272
-    Top = 278
+    Left = 296
+    Top = 360
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -37,12 +38,13 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 398
   end
   object rdgrpLeadSource: TRadioGroup
     Left = 8
     Top = 8
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Lead Source'
     ItemIndex = 0
     Items.Strings = (
@@ -54,9 +56,9 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
-    Top = 72
+    Top = 102
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -68,47 +70,47 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 136
+    Top = 184
     Width = 209
-    Height = 73
+    Height = 112
     Caption = 'Date selection'
     ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 33
+      Top = 68
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 64
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 32
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -129,8 +131,8 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 64
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -152,25 +154,25 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     end
   end
   object grpbxLeadSource: TGroupBox
-    Left = 120
-    Top = 8
-    Width = 219
-    Height = 57
+    Left = 128
+    Top = 15
+    Width = 227
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 91
-      Height = 13
+      Width = 106
+      Height = 17
       Caption = 'Sales Lead Source'
     end
     object cmbLeadSource: TComboBox
       Left = 8
       Top = 32
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       ItemIndex = 0
@@ -182,25 +184,25 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 72
-    Width = 219
-    Height = 57
+    Left = 128
+    Top = 109
+    Width = 227
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 6
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -209,7 +211,7 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     end
     object btnCustomer: TButton
       Left = 184
-      Top = 24
+      Top = 27
       Width = 25
       Height = 25
       Caption = '...'
@@ -224,36 +226,38 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     end
   end
   object chkbxPageBreak: TCheckBox
-    Left = 216
-    Top = 248
-    Width = 129
+    Left = 234
+    Top = 312
+    Width = 159
     Height = 17
     Caption = 'Page Break on Total'
     TabOrder = 7
   end
   object btnPreview: TButton
     Left = 96
-    Top = 278
+    Top = 360
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Preview'
     TabOrder = 8
     OnClick = btnPreviewClick
+    ExplicitTop = 269
   end
   object btnExcel: TButton
     Left = 184
-    Top = 278
+    Top = 360
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 9
     OnClick = btnExcelClick
+    ExplicitTop = 269
   end
   object pnlExportPrgrss: TPanel
     Left = 36
-    Top = 87
+    Top = 137
     Width = 289
     Height = 61
     ParentBackground = False
@@ -262,8 +266,8 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -277,7 +281,7 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
   end
   object OleContainer1: TOleContainer
     Left = 148
-    Top = 59
+    Top = 109
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -286,10 +290,10 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    Left = 232
-    Top = 136
-    Width = 105
-    Height = 90
+    Left = 226
+    Top = 183
+    Width = 129
+    Height = 112
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -306,12 +310,12 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
       'select *'
       'from Sales_Lead_Source'
       'order by Sales_Lead_Source')
-    Left = 184
-    Top = 16
+    Left = 230
+    Top = 70
   end
   object dtsLeadSource: TDataSource
     DataSet = qryLeadSource
-    Left = 240
-    Top = 16
+    Left = 300
+    Top = 70
   end
 end

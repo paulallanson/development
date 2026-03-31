@@ -54,7 +54,6 @@ uses
   wtLUJobs in '..\wtLUJobs.pas' {frmwtLUJobs},
   WTSalesOrderDM in '..\WTSalesOrderDM.pas' {dtmdlSalesOrder: TDataModule},
   wtMaintSalesOrder in '..\wtMaintSalesOrder.pas' {frmWTMaintSalesOrder},
-  wtPurchasesDM in '..\wtPurchasesDM.pas' {dtmdlPurchase: TDataModule},
   wtSalesInvoiceDM in '..\wtSalesInvoiceDM.pas' {dtmdlSalesInvoice: TDataModule},
   wtMaintSalesInvoice in '..\wtMaintSalesInvoice.pas' {frmWTMaintSalesInvoice},
   wtRSContract in '..\wtRSContract.pas' {frmWTRSContract},
@@ -266,7 +265,11 @@ uses
   wtRSSOAllocated in '..\wtRSSOAllocated.pas' {frmWTRSSOAllocated},
   WTRemedialDM in '..\WTRemedialDM.pas' {dtmdlRemedial: TDataModule},
   WTRSSalesByInvoice in '..\WTRSSalesByInvoice.pas' {frmWTRSSalesbyInvoice},
-  WTLUSupplier in '..\WTLUSupplier.pas' {frmWTLUSupplier};
+  WTLUSupplier in '..\WTLUSupplier.pas' {frmWTLUSupplier},
+  WTLUColourGroup in '..\WTLUColourGroup.pas' {frmWTLUColourGroup},
+  WTLUContractQuotes in '..\WTLUContractQuotes.pas' {frmWTLUContractQuotes},
+  wtLUCountry in '..\wtLUCountry.pas' {frmWTLUCountry},
+  wtPurchasesDM in '..\wtPurchasesDM.pas' {dtmdlPurchaseOrder: TDataModule};
 
 {$R *.RES}
 
@@ -282,5 +285,9 @@ begin
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmAllImages, frmAllImages);
+  Application.CreateForm(TfrmWTLUColourGroup, frmWTLUColourGroup);
+  Application.CreateForm(TfrmWTLUContractQuotes, frmWTLUContractQuotes);
+  Application.CreateForm(TfrmWTLUCountry, frmWTLUCountry);
+  Application.CreateForm(TdtmdlPurchaseOrder, dtmdlPurchaseOrder);
   Application.Run;
 end.

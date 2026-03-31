@@ -3,60 +3,60 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
   Top = 141
   BorderStyle = bsDialog
   Caption = 'Rename option'
-  ClientHeight = 233
-  ClientWidth = 527
+  ClientHeight = 254
+  ClientWidth = 563
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    527
-    233)
-  TextHeight = 13
+    563
+    254)
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 78
-    Width = 41
-    Height = 13
+    Width = 45
+    Height = 17
     Caption = 'Caption'
   end
   object Label2: TLabel
     Left = 16
     Top = 16
-    Width = 37
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'Option'
   end
   object Label3: TLabel
     Left = 16
     Top = 110
-    Width = 94
-    Height = 13
+    Width = 106
+    Height = 17
     Caption = 'Quote Description'
   end
   object Label4: TLabel
     Left = 16
     Top = 48
-    Width = 50
-    Height = 13
+    Width = 55
+    Height = 17
     Caption = 'Thickness'
   end
   object edtDescription: TEdit
-    Left = 120
-    Top = 74
+    Left = 132
+    Top = 73
     Width = 265
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = 'edtDescription'
     OnChange = EnableOK
   end
   object btnOK: TBitBtn
-    Left = 191
-    Top = 198
+    Left = 221
+    Top = 219
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -83,10 +83,12 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
+    ExplicitLeft = 179
+    ExplicitTop = 189
   end
   object BitBtn2: TBitBtn
-    Left = 279
-    Top = 198
+    Left = 309
+    Top = 219
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -94,12 +96,14 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     NumGlyphs = 2
     TabOrder = 6
     OnClick = BitBtn2Click
+    ExplicitLeft = 267
+    ExplicitTop = 189
   end
   object dblkpOptions: TDBLookupComboBox
-    Left = 120
-    Top = 12
+    Left = 132
+    Top = 11
     Width = 177
-    Height = 21
+    Height = 25
     KeyField = 'Group_Number'
     ListField = 'Group_Description'
     ListSource = dtsOptions
@@ -107,9 +111,9 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     OnClick = dblkpOptionsClick
   end
   object edtQuoteDescription: TMemo
-    Left = 120
-    Top = 108
-    Width = 394
+    Left = 132
+    Top = 107
+    Width = 413
     Height = 74
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 255
@@ -117,8 +121,8 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     OnChange = EnableOK
   end
   object btnOptions: TBitBtn
-    Left = 310
-    Top = 11
+    Left = 320
+    Top = 12
     Width = 22
     Height = 22
     Hint = 'Search for Customer'
@@ -135,10 +139,10 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     OnClick = btnOptionsClick
   end
   object dblkpThickness: TDBLookupComboBox
-    Left = 120
-    Top = 44
+    Left = 132
+    Top = 43
     Width = 121
-    Height = 21
+    Height = 25
     KeyField = 'Thickness'
     ListField = 'Thickness_mm'
     ListSource = dtsOptionThickness

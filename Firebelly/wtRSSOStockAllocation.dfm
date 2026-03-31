@@ -7,7 +7,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,7 +15,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlFooter: TPanel
     Left = 0
     Top = 528
@@ -24,13 +24,11 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 519
-    ExplicitWidth = 1030
     DesignSize = (
       1036
       41)
     object btnClose: TButton
-      Left = 887
+      Left = 881
       Top = 8
       Width = 75
       Height = 25
@@ -39,7 +37,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 881
     end
     object btnAllocate: TButton
       Left = 16
@@ -65,7 +62,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       OnClick = btnExcludeClick
     end
     object btnExcel: TBitBtn
-      Left = 792
+      Left = 786
       Top = 8
       Width = 75
       Height = 25
@@ -88,7 +85,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       NumGlyphs = 2
       TabOrder = 3
       OnClick = btnExcelClick
-      ExplicitLeft = 786
     end
   end
   object stsBrDetails: TStatusBar
@@ -103,20 +99,18 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Width = 50
       end>
-    ExplicitTop = 560
-    ExplicitWidth = 1030
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 233
+    Top = 257
     Width = 1036
-    Height = 295
+    Height = 271
     Align = alClient
     DataSource = dtsSalesOrders
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -124,7 +118,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -214,15 +208,14 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Left = 0
     Top = 0
     Width = 1036
-    Height = 233
+    Height = 257
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 1030
     object rdgrpCustomer: TRadioGroup
       Left = 8
       Top = 8
       Width = 105
-      Height = 57
+      Height = 68
       Caption = 'Customers'
       ItemIndex = 0
       Items.Strings = (
@@ -240,9 +233,9 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       TabOrder = 1
       object Label4: TLabel
         Left = 8
-        Top = 10
-        Width = 49
-        Height = 13
+        Top = 4
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object btnCustomer: TButton
@@ -265,7 +258,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         Top = 24
         Width = 201
         Height = 83
-        ItemHeight = 13
+        ItemHeight = 17
         Items.Strings = (
           'All Customers')
         MultiSelect = True
@@ -277,7 +270,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       Left = 528
       Top = 8
       Width = 113
-      Height = 89
+      Height = 117
       Caption = 'Sort by: '
       ItemIndex = 0
       Items.Strings = (
@@ -293,50 +286,50 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       Top = 8
       Width = 25
       Height = 105
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 3
       Visible = False
     end
     object grpbxDateSelect: TGroupBox
       Left = 8
-      Top = 128
+      Top = 126
       Width = 209
-      Height = 89
+      Height = 113
       Caption = 'Fitting Date'
       TabOrder = 4
       object Label1: TLabel
-        Left = 16
-        Top = 20
-        Width = 29
-        Height = 13
+        Left = 24
+        Top = 36
+        Width = 33
+        Height = 17
         Caption = 'From:'
       end
       object Label2: TLabel
-        Left = 26
-        Top = 48
-        Width = 14
-        Height = 13
+        Left = 34
+        Top = 64
+        Width = 17
+        Height = 17
         Caption = 'To:'
       end
       object edtDateFrom: TEdit
-        Left = 56
-        Top = 16
+        Left = 64
+        Top = 32
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnExit = edtDateFromExit
       end
       object edtDateTo: TEdit
-        Left = 56
-        Top = 44
+        Left = 64
+        Top = 60
         Width = 100
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnExit = edtDateFromExit
       end
       object btnDatefrom: TBitBtn
-        Left = 168
-        Top = 14
+        Left = 176
+        Top = 32
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -357,8 +350,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         OnClick = btnDatefromClick
       end
       object btnDateTo: TBitBtn
-        Left = 168
-        Top = 42
+        Left = 176
+        Top = 60
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -381,9 +374,9 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     end
     object rdgrpCategory: TRadioGroup
       Left = 232
-      Top = 128
-      Width = 105
-      Height = 90
+      Top = 126
+      Width = 129
+      Height = 113
       Caption = 'Category'
       ItemIndex = 0
       Items.Strings = (
@@ -396,9 +389,9 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     end
     object rdgrpSelectBy: TRadioGroup
       Left = 384
-      Top = 128
+      Top = 126
       Width = 113
-      Height = 73
+      Height = 90
       Caption = 'Select by '
       ItemIndex = 0
       Items.Strings = (
@@ -420,7 +413,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     object chkbxIncludeInvoiced: TCheckBox
       Left = 528
       Top = 155
-      Width = 217
+      Width = 249
       Height = 17
       Caption = 'Include Orders up to Fully Invoiced'
       TabOrder = 8
@@ -430,7 +423,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       Left = 384
       Top = 8
       Width = 109
-      Height = 57
+      Height = 68
       Caption = 'Allocation Type'
       ItemIndex = 0
       Items.Strings = (
@@ -460,8 +453,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     object lblProcessing: TLabel
       Left = 16
       Top = 12
-      Width = 55
-      Height = 13
+      Width = 63
+      Height = 17
       Caption = 'Processing'
     end
     object prgbrRecords: TProgressBar
@@ -1336,8 +1329,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       '        Quote_Slab.Length,'
       '        Quote_Slab.Depth,'
       '        Sales_order_line.Sales_Order_Line_no')
-    Left = 572
-    Top = 66
+    Left = 771
+    Top = 32
     ParamData = <
       item
         Name = 'Sales_Order'

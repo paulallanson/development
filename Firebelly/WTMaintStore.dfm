@@ -3,11 +3,11 @@ object frmWTMaintStore: TfrmWTMaintStore
   Top = 71
   Caption = 'Maintain Store Details'
   ClientHeight = 254
-  ClientWidth = 477
+  ClientWidth = 497
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,18 +15,18 @@ object frmWTMaintStore: TfrmWTMaintStore
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    477
+    497
     254)
-  TextHeight = 13
+  TextHeight = 17
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 61
-    Height = 13
+    Width = 72
+    Height = 17
     Caption = 'Store Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,12 +34,12 @@ object frmWTMaintStore: TfrmWTMaintStore
   object Label34: TLabel
     Left = 8
     Top = 51
-    Width = 30
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Street'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -47,12 +47,12 @@ object frmWTMaintStore: TfrmWTMaintStore
   object Label35: TLabel
     Left = 8
     Top = 108
-    Width = 51
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Town/City'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -60,12 +60,12 @@ object frmWTMaintStore: TfrmWTMaintStore
   object Label37: TLabel
     Left = 8
     Top = 139
-    Width = 48
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Postcode'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -73,12 +73,12 @@ object frmWTMaintStore: TfrmWTMaintStore
   object Label39: TLabel
     Left = 8
     Top = 171
-    Width = 37
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'County'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -87,7 +87,7 @@ object frmWTMaintStore: TfrmWTMaintStore
     Left = 112
     Top = 16
     Width = 249
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtName'
     OnChange = EnableOK
@@ -96,7 +96,7 @@ object frmWTMaintStore: TfrmWTMaintStore
     Left = 112
     Top = 47
     Width = 356
-    Height = 21
+    Height = 25
     TabOrder = 1
     OnChange = EnableOK
   end
@@ -104,21 +104,21 @@ object frmWTMaintStore: TfrmWTMaintStore
     Left = 112
     Top = 75
     Width = 356
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtTown: TEdit
     Left = 112
     Top = 104
     Width = 355
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtPostcode: TEdit
     Left = 112
     Top = 135
     Width = 99
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 4
     OnChange = EnableOK
@@ -127,7 +127,7 @@ object frmWTMaintStore: TfrmWTMaintStore
     Left = 112
     Top = 167
     Width = 356
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object chkbxInactive: TCheckBox
@@ -170,7 +170,7 @@ object frmWTMaintStore: TfrmWTMaintStore
     SQL.Strings = (
       'select Max(Store) as Last_no'
       'from Store')
-    Left = 408
+    Left = 272
     Top = 8
   end
   object qryAdd: TFDQuery
@@ -186,8 +186,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       ':Address,'
       ':inactive'
       ')')
-    Left = 408
-    Top = 104
+    Left = 344
+    Top = 16
     ParamData = <
       item
         Name = 'Store'
@@ -206,8 +206,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       'set Address = :Address,'
       '    inactive = :inactive'
       'where Store = :Store')
-    Left = 408
-    Top = 152
+    Left = 384
+    Top = 80
     ParamData = <
       item
         Name = 'Address'
@@ -224,7 +224,7 @@ object frmWTMaintStore: TfrmWTMaintStore
     SQL.Strings = (
       'delete from Store'
       'where Store = :Store')
-    Left = 408
+    Left = 248
     Top = 56
     ParamData = <
       item
@@ -237,8 +237,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       'SELECT *'
       'FROM Address'
       'WHERE Address = :Address')
-    Left = 310
-    Top = 130
+    Left = 302
+    Top = 50
     ParamData = <
       item
         Name = 'Address'
@@ -269,8 +269,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       ':Telephone_number,'
       ':email_address,'
       ':Installation_Address)')
-    Left = 360
-    Top = 130
+    Left = 320
+    Top = 90
     ParamData = <
       item
         Name = 'Address'
@@ -319,7 +319,7 @@ object frmWTMaintStore: TfrmWTMaintStore
       '  Email_Address = :email_Address'
       'where Address = :Address')
     Left = 410
-    Top = 138
+    Top = 18
     ParamData = <
       item
         Name = 'Address_Name'
@@ -354,8 +354,8 @@ object frmWTMaintStore: TfrmWTMaintStore
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
-    Left = 112
-    Top = 136
+    Left = 276
+    Top = 42
   end
   object imgDocuments: TImageList
     Left = 240
@@ -658,8 +658,8 @@ object frmWTMaintStore: TfrmWTMaintStore
       '          ON Address.Address = Store.Address'
       'WHERE Store.Store = :Store'
       'ORDER BY Address.Address_Name')
-    Left = 16
-    Top = 8
+    Left = 244
+    Top = 65530
     ParamData = <
       item
         Name = 'Store'

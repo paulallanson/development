@@ -76,7 +76,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0

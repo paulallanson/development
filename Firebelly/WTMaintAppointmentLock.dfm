@@ -7,14 +7,14 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 337
@@ -45,7 +45,7 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
       OnClick = btnRefreshClick
     end
     object btnClose: TButton
-      Left = 774
+      Left = 768
       Top = 8
       Width = 75
       Height = 25
@@ -65,7 +65,7 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

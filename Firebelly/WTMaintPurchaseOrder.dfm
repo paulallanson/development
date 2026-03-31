@@ -2,8 +2,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
   Left = 181
   Top = 12
   Caption = 'Purchase Order'
-  ClientHeight = 602
-  ClientWidth = 888
+  ClientHeight = 651
+  ClientWidth = 943
   Color = clBtnFace
   Constraints.MinHeight = 640
   Constraints.MinWidth = 900
@@ -19,8 +19,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
   TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 583
-    Width = 888
+    Top = 632
+    Width = 943
     Height = 19
     Panels = <
       item
@@ -35,8 +35,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 888
-    Height = 583
+    Width = 943
+    Height = 632
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
@@ -44,15 +44,16 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     ExplicitHeight = 574
     object pnlFooter: TPanel
       Left = 0
-      Top = 414
-      Width = 888
+      Top = 463
+      Width = 943
       Height = 128
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
       ExplicitTop = 416
+      ExplicitWidth = 888
       object Panel5: TPanel
-        Left = 721
+        Left = 776
         Top = 1
         Width = 166
         Height = 126
@@ -134,17 +135,17 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object pnlFooterLeft: TPanel
         Left = 1
         Top = 1
-        Width = 128
+        Width = 139
         Height = 126
         Align = alLeft
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
         object rdgrpDelivery: TRadioGroup
-          Left = 13
-          Top = 8
-          Width = 105
-          Height = 65
+          Left = 7
+          Top = 5
+          Width = 126
+          Height = 68
           Caption = 'Delivery To: '
           ItemIndex = 0
           Items.Strings = (
@@ -156,17 +157,18 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         end
       end
       object pnlFooterAddress: TPanel
-        Left = 129
+        Left = 140
         Top = 1
-        Width = 432
+        Width = 426
         Height = 126
         Align = alLeft
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
         Visible = False
+        ExplicitLeft = 135
         DesignSize = (
-          432
+          426
           126)
         object Label6: TLabel
           Left = 17
@@ -272,7 +274,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           TabOrder = 4
         end
         object BitBtn1: TBitBtn
-          Left = 391
+          Left = 385
           Top = 6
           Width = 25
           Height = 25
@@ -288,13 +290,14 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
+          ExplicitLeft = 391
         end
       end
     end
     object pnlBottom: TPanel
       Left = 0
-      Top = 542
-      Width = 888
+      Top = 591
+      Width = 943
       Height = 41
       Align = alBottom
       ParentBackground = False
@@ -302,10 +305,10 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       ExplicitTop = 533
       ExplicitWidth = 882
       DesignSize = (
-        888
+        943
         41)
       object lblDeleteprompt: TLabel
-        Left = 526
+        Left = 575
         Top = 12
         Width = 175
         Height = 16
@@ -320,7 +323,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         ExplicitLeft = 530
       end
       object btnOK: TBitBtn
-        Left = 710
+        Left = 759
         Top = 8
         Width = 75
         Height = 25
@@ -348,10 +351,10 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         NumGlyphs = 2
         TabOrder = 2
         OnClick = btnOKClick
-        ExplicitLeft = 704
+        ExplicitLeft = 698
       end
       object BitBtn2: TBitBtn
-        Left = 798
+        Left = 847
         Top = 8
         Width = 75
         Height = 25
@@ -359,7 +362,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Kind = bkCancel
         NumGlyphs = 2
         TabOrder = 3
-        ExplicitLeft = 792
+        ExplicitLeft = 786
       end
       object chkbxonHold: TCheckBox
         Left = 8
@@ -381,15 +384,16 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object pnlHeader: TPanel
       Left = 0
       Top = 40
-      Width = 888
+      Width = 943
       Height = 205
       Align = alTop
       Anchors = [akRight, akBottom]
       ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 36
+      ExplicitTop = 39
+      ExplicitWidth = 916
       DesignSize = (
-        888
+        943
         205)
       object Label7: TLabel
         Left = 8
@@ -405,7 +409,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         ParentFont = False
       end
       object Label12: TLabel
-        Left = 511
+        Left = 562
         Top = 8
         Width = 60
         Height = 17
@@ -417,6 +421,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
+        ExplicitLeft = 507
       end
       object Label16: TLabel
         Left = 8
@@ -491,7 +496,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Caption = 'County'
       end
       object btnSupplier: TBitBtn
-        Left = 466
+        Left = 515
         Top = 4
         Width = 25
         Height = 25
@@ -508,19 +513,21 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         ShowHint = True
         TabOrder = 0
         OnClick = btnSupplierClick
+        ExplicitLeft = 454
       end
       object edtReference: TEdit
-        Left = 583
+        Left = 634
         Top = 4
         Width = 294
         Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 4
         OnChange = edtReferenceChange
+        ExplicitLeft = 579
       end
       object btnContact: TBitBtn
-        Left = 466
-        Top = 120
+        Left = 515
+        Top = 122
         Width = 25
         Height = 25
         Hint = 'Select Contact'
@@ -541,61 +548,65 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object edtContact: TEdit
         Left = 89
         Top = 122
-        Width = 369
+        Width = 418
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 1
+        ExplicitWidth = 357
       end
       object edtDescription: TMemo
         Left = 89
         Top = 149
-        Width = 567
+        Width = 616
         Height = 53
         Anchors = [akLeft, akTop, akRight, akBottom]
         MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 3
         OnChange = edtDescriptionChange
-        ExplicitWidth = 561
-        ExplicitHeight = 45
+        ExplicitWidth = 555
       end
       object edtSupplierName: TEdit
         Left = 89
         Top = 4
-        Width = 368
+        Width = 417
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 5
         OnChange = CheckOK
+        ExplicitWidth = 356
       end
       object edtStreet: TEdit
         Left = 89
         Top = 27
-        Width = 368
+        Width = 417
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 6
+        ExplicitWidth = 356
       end
       object edtLocale: TEdit
         Left = 89
         Top = 47
-        Width = 368
+        Width = 417
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 7
+        ExplicitWidth = 356
       end
       object edtTown: TEdit
         Left = 89
         Top = 68
-        Width = 368
+        Width = 417
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 8
+        ExplicitWidth = 356
       end
       object edtPostcode: TEdit
         Left = 89
@@ -609,23 +620,25 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       object edtCounty: TEdit
         Left = 228
         Top = 91
-        Width = 230
+        Width = 279
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 10
+        ExplicitWidth = 218
       end
     end
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 888
+      Width = 943
       Height = 40
       Align = alTop
       ParentBackground = False
       TabOrder = 3
+      ExplicitWidth = 882
       DesignSize = (
-        888
+        943
         40)
       object Label1: TLabel
         Left = 8
@@ -654,7 +667,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 637
+        Left = 686
         Top = 12
         Width = 88
         Height = 17
@@ -666,9 +679,10 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
+        ExplicitLeft = 637
       end
       object Label3: TLabel
-        Left = 392
+        Left = 454
         Top = 12
         Width = 88
         Height = 17
@@ -680,6 +694,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
+        ExplicitLeft = 399
       end
       object edtNumber: TEdit
         Left = 106
@@ -690,7 +705,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         TabOrder = 0
       end
       object dblkpOperator: TDBLookupComboBox
-        Left = 733
+        Left = 782
         Top = 8
         Width = 145
         Height = 25
@@ -699,9 +714,10 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         ListField = 'Operator_Name'
         ListSource = dtmdlPurchaseOrder.dtsOperator
         TabOrder = 1
+        ExplicitLeft = 721
       end
       object edtDateRequired: TEdit
-        Left = 486
+        Left = 548
         Top = 8
         Width = 89
         Height = 25
@@ -709,10 +725,11 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         TabOrder = 2
         OnChange = CheckOK
         OnExit = edtDateRequiredExit
+        ExplicitLeft = 493
       end
       object btnDateRequired: TBitBtn
-        Left = 582
-        Top = 6
+        Left = 644
+        Top = 8
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -732,11 +749,12 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         NumGlyphs = 2
         TabOrder = 3
         OnClick = btnDateRequiredClick
+        ExplicitLeft = 589
       end
       object dtpckDate: TDateTimePicker
-        Left = 296
+        Left = 300
         Top = 8
-        Width = 89
+        Width = 101
         Height = 25
         Date = 37882.000000000000000000
         Time = 37882.000000000000000000
@@ -746,20 +764,20 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     object pcDetails: TPageControl
       Left = 0
       Top = 245
-      Width = 888
-      Height = 169
-      ActivePage = TabSheet1
+      Width = 943
+      Height = 218
+      ActivePage = tbDetails
       Align = alClient
       TabOrder = 4
-      ExplicitTop = 233
-      ExplicitHeight = 181
+      ExplicitWidth = 882
+      ExplicitHeight = 160
       object tbDetails: TTabSheet
         Caption = 'Details'
         object dbgLines: TStringGrid
           Left = 0
           Top = 0
-          Width = 795
-          Height = 137
+          Width = 850
+          Height = 186
           Align = alClient
           ColCount = 10
           DefaultColWidth = 40
@@ -768,8 +786,8 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           PopupMenu = pmnLines
           TabOrder = 0
           OnDblClick = dbgLinesDblClick
-          ExplicitWidth = 789
-          ExplicitHeight = 144
+          ExplicitWidth = 795
+          ExplicitHeight = 137
           ColWidths = (
             40
             243
@@ -783,15 +801,15 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
             83)
         end
         object pnlFunctions: TPanel
-          Left = 795
+          Left = 850
           Top = 0
           Width = 85
-          Height = 137
+          Height = 186
           Align = alRight
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 789
-          ExplicitHeight = 144
+          ExplicitLeft = 795
+          ExplicitHeight = 137
           object btnAdd: TBitBtn
             Left = 8
             Top = 8
@@ -848,16 +866,16 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           Left = 0
           Top = 0
           Width = 305
-          Height = 137
+          Height = 186
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 149
+          ExplicitHeight = 137
           object sgEvents: TStringGrid
             Left = 1
             Top = 1
             Width = 303
-            Height = 135
+            Height = 184
             Align = alClient
             ColCount = 3
             DefaultColWidth = 40
@@ -866,7 +884,7 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
             TabOrder = 0
             OnClick = sgEventsClick
             OnDblClick = sgEventsDblClick
-            ExplicitHeight = 139
+            ExplicitHeight = 135
             ColWidths = (
               40
               107
@@ -876,12 +894,13 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         object Panel18: TPanel
           Left = 305
           Top = 0
-          Width = 134
-          Height = 137
+          Width = 189
+          Height = 186
           Align = alClient
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 149
+          ExplicitWidth = 134
+          ExplicitHeight = 137
           object btnAddEvents: TBitBtn
             Left = 8
             Top = 8
@@ -913,24 +932,25 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           end
         end
         object Panel8: TPanel
-          Left = 439
+          Left = 494
           Top = 0
           Width = 441
-          Height = 137
+          Height = 186
           Align = alRight
           ParentBackground = False
           TabOrder = 2
-          ExplicitHeight = 149
+          ExplicitLeft = 439
+          ExplicitHeight = 137
           object memEventNotes: TMemo
             Left = 1
             Top = 1
             Width = 439
-            Height = 135
+            Height = 184
             Align = alClient
             Color = clBtnFace
             ReadOnly = True
             TabOrder = 0
-            ExplicitHeight = 147
+            ExplicitHeight = 135
           end
         end
       end
@@ -941,21 +961,21 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           Left = 0
           Top = 0
           Width = 505
-          Height = 137
+          Height = 186
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 149
+          ExplicitHeight = 128
           object memNotes: TMemo
             Left = 1
             Top = 1
             Width = 503
-            Height = 135
+            Height = 184
             Align = alClient
             Lines.Strings = (
               'memNotes')
             TabOrder = 0
-            ExplicitHeight = 147
+            ExplicitHeight = 126
           end
         end
       end

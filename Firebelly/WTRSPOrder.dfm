@@ -8,7 +8,7 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -19,10 +19,10 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   DesignSize = (
     363
     173)
-  TextHeight = 13
+  TextHeight = 17
   object memSelection: TMemo
     Left = 8
-    Top = 24
+    Top = 18
     Width = 225
     Height = 65
     ReadOnly = True
@@ -34,7 +34,7 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Top = 8
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 1
     Visible = False
@@ -98,8 +98,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
       'WHERE'
       '  (Purchase_Order.Purchase_Order >= :From_Purchase_Order) and'
       '  (Purchase_Order.Purchase_Order <= :To_Purchase_Order)')
-    Left = 272
-    Top = 48
+    Left = 236
+    Top = 20
     ParamData = <
       item
         Name = 'From_Purchase_Order'
@@ -116,8 +116,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
       'WHERE (Supplier_Contact.Supplier = :Supplier) AND'
       '(Supplier_Contact.Receive_Purchase_Order = '#39'Y'#39') AND'
       '(Supplier_Contact.Contact_no <> :Contact_no)')
-    Left = 328
-    Top = 48
+    Left = 298
+    Top = 28
     ParamData = <
       item
         Name = 'Supplier'

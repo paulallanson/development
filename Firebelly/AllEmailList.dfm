@@ -7,13 +7,13 @@ object AllEmailListFrm: TAllEmailListFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -22,13 +22,11 @@ object AllEmailListFrm: TAllEmailListFrm
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
-    ExplicitWidth = 741
-    ExplicitHeight = 218
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
-      Width = 739
-      Height = 216
+      Width = 735
+      Height = 215
       Align = alClient
       ColCount = 4
       DefaultRowHeight = 20
@@ -49,7 +47,7 @@ object AllEmailListFrm: TAllEmailListFrm
       Left = 456
       Top = 88
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'ExportFilter'
       ListField = 'Description'
       ListSource = ExFilterSRC
@@ -65,13 +63,11 @@ object AllEmailListFrm: TAllEmailListFrm
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 218
-    ExplicitWidth = 741
     object lblCount: TLabel
       Left = 8
       Top = 16
-      Width = 45
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'lblCount'
     end
     object BitBtn1: TBitBtn

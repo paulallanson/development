@@ -3,33 +3,34 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
   Top = 170
   BorderStyle = bsDialog
   Caption = 'Job Allocation Sheet'
-  ClientHeight = 227
-  ClientWidth = 464
+  ClientHeight = 249
+  ClientWidth = 492
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    464
-    227)
-  TextHeight = 13
+    492
+    249)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 192
+    Top = 214
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 192
   end
   object Button4: TButton
-    Left = 376
-    Top = 192
+    Left = 390
+    Top = 214
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -37,12 +38,13 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 243
   end
   object rdgrpFitter: TRadioGroup
     Left = 8
     Top = 8
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Fitters'
     ItemIndex = 0
     Items.Strings = (
@@ -54,47 +56,47 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 72
+    Top = 85
     Width = 209
-    Height = 73
+    Height = 112
     Caption = 'Date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 28
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 33
+      Top = 56
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 24
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 52
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 169
+      Top = 24
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -115,8 +117,8 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 169
+      Top = 52
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -139,24 +141,24 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
   end
   object grpbxFitter: TGroupBox
     Left = 120
-    Top = 8
+    Top = 14
     Width = 219
-    Height = 57
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 12
-      Width = 27
-      Height = 13
+      Top = 3
+      Width = 29
+      Height = 17
       Caption = 'Fitter'
     end
     object edtFitter: TEdit
-      Left = 8
-      Top = 27
+      Left = 9
+      Top = 23
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -180,10 +182,10 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 344
+    Left = 352
     Top = 8
     Width = 113
-    Height = 97
+    Height = 112
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -195,8 +197,8 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 344
-    Top = 128
+    Left = 360
+    Top = 141
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -204,17 +206,18 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
   end
   object btnPreview: TButton
     Left = 96
-    Top = 192
+    Top = 214
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 192
   end
   object OleContainer1: TOleContainer
-    Left = 196
-    Top = 35
+    Left = 200
+    Top = 102
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -224,9 +227,9 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
-    Top = 72
-    Width = 105
-    Height = 90
+    Top = 85
+    Width = 114
+    Height = 112
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -238,8 +241,8 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     TabOrder = 10
   end
   object pnlExportPrgrss: TPanel
-    Left = 84
-    Top = 63
+    Left = 86
+    Top = 74
     Width = 289
     Height = 61
     ParentBackground = False
@@ -248,8 +251,8 @@ object frmWTRSSOrderAllocation: TfrmWTRSSOrderAllocation
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

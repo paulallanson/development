@@ -7,14 +7,14 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stbrDetails: TStatusBar
     Left = 0
     Top = 402
@@ -27,6 +27,8 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       item
         Width = 100
       end>
+    ExplicitTop = 393
+    ExplicitWidth = 726
   end
   object Panel2: TPanel
     Left = 0
@@ -35,28 +37,29 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
     Height = 51
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 342
+    ExplicitWidth = 726
     DesignSize = (
       732
       51)
     object Label1: TLabel
-      Left = 396
-      Top = 20
-      Width = 32
-      Height = 13
+      Left = 390
+      Top = 17
+      Width = 36
+      Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'Quote'
-      ExplicitLeft = 402
     end
     object Label2: TLabel
       Left = 8
-      Top = 20
-      Width = 49
-      Height = 13
+      Top = 17
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object btnSelect: TBitBtn
-      Left = 551
-      Top = 14
+      Left = 545
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -65,28 +68,30 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       ModalResult = 1
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 539
     end
     object edtNumber: TEdit
-      Left = 436
-      Top = 16
+      Left = 430
+      Top = 13
       Width = 89
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 424
     end
     object edtCustomerName: TEdit
-      Left = 64
-      Top = 16
+      Left = 70
+      Top = 13
       Width = 305
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
     end
     object BitBtn1: TBitBtn
-      Left = 639
-      Top = 14
+      Left = 633
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -94,6 +99,7 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       ModalResult = 2
       TabOrder = 3
       OnClick = BitBtn1Click
+      ExplicitLeft = 627
     end
   end
   object dbgDetails: TDBGrid
@@ -105,7 +111,7 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

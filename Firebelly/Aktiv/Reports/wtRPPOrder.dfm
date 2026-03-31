@@ -74,7 +74,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0
@@ -1401,7 +1401,7 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       end
     end
     object qrbPOFooter: TQRBand
-      Left = 46
+      Left = 47
       Top = 523
       Width = 1309
       Height = 188

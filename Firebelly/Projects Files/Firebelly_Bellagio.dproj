@@ -254,10 +254,6 @@
         <DCCReference Include="..\wtMaintSalesOrder.pas">
             <Form>frmWTMaintSalesOrder</Form>
         </DCCReference>
-        <DCCReference Include="..\wtPurchasesDM.pas">
-            <Form>dtmdlPurchase</Form>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
         <DCCReference Include="..\wtSalesInvoiceDM.pas">
             <Form>dtmdlSalesInvoice</Form>
             <DesignClass>TDataModule</DesignClass>
@@ -902,6 +898,23 @@
         <DCCReference Include="..\WTLUSupplier.pas">
             <Form>frmWTLUSupplier</Form>
             <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\WTLUColourGroup.pas">
+            <Form>frmWTLUColourGroup</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\WTLUContractQuotes.pas">
+            <Form>frmWTLUContractQuotes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCountry.pas">
+            <Form>frmWTLUCountry</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\wtPurchasesDM.pas">
+            <Form>dtmdlPurchaseOrder</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <None Include="FirebellyScheduler.dll">
             <ContainerId>File</ContainerId>

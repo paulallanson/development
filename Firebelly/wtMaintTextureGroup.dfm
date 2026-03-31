@@ -3,37 +3,37 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Texture Group'
-  ClientHeight = 201
+  ClientHeight = 225
   ClientWidth = 780
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     780
-    201)
-  TextHeight = 13
+    225)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 20
-    Width = 59
-    Height = 13
+    Top = 31
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label7: TLabel
-    Left = 368
-    Top = 1
-    Width = 31
-    Height = 13
+    Left = 380
+    Top = 7
+    Width = 36
+    Height = 17
     Caption = 'Image'
   end
   object btnOK: TBitBtn
-    Left = 184
-    Top = 164
+    Left = 308
+    Top = 188
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -44,10 +44,11 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
+    ExplicitTop = 164
   end
   object BitBtn2: TBitBtn
-    Left = 272
-    Top = 164
+    Left = 396
+    Top = 188
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -56,35 +57,37 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 6
+    ExplicitTop = 164
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 169
+    Top = 193
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 4
+    ExplicitTop = 169
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
-    Top = 138
+    Top = 162
     Width = 161
     Height = 17
     Caption = 'Show Texture Group Online'
     TabOrder = 3
   end
   object edtImagePath: TEdit
-    Left = 368
-    Top = 16
+    Left = 380
+    Top = 27
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtImagePath'
   end
   object Button3: TButton
-    Left = 673
-    Top = 14
+    Left = 685
+    Top = 27
     Width = 75
     Height = 25
     Caption = 'Browse'
@@ -92,8 +95,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     OnClick = Button3Click
   end
   object Panel1: TPanel
-    Left = 368
-    Top = 50
+    Left = 380
+    Top = 61
     Width = 289
     Height = 100
     BorderStyle = bsSingle
@@ -1150,10 +1153,10 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     end
   end
   object edtDescription: TEdit
-    Left = 72
-    Top = 16
+    Left = 84
+    Top = 27
     Width = 273
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -1179,8 +1182,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
       '      Image_Path = :Image_Path'
       'WHERE'
       '  Texture_Group = :Texture_Group')
-    Left = 56
-    Top = 72
+    Left = 82
+    Top = 101
     ParamData = <
       item
         Name = 'Description'
@@ -1207,8 +1210,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
       'Select Max(Texture_Group)+1, :GUID'
       'From Texture_Group'
       ' ')
-    Left = 112
-    Top = 72
+    Left = 152
+    Top = 101
     ParamData = <
       item
         Name = 'GUID'
@@ -1222,8 +1225,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
       'Select Texture_Group'
       'From Texture_Group'
       'Where Description = :GUID')
-    Left = 224
-    Top = 72
+    Left = 292
+    Top = 101
     ParamData = <
       item
         Name = 'GUID'
@@ -1236,7 +1239,7 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     SQL.Strings = (
       ' '
       '')
-    Left = 288
-    Top = 72
+    Left = 372
+    Top = 101
   end
 end

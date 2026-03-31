@@ -8,14 +8,14 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 15
+  TextHeight = 17
   object pnlFunctions: TPanel
     Left = 0
     Top = 254
@@ -31,22 +31,21 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       674
       40)
     object lblDelete: TLabel
-      Left = 328
+      Left = 314
       Top = 12
-      Width = 145
-      Height = 15
+      Width = 162
+      Height = 16
       Anchors = [akRight, akBottom]
-      Caption = 'Delete the above details ?'
+      Caption = 'Delete the above details?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 302
     end
     object btnOK: TBitBtn
-      Left = 488
+      Left = 482
       Top = 7
       Width = 75
       Height = 25
@@ -63,10 +62,10 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       ParentFont = False
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 482
+      ExplicitLeft = 476
     end
     object btnCancel: TBitBtn
-      Left = 568
+      Left = 562
       Top = 7
       Width = 75
       Height = 25
@@ -82,7 +81,7 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 562
+      ExplicitLeft = 556
     end
   end
   object pnlDetails: TPanel
@@ -93,15 +92,17 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 668
+    ExplicitHeight = 245
     object Label1: TLabel
       Left = 10
       Top = 54
-      Width = 75
-      Height = 15
+      Width = 83
+      Height = 17
       Caption = 'Product Code'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -109,19 +110,19 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
     object Label2: TLabel
       Left = 289
       Top = 113
-      Width = 45
-      Height = 15
+      Width = 50
+      Height = 17
       Caption = 'Unit Size'
     end
     object Label4: TLabel
       Left = 10
       Top = 112
-      Width = 78
-      Height = 15
+      Width = 87
+      Height = 17
       Caption = 'Sell Price/unit'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -129,12 +130,12 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
     object Label5: TLabel
       Left = 10
       Top = 145
-      Width = 47
-      Height = 15
+      Width = 51
+      Height = 17
       Caption = 'Vat Rate'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -142,12 +143,12 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
     object Label7: TLabel
       Left = 10
       Top = 84
-      Width = 64
-      Height = 15
+      Width = 71
+      Height = 17
       Caption = 'Description'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -155,12 +156,12 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
     object Label3: TLabel
       Left = 10
       Top = 25
-      Width = 109
-      Height = 15
+      Width = 121
+      Height = 17
       Caption = 'Associate Customer'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -169,7 +170,7 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       Left = 136
       Top = 49
       Width = 137
-      Height = 23
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = CheckOK
@@ -194,17 +195,17 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       Left = 136
       Top = 80
       Width = 471
-      Height = 23
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
     end
     object edtPackSize: TEdit
-      Left = 340
+      Left = 352
       Top = 109
       Width = 81
-      Height = 23
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -241,7 +242,7 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       Left = 136
       Top = 20
       Width = 471
-      Height = 23
+      Height = 25
       TabStop = False
       Color = clBtnFace
       ReadOnly = True
@@ -271,8 +272,8 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       object lblInvoiceNumber: TLabel
         Left = 40
         Top = 24
-        Width = 95
-        Height = 15
+        Width = 102
+        Height = 17
         Caption = 'lblInvoiceNumber'
       end
     end
@@ -288,7 +289,7 @@ object frmWTMaintSalesOrderAssociateCharge: TfrmWTMaintSalesOrderAssociateCharge
       Left = 136
       Top = 141
       Width = 145
-      Height = 23
+      Height = 25
       KeyField = 'Vat'
       ListField = 'Description'
       ListSource = dtmdlSalesOrder.dtsVAT

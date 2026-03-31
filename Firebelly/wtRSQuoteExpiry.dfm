@@ -3,8 +3,8 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Quote Expiry Report'
-  ClientHeight = 336
-  ClientWidth = 383
+  ClientHeight = 366
+  ClientWidth = 401
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,23 +14,23 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    383
-    336)
+    401
+    366)
   TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 297
+    Top = 327
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 272
+    ExplicitTop = 297
   end
   object Button4: TButton
-    Left = 288
-    Top = 297
+    Left = 304
+    Top = 327
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -38,11 +38,10 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 288
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
-    Top = 72
+    Top = 77
     Width = 118
     Height = 65
     Caption = 'Customers'
@@ -56,7 +55,7 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 143
+    Top = 152
     Width = 217
     Height = 89
     Caption = 'Expiry Date Selection '
@@ -141,7 +140,7 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   end
   object grpbxCustomer: TGroupBox
     Left = 132
-    Top = 80
+    Top = 85
     Width = 219
     Height = 57
     Enabled = False
@@ -182,8 +181,8 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
     end
   end
   object chkbxPageBreak: TCheckBox
-    Left = 232
-    Top = 265
+    Left = 240
+    Top = 282
     Width = 153
     Height = 17
     Caption = 'Page Break on Total'
@@ -191,7 +190,7 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   end
   object OleContainer1: TOleContainer
     Left = 116
-    Top = 76
+    Top = 88
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -201,7 +200,7 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   end
   object pnlExportPrgrss: TPanel
     Left = 52
-    Top = 96
+    Top = 108
     Width = 289
     Height = 61
     ParentBackground = False
@@ -225,7 +224,7 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   end
   object btnExcel: TBitBtn
     Left = 178
-    Top = 298
+    Top = 328
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -275,18 +274,18 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitTop = 273
+    ExplicitTop = 298
   end
   object btnPreview: TButton
     Left = 93
-    Top = 297
+    Top = 327
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
-    ExplicitTop = 272
+    ExplicitTop = 297
   end
   object rdgrpContacts: TRadioGroup
     Left = 8
@@ -334,7 +333,7 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
   end
   object rdgrpCategory: TRadioGroup
     Left = 232
-    Top = 143
+    Top = 152
     Width = 121
     Height = 113
     Caption = 'Category'
@@ -353,12 +352,12 @@ object frmWTRSQuoteExpiry: TfrmWTRSQuoteExpiry
       'select *'
       'from Operator'
       'order by Operator_Name')
-    Left = 550
-    Top = 44
+    Left = 160
+    Top = 71
   end
   object dtsContacts: TDataSource
     DataSet = qryContacts
-    Left = 484
-    Top = 44
+    Left = 77
+    Top = 71
   end
 end

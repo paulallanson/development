@@ -3,33 +3,34 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Customer Activity Report'
-  ClientHeight = 280
-  ClientWidth = 349
+  ClientHeight = 322
+  ClientWidth = 405
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    349
-    280)
-  TextHeight = 13
+    405
+    322)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 241
+    Top = 283
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 232
   end
   object Button4: TButton
-    Left = 264
-    Top = 241
+    Left = 303
+    Top = 283
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -37,12 +38,13 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 279
   end
   object rdgrpReps: TRadioGroup
     Left = 8
     Top = 8
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -54,9 +56,9 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
-    Top = 72
+    Top = 82
     Width = 105
-    Height = 57
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -68,47 +70,47 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 136
+    Top = 162
     Width = 225
-    Height = 73
+    Height = 97
     Caption = 'Date selection'
     ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 20
+      Top = 28
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 30
+      Top = 59
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 60
+      Top = 24
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 60
+      Top = 55
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 172
+      Top = 24
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -129,8 +131,8 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 172
+      Top = 55
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -152,24 +154,24 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
     end
   end
   object grpbxReps: TGroupBox
-    Left = 120
-    Top = 8
+    Left = 119
+    Top = 15
     Width = 219
-    Height = 57
+    Height = 61
     ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
       Left = 8
-      Top = 12
-      Width = 20
-      Height = 13
+      Top = 4
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object cmbReps: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
@@ -182,25 +184,25 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 72
+    Left = 119
+    Top = 88
     Width = 219
-    Height = 57
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 6
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -209,7 +211,7 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
     end
     object btnCustomer: TButton
       Left = 184
-      Top = 24
+      Top = 27
       Width = 25
       Height = 25
       Caption = '...'
@@ -224,16 +226,16 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
     end
   end
   object chkbxPageBreak: TCheckBox
-    Left = 208
-    Top = 216
-    Width = 129
+    Left = 244
+    Top = 242
+    Width = 162
     Height = 17
     Caption = 'Page Break on Total'
     TabOrder = 7
   end
   object OleContainer1: TOleContainer
-    Left = 140
-    Top = 59
+    Left = 119
+    Top = 56
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -242,8 +244,8 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 28
-    Top = 87
+    Left = 49
+    Top = 95
     Width = 289
     Height = 61
     ParentBackground = False
@@ -252,8 +254,8 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -267,10 +269,10 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
   end
   object btnExcel: TBitBtn
     Left = 178
-    Top = 242
+    Top = 283
     Width = 75
     Height = 25
-    Anchors = [akRight, akBottom]
+    Anchors = [akLeft, akBottom]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -317,22 +319,24 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 10
     OnClick = btnExcelClick
+    ExplicitTop = 279
   end
   object btnPreview: TButton
     Left = 93
-    Top = 241
+    Top = 283
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 11
     OnClick = btnPreviewClick
+    ExplicitTop = 232
   end
   object rdgrpType: TRadioGroup
-    Left = 239
-    Top = 136
+    Left = 244
+    Top = 162
     Width = 101
-    Height = 73
+    Height = 68
     Caption = 'Report Type'
     ItemIndex = 0
     Items.Strings = (
@@ -347,12 +351,12 @@ object frmWTRSCustomerActivity: TfrmWTRSCustomerActivity
       'select *'
       'from Rep'
       'order by Rep_Name')
-    Left = 184
-    Top = 16
+    Left = 552
+    Top = 48
   end
   object dtsReps: TDataSource
     DataSet = qryReps
-    Left = 240
-    Top = 16
+    Left = 608
+    Top = 48
   end
 end

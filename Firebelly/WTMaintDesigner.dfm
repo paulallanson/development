@@ -8,7 +8,7 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,12 +16,12 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
   DesignSize = (
     357
     114)
-  TextHeight = 13
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 46
-    Height = 13
+    Width = 52
+    Height = 17
     Caption = 'Designer'
   end
   object btnOK: TBitBtn
@@ -37,6 +37,7 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
+    ExplicitTop = 68
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -49,6 +50,7 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 3
+    ExplicitTop = 68
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -62,7 +64,7 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     Left = 88
     Top = 16
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDesignerName'
     OnChange = EnableOK

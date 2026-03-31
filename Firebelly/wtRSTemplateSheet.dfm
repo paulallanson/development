@@ -4,24 +4,24 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   BorderStyle = bsDialog
   Caption = 'Template Sheet Print'
   ClientHeight = 456
-  ClientWidth = 520
+  ClientWidth = 549
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object SelectLst: TListBox
     Left = 176
     Top = 24
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 0
     Visible = False
@@ -29,14 +29,16 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlFooter: TPanel
     Left = 0
     Top = 376
-    Width = 520
+    Width = 549
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 367
+    ExplicitWidth = 514
     DesignSize = (
-      520
+      549
       80)
     object btnPrint: TButton
       Left = 8
@@ -72,7 +74,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       OnClick = btnEmailClick
     end
     object Button4: TButton
-      Left = 424
+      Left = 456
       Top = 47
       Width = 75
       Height = 25
@@ -84,7 +86,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object chkbxMerge: TCheckBox
       Left = 8
       Top = 13
-      Width = 345
+      Width = 417
       Height = 17
       Caption = 'Merge all selected documents to create single PDF in email'
       TabOrder = 4
@@ -93,17 +95,18 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 158
-    Width = 520
+    Width = 549
     Height = 62
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 514
     object Label2: TLabel
       Left = 8
       Top = 5
-      Width = 207
-      Height = 13
+      Width = 235
+      Height = 17
       Caption = 'Include documents from selected folder:'
     end
     object cmbDocuments: TComboBox
@@ -123,11 +126,12 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 520
+    Width = 549
     Height = 158
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 514
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -139,8 +143,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 244
-        Height = 39
+        Width = 214
+        Height = 51
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'
@@ -159,7 +163,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object chkbxPrint: TCheckBox
       Left = 296
       Top = 16
-      Width = 209
+      Width = 265
       Height = 17
       Caption = 'Print/Email associated quote details'
       TabOrder = 1
@@ -167,7 +171,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object chkbxPrintPlan: TCheckBox
       Left = 296
       Top = 40
-      Width = 209
+      Width = 265
       Height = 17
       Caption = 'Print/Email associated Kitchen Plan'
       TabOrder = 2
@@ -176,22 +180,23 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 220
-    Width = 520
+    Width = 549
     Height = 156
     Align = alClient
     Caption = 'pnlDocumentDetails'
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 514
+    ExplicitHeight = 147
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1
-      Width = 524
-      Height = 163
+      Width = 547
+      Height = 154
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
       ExplicitWidth = 518
-      ExplicitHeight = 154
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox
@@ -199,7 +204,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
           Top = 7
           Width = 273
           Height = 129
-          ItemHeight = 13
+          ItemHeight = 17
           MultiSelect = True
           TabOrder = 0
           OnDblClick = lstbxDocumentsDblClick
@@ -231,7 +236,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
           Top = 7
           Width = 273
           Height = 129
-          ItemHeight = 13
+          ItemHeight = 17
           MultiSelect = True
           TabOrder = 0
           OnDblClick = lstbxDocumentsDblClick

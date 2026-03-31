@@ -7,13 +7,13 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object lbldelete: TLabel
     Left = 128
     Top = 326
@@ -28,8 +28,8 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 268
-    Top = 320
+    Left = 275
+    Top = 311
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -61,13 +61,13 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     TabOrder = 0
     object Label1: TLabel
       Left = 16
-      Top = 100
-      Width = 53
-      Height = 13
+      Top = 102
+      Width = 63
+      Height = 17
       Caption = 'Full Name'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -75,12 +75,12 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label2: TLabel
       Left = 16
       Top = 159
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Phone'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -88,72 +88,72 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label3: TLabel
       Left = 16
       Top = 189
-      Width = 17
-      Height = 13
+      Width = 19
+      Height = 17
       Caption = 'Fax'
     end
     object Label4: TLabel
       Left = 16
       Top = 219
-      Width = 36
-      Height = 13
+      Width = 41
+      Height = 17
       Caption = 'Mobile'
     end
     object Label5: TLabel
       Left = 16
       Top = 249
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Email'
     end
     object Label7: TLabel
       Left = 16
-      Top = 50
-      Width = 56
-      Height = 13
+      Top = 46
+      Width = 67
+      Height = 17
       Caption = 'First Name'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label8: TLabel
       Left = 16
-      Top = 18
-      Width = 22
-      Height = 13
+      Top = 23
+      Width = 24
+      Height = 17
       Caption = 'Title'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label9: TLabel
       Left = 16
-      Top = 127
-      Width = 44
-      Height = 13
+      Top = 130
+      Width = 54
+      Height = 17
       Caption = 'Job Title'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object SpeedButton4: TSpeedButton
-      Left = 314
-      Top = 123
+      Left = 322
+      Top = 127
       Width = 23
       Height = 22
       Caption = '...'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -162,21 +162,21 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     object Label6: TLabel
       Left = 16
       Top = 74
-      Width = 45
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Surname'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object dblkpJobTitle: TDBLookupComboBox
-      Left = 88
-      Top = 123
+      Left = 96
+      Top = 127
       Width = 217
-      Height = 21
+      Height = 25
       KeyField = 'Contact_Type'
       ListField = 'Contact_Type_Description'
       ListSource = frmWTSrchCustContacts.dtsContactType
@@ -184,72 +184,72 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
       OnClick = dblkpJobTitleClick
     end
     object edtTitle: TEdit
-      Left = 88
-      Top = 14
+      Left = 96
+      Top = 15
       Width = 73
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtTitle'
     end
     object edtForename: TEdit
-      Left = 88
-      Top = 46
+      Left = 96
+      Top = 43
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtForename'
       OnChange = edtSurnameChange
       OnEnter = edtFirstNameEnter
     end
     object edtSurname: TEdit
-      Left = 88
-      Top = 70
+      Left = 96
+      Top = 71
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 2
       Text = 'edtSurname'
       OnChange = edtSurnameChange
       OnEnter = edtFirstNameEnter
     end
     object edtContactName: TEdit
-      Left = 88
-      Top = 96
+      Left = 96
+      Top = 99
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 3
       Text = 'edtContactName'
       OnChange = EnableOK
     end
     object edtTelephoneNumber: TEdit
-      Left = 88
-      Top = 155
+      Left = 96
+      Top = 156
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 5
       Text = 'edtTelephoneNumber'
       OnChange = EnableOK
     end
     object edtFaxNumber: TEdit
-      Left = 88
-      Top = 185
+      Left = 96
+      Top = 186
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 6
       Text = 'edtFaxNumber'
     end
     object edtMobileNumber: TEdit
-      Left = 88
-      Top = 215
+      Left = 96
+      Top = 216
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 7
       Text = 'edtMobileNumber'
     end
     object edtEmailAddress: TEdit
-      Left = 88
-      Top = 245
+      Left = 96
+      Top = 246
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 8
       Text = 'edtEmailAddress'
     end

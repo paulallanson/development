@@ -3,50 +3,48 @@ object frmWTMaintCustWorkGroup: TfrmWTMaintCustWorkGroup
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Worktop Group'
-  ClientHeight = 156
-  ClientWidth = 363
+  ClientHeight = 167
+  ClientWidth = 412
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    363
-    156)
-  PixelsPerInch = 96
-  TextHeight = 13
+    412
+    167)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 60
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'Group Name'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 37
-    Height = 13
+    Width = 48
+    Height = 17
     Caption = 'Material'
   end
   object edtGroupDescription: TEdit
-    Left = 80
-    Top = 12
+    Left = 104
+    Top = 13
     Width = 265
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtGroupDescription'
     OnClick = CheckOK
   end
   object dblkpMaterialType: TDBLookupComboBox
-    Left = 80
-    Top = 48
+    Left = 104
+    Top = 49
     Width = 145
-    Height = 21
+    Height = 25
     KeyField = 'Material_Type'
     ListField = 'Description'
     ListSource = dtsMatTypes
@@ -55,15 +53,15 @@ object frmWTMaintCustWorkGroup: TfrmWTMaintCustWorkGroup
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 80
-    Width = 153
+    Top = 92
+    Width = 217
     Height = 17
     Caption = 'Worktop Group is inactive'
     TabOrder = 2
   end
   object btnOK: TBitBtn
-    Left = 100
-    Top = 115
+    Left = 143
+    Top = 126
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -71,21 +69,25 @@ object frmWTMaintCustWorkGroup: TfrmWTMaintCustWorkGroup
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitLeft = 94
+    ExplicitTop = 115
   end
   object BitBtn2: TBitBtn
-    Left = 188
-    Top = 115
+    Left = 231
+    Top = 126
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Cancel = True
     Caption = 'Cancel'
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = BitBtn2Click
-    NumGlyphs = 2
+    ExplicitLeft = 182
+    ExplicitTop = 115
   end
   object qryMatTypes: TFDQuery
     ConnectionName = 'wt'
@@ -99,9 +101,7 @@ object frmWTMaintCustWorkGroup: TfrmWTMaintCustWorkGroup
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsMatTypes: TDataSource

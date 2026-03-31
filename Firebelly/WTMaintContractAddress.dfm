@@ -8,22 +8,22 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label4: TLabel
     Left = 16
     Top = 16
-    Width = 50
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -31,12 +31,12 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label18: TLabel
     Left = 16
     Top = 43
-    Width = 30
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Street'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -44,12 +44,12 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label23: TLabel
     Left = 16
     Top = 100
-    Width = 53
-    Height = 13
+    Width = 63
+    Height = 17
     Caption = 'Town/City'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -57,12 +57,12 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label20: TLabel
     Left = 16
     Top = 128
-    Width = 48
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Postcode'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -70,19 +70,19 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Label6: TLabel
     Left = 16
     Top = 156
-    Width = 40
-    Height = 13
+    Width = 44
+    Height = 17
     Caption = 'Contact'
   end
   object Telephone: TLabel
     Left = 16
     Top = 182
-    Width = 54
-    Height = 13
+    Width = 64
+    Height = 17
     Caption = 'Telephone'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -90,22 +90,22 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
   object Email: TLabel
     Left = 16
     Top = 208
-    Width = 27
-    Height = 13
+    Width = 31
+    Height = 17
     Caption = 'Email'
   end
   object Label24: TLabel
-    Left = 207
+    Left = 202
     Top = 128
-    Width = 37
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'County'
   end
   object edtTelephone: TEdit
     Left = 104
     Top = 178
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 7
     OnChange = CheckOK
   end
@@ -113,14 +113,14 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
     Left = 104
     Top = 204
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 8
   end
   object edtCustomerName: TEdit
     Left = 104
     Top = 12
     Width = 287
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = CheckOK
   end
@@ -128,7 +128,7 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
     Left = 104
     Top = 39
     Width = 287
-    Height = 21
+    Height = 25
     TabOrder = 1
     OnChange = CheckOK
   end
@@ -136,14 +136,14 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
     Left = 104
     Top = 67
     Width = 287
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtTown: TEdit
     Left = 104
     Top = 96
     Width = 287
-    Height = 21
+    Height = 25
     TabOrder = 3
     OnChange = CheckOK
   end
@@ -151,7 +151,7 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
     Left = 104
     Top = 124
     Width = 81
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 4
     OnChange = CheckOK
@@ -160,14 +160,14 @@ object frmWTMaintContractAddress: TfrmWTMaintContractAddress
     Left = 248
     Top = 124
     Width = 143
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtContact: TEdit
     Left = 104
     Top = 152
     Width = 288
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object btnOK: TBitBtn

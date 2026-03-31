@@ -3,12 +3,12 @@ object frmwtMaintVat: TfrmwtMaintVat
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Vat Rates'
-  ClientHeight = 323
+  ClientHeight = 279
   ClientWidth = 415
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,17 +16,17 @@ object frmwtMaintVat: TfrmwtMaintVat
   OnShow = FormShow
   DesignSize = (
     415
-    323)
-  TextHeight = 13
+    279)
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 20
-    Width = 58
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'VAT Rate %'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,12 +34,12 @@ object frmwtMaintVat: TfrmwtMaintVat
   object Label2: TLabel
     Left = 16
     Top = 52
-    Width = 59
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -47,19 +47,19 @@ object frmwtMaintVat: TfrmwtMaintVat
   object Label3: TLabel
     Left = 16
     Top = 84
-    Width = 49
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'VAT Code'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object btnOK: TBitBtn
     Left = 128
-    Top = 285
+    Top = 241
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -69,10 +69,11 @@ object frmwtMaintVat: TfrmwtMaintVat
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
+    ExplicitTop = 276
   end
   object BitBtn2: TBitBtn
     Left = 208
-    Top = 285
+    Top = 241
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -81,6 +82,7 @@ object frmwtMaintVat: TfrmwtMaintVat
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitTop = 276
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -88,27 +90,39 @@ object frmwtMaintVat: TfrmwtMaintVat
     Width = 97
     Height = 17
     Caption = 'Inactive'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object grpbxReverseCharge: TGroupBox
     Left = 16
-    Top = 112
+    Top = 128
     Width = 377
     Height = 97
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 3
     object Label4: TLabel
       Left = 8
       Top = 28
-      Width = 59
-      Height = 13
+      Width = 67
+      Height = 17
       Caption = 'Invoice Text'
     end
     object Label5: TLabel
       Left = 8
       Top = 60
-      Width = 56
+      Width = 55
       Height = 13
       Caption = 'VAT Rate %'
       Font.Charset = DEFAULT_CHARSET
@@ -119,18 +133,18 @@ object frmwtMaintVat: TfrmwtMaintVat
       ParentFont = False
     end
     object edtInvoiceText: TEdit
-      Left = 80
+      Left = 83
       Top = 24
-      Width = 281
-      Height = 21
+      Width = 273
+      Height = 25
       TabOrder = 0
       Text = 'edtInvoiceText'
     end
     object edtRCVateRate: TCREditFloat
-      Left = 80
+      Left = 83
       Top = 56
       Width = 80
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtVatRate'
       OnChange = EnableOK
@@ -138,36 +152,60 @@ object frmwtMaintVat: TfrmwtMaintVat
   end
   object chkbxReverseCharge: TCheckBox
     Left = 24
-    Top = 109
-    Width = 97
+    Top = 119
+    Width = 137
     Height = 17
     Caption = 'Reverse Charge'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
     OnClick = chkbxReverseChargeClick
   end
   object edtVatRate: TCREditFloat
-    Left = 96
+    Left = 99
     Top = 16
     Width = 80
-    Height = 21
+    Height = 25
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 5
     Text = 'edtVatRate'
     OnChange = EnableOK
   end
   object edtDescription: TEdit
-    Left = 96
+    Left = 99
     Top = 48
-    Width = 121
-    Height = 21
+    Width = 142
+    Height = 25
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
     Text = 'edtDescription'
     OnChange = EnableOK
   end
   object edtVatCode: TEdit
-    Left = 96
+    Left = 99
     Top = 80
     Width = 80
-    Height = 21
+    Height = 25
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 7
     Text = 'edtVatCode'
   end

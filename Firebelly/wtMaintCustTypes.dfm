@@ -3,25 +3,25 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
   Top = 133
   Caption = 'Customer Types'
   ClientHeight = 153
-  ClientWidth = 356
+  ClientWidth = 381
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 20
-    Width = 59
-    Height = 13
+    Top = 29
+    Width = 71
+    Height = 17
     Caption = 'Description'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -29,8 +29,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
   object Label10: TLabel
     Left = 8
     Top = 60
-    Width = 72
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Sales Nominal'
   end
   object chkbxInactive: TCheckBox
@@ -66,10 +66,10 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     TabOrder = 4
   end
   object edtDescription: TEdit
-    Left = 80
-    Top = 20
+    Left = 104
+    Top = 25
     Width = 257
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDescription'
     OnChange = EnableOK
@@ -78,7 +78,7 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     Left = 104
     Top = 56
     Width = 80
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtSalesNominal'
   end
@@ -92,8 +92,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
       '      inActive = :inactive'
       'WHERE'
       '  Customer_Type = :Customer_Type')
-    Left = 80
-    Top = 40
+    Left = 276
+    Top = 42
     ParamData = <
       item
         Name = 'Description'
@@ -118,8 +118,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
       'Select Max(Customer_Type)+1, :GUID, '#39'N'#39
       'From Customer_Type'
       ' ')
-    Left = 136
-    Top = 40
+    Left = 266
+    Top = 50
     ParamData = <
       item
         Name = 'GUID'

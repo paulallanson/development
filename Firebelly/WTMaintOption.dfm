@@ -4,53 +4,51 @@ object frmWTMaintOption: TfrmWTMaintOption
   BorderStyle = bsDialog
   Caption = 'Rename option'
   ClientHeight = 210
-  ClientWidth = 527
+  ClientWidth = 549
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    527
+    549
     210)
-  PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 48
-    Width = 36
-    Height = 13
+    Width = 45
+    Height = 17
     Caption = 'Caption'
   end
   object Label2: TLabel
     Left = 16
     Top = 16
-    Width = 31
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'Option'
   end
   object Label3: TLabel
     Left = 16
     Top = 80
-    Width = 85
-    Height = 13
+    Width = 106
+    Height = 17
     Caption = 'Quote Description'
   end
   object edtDescription: TEdit
-    Left = 120
+    Left = 133
     Top = 44
     Width = 265
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtDescription'
     OnChange = EnableOK
   end
   object btnOK: TBitBtn
-    Left = 191
+    Left = 193
     Top = 175
     Width = 75
     Height = 25
@@ -58,8 +56,6 @@ object frmWTMaintOption: TfrmWTMaintOption
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 3
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -78,22 +74,25 @@ object frmWTMaintOption: TfrmWTMaintOption
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 279
+    Left = 281
     Top = 175
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
+    Kind = bkCancel
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = BitBtn2Click
-    Kind = bkCancel
   end
   object dblkpOptions: TDBLookupComboBox
-    Left = 120
+    Left = 133
     Top = 12
     Width = 177
-    Height = 21
+    Height = 25
     KeyField = 'Group_Number'
     ListField = 'Group_Description'
     ListSource = dtsOptions
@@ -101,9 +100,9 @@ object frmWTMaintOption: TfrmWTMaintOption
     OnClick = dblkpOptionsClick
   end
   object edtQuoteDescription: TMemo
-    Left = 120
+    Left = 133
     Top = 78
-    Width = 394
+    Width = 388
     Height = 74
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 255
@@ -126,9 +125,7 @@ object frmWTMaintOption: TfrmWTMaintOption
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -3,35 +3,34 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
   Top = 91
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Material Analysis'
-  ClientHeight = 402
-  ClientWidth = 475
+  ClientHeight = 476
+  ClientWidth = 527
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    475
-    402)
-  PixelsPerInch = 96
-  TextHeight = 13
+    527
+    476)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 363
+    Top = 437
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 363
   end
   object Button4: TButton
-    Left = 376
-    Top = 363
+    Left = 430
+    Top = 437
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -41,10 +40,10 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     OnClick = Button4Click
   end
   object rdgrpReps: TRadioGroup
-    Left = 8
-    Top = 136
-    Width = 105
-    Height = 57
+    Left = 7
+    Top = 163
+    Width = 121
+    Height = 68
     Caption = 'Reps'
     ItemIndex = 0
     Items.Strings = (
@@ -55,9 +54,9 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
-    Top = 200
-    Width = 105
-    Height = 57
+    Top = 242
+    Width = 120
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -68,72 +67,70 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 264
-    Width = 209
-    Height = 73
+    Top = 316
+    Width = 217
+    Height = 109
     Caption = 'Invoice Date'
     TabOrder = 4
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 26
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 16
-      Height = 13
+      Left = 33
+      Top = 67
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 63
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 32
       Width = 25
       Height = 25
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+        333337FFFFFFFF77333330000000000333333777777777733333}
+      NumGlyphs = 2
       TabOrder = 2
       OnClick = btnDatefromClick
-      Glyph.Data = {
-        76010000424D7601000000000000760000002800000020000000100000000100
-        04000000000000010000130B0000130B00001000000000000000000000000000
-        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-        003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-        F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-        F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-        F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-        F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-        F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-        F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-        333337FFFFFFFF77333330000000000333333777777777733333}
-      NumGlyphs = 2
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 63
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -148,27 +145,29 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 200
+    Left = 143
+    Top = 248
     Width = 219
-    Height = 57
+    Height = 62
     Enabled = False
     TabOrder = 5
     object Label4: TLabel
       Left = 8
       Top = 12
-      Width = 44
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -192,8 +191,8 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     end
   end
   object OleContainer1: TOleContainer
-    Left = 140
-    Top = 147
+    Left = 187
+    Top = 133
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -202,8 +201,8 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 84
-    Top = 183
+    Left = 100
+    Top = 159
     Width = 289
     Height = 61
     TabOrder = 7
@@ -211,8 +210,8 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 53
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -226,13 +225,11 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
   end
   object btnExcel: TBitBtn
     Left = 190
-    Top = 363
+    Top = 437
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 8
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -276,39 +273,42 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 8
+    OnClick = btnExcelClick
+    ExplicitTop = 363
   end
   object btnPreview: TButton
     Left = 96
-    Top = 363
+    Top = 437
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
+    ExplicitTop = 363
   end
   object grpbxReps: TGroupBox
-    Left = 120
-    Top = 136
+    Left = 143
+    Top = 169
     Width = 219
-    Height = 57
+    Height = 62
     TabOrder = 10
     object Label3: TLabel
       Left = 8
       Top = 12
-      Width = 20
-      Height = 13
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object cmbReps: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Reps'
@@ -318,10 +318,10 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 344
+    Left = 376
     Top = 8
-    Width = 113
-    Height = 121
+    Width = 129
+    Height = 149
     Caption = 'Sort by: '
     ItemIndex = 4
     Items.Strings = (
@@ -333,9 +333,9 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     TabOrder = 11
   end
   object chkbxPageBreak: TCheckBox
-    Left = 352
-    Top = 136
-    Width = 113
+    Left = 376
+    Top = 169
+    Width = 129
     Height = 17
     Caption = 'Page Break'
     TabOrder = 12
@@ -343,8 +343,8 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
   object RadioGroup1: TRadioGroup
     Left = 8
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 121
+    Height = 68
     Caption = 'Material Type'
     ItemIndex = 0
     Items.Strings = (
@@ -354,27 +354,26 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     OnClick = rdgrpRepsClick
   end
   object GroupBox2: TGroupBox
-    Left = 120
-    Top = 8
+    Left = 135
+    Top = 14
     Width = 219
-    Height = 57
+    Height = 62
     TabOrder = 14
     object Label5: TLabel
-      Left = 8
-      Top = 12
-      Width = 64
-      Height = 13
+      Left = 11
+      Top = 4
+      Width = 79
+      Height = 17
       Caption = 'Material Type'
     end
     object ComboBox1: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Materials'
@@ -384,18 +383,18 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     end
   end
   object GroupBox3: TGroupBox
-    Left = 344
-    Top = 168
-    Width = 115
-    Height = 65
+    Left = 376
+    Top = 212
+    Width = 129
+    Height = 77
     Caption = 'Select Top '
     TabOrder = 15
     object NoofCustSpin: TSpinEdit
       Tag = 108
       Left = 25
-      Top = 27
+      Top = 35
       Width = 50
-      Height = 22
+      Height = 27
       MaxValue = 99999
       MinValue = 0
       TabOrder = 0
@@ -404,9 +403,9 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
   end
   object RadioGroup2: TRadioGroup
     Left = 8
-    Top = 72
-    Width = 105
-    Height = 57
+    Top = 87
+    Width = 121
+    Height = 68
     Caption = 'Office Contact'
     ItemIndex = 0
     Items.Strings = (
@@ -416,27 +415,26 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
     OnClick = rdgrpRepsClick
   end
   object GroupBox4: TGroupBox
-    Left = 120
-    Top = 72
+    Left = 146
+    Top = 93
     Width = 219
-    Height = 57
+    Height = 62
     TabOrder = 17
     object Label6: TLabel
       Left = 8
       Top = 12
-      Width = 68
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'Office Contact'
     end
     object ComboBox2: TComboBox
       Left = 8
       Top = 27
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Office Contacts'
@@ -451,12 +449,12 @@ object frmWTRSSalesInvoiceMaterialPerf: TfrmWTRSSalesInvoiceMaterialPerf
       'select *'
       'from Rep'
       'order by Rep_Name')
-    Left = 184
-    Top = 80
+    Left = 246
+    Top = 76
   end
   object dtsReps: TDataSource
     DataSet = qryReps
-    Left = 240
-    Top = 80
+    Left = 316
+    Top = 76
   end
 end

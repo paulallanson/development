@@ -3,52 +3,52 @@ object frmWTMaintFitters: TfrmWTMaintFitters
   Top = 143
   BorderStyle = bsDialog
   Caption = 'Fitter Details'
-  ClientHeight = 217
-  ClientWidth = 360
+  ClientHeight = 231
+  ClientWidth = 395
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    360
-    217)
-  TextHeight = 13
+    395
+    231)
+  TextHeight = 17
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 59
-    Height = 13
+    Width = 68
+    Height = 17
     Caption = 'Fitter Name'
   end
   object Label1: TLabel
     Left = 8
-    Top = 52
-    Width = 51
-    Height = 13
+    Top = 49
+    Width = 58
+    Height = 17
     Caption = 'Phone No'
   end
   object Label2: TLabel
     Left = 8
     Top = 78
-    Width = 54
-    Height = 13
+    Width = 63
+    Height = 17
     Caption = 'Mobile No'
   end
   object Label3: TLabel
     Left = 8
-    Top = 104
-    Width = 71
-    Height = 13
+    Top = 107
+    Width = 83
+    Height = 17
     Caption = 'Email Address'
   end
   object btnOK: TBitBtn
     Left = 184
-    Top = 186
+    Top = 200
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -59,10 +59,11 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     NumGlyphs = 2
     TabOrder = 6
     OnClick = btnOKClick
+    ExplicitTop = 177
   end
   object BitBtn2: TBitBtn
     Left = 272
-    Top = 186
+    Top = 200
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -71,10 +72,11 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 7
+    ExplicitTop = 177
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 170
+    Top = 172
     Width = 97
     Height = 17
     Caption = 'Inactive'
@@ -82,42 +84,42 @@ object frmWTMaintFitters: TfrmWTMaintFitters
   end
   object chkbxIncludeInSchedule: TCheckBox
     Left = 8
-    Top = 138
+    Top = 144
     Width = 161
     Height = 17
     Caption = 'Include in Schedule'
     TabOrder = 4
   end
   object edtFitterName: TEdit
-    Left = 88
-    Top = 16
+    Left = 104
+    Top = 17
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtFitterName'
     OnChange = EnableOK
   end
   object edtTelephoneNumber: TEdit
-    Left = 88
-    Top = 48
+    Left = 104
+    Top = 46
     Width = 121
-    Height = 21
+    Height = 25
     TabOrder = 1
     Text = 'edtTelephoneNumber'
   end
   object edtMobileNumber: TEdit
-    Left = 88
-    Top = 74
+    Left = 104
+    Top = 75
     Width = 121
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = 'edtMobileNumber'
   end
   object edtEmailAddress: TEdit
-    Left = 88
-    Top = 100
+    Left = 104
+    Top = 104
     Width = 265
-    Height = 21
+    Height = 25
     TabOrder = 3
     Text = 'edtEmailAddress'
   end
@@ -134,8 +136,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
       '  inActive = :inactive'
       'WHERE'
       '  Fitter = :Fitter')
-    Left = 80
-    Top = 40
+    Left = 212
+    Top = 50
     ParamData = <
       item
         Name = 'Fitter_Name'
@@ -169,8 +171,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
       'Select Max(Fitter)+1, :GUID, '#39'N'#39
       'From Fitter'
       ' ')
-    Left = 136
-    Top = 40
+    Left = 186
+    Top = 51
     ParamData = <
       item
         Name = 'GUID'

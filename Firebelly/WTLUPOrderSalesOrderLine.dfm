@@ -7,12 +7,12 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
@@ -24,22 +24,22 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object Label3: TLabel
-      Left = 680
-      Top = 20
-      Width = 96
-      Height = 13
+      Left = 664
+      Top = 19
+      Width = 108
+      Height = 17
       Caption = 'Sales Order Fitting'
     end
     object edtSupplier: TEdit
       Left = 72
       Top = 16
       Width = 273
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -48,7 +48,7 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
       Left = 784
       Top = 16
       Width = 97
-      Height = 21
+      Height = 25
       Date = 39470.000000000000000000
       Time = 0.402405902779719300
       TabOrder = 1
@@ -69,15 +69,15 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomerName: TEdit
       Left = 72
       Top = 16
       Width = 209
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtCustomerNameChange
     end
@@ -156,7 +156,7 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]

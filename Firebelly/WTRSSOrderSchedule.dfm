@@ -3,32 +3,33 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
   Top = 271
   BorderStyle = bsDialog
   Caption = 'Sales Order Schedule report'
-  ClientHeight = 182
-  ClientWidth = 458
+  ClientHeight = 251
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    458
-    182)
-  TextHeight = 13
+    534
+    251)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 147
+    Top = 216
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
+    ExplicitTop = 138
   end
   object Button4: TButton
-    Left = 376
-    Top = 147
+    Left = 438
+    Top = 216
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -40,8 +41,8 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 129
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -53,47 +54,47 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 72
+    Top = 82
     Width = 225
-    Height = 73
+    Height = 103
     Caption = 'Fitting date'
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 33
+      Top = 69
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 65
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 32
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -114,8 +115,8 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 65
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -137,25 +138,25 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 120
-    Top = 8
+    Left = 152
+    Top = 14
     Width = 219
-    Height = 57
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
-      Top = 12
-      Width = 49
-      Height = 13
+      Top = 6
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -179,10 +180,10 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     end
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 344
+    Left = 385
     Top = 8
-    Width = 113
-    Height = 81
+    Width = 128
+    Height = 97
     Caption = 'Sort by: '
     ItemIndex = 0
     Items.Strings = (
@@ -193,8 +194,8 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
-    Left = 344
-    Top = 96
+    Left = 395
+    Top = 124
     Width = 113
     Height = 17
     Caption = 'Page Break'
@@ -202,12 +203,13 @@ object frmWTRSSOrderSchedule: TfrmWTRSSOrderSchedule
   end
   object btnPreview: TButton
     Left = 96
-    Top = 147
+    Top = 216
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 138
   end
 end

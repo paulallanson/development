@@ -8,7 +8,7 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,12 +17,12 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
   DesignSize = (
     392
     104)
-  TextHeight = 13
+  TextHeight = 17
   object lblName: TLabel
     Left = 8
     Top = 20
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object btnOK: TBitBtn
@@ -38,6 +38,7 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 48
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,12 +51,13 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 48
   end
   object edtProspectActionDescription: TEdit
     Left = 80
     Top = 16
     Width = 281
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtProspectActionDescription'
     OnChange = EnableOK
@@ -68,8 +70,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
       '  Prospect_Action_Description = :Prospect_Action_Description'
       'WHERE'
       '  Prospect_Action = :Prospect_Action')
-    Left = 64
-    Top = 24
+    Left = 88
+    Top = 30
     ParamData = <
       item
         Name = 'Prospect_Action_Description'

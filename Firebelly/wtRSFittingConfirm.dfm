@@ -4,24 +4,24 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   BorderStyle = bsDialog
   Caption = 'Fitting Confirmation'
   ClientHeight = 448
-  ClientWidth = 571
+  ClientWidth = 595
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object SelectLst: TListBox
     Left = 176
     Top = 24
     Width = 25
     Height = 105
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 0
     Visible = False
@@ -29,16 +29,15 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlFooter: TPanel
     Left = 0
     Top = 368
-    Width = 571
+    Width = 595
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 343
-    ExplicitWidth = 536
+    ExplicitWidth = 571
     DesignSize = (
-      571
+      595
       80)
     object btnPrint: TButton
       Left = 8
@@ -74,7 +73,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       OnClick = btnEmailClick
     end
     object Button4: TButton
-      Left = 424
+      Left = 496
       Top = 47
       Width = 75
       Height = 25
@@ -86,7 +85,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     object chkbxMerge: TCheckBox
       Left = 8
       Top = 5
-      Width = 345
+      Width = 409
       Height = 17
       Caption = 'Merge all selected documents to create single PDF in email'
       TabOrder = 4
@@ -95,20 +94,19 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 218
-    Width = 571
+    Width = 595
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 193
-    ExplicitWidth = 536
+    ExplicitWidth = 571
     object lstbxDocuments: TListBox
       Left = 8
       Top = 15
       Width = 273
       Height = 129
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
       OnDblClick = lstbxDocumentsDblClick
@@ -126,20 +124,18 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlDocuments: TPanel
     Left = 0
     Top = 158
-    Width = 571
+    Width = 595
     Height = 60
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 138
-    ExplicitWidth = 536
-    ExplicitHeight = 55
+    ExplicitWidth = 571
     object Label2: TLabel
       Left = 8
       Top = 5
-      Width = 207
-      Height = 13
+      Width = 235
+      Height = 17
       Caption = 'Include documents from selected folder:'
     end
     object cmbDocuments: TComboBox
@@ -159,11 +155,13 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 571
+    Width = 595
     Height = 158
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = -1
+    ExplicitWidth = 1011
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -175,8 +173,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       object Label3: TLabel
         Left = 8
         Top = 80
-        Width = 244
-        Height = 39
+        Width = 214
+        Height = 51
         Caption = 
           'Enter order numbers and/or invoice ranges separated by commas. F' +
           'or example, 1234, 1236, 1240-1245'
@@ -195,7 +193,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     object chkbxAttachTerms: TCheckBox
       Left = 296
       Top = 25
-      Width = 249
+      Width = 297
       Height = 17
       Caption = 'Attach Sales Terms && Conditions document'
       TabOrder = 1
@@ -218,8 +216,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       '        INNER JOIN Int_Sel'
       '          ON Sales_Order_Line.Sales_Order = Int_Sel.Sel1'
       'WHERE Int_Sel.Int_Sel_Code = :Int_Sel')
-    Left = 456
-    Top = 32
+    Left = 98
+    Top = 16
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -251,8 +249,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       '          ON Int_Sel.Sel1 = Sales_Order.Sales_Order'
       'WHERE'
       '  (Int_sel.Int_sel_Code = :Int_sel)')
-    Left = 48
-    Top = 24
+    Left = 188
+    Top = 22
     ParamData = <
       item
         Name = 'Int_sel'
@@ -291,8 +289,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       'WHERE'
       '  (Int_sel.Int_sel_Code = :Int_sel)'
       '')
-    Left = 56
-    Top = 200
+    Left = 214
+    Top = 218
     ParamData = <
       item
         Name = 'Int_sel'
@@ -305,8 +303,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       'FROM Sales_Order_Line'
       'WHERE Sales_Order_Line.Sales_Order = :Sales_Order AND'
       'Sales_Order_Line.Quote <> 0')
-    Left = 456
-    Top = 208
+    Left = 98
+    Top = 236
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -318,8 +316,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       'SELECT Location_Plan_Document'
       'FROM Sales_Order'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 456
-    Top = 136
+    Left = 98
+    Top = 146
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -332,8 +330,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       'FROM Document_Structure'
       'WHERE Module_Id = 40'
       'ORDER BY Folder_Name')
-    Left = 48
-    Top = 88
+    Left = 204
+    Top = 134
   end
   object qryGetMaterialDescription: TFDQuery
     ConnectionName = 'WT'
@@ -361,8 +359,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
         'pe'
       'WHERE Sales_Order_line.Sales_Order = :Sales_Order'
       '')
-    Left = 496
-    Top = 269
+    Left = 148
+    Top = 312
     ParamData = <
       item
         Name = 'Sales_Order'

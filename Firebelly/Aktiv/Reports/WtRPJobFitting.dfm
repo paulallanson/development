@@ -16,7 +16,7 @@ object frmWTRPJobFitting: TfrmWTRPJobFitting
     Left = 127
     Top = -368
     Width = 992
-    Height = 1505
+    Height = 1403
     ShowingPreview = False
     BeforePrint = qrpJobSheetBeforePrint
     DataSet = qryReport
@@ -71,7 +71,7 @@ object frmWTRPJobFitting: TfrmWTRPJobFitting
     PreviewInitialState = wsMaximized
     PreviewWidth = 500
     PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
+    PrevInitialZoom = qrZoom100
     PreviewDefaultSaveType = stPDF
     PreviewLeft = 0
     PreviewTop = 0

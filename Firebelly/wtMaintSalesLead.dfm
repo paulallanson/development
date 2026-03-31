@@ -8,7 +8,7 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,12 +17,12 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
   DesignSize = (
     360
     120)
-  TextHeight = 13
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 91
-    Height = 13
+    Width = 106
+    Height = 17
     Caption = 'Sales Lead Source'
   end
   object btnOK: TBitBtn
@@ -63,7 +63,7 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
     Left = 120
     Top = 16
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtSalesleadSourceDescr'
     OnChange = EnableOK
@@ -77,8 +77,8 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
       '  inActive = :inactive'
       'WHERE'
       '  Sales_Lead_Source = :Sales_Lead_Source')
-    Left = 64
-    Top = 24
+    Left = 16
+    Top = 40
     ParamData = <
       item
         Name = 'Sales_Lead_Source_Descr'
@@ -100,8 +100,8 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
       'Select Max(Sales_Lead_Source)+1, :GUID, '#39'N'#39
       'From Sales_Lead_Source'
       ' ')
-    Left = 120
-    Top = 24
+    Left = 64
+    Top = 48
     ParamData = <
       item
         Name = 'GUID'

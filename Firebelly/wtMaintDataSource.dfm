@@ -8,7 +8,7 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,12 +17,12 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
   DesignSize = (
     360
     120)
-  TextHeight = 13
+  TextHeight = 17
   object label1: TLabel
     Left = 8
     Top = 20
-    Width = 62
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Data Source'
   end
   object btnOK: TBitBtn
@@ -38,6 +38,7 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 73
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,6 +51,7 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 73
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -63,7 +65,7 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     Left = 88
     Top = 16
     Width = 225
-    Height = 21
+    Height = 25
     TabOrder = 0
     Text = 'edtDataSourceTitle'
     OnChange = EnableOK
@@ -77,8 +79,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
       '  inActive = :inactive'
       'WHERE'
       '  Data_Source = :Data_Source')
-    Left = 64
-    Top = 24
+    Left = 80
+    Top = 46
     ParamData = <
       item
         Name = 'Data_Source_Title'

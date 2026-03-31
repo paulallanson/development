@@ -3,33 +3,34 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Quote Decline Reason Report'
-  ClientHeight = 315
-  ClientWidth = 364
+  ClientHeight = 385
+  ClientWidth = 430
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    364
-    315)
-  TextHeight = 13
+    430
+    385)
+  TextHeight = 17
   object btnPrint: TButton
     Left = 8
-    Top = 278
+    Top = 348
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 278
   end
   object Button4: TButton
-    Left = 272
-    Top = 278
+    Left = 326
+    Top = 348
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -41,8 +42,8 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
   object rdgrpReason: TRadioGroup
     Left = 8
     Top = 8
-    Width = 105
-    Height = 57
+    Width = 122
+    Height = 68
     Caption = 'Reasons'
     ItemIndex = 0
     Items.Strings = (
@@ -54,9 +55,9 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
-    Top = 72
-    Width = 105
-    Height = 57
+    Top = 89
+    Width = 122
+    Height = 68
     Caption = 'Customers'
     ItemIndex = 0
     Items.Strings = (
@@ -68,47 +69,47 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 136
+    Top = 176
     Width = 209
-    Height = 73
+    Height = 105
     Caption = 'Date selection'
     ParentBackground = False
     TabOrder = 4
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 29
-      Height = 13
+      Left = 23
+      Top = 36
+      Width = 33
+      Height = 17
       Caption = 'From:'
     end
     object Label2: TLabel
-      Left = 26
-      Top = 48
-      Width = 15
-      Height = 13
+      Left = 33
+      Top = 67
+      Width = 17
+      Height = 17
       Caption = 'To:'
     end
     object edtDateFrom: TEdit
-      Left = 56
-      Top = 16
+      Left = 63
+      Top = 32
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 56
-      Top = 44
+      Left = 63
+      Top = 63
       Width = 100
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
       OnExit = edtDateFromExit
     end
     object btnDatefrom: TBitBtn
-      Left = 168
-      Top = 14
+      Left = 175
+      Top = 32
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -129,8 +130,8 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
       OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
-      Left = 168
-      Top = 42
+      Left = 175
+      Top = 63
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -152,25 +153,25 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object grpbxReason: TGroupBox
-    Left = 128
-    Top = 8
+    Left = 150
+    Top = 16
     Width = 219
-    Height = 57
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 5
     object Label3: TLabel
       Left = 8
-      Top = 12
-      Width = 84
-      Height = 13
+      Top = 9
+      Width = 95
+      Height = 17
       Caption = 'Decline Reasons'
     end
     object cmbReason: TComboBox
       Left = 8
       Top = 32
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Color = clBtnFace
       ItemIndex = 0
@@ -182,25 +183,25 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object grpbxCustomer: TGroupBox
-    Left = 128
-    Top = 72
+    Left = 150
+    Top = 97
     Width = 219
-    Height = 57
+    Height = 62
     Enabled = False
     ParentBackground = False
     TabOrder = 6
     object Label4: TLabel
       Left = 8
-      Top = 12
-      Width = 49
-      Height = 13
+      Top = 8
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 27
       Width = 169
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       ReadOnly = True
@@ -224,36 +225,38 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object chkbxPageBreak: TCheckBox
-    Left = 230
-    Top = 248
-    Width = 121
+    Left = 262
+    Top = 303
+    Width = 139
     Height = 17
     Caption = 'Page Break on Total'
     TabOrder = 7
   end
   object btnPreview: TButton
     Left = 96
-    Top = 278
+    Top = 348
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Preview'
     TabOrder = 8
     OnClick = btnPreviewClick
+    ExplicitTop = 278
   end
   object btnExcel: TButton
     Left = 184
-    Top = 278
+    Top = 348
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 9
     OnClick = btnExcelClick
+    ExplicitTop = 278
   end
   object pnlExportPrgrss: TPanel
-    Left = 36
-    Top = 87
+    Left = 60
+    Top = 100
     Width = 289
     Height = 61
     ParentBackground = False
@@ -262,8 +265,8 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -276,8 +279,8 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     end
   end
   object OleContainer1: TOleContainer
-    Left = 148
-    Top = 59
+    Left = 172
+    Top = 72
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -286,10 +289,10 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    Left = 240
-    Top = 136
-    Width = 105
-    Height = 90
+    Left = 254
+    Top = 176
+    Width = 131
+    Height = 121
     Caption = 'Category'
     ItemIndex = 0
     Items.Strings = (
@@ -307,12 +310,12 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
       'from Inactive_Reason'
       'where Inactive_Type = '#39'Q'#39
       'order by Inactive_Reason_Descr')
-    Left = 184
-    Top = 16
+    Left = 208
+    Top = 29
   end
   object dtsReason: TDataSource
     DataSet = qryReason
-    Left = 240
-    Top = 16
+    Left = 264
+    Top = 29
   end
 end

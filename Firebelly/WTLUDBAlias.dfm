@@ -8,12 +8,12 @@ object WTLUDBAliasFrm: TWTLUDBAliasFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 16
   object CloseBitBtn: TBitBtn
     Left = 246
     Top = 232
@@ -105,7 +105,6 @@ object WTLUDBAliasFrm: TWTLUDBAliasFrm
     Top = 16
     Width = 209
     Height = 241
-    ItemHeight = 13
     TabOrder = 2
     OnDblClick = lstbxAliasListDblClick
   end

@@ -8,12 +8,12 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
     Top = 164
@@ -22,6 +22,8 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 155
+    ExplicitWidth = 509
     object btnExport: TButton
       Left = 320
       Top = 8
@@ -50,10 +52,8 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 176
-    ExplicitTop = 104
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 509
+    ExplicitHeight = 155
     object pnlExpFile: TPanel
       Left = 0
       Top = 119
@@ -62,18 +62,20 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 110
+      ExplicitWidth = 509
       object lblExpTo: TLabel
         Left = 72
         Top = 16
-        Width = 51
-        Height = 13
+        Width = 59
+        Height = 17
         Caption = 'Export To:'
       end
       object edtExpFile: TEdit
         Left = 136
         Top = 12
         Width = 257
-        Height = 21
+        Height = 25
         TabOrder = 0
       end
       object btnBrowse: TButton
@@ -95,7 +97,8 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 164
+      ExplicitWidth = 509
+      ExplicitHeight = 110
       object pnlNumberRange: TPanel
         Left = 274
         Top = 0
@@ -106,15 +109,15 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
         object lblInvNumber: TLabel
           Left = 9
           Top = 6
-          Width = 91
-          Height = 13
+          Width = 106
+          Height = 17
           Caption = 'Invoice Number(s)'
         end
         object Label1: TLabel
           Left = 8
           Top = 68
-          Width = 194
-          Height = 39
+          Width = 177
+          Height = 68
           Caption = 
             'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
             ' For example, 1234, 1236, 1240-1245'
@@ -124,7 +127,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
           Left = 8
           Top = 26
           Width = 41
-          Height = 21
+          Height = 25
           TabOrder = 0
         end
         object SelectionMemo: TMemo
@@ -139,22 +142,22 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
           Top = 8
           Width = 25
           Height = 33
-          ItemHeight = 13
+          ItemHeight = 17
           Sorted = True
           TabOrder = 2
           Visible = False
         end
       end
       object pnlDateRange: TPanel
-        Left = 274
+        Left = 267
         Top = 0
-        Width = 241
+        Width = 248
         Height = 119
         ParentBackground = False
         TabOrder = 1
         object btnDateFrom: TSpeedButton
-          Left = 200
-          Top = 15
+          Left = 191
+          Top = 27
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -174,8 +177,8 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
           OnClick = btnDateFromClick
         end
         object btnDateTo: TSpeedButton
-          Left = 200
-          Top = 52
+          Left = 191
+          Top = 64
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -195,33 +198,33 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
           OnClick = btnDateToClick
         end
         object lblDateFrom: TLabel
-          Left = 9
-          Top = 20
-          Width = 56
-          Height = 13
+          Left = 13
+          Top = 32
+          Width = 64
+          Height = 17
           Caption = 'Date From:'
         end
         object lblDateTo: TLabel
-          Left = 24
-          Top = 57
-          Width = 42
-          Height = 13
+          Left = 28
+          Top = 69
+          Width = 48
+          Height = 17
           Caption = 'Date To:'
         end
         object edtDateFrom: TEdit
-          Left = 79
-          Top = 16
+          Left = 83
+          Top = 28
           Width = 98
-          Height = 21
+          Height = 25
           MaxLength = 10
           TabOrder = 0
           OnExit = edtDateFromExit
         end
         object edtDateTo: TEdit
-          Left = 79
-          Top = 53
+          Left = 83
+          Top = 65
           Width = 98
-          Height = 21
+          Height = 25
           MaxLength = 10
           TabOrder = 1
           OnExit = edtDateToExit
@@ -230,16 +233,15 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       object pnlInvOrCred: TPanel
         Left = 0
         Top = 0
-        Width = 137
+        Width = 121
         Height = 119
         Align = alLeft
         ParentBackground = False
         TabOrder = 2
-        ExplicitHeight = 164
         object rdgrpInvOrCred: TRadioGroup
           Left = 8
           Top = 8
-          Width = 121
+          Width = 105
           Height = 97
           Caption = 'Export'
           ItemIndex = 0
@@ -252,18 +254,17 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
         end
       end
       object pnleft: TPanel
-        Left = 137
+        Left = 121
         Top = 0
-        Width = 137
+        Width = 147
         Height = 119
         Align = alLeft
         ParentBackground = False
         TabOrder = 3
-        ExplicitHeight = 164
         object rdgrpExportBy: TRadioGroup
           Left = 8
           Top = 8
-          Width = 121
+          Width = 129
           Height = 97
           Caption = 'Export By'
           ItemIndex = 0
