@@ -2,8 +2,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   Left = 171
   Top = 170
   Caption = 'Sales Credits'
-  ClientHeight = 367
-  ClientWidth = 1294
+  ClientHeight = 340
+  ClientWidth = 1276
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,553 +20,590 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   TextHeight = 17
-  object CoolBar1: TCoolBar
-    Left = 0
-    Top = 41
-    Width = 1294
-    Height = 44
-    Bands = <
-      item
-        Control = PageScroller1
-        ImageIndex = -1
-        MinHeight = 40
-        Width = 1288
-      end>
-    ExplicitTop = 30
-    object PageScroller1: TPageScroller
-      Left = 11
-      Top = 0
-      Width = 1279
-      Height = 40
-      Align = alClient
-      Control = ToolBar1
-      TabOrder = 0
-      object ToolBar1: TToolBar
-        Left = 0
-        Top = 0
-        Width = 1279
-        Height = 40
-        ButtonHeight = 40
-        ButtonWidth = 67
-        Caption = 'ToolBar1'
-        Images = imglstFunctions
-        ParentShowHint = False
-        ShowCaptions = True
-        ShowHint = True
-        TabOrder = 0
-        Wrapable = False
-        ExplicitWidth = 1267
-        object btnAdd: TToolButton
-          Left = 0
-          Top = 0
-          Hint = 'Add new production order'
-          Caption = '  &Raise  '
-          ImageIndex = 0
-          OnClick = btnAddClick
-        end
-        object btnChange: TToolButton
-          Left = 67
-          Top = 0
-          Hint = 'Change order details'
-          Caption = '  &Change  '
-          Enabled = False
-          ImageIndex = 1
-          OnClick = btnChangeClick
-        end
-        object btnDelete: TToolButton
-          Left = 134
-          Top = 0
-          Caption = '&Delete'
-          Enabled = False
-          ImageIndex = 5
-          OnClick = btnDeleteClick
-        end
-        object ToolButton3: TToolButton
-          Left = 201
-          Top = 0
-          Width = 8
-          Caption = 'ToolButton3'
-          ImageIndex = 5
-          Style = tbsSeparator
-        end
-        object btnPrint: TToolButton
-          Left = 209
-          Top = 0
-          Caption = '&Print'
-          Enabled = False
-          ImageIndex = 3
-          OnClick = btnPrintClick
-        end
-        object btnReprint: TToolButton
-          Left = 276
-          Top = 0
-          Caption = '&Reprint'
-          Enabled = False
-          ImageIndex = 6
-          OnClick = btnReprintClick
-        end
-        object ToolButton6: TToolButton
-          Left = 343
-          Top = 0
-          Width = 8
-          Caption = 'ToolButton6'
-          ImageIndex = 4
-          Style = tbsSeparator
-        end
-        object btnReports: TToolButton
-          Left = 351
-          Top = 0
-          Caption = 'Reports'
-          ImageIndex = 3
-          OnClick = btnReportsClick
-        end
-      end
-    end
-  end
-  object dbgDetails: TDBGrid
-    Left = 0
-    Top = 85
-    Width = 1294
-    Height = 171
-    Align = alClient
-    DataSource = dtmdlSalesInvoice.dsSCHeaderGrid
-    DrawingStyle = gdsGradient
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
-    ParentFont = False
-    TabOrder = 1
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
-    OnDrawColumnCell = dbgDetailsDrawColumnCell
-    OnDblClick = dbgDetailsDblClick
-    OnTitleClick = dbgDetailsTitleClick
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'Invoice_no'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Credit Note No.'
-        Width = 78
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Invoice_Date'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Date'
-        Width = 65
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Customer_Name'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Customer'
-        Width = 150
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Description'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Width = 161
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Reference'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Invoice No.'
-        Width = 61
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Goods_Credit'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Goods'
-        Width = 51
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'VAT_Credit'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'VAT'
-        Width = 50
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Total_Credit'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Total'
-        Width = 70
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Status_Description'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Status'
-        Width = 83
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Rep_Name'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Rep'
-        Width = 139
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Account_Manager_Name'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Office Contact'
-        Width = 158
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Operator_Name'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Created By'
-        Width = 137
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Order_Reference'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Caption = 'Order Reference'
-        Width = 149
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Branch_Name'
-        Title.Caption = 'Site Name'
-        Width = 89
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Revenue_Centre_Descr'
-        Title.Caption = 'Revenue Centre'
-        Width = 102
-        Visible = True
-      end>
-  end
-  object pnlFooter: TPanel
-    Left = 0
-    Top = 256
-    Width = 1294
-    Height = 92
-    Align = alBottom
-    ParentBackground = False
-    TabOrder = 2
-    object Panel2: TPanel
-      Left = 1010
-      Top = 1
-      Width = 283
-      Height = 90
-      Align = alRight
-      BevelOuter = bvNone
-      ParentBackground = False
-      TabOrder = 0
-      ExplicitLeft = 1016
-      ExplicitTop = -4
-      DesignSize = (
-        283
-        90)
-      object Label2: TLabel
-        Left = 8
-        Top = 26
-        Width = 87
-        Height = 17
-        Caption = 'Credit Number'
-      end
-      object Label3: TLabel
-        Left = 8
-        Top = 56
-        Width = 66
-        Height = 17
-        Caption = 'Credit Date'
-      end
-      object btnClose: TButton
-        Left = 200
-        Top = 52
-        Width = 75
-        Height = 25
-        Anchors = [akRight, akBottom]
-        Caption = '&Close'
-        TabOrder = 0
-        OnClick = btnCloseClick
-      end
-      object edtSalesInvNo: TEdit
-        Left = 104
-        Top = 22
-        Width = 81
-        Height = 25
-        TabOrder = 1
-        OnKeyPress = edtSalesInvNoKeyPress
-      end
-      object edtInvoiceDate: TEdit
-        Left = 104
-        Top = 52
-        Width = 81
-        Height = 25
-        TabOrder = 2
-      end
-    end
-    object Panel4: TPanel
-      Left = 1
-      Top = 1
-      Width = 616
-      Height = 90
-      Align = alLeft
-      Alignment = taLeftJustify
-      BevelOuter = bvNone
-      TabOrder = 1
-      ExplicitHeight = 76
-      object Label1: TLabel
-        Left = 8
-        Top = 56
-        Width = 99
-        Height = 17
-        Caption = 'Customer Search'
-      end
-      object edtSearch: TEdit
-        Left = 112
-        Top = 52
-        Width = 153
-        Height = 25
-        TabOrder = 0
-        OnChange = edtSearchChange
-      end
-      object btnSearch: TBitBtn
-        Left = 280
-        Top = 52
-        Width = 75
-        Height = 25
-        Caption = '&Search'
-        TabOrder = 1
-        OnClick = btnSearchClick
-      end
-      object BitBtn1: TBitBtn
-        Left = 376
-        Top = 52
-        Width = 75
-        Height = 25
-        Caption = 'S&weep'
-        TabOrder = 2
-        OnClick = BitBtn1Click
-      end
-      object chkbxShowArchived: TCheckBox
-        Left = 472
-        Top = 56
-        Width = 113
-        Height = 17
-        Caption = 'Show archived'
-        TabOrder = 3
-        OnClick = chkbxShowArchivedClick
-      end
-    end
-    object pnlRevenueCentre: TPanel
-      Left = 617
-      Top = 1
-      Width = 393
-      Height = 90
-      Align = alClient
-      BevelOuter = bvNone
-      ParentBackground = False
-      TabOrder = 2
-      ExplicitLeft = 611
-      ExplicitTop = 33
-      ExplicitHeight = 76
-      object rdgrpRevenueCentre: TRadioGroup
-        Left = 7
-        Top = 1
-        Width = 121
-        Height = 84
-        Caption = 'Revenue Centre '
-        ItemIndex = 0
-        Items.Strings = (
-          'Default'
-          'All'
-          'Selected')
-        ParentBackground = False
-        TabOrder = 0
-        OnClick = rdgrpRevenueCentreClick
-      end
-      object grpbxRevCentre: TGroupBox
-        Left = 133
-        Top = 9
-        Width = 203
-        Height = 74
-        ParentBackground = False
-        TabOrder = 1
-        Visible = False
-        object Label6: TLabel
-          Left = 8
-          Top = 12
-          Width = 91
-          Height = 17
-          Caption = 'Revenue Centre'
-        end
-        object dblkpRevCentre: TDBLookupComboBox
-          Left = 8
-          Top = 32
-          Width = 185
-          Height = 25
-          KeyField = 'Revenue_Centre'
-          ListField = 'Revenue_Centre_Descr'
-          TabOrder = 0
-          OnClick = dblkpRevCentreClick
-        end
-      end
-    end
-  end
-  object stsbrDetails: TStatusBar
-    Left = 0
-    Top = 348
-    Width = 1294
-    Height = 19
-    Panels = <
-      item
-        Width = 250
-      end
-      item
-        Width = 50
-      end>
-  end
-  object CoolBar2: TCoolBar
+  object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 1294
-    Height = 41
-    Bands = <
-      item
-        Control = Panel3
-        ImageIndex = -1
-        MinHeight = 41
-        Width = 1288
-      end>
-    object Panel3: TPanel
-      Left = 11
-      Top = 0
-      Width = 1279
-      Height = 41
-      Align = alTop
-      BevelOuter = bvNone
-      Color = 16642529
-      ParentBackground = False
-      TabOrder = 0
-      DesignSize = (
-        1279
-        41)
-      object Label4: TLabel
-        Left = 2
-        Top = 7
-        Width = 107
-        Height = 25
-        Caption = 'Sales Credits'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label5: TLabel
-        Left = 998
-        Top = 19
-        Width = 78
-        Height = 13
-        Anchors = [akTop, akRight]
-        Caption = 'Customer Filter'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlue
-        Font.Height = -11
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object cmbCustomerFilter: TComboBox
-        Left = 1089
-        Top = 12
-        Width = 152
-        Height = 25
-        Style = csDropDownList
-        Anchors = [akTop, akRight]
+    Width = 1276
+    Height = 340
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitLeft = 608
+    ExplicitTop = 128
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object CoolBar1: TCoolBar
+      Left = 0
+      Top = 41
+      Width = 1276
+      Height = 44
+      Bands = <
+        item
+          Control = PageScroller1
+          ImageIndex = -1
+          MinHeight = 40
+          Width = 1270
+        end>
+      ExplicitTop = 8
+      object PageScroller1: TPageScroller
+        Left = 11
+        Top = 0
+        Width = 1261
+        Height = 40
+        Align = alClient
+        Control = ToolBar1
         TabOrder = 0
-        OnChange = cmbCustomerFilterChange
-        Items.Strings = (
-          'All'
-          'Trade'
-          'Retail'
-          'Commercial')
+        object ToolBar1: TToolBar
+          Left = 0
+          Top = 0
+          Width = 1261
+          Height = 40
+          ButtonHeight = 40
+          ButtonWidth = 67
+          Caption = 'ToolBar1'
+          Images = imglstFunctions
+          ParentShowHint = False
+          ShowCaptions = True
+          ShowHint = True
+          TabOrder = 0
+          Wrapable = False
+          object btnAdd: TToolButton
+            Left = 0
+            Top = 0
+            Hint = 'Add new production order'
+            Caption = '  &Raise  '
+            ImageIndex = 0
+            OnClick = btnAddClick
+          end
+          object btnChange: TToolButton
+            Left = 67
+            Top = 0
+            Hint = 'Change order details'
+            Caption = '  &Change  '
+            Enabled = False
+            ImageIndex = 1
+            OnClick = btnChangeClick
+          end
+          object btnDelete: TToolButton
+            Left = 134
+            Top = 0
+            Caption = '&Delete'
+            Enabled = False
+            ImageIndex = 5
+            OnClick = btnDeleteClick
+          end
+          object ToolButton3: TToolButton
+            Left = 201
+            Top = 0
+            Width = 8
+            Caption = 'ToolButton3'
+            ImageIndex = 5
+            Style = tbsSeparator
+          end
+          object btnPrint: TToolButton
+            Left = 209
+            Top = 0
+            Caption = '&Print'
+            Enabled = False
+            ImageIndex = 3
+            OnClick = btnPrintClick
+          end
+          object btnReprint: TToolButton
+            Left = 276
+            Top = 0
+            Caption = '&Reprint'
+            Enabled = False
+            ImageIndex = 6
+            OnClick = btnReprintClick
+          end
+          object ToolButton6: TToolButton
+            Left = 343
+            Top = 0
+            Width = 8
+            Caption = 'ToolButton6'
+            ImageIndex = 4
+            Style = tbsSeparator
+          end
+          object btnReports: TToolButton
+            Left = 351
+            Top = 0
+            Caption = 'Reports'
+            ImageIndex = 3
+            OnClick = btnReportsClick
+          end
+        end
+      end
+    end
+    object dbgDetails: TDBGrid
+      Left = 0
+      Top = 85
+      Width = 1276
+      Height = 143
+      Align = alClient
+      DataSource = dtmdlSalesInvoice.dsSCHeaderGrid
+      DrawingStyle = gdsGradient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
+      ParentFont = False
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -13
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+      OnDrawColumnCell = dbgDetailsDrawColumnCell
+      OnDblClick = dbgDetailsDblClick
+      OnTitleClick = dbgDetailsTitleClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Invoice_no'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Credit Note No.'
+          Width = 78
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Invoice_Date'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Date'
+          Width = 65
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Customer_Name'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Customer'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Description'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Width = 161
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Reference'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Invoice No.'
+          Width = 61
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Goods_Credit'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Goods'
+          Width = 51
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VAT_Credit'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'VAT'
+          Width = 50
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Total_Credit'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Total'
+          Width = 70
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Status_Description'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Status'
+          Width = 83
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Rep_Name'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Rep'
+          Width = 139
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Account_Manager_Name'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Office Contact'
+          Width = 158
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Operator_Name'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Created By'
+          Width = 137
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Order_Reference'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Title.Caption = 'Order Reference'
+          Width = 149
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Branch_Name'
+          Title.Caption = 'Site Name'
+          Width = 89
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Revenue_Centre_Descr'
+          Title.Caption = 'Revenue Centre'
+          Width = 102
+          Visible = True
+        end>
+    end
+    object pnlFooter: TPanel
+      Left = 0
+      Top = 228
+      Width = 1276
+      Height = 92
+      Align = alBottom
+      ParentBackground = False
+      TabOrder = 2
+      ExplicitLeft = 24
+      ExplicitTop = 184
+      object Panel2: TPanel
+        Left = 992
+        Top = 1
+        Width = 283
+        Height = 90
+        Align = alRight
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 0
+        DesignSize = (
+          283
+          90)
+        object Label2: TLabel
+          Left = 8
+          Top = 32
+          Width = 87
+          Height = 17
+          Anchors = [akRight, akBottom]
+          Caption = 'Credit Number'
+        end
+        object Label3: TLabel
+          Left = 8
+          Top = 61
+          Width = 66
+          Height = 17
+          Anchors = [akRight, akBottom]
+          Caption = 'Credit Date'
+        end
+        object btnClose: TButton
+          Left = 200
+          Top = 57
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Caption = '&Close'
+          TabOrder = 0
+          OnClick = btnCloseClick
+        end
+        object edtSalesInvNo: TEdit
+          Left = 101
+          Top = 28
+          Width = 81
+          Height = 25
+          Anchors = [akRight, akBottom]
+          TabOrder = 1
+          OnKeyPress = edtSalesInvNoKeyPress
+        end
+        object edtInvoiceDate: TEdit
+          Left = 101
+          Top = 57
+          Width = 81
+          Height = 25
+          Anchors = [akRight, akBottom]
+          TabOrder = 2
+        end
+      end
+      object pnlSearch: TPanel
+        Left = 1
+        Top = 1
+        Width = 616
+        Height = 90
+        Align = alLeft
+        Alignment = taLeftJustify
+        BevelOuter = bvNone
+        TabOrder = 1
+        DesignSize = (
+          616
+          90)
+        object Label1: TLabel
+          Left = 8
+          Top = 61
+          Width = 99
+          Height = 17
+          Anchors = [akRight, akBottom]
+          Caption = 'Customer Search'
+        end
+        object edtSearch: TEdit
+          Left = 112
+          Top = 57
+          Width = 153
+          Height = 25
+          Anchors = [akRight, akBottom]
+          TabOrder = 0
+          OnChange = edtSearchChange
+        end
+        object btnSearch: TBitBtn
+          Left = 280
+          Top = 57
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Caption = '&Search'
+          TabOrder = 1
+          OnClick = btnSearchClick
+        end
+        object BitBtn1: TBitBtn
+          Left = 376
+          Top = 57
+          Width = 75
+          Height = 25
+          Anchors = [akRight, akBottom]
+          Caption = 'S&weep'
+          TabOrder = 2
+          OnClick = BitBtn1Click
+        end
+        object chkbxShowArchived: TCheckBox
+          Left = 472
+          Top = 61
+          Width = 113
+          Height = 17
+          Anchors = [akRight, akBottom]
+          Caption = 'Show archived'
+          TabOrder = 3
+          OnClick = chkbxShowArchivedClick
+        end
+      end
+      object pnlRevenueCentre: TPanel
+        Left = 617
+        Top = 1
+        Width = 375
+        Height = 90
+        Align = alClient
+        BevelOuter = bvNone
+        ParentBackground = False
+        TabOrder = 2
+        ExplicitLeft = 611
+        ExplicitTop = 52
+        object rdgrpRevenueCentre: TRadioGroup
+          Left = 6
+          Top = 1
+          Width = 121
+          Height = 84
+          Caption = 'Revenue Centre '
+          ItemIndex = 0
+          Items.Strings = (
+            'Default'
+            'All'
+            'Selected')
+          ParentBackground = False
+          TabOrder = 0
+          OnClick = rdgrpRevenueCentreClick
+        end
+        object grpbxRevCentre: TGroupBox
+          Left = 133
+          Top = 9
+          Width = 203
+          Height = 74
+          ParentBackground = False
+          TabOrder = 1
+          Visible = False
+          object Label6: TLabel
+            Left = 8
+            Top = 12
+            Width = 91
+            Height = 17
+            Caption = 'Revenue Centre'
+          end
+          object dblkpRevCentre: TDBLookupComboBox
+            Left = 8
+            Top = 32
+            Width = 185
+            Height = 25
+            KeyField = 'Revenue_Centre'
+            ListField = 'Revenue_Centre_Descr'
+            TabOrder = 0
+            OnClick = dblkpRevCentreClick
+          end
+        end
+      end
+    end
+    object CoolBar2: TCoolBar
+      Left = 0
+      Top = 0
+      Width = 1276
+      Height = 41
+      Bands = <
+        item
+          Control = Panel3
+          ImageIndex = -1
+          MinHeight = 41
+          Width = 1270
+        end>
+      ExplicitTop = 8
+      object Panel3: TPanel
+        Left = 11
+        Top = 0
+        Width = 1261
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Color = 16642529
+        ParentBackground = False
+        TabOrder = 0
+        DesignSize = (
+          1261
+          41)
+        object Label4: TLabel
+          Left = 2
+          Top = 7
+          Width = 107
+          Height = 25
+          Caption = 'Sales Credits'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 980
+          Top = 19
+          Width = 78
+          Height = 13
+          Anchors = [akTop, akRight]
+          Caption = 'Customer Filter'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          ExplicitLeft = 998
+        end
+        object cmbCustomerFilter: TComboBox
+          Left = 1071
+          Top = 12
+          Width = 152
+          Height = 25
+          Style = csDropDownList
+          Anchors = [akTop, akRight]
+          TabOrder = 0
+          OnChange = cmbCustomerFilterChange
+          Items.Strings = (
+            'All'
+            'Trade'
+            'Retail'
+            'Commercial')
+        end
+      end
+    end
+    object pnlStatus: TPanel
+      Left = 0
+      Top = 320
+      Width = 1276
+      Height = 20
+      Align = alBottom
+      BevelOuter = bvNone
+      Caption = 'pnlStatus'
+      TabOrder = 4
+      object stsbrDetails: TStatusBar
+        Left = 0
+        Top = 1
+        Width = 1276
+        Height = 19
+        Panels = <
+          item
+            Width = 300
+          end
+          item
+            Width = 50
+          end>
+        ExplicitLeft = 488
+        ExplicitTop = 8
+        ExplicitWidth = 0
       end
     end
   end

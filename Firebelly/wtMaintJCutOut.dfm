@@ -4,7 +4,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
   BorderStyle = bsDialog
   Caption = 'Maintain Cutouts'
   ClientHeight = 235
-  ClientWidth = 491
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -54,7 +54,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 491
+    Width = 538
     Height = 186
     Align = alTop
     BevelOuter = bvNone
@@ -97,7 +97,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       Caption = 'Unit price'
     end
     object Label7: TLabel
-      Left = 315
+      Left = 371
       Top = 138
       Width = 61
       Height = 17
@@ -127,7 +127,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     object dblkpCutOut: TDBLookupComboBox
       Left = 88
       Top = 72
-      Width = 350
+      Width = 410
       Height = 25
       KeyField = 'cutout'
       ListField = 'description'
@@ -155,7 +155,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       OnChange = edtUnitPriceChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 392
+      Left = 448
       Top = 135
       Width = 81
       Height = 25
@@ -165,7 +165,7 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       TabOrder = 5
     end
     object btnCutOuts: TBitBtn
-      Left = 448
+      Left = 504
       Top = 71
       Width = 25
       Height = 25
@@ -188,13 +188,13 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     SQL.Strings = (
       'select *'
       'from Edge_Type')
-    Left = 291
-    Top = 56
+    Left = 212
+    Top = 78
   end
   object dtsEdgeType: TDataSource
     DataSet = qryEdgeType
-    Left = 362
-    Top = 64
+    Left = 189
+    Top = 112
   end
   object qryCOThickness: TFDQuery
     ConnectionName = 'wt'
@@ -242,8 +242,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'cutout = :cutout')
-    Left = 436
-    Top = 11
+    Left = 249
+    Top = 14
     ParamData = <
       item
         Name = 'Material_type'

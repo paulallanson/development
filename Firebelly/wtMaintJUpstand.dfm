@@ -4,7 +4,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   BorderStyle = bsDialog
   Caption = 'Maintain upstand'
   ClientHeight = 284
-  ClientWidth = 640
+  ClientWidth = 656
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,7 +15,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    640
+    656
     284)
   TextHeight = 17
   object lblDelete: TLabel
@@ -46,7 +46,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    ExplicitTop = 227
+    ExplicitTop = 239
   end
   object BitBtn2: TBitBtn
     Left = 318
@@ -59,12 +59,12 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 1
-    ExplicitTop = 227
+    ExplicitTop = 239
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 632
+    Width = 657
     Height = 225
     BevelOuter = bvNone
     ParentBackground = False
@@ -91,8 +91,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       Caption = 'Thickness'
     end
     object Label4: TLabel
-      Left = 437
-      Top = 72
+      Left = 469
+      Top = 74
       Width = 56
       Height = 17
       Caption = 'Unit price'
@@ -119,15 +119,15 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       Caption = 'Quantity'
     end
     object Label7: TLabel
-      Left = 437
-      Top = 164
+      Left = 469
+      Top = 166
       Width = 61
       Height = 17
       Caption = 'Total price'
     end
     object Label9: TLabel
-      Left = 437
-      Top = 100
+      Left = 469
+      Top = 102
       Width = 82
       Height = 17
       Caption = 'Polish Price/m'
@@ -168,8 +168,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       Caption = 'No. of Polished Lengths'
     end
     object Label14: TLabel
-      Left = 437
-      Top = 200
+      Left = 469
+      Top = 202
       Width = 106
       Height = 17
       Caption = 'Total No of Pieces'
@@ -187,7 +187,7 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     object dblkpWorktop: TDBLookupComboBox
       Left = 104
       Top = 40
-      Width = 390
+      Width = 537
       Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -207,8 +207,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnClick = dblkpWTThicknessClick
     end
     object edtUnitPrice: TCREditMoney
-      Left = 528
-      Top = 68
+      Left = 560
+      Top = 70
       Width = 81
       Height = 25
       TabOrder = 3
@@ -242,8 +242,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnChange = spnQuantityChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 528
-      Top = 160
+      Left = 560
+      Top = 162
       Width = 81
       Height = 25
       TabStop = False
@@ -252,8 +252,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       TabOrder = 8
     end
     object edtPolishPrice: TCREditMoney
-      Left = 528
-      Top = 96
+      Left = 560
+      Top = 98
       Width = 81
       Height = 25
       TabOrder = 4
@@ -292,8 +292,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnChange = spnQuantityChange
     end
     object spnNoOfPieces: TSpinEdit
-      Left = 560
-      Top = 195
+      Left = 592
+      Top = 197
       Width = 49
       Height = 27
       MaxValue = 100

@@ -1,0 +1,1 @@
+sqlcmd -S ELITEAPPS\SQLEXPRESS -E -Q "Backup DATABASE Firebelly TO Firebelly_Daily WITH INIT"

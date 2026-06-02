@@ -70,6 +70,10 @@ begin
 	StatusNarr('Checking Worktop Program') ;
 	CopyIfNewer('Firebelly.exe', 'Firebelly Program') ;
 
+	{Do the new Firebelly program associated FireDAC Definition files} ;
+	CopyIfNewer('FDConnectionDefs.ini', 'FireDAC Connection Definitions') ;
+	CopyIfNewer('FDDrivers.ini', 'FireDAC Drivers');
+
 	StrPCopy(FiName, LocalDir + '\Firebelly.exe') ;
 	StrPCopy(DiName ,LocalDir) ;
 	ShellExecute(0,nil,FiName,'', DiName, sw_Restore) ;

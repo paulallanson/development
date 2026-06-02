@@ -65,6 +65,8 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       item
         Width = 50
       end>
+    ExplicitTop = 384
+    ExplicitWidth = 491
   end
   object Panel1: TPanel
     Left = 0
@@ -74,6 +76,8 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 310
+    ExplicitWidth = 491
     DesignSize = (
       497
       74)
@@ -121,6 +125,8 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     Align = alRight
     ParentBackground = False
     TabOrder = 3
+    ExplicitLeft = 402
+    ExplicitHeight = 277
     DesignSize = (
       89
       286)
@@ -133,6 +139,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
+      ExplicitTop = 31
     end
     object btnEdit: TBitBtn
       Left = 6
@@ -143,6 +150,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Edit'
       TabOrder = 1
       OnClick = btnEditClick
+      ExplicitTop = 71
     end
     object btnDelete: TBitBtn
       Left = 6
@@ -153,6 +161,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Delete'
       TabOrder = 2
       OnClick = btnDeleteClick
+      ExplicitTop = 111
     end
     object btnExcel: TBitBtn
       Left = 6
@@ -163,6 +172,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Excel'
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitTop = 151
     end
     object btnSelect: TBitBtn
       Left = 6
@@ -173,6 +183,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Caption = '&Select'
       TabOrder = 4
       OnClick = btnSelectClick
+      ExplicitTop = 245
     end
   end
   object pnlTop: TPanel
@@ -184,6 +195,7 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 491
     object Label1: TLabel
       Left = 8
       Top = 8

@@ -184,6 +184,8 @@ var
 
 implementation
 
+uses wtDataModule, qrprntr, AllCommon;
+
 {$R *.dfm}
 
 function TfrmWTRPContract.Getdetails: integer;
@@ -212,8 +214,23 @@ procedure TfrmWTRPContract.qrpDetailsBeforePrint(Sender: TCustomQuickRep;
   var PrintReport: Boolean);
 var
   iCount: integer;
+  TopMar, BottomMar, LeftMar, RightMar: Double;
+  Copies: Integer;
+  Bin: TQRBin;
+  Size: TQRPaperSize;
+  Duplex: Boolean;
 begin
-     
+  {set the printer to what the user selected}
+  qrpDetails.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
+  GetPrinterValues(Copies, Bin, Size, Duplex);
+  qrpDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }
+  qrpDetails.PrinterSettings.copies := Copies;   {set the number of copies }
+  qrpDetails.PrinterSettings.PaperSize := Size;   {set the number of copies }
+
+  for iCount := 1 to 7 do
+     OptionTotals[iCount] := 0;
+
   qrbPageHeader.Enabled := true;
   qriHeadLogo.enabled := bPrintLogo;
   qrlblCompanyAdd.Enabled := qriHeadLogo.enabled;
@@ -347,7 +364,12 @@ begin
   qrlblDrawingNumberMemo.lines.clear;
   qrlblDrawingNumberMemo.lines.add(qryContractLine.fieldbyname('Drawing_Number').asstring);
 
-  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+//  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+//  gtQRShapeDrawing.Height := qrsdContractLine.height;
+  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10;
+  if gtQRShapeDrawing.Height < 33 then
+    gtQRShapeDrawing.Height := 33;
+
   with qryContractOption do
     begin
       active := false;
@@ -376,7 +398,11 @@ begin
 
           try
             tmpShape.enabled := true;
-            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+//            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+//            tmpShape.Height := qrsdContractLine.height;
+            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10 ;
+            if tmpShape.Height < 33 then
+              tmpShape.Height := 33;
           except
           end;
 

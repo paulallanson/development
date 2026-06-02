@@ -4,7 +4,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
   ClientHeight = 287
-  ClientWidth = 605
+  ClientWidth = 627
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -54,14 +54,13 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 605
+    Width = 627
     Height = 225
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 16
-    ExplicitWidth = 1017
+    ExplicitWidth = 599
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -119,8 +118,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Caption = 'Total price'
     end
     object btnWorktops: TSpeedButton
-      Left = 559
-      Top = 71
+      Left = 591
+      Top = 75
       Width = 23
       Height = 22
       Caption = '...'
@@ -217,7 +216,7 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 450
+      Width = 481
       Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -381,8 +380,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 425
-    Top = 21
+    Left = 443
+    Top = 18
     ParamData = <
       item
         Name = 'Worktop'
@@ -440,8 +439,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         'where (inactive = '#39'N'#39' or inactive is null) OR Material_Type = :M' +
         'aterial_Type'
       'order by Description')
-    Left = 500
-    Top = 21
+    Left = 305
+    Top = 2
     ParamData = <
       item
         Name = 'Material_Type'
@@ -450,8 +449,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 450
-    Top = 21
+    Left = 491
+    Top = 10
   end
   object qryContractWorktops: TFDQuery
     ConnectionName = 'WT'

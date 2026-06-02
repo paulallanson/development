@@ -3,7 +3,6 @@ program Firebelly_roann;
 uses
   Forms,
   wtWin7 in '..\wtWin7.pas',
-  wtSplash in '..\wtSplash.pas' {frmWTSplash},
   wtDatabase in '..\wtDatabase.pas' {frmWTDatabase},
   wtCustomerDM in '..\wtCustomerDM.pas' {dtmdlCustomers: TDataModule},
   wtDataModule in '..\wtDataModule.pas' {dtmdlWorktops: TDataModule},
@@ -330,7 +329,7 @@ begin
 //  frmWTSplash := TfrmWTSplash.Create( Application );
 //  frmWTSplash.Show;
 //  frmWTSplash.Refresh;
-  Application.Title := 'Worktop Manufacturing';
+  Application.Title := 'Firebelly - Worktop Manufacturing System';
   Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);

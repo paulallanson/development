@@ -184,7 +184,7 @@ begin
 //  frmWTSplash := TfrmWTSplash.Create( Application );
 //  frmWTSplash.Show;
 //  frmWTSplash.Refresh;
-  Application.Title := 'Worktop Manufacturing';
+  Application.Title := 'Firebelly Worktop Manufacturing System';
   Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);

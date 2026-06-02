@@ -8,7 +8,7 @@ uses
   QrExport, qrprntr, printers,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, QRPDFFilt;
 
 type
   TfrmWTRPSalesInvoice = class(TForm)
@@ -138,6 +138,8 @@ type
     qrlblLabourCharge: TQRLabel;
     QRLabel1: TQRLabel;
     qrlblSupplierCode: TQRLabel;
+    QRPDFFilter1: TQRPDFFilter;
+    QRRTFFilter1: TQRRTFFilter;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:

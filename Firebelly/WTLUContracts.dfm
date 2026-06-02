@@ -2,8 +2,8 @@ object frmWTLUContracts: TfrmWTLUContracts
   Left = 242
   Top = 115
   Caption = 'Contract Quotes'
-  ClientHeight = 376
-  ClientWidth = 933
+  ClientHeight = 367
+  ClientWidth = 927
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,20 +23,19 @@ object frmWTLUContracts: TfrmWTLUContracts
   object CoolBar1: TCoolBar
     Left = 0
     Top = 41
-    Width = 933
+    Width = 927
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 927
+        Width = 921
       end>
-    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 918
+      Width = 912
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 68
@@ -116,8 +115,8 @@ object frmWTLUContracts: TfrmWTLUContracts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 86
-    Width = 933
-    Height = 230
+    Width = 927
+    Height = 221
     Align = alClient
     DataSource = dtmdlContract.dtsAllContracts
     DrawingStyle = gdsGradient
@@ -131,7 +130,7 @@ object frmWTLUContracts: TfrmWTLUContracts
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -196,8 +195,8 @@ object frmWTLUContracts: TfrmWTLUContracts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 316
-    Width = 933
+    Top = 307
+    Width = 927
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -218,7 +217,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 642
+      Left = 636
       Top = 1
       Width = 290
       Height = 39
@@ -271,8 +270,8 @@ object frmWTLUContracts: TfrmWTLUContracts
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 357
-    Width = 933
+    Top = 348
+    Width = 927
     Height = 19
     Panels = <
       item
@@ -288,20 +287,19 @@ object frmWTLUContracts: TfrmWTLUContracts
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 933
+    Width = 927
     Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 41
-        Width = 927
+        Width = 921
       end>
-    ExplicitTop = 8
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 918
+      Width = 912
       Height = 41
       Align = alLeft
       BevelOuter = bvNone
@@ -309,7 +307,7 @@ object frmWTLUContracts: TfrmWTLUContracts
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        918
+        912
         41)
       object Label2: TLabel
         Left = 0
@@ -340,7 +338,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 671
+        Left = 665
         Top = 12
         Width = 81
         Height = 15
@@ -352,9 +350,10 @@ object frmWTLUContracts: TfrmWTLUContracts
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 671
       end
       object cmbCustomerFilter: TComboBox
-        Left = 760
+        Left = 754
         Top = 7
         Width = 145
         Height = 25

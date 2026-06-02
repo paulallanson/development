@@ -12565,6 +12565,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       '           Customer.Account_Is_Factored,'
       '           Customer.Separate_Labour_Invoice_Value,'
       '           Customer.Invoice_Label,'
+      '           Customer.Supplier_Code,'
       '           (Select Payment_Terms_Description'
       '            from Payment_Terms'
       
@@ -12852,5 +12853,19 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       item
         Name = 'Sales_Order_Line_no'
       end>
+  end
+  object QRPDFFilter1: TQRPDFFilter
+    CompressionOn = False
+    Fonthandling = False
+    TextEncoding = AnsiEncoding
+    Codepage = '1252'
+    SuppressDateTime = False
+    Left = 243
+    Top = 368
+  end
+  object QRRTFFilter1: TQRRTFFilter
+    TextEncoding = DefaultEncoding
+    Left = 251
+    Top = 440
   end
 end

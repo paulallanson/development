@@ -93,7 +93,6 @@ uses
 
 procedure TfrmWTLUCustomerSite.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  Action := caFree;
   qryCustomerBranch.close;
 end;
 

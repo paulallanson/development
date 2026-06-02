@@ -55,7 +55,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1019
+      Left = 1013
       Top = 13
       Width = 69
       Height = 17
@@ -72,7 +72,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1204
+      Left = 1198
       Top = 9
       Width = 75
       Height = 25
@@ -90,7 +90,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1096
+      Left = 1090
       Top = 9
       Width = 73
       Height = 25
@@ -287,7 +287,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -324,7 +324,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Expanded = False
         FieldName = 'Reference'
-        Width = 64
         Visible = True
       end
       item
@@ -352,7 +351,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
-        Width = 64
         Visible = True
       end
       item
@@ -421,7 +419,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Expanded = False
         FieldName = 'Quote'
-        Width = 64
         Visible = True
       end
       item

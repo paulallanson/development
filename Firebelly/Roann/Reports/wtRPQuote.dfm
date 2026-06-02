@@ -14,10 +14,10 @@ object frmwtRPQuote: TfrmwtRPQuote
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 272
-    Top = -987
+    Left = 288
+    Top = -755
     Width = 992
-    Height = 1932
+    Height = 1596
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport

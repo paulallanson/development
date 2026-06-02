@@ -5,7 +5,6 @@ program Firebelly_Bellagio;
 uses
   Forms,
   wtWin7 in '..\wtWin7.pas',
-  wtSplash in '..\wtSplash.pas' {frmWTSplash},
   wtDatabase in '..\wtDatabase.pas' {frmWTDatabase},
   wtCustomerDM in '..\wtCustomerDM.pas' {dtmdlCustomers: TDataModule},
   wtDataModule in '..\wtDataModule.pas' {dtmdlWorktops: TDataModule},
@@ -285,9 +284,5 @@ begin
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmAllImages, frmAllImages);
-  Application.CreateForm(TfrmWTLUColourGroup, frmWTLUColourGroup);
-  Application.CreateForm(TfrmWTLUContractQuotes, frmWTLUContractQuotes);
-  Application.CreateForm(TfrmWTLUCountry, frmWTLUCountry);
-  Application.CreateForm(TdtmdlPurchaseOrder, dtmdlPurchaseOrder);
   Application.Run;
 end.

@@ -2,8 +2,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   Left = 214
   Top = 11
   Caption = 'Sales Order Print'
-  ClientHeight = 783
-  ClientWidth = 1172
+  ClientHeight = 774
+  ClientWidth = 1166
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 128
-    Top = -56
+    Left = 166
+    Top = -80
     Width = 992
     Height = 1403
     ShowingPreview = False

@@ -4,7 +4,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   BorderStyle = bsDialog
   Caption = 'Global change elements'
   ClientHeight = 205
-  ClientWidth = 536
+  ClientWidth = 627
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 536
+    Width = 627
     Height = 137
     Align = alTop
     BevelOuter = bvNone
@@ -54,8 +54,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
       Caption = 'Unit price'
     end
     object SpeedButton1: TSpeedButton
-      Left = 490
-      Top = 73
+      Left = 591
+      Top = 75
       Width = 23
       Height = 22
       Caption = '...'
@@ -115,7 +115,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 390
+      Width = 484
       Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -230,8 +230,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 474
-    Top = 66
+    Left = 57
+    Top = 43
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
@@ -252,8 +252,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group))'
       'Order by Description')
-    Left = 440
-    Top = 26
+    Left = 158
+    Top = 25
     ParamData = <
       item
         Name = 'material_type'
@@ -276,8 +276,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
       'where worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness'
       'order by thickness_mm')
-    Left = 352
-    Top = 8
+    Left = 224
+    Top = 42
     ParamData = <
       item
         Name = 'worktop'
@@ -285,7 +285,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 456
-    Top = 128
+    Left = 170
+    Top = 32
   end
 end

@@ -46,8 +46,7 @@ begin
   end;
 
 	{Setup the directories}
-	ServDir := '\\SERVER\FIREBELLY\myWorktops' ;
-//	ServDir := 'W:\myWorktops' ;
+	ServDir := '\\SERVER2\FIREBELLY\' ;
 
   {[User Specific]\Application Data}
 	LocalDir := GetSpecialFolderPath(2)+'\Firebelly';
@@ -69,7 +68,11 @@ begin
 
 	{Do the actual program} ;
 	StatusNarr('Checking Firebelly Program') ;
-	CopyIfNewer('firebelly.exe', 'Firebelly Program') ;
+	CopyIfNewer('Firebelly.exe', 'Firebelly Program') ;
+
+	{Do the new Firebelly24 program and associated FireDAC Definition files} ;
+	CopyIfNewer('FDConnectionDefs.ini', 'FireDAC Connection Definitions') ;
+	CopyIfNewer('FDDrivers.ini', 'FireDAC Drivers');
 
 	StrPCopy(FiName, LocalDir + '\firebelly.exe') ;
 	StrPCopy(DiName ,LocalDir) ;

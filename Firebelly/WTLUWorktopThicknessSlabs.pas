@@ -222,6 +222,7 @@ procedure TfrmWTLUWorktopThicknessSlabs.BitBtn1Click(Sender: TObject);
 var
   StockItem: integer;
 begin
+  stockitem := 0;
   if messagedlg('Load the default slab details from the ' + MaterialTypeDescription + ' material type?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
       with qryGetSlabs do

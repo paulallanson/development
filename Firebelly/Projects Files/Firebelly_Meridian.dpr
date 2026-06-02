@@ -2,7 +2,6 @@ program Firebelly_Meridian;
 
 uses
   Forms,
-  wtSplash in '..\wtSplash.pas' {frmWTSplash},
   wtDatabase in '..\wtDatabase.pas' {frmWTDatabase},
   wtCustomerDM in '..\wtCustomerDM.pas' {dtmdlCustomers: TDataModule},
   wtDataModule in '..\wtDataModule.pas' {dtmdlWorktops: TDataModule},
@@ -25,7 +24,6 @@ uses
   WTCustJobsDM in '..\WTCustJobsDM.pas' {dtmdlCustJobs: TDataModule},
   WTCustInvoicesDM in '..\WTCustInvoicesDM.pas' {dtmdlCustInvoices: TDataModule},
   wtAboutBox in '..\wtAboutBox.pas' {frmwtAboutBox},
-  wtMain in '..\wtMain.pas' {frmWTMain},
   WTQuotesDM in '..\WTQuotesDM.pas' {dtmdlQuote: TDataModule},
   wtCommon in '..\wtCommon.pas',
   wtLUQuotes in '..\wtLUQuotes.pas' {frmwtLUQuotes},
@@ -166,20 +164,17 @@ uses
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
-  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas';
+  Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
+  wtMain in '..\wtMain.pas' {frmWTMain};
 
 {$R *.RES}
 
 begin
   Application.Initialize;
-  frmWTSplash := TfrmWTSplash.Create( Application );
-  frmWTSplash.Show;
-  frmWTSplash.Refresh;
   Application.Title := 'Worktop Manufacturing';
   Application.MainFormOnTaskBar := True;
-  Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
-  Application.CreateForm(TfrmWTSendFax, frmWTSendFax);
+  Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmAllImages, frmAllImages);
   Application.Run;
 end.

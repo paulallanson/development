@@ -4,7 +4,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   BorderStyle = bsDialog
   Caption = 'Maintain Cutouts'
   ClientHeight = 285
-  ClientWidth = 499
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,7 +14,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    499
+    538
     285)
   TextHeight = 17
   object lblDelete: TLabel
@@ -62,7 +62,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 499
+    Width = 538
     Height = 232
     Align = alTop
     BevelOuter = bvNone
@@ -105,7 +105,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       Caption = 'Unit Price'
     end
     object Label7: TLabel
-      Left = 334
+      Left = 374
       Top = 172
       Width = 60
       Height = 17
@@ -119,15 +119,15 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       Caption = 'Unit Cost'
     end
     object Label6: TLabel
-      Left = 336
+      Left = 376
       Top = 204
       Width = 58
       Height = 17
       Caption = 'Total Cost'
     end
     object lblDiscount: TLabel
-      Left = 303
-      Top = 44
+      Left = 343
+      Top = 45
       Width = 107
       Height = 17
       Caption = 'Cutout Discount %'
@@ -163,7 +163,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     object dblkpCutOut: TDBLookupComboBox
       Left = 97
       Top = 72
-      Width = 350
+      Width = 395
       Height = 25
       KeyField = 'cutout'
       ListField = 'description'
@@ -191,7 +191,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       OnChange = edtUnitPriceChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 402
+      Left = 442
       Top = 168
       Width = 81
       Height = 25
@@ -201,7 +201,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       TabOrder = 7
     end
     object btnCutOuts: TBitBtn
-      Left = 458
+      Left = 498
       Top = 72
       Width = 25
       Height = 25
@@ -228,7 +228,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       TabOrder = 8
     end
     object edtTotalCost: TCREditMoney
-      Left = 402
+      Left = 442
       Top = 200
       Width = 81
       Height = 25
@@ -238,8 +238,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
       TabOrder = 9
     end
     object edtDiscount: TCREditMoney
-      Left = 418
-      Top = 40
+      Left = 458
+      Top = 41
       Width = 65
       Height = 25
       TabOrder = 2
@@ -352,8 +352,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   end
   object dtsCOThickness: TDataSource
     DataSet = qryCOThickness
-    Left = 318
-    Top = 112
+    Left = 262
+    Top = 104
   end
   object qryContractCutOut: TFDQuery
     ConnectionName = 'wt'
@@ -387,8 +387,8 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
         '      ((CutOut.inactive = '#39'N'#39') or (CutOut.inactive is NULL) or (' +
         'CutOut.CutOut = :CutOut))'
       'ORDER BY Cutout.Description')
-    Left = 416
-    Top = 97
+    Left = 312
+    Top = 89
     ParamData = <
       item
         Name = 'Customer'
@@ -460,7 +460,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   end
   object dtsCutOutPrice: TDataSource
     DataSet = qryCOThickness
-    Left = 416
-    Top = 200
+    Left = 272
+    Top = 152
   end
 end

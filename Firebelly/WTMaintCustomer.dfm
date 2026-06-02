@@ -49,7 +49,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Top = 0
       Width = 838
       Height = 574
-      ActivePage = tsGeneral
+      ActivePage = tsShowrooms
       Align = alClient
       TabOrder = 0
       ExplicitWidth = 832
@@ -64,6 +64,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alClient
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 824
+          ExplicitHeight = 533
           DesignSize = (
             830
             542)
@@ -679,7 +681,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             Tag = 200
             Left = 400
             Top = 211
-            Width = 370
+            Width = 364
             Height = 111
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
@@ -1958,7 +1960,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Height = 133
           Align = alBottom
           TabOrder = 2
-          ExplicitTop = 413
           object Label28: TLabel
             Left = 291
             Top = 29
@@ -2156,8 +2157,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Caption = 'Panel11'
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 824
-          ExplicitHeight = 516
           object lstvwDocuments: TListView
             Left = 1
             Top = 1
@@ -2185,8 +2184,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             OnColumnClick = lstvwDocumentsColumnClick
             OnCompare = lstvwDocumentsCompare
             OnDblClick = lstvwDocumentsDblClick
-            ExplicitWidth = 793
-            ExplicitHeight = 514
           end
           object ToolBar1: TToolBar
             Left = 800
@@ -2202,8 +2199,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             ParentShowHint = False
             ShowHint = True
             TabOrder = 1
-            ExplicitLeft = 794
-            ExplicitHeight = 514
             object btnExcel: TToolButton
               Left = 0
               Top = 0
@@ -2258,7 +2253,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 824
           object Label44: TLabel
             Left = 2
             Top = -1

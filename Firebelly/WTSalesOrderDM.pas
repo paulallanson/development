@@ -3634,7 +3634,7 @@ begin
     if Quote = 0 then
       ParambyName('Quote').clear
     else
-      ParambyName('Quote').asfloat := Quote;
+      ParambyName('Quote').asInteger := Quote;
     ParambyName('Markup_Value').asfloat := MarkupValue;
     ParambyName('Waste_Value').asfloat := WasteValue;
     ParambyName('Nett_Price').asfloat := NettPrice;
@@ -3686,7 +3686,7 @@ begin
     if Quote = 0 then
       ParambyName('Quote').clear
     else
-      ParambyName('Quote').asfloat := Quote;
+      ParambyName('Quote').asinteger := Quote;
     ParambyName('Markup_Value').asfloat := MarkupValue;
     ParambyName('Waste_Value').asfloat := WasteValue;
 

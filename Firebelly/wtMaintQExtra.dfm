@@ -3,7 +3,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
   Top = 107
   Caption = 'Maintain Extras'
   ClientHeight = 231
-  ClientWidth = 553
+  ClientWidth = 573
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    553
+    573
     231)
   TextHeight = 17
   object lblDelete: TLabel
@@ -61,7 +61,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 553
+    Width = 573
     Height = 169
     Align = alTop
     BevelOuter = bvNone
@@ -111,8 +111,8 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
       Caption = 'Total Cost'
     end
     object btnWorktops: TSpeedButton
-      Left = 378
-      Top = 15
+      Left = 538
+      Top = 17
       Width = 23
       Height = 22
       Caption = '...'
@@ -127,7 +127,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     object dblkpExtras: TDBLookupComboBox
       Left = 99
       Top = 16
-      Width = 350
+      Width = 421
       Height = 25
       KeyField = 'Extra_Charge'
       ListField = 'Description'

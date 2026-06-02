@@ -226,7 +226,9 @@ uses
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
   Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
-  wtLUPurchases in '..\wtLUPurchases.pas' {frmwtLUPurchases};
+  wtLUPurchases in '..\wtLUPurchases.pas' {frmwtLUPurchases},
+  WTContractsDM in '..\WTContractsDM.pas' {dtmdlContract: TDataModule},
+  WTLUContracts in '..\WTLUContracts.pas' {frmWTLUContracts};
 
 {$R *.RES}
 
@@ -240,7 +242,6 @@ begin
   Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
-  Application.CreateForm(TfrmWTSendFax, frmWTSendFax);
   Application.CreateForm(TfrmAllImages, frmAllImages);
   Application.Run;
 end.

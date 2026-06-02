@@ -1,6 +1,7 @@
 object dtmdlPrices: TdtmdlPrices
-  Height = 367
-  Width = 792
+  Height = 459
+  Width = 990
+  PixelsPerInch = 120
   object qryAllPrices: TFDQuery
     Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
@@ -70,8 +71,8 @@ object dtmdlPrices: TdtmdlPrices
       '        ON Thickness.Thickness = Worktop_thickness.Thickness)'
       '        ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 51
-    Top = 34
+    Left = 64
+    Top = 43
     object qryAllPricesWorktop: TIntegerField
       FieldName = 'Worktop'
       Origin = 'Worktop'
@@ -169,8 +170,8 @@ object dtmdlPrices: TdtmdlPrices
   end
   object dtsAllPrices: TDataSource
     DataSet = qryAllPrices
-    Left = 147
-    Top = 34
+    Left = 184
+    Top = 43
   end
   object qryDummyCurrent: TFDQuery
     SQL.Strings = (
@@ -264,8 +265,8 @@ object dtmdlPrices: TdtmdlPrices
         'm'
       'WHERE 1=1'
       '')
-    Left = 48
-    Top = 120
+    Left = 60
+    Top = 150
   end
   object qryDummyFuture: TFDQuery
     SQL.Strings = (
@@ -332,8 +333,8 @@ object dtmdlPrices: TdtmdlPrices
         '          ON Stock_item.Stock_item = Worktop_thickness.Stock_Ite' +
         'm'
       'WHERE 1=1')
-    Left = 168
-    Top = 120
+    Left = 210
+    Top = 150
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
@@ -342,8 +343,8 @@ object dtmdlPrices: TdtmdlPrices
       
         'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
         'tive_Date')
-    Left = 248
-    Top = 32
+    Left = 310
+    Top = 40
     ParamData = <
       item
         Name = 'Price_Pointer'
@@ -430,8 +431,8 @@ object dtmdlPrices: TdtmdlPrices
       '          ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1'
       '')
-    Left = 288
-    Top = 120
+    Left = 360
+    Top = 150
   end
   object qryDummyFutureOld: TFDQuery
     SQL.Strings = (
@@ -488,7 +489,7 @@ object dtmdlPrices: TdtmdlPrices
       '            ON Operator.Operator = Prices.Operator)'
       '            ON Price_unit.Price_unit = Prices.Price_unit'
       'WHERE 1=1')
-    Left = 424
-    Top = 120
+    Left = 530
+    Top = 150
   end
 end

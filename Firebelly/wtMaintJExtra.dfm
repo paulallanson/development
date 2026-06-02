@@ -3,7 +3,7 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
   Top = 107
   Caption = 'Maintain Extras'
   ClientHeight = 207
-  ClientWidth = 532
+  ClientWidth = 573
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -53,7 +53,7 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 532
+    Width = 573
     Height = 145
     Align = alTop
     BevelOuter = bvNone
@@ -89,7 +89,7 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
       Caption = 'Total price'
     end
     object btnWorktops: TSpeedButton
-      Left = 485
+      Left = 541
       Top = 15
       Width = 23
       Height = 22
@@ -105,7 +105,7 @@ object frmWTMaintJExtra: TfrmWTMaintJExtra
     object dblkpExtras: TDBLookupComboBox
       Left = 98
       Top = 16
-      Width = 380
+      Width = 437
       Height = 25
       KeyField = 'Extra_Charge'
       ListField = 'Description'

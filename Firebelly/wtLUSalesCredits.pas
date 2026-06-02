@@ -9,10 +9,6 @@ uses
 
 type
   TfrmWTLUSalesCredits = class(TForm)
-    CoolBar1: TCoolBar;
-    dbgDetails: TDBGrid;
-    pnlFooter: TPanel;
-    stsbrDetails: TStatusBar;
     imglstFunctions: TImageList;
     pmnFunctions: TPopupMenu;
     Add1: TMenuItem;
@@ -30,12 +26,8 @@ type
     N4: TMenuItem;
     ResetGrid1: TMenuItem;
     tmrSearch: TTimer;
-    Panel2: TPanel;
-    btnClose: TButton;
-    edtSalesInvNo: TEdit;
-    Label2: TLabel;
-    Label3: TLabel;
-    edtInvoiceDate: TEdit;
+    pnlBody: TPanel;
+    CoolBar1: TCoolBar;
     PageScroller1: TPageScroller;
     ToolBar1: TToolBar;
     btnAdd: TToolButton;
@@ -46,7 +38,15 @@ type
     btnReprint: TToolButton;
     ToolButton6: TToolButton;
     btnReports: TToolButton;
-    Panel4: TPanel;
+    dbgDetails: TDBGrid;
+    pnlFooter: TPanel;
+    Panel2: TPanel;
+    Label2: TLabel;
+    Label3: TLabel;
+    btnClose: TButton;
+    edtSalesInvNo: TEdit;
+    edtInvoiceDate: TEdit;
+    pnlSearch: TPanel;
     Label1: TLabel;
     edtSearch: TEdit;
     btnSearch: TBitBtn;
@@ -62,6 +62,8 @@ type
     Label4: TLabel;
     Label5: TLabel;
     cmbCustomerFilter: TComboBox;
+    pnlStatus: TPanel;
+    stsbrDetails: TStatusBar;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -144,7 +146,7 @@ var
 begin
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
   if not pnlRevenueCentre.Visible then
-    pnlFooter.Height := 70;
+    pnlFooter.Height := 78;
 
   windowstate := wsMaximized;
 

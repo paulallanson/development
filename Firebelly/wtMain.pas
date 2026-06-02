@@ -5,7 +5,14 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Menus, ImgList, ComCtrls, ToolWin,
   IniFiles, StdActns, ActnList, ShellAPI, AllCommon, DB, Grids, DBGrids, System.Actions, System.ImageList,
-  Vcl.StdCtrls, FireDAC.Stan.Param;
+  Vcl.StdCtrls, FireDAC.Stan.Param, Winapi.ShlObj, qrprntr, qrprev, QRPDFFilt, QRNewXLSXFilt, QRXMLSFilt,
+  QRWebFilt, QRExport;
+type
+  TGlobalRecentItemsPreview = class(TQRStandardPreviewInterface)
+  public
+    function Show(AQRPrinter: TQRPrinter): TWinControl; override;
+    function ShowModal(AQRPrinter: TQRPrinter): TWinControl; override;
+  end;
 
 type
   TfrmWTMain = class(TForm)
@@ -170,6 +177,15 @@ type
     N14: TMenuItem;
     ManageDatabaseAliases1: TMenuItem;
     Stores1: TMenuItem;
+    QRTextFilter1: TQRTextFilter;
+    QRCSVFilter1: TQRCSVFilter;
+    QRPDFFilter1: TQRPDFFilter;
+    QRXLSXFilter1: TQRXLSXFilter;
+    QRXMLSFilter1: TQRXMLSFilter;
+    QRWMFFilter1: TQRWMFFilter;
+    QRRTFFilter1: TQRRTFFilter;
+    QRExcelFilter1: TQRExcelFilter;
+    QRHTMLFilter1: TQRHTMLFilter;
     procedure Brands1Click(Sender: TObject);
     procedure btnCustomersClick(Sender: TObject);
     procedure btnSuppliersClick(Sender: TObject);
@@ -445,7 +461,7 @@ begin
   stsbrStatus.Panels[0].Text := TempUser;
 
   SWVersion := '24.2.';
-  SWSubVersion := '26.03.2a';
+  SWSubVersion := '26.05.26a';
 
   IniFile := TIniFile.create(ChangeFileExt(Application.ExeName, '.INI' ) );
   try
@@ -2544,4 +2560,23 @@ begin
   mnuDemoActivate.Visible := false;
 end;
 
+function TGlobalRecentItemsPreview.Show(AQRPrinter: TQRPrinter): TWinControl;
+begin
+  Result := inherited Show(AQRPrinter);
+  // Captures the file path after the preview is closed
+  if Assigned(AQRPrinter) and (AQRPrinter.Title <> '') then
+     SHAddToRecentDocs(SHARD_PATHW, PWideChar(AQRPrinter.Title));
+end;
+function TGlobalRecentItemsPreview.ShowModal(AQRPrinter: TQRPrinter): TWinControl;
+begin
+  Result := inherited ShowModal(AQRPrinter);
+  // For QuickReport 6, the saved path is often updated in the Printer Title
+  // or a temporary property after the 'Save' dialog finishes.
+  if Assigned(AQRPrinter) and (AQRPrinter.Title <> '') then
+     SHAddToRecentDocs(SHARD_PATHW, PWideChar(AQRPrinter.Title));
+end;
+
+initialization
+ // Registers this wrapper for every report in the application
+  RegisterPreviewClass(TGlobalRecentItemsPreview);
 end.

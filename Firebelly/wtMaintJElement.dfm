@@ -4,7 +4,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
   ClientHeight = 268
-  ClientWidth = 579
+  ClientWidth = 627
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -55,7 +55,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 579
+    Width = 627
     Height = 217
     Align = alTop
     BevelOuter = bvNone
@@ -217,7 +217,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     object dblkpWorktop: TDBLookupComboBox
       Left = 97
       Top = 64
-      Width = 450
+      Width = 504
       Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -303,8 +303,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'where material_type = :material_type and'
       '((worktop_group = :worktop_group) or (0 = :worktop_group))'
       'Order by Description')
-    Left = 469
-    Top = 74
+    Left = 242
+    Top = 125
     ParamData = <
       item
         Name = 'material_type'
@@ -327,8 +327,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'where worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness'
       'order by thickness_mm')
-    Left = 516
-    Top = 154
+    Left = 469
+    Top = 89
     ParamData = <
       item
         Name = 'worktop'
@@ -336,13 +336,13 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 508
-    Top = 34
+    Left = 315
+    Top = 59
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 398
-    Top = 34
+    Left = 378
+    Top = 27
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -366,8 +366,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'from Worktop_thickness'
       'where worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 358
-    Top = 7
+    Left = 232
+    Top = 25
     ParamData = <
       item
         Name = 'Worktop'
@@ -394,7 +394,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   end
   object dtsWTGroup: TDataSource
     DataSet = qryWTGroup
-    Left = 463
+    Left = 291
+    Top = 24
   end
   object qryMaterialUse: TFDQuery
     ConnectionName = 'WT'
@@ -403,12 +404,12 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       'FROM Material_Use'
       'WHERE Use_Type <= 1'
       'ORDER BY Use_Description Asc')
-    Left = 384
-    Top = 168
+    Left = 504
+    Top = 106
   end
   object dtsMaterialUse: TDataSource
     DataSet = qryMaterialUse
-    Left = 448
-    Top = 168
+    Left = 368
+    Top = 130
   end
 end

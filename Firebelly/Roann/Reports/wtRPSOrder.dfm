@@ -2,8 +2,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   Left = 330
   Top = 5
   Caption = 'Sales Order Print'
-  ClientHeight = 707
-  ClientWidth = 1190
+  ClientHeight = 698
+  ClientWidth = 1184
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
