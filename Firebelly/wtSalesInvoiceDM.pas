@@ -1519,6 +1519,7 @@ begin
       aLine.UnitPrice := FieldByName('unit_price').Asfloat;
       aLine.VatCode := FieldByName('VAT').Asinteger;
       aLine.VatRate := FieldByName('VAT_Rate').Asfloat;
+      aLine.VatDescription := FieldByName('VAT_Description').AsString;
       aLine.VatValue := 0.00;
       aLine.NotPrinted := FieldByName('Not_printed').AsString;
       aLine.Nominal := FieldByName('Nominal').AsString;
@@ -1867,7 +1868,7 @@ begin
       end
     else
       begin
-        ParamByName('Job').asfloat := Job;
+        ParamByName('Job').asinteger := Job;
       end;
     if Narrative = 0 then
       ParamByName('Notes').clear
@@ -1880,7 +1881,7 @@ begin
       end
     else
       begin
-        ParamByName('Sales_order').asfloat := SONumber;
+        ParamByName('Sales_order').asinteger := SONumber;
         ParamByName('Sales_Order_Line_no').asinteger := SOLine;
       end;
     ParamByName('Sell_unit').asinteger := SellUnit;

@@ -297,7 +297,7 @@ object frmWTLUFitting: TfrmWTLUFitting
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -334,7 +334,6 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Expanded = False
         FieldName = 'Reference'
-        Width = 64
         Visible = True
       end
       item
@@ -362,7 +361,6 @@ object frmWTLUFitting: TfrmWTLUFitting
         Expanded = False
         FieldName = 'Total_Value'
         Title.Caption = 'Total'
-        Width = 64
         Visible = True
       end
       item
@@ -431,7 +429,6 @@ object frmWTLUFitting: TfrmWTLUFitting
       item
         Expanded = False
         FieldName = 'Quote'
-        Width = 64
         Visible = True
       end
       item
@@ -452,21 +449,18 @@ object frmWTLUFitting: TfrmWTLUFitting
         Expanded = False
         FieldName = 'Job'
         Title.Caption = 'Job Number'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Worktop_Weight'
         Title.Caption = 'Weight (kg)'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sales_Order_Number'
         Title.Caption = 'Version Number'
-        Width = 64
         Visible = True
       end>
   end

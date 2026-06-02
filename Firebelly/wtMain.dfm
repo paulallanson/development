@@ -1266,4 +1266,66 @@ object frmWTMain: TfrmWTMain
       OnClick = btnSalesCreditsClick
     end
   end
+  object QRTextFilter1: TQRTextFilter
+    TextEncoding = DefaultEncoding
+    Left = 662
+    Top = 184
+  end
+  object QRCSVFilter1: TQRCSVFilter
+    Separator = ','
+    TextEncoding = DefaultEncoding
+    Left = 758
+    Top = 184
+  end
+  object QRPDFFilter1: TQRPDFFilter
+    CompressionOn = False
+    Fonthandling = False
+    TextEncoding = AnsiEncoding
+    Codepage = '1252'
+    SuppressDateTime = False
+    Left = 838
+    Top = 184
+  end
+  object QRXLSXFilter1: TQRXLSXFilter
+    WorkSheetname = 'Untitled Sheet'
+    SheetLeftMargin = 1
+    QR506Compat = False
+    useXLColumn = False
+    Left = 934
+    Top = 184
+  end
+  object QRXMLSFilter1: TQRXMLSFilter
+    TextEncoding = UTF8Encoding
+    Left = 1022
+    Top = 184
+  end
+  object QRWMFFilter1: TQRWMFFilter
+    Enhanced = False
+    Left = 928
+    Top = 248
+  end
+  object QRRTFFilter1: TQRRTFFilter
+    TextEncoding = DefaultEncoding
+    Left = 838
+    Top = 248
+  end
+  object QRExcelFilter1: TQRExcelFilter
+    TextEncoding = DefaultEncoding
+    UseXLColumns = False
+    Left = 760
+    Top = 256
+  end
+  object QRHTMLFilter1: TQRHTMLFilter
+    MultiPage = False
+    PageLinks = False
+    FinalPage = 0
+    FirstLastLinks = False
+    Concat = False
+    ConcatCount = 1
+    LinkFontSize = 12
+    LinkFontName = 'Arial'
+    TextEncoding = AnsiEncoding
+    Left = 662
+    Top = 248
+  end
 end

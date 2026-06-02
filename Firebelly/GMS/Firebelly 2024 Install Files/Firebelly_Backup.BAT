@@ -1,0 +1,1 @@
+sqlcmd -S GM-TS\SQLEXPRESS -E -Q "Backup DATABASE Firebelly TO Firebelly_Daily WITH INIT"

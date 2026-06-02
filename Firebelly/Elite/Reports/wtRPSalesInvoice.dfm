@@ -17,8 +17,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
   OnCreate = FormCreate
   TextHeight = 15
   object InvoiceReport: TQuickRep
-    Left = 160
-    Top = -293
+    Left = 144
+    Top = -125
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -846,15 +846,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         FontSize = 10
       end
       object qrlblVatReg: TQRLabel
-        Left = 106
+        Left = 117
         Top = 190
-        Width = 220
-        Height = 24
+        Width = 198
+        Height = 17
         Size.Values = (
-          50.800000000000000000
-          224.366666666666700000
+          35.983333333333330000
+          247.650000000000000000
           402.166666666666700000
-          465.666666666666700000)
+          419.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -864,7 +864,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -872,7 +872,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
         VerticalAlignment = tlTop
-        FontSize = 9
+        FontSize = 8
       end
       object memAddress: TQRRichText
         Left = 16
@@ -2655,5 +2655,25 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       item
         Name = 'Sales_Invoice'
       end>
+  end
+  object QRPDFFilter1: TQRPDFFilter
+    CompressionOn = False
+    Fonthandling = False
+    TextEncoding = AnsiEncoding
+    Codepage = '1252'
+    SuppressDateTime = False
+    Left = 160
+    Top = 395
+  end
+  object QRCSVFilter1: TQRCSVFilter
+    Separator = ','
+    TextEncoding = DefaultEncoding
+    Left = 168
+    Top = 483
+  end
+  object QRRTFFilter1: TQRRTFFilter
+    TextEncoding = DefaultEncoding
+    Left = 184
+    Top = 291
   end
 end

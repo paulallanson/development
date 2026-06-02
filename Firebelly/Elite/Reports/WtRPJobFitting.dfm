@@ -10,14 +10,14 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qrpJobSheet: TQuickRep
-    Left = 200
-    Top = -2214
-    Width = 794
-    Height = 1123
+    Left = 208
+    Top = -2918
+    Width = 992
+    Height = 3511
     ShowingPreview = False
     BeforePrint = qrpJobSheetBeforePrint
     DataSet = qryReport
@@ -78,10 +78,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     PreviewLeft = 0
     PreviewTop = 0
     object qrgQuote: TQRGroup
-      Left = 38
-      Top = 38
-      Width = 718
-      Height = 1019
+      Left = 47
+      Top = 47
+      Width = 898
+      Height = 1274
       AfterPrint = qrgQuoteAfterPrint
       AlignToBottom = False
       BeforePrint = qrgQuoteBeforePrint
@@ -89,23 +89,23 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        2696.104166666667000000
-        1899.708333333333000000)
+        2696.633333333333000000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'quote'
       Master = qrpJobSheet
       ReprintOnNewPage = False
       object qrlblSOCaption: TQRLabel
-        Left = 450
+        Left = 562
         Top = 1
-        Width = 265
-        Height = 43
+        Width = 331
+        Height = 54
         Size.Values = (
-          113.770833333333300000
-          1190.625000000000000000
-          2.645833333333333000
-          701.145833333333300000)
+          114.300000000000000000
+          1189.566666666667000000
+          2.116666666666667000
+          700.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -115,7 +115,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -37
+        Font.Height = -47
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -126,10 +126,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 28
       end
       object gtQRShape1: TQRShape
-        Left = 417
-        Top = 57
-        Width = 297
-        Height = 56
+        Left = 521
+        Top = 71
+        Width = 371
+        Height = 70
         Size.Values = (
           148.166666666666700000
           1103.312500000000000000
@@ -142,15 +142,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRDBText2: TQRDBText
-        Left = 613
-        Top = 90
-        Width = 79
-        Height = 17
+        Left = 767
+        Top = 113
+        Width = 98
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1621.895833333333000000
-          238.125000000000000000
-          209.020833333333300000)
+          44.450000000000000000
+          1623.483333333333000000
+          239.183333333333300000
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -161,7 +161,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Sales_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -174,15 +174,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel2: TQRLabel
-        Left = 428
-        Top = 90
-        Width = 62
-        Height = 17
+        Left = 535
+        Top = 113
+        Width = 80
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1132.416666666667000000
-          238.125000000000000000
-          164.041666666666700000)
+          239.183333333333300000
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -192,7 +192,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -203,10 +203,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape2: TQRShape
-        Left = 542
-        Top = 56
-        Width = 9
-        Height = 56
+        Left = 678
+        Top = 70
+        Width = 11
+        Height = 70
         Size.Values = (
           148.166666666666700000
           1434.041666666667000000
@@ -219,10 +219,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape3: TQRShape
-        Left = 417
-        Top = 83
-        Width = 297
-        Height = 5
+        Left = 521
+        Top = 104
+        Width = 371
+        Height = 6
         Size.Values = (
           13.229166666666670000
           1103.312500000000000000
@@ -235,10 +235,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape5: TQRShape
-        Left = 3
-        Top = 816
-        Width = 713
-        Height = 113
+        Left = 4
+        Top = 1020
+        Width = 891
+        Height = 141
         Size.Values = (
           298.979166666666700000
           7.937500000000000000
@@ -253,15 +253,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object QRLabel24: TQRLabel
-        Left = 8
-        Top = 820
-        Width = 91
-        Height = 19
+        Left = 10
+        Top = 1025
+        Width = 114
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           21.166666666666670000
           2169.583333333333000000
-          240.770833333333300000)
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -271,7 +271,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsUnderline]
         ParentFont = False
@@ -282,10 +282,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape6: TQRShape
-        Left = 3
-        Top = 656
-        Width = 713
-        Height = 153
+        Left = 4
+        Top = 820
+        Width = 891
+        Height = 191
         Size.Values = (
           404.812500000000000000
           7.937500000000000000
@@ -299,15 +299,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRLabel4: TQRLabel
-        Left = 8
-        Top = 659
-        Width = 119
-        Height = 17
+        Left = 10
+        Top = 824
+        Width = 149
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          1743.604166666667000000
-          314.854166666666700000)
+          1744.133333333333000000
+          315.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -317,7 +317,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsUnderline]
         ParentFont = False
@@ -328,10 +328,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape7: TQRShape
-        Left = 3
-        Top = 624
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 780
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -345,15 +345,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRLabel5: TQRLabel
-        Left = 8
-        Top = 628
-        Width = 108
-        Height = 17
+        Left = 10
+        Top = 785
+        Width = 134
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           1661.583333333333000000
-          285.750000000000000000)
+          283.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -363,7 +363,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -374,15 +374,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel6: TQRLabel
-        Left = 208
-        Top = 628
-        Width = 62
-        Height = 17
+        Left = 260
+        Top = 785
+        Width = 78
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           550.333333333333300000
           1661.583333333333000000
-          164.041666666666700000)
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -392,7 +392,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -403,15 +403,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel7: TQRLabel
-        Left = 320
-        Top = 628
-        Width = 57
-        Height = 17
+        Left = 400
+        Top = 785
+        Width = 71
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           846.666666666666700000
           1661.583333333333000000
-          150.812500000000000000)
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -421,7 +421,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -432,10 +432,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape23: TQRShape
-        Left = 184
-        Top = 629
-        Width = 15
-        Height = 15
+        Left = 230
+        Top = 786
+        Width = 19
+        Height = 19
         Size.Values = (
           39.687500000000000000
           486.833333333333400000
@@ -449,10 +449,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape8: TQRShape
-        Left = 296
-        Top = 629
-        Width = 15
-        Height = 15
+        Left = 370
+        Top = 786
+        Width = 19
+        Height = 19
         Size.Values = (
           39.687500000000000000
           783.166666666666800000
@@ -466,10 +466,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape9: TQRShape
-        Left = 3
-        Top = 416
-        Width = 713
-        Height = 73
+        Left = 4
+        Top = 520
+        Width = 891
+        Height = 91
         Size.Values = (
           193.145833333333300000
           7.937500000000000000
@@ -483,10 +483,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape10: TQRShape
-        Left = 3
-        Top = 488
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 610
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -500,10 +500,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape11: TQRShape
-        Left = 3
-        Top = 512
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 640
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -517,10 +517,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape12: TQRShape
-        Left = 3
-        Top = 536
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 670
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -534,10 +534,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape13: TQRShape
-        Left = 3
-        Top = 560
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 700
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -551,10 +551,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape14: TQRShape
-        Left = 3
-        Top = 584
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 730
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -568,10 +568,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object QRShape35: TQRShape
-        Left = 129
-        Top = 417
-        Width = 7
-        Height = 192
+        Left = 161
+        Top = 521
+        Width = 9
+        Height = 240
         Size.Values = (
           508.000000000000000000
           341.312500000000000000
@@ -584,15 +584,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object QRLabel22: TQRLabel
-        Left = 9
-        Top = 420
-        Width = 70
-        Height = 17
+        Left = 11
+        Top = 525
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           1111.250000000000000000
-          185.208333333333300000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -602,7 +602,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -613,10 +613,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText5: TQRDBText
-        Left = 141
-        Top = 420
-        Width = 569
-        Height = 61
+        Left = 176
+        Top = 525
+        Width = 711
+        Height = 76
         Size.Values = (
           161.395833333333300000
           373.062500000000000000
@@ -633,7 +633,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -646,15 +646,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel8: TQRLabel
-        Left = 9
-        Top = 492
-        Width = 114
-        Height = 17
+        Left = 11
+        Top = 615
+        Width = 141
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           1301.750000000000000000
-          301.625000000000000000)
+          298.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -664,7 +664,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -675,15 +675,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel9: TQRLabel
-        Left = 9
-        Top = 516
-        Width = 75
-        Height = 17
+        Left = 11
+        Top = 645
+        Width = 96
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           1365.250000000000000000
-          198.437500000000000000)
+          203.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -693,7 +693,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -704,15 +704,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblUpstandLabel: TQRLabel
-        Left = 9
-        Top = 540
-        Width = 60
-        Height = 17
+        Left = 11
+        Top = 675
+        Width = 73
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           1428.750000000000000000
-          158.750000000000000000)
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -722,7 +722,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -733,13 +733,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblCillsLabel: TQRLabel
-        Left = 9
-        Top = 564
-        Width = 80
-        Height = 17
+        Left = 11
+        Top = 705
+        Width = 100
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           1492.250000000000000000
           211.666666666666700000)
         XLColumn = 0
@@ -751,7 +751,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -762,15 +762,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblSlashbackLabel: TQRLabel
-        Left = 9
-        Top = 588
-        Width = 80
-        Height = 17
+        Left = 11
+        Top = 735
+        Width = 98
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           1555.750000000000000000
-          211.666666666666700000)
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -780,7 +780,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -791,10 +791,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape15: TQRShape
-        Left = 3
-        Top = 160
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 200
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -808,10 +808,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape16: TQRShape
-        Left = 3
-        Top = 184
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 230
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -825,10 +825,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape17: TQRShape
-        Left = 3
-        Top = 208
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 260
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -842,13 +842,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRLabel13: TQRLabel
-        Left = 9
-        Top = 164
-        Width = 164
-        Height = 17
+        Left = 11
+        Top = 205
+        Width = 205
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           433.916666666666700000
           433.916666666666700000)
         XLColumn = 0
@@ -860,7 +860,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -871,15 +871,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText8: TQRDBText
-        Left = 200
-        Top = 164
-        Width = 98
-        Height = 17
+        Left = 250
+        Top = 205
+        Width = 122
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           529.166666666666700000
           433.916666666666700000
-          259.291666666666700000)
+          258.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -890,7 +890,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Customer_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -903,10 +903,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape19: TQRShape
-        Left = 3
-        Top = 232
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 290
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -920,15 +920,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRLabel16: TQRLabel
-        Left = 9
-        Top = 236
-        Width = 72
-        Height = 17
+        Left = 11
+        Top = 295
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           624.416666666666700000
-          190.500000000000000000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -938,7 +938,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -949,10 +949,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape18: TQRShape
-        Left = 177
-        Top = 161
-        Width = 7
-        Height = 96
+        Left = 221
+        Top = 201
+        Width = 9
+        Height = 120
         Size.Values = (
           254.000000000000000000
           468.312500000000100000
@@ -965,10 +965,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape20: TQRShape
-        Left = 3
-        Top = 272
-        Width = 713
-        Height = 137
+        Left = 4
+        Top = 340
+        Width = 891
+        Height = 171
         Size.Values = (
           362.479166666666700000
           7.937500000000000000
@@ -982,10 +982,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object qrrchTextInstallAddress: TQRRichText
-        Left = 144
-        Top = 280
-        Width = 241
-        Height = 97
+        Left = 180
+        Top = 350
+        Width = 301
+        Height = 121
         Size.Values = (
           256.645833333333400000
           381.000000000000000000
@@ -1009,15 +1009,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           'InstallAddress')
       end
       object QRLabel4: TQRLabel
-        Left = 8
-        Top = 280
-        Width = 80
-        Height = 19
+        Left = 10
+        Top = 350
+        Width = 99
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           21.166666666666670000
           740.833333333333300000
-          211.666666666666700000)
+          209.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1027,7 +1027,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1038,15 +1038,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 428
-        Top = 64
-        Width = 49
-        Height = 17
+        Left = 535
+        Top = 80
+        Width = 62
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1132.416666666667000000
           169.333333333333300000
-          129.645833333333300000)
+          131.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1056,7 +1056,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1067,10 +1067,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape22: TQRShape
-        Left = 3
-        Top = 384
-        Width = 713
-        Height = 25
+        Left = 4
+        Top = 480
+        Width = 891
+        Height = 31
         Size.Values = (
           66.145833333333340000
           7.937500000000000000
@@ -1084,10 +1084,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape21: TQRShape
-        Left = 129
-        Top = 273
-        Width = 7
-        Height = 136
+        Left = 161
+        Top = 341
+        Width = 9
+        Height = 170
         Size.Values = (
           359.833333333333400000
           341.312500000000000000
@@ -1100,15 +1100,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRLabel14: TQRLabel
-        Left = 9
-        Top = 388
-        Width = 115
-        Height = 17
+        Left = 11
+        Top = 485
+        Width = 142
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          23.283333333333330000
           1026.583333333333000000
-          304.270833333333300000)
+          300.566666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1118,7 +1118,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1129,10 +1129,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText3: TQRDBText
-        Left = 144
-        Top = 387
-        Width = 241
-        Height = 19
+        Left = 180
+        Top = 484
+        Width = 301
+        Height = 24
         Size.Values = (
           50.270833333333330000
           381.000000000000000000
@@ -1149,7 +1149,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Install_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1162,15 +1162,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel15: TQRLabel
-        Left = 9
-        Top = 187
-        Width = 50
-        Height = 17
+        Left = 11
+        Top = 234
+        Width = 62
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
-          494.770833333333300000
-          132.291666666666700000)
+          44.450000000000000000
+          23.283333333333330000
+          495.300000000000000000
+          131.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1180,7 +1180,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1191,15 +1191,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel15: TQRLabel
-        Left = 393
-        Top = 388
-        Width = 99
-        Height = 17
+        Left = 491
+        Top = 485
+        Width = 124
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1039.812500000000000000
+          44.450000000000000000
+          1039.283333333333000000
           1026.583333333333000000
-          261.937500000000000000)
+          262.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1209,7 +1209,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1220,10 +1220,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText6: TQRDBText
-        Left = 512
-        Top = 388
-        Width = 201
-        Height = 19
+        Left = 640
+        Top = 485
+        Width = 251
+        Height = 24
         Size.Values = (
           50.270833333333330000
           1354.666666666667000000
@@ -1240,7 +1240,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Install_Phone'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1253,10 +1253,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblContact: TQRLabel
-        Left = 200
-        Top = 187
-        Width = 201
-        Height = 17
+        Left = 250
+        Top = 234
+        Width = 251
+        Height = 21
         Size.Values = (
           44.979166666666670000
           529.166666666666800000
@@ -1272,7 +1272,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1283,15 +1283,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 9
-        Top = 212
-        Width = 100
-        Height = 19
+        Left = 11
+        Top = 265
+        Width = 128
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          23.812500000000000000
+          50.800000000000000000
+          23.283333333333330000
           560.916666666666700000
-          264.583333333333300000)
+          270.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1301,7 +1301,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1312,15 +1312,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText4: TQRDBText
-        Left = 200
-        Top = 212
-        Width = 59
-        Height = 19
+        Left = 250
+        Top = 265
+        Width = 77
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           529.166666666666700000
           560.916666666666700000
-          156.104166666666700000)
+          162.983333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1331,7 +1331,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Reference'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1344,10 +1344,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape24: TQRShape
-        Left = 385
-        Top = 385
-        Width = 7
-        Height = 24
+        Left = 481
+        Top = 481
+        Width = 9
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1018.645833333333000000
@@ -1360,10 +1360,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape25: TQRShape
-        Left = 497
-        Top = 385
-        Width = 7
-        Height = 24
+        Left = 621
+        Top = 481
+        Width = 9
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1314.979166666667000000
@@ -1376,15 +1376,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRDBText3: TQRDBText
-        Left = 200
-        Top = 236
-        Width = 86
-        Height = 17
+        Left = 250
+        Top = 295
+        Width = 110
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           529.166666666666700000
           624.416666666666700000
-          227.541666666666700000)
+          232.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1395,7 +1395,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Date_Required'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1408,15 +1408,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRRichText1: TQRRichText
-        Left = 4
-        Top = 936
-        Width = 707
-        Height = 65
+        Left = 5
+        Top = 1170
+        Width = 884
+        Height = 39
         Size.Values = (
-          171.979166666666700000
+          82.550000000000000000
           10.583333333333330000
           2476.500000000000000000
-          1870.604166666667000000)
+          1871.133333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1438,12 +1438,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           'returned to the office with the completed sign off form.')
       end
       object QRDBText2: TQRDBText
-        Left = 668
-        Top = 64
-        Width = 24
-        Height = 17
+        Left = 835
+        Top = 80
+        Width = 30
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1767.416666666667000000
           169.333333333333300000
           63.500000000000000000)
@@ -1457,7 +1457,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Job'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1470,10 +1470,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape4: TQRShape
-        Left = 417
-        Top = 121
-        Width = 297
-        Height = 32
+        Left = 521
+        Top = 151
+        Width = 371
+        Height = 40
         Size.Values = (
           84.666666666666680000
           1103.312500000000000000
@@ -1486,10 +1486,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape26: TQRShape
-        Left = 542
-        Top = 121
-        Width = 9
-        Height = 32
+        Left = 678
+        Top = 151
+        Width = 11
+        Height = 40
         Size.Values = (
           84.666666666666680000
           1434.041666666667000000
@@ -1502,15 +1502,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRLabel1: TQRLabel
-        Left = 428
-        Top = 129
-        Width = 83
-        Height = 17
+        Left = 535
+        Top = 161
+        Width = 100
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1132.416666666667000000
-          341.312500000000000000
-          219.604166666666700000)
+          340.783333333333300000
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1520,7 +1520,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1531,10 +1531,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrrchTextNotes: TQRRichText
-        Left = 8
-        Top = 680
-        Width = 700
-        Height = 121
+        Left = 10
+        Top = 850
+        Width = 875
+        Height = 151
         Size.Values = (
           320.145833333333400000
           21.166666666666670000
@@ -1558,10 +1558,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           'Special Instuctions')
       end
       object qrlblEdgeDetail: TQRLabel
-        Left = 142
-        Top = 515
-        Width = 563
-        Height = 17
+        Left = 178
+        Top = 644
+        Width = 704
+        Height = 21
         Size.Values = (
           44.979166666666670000
           375.708333333333400000
@@ -1576,6 +1576,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AutoStretch = True
         Caption = 'qrlblEdgeDetail'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1583,10 +1589,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblThickness: TQRLabel
-        Left = 142
-        Top = 492
-        Width = 563
-        Height = 17
+        Left = 178
+        Top = 615
+        Width = 704
+        Height = 21
         Size.Values = (
           44.979166666666670000
           375.708333333333400000
@@ -1600,6 +1606,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AutoSize = False
         Caption = 'qrlblThickness'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1607,10 +1619,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblUpstand: TQRLabel
-        Left = 142
-        Top = 539
-        Width = 563
-        Height = 17
+        Left = 178
+        Top = 674
+        Width = 704
+        Height = 21
         Size.Values = (
           44.979166666666670000
           375.708333333333400000
@@ -1624,6 +1636,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AutoSize = False
         Caption = 'No'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1631,15 +1649,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblWindowCill: TQRLabel
-        Left = 142
-        Top = 563
-        Width = 17
-        Height = 17
+        Left = 177
+        Top = 704
+        Width = 21
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          375.708333333333300000
-          1489.604166666667000000
-          44.979166666666670000)
+          44.450000000000000000
+          374.650000000000000000
+          1490.133333333333000000
+          44.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1647,6 +1665,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'No'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1654,15 +1678,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrlblSplashback: TQRLabel
-        Left = 142
-        Top = 587
-        Width = 17
-        Height = 17
+        Left = 177
+        Top = 734
+        Width = 21
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          375.708333333333300000
-          1553.104166666667000000
-          44.979166666666670000)
+          44.450000000000000000
+          374.650000000000000000
+          1553.633333333333000000
+          44.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1670,6 +1694,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'No'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1677,10 +1707,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object memAddress: TQRMemo
-        Left = 3
-        Top = 74
-        Width = 222
-        Height = 71
+        Left = 4
+        Top = 93
+        Width = 278
+        Height = 89
         Enabled = False
         Size.Values = (
           187.854166666666700000
@@ -1696,7 +1726,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1706,10 +1736,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 6
       end
       object qriHeadLogo: TQRImage
-        Left = 4
-        Top = 6
-        Width = 220
-        Height = 65
+        Left = 5
+        Top = 8
+        Width = 275
+        Height = 81
         Size.Values = (
           171.979166666666700000
           10.583333333333330000
@@ -1721,15 +1751,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Stretch = True
       end
       object gtQRLabel12: TQRLabel
-        Left = 596
-        Top = 129
-        Width = 85
-        Height = 17
+        Left = 745
+        Top = 161
+        Width = 104
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1576.916666666667000000
-          341.312500000000000000
-          224.895833333333300000)
+          340.783333333333300000
+          220.133333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1739,7 +1769,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1751,27 +1781,27 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       end
     end
     object qrchdSatisfaction: TQRChildBand
-      Left = 38
-      Top = 1057
-      Width = 718
-      Height = 995
+      Left = 47
+      Top = 1321
+      Width = 898
+      Height = 1244
       AlignToBottom = False
       BeforePrint = qrchdSatisfactionBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        2632.604166666667000000
-        1899.708333333333000000)
+        2633.133333333333000000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrgQuote
       PrintOrder = cboAfterParent
       object QRShape6: TQRShape
-        Left = 16
-        Top = 568
-        Width = 673
-        Height = 188
+        Left = 20
+        Top = 710
+        Width = 841
+        Height = 235
         Size.Values = (
           497.416666666666700000
           42.333333333333330000
@@ -1785,10 +1815,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape27: TQRShape
-        Left = 17
-        Top = 569
-        Width = 671
-        Height = 24
+        Left = 21
+        Top = 711
+        Width = 839
+        Height = 30
         Size.Values = (
           63.500000000000000000
           44.979166666666670000
@@ -1802,10 +1832,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape30: TQRShape
-        Left = 528
-        Top = 569
-        Width = 81
-        Height = 24
+        Left = 660
+        Top = 711
+        Width = 101
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1397.000000000000000000
@@ -1819,10 +1849,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object QRLabel11: TQRLabel
-        Left = 415
-        Top = 4
-        Width = 306
-        Height = 45
+        Left = 519
+        Top = 5
+        Width = 383
+        Height = 56
         Size.Values = (
           119.062500000000000000
           1098.020833333333000000
@@ -1838,7 +1868,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -37
+        Font.Height = -47
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1849,15 +1879,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 28
       end
       object QRLabel17: TQRLabel
-        Left = 544
-        Top = 960
-        Width = 143
-        Height = 17
+        Left = 680
+        Top = 1200
+        Width = 179
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1439.333333333333000000
           2540.000000000000000000
-          378.354166666666700000)
+          378.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1867,7 +1897,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1878,15 +1908,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel18: TQRLabel
-        Left = 16
-        Top = 336
-        Width = 125
-        Height = 17
+        Left = 20
+        Top = 420
+        Width = 157
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           889.000000000000000000
-          330.729166666666700000)
+          332.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1894,6 +1924,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'It'#39's agreed as follows:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1901,10 +1937,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRMemo1: TQRMemo
-        Left = 40
-        Top = 368
-        Width = 660
-        Height = 17
+        Left = 50
+        Top = 460
+        Width = 825
+        Height = 21
         Size.Values = (
           44.979166666666670000
           105.833333333333300000
@@ -1918,22 +1954,28 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AutoSize = False
         AutoStretch = True
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           
             'That <Company> has completed the works required by the customer ' +
             'in line with the original quotation.')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object QRLabel23: TQRLabel
-        Left = 16
-        Top = 368
-        Width = 12
-        Height = 17
+        Left = 20
+        Top = 460
+        Width = 15
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           973.666666666666700000
           31.750000000000000000)
@@ -1944,6 +1986,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = '1.'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1951,12 +1999,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel25: TQRLabel
-        Left = 16
-        Top = 416
-        Width = 12
-        Height = 17
+        Left = 20
+        Top = 520
+        Width = 15
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           1100.666666666667000000
           31.750000000000000000)
@@ -1967,6 +2015,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = '2.'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1974,21 +2028,26 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRMemo2: TQRMemo
-        Left = 40
-        Top = 416
-        Width = 662
-        Height = 34
+        Left = 50
+        Top = 520
+        Width = 826
+        Height = 42
         Size.Values = (
-          89.958333333333330000
+          88.900000000000000000
           105.833333333333300000
           1100.666666666667000000
-          1751.541666666667000000)
+          1748.366666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           
             'That the customer has had the opportunity to inspect the work an' +
@@ -1996,18 +2055,19 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           
             'of the workmanship, materials and fittings used by the contracto' +
             'r.')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object QRLabel48: TQRLabel
-        Left = 16
-        Top = 464
-        Width = 12
-        Height = 17
+        Left = 20
+        Top = 580
+        Width = 15
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           1227.666666666667000000
           31.750000000000000000)
@@ -2018,6 +2078,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = '3.'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -2025,37 +2091,43 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRMemo3: TQRMemo
-        Left = 40
-        Top = 464
-        Width = 391
-        Height = 17
+        Left = 50
+        Top = 580
+        Width = 490
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           105.833333333333300000
           1227.666666666667000000
-          1034.520833333333000000)
+          1037.166666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           
             'The customer accepts delivery of the materials, fixtures and fit' +
             'tings.')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object QRLabel49: TQRLabel
-        Left = 16
-        Top = 504
-        Width = 12
-        Height = 17
+        Left = 20
+        Top = 630
+        Width = 15
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           1333.500000000000000000
           31.750000000000000000)
@@ -2066,6 +2138,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = '4.'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -2073,40 +2151,46 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRMemo4: TQRMemo
-        Left = 40
-        Top = 504
-        Width = 543
-        Height = 17
+        Left = 50
+        Top = 630
+        Width = 686
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           105.833333333333300000
           1333.500000000000000000
-          1436.687500000000000000)
+          1452.033333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           
             'Nothing in this agreement shall affect any guarantee on the work' +
             ' carried out by the contractor.')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object QRLabel50: TQRLabel
-        Left = 16
-        Top = 960
-        Width = 360
-        Height = 17
+        Left = 20
+        Top = 1200
+        Width = 451
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           2540.000000000000000000
-          952.500000000000000000)
+          954.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2116,6 +2200,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           'Signature: .....................................................' +
           '.....................'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -2123,15 +2213,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel52: TQRLabel
-        Left = 16
-        Top = 544
-        Width = 58
-        Height = 17
+        Left = 20
+        Top = 680
+        Width = 73
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           1439.333333333333000000
-          153.458333333333300000)
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2141,7 +2231,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2152,15 +2242,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel51: TQRLabel
-        Left = 16
-        Top = 920
-        Width = 359
-        Height = 17
+        Left = 20
+        Top = 1150
+        Width = 448
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           2434.166666666667000000
-          949.854166666666700000)
+          948.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2172,7 +2262,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2183,15 +2273,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel70: TQRLabel
-        Left = 456
-        Top = 200
-        Width = 45
-        Height = 19
+        Left = 570
+        Top = 250
+        Width = 58
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1206.500000000000000000
           529.166666666666700000
-          119.062500000000000000)
+          122.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2201,7 +2291,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2212,15 +2302,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText10: TQRDBText
-        Left = 660
-        Top = 200
-        Width = 21
-        Height = 19
+        Left = 823
+        Top = 250
+        Width = 28
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1746.250000000000000000
+          50.800000000000000000
+          1742.016666666667000000
           529.166666666666700000
-          55.562500000000000000)
+          59.266666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2231,7 +2321,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Job'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2244,15 +2334,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel3: TQRLabel
-        Left = 456
-        Top = 231
-        Width = 57
-        Height = 19
+        Left = 570
+        Top = 289
+        Width = 73
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1206.500000000000000000
-          611.187500000000000000
-          150.812500000000000000)
+          611.716666666666700000
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2262,7 +2352,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2273,15 +2363,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRDBText4: TQRDBText
-        Left = 608
-        Top = 231
-        Width = 73
-        Height = 19
+        Left = 759
+        Top = 289
+        Width = 92
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1608.666666666667000000
-          611.187500000000000000
-          193.145833333333300000)
+          50.800000000000000000
+          1606.550000000000000000
+          611.716666666666700000
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2292,7 +2382,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Sales_Order'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2305,15 +2395,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel18: TQRLabel
-        Left = 456
-        Top = 263
-        Width = 94
-        Height = 19
+        Left = 570
+        Top = 329
+        Width = 122
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1206.500000000000000000
-          695.854166666666700000
-          248.708333333333300000)
+          696.383333333333300000
+          258.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2323,7 +2413,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2334,15 +2424,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRDBText1: TQRDBText
-        Left = 599
-        Top = 263
-        Width = 82
-        Height = 19
+        Left = 745
+        Top = 329
+        Width = 106
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1584.854166666667000000
-          695.854166666666700000
-          216.958333333333300000)
+          50.800000000000000000
+          1576.916666666667000000
+          696.383333333333300000
+          224.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2353,7 +2443,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Order_Ref_No'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2366,15 +2456,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel10: TQRLabel
-        Left = 16
-        Top = 172
-        Width = 106
-        Height = 17
+        Left = 20
+        Top = 215
+        Width = 133
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           455.083333333333300000
-          280.458333333333300000)
+          281.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2384,7 +2474,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2395,15 +2485,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRDBText6: TQRDBText
-        Left = 132
-        Top = 172
-        Width = 98
-        Height = 17
+        Left = 165
+        Top = 215
+        Width = 122
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           349.250000000000000000
           455.083333333333300000
-          259.291666666666700000)
+          258.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2414,7 +2504,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Customer_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2427,10 +2517,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrrchTextInstallAddress1: TQRRichText
-        Left = 16
-        Top = 224
-        Width = 417
-        Height = 97
+        Left = 20
+        Top = 280
+        Width = 521
+        Height = 121
         Size.Values = (
           256.645833333333300000
           42.333333333333330000
@@ -2454,15 +2544,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           'InstallAddress')
       end
       object gtQRLabel11: TQRLabel
-        Left = 16
-        Top = 201
-        Width = 84
-        Height = 17
+        Left = 20
+        Top = 251
+        Width = 107
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          531.812500000000000000
-          222.250000000000000000)
+          531.283333333333300000
+          226.483333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2472,7 +2562,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2483,10 +2573,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qriHeadLogo1: TQRImage
-        Left = 12
-        Top = 6
-        Width = 220
-        Height = 65
+        Left = 15
+        Top = 8
+        Width = 275
+        Height = 81
         Size.Values = (
           171.979166666666700000
           31.750000000000000000
@@ -2498,16 +2588,16 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Stretch = True
       end
       object memAddress1: TQRMemo
-        Left = 11
-        Top = 72
-        Width = 49
-        Height = 83
+        Left = 14
+        Top = 90
+        Width = 67
+        Height = 104
         Enabled = False
         Size.Values = (
-          219.604166666666700000
-          29.104166666666670000
+          220.133333333333300000
+          29.633333333333330000
           190.500000000000000000
-          129.645833333333300000)
+          141.816666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2517,7 +2607,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2527,15 +2617,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 6
       end
       object gtQRLabel19: TQRLabel
-        Left = 25
-        Top = 573
-        Width = 38
-        Height = 17
+        Left = 31
+        Top = 716
+        Width = 45
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          66.145833333333330000
-          1516.062500000000000000
-          100.541666666666700000)
+          44.450000000000000000
+          65.616666666666670000
+          1515.533333333333000000
+          95.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2545,7 +2635,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2556,15 +2646,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel20: TQRLabel
-        Left = 545
-        Top = 573
-        Width = 34
-        Height = 17
+        Left = 681
+        Top = 716
+        Width = 43
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1441.979166666667000000
-          1516.062500000000000000
-          89.958333333333330000)
+          44.450000000000000000
+          1441.450000000000000000
+          1515.533333333333000000
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2574,7 +2664,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2585,15 +2675,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel21: TQRLabel
-        Left = 617
-        Top = 573
-        Width = 61
-        Height = 17
+        Left = 771
+        Top = 716
+        Width = 78
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1632.479166666667000000
-          1516.062500000000000000
-          161.395833333333300000)
+          44.450000000000000000
+          1631.950000000000000000
+          1515.533333333333000000
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2603,7 +2693,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2614,10 +2704,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape28: TQRShape
-        Left = 528
-        Top = 545
-        Width = 160
-        Height = 24
+        Left = 660
+        Top = 681
+        Width = 200
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1397.000000000000000000
@@ -2631,15 +2721,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRLabel22: TQRLabel
-        Left = 569
-        Top = 549
-        Width = 75
-        Height = 17
+        Left = 711
+        Top = 686
+        Width = 93
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1505.479166666667000000
-          1452.562500000000000000
-          198.437500000000000000)
+          44.450000000000000000
+          1504.950000000000000000
+          1452.033333333333000000
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2649,7 +2739,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2660,10 +2750,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape31: TQRShape
-        Left = 17
-        Top = 592
-        Width = 671
-        Height = 24
+        Left = 21
+        Top = 740
+        Width = 839
+        Height = 30
         Size.Values = (
           63.500000000000000000
           44.979166666666670000
@@ -2676,10 +2766,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape33: TQRShape
-        Left = 17
-        Top = 592
-        Width = 671
-        Height = 28
+        Left = 21
+        Top = 740
+        Width = 839
+        Height = 35
         Size.Values = (
           74.083333333333330000
           44.979166666666670000
@@ -2692,10 +2782,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape32: TQRShape
-        Left = 17
-        Top = 727
-        Width = 671
-        Height = 28
+        Left = 21
+        Top = 909
+        Width = 839
+        Height = 35
         Size.Values = (
           74.083333333333330000
           44.979166666666670000
@@ -2708,10 +2798,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape34: TQRShape
-        Left = 17
-        Top = 619
-        Width = 671
-        Height = 28
+        Left = 21
+        Top = 774
+        Width = 839
+        Height = 35
         Size.Values = (
           74.083333333333330000
           44.979166666666670000
@@ -2724,10 +2814,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape35: TQRShape
-        Left = 17
-        Top = 646
-        Width = 671
-        Height = 28
+        Left = 21
+        Top = 807
+        Width = 839
+        Height = 35
         Size.Values = (
           74.083333333333330000
           44.979166666666670000
@@ -2740,10 +2830,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape36: TQRShape
-        Left = 17
-        Top = 673
-        Width = 671
-        Height = 28
+        Left = 21
+        Top = 841
+        Width = 839
+        Height = 35
         Size.Values = (
           74.083333333333330000
           44.979166666666670000
@@ -2756,10 +2846,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRShape37: TQRShape
-        Left = 17
-        Top = 700
-        Width = 671
-        Height = 28
+        Left = 21
+        Top = 875
+        Width = 839
+        Height = 35
         Size.Values = (
           74.083333333333330000
           44.979166666666670000
@@ -2772,33 +2862,39 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRMemo1: TQRMemo
-        Left = 24
-        Top = 598
-        Width = 84
-        Height = 17
+        Left = 30
+        Top = 747
+        Width = 106
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
-          1582.208333333333000000
-          222.250000000000000000)
+          1581.150000000000000000
+          224.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           'Sink secured?')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRShape29: TQRShape
-        Left = 528
-        Top = 568
+        Left = 660
+        Top = 710
         Width = 1
-        Height = 188
+        Height = 235
         Size.Values = (
           497.416666666666700000
           1397.000000000000000000
@@ -2811,127 +2907,157 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRMemo2: TQRMemo
-        Left = 24
-        Top = 625
-        Width = 234
-        Height = 17
+        Left = 30
+        Top = 781
+        Width = 292
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
-          1653.645833333333000000
-          619.125000000000000000)
+          1653.116666666667000000
+          618.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           'All areas sealed, siliconed and caulked?')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRMemo3: TQRMemo
-        Left = 24
-        Top = 652
-        Width = 199
-        Height = 17
+        Left = 30
+        Top = 815
+        Width = 249
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
           1725.083333333333000000
-          526.520833333333300000)
+          527.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           'Hob cut out checked against hob?')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRMemo4: TQRMemo
-        Left = 24
-        Top = 680
-        Width = 70
-        Height = 17
+        Left = 30
+        Top = 850
+        Width = 87
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
           1799.166666666667000000
-          185.208333333333300000)
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           'Stitched in?')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRMemo5: TQRMemo
-        Left = 24
-        Top = 706
-        Width = 335
-        Height = 17
+        Left = 30
+        Top = 882
+        Width = 418
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
-          1867.958333333333000000
-          886.354166666666700000)
+          1866.900000000000000000
+          884.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           'All works complete without damage to surrounding areas?')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRMemo6: TQRMemo
-        Left = 24
-        Top = 733
-        Width = 446
-        Height = 17
+        Left = 30
+        Top = 916
+        Width = 558
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
-          1939.395833333333000000
-          1180.041666666667000000)
+          1938.866666666667000000
+          1181.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
         Lines.Strings = (
           
             'Are there still other tradesmen working on site after tops have ' +
             'been installed?')
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRShape38: TQRShape
-        Left = 608
-        Top = 568
+        Left = 760
+        Top = 710
         Width = 1
-        Height = 161
+        Height = 201
         Size.Values = (
           425.979166666666700000
           1608.666666666667000000
@@ -2944,15 +3070,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object gtQRMemo7: TQRMemo
-        Left = 574
-        Top = 733
-        Width = 69
-        Height = 17
+        Left = 717
+        Top = 916
+        Width = 88
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1518.708333333333000000
-          1939.395833333333000000
-          182.562500000000000000)
+          44.450000000000000000
+          1517.650000000000000000
+          1938.866666666667000000
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2961,7 +3087,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         Lines.Strings = (
@@ -2973,15 +3099,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel23: TQRLabel
-        Left = 16
-        Top = 768
-        Width = 105
-        Height = 17
+        Left = 20
+        Top = 960
+        Width = 130
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           2032.000000000000000000
-          277.812500000000000000)
+          275.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2991,7 +3117,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -3002,10 +3128,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRShape39: TQRShape
-        Left = 16
-        Top = 792
-        Width = 673
-        Height = 113
+        Left = 20
+        Top = 990
+        Width = 841
+        Height = 141
         Size.Values = (
           298.979166666666700000
           42.333333333333330000
@@ -3020,10 +3146,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       end
     end
     object qrchdSnagging: TQRChildBand
-      Left = 38
-      Top = 2052
-      Width = 718
-      Height = 389
+      Left = 47
+      Top = 2565
+      Width = 898
+      Height = 486
       Frame.DrawBottom = True
       Frame.Width = 3
       AlignToBottom = False
@@ -3031,17 +3157,17 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        1029.229166666667000000
-        1899.708333333333000000)
+        1028.700000000000000000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrchdSatisfaction
       PrintOrder = cboAfterParent
       object QRLabel53: TQRLabel
-        Left = 504
-        Top = 4
-        Width = 209
-        Height = 93
+        Left = 630
+        Top = 5
+        Width = 261
+        Height = 116
         Size.Values = (
           246.062500000000000000
           1333.500000000000000000
@@ -3057,7 +3183,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -37
+        Font.Height = -47
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3068,15 +3194,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 28
       end
       object QRLabel54: TQRLabel
-        Left = 16
-        Top = 200
-        Width = 61
-        Height = 17
+        Left = 20
+        Top = 250
+        Width = 76
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           529.166666666666700000
-          161.395833333333300000)
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3084,6 +3210,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Customer:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3091,15 +3223,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel55: TQRLabel
-        Left = 16
-        Top = 229
-        Width = 72
-        Height = 17
+        Left = 20
+        Top = 286
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          605.895833333333300000
-          190.500000000000000000)
+          605.366666666666700000
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3107,6 +3239,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Fitting Date:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3114,15 +3252,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel56: TQRLabel
-        Left = 16
-        Top = 258
-        Width = 80
-        Height = 17
+        Left = 20
+        Top = 323
+        Width = 98
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          682.625000000000000000
-          211.666666666666700000)
+          683.683333333333300000
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3130,6 +3268,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Fitters Name:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3137,15 +3281,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel57: TQRLabel
-        Left = 16
-        Top = 288
-        Width = 70
-        Height = 17
+        Left = 20
+        Top = 360
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           762.000000000000000000
-          185.208333333333300000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3153,6 +3297,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Description:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3160,15 +3310,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText1: TQRDBText
-        Left = 112
-        Top = 200
-        Width = 98
-        Height = 17
+        Left = 140
+        Top = 250
+        Width = 122
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           296.333333333333300000
           529.166666666666700000
-          259.291666666666700000)
+          258.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3177,6 +3327,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3186,10 +3342,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText7: TQRDBText
-        Left = 112
-        Top = 288
-        Width = 593
-        Height = 65
+        Left = 140
+        Top = 360
+        Width = 741
+        Height = 81
         Size.Values = (
           171.979166666666700000
           296.333333333333400000
@@ -3204,6 +3360,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         DataSet = qryReport
         DataField = 'Description'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3214,9 +3376,9 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       end
       object QRShape8: TQRShape
         Left = -1
-        Top = 357
-        Width = 718
-        Height = 450
+        Top = 446
+        Width = 897
+        Height = 562
         Frame.Width = 2
         Size.Values = (
           1190.625000000000000000
@@ -3231,10 +3393,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object QRShape10: TQRShape
-        Left = 360
-        Top = 358
-        Width = 9
-        Height = 450
+        Left = 450
+        Top = 447
+        Width = 11
+        Height = 562
         Size.Values = (
           1190.625000000000000000
           952.500000000000000000
@@ -3248,15 +3410,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         VertAdjust = 0
       end
       object QRLabel58: TQRLabel
-        Left = 8
-        Top = 366
-        Width = 199
-        Height = 17
+        Left = 10
+        Top = 458
+        Width = 249
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          968.375000000000000000
-          526.520833333333300000)
+          969.433333333333300000
+          527.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3264,6 +3426,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Work outstanding to complete Job'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3271,15 +3439,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel59: TQRLabel
-        Left = 374
-        Top = 366
-        Width = 97
-        Height = 17
+        Left = 468
+        Top = 458
+        Width = 124
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          989.541666666666700000
-          968.375000000000000000
-          256.645833333333300000)
+          44.450000000000000000
+          990.600000000000000000
+          969.433333333333300000
+          262.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3287,6 +3455,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Material required'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3294,15 +3468,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel69: TQRLabel
-        Left = 638
-        Top = 366
-        Width = 56
-        Height = 17
+        Left = 798
+        Top = 458
+        Width = 69
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1688.041666666667000000
-          968.375000000000000000
-          148.166666666666700000)
+          44.450000000000000000
+          1689.100000000000000000
+          969.433333333333300000
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3310,6 +3484,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Complete'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3317,15 +3497,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel71: TQRLabel
-        Left = 504
-        Top = 196
-        Width = 45
-        Height = 19
+        Left = 630
+        Top = 245
+        Width = 58
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1333.500000000000000000
           518.583333333333300000
-          119.062500000000000000)
+          122.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3335,7 +3515,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3346,15 +3526,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRDBText11: TQRDBText
-        Left = 660
-        Top = 196
-        Width = 21
-        Height = 19
+        Left = 823
+        Top = 245
+        Width = 28
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1746.250000000000000000
+          50.800000000000000000
+          1742.016666666667000000
           518.583333333333300000
-          55.562500000000000000)
+          59.266666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3365,7 +3545,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Job'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3378,15 +3558,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel72: TQRLabel
-        Left = 112
-        Top = 229
-        Width = 265
-        Height = 17
+        Left = 140
+        Top = 286
+        Width = 331
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           296.333333333333300000
-          605.895833333333300000
-          701.145833333333300000)
+          605.366666666666700000
+          700.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3396,6 +3576,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           '................................................................' +
           '..'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3403,15 +3589,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel73: TQRLabel
-        Left = 112
-        Top = 258
-        Width = 265
-        Height = 17
+        Left = 140
+        Top = 323
+        Width = 331
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           296.333333333333300000
-          682.625000000000000000
-          701.145833333333300000)
+          683.683333333333300000
+          700.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3421,6 +3607,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           '................................................................' +
           '..'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3428,15 +3620,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRLabel17: TQRLabel
-        Left = 504
-        Top = 228
-        Width = 57
-        Height = 19
+        Left = 630
+        Top = 285
+        Width = 73
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1333.500000000000000000
           603.250000000000000000
-          150.812500000000000000)
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3446,7 +3638,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3457,15 +3649,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object gtQRDBText5: TQRDBText
-        Left = 608
-        Top = 228
-        Width = 73
-        Height = 19
+        Left = 759
+        Top = 285
+        Width = 92
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1608.666666666667000000
+          50.800000000000000000
+          1606.550000000000000000
           603.250000000000000000
-          193.145833333333300000)
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3476,7 +3668,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         DataField = 'Sales_Order'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3489,10 +3681,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qriHeadLogo2: TQRImage
-        Left = 12
-        Top = 6
-        Width = 220
-        Height = 65
+        Left = 15
+        Top = 8
+        Width = 275
+        Height = 81
         Size.Values = (
           171.979166666666700000
           31.750000000000000000
@@ -3504,16 +3696,16 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Stretch = True
       end
       object memAddress2: TQRMemo
-        Left = 11
-        Top = 72
-        Width = 49
-        Height = 97
+        Left = 14
+        Top = 90
+        Width = 67
+        Height = 121
         Enabled = False
         Size.Values = (
-          256.645833333333300000
-          29.104166666666670000
+          256.116666666666700000
+          29.633333333333330000
           190.500000000000000000
-          129.645833333333300000)
+          141.816666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3523,7 +3715,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3534,9 +3726,9 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       end
     end
     object qrsubRemedial: TQRSubDetail
-      Left = 38
-      Top = 2441
-      Width = 718
+      Left = 47
+      Top = 3051
+      Width = 898
       Height = 32
       Frame.DrawLeft = True
       Frame.DrawRight = True
@@ -3546,8 +3738,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        1899.708333333333000000)
+        67.733333333333330000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpJobSheet
@@ -3555,10 +3747,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       PrintBefore = False
       PrintIfEmpty = True
       object qrmRemedials: TQRMemo
-        Left = 8
-        Top = 7
-        Width = 337
-        Height = 17
+        Left = 10
+        Top = 9
+        Width = 421
+        Height = 21
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
@@ -3572,16 +3764,22 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AutoSize = False
         AutoStretch = True
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
         FontSize = 10
       end
       object QRDBText9: TQRDBText
-        Left = 374
-        Top = 7
-        Width = 315
-        Height = 17
+        Left = 468
+        Top = 9
+        Width = 394
+        Height = 21
         Size.Values = (
           44.979166666666670000
           989.541666666666800000
@@ -3597,6 +3795,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         DataSet = qryJRemedials
         DataField = 'Material_Required'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3606,9 +3810,10 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object qrshpRemedialLine: TQRShape
-        Left = 360
+        Left = 450
         Top = 1
-        Width = 9
+        Width = 11
+        Height = 81
         Size.Values = (
           171.979166666666700000
           952.500000000000000000
@@ -3623,30 +3828,30 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       end
     end
     object QRBand1: TQRBand
-      Left = 38
-      Top = 2473
-      Width = 718
-      Height = 184
+      Left = 47
+      Top = 3083
+      Width = 898
+      Height = 230
       AlignToBottom = True
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         486.833333333333300000
-        1899.708333333333000000)
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel60: TQRLabel
-        Left = 16
-        Top = 10
-        Width = 242
-        Height = 20
+        Left = 20
+        Top = 12
+        Width = 299
+        Height = 25
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          26.458333333333330000
-          640.291666666666700000)
+          25.400000000000000000
+          632.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3656,7 +3861,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -3667,15 +3872,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 12
       end
       object QRLabel61: TQRLabel
-        Left = 16
-        Top = 49
-        Width = 120
-        Height = 17
+        Left = 20
+        Top = 61
+        Width = 151
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          129.645833333333300000
-          317.500000000000000000)
+          129.116666666666700000
+          319.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3683,6 +3888,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Customer Signature:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3690,15 +3901,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel62: TQRLabel
-        Left = 16
-        Top = 81
-        Width = 98
-        Height = 17
+        Left = 20
+        Top = 101
+        Width = 122
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          214.312500000000000000
-          259.291666666666700000)
+          213.783333333333300000
+          258.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3706,6 +3917,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Date Completed:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3713,15 +3930,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel63: TQRLabel
-        Left = 16
-        Top = 113
-        Width = 126
-        Height = 17
+        Left = 20
+        Top = 141
+        Width = 156
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          298.979166666666700000
-          333.375000000000000000)
+          298.450000000000000000
+          330.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3729,6 +3946,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Balance Outstanding:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3736,15 +3959,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel64: TQRLabel
-        Left = 16
-        Top = 145
-        Width = 94
-        Height = 17
+        Left = 20
+        Top = 181
+        Width = 118
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          383.645833333333300000
-          248.708333333333300000)
+          383.116666666666700000
+          249.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3752,6 +3975,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         AlignToBand = False
         Caption = 'Fitter Signature:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3759,15 +3988,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel65: TQRLabel
-        Left = 208
-        Top = 81
-        Width = 465
-        Height = 17
+        Left = 260
+        Top = 101
+        Width = 581
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           550.333333333333300000
-          214.312500000000000000
-          1230.312500000000000000)
+          213.783333333333300000
+          1229.783333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3777,6 +4006,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           '................................................................' +
           '....................................................'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3784,15 +4019,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel66: TQRLabel
-        Left = 208
-        Top = 113
-        Width = 465
-        Height = 17
+        Left = 260
+        Top = 141
+        Width = 581
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           550.333333333333300000
-          298.979166666666700000
-          1230.312500000000000000)
+          298.450000000000000000
+          1229.783333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3802,6 +4037,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           '................................................................' +
           '....................................................'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3809,15 +4050,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel67: TQRLabel
-        Left = 208
-        Top = 145
-        Width = 465
-        Height = 17
+        Left = 260
+        Top = 181
+        Width = 581
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           550.333333333333300000
-          383.645833333333300000
-          1230.312500000000000000)
+          383.116666666666700000
+          1229.783333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3827,6 +4068,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           '................................................................' +
           '....................................................'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3834,15 +4081,15 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         FontSize = 10
       end
       object QRLabel68: TQRLabel
-        Left = 208
-        Top = 49
-        Width = 465
-        Height = 17
+        Left = 260
+        Top = 61
+        Width = 581
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           550.333333333333300000
-          129.645833333333300000
-          1230.312500000000000000)
+          129.116666666666700000
+          1229.783333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3852,6 +4099,12 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           '................................................................' +
           '....................................................'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3860,29 +4113,29 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       end
     end
     object QRBand2: TQRBand
-      Left = 38
-      Top = 2657
-      Width = 718
-      Height = 40
+      Left = 47
+      Top = 3306
+      Width = 898
+      Height = 50
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        1899.708333333333000000)
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageFooter
       object qrlblCompanyAdd: TQRLabel
-        Left = 29
-        Top = 18
-        Width = 660
-        Height = 20
+        Left = 36
+        Top = 15
+        Width = 825
+        Height = 21
         Size.Values = (
-          52.916666666666670000
-          76.729166666666670000
-          47.625000000000000000
+          44.450000000000000000
+          76.200000000000000000
+          31.750000000000000000
           1746.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -3903,7 +4156,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
         VerticalAlignment = tlTop
-        FontSize = 10
+        FontSize = 8
       end
     end
   end

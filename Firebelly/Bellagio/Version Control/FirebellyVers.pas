@@ -69,10 +69,6 @@ begin
 	{Do the actual program} ;
 	StatusNarr('Checking Firebelly Program') ;
 	CopyIfNewer('Firebelly.exe', 'Firebelly Program') ;
-
-	{Do the new Firebelly24 program and associated FireDAC Definition files} ;
-	StatusNarr('Checking Firebelly24 Program') ;
-	CopyIfNewer('Firebelly24.exe', 'Firebelly24 Program') ;
 	CopyIfNewer('FDConnectionDefs.ini', 'FireDAC Connection Definitions') ;
 	CopyIfNewer('FDDrivers.ini', 'FireDAC Drivers');
 
@@ -89,7 +85,7 @@ begin
 	CopyIfNewer('msmqsend.exe.config', 'Scheduling Program') ;
 	CopyIfNewer('msmqsend.pdb', 'Scheduling Program') ;
 
-	StrPCopy(FiName, LocalDir + '\firebelly24.exe') ;
+	StrPCopy(FiName, LocalDir + '\Firebelly.exe') ;
 	StrPCopy(DiName ,LocalDir) ;
 	ShellExecute(0,nil,FiName,'', DiName, sw_Restore) ;
 	Application.Terminate ;

@@ -342,7 +342,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     end
     object QRBand1: TQRBand
       Left = 47
-      Top = 75
+      Top = 71
       Width = 945
       Height = 473
       AlignToBottom = False
@@ -981,13 +981,13 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       object memAddress: TQRRichText
         Left = 278
         Top = 18
-        Width = 244
-        Height = 151
+        Width = 299
+        Height = 176
         Size.Values = (
-          320.145833333333300000
-          587.375000000000000000
-          37.041666666666670000
-          515.937500000000000000)
+          372.533333333333300000
+          588.433333333333300000
+          38.100000000000000000
+          632.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -996,7 +996,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -9
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -1004,15 +1004,15 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         YIncrement = 50
       end
       object qrlblCompanyName: TQRLabel
-        Left = 669
+        Left = 661
         Top = 90
         Width = 216
         Height = 20
         Size.Values = (
           42.333333333333330000
-          1415.520833333333000000
+          1399.116666666667000000
           190.500000000000000000
-          457.729166666666700000)
+          457.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

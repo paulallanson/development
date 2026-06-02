@@ -44,6 +44,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 251
   end
   object BitBtn2: TBitBtn
     Left = 339
@@ -56,6 +57,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 251
   end
   object pnlDetails: TPanel
     Left = 0
@@ -363,8 +365,8 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
         '  ((worktop_thickness.inactive = '#39'N'#39') OR (worktop_thickness.inac' +
         'tive IS NULL) OR (worktop_thickness.thickness = :Thickness))'
       'order by thickness_mm')
-    Left = 456
-    Top = 33
+    Left = 522
+    Top = 73
     ParamData = <
       item
         Name = 'worktop'
@@ -382,7 +384,7 @@ object frmWTMaintQUpstand: TfrmWTMaintQUpstand
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 518
+    Left = 256
     Top = 33
   end
   object qryOneWTThickness: TFDQuery

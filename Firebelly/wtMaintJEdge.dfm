@@ -3,7 +3,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
   Top = 142
   Caption = 'Maintain Edges'
   ClientHeight = 234
-  ClientWidth = 489
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -53,7 +53,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 489
+    Width = 538
     Height = 184
     Align = alTop
     BevelOuter = bvNone
@@ -89,7 +89,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       Caption = 'Length'
     end
     object Label7: TLabel
-      Left = 323
+      Left = 379
       Top = 145
       Width = 61
       Height = 17
@@ -126,7 +126,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     object dblkpEdge: TDBLookupComboBox
       Left = 88
       Top = 72
-      Width = 345
+      Width = 401
       Height = 25
       KeyField = 'edge_profile'
       ListField = 'description'
@@ -152,7 +152,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       OnChange = edtUnitPriceChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 392
+      Left = 448
       Top = 141
       Width = 81
       Height = 25
@@ -162,7 +162,7 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       TabOrder = 5
     end
     object btnEdge: TBitBtn
-      Left = 448
+      Left = 504
       Top = 72
       Width = 25
       Height = 25
@@ -240,8 +240,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'Edge_profile = :Edge_profile')
-    Left = 382
-    Top = 95
+    Left = 398
+    Top = 55
     ParamData = <
       item
         Name = 'Material_type'

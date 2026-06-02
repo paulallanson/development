@@ -2,8 +2,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 435
-  ClientWidth = 1267
+  ClientHeight = 426
+  ClientWidth = 1261
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 416
-    Width = 1267
+    Top = 407
+    Width = 1261
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 375
-    Width = 1267
+    Top = 366
+    Width = 1261
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -60,7 +60,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 976
+      Left = 970
       Top = 1
       Width = 290
       Height = 39
@@ -123,20 +123,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 41
-    Width = 1267
+    Width = 1261
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1261
+        Width = 1255
       end>
-    ExplicitTop = 32
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1252
+      Width = 1246
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 68
@@ -252,8 +251,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 86
-    Width = 1267
-    Height = 289
+    Width = 1261
+    Height = 280
     Align = alClient
     DataSource = dtmdlQuote.dtsAllQuotes
     DrawingStyle = gdsGradient
@@ -267,7 +266,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -400,19 +399,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1267
+    Width = 1261
     Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 41
-        Width = 1261
+        Width = 1255
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1252
+      Width = 1246
       Height = 41
       Align = alLeft
       BevelOuter = bvNone
@@ -420,7 +419,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1252
+        1246
         41)
       object Label2: TLabel
         Left = 0
@@ -451,7 +450,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1002
+        Left = 996
         Top = 12
         Width = 81
         Height = 15
@@ -463,9 +462,10 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 1002
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1089
+        Left = 1083
         Top = 7
         Width = 145
         Height = 25

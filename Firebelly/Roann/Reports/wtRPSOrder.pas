@@ -562,6 +562,10 @@ begin
       qrlblFitDateLabel.caption := stringReplace(qrlblFitDateLabel.caption,'Fitting','Delivery',[rfReplaceAll]);
       qrlblTemplateDate.caption := '';
     end;
+
+  {5th March 2026 - Request by Becky at Roann to not show the Template and Fitting dates}
+  qrlblTemplateDate.caption := '';
+  qrlblDateRequired.caption := '';
 end;
 
 procedure TfrmwtRPSOrder.qrsdQElementsBeforePrint(Sender: TQRCustomBand;

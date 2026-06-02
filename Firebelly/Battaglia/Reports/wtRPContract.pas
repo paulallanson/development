@@ -347,7 +347,12 @@ begin
   qrlblDrawingNumberMemo.lines.clear;
   qrlblDrawingNumberMemo.lines.add(qryContractLine.fieldbyname('Drawing_Number').asstring);
 
-  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+//  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10;
+
+  gtQRShapeDrawing.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10;
+  if gtQRShapeDrawing.Height < 33 then
+    gtQRShapeDrawing.Height := 33;
+
   with qryContractOption do
     begin
       active := false;
@@ -376,7 +381,10 @@ begin
 
           try
             tmpShape.enabled := true;
-            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+//            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 16) + 10 ;
+            tmpShape.Height := (qrlblDrawingNumberMemo.lines.count * 20) + 10 ;
+            if tmpShape.Height < 33 then
+              tmpShape.Height := 33;
           except
           end;
 

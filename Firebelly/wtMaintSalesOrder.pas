@@ -1692,6 +1692,11 @@ begin
     end
   end;
 
+  if Mode = sopCopy then
+    begin
+      SOrder.ExtraNotes := 0;
+    end;
+
   SOrder.ExtraNotes := UpdateNotes;
   SOrder.MaterialRequired := chkbxMaterialRequired.checked;
   if SOrder.MaterialRequired then
@@ -5481,7 +5486,6 @@ begin
   finally
     frmWTLUCustomerSite.free;
   end;
-
 end;
 
 procedure TfrmWTMaintSalesOrder.btnClearCustomerBranchClick(

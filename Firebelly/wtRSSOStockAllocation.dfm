@@ -24,11 +24,13 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 519
+    ExplicitWidth = 1030
     DesignSize = (
       1036
       41)
     object btnClose: TButton
-      Left = 881
+      Left = 875
       Top = 8
       Width = 75
       Height = 25
@@ -37,6 +39,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       ModalResult = 2
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 869
     end
     object btnAllocate: TButton
       Left = 16
@@ -62,7 +65,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       OnClick = btnExcludeClick
     end
     object btnExcel: TBitBtn
-      Left = 786
+      Left = 780
       Top = 8
       Width = 75
       Height = 25
@@ -85,6 +88,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       NumGlyphs = 2
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitLeft = 774
     end
   end
   object stsBrDetails: TStatusBar
@@ -99,6 +103,8 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Width = 50
       end>
+    ExplicitTop = 560
+    ExplicitWidth = 1030
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -211,6 +217,7 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
     Height = 257
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 1030
     object rdgrpCustomer: TRadioGroup
       Left = 8
       Top = 8
@@ -794,19 +801,6 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
       item
         Name = 'Depth'
       end>
-  end
-  object wtStkDatabase: TFDConnection
-    ConnectionName = 'STK'
-    Params.Strings = (
-      'User Name=readonly'
-      'Password=R34donly4'
-      'ConnectionDef=GSmart'
-      'DriverID=MSSQL')
-    LoginPrompt = False
-    OnError = wtStkDatabaseError
-    BeforeConnect = wtStkDatabaseBeforeConnect
-    Left = 682
-    Top = 96
   end
   object qryUpdSOLine: TFDQuery
     ConnectionName = 'WT'
@@ -1605,5 +1599,18 @@ object frmWTRSSOStockAllocation: TfrmWTRSSOStockAllocation
         Name = 'DEPTH'
         ParamType = ptInput
       end>
+  end
+  object wtStkDatabase: TFDConnection
+    ConnectionName = 'STK'
+    Params.Strings = (
+      'ConnectionDef=GSmart'
+      'User_Name=readonly'
+      'Password=R34donly4'
+      'DriverID=MSSQL')
+    LoginPrompt = False
+    OnError = wtStkDatabaseError
+    BeforeConnect = wtStkDatabaseBeforeConnect
+    Left = 644
+    Top = 92
   end
 end

@@ -726,10 +726,12 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     end
     object qrySIHeaderGridReference: TWideStringField
       FieldName = 'Reference'
+      Size = 50
     end
     object qrySIHeaderGridDescription: TWideStringField
+      DisplayWidth = 100
       FieldName = 'Description'
-      Size = 50
+      Size = 100
     end
     object qrySIHeaderGridIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'

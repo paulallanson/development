@@ -3,20 +3,20 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   Top = 153
   Caption = 'Maintain Slabs'
   ClientHeight = 286
-  ClientWidth = 558
+  ClientWidth = 660
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 267
-    Width = 558
+    Width = 660
     Height = 19
     Panels = <
       item
@@ -25,17 +25,19 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       item
         Width = 50
       end>
+    ExplicitWidth = 558
   end
   object Panel1: TPanel
     Left = 0
     Top = 194
-    Width = 558
+    Width = 660
     Height = 73
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 558
     DesignSize = (
-      558
+      660
       73)
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -78,7 +80,7 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 464
+      Left = 560
       Top = 40
       Width = 75
       Height = 25
@@ -88,6 +90,7 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
       NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
+      ExplicitLeft = 458
     end
     object BitBtn1: TBitBtn
       Left = 272
@@ -103,24 +106,24 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 558
+    Width = 660
     Height = 194
     Align = alClient
     DataSource = dtsSlabs
     DrawingStyle = gdsGradient
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     ParentFont = False
     ReadOnly = True
     TabOrder = 2
-    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Height = -13
+    TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
     Columns = <
@@ -128,28 +131,28 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
         Expanded = False
         FieldName = 'Length'
         Title.Caption = 'Length (mm)'
-        Width = 80
+        Width = 94
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Depth'
         Title.Caption = 'Depth (mm)'
-        Width = 82
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Slab_Size_Description'
         Title.Caption = 'Slab Description'
-        Width = 202
+        Width = 222
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Stock_Code'
         Title.Caption = 'Stock Code'
-        Width = 161
+        Width = 193
         Visible = True
       end
       item
@@ -288,6 +291,7 @@ object frmWTLUWorktopThicknessSlabs: TfrmWTLUWorktopThicknessSlabs
     ParamData = <
       item
         Name = 'GUID'
+        DataType = ftString
       end>
   end
   object qryGetLast: TFDQuery

@@ -4,7 +4,7 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   BorderStyle = bsDialog
   Caption = 'Global change elements'
   ClientHeight = 245
-  ClientWidth = 611
+  ClientWidth = 627
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,13 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 611
+    Width = 627
     Height = 201
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 602
+    ExplicitWidth = 605
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -54,8 +54,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
       Caption = 'Unit price'
     end
     object btnWorktops: TSpeedButton
-      Left = 562
-      Top = 73
+      Left = 594
+      Top = 72
       Width = 23
       Height = 22
       Caption = '...'
@@ -115,7 +115,7 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
     object dblkpWorktop: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 450
+      Width = 481
       Height = 25
       KeyField = 'Worktop'
       ListField = 'Description'
@@ -393,8 +393,8 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   end
   object dtsUPThickness: TDataSource
     DataSet = qryUpThickness
-    Left = 436
-    Top = 64
+    Left = 441
+    Top = 40
   end
   object qryContractWorktops: TFDQuery
     ConnectionName = 'WT'

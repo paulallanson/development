@@ -32,11 +32,6 @@ type
     QRLabel3: TQRLabel;
     QRDBText4: TQRDBText;
     QRLabel5: TQRLabel;
-    QRLabel17: TQRLabel;
-    QRLabel18: TQRLabel;
-    qrlblVAT: TQRLabel;
-    qrlblGross: TQRLabel;
-    qrlblNett: TQRLabel;
     qryEndUser: TFDQuery;
     QRLabel1: TQRLabel;
     QRDBText3: TQRDBText;
@@ -62,9 +57,6 @@ type
     qrlblUnitPrice: TQRLabel;
     qrlblTotalPrice: TQRLabel;
     qrySOLineQuote: TIntegerField;
-    qrlblDeposit: TQRLabel;
-    QRLabel13: TQRLabel;
-    qrlblBalance: TQRLabel;
     QRLabel9: TQRLabel;
     QRLabel12: TQRLabel;
     QRLabel14: TQRLabel;
@@ -86,28 +78,14 @@ type
     gtQRLabel2: TQRLabel;
     gtQRLabel3: TQRLabel;
     QRShape7: TQRShape;
-    QRShape10: TQRShape;
-    QRShape13: TQRShape;
-    QRShape14: TQRShape;
-    QRShape15: TQRShape;
-    gtQRShape7: TQRShape;
     gtQRShape8: TQRShape;
     gtQRShape9: TQRShape;
     gtQRShape10: TQRShape;
     gtQRShape11: TQRShape;
-    gtQRLabel4: TQRLabel;
-    gtQRLabel5: TQRLabel;
-    gtQRLabel6: TQRLabel;
-    QRShape9: TQRShape;
-    qrlblToPay: TQRLabel;
-    gtQRShape12: TQRShape;
-    memPayment: TQRMemo;
-    qrshpPayment: TQRShape;
     qryCompanyAddress: TFDQuery;
     GetNarrSQL: TFDQuery;
     gtQRLabel7: TQRLabel;
     gtQRDBText2: TQRDBText;
-    qrlblDepositTerms: TQRLabel;
     qriHeadLogo: TQRImage;
     qrlblTemplateDate: TQRLabel;
     qrlblDateRequired: TQRLabel;
@@ -131,6 +109,29 @@ type
     qrlblExtraQuantity: TQRDBText;
     qrlblExtraDescription: TQRLabel;
     qryUpSOStatus: TFDQuery;
+    QRBand1: TQRBand;
+    QRShape10: TQRShape;
+    gtQRShape7: TQRShape;
+    QRShape15: TQRShape;
+    QRShape14: TQRShape;
+    QRShape13: TQRShape;
+    qrlblVAT: TQRLabel;
+    qrlblGross: TQRLabel;
+    qrlblNett: TQRLabel;
+    qrlblDeposit: TQRLabel;
+    qrlblBalance: TQRLabel;
+    qrlblToPay: TQRLabel;
+    gtQRShape12: TQRShape;
+    qrshpPayment: TQRShape;
+    QRLabel17: TQRLabel;
+    QRLabel18: TQRLabel;
+    QRLabel13: TQRLabel;
+    gtQRLabel4: TQRLabel;
+    gtQRLabel5: TQRLabel;
+    gtQRLabel6: TQRLabel;
+    memPayment: TQRMemo;
+    qrlblDepositTerms: TQRLabel;
+    QRShape9: TQRShape;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgSalesOrderBeforePrint(Sender: TQRCustomBand;
@@ -515,6 +516,13 @@ end;
 procedure TfrmwtRPSOrder.qrbPageHeaderBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
+  qrlblNett.Caption := '';
+  qrlblVat.Caption := '';
+  qrlblGross.Caption := 'Page to Follow';
+  qrlblToPay.caption := '';
+  qrlblDeposit.caption := '';
+  qrlblBalance.caption := '';
+
   {Set the labels depending on the date type}
   if qryReport.fieldbyname('Date_Type').asstring = 'C' then
     begin

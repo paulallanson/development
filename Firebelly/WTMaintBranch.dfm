@@ -43,8 +43,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 1
-      ExplicitTop = 257
-      ExplicitHeight = 235
+      ExplicitWidth = 512
+      ExplicitHeight = 218
       object TabSheet1: TTabSheet
         Caption = 'Installation Notes'
         object memInstallationNotes: TMemo
@@ -56,7 +56,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           MaxLength = 255
           TabOrder = 0
           ExplicitWidth = 504
-          ExplicitHeight = 198
+          ExplicitHeight = 186
         end
       end
       object TabSheet2: TTabSheet
@@ -93,7 +93,6 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           ParentShowHint = False
           ShowHint = True
           TabOrder = 1
-          ExplicitHeight = 186
           object btnAttach: TToolButton
             Left = 0
             Top = 0
@@ -130,7 +129,6 @@ object frmWTMaintBranch: TfrmWTMaintBranch
           SmallImages = imgDocuments
           TabOrder = 2
           OnDblClick = lstvwDocumentsDblClick
-          ExplicitHeight = 186
         end
       end
     end
@@ -149,7 +147,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         41)
       object btnOK: TBitBtn
         Left = 171
-        Top = 8
+        Top = 6
         Width = 75
         Height = 25
         Anchors = [akLeft, akBottom]
@@ -190,6 +188,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitWidth = 512
       object lblName: TLabel
         Left = 8
         Top = 20

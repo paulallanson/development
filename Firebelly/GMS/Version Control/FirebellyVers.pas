@@ -70,22 +70,9 @@ begin
 	StatusNarr('Checking Firebelly Program') ;
 	CopyIfNewer('firebelly.exe', 'Firebelly Program') ;
 
-	{Do the Scheduling Files} ;
-	StatusNarr('Checking Firebelly Scheduling files') ;
-	CopyIfNewer('FirebellyScheduler.dll', 'Scheduling Program') ;
-	CopyIfNewer('FirebellyScheduler.dll.config', 'Scheduling Program') ;
-	CopyIfNewer('FirebellyScheduler.dll.manifest', 'Scheduling Program') ;
-	CopyIfNewer('FirebellyScheduler.vsto', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Interop.Outlook.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Common.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Common.v4.0.Utilities.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Outlook.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.Office.Tools.v4.0.Framework.dll', 'Scheduling Program') ;
-	CopyIfNewer('Microsoft.VisualStudio.Tools.Applications.Runtime.dll', 'Scheduling Program') ;
-	CopyIfNewer('Office.dll', 'Scheduling Program') ;
-	CopyIfNewer('RGiesecke.DllExport.Metadata.dll', 'Scheduling Program') ;
+	{Do the new Firebelly program associated FireDAC Definition files} ;
+	CopyIfNewer('FDConnectionDefs.ini', 'FireDAC Connection Definitions') ;
+	CopyIfNewer('FDDrivers.ini', 'FireDAC Drivers');
 
 	StrPCopy(FiName, LocalDir + '\Firebelly.exe') ;
 	StrPCopy(DiName ,LocalDir) ;

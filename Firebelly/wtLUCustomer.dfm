@@ -2,8 +2,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   Left = 32
   Top = 77
   Caption = 'Customer details'
-  ClientHeight = 458
-  ClientWidth = 1065
+  ClientHeight = 449
+  ClientWidth = 1059
   Color = clBtnFace
   Constraints.MinHeight = 390
   Constraints.MinWidth = 720
@@ -26,19 +26,19 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object CoolBar1: TCoolBar
     Left = 0
     Top = 41
-    Width = 1065
+    Width = 1059
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1059
+        Width = 1053
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1050
+      Width = 1044
       Height = 40
       ButtonHeight = 40
       ButtonWidth = 73
@@ -124,8 +124,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 439
-    Width = 1065
+    Top = 430
+    Width = 1059
     Height = 19
     Panels = <
       item
@@ -138,8 +138,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object dbgDetails: TDBGrid
     Left = 0
     Top = 85
-    Width = 1065
-    Height = 313
+    Width = 1059
+    Height = 304
     Align = alClient
     DataSource = dtsCustomers
     DrawingStyle = gdsGradient
@@ -154,7 +154,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -273,14 +273,14 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object Panel2: TPanel
     Left = 0
-    Top = 398
-    Width = 1065
+    Top = 389
+    Width = 1059
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     DesignSize = (
-      1065
+      1059
       41)
     object Label1: TLabel
       Left = 8
@@ -325,7 +325,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 961
+      Left = 949
       Top = 8
       Width = 75
       Height = 25
@@ -338,19 +338,19 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1065
+    Width = 1059
     Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 41
-        Width = 1059
+        Width = 1053
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1050
+      Width = 1044
       Height = 41
       Align = alLeft
       BevelOuter = bvNone
@@ -358,7 +358,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1050
+        1044
         41)
       object Label2: TLabel
         Left = 0
@@ -374,7 +374,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         ParentFont = False
       end
       object Label3: TLabel
-        Left = 785
+        Left = 779
         Top = 11
         Width = 88
         Height = 17
@@ -386,9 +386,10 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 785
       end
       object cmbCustomerFilter: TComboBox
-        Left = 879
+        Left = 873
         Top = 7
         Width = 145
         Height = 25

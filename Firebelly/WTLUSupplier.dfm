@@ -2,8 +2,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   Left = 192
   Top = 114
   Caption = 'Suppliers details'
-  ClientHeight = 351
-  ClientWidth = 879
+  ClientHeight = 342
+  ClientWidth = 873
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,20 +22,19 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object CoolBar1: TCoolBar
     Left = 0
     Top = 41
-    Width = 879
+    Width = 873
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 873
+        Width = 867
       end>
-    ExplicitTop = 42
     object ToolBar1: TToolBar
       Left = 11
-      Top = -3
-      Width = 864
+      Top = 0
+      Width = 858
       Height = 40
       Align = alClient
       ButtonHeight = 40
@@ -98,8 +97,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object dbgDetails: TDBGrid
     Left = 0
     Top = 84
-    Width = 879
-    Height = 207
+    Width = 873
+    Height = 198
     Align = alClient
     DataSource = dtsSuppliers
     DrawingStyle = gdsGradient
@@ -113,7 +112,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -183,8 +182,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 332
-    Width = 879
+    Top = 323
+    Width = 873
     Height = 19
     Panels = <
       item
@@ -196,14 +195,12 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object Panel2: TPanel
     Left = 0
-    Top = 291
-    Width = 879
+    Top = 282
+    Width = 873
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 300
-    ExplicitWidth = 885
     object Label1: TLabel
       Left = 8
       Top = 11
@@ -238,7 +235,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       OnClick = btnSearchClick
     end
     object Panel4: TPanel
-      Left = 693
+      Left = 687
       Top = 1
       Width = 185
       Height = 39
@@ -264,22 +261,19 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 879
+    Width = 873
     Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 41
-        Width = 873
+        Width = 867
       end>
-    ExplicitLeft = 1
-    ExplicitTop = 1
-    ExplicitWidth = 877
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 864
+      Width = 858
       Height = 41
       Align = alLeft
       BevelOuter = bvNone

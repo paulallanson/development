@@ -14,16 +14,16 @@ object frmwtRPQuote: TfrmwtRPQuote
   OnCreate = FormCreate
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 168
-    Top = 29
+    Left = 136
+    Top = -907
     Width = 992
-    Height = 1403
+    Height = 1956
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     Functions.Strings = (
@@ -1424,7 +1424,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -1496,7 +1496,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -1568,7 +1568,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         HiresExport = False
@@ -2318,6 +2318,7 @@ object frmwtRPQuote: TfrmwtRPQuote
       Height = 176
       AfterPrint = qrcbAcceptanceHeaderAfterPrint
       AlignToBottom = False
+      BeforePrint = qrcbAcceptanceHeaderBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True

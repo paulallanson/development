@@ -3,7 +3,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   Top = 145
   Caption = 'Maintain Edges'
   ClientHeight = 291
-  ClientWidth = 508
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    508
+    538
     291)
   TextHeight = 17
   object lblDelete: TLabel
@@ -61,13 +61,13 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 508
+    Width = 538
     Height = 233
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 6
+    ExplicitWidth = 502
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -97,7 +97,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       Caption = 'Length'
     end
     object Label7: TLabel
-      Left = 339
+      Left = 379
       Top = 140
       Width = 60
       Height = 17
@@ -118,7 +118,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       Caption = 'Unit Cost'
     end
     object Label6: TLabel
-      Left = 341
+      Left = 381
       Top = 172
       Width = 58
       Height = 17
@@ -132,8 +132,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       Caption = 'Std Sell Price'
     end
     object lblDiscount: TLabel
-      Left = 314
-      Top = 48
+      Left = 352
+      Top = 46
       Width = 99
       Height = 17
       Caption = 'Edge Discount %'
@@ -162,7 +162,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     object dblkpEdge: TDBLookupComboBox
       Left = 96
       Top = 72
-      Width = 350
+      Width = 400
       Height = 25
       KeyField = 'edge_profile'
       ListField = 'description'
@@ -188,7 +188,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       OnChange = edtUnitPriceChange
     end
     object edtTotalPrice: TCREditMoney
-      Left = 406
+      Left = 446
       Top = 136
       Width = 81
       Height = 25
@@ -198,7 +198,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       TabOrder = 6
     end
     object btnEdge: TBitBtn
-      Left = 462
+      Left = 502
       Top = 73
       Width = 25
       Height = 25
@@ -225,7 +225,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       TabOrder = 7
     end
     object edtTotalCost: TCREditMoney
-      Left = 406
+      Left = 446
       Top = 168
       Width = 81
       Height = 25
@@ -246,8 +246,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       OnChange = edtUnitPriceChange
     end
     object edtDiscount: TCREditMoney
-      Left = 424
-      Top = 44
+      Left = 462
+      Top = 42
       Width = 65
       Height = 25
       TabOrder = 10
@@ -271,8 +271,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
   end
   object dtsEdgeType: TDataSource
     DataSet = qryEdgeType
-    Left = 280
-    Top = 18
+    Left = 206
+    Top = 71
   end
   object qryEdgeThickness: TFDQuery
     ConnectionName = 'wt'

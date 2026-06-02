@@ -48,7 +48,6 @@ type
     qryDummy: TFDQuery;
     qryGetGSMStock: TFDQuery;
     qryGetStockCode: TFDQuery;
-    wtStkDatabase: TFDConnection;
     qryUpdSOLine: TFDQuery;
     qryUpdSO: TFDQuery;
     qryGetSalesOrder: TFDQuery;
@@ -75,6 +74,7 @@ type
     btnExcel: TBitBtn;
     qrySalesOrdersOSize: TFDQuery;
     qryGetStockCodeOSize: TFDQuery;
+    wtStkDatabase: TFDConnection;
     procedure btnCloseClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
     procedure rdgrpCustomerClick(Sender: TObject);
@@ -591,6 +591,7 @@ begin
           AllocateOverSizeStock;
 
           messagedlg('Stock allocation is complete.', mtInformation,[mbOk], 0);
+
         end;
     else
         begin

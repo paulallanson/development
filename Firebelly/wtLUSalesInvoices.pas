@@ -132,7 +132,7 @@ var
 begin
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
   if not pnlRevenueCentre.Visible then
-    pnlFooter.Height := 70;
+    pnlFooter.Height := 78;
 
   windowstate := wsMaximized;
 
