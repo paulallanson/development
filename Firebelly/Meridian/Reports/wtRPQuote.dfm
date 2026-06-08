@@ -15,7 +15,7 @@ object frmwtRPQuote: TfrmwtRPQuote
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 192
-    Top = -667
+    Top = 125
     Width = 992
     Height = 1403
     ShowingPreview = False

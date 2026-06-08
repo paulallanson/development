@@ -592,7 +592,7 @@
             <Form>frmWTMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\WTRPJobRemedialSheet.pas">
+        <DCCReference Include="..\Meridian\Reports\WTRPJobRemedialSheet.pas">
             <Form>frmwtRPJobRemedialSheet</Form>
             <FormType>dfm</FormType>
         </DCCReference>
