@@ -165,7 +165,8 @@ uses
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
   Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
-  wtMain in '..\wtMain.pas' {frmWTMain};
+  wtMain in '..\wtMain.pas' {frmWTMain},
+  WTRPJobRemedialSheet in '..\WTRPJobRemedialSheet.pas' {frmwtRPJobRemedialSheet};
 
 {$R *.RES}
 
@@ -176,5 +177,6 @@ begin
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmAllImages, frmAllImages);
+  Application.CreateForm(TfrmwtRPJobRemedialSheet, frmwtRPJobRemedialSheet);
   Application.Run;
 end.
