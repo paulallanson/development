@@ -166,7 +166,7 @@ uses
   CRControls in '..\..\Components\CRPackage\CRControls.pas',
   Shared.DragDrop.Helper in '..\..\Shared\Shared.DragDrop.Helper.pas',
   wtMain in '..\wtMain.pas' {frmWTMain},
-  WTRPJobRemedialSheet in '..\WTRPJobRemedialSheet.pas' {frmwtRPJobRemedialSheet};
+  WTRPJobRemedialSheet in '..\Meridian\Reports\WTRPJobRemedialSheet.pas' {frmwtRPJobRemedialSheet};
 
 {$R *.RES}
 

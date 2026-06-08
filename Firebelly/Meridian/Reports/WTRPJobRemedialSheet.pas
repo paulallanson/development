@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, Printers, StdCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
@@ -12,7 +13,6 @@ type
   TfrmwtRPJobRemedialSheet = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    OldqryReport: TFDQuery;
     dtsReport: TDataSource;
     qryAddress: TFDQuery;
     qryCustomer: TFDQuery;
@@ -36,20 +36,28 @@ type
     QRDBText8: TQRDBText;
     gtQRShape18: TQRShape;
     gtQRShape20: TQRShape;
+    qrrchTextInstallAddress: TQRRichText;
     QRLabel4: TQRLabel;
     QRLabel3: TQRLabel;
     QRDBText2: TQRDBText;
     gtQRShape22: TQRShape;
+    gtQRShape21: TQRShape;
     gtQRLabel14: TQRLabel;
     QRDBText3: TQRDBText;
     QRLabel15: TQRLabel;
+    gtQRLabel15: TQRLabel;
+    QRDBText6: TQRDBText;
     qrlblContact: TQRLabel;
     QRLabel5: TQRLabel;
     QRDBText4: TQRDBText;
+    gtQRShape24: TQRShape;
+    gtQRShape25: TQRShape;
     gtQRShape4: TQRShape;
     gtQRShape26: TQRShape;
     gtQRLabel1: TQRLabel;
     qryJobEdge: TFDQuery;
+    qryJobThickness: TFDQuery;
+    qryJobUpstand: TFDQuery;
     qriHeadLogo: TQRImage;
     gtQRSysData1: TQRSysData;
     gtQRShape12: TQRShape;
@@ -81,74 +89,16 @@ type
     QRSubDetail1: TQRSubDetail;
     gtQRLabel4: TQRLabel;
     gtQRShape6: TQRShape;
+    QRLabel24: TQRLabel;
+    gtQRShape5: TQRShape;
+    OlderqryReport: TFDQuery;
     gtQRDBText1: TQRDBText;
     gtQRDBText3: TQRDBText;
-    gtQRShape5: TQRShape;
-    gtQRShape19: TQRShape;
-    gtQRShape23: TQRShape;
-    gtQRShape28: TQRShape;
-    gtQRShape29: TQRShape;
-    gtQRShape30: TQRShape;
-    gtQRShape31: TQRShape;
-    gtQRShape33: TQRShape;
-    gtQRShape34: TQRShape;
-    gtQRShape35: TQRShape;
-    gtQRShape36: TQRShape;
-    gtQRShape37: TQRShape;
-    gtQRShape38: TQRShape;
-    gtQRLabel22: TQRLabel;
-    gtQRLabel23: TQRLabel;
-    gtQRLabel24: TQRLabel;
-    gtQRLabel25: TQRLabel;
-    gtQRLabel26: TQRLabel;
-    gtQRLabel27: TQRLabel;
-    gtQRLabel28: TQRLabel;
-    gtQRLabel29: TQRLabel;
-    gtQRLabel30: TQRLabel;
-    gtQRLabel31: TQRLabel;
-    gtQRLabel32: TQRLabel;
-    gtQRLabel33: TQRLabel;
-    gtQRShape39: TQRShape;
-    gtQRLabel35: TQRLabel;
-    gtQRShape40: TQRShape;
-    gtQRLabel36: TQRLabel;
-    gtQRLabel37: TQRLabel;
-    gtQRShape41: TQRShape;
-    gtQRLabel44: TQRLabel;
-    gtQRLabel34: TQRLabel;
-    gtQRShape44: TQRShape;
-    gtQRShape45: TQRShape;
-    gtQRLabel45: TQRLabel;
-    gtQRLabel46: TQRLabel;
-    gtQRLabel38: TQRLabel;
-    gtQRLabel39: TQRLabel;
-    gtQRShape42: TQRShape;
-    gtQRShape43: TQRShape;
-    gtQRLabel40: TQRLabel;
-    gtQRLabel41: TQRLabel;
-    gtQRShape46: TQRShape;
-    gtQRShape47: TQRShape;
-    gtQRLabel42: TQRLabel;
-    gtQRLabel43: TQRLabel;
-    gtQRShape48: TQRShape;
-    gtQRShape49: TQRShape;
-    gtQRLabel47: TQRLabel;
-    gtQRShape50: TQRShape;
-    gtQRShape51: TQRShape;
-    gtQRShape52: TQRShape;
-    gtQRShape53: TQRShape;
-    gtQRShape54: TQRShape;
-    gtQRLabel48: TQRLabel;
-    gtQRLabel21: TQRLabel;
-    gtQRShape21: TQRShape;
-    gtQRLabel15: TQRLabel;
-    QRDBText6: TQRDBText;
-    qrrchTextInstallAddress: TQRMemo;
-    qrrchTextRemedialDetails: TQRMemo;
-    qryJobWorktops: TFDQuery;
-    gtQRLabel49: TQRLabel;
     gtQRDBText4: TQRDBText;
+    qryRevenueCentre: TFDQuery;
+    OldqryReport: TFDQuery;
     qryReport: TFDQuery;
+    qrrchTextRemedialDetails: TQRMemo;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;
@@ -161,13 +111,15 @@ type
   private
     sWorktop: string;
     function BuildNotes(const iNotes: integer): string;
+    procedure GetRevenueCentreAddress;
+    procedure GetCompanyAddress;
   public
     Job: integer;
     RemedialNo: integer;
     RemedialOrder: integer;
-    bAccountsCopy: boolean;
     bPreview: boolean;
     bPrintLogo: boolean;
+    bAccountsCopy: boolean;
     bRemedialTemplate: boolean;
     function Getdetails: integer;
   end;
@@ -177,6 +129,8 @@ var
 
 implementation
 
+uses wtDataModule, qrprntr, AllCommon;
+
 {$R *.dfm}
 
 function TfrmwtRPJobRemedialSheet.Getdetails: integer;
@@ -185,7 +139,7 @@ begin
     begin
       close;
       parambyname('Job').asinteger := self.Job;
-      parambyname('Remedial_Number').asinteger := self.RemedialNo;
+//      parambyname('Remedial_Number').asinteger := self.RemedialNo;
       open;
       result := recordcount;
     end;
@@ -196,15 +150,22 @@ procedure TfrmwtRPJobRemedialSheet.qrpJobSheetBeforePrint(Sender: TCustomQuickRe
 var
   icount: integer;
   TempAddress: string;
+  TopMar, BottomMar, LeftMar, RightMar: Double;
+  Copies: Integer;
+  Bin: TQRBin;
+  Size: TQRPaperSize;
+  Duplex: Boolean;
 begin
+  {set the printer to what the user selected}
+  qrpJobSheet.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
+  GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
+  GetPrinterValues(Copies, Bin, Size, Duplex);
+  qrpJobSheet.PrinterSettings.OutputBin := Bin;   {set the output bin the }
+  qrpJobSheet.PrinterSettings.copies := Copies;   {set the number of copies }
+  qrpJobSheet.PrinterSettings.PaperSize := Size;   {set the number of copies }
+
   sWorktop := '';
 
-  with qryJobWorktops do
-    begin
-      close;
-      open;
-    end;
-    
   with qryCompany do
     begin
       close;
@@ -240,36 +201,14 @@ begin
   qrrchTextInstallAddress.lines.add(BuildNotes(qryReport.fieldbyname('Install_Address').asinteger));
 
   {Actual Company Name and address}
-  tempAddress := '';
-  memAddress.lines.clear;
-
-  with qryCompanyAddress do
-    begin
-      close;
-      open;
-    end;
-
-  tempAddress := qryCompanyAddress.fieldbyname('Company_Name').AsString;
-
-  for icount := 1 to 4 do
-  begin
-    if qryCompanyAddress.Fields[icount].AsString = '' then Continue;
-    tempAddress := tempAddress + ', ' + qryCompanyAddress.Fields[icount].AsString;
-  end;
-
-  tempAddress := tempAddress + ' T ' + qryCompanyAddress.Fields[6].AsString;
-  tempAddress := tempAddress + ' F ' + qryCompanyAddress.Fields[7].AsString;
-
-  tempAddress := trim(StringReplace(tempAddress,',','',[]));
-
-  memAddress.lines.add(tempAddress);
-
+  GetCompanyAddress;
 end;
 
 procedure TfrmwtRPJobRemedialSheet.qrgQuoteBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 var
   i: integer;
+  sNewLogo: string;
 begin
   if qryReport.FieldByName('Address').AsInteger <> 0 then
     begin
@@ -294,6 +233,20 @@ begin
   else
     qrlblContact.caption := '';
 
+  if dtmdlWorktops.UseRevenueCentres then
+    begin
+      if qryReport.FieldByName('Revenue_Centre').AsInteger <> 0 then
+        begin
+          sNewLogo := dtmdlWorktops.LoadRevenueCentreLogo(qryReport.FieldByName('Revenue_Centre').AsInteger);
+          qriHeadlogo.picture.loadfromfile(sNewLogo);
+          GetRevenueCentreAddress;
+        end
+      else
+        begin
+          qriHeadlogo.picture.loadfromfile('wtHeadLogo.bmp');
+          GetCompanyAddress;
+        end;
+    end;
 end;
 
 function TfrmwtRPJobRemedialSheet.BuildNotes(const iNotes: integer): string;
@@ -344,9 +297,58 @@ end;
 procedure TfrmwtRPJobRemedialSheet.QRSubDetail1BeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 begin
+  if bRemedialTemplate then
+    exit;
+    
   {Installation Address Details}
   qrrchTextRemedialDetails.lines.clear;
   qrrchTextRemedialDetails.lines.add(BuildNotes(qryReport.fieldbyname('Remedial_Notes').asinteger));
+end;
+
+procedure TfrmwtRPJobRemedialSheet.GetRevenueCentreAddress;
+var
+  i: integer;
+begin
+  memAddress.lines.clear;
+  with qryRevenueCentre do
+    begin
+      close;
+      parambyname('Revenue_Centre').asinteger := qryReport.FieldByName('Revenue_Centre').AsInteger;
+      open;
+
+      memAddress.lines.add(trim(fieldbyname('Registered_Address').asstring));
+    end;
+end;
+
+
+procedure TfrmwtRPJobRemedialSheet.GetCompanyAddress;
+var
+  tempAddress: string;
+  iCount: integer;
+begin
+  tempAddress := '';
+  memAddress.lines.clear;
+
+  with qryCompanyAddress do
+    begin
+      close;
+      open;
+    end;
+
+  tempAddress := qryCompanyAddress.fieldbyname('Company_Name').AsString;
+
+  for icount := 1 to 4 do
+  begin
+    if qryCompanyAddress.Fields[icount].AsString = '' then Continue;
+    tempAddress := tempAddress + ', ' + qryCompanyAddress.Fields[icount].AsString;
+  end;
+
+  tempAddress := tempAddress + ' T ' + qryCompanyAddress.Fields[6].AsString;
+  tempAddress := tempAddress + ' F ' + qryCompanyAddress.Fields[7].AsString;
+
+  tempAddress := trim(StringReplace(tempAddress,',','',[]));
+
+  memAddress.lines.add(tempAddress);
 end;
 
 end.
