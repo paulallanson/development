@@ -6,16 +6,16 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
   ClientHeight = 313
   ClientWidth = 438
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -13
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 16
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 240
@@ -23,7 +23,8 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
     Height = 73
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 224
+    ExplicitTop = 231
+    ExplicitWidth = 432
     DesignSize = (
       438
       73)
@@ -37,7 +38,6 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
       Enabled = False
       TabOrder = 0
       OnClick = btnPrintClick
-      ExplicitTop = 25
     end
     object btnPreview: TButton
       Left = 101
@@ -49,7 +49,6 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
       Enabled = False
       TabOrder = 1
       OnClick = btnPreviewClick
-      ExplicitTop = 25
     end
     object btnEmail: TButton
       Left = 194
@@ -61,7 +60,6 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
       Enabled = False
       TabOrder = 2
       OnClick = btnEmailClick
-      ExplicitTop = 25
     end
     object Button4: TButton
       Left = 312
@@ -72,7 +70,6 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
       Caption = 'Close'
       TabOrder = 3
       OnClick = Button4Click
-      ExplicitTop = 25
     end
     object chkbxAccounts: TCheckBox
       Left = 8
@@ -90,11 +87,12 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
     Height = 65
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 432
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 47
-      Height = 16
+      Width = 46
+      Height = 17
       Caption = 'Job No.'
     end
     object memSelection: TMemo
@@ -114,14 +112,13 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
     Height = 175
     Align = alClient
     TabOrder = 2
-    ExplicitTop = 49
-    ExplicitWidth = 375
-    ExplicitHeight = 171
+    ExplicitWidth = 432
+    ExplicitHeight = 166
     object Label2: TLabel
       Left = 8
       Top = 8
-      Width = 192
-      Height = 16
+      Width = 193
+      Height = 17
       Caption = 'Print additional order documents'
     end
     object lstbxDocuments: TListBox
@@ -129,6 +126,7 @@ object frmWTRSJobSheetPreRem: TfrmWTRSJobSheetPreRem
       Top = 31
       Width = 233
       Height = 129
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
       OnDblClick = lstbxDocumentsDblClick

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, ExtCtrls, QrCtrls, printers, Inifiles;
+  Dialogs, StdCtrls, ShellAPI, ExtCtrls, QrCtrls, printers, Inifiles, wtMain;
 
 type
   TfrmWTRSJobSheetPreRem = class(TForm)
@@ -619,6 +619,7 @@ begin
   frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
   try
     frmWTRPJobRemedialSheet.Job := strtoint(memSelection.text);
+    frmWTRPJobRemedialSheet.RemedialNo := 0;
 
     if (frmWTRPJobRemedialSheet.GetDetails = 0) then
       MessageDlg('There are no job details to print', mtError, [mbAbort], 0)
@@ -923,7 +924,7 @@ procedure TfrmWTRSJobSheetPreRem.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   with IniFile do
     begin
