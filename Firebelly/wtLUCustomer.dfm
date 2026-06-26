@@ -2,8 +2,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   Left = 32
   Top = 77
   Caption = 'Customer details'
-  ClientHeight = 449
-  ClientWidth = 1059
+  ClientHeight = 440
+  ClientWidth = 1053
   Color = clBtnFace
   Constraints.MinHeight = 390
   Constraints.MinWidth = 720
@@ -26,19 +26,19 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object CoolBar1: TCoolBar
     Left = 0
     Top = 41
-    Width = 1059
+    Width = 1053
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1053
+        Width = 1047
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1044
+      Width = 1038
       Height = 40
       ButtonHeight = 40
       ButtonWidth = 73
@@ -124,8 +124,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 430
-    Width = 1059
+    Top = 421
+    Width = 1053
     Height = 19
     Panels = <
       item
@@ -138,8 +138,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object dbgDetails: TDBGrid
     Left = 0
     Top = 85
-    Width = 1059
-    Height = 304
+    Width = 1053
+    Height = 295
     Align = alClient
     DataSource = dtsCustomers
     DrawingStyle = gdsGradient
@@ -269,18 +269,24 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         Title.Caption = 'Level of Importance'
         Width = 130
         Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Credit_Status_Description'
+        Title.Caption = 'Credit Status'
+        Visible = True
       end>
   end
   object Panel2: TPanel
     Left = 0
-    Top = 389
-    Width = 1059
+    Top = 380
+    Width = 1053
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     DesignSize = (
-      1059
+      1053
       41)
     object Label1: TLabel
       Left = 8
@@ -325,7 +331,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 949
+      Left = 937
       Top = 8
       Width = 75
       Height = 25
@@ -338,19 +344,19 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1059
+    Width = 1053
     Height = 41
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 41
-        Width = 1053
+        Width = 1047
       end>
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1044
+      Width = 1038
       Height = 41
       Align = alLeft
       BevelOuter = bvNone
@@ -358,7 +364,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1044
+        1038
         41)
       object Label2: TLabel
         Left = 0
@@ -374,7 +380,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         ParentFont = False
       end
       object Label3: TLabel
-        Left = 779
+        Left = 773
         Top = 11
         Width = 88
         Height = 17
@@ -389,7 +395,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         ExplicitLeft = 785
       end
       object cmbCustomerFilter: TComboBox
-        Left = 873
+        Left = 867
         Top = 7
         Width = 145
         Height = 25
@@ -906,28 +912,43 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object qryDummy: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
-      'SELECT  Customer.*,'
-      '        Customer_Type.Description,'
-      '        Payment_Terms.Payment_Terms_Description,'
-      '        (SELECT top 1 Sales_invoice.Invoice_Date'
-      '         FROM Sales_Invoice'
-      '         WHERE (Sales_invoice.Customer = Customer.Customer) AND'
-      '            (Sales_invoice.Goods_Value > 0)'
+      'SELECT'
+      '    Customer.*,'
+      '    Customer_Type.Description,'
+      '    Payment_Terms.Payment_Terms_Description,'
+      '    ('
+      '        SELECT'
+      '            TOP 1 Sales_invoice.Invoice_Date'
+      '        FROM'
+      '            Sales_Invoice'
+      '        WHERE'
+      '            (Sales_invoice.Customer = Customer.Customer)'
+      '            AND (Sales_invoice.Goods_Value > 0)'
+      '        ORDER BY'
+      '            Sales_Invoice.Sales_Invoice DESC'
+      '    ) AS Last_Sales_Invoice,'
+      '    lop.Importance_Description,'
+      '    lop.Color,'
+      '    lop.Font_Color,'
+      '    Credit_status.Credit_Status_Description'
+      'FROM'
+      '    Credit_status'
+      '    INNER JOIN ('
+      '        Payment_Terms'
+      '        RIGHT JOIN ('
+      '            Customer_Type'
+      '            INNER JOIN ('
+      '                Customer'
       
-        '         ORDER BY Sales_Invoice.Sales_Invoice desc) as Last_Sale' +
-        's_Invoice,'
-      '        lop.Importance_Description,'
-      '        lop.Color,'
-      '        lop.Font_Color'
-      'FROM (Payment_Terms'
-      '      RIGHT JOIN (Customer_Type'
-      '      INNER JOIN Customer'
-      '        ON Customer_Type.Customer_Type = Customer.Customer_type)'
-      '        ON Payment_Terms.Payment_Terms = Customer.Payment_Terms)'
-      '      LEFT JOIN Level_of_Importance lop'
+        '                LEFT JOIN Level_of_Importance AS lop ON Customer' +
+        '.Level_of_Importance = lop.Level_of_Importance'
       
-        '        ON Customer.Level_of_Importance = lop.Level_of_Importanc' +
-        'e'
+        '            ) ON Customer_Type.Customer_Type = Customer.Customer' +
+        '_type'
+      
+        '        ) ON Payment_Terms.Payment_Terms = Customer.Payment_Term' +
+        's'
+      '    ) ON Credit_status.Credit_status = Customer.Credit_status'
       'WHERE'
       '((Not_Active = :Not_Active) or (Not_Active = '#39'N'#39'))'
       ''
