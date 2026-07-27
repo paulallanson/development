@@ -2,8 +2,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   Left = 33
   Top = 115
   Caption = 'Job Bags'
-  ClientHeight = 365
-  ClientWidth = 1182
+  ClientHeight = 356
+  ClientWidth = 1176
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,19 +23,19 @@ object frmPBLUJobs: TfrmPBLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1182
+    Width = 1176
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1176
+        Width = 1170
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1167
+      Width = 1161
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -137,8 +137,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 1182
-    Height = 219
+    Width = 1176
+    Height = 210
     Align = alClient
     DataSource = dtmdlJobs.dtsJobs
     DrawingStyle = gdsGradient
@@ -319,8 +319,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 294
-    Width = 1182
+    Top = 285
+    Width = 1176
     Height = 52
     Align = alBottom
     ParentBackground = False
@@ -341,7 +341,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 908
+      Left = 902
       Top = 1
       Width = 273
       Height = 50
@@ -430,8 +430,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 346
-    Width = 1182
+    Top = 337
+    Width = 1176
     Height = 19
     Panels = <
       item
@@ -447,7 +447,7 @@ object frmPBLUJobs: TfrmPBLUJobs
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1182
+    Width = 1176
     Height = 30
     Align = alTop
     BevelInner = bvLowered

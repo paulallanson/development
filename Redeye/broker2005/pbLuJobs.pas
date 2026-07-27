@@ -561,6 +561,7 @@ begin
     frmpbLuJobsSearch.edtOperator.Text := dtmdlAllJobs.OperatorName;
     frmpbLuJobsSearch.edtEndUser.Text := dtmdlAllJobs.EndUSerName;
     frmpbLuJobsSearch.chkbxShowWIP.checked := dtmdlAllJobs.ShowWIP;
+    frmpbLuJobsSearch.chkbxShowOnHold.checked := dtmdlAllJobs.ShowOnHold;
     frmpbLuJobsSearch.chkbxShowInactive.checked := (dtmdlAllJobs.ShowInactive = 'Y');
 
     frmpbLuJobsSearch.edtDate.Text := pbDateStr(dtmdlAllJobs.JobDate);

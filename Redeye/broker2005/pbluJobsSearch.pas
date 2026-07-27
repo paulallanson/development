@@ -46,6 +46,7 @@ type
     edtSubRep: TEdit;
     Label15: TLabel;
     edtEndUser: TEdit;
+    chkbxShowOnHold: TCheckBox;
     procedure SearchButtonClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnDateClick(Sender: TObject);
@@ -100,6 +101,7 @@ begin
   dtmdlSearchJobs.EndUserName := Trim(edtEndUSer.text);
 
   dtmdlSearchJobs.ShowWIP := chkbxShowWIP.checked;
+  dtmdlSearchJobs.ShowOnHold := chkbxShowOnHold.Checked;
   dtmdlSearchJobs.refreshdata;
   close;
 end;
@@ -158,7 +160,10 @@ var
 begin
   for icount := 0 to pred(componentcount) do
     if components[icount] is TEdit then
-      (components[icount] as TEdit).Text := '';
+      (components[icount] as TEdit).Text := ''
+    else
+    if components[icount] is TCheckBox then
+      (components[icount] as TCheckBox).checked := false;
   searchbuttonclick(self);
 end;
 

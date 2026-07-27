@@ -3,7 +3,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   Top = 70
   BorderStyle = bsDialog
   Caption = 'Jobs Search'
-  ClientHeight = 502
+  ClientHeight = 522
   ClientWidth = 288
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,7 +15,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   OnShow = FormShow
   DesignSize = (
     288
-    502)
+    522)
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -33,7 +33,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object Label12: TLabel
     Left = 120
     Top = 2
-    Width = 159
+    Width = 158
     Height = 13
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
@@ -74,13 +74,13 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   object Label3: TLabel
     Left = 11
     Top = 27
-    Width = 35
+    Width = 36
     Height = 13
     Caption = 'Branch'
   end
   object Label1: TLabel
     Left = 11
-    Top = 348
+    Top = 341
     Width = 72
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -123,11 +123,12 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   end
   object Label10: TLabel
     Left = 11
-    Top = 372
+    Top = 366
     Width = 62
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Required by'
+    ExplicitTop = 397
   end
   object Label11: TLabel
     Left = 11
@@ -166,17 +167,18 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
-    Left = 12
-    Top = 429
+    Left = 11
+    Top = 449
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive jobs'
     TabOrder = 18
+    ExplicitTop = 466
   end
   object SearchButton: TButton
     Left = 12
-    Top = 461
+    Top = 481
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -184,6 +186,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     Default = True
     TabOrder = 19
     OnClick = SearchButtonClick
+    ExplicitTop = 452
   end
   object edtDescription: TEdit
     Left = 120
@@ -208,16 +211,17 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   end
   object edtDate: TEdit
     Left = 120
-    Top = 344
+    Top = 338
     Width = 89
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 13
     OnExit = edtDateExit
+    ExplicitTop = 369
   end
   object btnDate: TBitBtn
     Left = 216
-    Top = 342
+    Top = 336
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -237,6 +241,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     NumGlyphs = 2
     TabOrder = 14
     OnClick = btnDateClick
+    ExplicitTop = 367
   end
   object edtDescriptiveRef: TEdit
     Left = 120
@@ -268,23 +273,25 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   end
   object ClearButton: TButton
     Left = 198
-    Top = 462
+    Top = 482
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 20
     OnClick = ClearButtonClick
+    ExplicitTop = 453
   end
   object chkbxShowWIP: TCheckBox
     Tag = 12
-    Left = 12
-    Top = 406
+    Left = 11
+    Top = 400
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY Work in Progress'
     TabOrder = 17
+    ExplicitTop = 417
   end
   object edtProductionStatus: TEdit
     Left = 120
@@ -295,16 +302,17 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   end
   object edtDateReq: TEdit
     Left = 120
-    Top = 368
+    Top = 362
     Width = 89
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 15
     OnExit = edtDateReqExit
+    ExplicitTop = 393
   end
   object btnDateReq: TBitBtn
     Left = 216
-    Top = 366
+    Top = 360
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -324,6 +332,7 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     NumGlyphs = 2
     TabOrder = 16
     OnClick = btnDateReqClick
+    ExplicitTop = 391
   end
   object edtQuote: TEdit
     Left = 120
@@ -345,5 +354,16 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     Width = 153
     Height = 21
     TabOrder = 12
+  end
+  object chkbxShowOnHold: TCheckBox
+    Tag = 12
+    Left = 11
+    Top = 423
+    Width = 185
+    Height = 17
+    Anchors = [akLeft, akBottom]
+    Caption = 'Show ONLY On Hold'
+    TabOrder = 21
+    ExplicitTop = 440
   end
 end

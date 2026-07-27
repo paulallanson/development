@@ -106,8 +106,7 @@ object frmpbLogin: TfrmpbLogin
     SQL.Strings = (
       'Select * From Operator'
       'Where Login_Name = :Login_Name')
-    Left = 208
-    Top = 32
+    Left = 276
     ParamData = <
       item
         Name = 'Login_Name'
