@@ -34,7 +34,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Caption = 'Name'
   end
   object DelLabel: TLabel
-    Left = 185
+    Left = 179
     Top = 529
     Width = 125
     Height = 13
@@ -46,6 +46,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitLeft = 185
   end
   object Label4: TLabel
     Left = 8
@@ -114,7 +115,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   object Label13: TLabel
     Left = 8
     Top = 62
-    Width = 43
+    Width = 42
     Height = 13
     Caption = 'Job Title'
   end
@@ -130,14 +131,14 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   object LoginEdit: TEdit
     Left = 94
     Top = 8
-    Width = 161
+    Width = 233
     Height = 21
-    MaxLength = 16
+    MaxLength = 30
     TabOrder = 0
     OnChange = LoginEditChange
   end
   object OKBitBtn: TBitBtn
-    Left = 345
+    Left = 339
     Top = 523
     Width = 75
     Height = 25
@@ -211,9 +212,11 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 12
     OnClick = OKBitBtnClick
+    ExplicitLeft = 333
+    ExplicitTop = 514
   end
   object CancelBitBtn: TBitBtn
-    Left = 433
+    Left = 427
     Top = 523
     Width = 75
     Height = 25
@@ -221,6 +224,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 13
+    ExplicitLeft = 421
+    ExplicitTop = 514
   end
   object RepComboBox: TDBLookupComboBox
     Left = 94
@@ -670,7 +675,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     OnChange = NameEditChange
   end
   object ChgPassBitBtn: TBitBtn
-    Left = -4
+    Left = -10
     Top = 522
     Width = 137
     Height = 25
@@ -692,6 +697,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 11
     OnClick = ChgPassBitBtnClick
+    ExplicitLeft = -16
+    ExplicitTop = 513
   end
   object PhoneEdit: TEdit
     Left = 94

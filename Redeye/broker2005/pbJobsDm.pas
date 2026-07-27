@@ -102,6 +102,7 @@ type
     Status, ProductionStatus: string;
     ShowInactive: string;
     ShowInactiveNCA: string;
+    ShowOnHold: boolean;
     ShowOnlyComplete: boolean;
     ShowThisWeek: boolean;
     ShowWIP: boolean;
@@ -300,6 +301,9 @@ begin
   if ShowWIP then
     sTemp := sTemp + ' AND (Job_Bag.Job_Bag_Status < 30)';
 
+  if ShowOnHold then
+    sTemp := sTemp + ' AND (Job_Bag.On_Hold = ''Y'')';
+
   if ShowOnlyComplete then
     sTemp := sTemp + ' AND ((Job_Bag.Production_Complete = ''Y'') AND (Job_Bag.Job_bag_Status < 30))';
 
@@ -358,6 +362,7 @@ begin
             (AccountMgr <> '') or
             (ShowInactive = 'Y') or
             (ShowWIP = true) or
+            (ShowOnHold = true) or
             (EndUserName <> '') or
             (OperatorName <> '') then
     result := true
