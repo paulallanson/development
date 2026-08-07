@@ -1,160 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999-2000
-
-Comments
---------
-  Export to accounts package.
-
-VSS Info:
-$Header: /PBL D5/PBAccExport3.pas 33    2/04/:3 15:52 Paul $
-$History: PBAccExport3.pas $
- * 
- * *****************  Version 33  *****************
- * User: Paul         Date: 2/04/:3    Time: 15:52
- * Updated in $/PBL D5
- * Changed to export Vat only invoices
- * 
- * *****************  Version 32  *****************
- * User: Paul         Date: 10/03/:3   Time: 16:07
- * Updated in $/PBL D5
- * Changed to correct fault in supplier export, only picking up 6 ch's of
- * Account code
- * 
- * *****************  Version 31  *****************
- * User: Pahome       Date: 9/03/:3    Time: 20:52
- * Updated in $/PBL D5
- * added functionality to export supplier credits
- * 
- * *****************  Version 30  *****************
- * User: Paul         Date: 18/02/:3   Time: 17:04
- * Updated in $/PBL D5
- * Changed Purchase export to take any invoice differences into account.
- * Also corrected problem when exporting Sales Invoice not creating an INV
- * file.
- * 
- * *****************  Version 29  *****************
- * User: Paul         Date: 18/02/:3   Time: 10:54
- * Updated in $/PBL D5
- * Corrected to create the sale invoice export file correctly
- * 
- * *****************  Version 28  *****************
- * User: Pahome       Date: 16/02/:3   Time: 23:17
- * Updated in $/PBL D5
- * Changed to write Purchase invoices away to temporary invoice file
- * 
- * *****************  Version 27  *****************
- * User: Paul         Date: 14/02/:3   Time: 17:01
- * Updated in $/PBL D5
- * Changed sequence of Purchase Invoice export file, also had to re-do
- * changes related to sales and purchase invoice extra charges
- * 
- * *****************  Version 26  *****************
- * User: Pahome       Date: 21/01/:3   Time: 17:36
- * Updated in $/PBL D5
- * Changed to set the description.
- * 
- * *****************  Version 25  *****************
- * User: Paul         Date: 9/01/:3    Time: 14:50
- * Updated in $/PBL D5
- * Changed to correct Maximiser import
- *
- * *****************  Version 24  *****************
- * User: Paul         Date: 8/01/:3    Time: 16:20
- * Updated in $/PBL D5
- * Added functionality to import Maximiser contacts
- * 
- * *****************  Version 21  *****************
- * User: Davidn       Date: 25/10/02   Time: 14:34
- * Updated in $/PBL D5
- * Allowed user to specify invoice export file names.
- * 
- * *****************  Version 20  *****************
- * User: Pahome       Date: 3/10/:2    Time: 11:07
- * Updated in $/PBL D5
- * Changed to export one record per invoice. If additional items exist
- * with a different VAT Code then multiple lines are exported.
- * 
- * *****************  Version 19  *****************
- * User: Paul         Date: 23/04/:2   Time: 10:37
- * Updated in $/PBL D5
- * Chnaged export routines to be non-SOP specific.
- * 
- * *****************  Version 18  *****************
- * User: Paul         Date: 19/03/:2   Time: 16:12
- * Updated in $/PBL D5
- * Changed the export to set column D to '1'
- * 
- * *****************  Version 17  *****************
- * User: Paul         Date: 13/03/:2   Time: 14:38
- * Updated in $/PBL D5
- * Corrected Sage export problems related to Additional charges and
- * Credits
- * 
- * *****************  Version 16  *****************
- * User: Paul         Date: 26/10/:1   Time: 17:01
- * Updated in $/PBL D5
- * Added import of Payment from Sage routine
- * 
- * *****************  Version 15  *****************
- * User: Paul         Date: 18/10/:1   Time: 12:38
- * Updated in $/PBL D5
- * Changes to improve the import and export of data to and from Sage Line
- * 50
- * 
- * *****************  Version 14  *****************
- * User: Paul         Date: 1/10/:1    Time: 17:02
- * Updated in $/PBL D5
- * changed so that the export to Sage includes the Supplier Invoice No or
- * the Sales Invoice No.
- * 
- * *****************  Version 13  *****************
- * User: Paul         Date: 8/06/:1    Time: 15:31
- * Updated in $/PBL D5
- * Changed to calculate the VAT Value on Additional charges correctly
- * 
- * *****************  Version 12  *****************
- * User: Paul         Date: 19/09/:0   Time: 16:27
- * Updated in $/PBL D5
- * Changes made to Sage sales and purchase export routines
- * 
- * *****************  Version 11  *****************
- * User: Paul         Date: 15/09/:0   Time: 17:03
- * Updated in $/PBL D5
- * Changed to correct the Sage Purchase/Sales transactions
- * 
- * *****************  Version 10  *****************
- * User: Paul         Date: 8/09/:0    Time: 16:43
- * Updated in $/PBL D5
- * Added functionality to import Sage Customer/Supplier/Currency
- * information
- * 
- * *****************  Version 9  *****************
- * User: Paul         Date: 19/07/:0   Time: 12:05
- * Updated in $/PBL D5
- * Changed to pick up all Supplier Invoices which are at status 25,
- * Pending Update
- * 
- * *****************  Version 8  *****************
- * User: Paul         Date: 17/07/:0   Time: 17:04
- * Updated in $/PBL D5
- * The Purchase invoice Export routine has been corrected to pick up all
- * invoice lines with a status of Passed for Posting, previously the
- * export was trying to pick up records which had a Ledger Posting pending
- * status.
- * 
- * *****************  Version 7  *****************
- * User: Paul         Date: 11/04/:0   Time: 16:18
- * Updated in $/PBL D5
- * Changed to position the Additional Charges in the correct place in the
- * export file
- *
- * *****************  Version 6  *****************
- * User: Roddym       Date: 21/03/:0   Time: 15:05
- * Updated in $/PBL D5
- * Add standard header to new units.
-
-*******************************************************************************)
 unit PBAccExport3;
 
 interface
@@ -4964,6 +4807,7 @@ begin
       sReference := trim(Copy(FieldByName('Supplier_invoice_no').AsString + sfiller, 1, 15));
 
       sLineDescription := dmAccExport.GetPOLineDesc(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+      sLineDescription := trim(StringReplace(StringReplace(sLineDescription, #10, ' ', [rfReplaceAll]), #13, ' ', [rfReplaceAll]));
 
 //      if sReference <> sInvoiceNo then
       if iInvoiceCode <> iNewInvoiceCode then
@@ -4982,13 +4826,13 @@ begin
         end;
 
       {Account Code}
-      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
       else
-        sNomCode := SStrCopy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
+        sNomCode := copy(dmAccExport.CompanySQL.Fieldbyname('Purch_Nom_Def').asstring +
           sfiller, 1, 8);
 
       {Department Number}
@@ -4996,9 +4840,9 @@ begin
 
       {Description}
       if trim(FieldByName('Supp_Inv_alt_ref').AsString) = '' then
-        sDescription := SStrCopy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
+        sDescription := Copy(FieldByName('Purchase_Order').AsString + sfiller, 1, 30)
       else
-        sDescription := SStrCopy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
+        sDescription := Copy(FieldByName('Supp_Inv_alt_ref').AsString + sfiller, 1, 30);
 
       {Set the Goods and Vat Value differences}
       if iInvoiceLine = 1 then
@@ -5036,7 +4880,7 @@ begin
             rQuantity := rQuantity * -1;
         end;
 
-//      sValue := SStrCopy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
+//      sValue := Copy(formatfloat('0.00000', rValue) + sfiller, 1, 20);
 
       {VAT Description}
       sVat_Description := fieldbyname('Purchase_Ledger_Description').asstring;
@@ -5044,14 +4888,14 @@ begin
         sVat_Description := fieldbyname('Vat_Description').asstring;
 
       {VAT Code}
-      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
         rVatValue := fieldbyName('Vat_Value').asfloat * -1
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
-//      sVatValue := SStrCopy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
+//      sVatValue := Copy(formatfloat('0.00000', rVatValue) + sfiller, 1, 20);
 
       {Apply any differences to goods and VAT values}
       rValue := rValue + rGoodsDiff;
@@ -5138,14 +4982,14 @@ begin
 
             {Nominal Code}
             if Trim(FieldByName('Nominal').AsString) <> '' then
-              sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+              sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
             else
-              sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Purchase_Nom_Def').AsString +
+              sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Purch_Nom_Def').AsString +
                 sfiller, 1, 8);
 
             {Nett Amount}
             {See further up for rValue}
-//            sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+//            sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
             {VAT Description}
             sVat_Description := fieldbyname('Purchase_Ledger_Description').asstring;
@@ -5153,7 +4997,7 @@ begin
               sVat_Description := fieldbyname('Vat_Description').asstring;
 
             {VAT Code - already set in main sales invoice line}
-            sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+            sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
             {VAT Amount}
             rVatRate := FieldByName('VAT_Rate').Asfloat;
@@ -5165,7 +5009,7 @@ begin
                 rVatRemainder := 0.00;
               end;
 
-//            sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+//            sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
             inc(iSupplierInv);
             if rValue <> 0 then
@@ -5263,22 +5107,23 @@ begin
 
       {Account Code}
 //      if (FieldByName('Cash_Sales').AsString = 'Y') then
-//        sAcc_code := SStrCopy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
+//        sAcc_code := Copy(dmAccExport.CompanySQL.FieldByName('Cash_Sales_Account_Code').AsString + sfiller, 1, 8)
 //      else
-      sAcc_code := SStrCopy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
+      sAcc_code := Copy(FieldByName('Account_Code').AsString + sfiller, 1, 8);
 
       {Nominal Code}
       if Trim(FieldByName('Nominal').AsString) <> '' then
-        sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+        sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
       else
-        sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+        sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
           sfiller, 1, 8);
 
       {Department Number}
       sDepartment := '1';
 
       {Reference}
-      sOrderReference := SStrCopy(FieldByName('Reference').AsString + sfiller, 1, 15);
+//      sOrderReference := Copy(FieldByName('Reference').AsString + sfiller, 1, 15);
+      sOrderReference := Copy(FieldByName('Cust_Order_No').AsString + sfiller, 1, 15);
 
       {Description}
       if fieldbyname('Purchase_Order').asfloat <> 0 then
@@ -5295,20 +5140,25 @@ begin
           sLineDescription := dmAccExport.GetJBLineDesc(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
         end;
 
-      sLineDescription := sLineDescription + ' (' + fieldbyname('Price_Unit_Description').asstring + ')';
+//      sLineDescription := trim(sLineDescription) + ' ' + fieldbyname('Price_Unit_Description').asstring;
+      sLineDescription := trim(StringReplace(StringReplace(sLineDescription, #10, ' ', [rfReplaceAll]), #13, ' ', [rfReplaceAll])) + ' ' + fieldbyname('Price_Unit_Description').asstring;
 
       rQuantity := FieldByName('Qty_Invoiced').Asinteger;
 
       {Nett Amount}
       if FieldByName('Price_Unit_Factor').AsFloat = 0 then
         begin
-          rValue := FieldByName('Goods_Value').AsFloat;
-          rQuantity := 1;
+//          rValue := FieldByName('Goods_Value').AsFloat;
+//          rQuantity := 1;
+          rValue := FieldByName('Goods_Value').AsFloat/rQuantity;
+//          rQuantity := 1;
         end
       else
         begin
-          rValue := FieldByName('Goods_Value').AsFloat;
-          rQuantity := (FieldByName('Qty_Invoiced').Asinteger / FieldByName('Price_Unit_Factor').AsFloat);
+//          rValue := FieldByName('Goods_Value').AsFloat;
+//          rQuantity := (FieldByName('Qty_Invoiced').Asinteger / FieldByName('Price_Unit_Factor').AsFloat);
+          rValue := (FieldByName('Goods_Value').AsFloat/FieldByName('Price_Unit_Factor').AsFloat);
+//          rQuantity := (FieldByName('Qty_Invoiced').Asinteger);
         end;
 
       if (rValue < 0) and (sPrefix = 'CR-') then
@@ -5318,10 +5168,10 @@ begin
             rQuantity := rQuantity * -1;
         end;
 
-      sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+      sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
       {VAT Code}
-      sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+      sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
       {VAT Amount}
       if fieldbyname('Credit_Type').asstring = 'V' then
@@ -5333,7 +5183,7 @@ begin
       else
         rVatValue := rValue * (FieldByName('VAT_Rate').Asfloat/100);
 
-      sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+      sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
       sVat_Description := fieldbyname('Sales_Ledger_Description').asstring;
 
@@ -5358,7 +5208,7 @@ begin
         dmAccExport.qryUpXeroInvs.Parambyname('Reference').asstring := sOrderReference;
 
         dmAccExport.qryUpXeroInvs.Parambyname('Quantity').asfloat := rQuantity;
-        dmAccExport.qryUpXeroInvs.Parambyname('Unit_Price').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
+        dmAccExport.qryUpXeroInvs.Parambyname('Unit_Price').asfloat := strtofloat(sValue);
 
         dmAccExport.qryUpXeroInvs.Parambyname('Nominal').asstring := sNomCode;
 
@@ -5408,18 +5258,19 @@ begin
 
             {Nominal Code}
             if Trim(FieldByName('Nominal').AsString) <> '' then
-              sNomCode := SStrCopy(FieldByName('Nominal').AsString + sfiller, 1, 8)
+              sNomCode := Copy(FieldByName('Nominal').AsString + sfiller, 1, 8)
             else
-              sNomCode := SStrCopy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
+              sNomCode := Copy(dmAccExport.CompanySQL.FieldByName('Sales_Nom_Def').AsString +
                 sfiller, 1, 8);
 
-            sLineDescription := fieldbyname('Details').asstring;
+//            sLineDescription := trim(fieldbyname('Details').asstring);
+            sLineDescription := trim(StringReplace(StringReplace(fieldbyname('Details').asstring, #10, ' ', [rfReplaceAll]), #13, ' ', [rfReplaceAll]));
 
             rQuantity := 1;
 
             {Nett Amount}
             {See further up for rValue}
-            sValue := SStrCopy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
+            sValue := Copy(formatfloat('0.00000', (rValue)) + sfiller, 1, 20);
 
             {Vat Description}
             sVat_Description := fieldbyname('Sales_Ledger_Description').asstring;
@@ -5428,13 +5279,13 @@ begin
               sVat_Description := fieldbyname('Vat_Description').asstring;
 
             {VAT Code - already set in main sales invoice line}
-            sVat_Code := SStrCopy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
+            sVat_Code := Copy(FieldByName('VAT_Code').AsString + sfiller, 1, 2);
 
             {VAT Amount}
             rVatRate := FieldByName('VAT_Rate').Asfloat;
             rVatValue := rValue * (rVatRate/100);
 
-            sVatValue := SStrCopy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
+            sVatValue := Copy(formatfloat('0.00000', (rVatValue)) + sfiller, 1, 20);
 
             inc(isalesInv);
             if rValue <> 0 then
@@ -5450,7 +5301,7 @@ begin
               dmAccExport.qryUpXeroInvs.Parambyname('Reference').asstring := sOrderReference;
 
               dmAccExport.qryUpXeroInvs.Parambyname('Quantity').asfloat := rQuantity;
-              dmAccExport.qryUpXeroInvs.Parambyname('Unit_Price').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
+              dmAccExport.qryUpXeroInvs.Parambyname('Unit_Price').asfloat := strtofloat(sValue);
 
               dmAccExport.qryUpXeroInvs.Parambyname('Nominal').asstring := sNomCode;
 
@@ -5474,8 +5325,9 @@ begin
         end;
       Next;
     end;
-  end;
 end;
+end;
+
 
 procedure TPBAccExport3Frm.SAPCreateExportFile(ExportType: string);
 var

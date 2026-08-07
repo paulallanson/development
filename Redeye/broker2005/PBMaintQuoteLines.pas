@@ -8,7 +8,7 @@ uses
   ExtCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Samples.Spin;
 
 type
   TPBMaintQuoteLinesFrm = class(TForm)
@@ -69,6 +69,9 @@ type
     btnProdType: TButton;
     Label1: TLabel;
     dblkpProcessGroup: TDBLookupComboBox;
+    spnQuantity: TSpinEdit;
+    Label16: TLabel;
+    Label17: TLabel;
     procedure btnProdTypeClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);

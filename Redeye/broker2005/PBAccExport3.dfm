@@ -2,8 +2,8 @@ object PBAccExport3Frm: TPBAccExport3Frm
   Left = 145
   Top = 140
   Caption = 'Export & Import Wizard'
-  ClientHeight = 289
-  ClientWidth = 337
+  ClientHeight = 280
+  ClientWidth = 331
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText

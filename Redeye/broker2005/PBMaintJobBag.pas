@@ -1815,7 +1815,7 @@ end;
 
 procedure TPBMaintJobBagFrm.CallMaintLines(aMode: TJBLMode);
 var
-  inx : integer;
+  inx, icount : integer;
   irow: integer;
   JobBagLine, JobBagLineCopy : TJobBagLine;
   PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm;
@@ -1937,6 +1937,19 @@ begin
         begin
           if Mode <> jbView then
             begin
+              {Check whether the quantity needs to be cascaded down}
+              if (PBMaintJobBagLinesFrm.spnQuantity.value > 0) then
+                begin
+                  for icount := (inx+1) to (inx+PBMaintJobBagLinesFrm.spnQuantity.value) do
+                    begin
+                      if (JobBag.Lines[icount].JBLineType = 'A') and (not JobBag.Lines[icount].InternalCostLine) then
+                        begin
+                          JobBag.Lines[icount].JBQuantity := JobBag.Lines[inx].JBQuantity;
+                          JobBag.Lines[icount].JBLineCost := PBMaintJobBagLinesFrm.CalculateSellPrice(JobBag.Lines[icount].JBQuantity, JobBag.Lines[icount].PriceUnit, JobBag.Lines[icount].CostPrice);
+                          JobBag.Lines[icount].JBLineSell := PBMaintJobBagLinesFrm.CalculateSellPrice(JobBag.Lines[icount].JBQuantity, JobBag.Lines[icount].PriceUnit, JobBag.Lines[icount].SellPrice);
+                        end;
+                    end;
+                end;
               UpDateInternalCost;
               ShowLineDetails;
               ShowTotals;

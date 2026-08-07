@@ -7,7 +7,7 @@ uses
   Dialogs, DBCtrls, StdCtrls, Buttons, DB, PBJobBagDM, ComCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Samples.Spin;
 
 type
   TPBMaintJobBagLinesFrm = class(TForm)
@@ -52,6 +52,9 @@ type
     edtDescription: TRichEdit;
     btnProducts: TButton;
     btnProdType: TButton;
+    Label9: TLabel;
+    spnQuantity: TSpinEdit;
+    Label10: TLabel;
     procedure btnProdTypeClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
@@ -79,8 +82,6 @@ type
     procedure ShowDetails;
     procedure SetJobBagLine(const Value: TJobBagLine);
     procedure SetMode(const Value: TJBLMode);
-    function CalculateSellPrice(tempQty, tempUnit: integer;
-      tempValue: real): real;
     function GetProductTypeCat(tempCode: integer): integer;
     procedure SetInternalCostLine(const Value: boolean);
     { Private declarations }
@@ -90,6 +91,7 @@ type
     property InternalCostLine: boolean read FInternalCostLine write SetInternalCostLine;
     property JobBagLine : TJobBagLine read FJobBagLine write SetJobBagLine;
     property Mode : TJBLMode read FMode write SetMode;
+    function CalculateSellPrice(tempQty, tempUnit: integer; tempValue: real): real;
   end;
 
 var
