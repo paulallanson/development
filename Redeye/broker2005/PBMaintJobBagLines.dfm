@@ -108,6 +108,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = OKBitBtnClick
+    ExplicitTop = 408
   end
   object CancelBitBtn: TBitBtn
     Left = 413
@@ -118,10 +119,11 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 5
+    ExplicitTop = 408
   end
   object grpbxDetails: TGroupBox
     Left = 8
-    Top = 194
+    Top = 191
     Width = 481
     Height = 167
     ParentBackground = False
@@ -168,6 +170,20 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Height = 13
       Caption = 'Reseller Price'
     end
+    object Label9: TLabel
+      Left = 256
+      Top = 16
+      Width = 122
+      Height = 13
+      Caption = 'Cascade Quantity down'
+    end
+    object Label10: TLabel
+      Left = 431
+      Top = 16
+      Width = 24
+      Height = 13
+      Caption = 'lines'
+    end
     object memQuantity: TMemo
       Left = 104
       Top = 12
@@ -186,7 +202,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Top = 61
       Width = 105
       Height = 21
-      TabOrder = 2
+      TabOrder = 3
       WantReturns = False
       WordWrap = False
       OnChange = memSellPriceChange
@@ -202,7 +218,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
-      TabOrder = 4
+      TabOrder = 5
       OnClick = CheckOK
     end
     object dblkpVat: TDBLookupComboBox
@@ -213,7 +229,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       KeyField = 'Vat_Code'
       ListField = 'VAT_Rate'
       ListSource = dtsVat
-      TabOrder = 5
+      TabOrder = 6
       OnClick = CheckOK
     end
     object memCostPrice: TMemo
@@ -221,7 +237,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Top = 37
       Width = 105
       Height = 21
-      TabOrder = 1
+      TabOrder = 2
       WantReturns = False
       WordWrap = False
       OnChange = memSellPriceChange
@@ -235,20 +251,30 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Width = 97
       Height = 17
       Caption = 'Line Inactive'
-      TabOrder = 6
+      TabOrder = 7
     end
     object memResellerPrice: TMemo
       Left = 104
       Top = 85
       Width = 105
       Height = 21
-      TabOrder = 3
+      TabOrder = 4
       WantReturns = False
       WordWrap = False
       OnChange = memSellPriceChange
       OnEnter = SaveValue
       OnExit = ValidateMoney4DP
       OnKeyPress = CheckKeyIsFloat
+    end
+    object spnQuantity: TSpinEdit
+      Left = 385
+      Top = 12
+      Width = 40
+      Height = 22
+      MaxValue = 1000
+      MinValue = 0
+      TabOrder = 1
+      Value = 0
     end
   end
   object grpbxInternalCost: TGroupBox
@@ -305,7 +331,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     object Label8: TLabel
       Left = 8
       Top = 52
-      Width = 66
+      Width = 65
       Height = 13
       Caption = 'Product Type'
     end
@@ -445,8 +471,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     SQL.Strings = (
       'select * from Product_Type'
       'where Product_Type = :Product_Type')
-    Left = 312
-    Top = 168
+    Left = 296
+    Top = 88
     ParamData = <
       item
         Name = 'Product_Type'

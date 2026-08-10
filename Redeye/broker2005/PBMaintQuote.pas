@@ -1795,7 +1795,7 @@ end;
 
 procedure TPBMaintQuoteFrm.CallMaintLines(aMode: TqlMode);
 var
-  inx : integer;
+  inx, icount : integer;
   irow: integer;
   QuoteLine : TQuoteLIne;
   PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm;
@@ -1855,6 +1855,19 @@ begin
       begin
         if Mode <> qView then
           begin
+            {Check whether the quantity needs to be cascaded down}
+            if (PBMaintQuoteLinesFrm.spnQuantity.value > 0) then
+              begin
+                for icount := (inx+1) to (inx+PBMaintQuoteLinesFrm.spnQuantity.value) do
+                  begin
+                    if (not Quote.Lines[icount].InternalCostLine) then
+                      begin
+                        Quote.Lines[icount].Quantity := Quote.Lines[inx].Quantity;
+//                        Quote.Lines[icount].JBLineCost := PBMaintQuoteLinesFrm.CalculateSellPrice(Quote.Lines[icount].JBQuantity, Quote.Lines[icount].PriceUnit, Quote.Lines[icount].CostPrice);
+//                        Quote.Lines[icount].JBLineSell := PBMaintQuoteLinesFrm.CalculateSellPrice(Quote.Lines[icount].JBQuantity, Quote.Lines[icount].PriceUnit, Quote.Lines[icount].SellPrice);
+                      end;
+                  end;
+              end;
             UpDateInternalCost;
             ShowLines;
             ShowTotals;

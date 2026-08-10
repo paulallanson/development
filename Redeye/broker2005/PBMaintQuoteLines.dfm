@@ -100,7 +100,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
-    TabOrder = 3
+    TabOrder = 4
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
@@ -110,7 +110,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Height = 25
     Kind = bkCancel
     NumGlyphs = 2
-    TabOrder = 4
+    TabOrder = 5
   end
   object grpbxDetails: TGroupBox
     Left = 8
@@ -118,7 +118,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Width = 489
     Height = 339
     ParentBackground = False
-    TabOrder = 5
+    TabOrder = 1
     object Label2: TLabel
       Left = 8
       Top = 161
@@ -155,14 +155,14 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Caption = 'Suggested Sell Price'
     end
     object Label9: TLabel
-      Left = 251
+      Left = 235
       Top = 187
       Width = 120
       Height = 13
       Caption = 'Direct Cost + Overhead'
     end
     object Label10: TLabel
-      Left = 285
+      Left = 277
       Top = 213
       Width = 78
       Height = 13
@@ -182,12 +182,26 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Height = 13
       Caption = 'Reseller Price'
     end
+    object Label16: TLabel
+      Left = 266
+      Top = 161
+      Width = 89
+      Height = 13
+      Caption = 'Cascade Quantity'
+    end
+    object Label17: TLabel
+      Left = 414
+      Top = 160
+      Width = 24
+      Height = 13
+      Caption = 'lines'
+    end
     object memQuantity: TMemo
       Left = 112
       Top = 157
       Width = 105
       Height = 21
-      TabOrder = 2
+      TabOrder = 0
       WantReturns = False
       WordWrap = False
       OnChange = CheckOK
@@ -200,7 +214,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 183
       Width = 105
       Height = 21
-      TabOrder = 4
+      TabOrder = 1
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -216,7 +230,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
-      TabOrder = 0
+      TabOrder = 5
       OnClick = CheckOK
     end
     object memASPrice: TMemo
@@ -224,7 +238,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 235
       Width = 105
       Height = 21
-      TabOrder = 8
+      TabOrder = 3
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -237,7 +251,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 209
       Width = 105
       Height = 21
-      TabOrder = 6
+      TabOrder = 2
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -250,7 +264,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 183
       Width = 105
       Height = 21
-      TabOrder = 1
+      TabOrder = 8
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -263,7 +277,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 209
       Width = 105
       Height = 21
-      TabOrder = 3
+      TabOrder = 9
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
@@ -279,7 +293,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = dtsVat
-      TabOrder = 5
+      TabOrder = 6
       OnClick = CheckOK
     end
     object memResellerPrice: TMemo
@@ -287,13 +301,23 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Top = 259
       Width = 105
       Height = 21
-      TabOrder = 7
+      TabOrder = 4
       WantReturns = False
       WordWrap = False
       OnChange = memCostPriceChange
       OnEnter = SaveValue
       OnExit = ValidateMoney4DP
       OnKeyPress = CheckKeyIsFloat
+    end
+    object spnQuantity: TSpinEdit
+      Left = 368
+      Top = 156
+      Width = 40
+      Height = 22
+      MaxValue = 0
+      MinValue = 0
+      TabOrder = 7
+      Value = 0
     end
   end
   object grpbxWorkCentre: TGroupBox
@@ -302,7 +326,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Width = 489
     Height = 73
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 3
     object Label3: TLabel
       Left = 352
       Top = 47
@@ -386,7 +410,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Width = 489
     Height = 41
     ParentBackground = False
-    TabOrder = 1
+    TabOrder = 2
     object Label15: TLabel
       Left = 8
       Top = 16
@@ -504,8 +528,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       'select *'
       'from Price_unit'
       'order by Description')
-    Left = 328
-    Top = 216
+    Left = 232
+    Top = 256
   end
   object qryProcessGroup: TFDQuery
     ConnectionName = 'pb'
@@ -544,8 +568,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     SQL.Strings = (
       'select * from Product_Type'
       'where Product_Type = :Product_Type')
-    Left = 320
-    Top = 136
+    Left = 208
+    Top = 40
     ParamData = <
       item
         Name = 'Product_Type'
