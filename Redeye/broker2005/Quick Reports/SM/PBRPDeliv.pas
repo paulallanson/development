@@ -73,10 +73,9 @@ type
     GetPickCallOffSQL: TFDQuery;
     lblDelNote: TQRLabel;
     imgReport: TQRImage;
-    qrmRegOffice: TQRMemo;
-    gtQRImage2: TQRImage;
     qrmRegNumber: TQRMemo;
-    QRMemo1: TQRMemo;
+    qrmRegOffice: TQRMemo;
+    qrmVatNumber: TQRMemo;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -314,6 +313,15 @@ begin
 
   imgReport.Picture := PBImagesFrm.ReportImage.Picture;
   imgReport.Enabled := true;
+
+  qrmRegNumber.Lines.clear;
+  qrmRegOffice.lines.clear;
+  qrmVATNumber.lines.clear;
+
+  qrmRegNumber.Lines.Append(CompSQL.fieldbyname('Company_Name').asstring + ', Registered in England & Wales Company Registration No: ' + CompSQL.fieldbyname('Company_Reg_No').asstring);
+  qrmRegOffice.lines.Append('Registered office: ' + CompSQL.fieldbyname('Registered_Office_Address').asstring);
+  qrmVATNumber.lines.Append('VAT Registration Number: ' + CompSQL.fieldbyname('VAT_Registration_No').asstring);
+
 end;
 
 procedure TPBRPDelivFrm.BuildDeliveryNotes(aQuery: TFDQuery;

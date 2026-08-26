@@ -462,17 +462,17 @@ var
   i, iLines: integer;
 begin
   iLines := 0;
-  qrmAnswer.Height := 17;
+  qrmAnswer.Height := 21;
   for i := pred(qrmAnswer.Lines.Count) downto 0 do
     qrmAnswer.Lines.Delete(i);
 
   qrmAnswer.Lines.add(qryWOProcessQ.fieldbyname('Process_Answer').asstring);
 
   iLines := qrmAnswer.Lines.count;
-  qrmAnswer.Height := (iLines * 17);
-  qrsubdetail1.Height := qrmAnswer.Height + 4;
-  gtqrshape2.Height := qrmAnswer.Height + 4;
-  gtqrshape3.Height := qrmAnswer.Height + 4;
+  qrmAnswer.Height := (iLines * 21);
+  qrsubdetail1.Height := qrmAnswer.Height + 6;
+  gtqrshape2.Height := qrmAnswer.Height + 6;
+  gtqrshape3.Height := qrmAnswer.Height + 6;
 //  gtqrshape4.Height := qrmAnswer.Height + 4;
 //  gtqrshape5.Height := qrmAnswer.Height + 4;
 //  gtqrshape6.Height := qrmAnswer.Height + 4;

@@ -576,8 +576,8 @@ begin
   GetUserName(Addr(TempUser), TempUserSize);
   stsbrMainMenu.Panels[0].Text := TempUser;
 
-  sSoft_Version := '2023';
-  sSoft_subVersion := '/Nov27a';
+  sSoft_Version := '2026';
+  sSoft_subVersion := '/Aug25a';
 
   {Search the INI file for Activity Interval}
   {This method used for backward compatibility with WIN95}
@@ -2334,7 +2334,7 @@ begin
         Application.Terminate
       else
         begin
-          if (Username = 'sa') or (Username = 'paulal') then
+          if (Username = 'sa') or (Username = 'paul') or (Username = 'paul-redeye') or (Username = 'paul.admin') then
             mnuLicenceActivation.Visible := true
           else
             begin

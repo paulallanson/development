@@ -10,13 +10,13 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 24
-    Top = -24
-    Width = 794
-    Height = 1123
+    Left = 96
+    Top = -256
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -74,30 +74,30 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
     PreviewLeft = 0
     PreviewTop = 0
     object qrbPageHeader: TQRBand
-      Left = 26
-      Top = 38
-      Width = 730
-      Height = 299
+      Left = 33
+      Top = 47
+      Width = 912
+      Height = 374
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        791.104166666666700000
-        1931.458333333333000000)
+        791.633333333333300000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblQuoteCaption: TQRLabel
-        Left = 8
+        Left = 10
         Top = 0
-        Width = 364
-        Height = 40
+        Width = 465
+        Height = 50
         Size.Values = (
           105.833333333333300000
           21.166666666666670000
           0.000000000000000000
-          963.083333333333300000)
+          984.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -107,7 +107,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -32
+        Font.Height = -40
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -118,14 +118,14 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 24
       end
       object QRLabel2: TQRLabel
-        Left = 159
-        Top = 93
-        Width = 32
-        Height = 19
+        Left = 199
+        Top = 116
+        Width = 40
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          420.687500000000000000
-          246.062500000000000000
+          50.800000000000000000
+          421.216666666666700000
+          245.533333333333300000
           84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -136,7 +136,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -147,15 +147,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRDBText1: TQRDBText
-        Left = 200
-        Top = 93
-        Width = 65
-        Height = 19
+        Left = 250
+        Top = 116
+        Width = 81
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           529.166666666666700000
-          246.062500000000000000
-          171.979166666666700000)
+          245.533333333333300000
+          171.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -166,7 +166,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Date_Point'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -179,15 +179,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 612
-        Top = 3
-        Width = 227
-        Height = 26
+        Left = 768
+        Top = 4
+        Width = 295
+        Height = 33
         Size.Values = (
-          68.791666666666670000
-          1619.250000000000000000
-          7.937500000000000000
-          600.604166666666700000)
+          69.850000000000000000
+          1625.600000000000000000
+          8.466666666666667000
+          624.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -198,7 +198,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Works_Order_Number'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -211,15 +211,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 16
       end
       object QRLabel3: TQRLabel
-        Left = 482
-        Top = 4
-        Width = 67
-        Height = 26
+        Left = 603
+        Top = 5
+        Width = 89
+        Height = 33
         Size.Values = (
-          68.791666666666670000
-          1275.291666666667000000
+          69.850000000000000000
+          1276.350000000000000000
           10.583333333333330000
-          177.270833333333300000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -229,7 +229,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -240,15 +240,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 16
       end
       object QRLabel5: TQRLabel
-        Left = 479
-        Top = 36
-        Width = 72
-        Height = 17
+        Left = 603
+        Top = 45
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1267.354166666667000000
+          44.450000000000000000
+          1276.350000000000000000
           95.250000000000000000
-          190.500000000000000000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -258,7 +258,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -269,10 +269,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRDBText5: TQRDBText
-        Left = 80
-        Top = 38
-        Width = 401
-        Height = 19
+        Left = 100
+        Top = 48
+        Width = 501
+        Height = 24
         Size.Values = (
           50.270833333333330000
           211.666666666666700000
@@ -290,7 +290,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -303,15 +303,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 12
       end
       object QRLabel1: TQRLabel
-        Left = 8
-        Top = 38
-        Width = 64
-        Height = 19
+        Left = 10
+        Top = 48
+        Width = 82
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           21.166666666666670000
-          100.541666666666700000
-          169.333333333333300000)
+          101.600000000000000000
+          173.566666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -321,7 +321,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -332,15 +332,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 12
       end
       object gtQRDBText1: TQRDBText
-        Left = 612
-        Top = 36
-        Width = 97
-        Height = 17
+        Left = 768
+        Top = 45
+        Width = 123
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1619.250000000000000000
+          44.450000000000000000
+          1625.600000000000000000
           95.250000000000000000
-          256.645833333333300000)
+          260.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -351,7 +351,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Version_Number'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -364,15 +364,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRShape1: TQRShape
-        Left = 8
-        Top = 117
-        Width = 721
-        Height = 168
+        Left = 10
+        Top = 145
+        Width = 901
+        Height = 210
         Size.Values = (
           444.500000000000000000
           21.166666666666670000
-          309.562500000000000000
-          1907.645833333333000000)
+          306.916666666666700000
+          1907.116666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -382,15 +382,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel1: TQRLabel
-        Left = 16
-        Top = 237
-        Width = 92
-        Height = 17
+        Left = 20
+        Top = 296
+        Width = 118
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
-          627.062500000000000000
-          243.416666666666700000)
+          626.533333333333300000
+          249.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -400,7 +400,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -411,15 +411,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRLabel3: TQRLabel
-        Left = 482
-        Top = 61
-        Width = 108
-        Height = 26
+        Left = 603
+        Top = 76
+        Width = 140
+        Height = 33
         Size.Values = (
-          68.791666666666670000
-          1275.291666666667000000
-          161.395833333333300000
-          285.750000000000000000)
+          69.850000000000000000
+          1276.350000000000000000
+          160.866666666666700000
+          296.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -429,7 +429,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -440,15 +440,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 16
       end
       object gtQRLabel4: TQRLabel
-        Left = 482
-        Top = 87
-        Width = 130
-        Height = 26
+        Left = 603
+        Top = 109
+        Width = 172
+        Height = 33
         Size.Values = (
-          68.791666666666670000
-          1275.291666666667000000
-          230.187500000000000000
-          343.958333333333300000)
+          69.850000000000000000
+          1276.350000000000000000
+          230.716666666666700000
+          364.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -458,7 +458,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -469,15 +469,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 16
       end
       object gtQRLabel5: TQRLabel
-        Left = 392
-        Top = 237
-        Width = 90
-        Height = 17
+        Left = 490
+        Top = 296
+        Width = 115
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1037.166666666667000000
-          627.062500000000000000
-          238.125000000000000000)
+          626.533333333333300000
+          243.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -487,7 +487,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -498,15 +498,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRLabel6: TQRLabel
-        Left = 392
-        Top = 260
-        Width = 90
-        Height = 17
+        Left = 490
+        Top = 325
+        Width = 114
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1037.166666666667000000
           687.916666666666700000
-          238.125000000000000000)
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -516,7 +516,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -527,15 +527,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRDBText2: TQRDBText
-        Left = 120
-        Top = 237
-        Width = 116
-        Height = 17
+        Left = 150
+        Top = 296
+        Width = 141
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           317.500000000000000000
-          627.062500000000000000
-          306.916666666666700000)
+          626.533333333333300000
+          298.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -546,7 +546,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Estimated_Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -559,15 +559,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRDBText3: TQRDBText
-        Left = 612
-        Top = 60
-        Width = 105
-        Height = 26
+        Left = 768
+        Top = 75
+        Width = 134
+        Height = 33
         Size.Values = (
-          68.791666666666670000
-          1619.250000000000000000
+          69.850000000000000000
+          1625.600000000000000000
           158.750000000000000000
-          277.812500000000000000)
+          283.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -578,7 +578,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Date_start'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -591,15 +591,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 16
       end
       object gtQRDBText4: TQRDBText
-        Left = 612
-        Top = 87
-        Width = 150
-        Height = 26
+        Left = 768
+        Top = 109
+        Width = 195
+        Height = 33
         Size.Values = (
-          68.791666666666670000
-          1619.250000000000000000
-          230.187500000000000000
-          396.875000000000000000)
+          69.850000000000000000
+          1625.600000000000000000
+          230.716666666666700000
+          412.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -610,7 +610,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Date_Required'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -623,15 +623,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 16
       end
       object gtQRDBText5: TQRDBText
-        Left = 496
-        Top = 260
-        Width = 130
-        Height = 17
+        Left = 613
+        Top = 325
+        Width = 166
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1312.333333333333000000
+          44.450000000000000000
+          1297.516666666667000000
           687.916666666666700000
-          343.958333333333300000)
+          351.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -642,7 +642,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Previous_WO_number'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -655,15 +655,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRDBText6: TQRDBText
-        Left = 496
-        Top = 236
-        Width = 88
-        Height = 19
+        Left = 613
+        Top = 295
+        Width = 112
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1312.333333333333000000
+          50.800000000000000000
+          1297.516666666667000000
           624.416666666666700000
-          232.833333333333300000)
+          237.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -674,7 +674,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Cust_Order_no'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -687,15 +687,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRLabel2: TQRLabel
-        Left = 16
-        Top = 260
-        Width = 94
-        Height = 17
+        Left = 20
+        Top = 325
+        Width = 123
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           687.916666666666700000
-          248.708333333333300000)
+          260.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -705,7 +705,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -716,15 +716,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRDBText8: TQRDBText
-        Left = 120
-        Top = 259
-        Width = 130
-        Height = 19
+        Left = 150
+        Top = 324
+        Width = 166
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           317.500000000000000000
-          685.270833333333300000
-          343.958333333333300000)
+          685.800000000000000000
+          351.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -735,7 +735,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Is_Perso_100_percent'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -748,15 +748,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRLabel8: TQRLabel
-        Left = 7
-        Top = 93
-        Width = 72
-        Height = 19
+        Left = 9
+        Top = 116
+        Width = 92
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          18.520833333333330000
-          246.062500000000000000
-          190.500000000000000000)
+          50.800000000000000000
+          19.050000000000000000
+          245.533333333333300000
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -766,7 +766,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -777,15 +777,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRDBText9: TQRDBText
-        Left = 88
-        Top = 93
-        Width = 51
-        Height = 19
+        Left = 110
+        Top = 116
+        Width = 66
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           232.833333333333300000
-          246.062500000000000000
-          134.937500000000000000)
+          245.533333333333300000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -796,7 +796,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Job_Bag'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -809,15 +809,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 19
-        Top = 126
-        Width = 65
-        Height = 20
+        Left = 24
+        Top = 158
+        Width = 84
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          50.270833333333330000
-          333.375000000000000000
-          171.979166666666700000)
+          50.800000000000000000
+          334.433333333333300000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -827,7 +827,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -838,10 +838,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrmAddress: TQRMemo
-        Left = 99
-        Top = 126
-        Width = 262
-        Height = 96
+        Left = 124
+        Top = 158
+        Width = 327
+        Height = 120
         Size.Values = (
           254.000000000000000000
           261.937500000000000000
@@ -856,7 +856,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -866,15 +866,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRLabel10: TQRLabel
-        Left = 392
-        Top = 126
-        Width = 53
-        Height = 17
+        Left = 490
+        Top = 158
+        Width = 69
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1037.166666666667000000
-          333.375000000000000000
-          140.229166666666700000)
+          334.433333333333300000
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -884,7 +884,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -895,15 +895,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRLabel7: TQRLabel
-        Left = 392
-        Top = 147
-        Width = 73
-        Height = 17
+        Left = 490
+        Top = 184
+        Width = 88
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1037.166666666667000000
-          388.937500000000000000
-          193.145833333333300000)
+          389.466666666666700000
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -913,7 +913,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -924,15 +924,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRLabel8: TQRLabel
-        Left = 392
-        Top = 168
-        Width = 29
-        Height = 17
+        Left = 490
+        Top = 210
+        Width = 35
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1037.166666666667000000
           444.500000000000000000
-          76.729166666666670000)
+          74.083333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -942,7 +942,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -953,15 +953,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRLabel9: TQRLabel
-        Left = 392
-        Top = 189
-        Width = 41
-        Height = 17
+        Left = 490
+        Top = 236
+        Width = 49
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1037.166666666667000000
-          500.062500000000000000
-          108.479166666666700000)
+          499.533333333333300000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -971,7 +971,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -982,15 +982,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRLabel4: TQRLabel
-        Left = 392
-        Top = 209
-        Width = 88
-        Height = 19
+        Left = 490
+        Top = 261
+        Width = 108
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           1037.166666666667000000
-          552.979166666666700000
-          232.833333333333300000)
+          552.450000000000000000
+          228.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1000,7 +1000,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1011,15 +1011,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrlblContactName: TQRLabel
-        Left = 496
-        Top = 126
-        Width = 104
-        Height = 17
+        Left = 613
+        Top = 158
+        Width = 129
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1312.333333333333000000
-          333.375000000000000000
-          275.166666666666700000)
+          44.450000000000000000
+          1297.516666666667000000
+          334.433333333333300000
+          273.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1029,7 +1029,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1040,15 +1040,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrlblTelephone: TQRLabel
-        Left = 496
-        Top = 147
-        Width = 84
-        Height = 17
+        Left = 613
+        Top = 184
+        Width = 106
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1312.333333333333000000
-          388.937500000000000000
-          222.250000000000000000)
+          44.450000000000000000
+          1297.516666666667000000
+          389.466666666666700000
+          224.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1058,7 +1058,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1069,15 +1069,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrlblFax: TQRLabel
-        Left = 496
-        Top = 168
-        Width = 47
-        Height = 17
+        Left = 613
+        Top = 210
+        Width = 57
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1312.333333333333000000
+          44.450000000000000000
+          1297.516666666667000000
           444.500000000000000000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1087,7 +1087,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1098,15 +1098,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrlblEmail: TQRLabel
-        Left = 496
-        Top = 189
-        Width = 58
-        Height = 17
+        Left = 613
+        Top = 236
+        Width = 71
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1312.333333333333000000
-          500.062500000000000000
-          153.458333333333300000)
+          44.450000000000000000
+          1297.516666666667000000
+          499.533333333333300000
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1116,7 +1116,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1127,15 +1127,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object QRDBText3: TQRDBText
-        Left = 496
-        Top = 209
-        Width = 127
-        Height = 19
+        Left = 613
+        Top = 261
+        Width = 161
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1312.333333333333000000
-          552.979166666666700000
-          336.020833333333300000)
+          50.800000000000000000
+          1297.516666666667000000
+          552.450000000000000000
+          340.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1146,7 +1146,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Office_Contact_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1159,10 +1159,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRShape9: TQRShape
-        Left = 8
-        Top = 224
-        Width = 721
-        Height = 11
+        Left = 10
+        Top = 280
+        Width = 901
+        Height = 14
         Size.Values = (
           29.104166666666670000
           21.166666666666670000
@@ -1176,10 +1176,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape10: TQRShape
-        Left = 376
-        Top = 118
-        Width = 9
-        Height = 111
+        Left = 470
+        Top = 148
+        Width = 11
+        Height = 139
         Size.Values = (
           293.687500000000000000
           994.833333333333400000
@@ -1193,15 +1193,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel13: TQRLabel
-        Left = 216
-        Top = 237
-        Width = 70
-        Height = 17
+        Left = 270
+        Top = 296
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           571.500000000000000000
-          627.062500000000000000
-          185.208333333333300000)
+          626.533333333333300000
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1211,7 +1211,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1222,15 +1222,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRDBText11: TQRDBText
-        Left = 290
-        Top = 237
-        Width = 94
-        Height = 17
+        Left = 363
+        Top = 296
+        Width = 115
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          767.291666666666700000
-          627.062500000000000000
-          248.708333333333300000)
+          44.450000000000000000
+          768.350000000000000000
+          626.533333333333300000
+          243.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1241,7 +1241,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Actual_Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1255,18 +1255,18 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrgWOrder: TQRGroup
-      Left = 26
-      Top = 337
-      Width = 730
-      Height = 2
+      Left = 33
+      Top = 421
+      Width = 912
+      Height = 3
       AlignToBottom = False
       BeforePrint = qrgWOrderBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
-        1931.458333333333000000)
+        6.350000000000000000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'works_order'
@@ -1275,18 +1275,18 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       ReprintOnNewPage = False
     end
     object qrsdtlProcesses: TQRSubDetail
-      Left = 26
-      Top = 385
-      Width = 730
-      Height = 2
+      Left = 33
+      Top = 481
+      Width = 912
+      Height = 3
       AfterPrint = qrsdtlProcessesAfterPrint
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        5.291666666666667000
-        1931.458333333333000000)
+        6.350000000000000000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -1295,18 +1295,18 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       PrintIfEmpty = True
     end
     object qrGrpProcesses: TQRGroup
-      Left = 26
-      Top = 339
-      Width = 730
-      Height = 46
+      Left = 34
+      Top = 424
+      Width = 912
+      Height = 57
       AlignToBottom = False
       BeforePrint = qrGrpProcessesBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        121.708333333333300000
-        1931.458333333333000000)
+        120.650000000000000000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'Process_no'
@@ -1314,15 +1314,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       Master = qrsdtlProcesses
       ReprintOnNewPage = False
       object gtProcess: TQRDBText
-        Left = 8
-        Top = 3
-        Width = 128
-        Height = 17
+        Left = 10
+        Top = 4
+        Width = 164
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          7.937500000000000000
-          338.666666666666700000)
+          8.466666666666667000
+          347.133333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1333,7 +1333,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Process_Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -1346,15 +1346,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtQRDBText10: TQRDBText
-        Left = 68
-        Top = 26
-        Width = 118
-        Height = 17
+        Left = 97
+        Top = 34
+        Width = 140
+        Height = 18
         Size.Values = (
-          44.979166666666670000
-          179.916666666666700000
-          68.791666666666670000
-          312.208333333333300000)
+          38.100000000000000000
+          205.316666666666700000
+          71.966666666666670000
+          296.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1365,7 +1365,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Target_Receipt_Date'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1378,15 +1378,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 9
       end
       object gtQRLabel9: TQRLabel
-        Left = 6
-        Top = 26
-        Width = 68
-        Height = 17
+        Left = 8
+        Top = 33
+        Width = 87
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          15.875000000000000000
-          68.791666666666670000
-          179.916666666666700000)
+          44.450000000000000000
+          16.933333333333330000
+          69.850000000000000000
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1396,7 +1396,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -1407,15 +1407,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrlblProcessSize: TQRLabel
-        Left = 174
-        Top = 3
-        Width = 88
-        Height = 17
+        Left = 218
+        Top = 4
+        Width = 112
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          460.375000000000000000
-          7.937500000000000000
-          232.833333333333300000)
+          44.450000000000000000
+          461.433333333333300000
+          8.466666666666667000
+          237.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1425,7 +1425,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -1436,15 +1436,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtdbTextRunTime: TQRDBText
-        Left = 268
-        Top = 26
-        Width = 53
-        Height = 17
+        Left = 335
+        Top = 33
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          709.083333333333400000
-          68.791666666666680000
-          140.229166666666700000)
+          44.450000000000000000
+          709.083333333333300000
+          69.850000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1456,7 +1456,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'No_of_hours'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1469,15 +1469,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 9
       end
       object gtlblRunTime: TQRLabel
-        Left = 164
-        Top = 26
-        Width = 97
-        Height = 17
+        Left = 202
+        Top = 33
+        Width = 124
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          433.916666666666700000
-          68.791666666666670000
-          256.645833333333300000)
+          44.450000000000000000
+          427.566666666666700000
+          69.850000000000000000
+          262.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1487,7 +1487,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -1498,15 +1498,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtlblTeamSize: TQRLabel
-        Left = 326
-        Top = 26
-        Width = 63
-        Height = 17
+        Left = 408
+        Top = 33
+        Width = 79
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          862.541666666666700000
-          68.791666666666670000
-          166.687500000000000000)
+          44.450000000000000000
+          863.600000000000000000
+          69.850000000000000000
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1516,7 +1516,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1527,15 +1527,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 9
       end
       object gtdbtextTeamSize: TQRDBText
-        Left = 396
-        Top = 26
-        Width = 37
-        Height = 17
+        Left = 495
+        Top = 33
+        Width = 46
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1047.750000000000000000
-          68.791666666666680000
-          97.895833333333340000)
+          69.850000000000000000
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1547,7 +1547,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Team_Count'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1560,15 +1560,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 9
       end
       object gtlblMAchineGroup: TQRLabel
-        Left = 455
-        Top = 3
-        Width = 102
-        Height = 17
+        Left = 571
+        Top = 4
+        Width = 126
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1203.854166666667000000
-          7.937500000000000000
-          269.875000000000000000)
+          44.450000000000000000
+          1208.616666666667000000
+          8.466666666666667000
+          266.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1578,7 +1578,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -1589,10 +1589,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtdbtextMachineGroup: TQRDBText
-        Left = 564
-        Top = 3
-        Width = 165
-        Height = 17
+        Left = 705
+        Top = 4
+        Width = 206
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1492.250000000000000000
@@ -1609,7 +1609,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Work_Centre_Group_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1622,15 +1622,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 9
       end
       object gtlblMachine: TQRLabel
-        Left = 498
-        Top = 26
-        Width = 59
-        Height = 17
+        Left = 626
+        Top = 33
+        Width = 71
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1317.625000000000000000
-          68.791666666666670000
-          156.104166666666700000)
+          44.450000000000000000
+          1325.033333333333000000
+          69.850000000000000000
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1640,7 +1640,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -1651,15 +1651,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object gtdbTextMachine: TQRDBText
-        Left = 564
-        Top = 26
-        Width = 165
-        Height = 17
+        Left = 705
+        Top = 33
+        Width = 206
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1492.250000000000000000
-          68.791666666666680000
-          436.562499999999900000)
+          69.850000000000000000
+          436.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1671,7 +1671,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Work_Centre_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1685,10 +1685,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrbGrpProcessFooter: TQRBand
-      Left = 26
-      Top = 407
-      Width = 730
-      Height = 24
+      Left = 33
+      Top = 512
+      Width = 912
+      Height = 30
       AfterPrint = qrbGrpProcessFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbGrpProcessFooterBeforePrint
@@ -1697,20 +1697,20 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
-        1931.458333333333000000)
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object gtQRLabel7: TQRLabel
-        Left = 8
-        Top = 5
-        Width = 40
-        Height = 17
+        Left = 10
+        Top = 6
+        Width = 53
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          13.229166666666670000
-          105.833333333333300000)
+          12.700000000000000000
+          112.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1720,7 +1720,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1731,10 +1731,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrMemoProcessNotes: TQRMemo
-        Left = 56
-        Top = 5
-        Width = 665
-        Height = 17
+        Left = 70
+        Top = 6
+        Width = 831
+        Height = 21
         Size.Values = (
           44.979166666666670000
           148.166666666666700000
@@ -1748,6 +1748,12 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         AutoSize = False
         AutoStretch = True
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Lato'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
@@ -1755,18 +1761,24 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 26
-      Top = 387
-      Width = 730
-      Height = 20
+      Left = 33
+      Top = 484
+      Width = 912
+      Height = 28
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
       TransparentBand = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Lato'
+      Font.Style = []
       ForceNewColumn = False
       ForceNewPage = False
+      ParentFont = False
       Size.Values = (
-        52.916666666666670000
-        1931.458333333333000000)
+        59.266666666666670000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrsdtlProcesses
@@ -1774,13 +1786,13 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       PrintBefore = False
       PrintIfEmpty = True
       object gtQRShape2: TQRShape
-        Left = 1
+        Left = 0
         Top = 0
-        Width = 728
-        Height = 20
+        Width = 910
+        Height = 27
         Size.Values = (
-          52.916666666666670000
-          2.645833333333333000
+          57.150000000000000000
+          0.000000000000000000
           0.000000000000000000
           1926.166666666667000000)
         XLColumn = 0
@@ -1791,10 +1803,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape3: TQRShape
-        Left = 177
+        Left = 221
         Top = 0
-        Width = 9
-        Height = 20
+        Width = 11
+        Height = 25
         Size.Values = (
           52.916666666666660000
           468.312500000000100000
@@ -1809,10 +1821,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object qrmAnswer: TQRRichText
-        Left = 184
-        Top = 2
-        Width = 537
-        Height = 17
+        Left = 230
+        Top = 3
+        Width = 671
+        Height = 21
         Size.Values = (
           44.979166666666670000
           486.833333333333400000
@@ -1826,7 +1838,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWindow
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         HiresExport = False
@@ -1834,10 +1846,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         YIncrement = 50
       end
       object gtQRDBText12: TQRDBText
-        Left = 8
-        Top = 2
-        Width = 169
-        Height = 17
+        Left = 10
+        Top = 3
+        Width = 211
+        Height = 21
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
@@ -1852,6 +1864,12 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         DataSet = qryWOProcessQ
         DataField = 'Question_text'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Lato'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1862,32 +1880,32 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrgrpDelivery: TQRGroup
-      Left = 26
-      Top = 431
-      Width = 730
-      Height = 46
+      Left = 33
+      Top = 542
+      Width = 912
+      Height = 57
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       LinkBand = qrsdtlDelivery
       Size.Values = (
-        121.708333333333300000
-        1931.458333333333000000)
+        120.650000000000000000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrsdtlDelivery
       ReprintOnNewPage = False
       object gtQRLabel14: TQRLabel
-        Left = 8
-        Top = 4
-        Width = 106
-        Height = 17
+        Left = 10
+        Top = 5
+        Width = 133
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           10.583333333333330000
-          280.458333333333300000)
+          281.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1897,7 +1915,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -1909,9 +1927,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
       object gtQRShape12: TQRShape
         Left = 0
-        Top = 26
-        Width = 729
-        Height = 20
+        Top = 33
+        Width = 911
+        Height = 25
         Size.Values = (
           52.916666666666660000
           0.000000000000000000
@@ -1926,10 +1944,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape13: TQRShape
-        Left = 160
-        Top = 26
-        Width = 9
-        Height = 19
+        Left = 200
+        Top = 33
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           423.333333333333300000
@@ -1944,10 +1962,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel15: TQRLabel
-        Left = 10
-        Top = 29
-        Width = 150
-        Height = 15
+        Left = 12
+        Top = 36
+        Width = 188
+        Height = 19
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
@@ -1963,7 +1981,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -1974,15 +1992,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRLabel16: TQRLabel
-        Left = 170
-        Top = 29
-        Width = 38
-        Height = 15
+        Left = 213
+        Top = 36
+        Width = 43
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          449.791666666666700000
-          76.729166666666670000
-          100.541666666666700000)
+          40.216666666666670000
+          450.850000000000000000
+          76.200000000000000000
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1992,7 +2010,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2003,10 +2021,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape14: TQRShape
-        Left = 304
-        Top = 26
-        Width = 9
-        Height = 19
+        Left = 380
+        Top = 33
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           804.333333333333300000
@@ -2021,10 +2039,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape5: TQRShape
-        Left = 513
-        Top = 26
-        Width = 9
-        Height = 19
+        Left = 641
+        Top = 33
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           1357.312500000000000000
@@ -2039,10 +2057,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel10: TQRLabel
-        Left = 319
-        Top = 29
-        Width = 195
-        Height = 15
+        Left = 399
+        Top = 36
+        Width = 244
+        Height = 19
         Size.Values = (
           39.687500000000000000
           844.020833333333300000
@@ -2058,7 +2076,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2069,10 +2087,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRLabel11: TQRLabel
-        Left = 524
-        Top = 28
-        Width = 200
-        Height = 15
+        Left = 655
+        Top = 35
+        Width = 250
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1386.416666666667000000
@@ -2088,7 +2106,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2100,10 +2118,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrsdtlDelivery: TQRSubDetail
-      Left = 26
-      Top = 477
-      Width = 730
-      Height = 92
+      Left = 33
+      Top = 599
+      Width = 912
+      Height = 115
       AlignToBottom = False
       BeforePrint = qrsdtlDeliveryBeforePrint
       TransparentBand = False
@@ -2111,7 +2129,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       ForceNewPage = False
       Size.Values = (
         243.416666666666700000
-        1931.458333333333000000)
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -2119,10 +2137,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       PrintBefore = False
       PrintIfEmpty = True
       object gtQRShape18: TQRShape
-        Left = 518
-        Top = 40
-        Width = 212
-        Height = 21
+        Left = 648
+        Top = 50
+        Width = 265
+        Height = 26
         Size.Values = (
           55.562500000000000000
           1370.541666666667000000
@@ -2136,10 +2154,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape17: TQRShape
-        Left = 310
-        Top = 40
-        Width = 210
-        Height = 21
+        Left = 387
+        Top = 50
+        Width = 262
+        Height = 26
         Size.Values = (
           55.562500000000000000
           820.208333333333300000
@@ -2153,10 +2171,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object QRShape6: TQRShape
-        Left = 310
-        Top = 20
-        Width = 211
-        Height = 21
+        Left = 387
+        Top = 25
+        Width = 264
+        Height = 26
         Size.Values = (
           55.562500000000000000
           820.208333333333300000
@@ -2171,10 +2189,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape16: TQRShape
-        Left = 165
-        Top = 40
-        Width = 145
-        Height = 21
+        Left = 206
+        Top = 50
+        Width = 181
+        Height = 26
         Size.Values = (
           55.562500000000000000
           436.562500000000000000
@@ -2188,10 +2206,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object QRShape5: TQRShape
-        Left = 165
-        Top = 20
-        Width = 145
-        Height = 21
+        Left = 206
+        Top = 25
+        Width = 181
+        Height = 26
         Size.Values = (
           55.562500000000000000
           436.562500000000000000
@@ -2207,9 +2225,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
       object gtQRShape15: TQRShape
         Left = 1
-        Top = 40
-        Width = 164
-        Height = 21
+        Top = 50
+        Width = 205
+        Height = 26
         Size.Values = (
           55.562500000000000000
           2.645833333333333000
@@ -2224,9 +2242,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
       object QRShape4: TQRShape
         Left = 1
-        Top = 20
-        Width = 164
-        Height = 21
+        Top = 25
+        Width = 205
+        Height = 26
         Size.Values = (
           55.562500000000000000
           2.645833333333333000
@@ -2243,8 +2261,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       object gtQRShape19: TQRShape
         Left = 0
         Top = 0
-        Width = 730
-        Height = 20
+        Width = 912
+        Height = 25
         Size.Values = (
           52.916666666666660000
           0.000000000000000000
@@ -2258,10 +2276,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRDBText16: TQRDBText
-        Left = 318
-        Top = 43
-        Width = 195
-        Height = 15
+        Left = 398
+        Top = 54
+        Width = 244
+        Height = 19
         Size.Values = (
           39.687500000000000000
           841.375000000000000000
@@ -2278,7 +2296,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Package_Size_descr'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2291,10 +2309,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object QRShape2: TQRShape
-        Left = 457
-        Top = 60
-        Width = 109
-        Height = 21
+        Left = 571
+        Top = 75
+        Width = 136
+        Height = 26
         Size.Values = (
           55.562500000000000000
           1209.145833333333000000
@@ -2309,10 +2327,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape26: TQRShape
-        Left = 320
-        Top = 60
-        Width = 138
-        Height = 21
+        Left = 400
+        Top = 75
+        Width = 173
+        Height = 26
         Size.Values = (
           55.562500000000000000
           846.666666666666700000
@@ -2326,10 +2344,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRDBText19: TQRDBText
-        Left = 170
-        Top = 43
-        Width = 130
-        Height = 15
+        Left = 213
+        Top = 54
+        Width = 162
+        Height = 19
         Size.Values = (
           39.687500000000000000
           449.791666666666700000
@@ -2346,7 +2364,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Qty_to_Deliver'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2359,10 +2377,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRDBText13: TQRDBText
-        Left = 10
-        Top = 3
-        Width = 150
-        Height = 15
+        Left = 12
+        Top = 4
+        Width = 188
+        Height = 19
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
@@ -2379,7 +2397,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Courier_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2392,10 +2410,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRDBText14: TQRDBText
-        Left = 10
-        Top = 43
-        Width = 150
-        Height = 15
+        Left = 12
+        Top = 54
+        Width = 188
+        Height = 19
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
@@ -2412,7 +2430,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Delivery_Date'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2425,10 +2443,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape21: TQRShape
-        Left = 304
+        Left = 380
         Top = 0
-        Width = 9
-        Height = 19
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           804.333333333333300000
@@ -2443,10 +2461,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRDBText15: TQRDBText
-        Left = 170
-        Top = 3
-        Width = 130
-        Height = 15
+        Left = 213
+        Top = 4
+        Width = 162
+        Height = 19
         Size.Values = (
           39.687500000000000000
           449.791666666666700000
@@ -2463,7 +2481,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Service_Short_Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2476,10 +2494,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRDBText17: TQRDBText
-        Left = 524
-        Top = 43
-        Width = 200
-        Height = 15
+        Left = 655
+        Top = 54
+        Width = 250
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1386.416666666667000000
@@ -2496,7 +2514,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'package_weight_gms'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2509,10 +2527,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 200
-        Top = 60
-        Width = 121
-        Height = 21
+        Left = 250
+        Top = 75
+        Width = 151
+        Height = 26
         Size.Values = (
           55.562500000000000000
           529.166666666666700000
@@ -2527,15 +2545,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel24: TQRLabel
-        Left = 210
-        Top = 63
-        Width = 99
-        Height = 15
+        Left = 262
+        Top = 79
+        Width = 120
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          555.625000000000000000
-          166.687500000000000000
-          261.937500000000000000)
+          40.216666666666670000
+          554.566666666666700000
+          167.216666666666700000
+          254.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2545,7 +2563,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2556,15 +2574,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRLabel25: TQRLabel
-        Left = 474
-        Top = 63
-        Width = 72
-        Height = 15
+        Left = 593
+        Top = 79
+        Width = 87
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1254.125000000000000000
-          166.687500000000000000
-          190.500000000000000000)
+          40.216666666666670000
+          1255.183333333333000000
+          167.216666666666700000
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2574,7 +2592,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2585,10 +2603,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object qrlblAccountCode: TQRLabel
-        Left = 329
-        Top = 63
-        Width = 97
-        Height = 15
+        Left = 411
+        Top = 79
+        Width = 121
+        Height = 19
         Size.Values = (
           39.687500000000000000
           870.479166666666700000
@@ -2604,7 +2622,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2615,10 +2633,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape28: TQRShape
-        Left = 565
-        Top = 60
-        Width = 165
-        Height = 21
+        Left = 706
+        Top = 75
+        Width = 206
+        Height = 26
         Size.Values = (
           55.562500000000000000
           1494.895833333333000000
@@ -2632,10 +2650,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object qrlblAccountName: TQRLabel
-        Left = 578
-        Top = 63
-        Width = 143
-        Height = 15
+        Left = 723
+        Top = 79
+        Width = 179
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1529.291666666667000000
@@ -2651,7 +2669,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2663,9 +2681,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
       object QRShape3: TQRShape
         Left = 1
-        Top = 60
-        Width = 96
-        Height = 21
+        Top = 75
+        Width = 120
+        Height = 26
         Size.Values = (
           55.562500000000000000
           2.645833333333333000
@@ -2680,15 +2698,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel17: TQRLabel
-        Left = 10
-        Top = 63
-        Width = 77
-        Height = 15
+        Left = 12
+        Top = 79
+        Width = 97
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          166.687500000000000000
-          203.729166666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          167.216666666666700000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2698,7 +2716,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2709,10 +2727,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape4: TQRShape
-        Left = 96
-        Top = 60
-        Width = 106
-        Height = 21
+        Left = 120
+        Top = 75
+        Width = 132
+        Height = 26
         Size.Values = (
           55.562500000000000000
           254.000000000000000000
@@ -2726,15 +2744,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtlblPayment: TQRLabel
-        Left = 104
-        Top = 63
-        Width = 61
-        Height = 15
+        Left = 130
+        Top = 79
+        Width = 77
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           275.166666666666700000
-          166.687500000000000000
-          161.395833333333300000)
+          167.216666666666700000
+          162.983333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2744,7 +2762,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2755,10 +2773,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape6: TQRShape
-        Left = 513
+        Left = 641
         Top = 0
-        Width = 10
-        Height = 19
+        Width = 12
+        Height = 24
         Size.Values = (
           50.270833333333330000
           1357.312500000000000000
@@ -2773,10 +2791,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRDBText7: TQRDBText
-        Left = 318
-        Top = 3
-        Width = 195
-        Height = 15
+        Left = 398
+        Top = 4
+        Width = 244
+        Height = 19
         Size.Values = (
           39.687500000000000000
           841.375000000000000000
@@ -2793,7 +2811,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Sort_Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2806,10 +2824,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRDBText18: TQRDBText
-        Left = 524
-        Top = 3
-        Width = 200
-        Height = 15
+        Left = 655
+        Top = 4
+        Width = 250
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1386.416666666667000000
@@ -2826,7 +2844,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Speed_Description'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2839,10 +2857,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape20: TQRShape
-        Left = 160
+        Left = 200
         Top = 0
-        Width = 9
-        Height = 19
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           423.333333333333300000
@@ -2857,10 +2875,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel19: TQRLabel
-        Left = 318
-        Top = 22
-        Width = 195
-        Height = 15
+        Left = 398
+        Top = 27
+        Width = 244
+        Height = 19
         Size.Values = (
           39.687500000000000000
           841.375000000000000000
@@ -2876,7 +2894,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2887,10 +2905,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRLabel20: TQRLabel
-        Left = 10
-        Top = 22
-        Width = 150
-        Height = 15
+        Left = 12
+        Top = 27
+        Width = 188
+        Height = 19
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
@@ -2906,7 +2924,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2917,10 +2935,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRLabel21: TQRLabel
-        Left = 170
-        Top = 22
-        Width = 130
-        Height = 15
+        Left = 213
+        Top = 27
+        Width = 162
+        Height = 19
         Size.Values = (
           39.687500000000000000
           449.791666666666700000
@@ -2936,7 +2954,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2947,10 +2965,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object QRShape7: TQRShape
-        Left = 518
-        Top = 20
-        Width = 211
-        Height = 21
+        Left = 648
+        Top = 25
+        Width = 264
+        Height = 26
         Size.Values = (
           55.562500000000000000
           1370.541666666667000000
@@ -2965,10 +2983,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel18: TQRLabel
-        Left = 524
-        Top = 22
-        Width = 200
-        Height = 15
+        Left = 655
+        Top = 27
+        Width = 250
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1386.416666666667000000
@@ -2984,7 +3002,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -2996,32 +3014,32 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrchildDelivery: TQRChildBand
-      Left = 26
-      Top = 569
-      Width = 730
-      Height = 23
+      Left = 33
+      Top = 714
+      Width = 912
+      Height = 29
       AlignToBottom = False
       Enabled = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        60.854166666666670000
-        1931.458333333333000000)
+        61.383333333333330000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrsdtlDelivery
       PrintOrder = cboAfterParent
       object gtQRLabel22: TQRLabel
-        Left = 8
-        Top = 4
-        Width = 77
-        Height = 17
+        Left = 10
+        Top = 5
+        Width = 95
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           10.583333333333330000
-          203.729166666666700000)
+          201.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3031,7 +3049,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -3042,10 +3060,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrmDeliveryAddress: TQRMemo
-        Left = 99
-        Top = 5
-        Width = 262
-        Height = 17
+        Left = 124
+        Top = 6
+        Width = 328
+        Height = 21
         Size.Values = (
           44.979166666666670000
           261.937500000000000000
@@ -3061,7 +3079,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3072,31 +3090,31 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrgfWOrder: TQRBand
-      Left = 26
-      Top = 657
-      Width = 730
-      Height = 45
+      Left = 33
+      Top = 824
+      Width = 912
+      Height = 56
       AfterPrint = qrgfWOrderAfterPrint
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        119.062500000000000000
-        1931.458333333333000000)
+        118.533333333333300000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object gtQRLabel23: TQRLabel
-        Left = 8
-        Top = 5
-        Width = 109
-        Height = 17
+        Left = 10
+        Top = 6
+        Width = 136
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          13.229166666666670000
-          288.395833333333300000)
+          12.700000000000000000
+          287.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3106,7 +3124,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -3117,10 +3135,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrMemoNotes: TQRMemo
-        Left = 8
-        Top = 25
-        Width = 716
-        Height = 17
+        Left = 10
+        Top = 31
+        Width = 895
+        Height = 21
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
@@ -3134,6 +3152,12 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         AutoSize = False
         AutoStretch = True
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Lato'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         FullJustify = False
         MaxBreakChars = 0
@@ -3141,10 +3165,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object QRBand1: TQRBand
-      Left = 26
-      Top = 745
-      Width = 730
-      Height = 40
+      Left = 33
+      Top = 934
+      Width = 912
+      Height = 50
       Frame.DrawTop = True
       AlignToBottom = False
       TransparentBand = False
@@ -3152,20 +3176,20 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        1931.458333333333000000)
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageFooter
       object gtQRLabel12: TQRLabel
-        Left = 8
-        Top = 13
-        Width = 168
-        Height = 17
+        Left = 10
+        Top = 16
+        Width = 211
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          34.395833333333330000
-          444.500000000000000000)
+          33.866666666666670000
+          446.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3175,7 +3199,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -3186,15 +3210,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrlblPaymentTerms: TQRLabel
-        Left = 184
-        Top = 13
-        Width = 113
-        Height = 17
+        Left = 230
+        Top = 16
+        Width = 140
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           486.833333333333300000
-          34.395833333333330000
-          298.979166666666700000)
+          33.866666666666670000
+          296.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3202,6 +3226,12 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         AlignToBand = False
         Caption = 'qrlblPaymentTerms'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Lato'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -3210,31 +3240,31 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object QRGroup1: TQRGroup
-      Left = 26
-      Top = 592
-      Width = 730
-      Height = 46
+      Left = 33
+      Top = 743
+      Width = 912
+      Height = 57
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        121.708333333333300000
-        1931.458333333333000000)
+        120.650000000000000000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrsdtPOrders
       ReprintOnNewPage = False
       object gtQRLabel26: TQRLabel
-        Left = 8
-        Top = 4
-        Width = 147
-        Height = 17
+        Left = 10
+        Top = 5
+        Width = 184
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           10.583333333333330000
-          388.937500000000000000)
+          389.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3244,7 +3274,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -3256,9 +3286,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
       object gtQRShape7: TQRShape
         Left = 0
-        Top = 26
-        Width = 729
-        Height = 20
+        Top = 33
+        Width = 911
+        Height = 25
         Size.Values = (
           52.916666666666660000
           0.000000000000000000
@@ -3273,15 +3303,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel27: TQRLabel
-        Left = 10
-        Top = 29
-        Width = 55
-        Height = 15
+        Left = 12
+        Top = 36
+        Width = 69
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          76.729166666666670000
-          145.520833333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          76.200000000000000000
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3291,7 +3321,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3302,10 +3332,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape8: TQRShape
-        Left = 80
-        Top = 26
-        Width = 9
-        Height = 19
+        Left = 100
+        Top = 33
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           211.666666666666700000
@@ -3320,15 +3350,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel28: TQRLabel
-        Left = 314
-        Top = 29
-        Width = 55
-        Height = 15
+        Left = 393
+        Top = 36
+        Width = 66
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          830.791666666666700000
-          76.729166666666670000
-          145.520833333333300000)
+          40.216666666666670000
+          831.850000000000000000
+          76.200000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3338,7 +3368,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3349,10 +3379,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape11: TQRShape
-        Left = 649
-        Top = 26
-        Width = 9
-        Height = 19
+        Left = 811
+        Top = 33
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           1717.145833333333000000
@@ -3367,15 +3397,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel29: TQRLabel
-        Left = 660
-        Top = 29
-        Width = 41
-        Height = 15
+        Left = 825
+        Top = 36
+        Width = 50
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1746.250000000000000000
-          76.729166666666670000
-          108.479166666666700000)
+          76.200000000000000000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3385,7 +3415,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3396,10 +3426,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape31: TQRShape
-        Left = 304
-        Top = 26
-        Width = 9
-        Height = 19
+        Left = 380
+        Top = 33
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           804.333333333333200000
@@ -3414,15 +3444,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRLabel30: TQRLabel
-        Left = 90
-        Top = 29
-        Width = 40
-        Height = 15
+        Left = 113
+        Top = 36
+        Width = 48
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          238.125000000000000000
-          76.729166666666670000
-          105.833333333333300000)
+          40.216666666666670000
+          239.183333333333300000
+          76.200000000000000000
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3432,7 +3462,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3444,17 +3474,17 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrsdtPOrders: TQRSubDetail
-      Left = 26
-      Top = 638
-      Width = 730
-      Height = 19
+      Left = 33
+      Top = 800
+      Width = 912
+      Height = 24
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        50.270833333333330000
-        1931.458333333333000000)
+        50.800000000000000000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -3464,13 +3494,13 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       object gtQRShape29: TQRShape
         Left = 0
         Top = 0
-        Width = 730
-        Height = 20
+        Width = 912
+        Height = 25
         Size.Values = (
-          52.916666666666660000
+          52.916666666666670000
           0.000000000000000000
           0.000000000000000000
-          1931.458333333333000000)
+          1930.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3479,15 +3509,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRDBText20: TQRDBText
-        Left = 10
-        Top = 3
-        Width = 81
-        Height = 15
+        Left = 12
+        Top = 4
+        Width = 95
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          7.937500000000000000
-          214.312500000000000000)
+          40.216666666666670000
+          25.400000000000000000
+          8.466666666666667000
+          201.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3498,7 +3528,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Purchase_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3511,10 +3541,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape27: TQRShape
-        Left = 80
+        Left = 100
         Top = 0
-        Width = 9
-        Height = 19
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           211.666666666666700000
@@ -3529,10 +3559,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRShape30: TQRShape
-        Left = 649
+        Left = 811
         Top = 0
-        Width = 9
-        Height = 19
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           1717.145833333333000000
@@ -3547,10 +3577,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRDBText21: TQRDBText
-        Left = 314
-        Top = 3
-        Width = 335
-        Height = 15
+        Left = 393
+        Top = 4
+        Width = 419
+        Height = 19
         Size.Values = (
           39.687500000000000000
           830.791666666666800000
@@ -3567,7 +3597,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Customers_Desc'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3580,15 +3610,15 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRDBText22: TQRDBText
-        Left = 660
-        Top = 3
-        Width = 41
-        Height = 15
+        Left = 825
+        Top = 4
+        Width = 50
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1746.250000000000000000
-          7.937500000000000000
-          108.479166666666700000)
+          8.466666666666667000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3599,7 +3629,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3612,10 +3642,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 8
       end
       object gtQRShape32: TQRShape
-        Left = 304
+        Left = 380
         Top = 0
-        Width = 9
-        Height = 19
+        Width = 11
+        Height = 24
         Size.Values = (
           50.270833333333330000
           804.333333333333200000
@@ -3630,10 +3660,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         VertAdjust = 0
       end
       object gtQRDBText23: TQRDBText
-        Left = 90
-        Top = 3
-        Width = 215
-        Height = 15
+        Left = 113
+        Top = 4
+        Width = 269
+        Height = 19
         Size.Values = (
           39.687500000000000000
           238.125000000000000000
@@ -3650,7 +3680,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         DataField = 'Supplier_Name'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3664,32 +3694,32 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
     object qrChildReturnAddress: TQRChildBand
-      Left = 26
-      Top = 702
-      Width = 730
-      Height = 43
+      Left = 33
+      Top = 880
+      Width = 912
+      Height = 54
       AlignToBottom = False
       Enabled = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        113.770833333333300000
-        1931.458333333333000000)
+        114.300000000000000000
+        1930.400000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrgfWOrder
       PrintOrder = cboAfterParent
       object gtQRLabel31: TQRLabel
-        Left = 8
-        Top = 7
-        Width = 101
-        Height = 17
+        Left = 10
+        Top = 9
+        Width = 131
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          18.520833333333330000
-          267.229166666666700000)
+          19.050000000000000000
+          277.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3699,7 +3729,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
@@ -3710,10 +3740,10 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         FontSize = 10
       end
       object qrmReturnAddress: TQRMemo
-        Left = 123
-        Top = 8
-        Width = 406
-        Height = 17
+        Left = 154
+        Top = 10
+        Width = 507
+        Height = 21
         Size.Values = (
           44.979166666666670000
           325.437500000000000000
@@ -3729,7 +3759,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -3913,8 +3943,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ')'
       ')'
       'Order By Process_Question.Sequence_no')
-    Left = 594
-    Top = 142
+    Left = 562
+    Top = 70
     ParamData = <
       item
         Name = 'Works_Order'
@@ -3963,8 +3993,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       ') and'
       '(Courier_service.courier = courier.courier)'
       'order by delivery_no')
-    Left = 322
-    Top = 142
+    Left = 218
+    Top = 38
     ParamData = <
       item
         Name = 'works_order'

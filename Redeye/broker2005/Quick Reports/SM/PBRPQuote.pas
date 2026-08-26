@@ -118,7 +118,6 @@ type
     gtlblQuoteUnitPrice: TQRLabel;
     qrmRegNumber: TQRMemo;
     qrmRegOffice: TQRMemo;
-    gtQRImage2: TQRImage;
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
@@ -324,6 +323,13 @@ begin
       Lines.Append('Tel: ' + Trim(CompSQL.FieldByName('Phone').AsString));
     end;
     
+  qrmRegNumber.Lines.clear;
+  qrmRegOffice.lines.clear;
+
+
+  qrmRegNumber.Lines.Append(CompSQL.fieldbyname('Company_Name').asstring + ', Registered in England & Wales Company Registration No: ' + CompSQL.fieldbyname('Company_Reg_No').asstring);
+  qrmRegOffice.lines.Append('Registered office: ' + CompSQL.fieldbyname('Registered_Office_Address').asstring);
+
   with qryReportDepts do
     begin
       close;

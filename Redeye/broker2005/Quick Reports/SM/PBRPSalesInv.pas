@@ -112,10 +112,10 @@ type
     QRLabel15: TQRLabel;
     VATValueLbl: TQRLabel;
     qryGetCustomerPaymentTerms: TFDQuery;
-    gtQRImage2: TQRImage;
-    qrmRegNumber: TQRMemo;
-    QRMemo1: TQRMemo;
     TotalValueLbl: TQRLabel;
+    qrmRegNumber: TQRMemo;
+    qrmRegOffice: TQRMemo;
+    qrmVatNumber: TQRMemo;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -274,9 +274,17 @@ begin
   {Finally, add the phone number} ;
     Lines.Append(' ');
     Lines.Append('Tel: ' + Trim(CompSQL.FieldByName('Phone').AsString));
-    Lines.Append('Fax: ' + Trim(CompSQL.FieldByName('Fax_Number').AsString));
     Lines.Append('Email: ' + Trim(CompSQL.FieldByName('Email').AsString));
     end;
+
+    qrmRegNumber.Lines.clear;
+    qrmRegOffice.lines.clear;
+    qrmVATNumber.lines.clear;
+
+    qrmRegNumber.Lines.Append(CompSQL.fieldbyname('Company_Name').asstring + ', Registered in England & Wales Company Registration No: ' + CompSQL.fieldbyname('Company_Reg_No').asstring);
+    qrmRegOffice.lines.Append('Registered office: ' + CompSQL.fieldbyname('Registered_Office_Address').asstring);
+    qrmVATNumber.lines.Append('VAT Registration Number: ' + CompSQL.fieldbyname('VAT_Registration_No').asstring);
+
     InvoiceReport.OnNeedData := nil;
 //    GetCompanyInfo(InvoiceReport.DataSet.RecordCount);
 
@@ -1168,9 +1176,11 @@ end;
 procedure TPBRPSalesInvFrm.AddChargesFooterBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 begin
-//  AddChargesFooter.height := memoNotes.height + 13;
-  AddChargesFooter.height := ((richmemoNotes.lines.count) * 23) + 52;
-  gtNotesShape.Height := ((richmemoNotes.lines.count) * 23) + 24;
+//  AddChargesFooter.height := ((richmemoNotes.lines.count) * 23) + 50;
+//  gtNotesShape.Height := ((richmemoNotes.lines.count) * 23) + 18;
+
+  AddChargesFooter.height := ((memoNotes.lines.count) * 23) + 50;
+  gtNotesShape.Height := ((memoNotes.lines.count) * 23) + 18;
 
   {Set the top property for the pack price details}
   gtlblPackPriceUnit.top := gtNotesShape.top + gtNotesShape.Height + 20;

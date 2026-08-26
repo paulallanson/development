@@ -299,7 +299,7 @@ begin
   {....End here!}
 
   if ShowWIP then
-    sTemp := sTemp + ' AND (Job_Bag.Job_Bag_Status < 30)';
+    sTemp := sTemp + ' AND (Job_Bag.Job_Bag_Status < 30) AND ((Job_Bag.On_Hold = ''N'') or (Job_Bag.On_Hold = ''''))';
 
   if ShowOnHold then
     sTemp := sTemp + ' AND (Job_Bag.On_Hold = ''Y'')';

@@ -15,7 +15,7 @@ type
     InvoiceReport: TQuickRep;
     SalesInvDataSource: TDataSource;
     CompDataSource: TDataSource;
-    GetCompSQL: TFDQuery;
+    CompSQL: TFDQuery;
     QRLabel6: TQRLabel;
     QRDBText6: TQRDBText;
     QRLabel7: TQRLabel;
@@ -47,7 +47,6 @@ type
     TotVatQRLbl: TQRLabel;
     InvTotQrLbl: TQRLabel;
     QRMemoCmpnyNm: TQRMemo;
-    QRLabel3: TQRLabel;
     CustomerAddMemo: TQRMemo;
     QRLabel18: TQRLabel;
     LblAccountCode: TQRDBText;
@@ -67,9 +66,9 @@ type
     QRLabel9: TQRLabel;
     QRDBText2: TQRDBText;
     imgReport: TQRImage;
-    gtQRImage2: TQRImage;
     qrmRegNumber: TQRMemo;
     qrmRegOffice: TQRMemo;
+    qrmVatNumber: TQRMemo;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -144,20 +143,27 @@ begin
   {Activate the company query}
   with QRMemoCmpnyNm do
     begin
-      GetCompSQL.close;
-      GetCompSQL.open;
+      CompSQL.close;
+      CompSQL.open;
       Lines.Clear;
       for irow := 1 to 5 do
         begin
-        if Trim(GetCompSQL.Fields[irow].AsString) <> '' then
-        Lines.Append(Trim(GetCompSQL.Fields[irow].AsString)) ;
+        if Trim(CompSQL.Fields[irow].AsString) <> '' then
+        Lines.Append(Trim(CompSQL.Fields[irow].AsString)) ;
       end;
   {Finally, add the phone number} ;
     Lines.Append(' ');
-    Lines.Append('Tel: ' + Trim(GetCompSQL.FieldByName('Phone').AsString));
-    Lines.Append('Fax: ' + Trim(GetCompSQL.FieldByName('Fax_Number').AsString));
-    Lines.Append('Email: ' + Trim(GetCompSQL.FieldByName('Email').AsString));
+    Lines.Append('Tel: ' + Trim(CompSQL.FieldByName('Phone').AsString));
+    Lines.Append('Email: ' + Trim(CompSQL.FieldByName('Email').AsString));
   end;
+ qrmRegNumber.Lines.clear;
+ qrmRegOffice.lines.clear;
+ qrmVATNumber.lines.clear;
+
+ qrmRegNumber.Lines.Append(CompSQL.fieldbyname('Company_Name').asstring + ', Registered in England & Wales Company Registration No: ' + CompSQL.fieldbyname('Company_Reg_No').asstring);
+ qrmRegOffice.lines.Append('Registered office: ' + CompSQL.fieldbyname('Registered_Office_Address').asstring);
+ qrmVATNumber.lines.Append('VAT Registration Number: ' + CompSQL.fieldbyname('VAT_Registration_No').asstring);
+
   BuildPaymentNotes(dmBroker.GetCompanyPaymentNotes);
 end;
 
