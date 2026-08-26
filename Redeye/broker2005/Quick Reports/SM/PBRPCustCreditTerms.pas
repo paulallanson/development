@@ -34,10 +34,10 @@ type
     qrlblOperatorName: TQRLabel;
     qrlblOperatorPosition: TQRLabel;
     qrlblOperatorSignature: TQRLabel;
-    gtQRImage2: TQRImage;
     qrmRegNumber: TQRMemo;
     qrmRegOffice: TQRMemo;
     qrmCompanyDetails: TQRMemo;
+    qrmVatNumber: TQRMemo;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
   private
@@ -121,7 +121,6 @@ begin
       {Finally, add the phone number} ;
       Lines.Append(' ');
       Lines.Append('Tel: ' + Trim(CompSQL.FieldByName('Phone').AsString));
-      Lines.Append('Fax: ' + Trim(CompSQL.FieldByName('Fax_Number').AsString));
       Lines.Append('Email: ' + Trim(CompSQL.FieldByName('Email').AsString));
     end;
 
@@ -132,6 +131,14 @@ begin
 (*  qrlblForCompany.caption := 'For ' + CompSQL.fieldbyname('Company_Name').Asstring;
   qrlblForCustomer.caption := 'For ' + qryDetails.fieldbyname('Customer_Name').Asstring;
 *)
+  qrmRegNumber.Lines.clear;
+  qrmRegOffice.lines.clear;
+  qrmVATNumber.lines.clear;
+
+  qrmRegNumber.Lines.Append(CompSQL.fieldbyname('Company_Name').asstring + ', Registered in England & Wales Company Registration No: ' + CompSQL.fieldbyname('Company_Reg_No').asstring);
+  qrmRegOffice.lines.Append('Registered office: ' + CompSQL.fieldbyname('Registered_Office_Address').asstring);
+  qrmVATNumber.lines.Append('VAT Registration Number: ' + CompSQL.fieldbyname('VAT_Registration_No').asstring);
+
   BuildCreditTerms(CompSQL.fieldbyname('Credit_Terms_Notes').Asinteger);
 
   qrlblOperatorName.caption := sOperatorName;

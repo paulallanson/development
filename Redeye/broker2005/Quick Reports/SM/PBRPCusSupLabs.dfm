@@ -13,13 +13,13 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep
     Left = -8
     Top = -5
-    Width = 578
-    Height = 578
+    Width = 723
+    Height = 723
     ShowingPreview = False
     BeforePrint = PBLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -76,10 +76,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRSubDetail
-      Left = 19
-      Top = 19
-      Width = 540
-      Height = 334
+      Left = 24
+      Top = 24
+      Width = 676
+      Height = 417
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
@@ -92,8 +92,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        883.708333333333300000
-        1428.750000000000000000)
+        882.650000000000000000
+        1430.866666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = PBLabelsQuickReport
@@ -101,10 +101,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
       PrintBefore = False
       PrintIfEmpty = True
       object AddressMemo: TQRMemo
-        Left = 4
-        Top = 187
-        Width = 308
-        Height = 110
+        Left = 5
+        Top = 234
+        Width = 385
+        Height = 138
         Size.Values = (
           291.041666666666700000
           10.583333333333330000
@@ -119,7 +119,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         Lines.Strings = (
@@ -135,15 +135,15 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 10
       end
       object lblCustomer: TQRLabel
-        Left = 4
-        Top = 166
-        Width = 64
-        Height = 19
+        Left = 5
+        Top = 207
+        Width = 100
+        Height = 24
         Size.Values = (
-          50.270833333333330000
+          50.800000000000000000
           10.583333333333330000
-          439.208333333333300000
-          169.333333333333300000)
+          438.150000000000000000
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -153,7 +153,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -164,16 +164,16 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 10
       end
       object DeliveryDateLbl: TQRLabel
-        Left = 165
-        Top = 166
-        Width = 96
-        Height = 19
+        Left = 206
+        Top = 207
+        Width = 119
+        Height = 24
         Enabled = False
         Size.Values = (
-          50.270833333333330000
-          436.562500000000000000
-          439.208333333333300000
-          254.000000000000000000)
+          50.800000000000000000
+          436.033333333333300000
+          438.150000000000000000
+          251.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -183,7 +183,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -194,10 +194,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 10
       end
       object FAOQRLabel: TQRLabel
-        Left = 4
-        Top = 146
-        Width = 241
-        Height = 19
+        Left = 5
+        Top = 183
+        Width = 301
+        Height = 24
         Size.Values = (
           50.270833333333330000
           10.583333333333330000
@@ -213,7 +213,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -224,10 +224,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 10
       end
       object qrmCompany: TQRMemo
-        Left = 346
-        Top = 2
-        Width = 177
-        Height = 105
+        Left = 432
+        Top = 3
+        Width = 221
+        Height = 131
         Size.Values = (
           277.812500000000000000
           915.458333333333200000
@@ -242,7 +242,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -252,15 +252,15 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 8
       end
       object imgReport: TQRImage
-        Left = 2
-        Top = 2
-        Width = 315
-        Height = 41
+        Left = 3
+        Top = 3
+        Width = 391
+        Height = 77
         Size.Values = (
-          108.479166666666700000
-          5.291666666666667000
-          5.291666666666667000
-          833.437500000000000000)
+          162.983333333333300000
+          6.350000000000000000
+          6.350000000000000000
+          827.616666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

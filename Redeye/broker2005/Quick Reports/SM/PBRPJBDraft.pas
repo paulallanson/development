@@ -27,7 +27,7 @@ type
     GetSOAddQuery: TFDQuery;
     CompSRC: TDataSource;
     GetCompSQL: TFDQuery;
-    QRMemoAddress: TQRMemo;
+    QRMemoCmpnyNm: TQRMemo;
     CustSQL: TFDQuery;
     AddressSRC: TDataSource;
     QRLabel14: TQRLabel;
@@ -42,14 +42,12 @@ type
     ReportTitleQRLabel: TQRLabel;
     OrdNumQRLabel: TQRLabel;
     OrdDateQRLabel: TQRLabel;
-    SalesOrdDateQRLabel: TQRLabel;
     CustomerAddmemo: TQRMemo;
     QRLblWho: TQRLabel;
-    QRLblCntct: TQRLabel;
     QRLblCustRef: TQRLabel;
     QRLblRef: TQRLabel;
-    QRLblReqDt: TQRLabel;
-    QRLblDtReq: TQRLabel;
+    qrlblAccountCode: TQRLabel;
+    qrlblAccountCodelbl: TQRLabel;
     QRLabel12: TQRLabel;
     QRLabel7: TQRLabel;
     OrdQtyQRLabel: TQRLabel;
@@ -62,7 +60,6 @@ type
     qrySOLine: TFDQuery;
     QRLabel1: TQRLabel;
     lblJobBagDescription: TQRLabel;
-    lblCompanyName: TQRLabel;
     qrsbdAddCharges: TQRSubDetail;
     lblAddDescription: TQRLabel;
     lblAddValue: TQRLabel;
@@ -71,12 +68,8 @@ type
     lblQuantity: TQRLabel;
     qrmDescription: TQRRichText;
     qryPOLineChgs: TFDQuery;
-    
-    qrlblRevenueCentre: TQRLabel;
-    qrlblRevenueCentreData: TQRLabel;
     qryGetProductType: TFDQuery;
     gtQRLabel1: TQRLabel;
-    qrlblVatRegistration: TQRLabel;
     chldbndFSCClaim: TQRChildBand;
     gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TFDQuery;
@@ -89,9 +82,19 @@ type
     memDefPayment: TQRMemo;
     QRShape1: TQRShape;
     memPayment: TQRMemo;
-    gtQRImage2: TQRImage;
+    imgReport: TQRImage;
+    QRLabel4: TQRLabel;
+    qrlblInvoiceDate: TQRLabel;
+    qrlblRevenueCentreData: TQRLabel;
+    qrlblRevenueCentre: TQRLabel;
     qrmRegNumber: TQRMemo;
-    QRMemo1: TQRMemo;
+    qrmRegOffice: TQRMemo;
+    qrmVatNumber: TQRMemo;
+    gtNotesShape: TQRShape;
+    RichmemoNotes: TQRRichText;
+    memPaymentTerms: TQRMemo;
+    QRLabel5: TQRLabel;
+    lblVatRate: TQRLabel;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);
@@ -108,6 +111,8 @@ type
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbdAddChargesBeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
+    procedure PageHeaderQRBandBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
   private
     procedure BuildSpecialNotes(iNarrative: integer);
@@ -194,7 +199,7 @@ begin
         end;
         Next;
       end;
-end;
+  end;
 end;
 
 procedure TPBRPJBDraftFrm.StartReport(Sender: TObject);
@@ -229,7 +234,7 @@ var
   i: integer;
 begin
   iLines := 0;
-  qrmDescription.Height := 16;
+  qrmDescription.Height := 18;
   for i := pred(qrmDescription.Lines.Count) downto 0 do
     qrmDescription.Lines.Delete(i);
 
@@ -286,6 +291,7 @@ begin
     lblQuantity.Caption := inttostr(Quantity);
 //    lblSellPrice.Caption := CurrencyDisp(frmPBMainMenu.sCurrencyMask,FloatToStr(SellPrice));
 
+    lblVatRate.Caption := formatfloat('0.000',fieldbyname('Vat_Rate').asfloat);
     lblSellPrice.Caption := formatfloat('0.000',SellPrice);
     lblSellUnit.Caption := PriceUnitDescr;
     if PriceUnitFactor = 0 then
@@ -298,14 +304,15 @@ begin
     ivat := ivat + rVatValue;
   end;
   iLines := qrmDescription.Lines.count;
-  qrmDescription.Height := (iLines * 16);
+  qrmDescription.Height := (iLines * 18);
   qrsbdJBLines.Height := qrmDescription.Height + 4;
-  if iLines > 1 then
+(*  if iLines > 1 then
     begin
       lblQuantity.Top := (qrmDescription.Height - (lblQuantity.height + 3));
       lblSellPrice.top := lblQuantity.Top;
       lblSellUnit.Top := lblQuantity.Top;
       lblValue.Top := lblQuantity.Top;
+      lblVatRate.Top := lblQuantity.Top;
       lblVat.Top := lblQuantity.Top;
     end
   else
@@ -314,8 +321,10 @@ begin
       lblSellPrice.top := lblQuantity.Top;
       lblSellUnit.Top := lblQuantity.Top;
       lblValue.Top := lblQuantity.Top;
+      lblVatRate.Top := lblQuantity.Top;
       lblVat.Top := lblQuantity.Top;
     end;
+*)
 
   with qryPOLineChgs do
   begin
@@ -392,7 +401,7 @@ begin
 //  sPhoneQrLabel.Caption := addressSrc.Dataset.fields[6].AsString;
 //  sFaxQRLabel.Caption := addressSrc.Dataset.fields[7].AsString;
 //  sEmailQRLabel.Caption := addressSrc.Dataset.fields[8].AsString;
-  qrLblCntct.Caption := '';
+//  qrLblCntct.Caption := '';
   with getcontactSQL do
   begin
     close;
@@ -400,14 +409,12 @@ begin
     ParamByName('Branch_No').asInteger := Branch;
     ParamByname('Contact_No').asInteger := GetDetsQuery.fieldByName('Contact_No').Asinteger;
     open;
-    QrLblCntct.Caption := GetContactSQL.FieldByName('Contact_Name').asString;
+//    QrLblCntct.Caption := GetContactSQL.FieldByName('Contact_Name').asString;
   end;
 
   With GetDetsQuery do
     begin
     OrdNumQRLabel.Caption := FieldByName('Job_Bag').AsString;
-    SalesOrdDateQRLabel.Caption := DateToStr(FieldByName('Date_Point').AsDateTime);
-    QRLblReqDT.Caption := DateToStr(FieldByName('Date_Required').AsDateTime);
     QRLblRef.Caption := fieldByName('Cust_Order_No').AsString;
     lblJobBagDescription.caption := fieldbyname('Job_Bag_Descr').asstring;
     qrlblRevenueCentreData.caption := fieldbyname('Revenue_Centre').asstring;
@@ -418,12 +425,16 @@ procedure TPBRPJBDraftFrm.FooterQRBandBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 var
   iTotal: Real;
+  sGoodsValue, sVatValue: string;
 begin
-  GoodsValueLbl.Caption := formatfloat('0.00',iGoods);
-  VatValueLbl.Caption := formatfloat('0.00',iVat);
+  sGoodsValue := formatfloat('0.00',iGoods);
+  GoodsValueLbl.Caption := FloatToStrF(iGoods, ffCurrency, 15, 2);
+  sVatValue := formatfloat('0.00',iVat);
+  VatValueLbl.Caption := FloatToStrF(iVat, ffCurrency, 15, 2);
 
-  itotal := StrToFloatDef(GoodsValueLbl.Caption, 0, FormatSettings) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
+  itotal := strtofloat(sGoodsValue) + strtofloat(sVatValue);
   TotalValueLbl.Caption := formatfloat('0.00',iTotal);
+  TotalValueLbl.Caption := FloatToStrF(iTotal, ffCurrency, 15, 2);
 
   gtlblPackPriceUnit.enabled := false;
   gtlblPackPriceVat.enabled := false;
@@ -444,15 +455,23 @@ begin
       gtlblPackPriceUnit.caption := trim('Total Price ' + GetDetsQuery.fieldbyname('Price_Unit_Description').asstring);
       if GetDetsQuery.FieldByName('Price_Unit_Factor').asinteger = 0 then
         begin
-          gtlblPackUnitPrice.caption := formatfloat('0.000',iGoods);
+(*          gtlblPackUnitPrice.caption := formatfloat('0.000',iGoods);
           gtlblPackVat.caption := formatfloat('0.000',iVat);
           gtlblPackTotalGross.caption := formatfloat('0.000',iGoods+iVat);
+*)
+          gtlblPackUnitPrice.caption := formatfloat('£##,###,##0.00',iGoods);
+          gtlblPackVat.caption := formatfloat('£##,###,##0.00',iVat);
+          gtlblPackTotalGross.caption := formatfloat('£##,###,##0.00',(iGoods+iVat));
         end
       else
         begin
-          gtlblPackUnitPrice.caption := formatfloat('0.000',iGoods/(GetDetsQuery.fieldbyname('Job_Bag_quantity').asinteger/GetDetsQuery.fieldbyname('Price_Unit_Factor').asinteger));
+(*          gtlblPackUnitPrice.caption := formatfloat('0.000',iGoods/(GetDetsQuery.fieldbyname('Job_Bag_quantity').asinteger/GetDetsQuery.fieldbyname('Price_Unit_Factor').asinteger));
           gtlblPackVat.caption := formatfloat('0.000',iVat/(GetDetsQuery.fieldbyname('Job_Bag_quantity').asinteger/GetDetsQuery.fieldbyname('Price_Unit_Factor').asinteger));
           gtlblPackTotalGross.caption := formatfloat('0.000',(iGoods+iVat)/(GetDetsQuery.fieldbyname('Job_Bag_quantity').asinteger/GetDetsQuery.fieldbyname('Price_Unit_Factor').asinteger));
+*)
+          gtlblPackUnitPrice.caption := formatfloat('£##,###,##0.00',(iGoods/(GetDetsQuery.fieldbyname('Job_Quantity').asinteger/GetDetsQuery.fieldbyname('Price_Unit_Factor').asinteger)));
+          gtlblPackVat.caption := formatfloat('£##,###,##0.00',(iVat/(GetDetsQuery.fieldbyname('Job_Quantity').asinteger/GetDetsQuery.fieldbyname('Price_Unit_Factor').asinteger)));
+          gtlblPackTotalGross.caption := formatfloat('£##,###,##0.00',(iGoods+iVat)/(GetDetsQuery.fieldbyname('Job_Quantity').asinteger/GetDetsQuery.fieldbyname('Price_Unit_Factor').asinteger));
         end;
     end;
 end;
@@ -506,6 +525,8 @@ the printer to what the user selected}
 //  QRMemoAddress.enabled := printlogo;
 //  ReportImage.Picture := pbImagesFrm.ReportImage.Picture;
       {Activate the company SQL}
+
+
   qrlblRevenueCentre.enabled := (FinanceVers);
   qrlblRevenueCentreData.enabled := (FinanceVers);
 
@@ -516,38 +537,48 @@ the printer to what the user selected}
     First;
   end;
 
-  lblCompanyName.Caption := GetCompSQL.fieldbyname('Name').AsString;
-  qrlblVatRegistration.caption := 'VAT Registration No: ' + dmBroker.GetCompanyVatRegistration;
 
-  QRMemoAddress.lines.Clear;
+  QRMemoCmpnyNm.lines.Clear;
   {Get the Phone details}
       for irow := 4 to 8 do
         begin
           if Trim(GetCompSQl.Fields[irow].AsString) = '' then Continue;
-          QRMemoAddress.Lines.Append(Trim(GetCompSQl.Fields[irow].AsString));
+          QRMemoCmpnyNm.Lines.Append(Trim(GetCompSQl.Fields[irow].AsString));
         end;
         {Do phone numbers}
-        QRMemoAddress.Lines.Append('');
+        QRMemoCmpnyNm.Lines.Append('');
         if Trim(GetCompSQl.Fields[9].AsString) <> '' then
-          QRMemoAddress.Lines.Append('Tel: ' + Trim(GetCompSQl.Fields[9].AsString));
-
-        if Trim(GetCompSQl.Fields[10].AsString) <> '' then
-          QRMemoAddress.Lines.Append('Fax: ' + Trim(GetCompSQl.Fields[10].AsString));
+          QRMemoCmpnyNm.Lines.Append('Tel: ' + Trim(GetCompSQl.Fields[9].AsString));
 
         if Trim(GetCompSQl.Fields[11].AsString) <> '' then
-          QRMemoAddress.Lines.Append('Email: ' + Trim(GetCompSQl.Fields[11].AsString));
+          QRMemoCmpnyNm.Lines.Append('Email: ' + Trim(GetCompSQl.Fields[11].AsString));
+
+  qrmRegNumber.Lines.clear;
+  qrmRegOffice.lines.clear;
+  qrmVATNumber.lines.clear;
+
+  qrmRegNumber.Lines.Append(GetCompSQl.fieldbyname('Name').asstring + ', Registered in England & Wales Company Registration No: ' + GetCompSQl.fieldbyname('Company_Reg_No').asstring);
+  qrmRegOffice.lines.Append('Registered office: ' + GetCompSQl.fieldbyname('Registered_Office_Address').asstring);
+  qrmVATNumber.lines.Append('VAT Registration No: ' + dmBroker.GetCompanyVatRegistration);
+
+  imgReport.Picture := PBImagesFrm.ReportImage.Picture;
+  imgReport.Enabled := true;
 end;
 
 procedure TPBRPJBDraftFrm.GetAddDetails(Cust, Branch: integer);
 begin
-      with CustSQl do
-      begin
-        Close;
-        ParamByName('Customer').AsInteger := Cust;
-        ParamByName('Branch_no').AsInteger := Branch;
-        Open;
-      end;
-      AddressSRC.Dataset := CustSQL;
+  memPaymentTerms.Lines.clear;
+  with CustSQl do
+    begin
+      Close;
+      ParamByName('Customer').AsInteger := Cust;
+      ParamByName('Branch_no').AsInteger := Branch;
+      Open;
+
+      memPaymentTerms.Lines.Add(fieldbyname('Payment_Terms_Description').asstring);
+    end;
+  AddressSRC.Dataset := CustSQL;
+
 end;
 
 procedure TPBRPJBDraftFrm.CreateMemo(TempRef: string);
@@ -627,6 +658,14 @@ begin
       open;
       result := fieldbyname('Part_Sales_Price').asfloat;
     end;
+end;
+
+procedure TPBRPJBDraftFrm.PageHeaderQRBandBeforePrint(Sender: TQRCustomBand;
+  var PrintBand: Boolean);
+begin
+  qrlblInvoiceDate.caption := pbdateStr(date);
+  qrlblAccountCode.caption := CustSQL.fieldbyname('Account_Code').asstring;
+
 end;
 
 function TPBRPJBDraftFrm.GetDefPriceUnit: integer;

@@ -12,13 +12,13 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep
     Left = 8
     Top = 0
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = PBLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -76,10 +76,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRSubDetail
-      Left = 19
-      Top = 19
-      Width = 542
-      Height = 376
+      Left = 24
+      Top = 24
+      Width = 678
+      Height = 470
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
@@ -87,7 +87,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
       ForceNewPage = False
       Size.Values = (
         994.833333333333300000
-        1434.041666666667000000)
+        1435.100000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = PBLabelsQuickReport
@@ -95,10 +95,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
       PrintBefore = False
       PrintIfEmpty = True
       object NumberedLbl: TQRLabel
-        Left = 2
-        Top = 336
-        Width = 97
-        Height = 20
+        Left = 3
+        Top = 420
+        Width = 121
+        Height = 25
         Size.Values = (
           52.916666666666670000
           5.291666666666667000
@@ -114,7 +114,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -125,10 +125,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object FromLbl: TQRLabel
-        Left = 111
-        Top = 336
-        Width = 212
-        Height = 19
+        Left = 139
+        Top = 420
+        Width = 265
+        Height = 24
         Size.Values = (
           50.270833333333330000
           293.687500000000000000
@@ -144,7 +144,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -155,10 +155,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object Memodescription: TQRMemo
-        Left = 111
-        Top = 202
-        Width = 404
-        Height = 37
+        Left = 139
+        Top = 252
+        Width = 505
+        Height = 46
         Size.Values = (
           97.895833333333330000
           293.687500000000000000
@@ -173,7 +173,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         Lines.Strings = (
@@ -186,10 +186,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object PONumberLbl: TQRLabel
-        Left = 377
-        Top = 266
-        Width = 138
-        Height = 19
+        Left = 471
+        Top = 333
+        Width = 173
+        Height = 24
         Size.Values = (
           50.270833333333330000
           997.479166666666700000
@@ -205,7 +205,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -216,10 +216,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object BoxQuantityLbl: TQRLabel
-        Left = 111
-        Top = 266
-        Width = 58
-        Height = 19
+        Left = 139
+        Top = 333
+        Width = 72
+        Height = 24
         Size.Values = (
           50.270833333333330000
           293.687500000000000000
@@ -235,7 +235,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -246,10 +246,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object FormRefLbl: TQRLabel
-        Left = 111
-        Top = 165
-        Width = 404
-        Height = 19
+        Left = 139
+        Top = 206
+        Width = 505
+        Height = 24
         Enabled = False
         Size.Values = (
           50.270833333333330000
@@ -266,7 +266,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -277,16 +277,16 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRLabel1: TQRLabel
-        Left = 2
-        Top = 165
-        Width = 63
-        Height = 20
+        Left = 3
+        Top = 206
+        Width = 79
+        Height = 25
         Enabled = False
         Size.Values = (
           52.916666666666670000
-          5.291666666666667000
-          436.562500000000000000
-          166.687500000000000000)
+          6.350000000000000000
+          436.033333333333300000
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -296,7 +296,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -307,10 +307,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRDBCustOrderRef: TQRDBText
-        Left = 111
-        Top = 303
-        Width = 148
-        Height = 19
+        Left = 139
+        Top = 379
+        Width = 185
+        Height = 24
         Size.Values = (
           50.270833333333330000
           293.687500000000000000
@@ -327,7 +327,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         DataField = 'Cust_Order_no'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -340,10 +340,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object lblCustomer: TQRLabel
-        Left = 111
-        Top = 126
-        Width = 404
-        Height = 19
+        Left = 139
+        Top = 158
+        Width = 505
+        Height = 24
         Size.Values = (
           50.270833333333330000
           293.687500000000000000
@@ -359,7 +359,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -370,15 +370,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRLabel2: TQRLabel
-        Left = 2
-        Top = 126
-        Width = 65
-        Height = 20
+        Left = 3
+        Top = 158
+        Width = 84
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          5.291666666666667000
-          333.375000000000000000
-          171.979166666666700000)
+          6.350000000000000000
+          334.433333333333300000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -388,7 +388,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -399,15 +399,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 2
-        Top = 266
-        Width = 55
-        Height = 20
+        Left = 3
+        Top = 333
+        Width = 71
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          5.291666666666667000
-          703.791666666666700000
-          145.520833333333300000)
+          6.350000000000000000
+          704.850000000000000000
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -417,7 +417,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -428,15 +428,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRLabel4: TQRLabel
-        Left = 2
-        Top = 303
-        Width = 59
-        Height = 20
+        Left = 3
+        Top = 379
+        Width = 79
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          5.291666666666667000
-          801.687500000000000000
-          156.104166666666700000)
+          6.350000000000000000
+          802.216666666666700000
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -446,7 +446,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -457,15 +457,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 266
-        Top = 266
-        Width = 97
-        Height = 20
+        Left = 333
+        Top = 333
+        Width = 121
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          703.791666666666700000
-          703.791666666666700000
-          256.645833333333300000)
+          704.850000000000000000
+          704.850000000000000000
+          256.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -475,7 +475,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -486,15 +486,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 266
-        Top = 303
-        Width = 68
-        Height = 20
+        Left = 333
+        Top = 379
+        Width = 86
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          703.791666666666700000
-          801.687500000000000000
-          179.916666666666700000)
+          704.850000000000000000
+          802.216666666666700000
+          182.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -504,7 +504,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -515,15 +515,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object QRLabel7: TQRLabel
-        Left = 2
-        Top = 202
-        Width = 76
-        Height = 20
+        Left = 3
+        Top = 252
+        Width = 97
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          5.291666666666667000
-          534.458333333333300000
-          201.083333333333300000)
+          6.350000000000000000
+          533.400000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -533,7 +533,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = [fsBold]
         ParentFont = False
@@ -544,10 +544,10 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object qrmCompany: TQRMemo
-        Left = 336
-        Top = 7
-        Width = 193
-        Height = 105
+        Left = 420
+        Top = 9
+        Width = 241
+        Height = 131
         Size.Values = (
           277.812500000000000000
           889.000000000000000000
@@ -562,7 +562,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -572,15 +572,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 8
       end
       object DeliveryDatelbl: TQRLabel
-        Left = 377
-        Top = 304
-        Width = 86
-        Height = 19
+        Left = 471
+        Top = 380
+        Width = 109
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          997.479166666666700000
+          50.800000000000000000
+          996.950000000000000000
           804.333333333333300000
-          227.541666666666700000)
+          230.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -590,7 +590,7 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lato'
         Font.Style = []
         ParentFont = False
@@ -601,15 +601,15 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         FontSize = 10
       end
       object ReportImage: TQRImage
-        Left = 2
-        Top = 6
-        Width = 320
-        Height = 42
+        Left = 0
+        Top = 1
+        Width = 401
+        Height = 75
         Size.Values = (
-          111.125000000000000000
-          5.291666666666667000
-          15.875000000000000000
-          846.666666666666700000)
+          158.750000000000000000
+          0.000000000000000000
+          2.116666666666667000
+          848.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False

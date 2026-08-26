@@ -181,7 +181,6 @@ type
     QRLabel25: TQRLabel;
     QRLabel26: TQRLabel;
     QRLabel27: TQRLabel;
-    QRLabel28: TQRLabel;
     QRLabel30: TQRLabel;
     QRLabel31: TQRLabel;
     QRShape8: TQRShape;
@@ -216,9 +215,9 @@ type
     ReportImage: TQRImage;
     QRDBText1: TQRDBText;
     QRShape13: TQRShape;
-    gtQRImage2: TQRImage;
     qrmRegNumber: TQRMemo;
     qrmRegOffice: TQRMemo;
+    qrmVatNumber: TQRMemo;
     procedure PrintPOsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);
     procedure DetailQRBandBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -302,9 +301,17 @@ begin
   {Finally, add the phone number} ;
     Lines.Append(' ');
     Lines.Append('Tel: ' + Trim(GetCompSQL.FieldByName('Phone').AsString));
-    Lines.Append('Fax: ' + Trim(GetCompSQL.FieldByName('Fax_Number').AsString));
     Lines.Append('Email: ' + Trim(GetCompSQL.FieldByName('Email').AsString));
-    end;
+  end;
+
+  qrmRegNumber.Lines.clear;
+  qrmRegOffice.lines.clear;
+  qrmVATNumber.lines.clear;
+
+  qrmRegNumber.Lines.Append(GetCompSQL.fieldbyname('Name').asstring + ', Registered in England & Wales Company Registration No: ' + GetCompSQL.fieldbyname('Company_Reg_No').asstring);
+  qrmRegOffice.lines.Append('Registered office: ' + GetCompSQL.fieldbyname('Registered_Office_Address').asstring);
+  qrmVATNumber.lines.Append('VAT Registration Number: ' + GetCompSQL.fieldbyname('VAT_Registration_No').asstring);
+
 end;
 
 function TPBRPProofFrm.GetDetails(Sender: TObject): Integer;
