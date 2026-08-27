@@ -30,7 +30,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1170
+        Width = 1174
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -170,7 +170,6 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Date_Point'
         Title.Caption = 'Date'
-        Width = 64
         Visible = True
       end
       item
@@ -258,14 +257,12 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Production_Status'
         Title.Caption = 'Production Status'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Account_Code'
         Title.Caption = 'Account Code'
-        Width = 64
         Visible = True
       end
       item
@@ -278,14 +275,12 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'File_Copies_Received_Date'
         Title.Caption = 'File Copies Received'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'File_Copies_Received_By_Name'
         Title.Caption = 'File Copies Received By'
-        Width = 64
         Visible = True
       end
       item

@@ -852,7 +852,14 @@ begin
   end;
 
   {Create the Customer Address details memo}
-  for icount := 1 to 6 do
+  CustomerAddMemo.Lines.Add(CustomerSQL.fieldbyname('Customer_Name').AsString);
+  if CustomerSQL.fieldbyname('Use_Branch_Name').asstring = 'Y' then
+    begin
+      if Trim(CustomerSQL.FieldByName('Branch_Name').AsString) <> '' then
+        CustomerAddMemo.Lines.Add(Trim(CustomerSQL.FieldByName('Branch_Name').AsString));
+    end;
+
+  for icount := 3 to 7 do
   begin
     if CustomerSQL.Fields[icount].AsString = '' then Continue;
     CustomerAddMemo.Lines.Add(CustomerSQL.Fields[icount].AsString);
