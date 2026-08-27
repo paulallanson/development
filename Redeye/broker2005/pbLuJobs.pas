@@ -670,6 +670,12 @@ begin
       exit;
     end;
 
+  if (dbgDetails.datasource.dataset.fieldByName('NCA_Live_Lines').Asinteger > 0) or (dbgDetails.datasource.dataset.fieldByName('NCA_Signed_Off').Asinteger > 0) then
+    begin
+      if MessageDlg('The original job bag has non conformance issues. Continue?', mtConfirmation,[mbYes, mbCancel], 0) <> mrYes then
+        exit;
+    end;
+
   CallMaintScreen(jbRepeat);
 end;
 

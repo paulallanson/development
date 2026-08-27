@@ -44,6 +44,9 @@ type
     OleContainer1: TOleContainer;
     btbtnExcel: TBitBtn;
     InvLineChgsCSVSQL: TFDQuery;
+    Label2: TLabel;
+    lblFileFormat: TLabel;
+    cmbFileFormat: TComboBox;
     procedure FormShow(Sender: TObject);
     procedure PrintBtnClick(Sender: TObject);
     procedure PreviewBtnClick(Sender: TObject);
@@ -59,6 +62,7 @@ type
     procedure SelectionMemoChange(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure chkbxAttachCSVFileClick(Sender: TObject);
     private
     FInvoicePrint: boolean;
     FCreditNotePrint: boolean;
@@ -72,6 +76,8 @@ type
     procedure ExportAllInvoicesToCSV;
     procedure ExportInvoice(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
     procedure ExportInvoiceToCSV(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
+    procedure ExportAllInvoicesToOptimus;
+    procedure ExportInvoiceToOptimus(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
     function GetPODate(tempCode: real): string;
     function GetPOSupplier(tempCode: real): string;
     function GetPOCostUnit(tempCode: real; tempLine: integer): string;
@@ -190,67 +196,20 @@ begin
   end;
 end;
 
+procedure TPBSalesInvRPrintFrm.chkbxAttachCSVFileClick(Sender: TObject);
+begin
+  cmbFileFormat.visible := (Sender as TCheckbox).checked;
+  lblFileFormat.visible := (Sender as TCheckbox).checked;
+end;
+
 procedure TPBSalesInvRPrintFrm.PrintBtnClick(Sender: TObject);
 begin
   CallReport(false);
-(*  PBRPSalesInvfrm := TPBRPSalesInvfrm.Create(Self);
-  try
-    PrinterSettings := TPrinterSettings.Create;
-    try
-      PBRPSalesInvfrm.PrinterSettings := PrinterSettings;
-      PBRPSalesInvfrm.bReprint := True;
-      GetSelection;
-      InvRPrintSQL.Close;
-      InvRPrintSQL.ParamBYName('Int_sel').AsInteger := iIntselcode;
-      InvRPrintSQL.Open;
-      if InvRPrintSQL.recordCount = 0 then
-  		    begin
-          MessageDlg('No valid invoices in this selection',mterror,[mbOK],0);
-          exit;
-    	end;
-      PBRPSalesInvFrm.InvoiceReport.Dataset := InvRPrintSQL;
-      PBRPSalesInvFrm.InvoiceGroupHeader.Expression := 'Sales_invoice';
-      PBRPSalesInvFrm.InvHeadSRC.dataset := InvRPrintSQL;
-      if SetUpPrinter(PrinterSettings) then
-        PBRPSalesInvfrm.InvoiceReport.Print;
-    finally
-      PrinterSettings.Free;
-    end;
-  finally
-    PBRPSalesInvfrm.Free;
-  end;
-*)
 end;
 
 procedure TPBSalesInvRPrintFrm.PreviewBtnClick(Sender: TObject);
 begin
   CallReport(true);
-(*  PBRPSalesInvfrm := TPBRPSalesInvfrm.Create(Self);
-  try
-    PrinterSettings := TPrinterSettings.Create;
-    try
-      PBRPSalesInvfrm.PrinterSettings := PrinterSettings;
-      PBRPSalesInvfrm.bReprint := True;
-      GetSelection;
-    InvRPrintSQL.Close;
-    InvRPrintSQL.ParamBYName('Int_sel').AsInteger := iIntselcode;
-    InvRPrintSQL.Open;
-    if InvRPrintSQL.recordCount = 0 then
-  		    begin
-          MessageDlg('No valid invoices in this selection',mterror,[mbOK],0);
-          exit;
-    	end;
-    PBRPSalesInvFrm.InvoiceReport.Dataset := InvRPrintSQL;
-    PBRPSalesInvFrm.InvoiceGroupHeader.Expression := 'InvRPrintSQL.Sales_invoice';
-    PBRPSalesInvFrm.InvHeadSRC.dataset := InvRPrintSQL;
-    PBRPSalesInvfrm.InvoiceReport.Preview;
-    finally
-      PrinterSettings.Free;
-    end;
-  finally
-    PBRPSalesInvfrm.Free;
-  end;
-*)
 end;
 
 procedure TPBSalesInvRPrintFrm.BuildSelection;
@@ -458,7 +417,7 @@ begin
       chkbxPrintLogo.Checked := (ReadString('Redeye', 'Invoice Print - Print Logo', 'N') = 'Y');
       chkbxShowZeroValues.Checked := (ReadString('Redeye', 'Invoice Print - Show Zero Values', 'N') = 'Y');
       chkbxAttachCSVFile.Checked := (ReadString('Redeye', 'Invoice Print - Attach CSV File', 'N') = 'Y');
-    end;
+      cmbFileFormat.ItemIndex := strtoint((ReadString('Redeye', 'Invoice Print - File Format', '0')));    end;
   finally
     IniFile.Free;
   end;
@@ -596,7 +555,12 @@ begin
                 ExportInvoice(PBRPSalesInvFrm, EmailArray[irow,1])
               else
               if chkbxAttachCSVFile.checked then
-                ExportInvoiceToCSV(PBRPSalesInvFrm, EmailArray[irow,1]);
+                begin
+                  case cmbFileFormat.itemindex of
+                  0: ExportInvoiceToCSV(PBRPSalesInvFrm, EmailArray[irow,1]);
+                  1: ExportInvoiceToOptimus(PBRPSalesInvFrm, EmailArray[irow,1]);
+                  end;
+                end;
 
               FCustomerName := PBEmailListFrm.EmailListGrid.Cells[1, irow];
 
@@ -797,6 +761,9 @@ begin
         WriteString('Redeye', 'Invoice Print - Attach CSV File', 'Y')
       else
         WriteString('Redeye', 'Invoice Print - Attach CSV File', 'N');
+
+      WriteString('Redeye', 'Invoice Print - File Format', inttostr(cmbFileFormat.ItemIndex));
+
       Free;
     end;
 
@@ -1187,23 +1154,6 @@ begin
       end;
     end;
 
-(*  rMargin := rResellerTotal - rTotal;
-  try
-    rMarginPerc := ((rMargin/rTotal)*100);
-  except
-    rMarginPerc := 999.99;
-  end;
-
-  {write away blank line}
-  tempstr     := '""';
-  WriteLn(CSVFile, tempStr);
-
-  {write away the Company Totals}
-  tempstr     := '"' + '","' + '","' + '","' + '","' + '","'+ '","'+ 'Totals' + '","' + '","' + '","' + '","' + formatfloat('£#,##0.00',rTotal) + '","' + formatfloat('£#,##0.00',rResellerTotal)
-              + '","' + formatfloat('£#,##0.00',rMargin) + '","' + formatfloat('#,##0.00%',rMarginPerc) + '"';
-
-  WriteLn(CSVFile, tempStr);
-*)
   FEmailAttachment.add(sLocation + sFilename + '.csv');
   CloseFile(CSVFile);
 end;
@@ -1432,7 +1382,7 @@ begin
             rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
 
             rTotal := rTotal + rLineTotal;
-            
+
             InvLineChgsCSVSQL.Next;
           end;
 
@@ -1447,7 +1397,7 @@ begin
   CloseFile(CSVFile);
 
   sTo := dmBroker.GetGlobalInvoiceEmail;
-  
+
   if InvoicePrint then
     sSubject := 'Invoices'
   else
@@ -1458,10 +1408,6 @@ begin
 
   EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmPBMainMenu.EmailApplication, frmPBMainMenu.InvoiceEmailAccount);
   FEmailSent := true;
-
-//  self.OleContainer1.CreateLinkToFile(sLocation + sFilename + '.csv', false);
-//  self.OleContainer1.DoVerb(0);
-
 end;
 
 function TPBSalesInvRPrintFrm.GetPODate(tempCode: real): string;
@@ -1611,7 +1557,13 @@ begin
     ClearEmailArray(Self);
     GetSelection;
 
-    self.ExportAllInvoicesToCSV;
+    if chkbxAttachCSVFile.checked then
+      begin
+        case cmbFileFormat.itemindex of
+          0: ExportAllInvoicesToCSV;
+          1: ExportAllInvoicesToOptimus;
+        end;
+      end;
   finally
     for i := pred(FEmailAttachment.count) downto 0 do
       begin
@@ -1620,6 +1572,492 @@ begin
       end;
   end;
 
+end;
+
+procedure TPBSalesInvRPrintFrm.ExportInvoiceToOptimus(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
+var
+  sLocation, sFileName: string;
+  zLocation, zFileName: array[0..255] of char;
+  sProductTypeDescription, sSupplierName, sCostUnit, sDescription, sOrderDate, tempStr: string;
+  CSVFile: TextFile;
+  rLineTotal, rResellerLineTotal, rLineMargin, rLineMarginPerc: real;
+  rTotal, rResellerTotal, rMargin, rMarginPerc, rCostPrice, rTotalCost: real;
+  iCount, iInvoiceNumber, iLineNo: integer;
+  iPriceUnitFactor: integer;
+begin
+  sLocation := GetWinTempDir;
+
+  {Code used to generate a unique filename}
+  strPCopy(zLocation, sLocation);
+
+  GetTempFileName(zLocation, '', 0, zFileName);
+
+  sFileName := zFileName;
+  sFileName := trim(stringReplace(sFileName,'.TMP','',[rfIgnoreCase]));
+
+  sFileName := trim(stringReplace(sFileName,sLocation,'',[rfIgnoreCase]));
+
+
+  {Format is 'Si' + Enquiry Number + Random Number}
+  if self.CreditNotePrint then
+    sFileName := 'SC' + tempcode + '-' + sFilename
+  else
+    sFileName := 'SI' + tempcode + '-' + sFilename;
+
+
+  assignFile(CSVFile, sLocation + sFilename + '.csv');
+  rewrite(CSVFile);
+
+  tempstr := '';
+
+  {write away the column headings}
+  tempstr     := 'Document Type'
+              + ',Document No.'
+              + ',LineNo'
+              + ',PostingDate'
+              + ',Document Date'
+              + ',External DocumentNo'
+              + ',CustomerNo'
+              + ',CurrencyCode'
+              + ',SalesPersonCode'
+              + ',Line Type'
+              + ',No'
+              + ',Description'
+              + ',Quantity'
+              + ',UnitPriceExclVAT'
+              + ',VATCode'
+              + ',UnitOfMeasureCode'
+              + ',LineAmountExclVAT'
+              + ',InvoiceDescription'
+              + ',DepartmentDimension'
+              + ',SiteDimension'
+              + ',ProductDimension'
+              + ',JobDimension';
+
+  WriteLn(CSVFile, tempStr);
+
+  with InvLineCSVSQL do
+    begin
+      close;
+      if chkbxShowZeroValues.checked then
+        parambyname('Show_Zero_Values').asstring := 'Y'
+      else
+        parambyname('Show_Zero_Values').asstring := 'N';
+
+      {Print all lines of credit note}
+      if self.CreditNotePrint then
+        parambyname('Show_Zero_Values').asstring := 'Y';
+
+      parambyname('Sales_invoice_No').asstring := tempCode;
+      open;
+
+      rTotal := 0;
+      rResellerTotal := 0;
+      iCount := 0;
+
+      while eof <> true do
+      begin
+        if fieldbyname('Price_Unit_Factor').asinteger = 0 then
+          begin
+            rLineTotal := fieldbyname('Goods_Value').asfloat;
+//            rResellerLineTotal := fieldbyname('Reseller_Price').asfloat;
+          end
+        else
+          begin
+            rLineTotal := (fieldbyname('Qty_Invoiced').asinteger/fieldbyname('Price_Unit_Factor').asinteger) * fieldbyname('Goods_Value').asfloat;
+//            rResellerLineTotal := (fieldbyname('Qty_Invoiced').asinteger/fieldbyname('Price_Unit_Factor').asinteger) * fieldbyname('Reseller_Price').asfloat;
+          end;
+
+        sOrderDate := '';
+
+        if fieldbyname('Purchase_Order').asfloat <> 0 then
+          begin
+            sDescription := PBRPSalesInvFrm.GetPOLineDesc(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            sSupplierName := GetPOSupplier(fieldbyname('Purchase_Order').asfloat);
+            sCostUnit := GetPOCostUnit(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            iPriceUnitFactor := GetPOPriceUnitFactor(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            rCostPrice := fieldbyname('Order_Price').asfloat;
+            sProductTypeDescription := GetPOProductType(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            sOrderDate := GetPODate(fieldbyname('Purchase_Order').asfloat);
+          end
+        else
+        if fieldbyname('Sales_Order').asinteger <> 0 then
+          begin
+            sDescription := PBRPSalesInvFrm.GetSOLineDesc(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_order_Line_no').asinteger);
+            sSupplierName := GetJBSupplier(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sCostUnit := GetJBCostUnit(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            iPriceUnitFactor := GetJBPriceUnitFactor(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            rCostPrice := GetJBUnitCost(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sProductTypeDescription := GetJBProductType(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+          end
+        else
+          begin
+            sDescription := PBRPSalesInvFrm.GetJBLineDesc(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sSupplierName := GetJBSupplier(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sCostUnit := GetJBCostUnit(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            iPriceUnitFactor := GetJBPriceUnitFactor(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            rCostPrice := GetJBUnitCost(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sProductTypeDescription := GetJBProductType(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+          end;
+
+        if iPriceUnitFactor = 0 then
+          begin
+            rTotalCost := rCostPrice;
+          end
+        else
+          begin
+            rTotalCost := (fieldbyname('Qty_Invoiced').asinteger/iPriceUnitFactor) * rCostPrice;
+          end;
+
+        rLineMargin := rResellerLineTotal - rLineTotal;
+        try
+          rLineMarginPerc := ((rLineMargin/rLineTotal)*100);
+        except
+          rLineMarginPerc := 999.99;
+        end;
+
+        iCount := iCount + 1;
+        tempStr := 'Invoice';
+        tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
+        tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}
+        tempStr := tempstr + ',' + pbDatestr(date); {Posting Date}
+        tempStr := tempstr + ',' + pbDatestr(fieldbyname('Invoice_Date').asdatetime); {Invoice Date}
+        tempStr := tempstr + ',' + Copy(fieldbyname('Cust_Order_No').asstring,1,50);   {External Document No - Customer PO Reference}
+        tempStr := tempstr + ',' + fieldbyname('Account_Code').asstring;  {Customer Account Code}
+        tempStr := tempstr + ',' + 'GBP';  {Currency}
+        tempStr := tempstr + ',' + copy(fieldbyname('Rep_Name').asstring,1,20);  {Sales Person}
+        tempStr := tempstr + ',' + 'G/L Account';   {Line Type}
+        tempStr := tempstr + ',' + fieldbyname('Nominal').asstring;  {Nominal Field}
+        tempStr := tempstr + ',' + copy(stringreplace(sDescription,',','',[rfReplaceAll]),1,500); {Line Description}
+        tempStr := tempStr + ',' + '1';  {Quantity}
+        tempStr := tempStr + ',' + formatfloat('###0.00000',rLineTotal);  {Goods Unit Value - Set as Total value of invoice line}
+        tempStr := tempStr + ',' + fieldbyname('Vat_Ref').asstring;   {VAT Code}
+        tempStr := tempStr + ',' + 'EA';   {Unit of Measure}
+        tempStr := tempStr + ',' + formatfloat('###0.00',rLineTotal);  {Goods Total Line Value}
+        tempStr := tempstr + ',' + copy(stringreplace(fieldbyname('Invoice_Description').asstring,',','',[rfReplaceAll]),1,500);   {Invoice Description}
+        tempStr := tempstr + ',' + '2040';   {Department Dimension Code}
+        tempStr := tempstr + ',' + 'SOUTH';   {Site Dimension Code}
+        tempStr := tempstr + ',' + '';   {Product Dimension}
+        tempStr := tempstr + ',' + 'OTHER';   {Job Dimension}
+
+        WriteLn(CSVFile, tempStr);
+
+        {Recalculate line totals to add to invoice totals}
+        rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+
+        rTotal := rTotal + rLineTotal;
+
+        iInvoiceNumber := fieldbyname('Sales_Invoice').asinteger;
+        iLineNo := fieldbyname('Invoice_line_no').asinteger;
+
+        {Check for any additional charges}
+        InvLineChgsCSVSQL.close;
+        InvLineChgsCSVSQL.parambyname('Sales_invoice').asinteger := iInvoiceNumber;
+        InvLineChgsCSVSQL.parambyname('Invoice_line_no').asinteger := iLineNo;
+        InvLineChgsCSVSQL.open;
+
+        while InvLineChgsCSVSQL.eof <> true do
+          begin
+            iCount := iCount + 1;
+            tempStr := 'Invoice';
+            tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
+            tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}   {CHECK*****}
+            tempStr := tempstr + ',' + pbDatestr(date); {Posting Date}
+            tempStr := tempstr + ',' + pbDatestr(fieldbyname('Invoice_Date').asdatetime); {Invoice Date}
+            tempStr := tempstr + ',' + Copy(fieldbyname('Cust_Order_No').asstring,1,50);   {External Document No - Customer PO Reference}
+            tempStr := tempstr + ',' + fieldbyname('Account_Code').asstring;  {Customer Account Code}
+            tempStr := tempstr + ',' + 'GBP';  {Currency}
+            tempStr := tempstr + ',' + copy(fieldbyname('Rep_Name').asstring,1,20);  {Sales Person}
+            tempStr := tempstr + ',' + 'G/L Account';   {Line Type}
+            tempStr := tempstr + ',' + fieldbyname('Nominal').asstring;  {Nominal Field}
+            tempStr := tempstr + ',' + stringreplace(InvLineChgsCSVSQL.fieldbyname('Details').asstring,',','',[rfReplaceAll]); {Line Description}
+            tempStr := tempStr + ',' + '1';  {Quantity}
+            tempStr := tempStr + ',' + formatfloat('###0.00000',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat);  {Goods Charges Value - Set as Total value of invoice line}
+            tempStr := tempStr + ',' + InvLineChgsCSVSQL.fieldbyname('Vat_Ref').asstring;   {VAT Code}
+            tempStr := tempStr + ',' + 'EA';   {Unit of Measure}
+            tempStr := tempStr + ',' + formatfloat('###0.00',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat);  {Goods Total Line Value}
+            tempStr := tempstr + ',' + copy(stringreplace(fieldbyname('Invoice_Description').asstring,',','',[rfReplaceAll]),1,500);   {Invoice Description}
+            tempStr := tempstr + ',' + '2040';   {Department Dimension Code}
+            tempStr := tempstr + ',' + 'SOUTH';   {Site Dimension Code}
+            tempStr := tempstr + ',' + '';   {Product Dimension}
+            tempStr := tempstr + ',' + 'OTHER';   {Job Dimension}
+
+            rLineTotal := InvLineChgsCSVSQL.fieldbyname('Amount').asfloat;
+
+            WriteLn(CSVFile, tempStr);
+
+            {Recalculate line totals to add to invoice totals}
+            rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+
+            rTotal := rTotal + rLineTotal;
+
+            InvLineChgsCSVSQL.Next;
+          end;
+        next;
+      end;
+    end;
+
+  FEmailAttachment.add(sLocation + sFilename + '.csv');
+  CloseFile(CSVFile);
+end;
+
+procedure TPBSalesInvRPrintFrm.ExportAllInvoicesToOptimus;
+var
+  sTo, sSubject, sBodyText, sLocation, sFileName, sInvoiceNumber: string;
+  zLocation, zFileName: array[0..255] of char;
+  sProductTypeDescription, sSupplierName, sCostUnit, sDescription, sOrderDate, tempStr: string;
+  CSVFile: TextFile;
+  rLineTotal, rResellerLineTotal, rLineMargin, rLineMarginPerc: real;
+  rTotal, rResellerTotal, rMargin, rMarginPerc, rCostPrice, rTotalCost: real;
+  iCount, iInvoiceNumber, iLineNo: integer;
+  iPriceUnitFactor: integer;
+  tempCode: string;
+begin
+  sLocation := GetWinTempDir;
+
+  {Code used to generate a unique filename}
+  strPCopy(zLocation, sLocation);
+
+  GetTempFileName(zLocation, '', 0, zFileName);
+
+  sFileName := zFileName;
+  sFileName := trim(stringReplace(sFileName,'.TMP','',[rfIgnoreCase]));
+
+  sFileName := trim(stringReplace(sFileName,sLocation,'',[rfIgnoreCase]));
+
+  tempCode := 'REDEYE';
+
+  {Format is 'Si' + Invoice Number + Random Number}
+  if self.CreditNotePrint then
+    sFileName := 'SC' + tempcode + '-' + sFilename
+  else
+    sFileName := 'SI' + tempcode + '-' + sFilename;
+
+  assignFile(CSVFile, sLocation + sFilename + '.csv');
+  rewrite(CSVFile);
+
+  try
+  tempstr := '';
+
+  {write away the column headings}
+  tempstr     := 'Document Type'
+              + ',Document No.'
+              + ',LineNo'
+              + ',PostingDate'
+              + ',Document Date'
+              + ',External DocumentNo'
+              + ',CustomerNo'
+              + ',CurrencyCode'
+              + ',SalesPersonCode'
+              + ',Line Type'
+              + ',No'
+              + ',Description'
+              + ',Quantity'
+              + ',UnitPriceExclVAT'
+              + ',VATCode'
+              + ',UnitOfMeasureCode'
+              + ',LineAmountExclVAT'
+              + ',InvoiceDescription'
+              + ',DepartmentDimension'
+              + ',SiteDimension'
+              + ',ProductDimension'
+              + ',JobDimension';
+
+  WriteLn(CSVFile, tempStr);
+
+  sInvoiceNumber := '';
+
+  with InvCSVSQL do
+    begin
+      close;
+      if chkbxShowZeroValues.checked then
+        parambyname('Show_Zero_Values').asstring := 'Y'
+      else
+        parambyname('Show_Zero_Values').asstring := 'N';
+
+      {Print all lines of credit note}
+      if self.CreditNotePrint then
+        parambyname('Show_Zero_Values').asstring := 'Y';
+
+      parambyname('Int_Sel').asinteger := iIntSelCode;
+      open;
+
+      rTotal := 0;
+      rResellerTotal := 0;
+      iCount := 0;
+
+      PBRPSalesInvFrm := TPBRPSalesInvFrm.create(self);
+
+      try
+      while eof <> true do
+      begin
+        if fieldbyname('Price_Unit_Factor').asinteger = 0 then
+          begin
+            rLineTotal := fieldbyname('Goods_Value').asfloat;
+          end
+        else
+          begin
+            rLineTotal := (fieldbyname('Qty_Invoiced').asinteger/fieldbyname('Price_Unit_Factor').asinteger) * fieldbyname('Goods_Value').asfloat;
+          end;
+
+        sOrderDate := '';
+
+        if fieldbyname('Purchase_Order').asfloat <> 0 then
+          begin
+            sDescription := PBRPSalesInvFrm.GetPOLineDesc(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            sSupplierName := GetPOSupplier(fieldbyname('Purchase_Order').asfloat);
+            sCostUnit := GetPOCostUnit(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            iPriceUnitFactor := GetPOPriceUnitFactor(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            rCostPrice := fieldbyname('Order_Price').asfloat;
+            sProductTypeDescription := GetPOProductType(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            sOrderDate := GetPODate(fieldbyname('Purchase_Order').asfloat);
+          end
+        else
+        if fieldbyname('Sales_Order').asinteger <> 0 then
+          begin
+            sDescription := PBRPSalesInvFrm.GetSOLineDesc(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_order_Line_no').asinteger);
+            sSupplierName := GetJBSupplier(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sCostUnit := GetJBCostUnit(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            iPriceUnitFactor := GetJBPriceUnitFactor(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            rCostPrice := GetJBUnitCost(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sProductTypeDescription := GetJBProductType(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+          end
+        else
+          begin
+            sDescription := PBRPSalesInvFrm.GetJBLineDesc(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sSupplierName := GetJBSupplier(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sCostUnit := GetJBCostUnit(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            iPriceUnitFactor := GetJBPriceUnitFactor(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            rCostPrice := GetJBUnitCost(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            sProductTypeDescription := GetJBProductType(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+          end;
+
+        if iPriceUnitFactor = 0 then
+          begin
+            rTotalCost := rCostPrice;
+          end
+        else
+          begin
+            rTotalCost := (fieldbyname('Qty_Invoiced').asinteger/iPriceUnitFactor) * rCostPrice;
+          end;
+
+        rLineMargin := rResellerLineTotal - rLineTotal;
+        try
+          rLineMarginPerc := ((rLineMargin/rLineTotal)*100);
+        except
+          rLineMarginPerc := 999.99;
+        end;
+
+        if fieldbyname('Sales_Invoice_No').asstring <> sinvoiceNumber then
+          begin
+            iCount := 0;
+            sInvoiceNumber := fieldbyname('Sales_Invoice_No').asstring;
+          end;
+
+        iCount := iCount + 1;
+        tempStr := 'Invoice';
+        tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
+//        tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}
+        tempStr := tempstr + ',' + inttostr(10000 + iCount);    {Invoice Line}
+        tempStr := tempstr + ',' + pbDatestr(date); {Posting Date}
+        tempStr := tempstr + ',' + pbDatestr(fieldbyname('Invoice_Date').asdatetime); {Invoice Date}
+        tempStr := tempstr + ',' + Copy(fieldbyname('Cust_Order_No').asstring,1,50);   {External Document No - Customer PO Reference}
+        tempStr := tempstr + ',' + fieldbyname('Account_Code').asstring;  {Customer Account Code}
+        tempStr := tempstr + ',' + 'GBP';  {Currency}
+        tempStr := tempstr + ',' + copy(fieldbyname('Rep_Name').asstring,1,20);  {Sales Person}
+        tempStr := tempstr + ',' + 'G/L Account';   {Line Type}
+        tempStr := tempstr + ',' + fieldbyname('Nominal').asstring;  {Nominal Field}
+        tempStr := tempstr + ',' + copy(stringreplace(sDescription,',','',[rfReplaceAll]),1,500); {Line Description}
+        tempStr := tempStr + ',' + '1';  {Quantity}
+        tempStr := tempStr + ',' + formatfloat('###0.00000',rLineTotal);  {Goods Unit Value - Set as Total value of invoice line}
+        tempStr := tempStr + ',' + fieldbyname('Vat_Ref').asstring;   {VAT Code}
+        tempStr := tempStr + ',' + 'EA';   {Unit of Measure}
+        tempStr := tempStr + ',' + formatfloat('###0.00',rLineTotal);  {Goods Total Line Value}
+        tempStr := tempstr + ',' + copy(stringreplace(fieldbyname('Invoice_Description').asstring,',','',[rfReplaceAll]),1,500);   {Invoice Description}
+        tempStr := tempstr + ',' + '2040';   {Department Dimension Code}
+        tempStr := tempstr + ',' + 'SOUTH';   {Site Dimension Code}
+        tempStr := tempstr + ',' + '';   {Product Dimension}
+        tempStr := tempstr + ',' + 'OTHER';   {Job Dimension}
+
+        WriteLn(CSVFile, tempStr);
+
+        {Recalculate line totals to add to invoice totals}
+        rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+
+        rTotal := rTotal + rLineTotal;
+
+        iInvoiceNumber := fieldbyname('Sales_Invoice').asinteger;
+        iLineNo := fieldbyname('Invoice_line_no').asinteger;
+
+        {Check for any additional charges}
+        InvLineChgsCSVSQL.close;
+        InvLineChgsCSVSQL.parambyname('Sales_invoice').asinteger := iInvoiceNumber;
+        InvLineChgsCSVSQL.parambyname('Invoice_line_no').asinteger := iLineNo;
+        InvLineChgsCSVSQL.open;
+
+        while InvLineChgsCSVSQL.eof <> true do
+          begin
+            iCount := iCount + 1;
+            tempStr := 'Invoice';
+            tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
+//            tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}   {CHECK*****}
+            tempStr := tempstr + ',' + inttostr(10000 + iCount);    {Invoice Line}
+            tempStr := tempstr + ',' + pbDatestr(date); {Posting Date}
+            tempStr := tempstr + ',' + pbDatestr(fieldbyname('Invoice_Date').asdatetime); {Invoice Date}
+            tempStr := tempstr + ',' + Copy(fieldbyname('Cust_Order_No').asstring,1,50);   {External Document No - Customer PO Reference}
+            tempStr := tempstr + ',' + fieldbyname('Account_Code').asstring;  {Customer Account Code}
+            tempStr := tempstr + ',' + 'GBP';  {Currency}
+            tempStr := tempstr + ',' + copy(fieldbyname('Rep_Name').asstring,1,20);  {Sales Person}
+            tempStr := tempstr + ',' + 'G/L Account';   {Line Type}
+            tempStr := tempstr + ',' + fieldbyname('Nominal').asstring;  {Nominal Field}
+            tempStr := tempstr + ',' + stringreplace(InvLineChgsCSVSQL.fieldbyname('Details').asstring,',','',[rfReplaceAll]); {Line Description}
+            tempStr := tempStr + ',' + '1';  {Quantity}
+            tempStr := tempStr + ',' + formatfloat('###0.00000',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat);  {Goods Charges Value - Set as Total value of invoice line}
+            tempStr := tempStr + ',' + InvLineChgsCSVSQL.fieldbyname('Vat_Ref').asstring;   {VAT Code}
+            tempStr := tempStr + ',' + 'EA';   {Unit of Measure}
+            tempStr := tempStr + ',' + formatfloat('###0.00',InvLineChgsCSVSQL.fieldbyname('Amount').asfloat);  {Goods Total Line Value}
+            tempStr := tempstr + ',' + copy(stringreplace(fieldbyname('Invoice_Description').asstring,',','',[rfReplaceAll]),1,500);   {Invoice Description}
+            tempStr := tempstr + ',' + '2040';   {Department Dimension Code}
+            tempStr := tempstr + ',' + 'SOUTH';   {Site Dimension Code}
+            tempStr := tempstr + ',' + '';   {Product Dimension}
+            tempStr := tempstr + ',' + 'OTHER';   {Job Dimension}
+
+            rLineTotal := InvLineChgsCSVSQL.fieldbyname('Amount').asfloat;
+
+            WriteLn(CSVFile, tempStr);
+
+            {Recalculate line totals to add to invoice totals}
+            rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+
+            rTotal := rTotal + rLineTotal;
+
+            InvLineChgsCSVSQL.Next;
+          end;
+
+        next;
+      end;
+      finally
+        PBRPSalesInvFrm.free;
+      end;
+    end;
+
+  FEmailAttachment.add(sLocation + sFilename + '.csv');
+  finally
+    CloseFile(CSVFile);
+  end;
+
+  sTo := dmBroker.GetGlobalInvoiceEmail;
+
+  if InvoicePrint then
+    sSubject := 'Invoices'
+  else
+    sSubject := 'Credit Notes';
+
+  sBodytext := 'Please find attached your ' + sSubject + '.'#13#10#13#10
+                          +  'If you have any queries please contact me immediately'#13#10#13#10;
+
+  EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmPBMainMenu.EmailApplication, frmPBMainMenu.InvoiceEmailAccount);
+  FEmailSent := true;
 end;
 
 end.

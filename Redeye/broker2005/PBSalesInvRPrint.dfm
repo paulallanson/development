@@ -21,6 +21,20 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     484
     313)
   TextHeight = 13
+  object Label2: TLabel
+    Left = 248
+    Top = 80
+    Width = 33
+    Height = 13
+    Caption = 'Label2'
+  end
+  object lblFileFormat: TLabel
+    Left = 240
+    Top = 212
+    Width = 57
+    Height = 13
+    Caption = 'File Format'
+  end
   object selectionGrp: TGroupBox
     Left = 8
     Top = 8
@@ -72,6 +86,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PrintBtnClick
+    ExplicitTop = 247
   end
   object PreviewBtn: TBitBtn
     Left = 210
@@ -96,6 +111,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PreviewBtnClick
+    ExplicitTop = 247
   end
   object CloseBitBtn: TBitBtn
     Left = 16
@@ -106,6 +122,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 247
   end
   object SelectLst: TListBox
     Left = 336
@@ -140,6 +157,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     NumGlyphs = 2
     TabOrder = 5
     OnClick = EmailBitBtnClick
+    ExplicitTop = 247
   end
   object chkbxPrintLogo: TCheckBox
     Left = 16
@@ -164,6 +182,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Height = 17
     Caption = 'Attach CSV copy to Email'
     TabOrder = 8
+    OnClick = chkbxAttachCSVFileClick
   end
   object OleContainer1: TOleContainer
     Left = 337
@@ -227,6 +246,18 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 10
     OnClick = BitBtn1Click
+    ExplicitLeft = 377
+  end
+  object cmbFileFormat: TComboBox
+    Left = 321
+    Top = 208
+    Width = 144
+    Height = 21
+    TabOrder = 11
+    Text = 'cmbFileFormat'
+    Items.Strings = (
+      'SAP'
+      'Optimus')
   end
   object AddIntSelQuery: TFDQuery
     ConnectionName = 'PB'
@@ -703,8 +734,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       ' '
       ' '
       ' ')
-    Left = 144
-    Top = 128
+    Left = 188
+    Top = 64
     ParamData = <
       item
         Name = 'Int_sel'
@@ -796,8 +827,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       '  Customer.Name,'
       '  Customer_Branch.Name'
       '')
-    Left = 272
-    Top = 152
+    Left = 292
+    Top = 46
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -872,8 +903,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       '  Customer.Name,'
       '  Customer_Branch.Name'
       '')
-    Left = 192
-    Top = 104
+    Left = 216
+    Top = 82
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -943,46 +974,68 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
   object InvLineCSVSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'SELECT  Sales_Invoice_Line.*,'
-      '        Price_Unit.Price_Unit,'
-      '        Price_Unit.Description AS Sales_Unit_Desc,'
-      '        Price_Unit.Price_Unit_Factor,'
-      '        Vat_Code.Vat_Rate,'
-      '        Vat_Code.Description,'
-      '        Vat_Code.VAT_Ref,'
-      '        Sales_Invoice.Sales_Invoice_No,'
-      '        Sales_Invoice.Invoice_Date,'
-      '        Sales_Invoice.Cust_Order_No,'
-      '        Sales_Invoice.Invoice_Description,'
-      '        Sales_Invoice.Reference as Job_Reference,'
-      '        Customer_Branch.Account_Code,'
-      '        Customer.Name as Customer_Name,'
-      '        Purchase_OrderLine.Purchase_Order,'
-      '        Purchase_OrderLine.Alt_Purchase_Order,'
-      '        Purchase_OrderLine.Order_Price'
-      'FROM Purchase_OrderLine'
-      '        RIGHT JOIN (Customer'
-      '        RIGHT JOIN ((Vat_Code'
-      '        INNER JOIN (Price_Unit'
-      '        INNER JOIN (Sales_Invoice'
-      '        INNER JOIN Sales_Invoice_Line'
+      'SELECT'
+      '    Sales_Invoice_Line.*,'
+      '    Price_Unit.Price_Unit,'
+      '    Price_Unit.Description AS Sales_Unit_Desc,'
+      '    Price_Unit.Price_Unit_Factor,'
+      '    Vat_Code.Vat_Rate,'
+      '    Vat_Code.Description,'
+      '    Vat_Code.VAT_Ref,'
+      '    Sales_Invoice.Sales_Invoice_No,'
+      '    Sales_Invoice.Invoice_Date,'
+      '    Sales_Invoice.Cust_Order_No,'
+      '    Sales_Invoice.Invoice_Description,'
+      '    Sales_Invoice.Reference AS Job_Reference,'
+      '    Customer_Branch.Account_Code,'
+      '    Customer.Name AS Customer_Name,'
+      '    Purchase_OrderLine.Purchase_Order,'
+      '    Purchase_OrderLine.Alt_Purchase_Order,'
+      '    Purchase_OrderLine.Order_Price,'
+      '    Rep.Name as Rep_Name'
+      'FROM'
+      '    ('
+      '        Vat_Code'
+      '        INNER JOIN ('
+      '            Purchase_OrderLine'
+      '            RIGHT JOIN ('
+      '                Price_Unit'
+      '                INNER JOIN ('
+      '                    ('
+      '                        Customer'
+      '                        RIGHT JOIN ('
+      '                            Sales_Invoice'
+      '                            LEFT JOIN Customer_Branch ON ('
       
-        '            ON Sales_Invoice.Sales_Invoice = Sales_Invoice_Line.' +
-        'Sales_Invoice)'
+        '                                Sales_Invoice.Inv_to_Customer = ' +
+        'Customer_Branch.Customer'
+      '                            )'
+      '                            AND ('
       
-        '            ON Price_Unit.Price_Unit = Sales_Invoice_Line.Price_' +
-        'Unit)'
-      '            ON Vat_Code.Vat_Code = Sales_Invoice_Line.Vat_Code)'
-      '        LEFT JOIN Customer_Branch'
+        '                                Sales_Invoice.Inv_to_Branch = Cu' +
+        'stomer_Branch.Branch_no'
+      '                            )'
       
-        '            ON (Sales_Invoice.Inv_to_Branch = Customer_Branch.Br' +
-        'anch_no) AND (Sales_Invoice.Inv_to_Customer = Customer_Branch.Cu' +
-        'stomer))'
-      '            ON Customer.Customer = Sales_Invoice.Customer)'
+        '                        ) ON Customer.Customer = Sales_Invoice.C' +
+        'ustomer'
+      '                    )'
       
-        '            ON (Purchase_OrderLine.Line = Sales_Invoice_Line.Lin' +
-        'e) AND (Purchase_OrderLine.Purchase_Order = Sales_Invoice_Line.P' +
-        'urchase_Order)'
+        '                    INNER JOIN Sales_Invoice_Line ON Sales_Invoi' +
+        'ce.Sales_Invoice = Sales_Invoice_Line.Sales_Invoice'
+      
+        '                ) ON Price_Unit.Price_Unit = Sales_Invoice_Line.' +
+        'Price_Unit'
+      
+        '            ) ON (Purchase_OrderLine.Line = Sales_Invoice_Line.L' +
+        'ine)'
+      '            AND ('
+      
+        '                Purchase_OrderLine.Purchase_Order = Sales_Invoic' +
+        'e_Line.Purchase_Order'
+      '            )'
+      '        ) ON Vat_Code.Vat_Code = Sales_Invoice_Line.Vat_Code'
+      '    )'
+      '    LEFT JOIN Rep ON Sales_Invoice.Rep = Rep.Rep'
       'WHERE Sales_Invoice.Sales_Invoice_No = :Sales_Invoice_no AND'
       '('
       
@@ -1000,6 +1053,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       ''
       ''
       ''
+      ''
       ' '
       ' '
       ' '
@@ -1010,9 +1064,11 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     ParamData = <
       item
         Name = 'Sales_Invoice_no'
+        ParamType = ptInput
       end
       item
         Name = 'Show_Zero_Values'
+        ParamType = ptInput
       end>
   end
   object qryPO: TFDQuery
@@ -1120,8 +1176,9 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       '        Customer.Name as Customer_Name,'
       '        Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Alt_Purchase_Order,'
-      '        Purchase_OrderLine.Order_Price'
-      'FROM Int_Sel'
+      '        Purchase_OrderLine.Order_Price,'
+      '        Rep.Name as Rep_Name'
+      'FROM (Int_Sel'
       '        INNER JOIN (Vat_Code'
       '        INNER JOIN (Purchase_OrderLine'
       '        RIGHT JOIN (Price_Unit'
@@ -1145,7 +1202,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
         'e) AND (Purchase_OrderLine.Purchase_Order = Sales_Invoice_Line.P' +
         'urchase_Order))'
       '            ON Vat_Code.Vat_Code = Sales_Invoice_Line.Vat_Code)'
-      '            ON Int_Sel.Text100 = Sales_Invoice.Sales_Invoice_No'
+      '            ON Int_Sel.Text100 = Sales_Invoice.Sales_Invoice_No)'
+      '        LEFT JOIN Rep ON Sales_Invoice.Rep = Rep.Rep'
       'WHERE'
       '('
       
@@ -1176,9 +1234,11 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     ParamData = <
       item
         Name = 'Show_Zero_Values'
+        ParamType = ptInput
       end
       item
         Name = 'Int_Sel'
+        ParamType = ptInput
       end>
   end
   object InvLineChgsCSVSQL: TFDQuery

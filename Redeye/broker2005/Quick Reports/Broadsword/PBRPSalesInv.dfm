@@ -7580,12 +7580,14 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     SQL.Strings = (
       'select Sales_Invoice.Customer,'
       'Customer.Name as Customer_name,'
+      'Customer_Branch.Name as Branch_Name,'
       'Customer_Branch.Building_no_Name,'
       'Customer_Branch.Street,'
       'Customer_Branch.Locale,'
       'Customer_Branch.Town,'
       'Customer_Branch.Postcode,'
-      'Customer_Branch.Account_Code'
+      'Customer_Branch.Account_Code,'
+      'Customer_Branch.Use_Branch_Name'
       'from Sales_Invoice,'
       'Customer_Branch,'
       'Customer'
@@ -7603,6 +7605,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
       item
         Name = 'Sales_Invoice'
         DataType = ftInteger
+        ParamType = ptInput
       end>
   end
   object qryComp: TFDQuery
