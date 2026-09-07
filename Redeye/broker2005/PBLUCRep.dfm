@@ -3,64 +3,64 @@ object PBLUCRepFrm: TPBLUCRepFrm
   Top = 113
   BorderStyle = bsDialog
   Caption = 'Look-Up Reps For A Customer/Branch'
-  ClientHeight = 310
-  ClientWidth = 432
+  ClientHeight = 327
+  ClientWidth = 436
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CustLabel: TLabel
     Left = 80
-    Top = 6
-    Width = 50
-    Height = 13
+    Top = 4
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 270
-    Top = 224
-    Width = 59
-    Height = 13
+    Left = 264
+    Top = 230
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 38
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
-    Top = 6
-    Width = 52
-    Height = 13
+    Top = 4
+    Width = 59
+    Height = 17
     Caption = 'Customer:'
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 40
+    Top = 46
     Width = 320
     Height = 177
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -68,7 +68,7 @@ object PBLUCRepFrm: TPBLUCRepFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -91,24 +91,24 @@ object PBLUCRepFrm: TPBLUCRepFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 248
+    Top = 254
     Width = 321
-    Height = 49
+    Height = 59
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 22
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
     Left = 340
-    Top = 244
+    Top = 259
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -119,7 +119,7 @@ object PBLUCRepFrm: TPBLUCRepFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 340
-    Top = 272
+    Top = 287
     Width = 75
     Height = 25
     Kind = bkClose
@@ -128,15 +128,15 @@ object PBLUCRepFrm: TPBLUCRepFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 336
-    Top = 104
+    Top = 88
     Width = 87
-    Height = 113
+    Height = 129
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
-      Left = 6
-      Top = 16
+      Left = 4
+      Top = 24
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -158,8 +158,8 @@ object PBLUCRepFrm: TPBLUCRepFrm
       OnClick = AddBitBtnClick
     end
     object DelBitBtn: TBitBtn
-      Left = 6
-      Top = 80
+      Left = 4
+      Top = 88
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -181,8 +181,8 @@ object PBLUCRepFrm: TPBLUCRepFrm
       OnClick = DelBitBtnClick
     end
     object ChgBitBtn: TBitBtn
-      Left = 6
-      Top = 48
+      Left = 4
+      Top = 56
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -240,7 +240,7 @@ object PBLUCRepFrm: TPBLUCRepFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 234
+    Top = 126
   end
 end

@@ -2,46 +2,47 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
   Left = 192
   Top = 114
   Caption = 'Export Electronic Invoices'
-  ClientHeight = 439
-  ClientWidth = 854
+  ClientHeight = 458
+  ClientWidth = 866
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 854
-    Height = 81
+    Width = 866
+    Height = 89
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 854
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 72
       Top = 16
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
       Text = 'edtCustomer'
     end
     object btnSelection: TButton
       Left = 320
-      Top = 14
+      Top = 16
       Width = 25
       Height = 25
       Caption = '...'
@@ -58,7 +59,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Left = 368
       Top = 8
       Width = 105
-      Height = 65
+      Height = 75
       Caption = 'File Type'
       ItemIndex = 0
       Items.Strings = (
@@ -72,7 +73,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Left = 480
       Top = 8
       Width = 377
-      Height = 64
+      Height = 75
       Caption = 'Previous Files '
       ParentBackground = False
       TabOrder = 3
@@ -80,20 +81,20 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       object Label5: TLabel
         Left = 9
         Top = 17
-        Width = 47
-        Height = 13
+        Width = 52
+        Height = 17
         Caption = 'Location:'
       end
       object edtExpFile: TEdit
-        Left = 8
-        Top = 30
+        Left = 9
+        Top = 38
         Width = 273
-        Height = 21
+        Height = 25
         TabOrder = 0
       end
       object btnBrowse: TButton
         Left = 294
-        Top = 26
+        Top = 38
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -104,22 +105,27 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 420
-    Width = 854
+    Top = 439
+    Width = 866
     Height = 19
     Panels = <>
+    ExplicitTop = 411
+    ExplicitWidth = 848
   end
   object Panel3: TPanel
-    Left = 760
-    Top = 81
+    Left = 772
+    Top = 89
     Width = 94
-    Height = 339
+    Height = 350
     Align = alRight
     ParentBackground = False
     TabOrder = 2
+    ExplicitLeft = 754
+    ExplicitTop = 81
+    ExplicitHeight = 330
     DesignSize = (
       94
-      339)
+      350)
     object btnSelect: TBitBtn
       Left = 11
       Top = 27
@@ -150,7 +156,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     end
     object btnOK: TBitBtn
       Left = 11
-      Top = 263
+      Top = 274
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -177,16 +183,18 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
+      ExplicitTop = 254
     end
     object BitBtn2: TBitBtn
       Left = 11
-      Top = 303
+      Top = 314
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitTop = 294
     end
     object btnExcel: TBitBtn
       Left = 11
@@ -245,27 +253,32 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
   end
   object Panel4: TPanel
     Left = 0
-    Top = 81
-    Width = 760
-    Height = 339
+    Top = 89
+    Width = 772
+    Height = 350
     Align = alClient
     Caption = 'Panel4'
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 81
+    ExplicitWidth = 754
+    ExplicitHeight = 330
     object Panel5: TPanel
       Left = 1
-      Top = 178
-      Width = 758
+      Top = 189
+      Width = 770
       Height = 160
       Align = alBottom
       BevelOuter = bvNone
       Caption = 'Panel3'
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 169
+      ExplicitWidth = 752
       object pnlFTP: TPanel
         Left = 0
         Top = 0
-        Width = 249
+        Width = 257
         Height = 160
         Align = alLeft
         BevelOuter = bvNone
@@ -274,48 +287,48 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         object Label2: TLabel
           Left = 5
           Top = 12
-          Width = 65
-          Height = 13
+          Width = 75
+          Height = 17
           Caption = 'FTP Address:'
         end
         object Label3: TLabel
           Left = 5
           Top = 44
-          Width = 54
-          Height = 13
+          Width = 62
+          Height = 17
           Caption = 'Username:'
         end
         object Label4: TLabel
           Left = 5
           Top = 76
-          Width = 52
-          Height = 13
+          Width = 59
+          Height = 17
           Caption = 'Password:'
         end
         object edtUserName: TEdit
-          Left = 73
+          Left = 85
           Top = 40
           Width = 121
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
           OnChange = EnableOK
         end
         object edtPassword: TEdit
-          Left = 73
+          Left = 85
           Top = 72
           Width = 121
-          Height = 21
+          Height = 25
           PasswordChar = '*'
           ReadOnly = True
           TabOrder = 1
           OnChange = EnableOK
         end
         object edtFTP: TEdit
-          Left = 73
+          Left = 85
           Top = 8
           Width = 168
-          Height = 21
+          Height = 25
           TabOrder = 2
           OnChange = EnableOK
         end
@@ -324,7 +337,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
           Top = 103
           Width = 121
           Height = 46
-          ItemHeight = 13
+          ItemHeight = 17
           TabOrder = 3
           Visible = False
         end
@@ -333,27 +346,29 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
           Top = 103
           Width = 103
           Height = 46
-          ItemHeight = 13
+          ItemHeight = 17
           TabOrder = 4
           Visible = False
         end
       end
       object lstbxStatus: TListBox
-        Left = 249
+        Left = 257
         Top = 0
-        Width = 509
+        Width = 513
         Height = 160
         Hint = 'Transaction Log'
         Style = lbOwnerDrawFixed
         Align = alClient
         TabOrder = 1
+        ExplicitLeft = 249
+        ExplicitWidth = 503
       end
     end
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
-      Width = 758
-      Height = 177
+      Width = 770
+      Height = 188
       Hint = 
         'to select multiple invoices press the CTRL button and click the ' +
         'required invoices'
@@ -362,7 +377,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -372,7 +387,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <

@@ -3,49 +3,49 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
   Top = 151
   BorderStyle = bsDialog
   Caption = 'Look-Up A Customer Cost Centre'
-  ClientHeight = 361
+  ClientHeight = 379
   ClientWidth = 461
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 278
-    Top = 275
-    Width = 59
-    Height = 13
+    Left = 272
+    Top = 280
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 24
+    Top = 29
     Width = 329
     Height = 241
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -53,7 +53,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -75,7 +75,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
   end
   object SelectBitBtn: TBitBtn
     Left = 364
-    Top = 281
+    Top = 296
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -150,7 +150,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 364
-    Top = 317
+    Top = 332
     Width = 75
     Height = 25
     Kind = bkClose
@@ -158,16 +158,16 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 352
-    Top = 152
+    Left = 356
+    Top = 136
     Width = 97
-    Height = 113
+    Height = 129
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 1
     object AddBitBtn: TBitBtn
       Left = 12
-      Top = 16
+      Top = 24
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -190,7 +190,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 12
-      Top = 48
+      Top = 56
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -213,7 +213,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
     end
     object DelBitBtn: TBitBtn
       Left = 12
-      Top = 80
+      Top = 88
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -237,25 +237,25 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 293
+    Top = 298
     Width = 329
-    Height = 49
+    Height = 60
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 4
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 23
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
-    Left = 136
-    Top = 24
+    Left = 170
+    Top = 35
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -274,8 +274,8 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
       ' '
       ' '
       ' ')
-    Left = 64
-    Top = 64
+    Left = 80
+    Top = 85
     ParamData = <
       item
         Name = 'Code_From'
@@ -292,7 +292,7 @@ object PBLUCustCstCntrFrm: TPBLUCustCstCntrFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 250
+    Top = 195
   end
 end

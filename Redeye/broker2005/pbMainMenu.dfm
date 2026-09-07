@@ -7,7 +7,7 @@ object frmpbMainMenu: TfrmpbMainMenu
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIForm
@@ -19,27 +19,26 @@ object frmpbMainMenu: TfrmpbMainMenu
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
     Width = 1472
-    Height = 45
+    Height = 41
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
-        MinHeight = 41
+        MinHeight = 40
         Width = 1466
       end>
-    ExplicitWidth = 1466
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
       Width = 1457
-      Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 61
+      Height = 40
+      ButtonHeight = 40
+      ButtonWidth = 69
       Caption = 'ToolBar1'
       DragMode = dmAutomatic
       Images = imglstMainMenu
@@ -59,7 +58,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnActivitiesClick
       end
       object btnCustomers: TToolButton
-        Left = 61
+        Left = 69
         Top = 0
         Hint = 'Customers'
         Caption = '&Customers'
@@ -69,14 +68,14 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnCustomersClick
       end
       object btnEndUsers: TToolButton
-        Left = 122
+        Left = 138
         Top = 0
         Caption = 'End Users'
         ImageIndex = 15
         OnClick = btnEndUsersClick
       end
       object btnProspects: TToolButton
-        Left = 183
+        Left = 207
         Top = 0
         Hint = 'Prospect details'
         Caption = '&Prospects'
@@ -86,7 +85,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnProspectsClick
       end
       object btnSuppliers: TToolButton
-        Left = 244
+        Left = 276
         Top = 0
         Hint = 'Supplier details'
         Caption = 'Su&ppliers'
@@ -96,14 +95,14 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnSuppliersClick
       end
       object btnContracts: TToolButton
-        Left = 305
+        Left = 345
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 12
         OnClick = btnContractsClick
       end
       object btnFormReferences: TToolButton
-        Left = 366
+        Left = 414
         Top = 0
         Hint = 'Form References'
         Caption = '&Forms'
@@ -113,7 +112,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnFormReferencesClick
       end
       object btnQuotes: TToolButton
-        Left = 427
+        Left = 483
         Top = 0
         Hint = 'Quotes'
         Caption = '&Quotes'
@@ -123,7 +122,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnQuotesClick
       end
       object btnEnquiries: TToolButton
-        Left = 488
+        Left = 552
         Top = 0
         Hint = 'Enquiries'
         Caption = '&Enquiries'
@@ -133,7 +132,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnEnquiriesClick
       end
       object btnProduction: TToolButton
-        Left = 549
+        Left = 621
         Top = 0
         Hint = 'Buy Print'
         Caption = '&Buy Print'
@@ -143,7 +142,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnProductionClick
       end
       object btnJobs: TToolButton
-        Left = 610
+        Left = 690
         Top = 0
         Hint = 'Job Bags'
         Caption = '&Job Bags'
@@ -153,7 +152,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnJobsClick
       end
       object btnWorksOrders: TToolButton
-        Left = 671
+        Left = 759
         Top = 0
         Hint = 'Works Instructions'
         Caption = '&Works'
@@ -163,7 +162,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnWorksOrdersClick
       end
       object btnNCA: TToolButton
-        Left = 732
+        Left = 828
         Top = 0
         Hint = 'Non Conformance Advice'
         Caption = '&NCA'
@@ -173,7 +172,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnNCAClick
       end
       object btnCallOffs: TToolButton
-        Left = 793
+        Left = 897
         Top = 0
         Hint = 'Stock Call Offs'
         Caption = 'Call &Offs'
@@ -183,7 +182,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnCallOffsClick
       end
       object btnPurchases: TToolButton
-        Left = 854
+        Left = 966
         Top = 0
         Hint = 'Purchase Ordering'
         Caption = 'P&urchase'
@@ -193,7 +192,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnPurchasesClick
       end
       object btnStock: TToolButton
-        Left = 915
+        Left = 1035
         Top = 0
         Hint = 'Stock Control'
         Caption = 'S&tock'
@@ -203,7 +202,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = btnStockClick
       end
       object btnSalesInvoicing: TToolButton
-        Left = 976
+        Left = 1104
         Top = 0
         Hint = 'Sales Invoicing'
         Caption = '&Sales'
@@ -213,7 +212,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         ShowHint = True
       end
       object btnPurchaseInvoicing: TToolButton
-        Left = 1037
+        Left = 1173
         Top = 0
         Hint = 'Purchase Invoicing'
         Caption = 'Purch Inv'

@@ -7,13 +7,13 @@ object PBEmailListFrm: TPBEmailListFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -23,6 +23,8 @@ object PBEmailListFrm: TPBEmailListFrm
     Caption = 'Panel1'
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 691
+    ExplicitHeight = 221
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -39,8 +41,8 @@ object PBEmailListFrm: TPBEmailListFrm
       OnClick = EmailListGridClick
       OnDrawCell = EmailListGridDrawCell
       OnSelectCell = EmailListGridSelectCell
-      ExplicitLeft = 2
-      ExplicitTop = 4
+      ExplicitWidth = 689
+      ExplicitHeight = 219
       ColWidths = (
         64
         186
@@ -53,7 +55,7 @@ object PBEmailListFrm: TPBEmailListFrm
       Left = 432
       Top = 88
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'ExportFilter'
       ListField = 'Description'
       ListSource = ExFilterSRC
@@ -65,7 +67,7 @@ object PBEmailListFrm: TPBEmailListFrm
       Left = 216
       Top = 88
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = dtsContacts
@@ -83,6 +85,8 @@ object PBEmailListFrm: TPBEmailListFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 221
+    ExplicitWidth = 691
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8
@@ -209,8 +213,8 @@ object PBEmailListFrm: TPBEmailListFrm
       'Branch_no = :Branch_no and'
       '((inactive = '#39'N'#39') OR (inactive IS NULL))'
       'Order By Name')
-    Left = 216
-    Top = 184
+    Left = 118
+    Top = 158
     ParamData = <
       item
         Name = 'Supplier'

@@ -5,7 +5,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
   BorderStyle = bsDialog
   Caption = 'Invoice Re-Print Selection'
   ClientHeight = 313
-  ClientWidth = 484
+  ClientWidth = 497
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -18,7 +18,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    484
+    497
     313)
   TextHeight = 13
   object Label2: TLabel
@@ -195,7 +195,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Visible = False
   end
   object btbtnExcel: TBitBtn
-    Left = 383
+    Left = 390
     Top = 256
     Width = 75
     Height = 25
@@ -246,7 +246,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 10
     OnClick = BitBtn1Click
-    ExplicitLeft = 377
+    ExplicitLeft = 371
   end
   object cmbFileFormat: TComboBox
     Left = 321
@@ -939,7 +939,9 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
         '          ON (Customer_Branch.Branch_no = Sales_Invoice.End_User' +
         '_Branch_No) AND (Customer_Branch.Customer = Sales_Invoice.End_Us' +
         'er_Customer)'
-      'WHERE Sales_Invoice.Sales_Invoice_No = :Sales_Invoice_no and'
+      
+        'WHERE ((Sales_Invoice.Sales_Invoice_No = :Sales_Invoice_no) and ' +
+        '(Sales_Invoice.Invoice_or_Credit = :Invoice_or_Credit)) and'
       '('
       
         '(Sales_invoice_line.Not_printed <> '#39'Y'#39') or (Sales_invoice_line.N' +
@@ -961,14 +963,20 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       ' '
       ' '
       ' ')
-    Left = 272
-    Top = 200
+    Left = 404
+    Top = 186
     ParamData = <
       item
         Name = 'Sales_Invoice_no'
+        ParamType = ptInput
+      end
+      item
+        Name = 'INVOICE_OR_CREDIT'
+        ParamType = ptInput
       end
       item
         Name = 'Show_Zero_Values'
+        ParamType = ptInput
       end>
   end
   object InvLineCSVSQL: TFDQuery
@@ -1036,7 +1044,9 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       '        ) ON Vat_Code.Vat_Code = Sales_Invoice_Line.Vat_Code'
       '    )'
       '    LEFT JOIN Rep ON Sales_Invoice.Rep = Rep.Rep'
-      'WHERE Sales_Invoice.Sales_Invoice_No = :Sales_Invoice_no AND'
+      
+        'WHERE ((Sales_Invoice.Sales_Invoice_No = :Sales_Invoice_no) AND ' +
+        '(Sales_Invoice.Invoice_or_Credit = :Invoice_or_Credit)) AND'
       '('
       
         '(Sales_invoice_line.Not_printed <> '#39'Y'#39') or (Sales_invoice_line.N' +
@@ -1059,11 +1069,15 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       ' '
       ' '
       ' ')
-    Left = 272
-    Top = 248
+    Left = 276
+    Top = 190
     ParamData = <
       item
         Name = 'Sales_Invoice_no'
+        ParamType = ptInput
+      end
+      item
+        Name = 'INVOICE_OR_CREDIT'
         ParamType = ptInput
       end
       item
@@ -1081,8 +1095,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       '        INNER JOIN Purchase_Order'
       '            ON Supplier.Supplier = Purchase_Order.Supplier'
       'WHERE Purchase_Order = :Purchase_Order')
-    Left = 16
-    Top = 248
+    Left = 68
+    Top = 214
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1117,8 +1131,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
         'ct_Type'
       'WHERE Job_Bag = :Job_Bag AND'
       '      JoB_Bag_Line = :Job_Bag_Line')
-    Left = 136
-    Top = 248
+    Left = 194
+    Top = 230
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1147,8 +1161,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
         'uct_Type'
       'WHERE Purchase_Order = :Purchase_Order AND'
       '      Line = :Line')
-    Left = 72
-    Top = 248
+    Left = 146
+    Top = 230
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1216,6 +1230,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
         '(Sales_Invoice_line.Goods_Value <> 0) or (:Show_Zero_Values = '#39'Y' +
         #39')'
       ') AND'
+      '(Sales_invoice.Invoice_or_Credit = :Invoice_or_Credit) AND'
       '(Int_sel.Int_sel_Code = :Int_Sel)'
       
         'ORDER BY Sales_Invoice.Sales_Invoice, Sales_Invoice_Line.Invoice' +
@@ -1229,11 +1244,15 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       ' '
       ' '
       ' ')
-    Left = 408
-    Top = 160
+    Left = 422
+    Top = 120
     ParamData = <
       item
         Name = 'Show_Zero_Values'
+        ParamType = ptInput
+      end
+      item
+        Name = 'INVOICE_OR_CREDIT'
         ParamType = ptInput
       end
       item
@@ -1259,8 +1278,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       'WHERE Sales_invoice = :Sales_invoice AND'
       '      Invoice_line_no = :Invoice_line_no'
       'ORDER BY Invoice_line_no')
-    Left = 408
-    Top = 200
+    Left = 270
+    Top = 146
     ParamData = <
       item
         Name = 'Sales_invoice'

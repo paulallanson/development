@@ -8,12 +8,12 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
     Top = 362
@@ -22,7 +22,8 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 529
+    ExplicitTop = 353
+    ExplicitWidth = 527
     object btnExport: TButton
       Left = 352
       Top = 8
@@ -50,10 +51,8 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 184
-    ExplicitTop = 200
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 527
+    ExplicitHeight = 353
     object pnlExpFile: TPanel
       Left = 0
       Top = 318
@@ -62,23 +61,25 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 309
+      ExplicitWidth = 527
       object lblExpTo: TLabel
         Left = 8
         Top = 16
-        Width = 51
-        Height = 13
+        Width = 59
+        Height = 17
         Caption = 'Export To:'
       end
       object edtExpFile: TEdit
-        Left = 64
+        Left = 73
         Top = 12
-        Width = 377
-        Height = 21
+        Width = 363
+        Height = 25
         TabOrder = 0
       end
       object btnBrowse: TButton
         Left = 448
-        Top = 10
+        Top = 12
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -95,7 +96,8 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 362
+      ExplicitWidth = 527
+      ExplicitHeight = 309
       object pnlNumberRange: TPanel
         Left = 153
         Top = 0
@@ -105,19 +107,20 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 362
+        ExplicitWidth = 374
+        ExplicitHeight = 309
         object lblInvNumber: TLabel
           Left = 16
-          Top = 6
-          Width = 91
-          Height = 13
+          Top = 3
+          Width = 106
+          Height = 17
           Caption = 'Invoice Number(s)'
         end
         object Label1: TLabel
           Left = 16
           Top = 68
-          Width = 244
-          Height = 39
+          Width = 253
+          Height = 77
           Caption = 
             'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
             ' For example, 1234, 1236, 1240-1245'
@@ -127,7 +130,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
           Left = 56
           Top = 26
           Width = 41
-          Height = 21
+          Height = 25
           TabOrder = 0
         end
         object SelectionMemo: TMemo
@@ -142,7 +145,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
           Top = 8
           Width = 25
           Height = 33
-          ItemHeight = 13
+          ItemHeight = 17
           Sorted = True
           TabOrder = 2
           Visible = False
@@ -167,15 +170,15 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
           object lblDateFrom: TLabel
             Left = 9
             Top = 20
-            Width = 56
-            Height = 13
+            Width = 64
+            Height = 17
             Caption = 'Date From:'
           end
           object lblDateTo: TLabel
             Left = 9
             Top = 49
-            Width = 42
-            Height = 13
+            Width = 48
+            Height = 17
             Caption = 'Date To:'
           end
           object btnDateFrom: TSpeedButton
@@ -224,7 +227,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
             Left = 79
             Top = 16
             Width = 98
-            Height = 21
+            Height = 25
             MaxLength = 10
             TabOrder = 0
             OnExit = edtDateFromExit
@@ -233,7 +236,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
             Left = 79
             Top = 45
             Width = 98
-            Height = 21
+            Height = 25
             MaxLength = 10
             TabOrder = 1
             OnExit = edtDateToExit
@@ -249,7 +252,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
-        ExplicitHeight = 362
+        ExplicitHeight = 309
         object rdgrpExportBy: TRadioGroup
           Left = 8
           Top = 8
@@ -315,8 +318,8 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       ' '
       ' '
       ' ')
-    Left = 88
-    Top = 8
+    Left = 30
+    Top = 234
     ParamData = <
       item
         Name = 'DateFrom'
@@ -372,8 +375,8 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       ' '
       ' '
       ' ')
-    Left = 152
-    Top = 8
+    Left = 22
+    Top = 82
     ParamData = <
       item
         Name = 'IntSel'
@@ -381,8 +384,8 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
   end
   object qrySalesInvs: TFDQuery
     ConnectionName = 'PB'
-    Left = 16
-    Top = 8
+    Left = 100
+    Top = 242
   end
   object OpenDialog1: TOpenDialog
     FileName = 'DirectDebit.csv'
@@ -502,8 +505,8 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
         ' direct_debit_date = :direct_debit_date, direct_debit_pending = ' +
         #39'Y'#39
       'where sales_invoice.sales_invoice = :sales_invoice')
-    Left = 208
-    Top = 8
+    Left = 84
+    Top = 82
     ParamData = <
       item
         Name = 'direct_debit_Filename'

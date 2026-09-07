@@ -7,43 +7,44 @@ object PBEnqJobDtlsFrm: TPBEnqJobDtlsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  Position = poScreenCenter
+  TextHeight = 17
   object GroupBox1: TGroupBox
     Left = 5
     Top = 8
-    Width = 265
+    Width = 271
     Height = 273
     ParentBackground = False
     TabOrder = 0
     object Label10: TLabel
       Left = 8
-      Top = 8
-      Width = 43
-      Height = 13
+      Top = 5
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object Label11: TLabel
       Left = 8
-      Top = 48
-      Width = 35
-      Height = 13
+      Top = 50
+      Width = 39
+      Height = 17
       Caption = 'Branch'
     end
     object Label9: TLabel
       Left = 8
-      Top = 152
-      Width = 54
-      Height = 13
+      Top = 150
+      Width = 62
+      Height = 17
       Caption = 'Comments'
     end
     object Label8: TLabel
       Left = 47
-      Top = 244
-      Width = 85
-      Height = 13
+      Top = 239
+      Width = 95
+      Height = 17
       Caption = 'Additional Costs'
     end
     object AddCostsSpeedBtn: TSpeedButton
@@ -63,24 +64,24 @@ object PBEnqJobDtlsFrm: TPBEnqJobDtlsFrm
     end
     object Label1: TLabel
       Left = 8
-      Top = 96
-      Width = 49
-      Height = 13
+      Top = 97
+      Width = 55
+      Height = 17
       Caption = 'Price Unit'
     end
     object SupplierEdit: TEdit
       Left = 8
       Top = 24
       Width = 249
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
     object BranchEdit: TEdit
       Left = 8
-      Top = 64
+      Top = 69
       Width = 249
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 1
     end
@@ -107,9 +108,9 @@ object PBEnqJobDtlsFrm: TPBEnqJobDtlsFrm
     end
     object PriceUnitEdit: TEdit
       Left = 8
-      Top = 112
+      Top = 116
       Width = 153
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 4
     end

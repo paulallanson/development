@@ -7,42 +7,42 @@ object PBFaxToOneFrm: TPBFaxToOneFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  TextHeight = 17
   object FaxDescrLabel: TLabel
     Left = 64
     Top = 10
-    Width = 35
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'Fax To:'
   end
   object Label1: TLabel
     Left = 8
     Top = 10
-    Width = 37
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'Faxing:'
   end
   object Label2: TLabel
     Left = 8
     Top = 36
-    Width = 44
-    Height = 13
+    Width = 51
+    Height = 17
     Caption = 'Number:'
   end
   object FaxNoEdit: TEdit
     Left = 64
     Top = 32
     Width = 337
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = FaxNoEditChange
   end
   object CancelBitBtn: TBitBtn
-    Left = 328
-    Top = 64
+    Left = 326
+    Top = 75
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -50,8 +50,8 @@ object PBFaxToOneFrm: TPBFaxToOneFrm
     TabOrder = 1
   end
   object OKBitBtn: TBitBtn
-    Left = 248
-    Top = 64
+    Left = 246
+    Top = 75
     Width = 75
     Height = 25
     Kind = bkOK

@@ -2,12 +2,12 @@ object frmPBLUContracts: TfrmPBLUContracts
   Left = 205
   Top = 107
   Caption = 'Contracts'
-  ClientHeight = 423
-  ClientWidth = 842
+  ClientHeight = 414
+  ClientWidth = 836
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmPBLUContracts: TfrmPBLUContracts
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 404
-    Width = 842
+    Top = 395
+    Width = 836
     Height = 19
     Panels = <
       item
@@ -39,7 +39,7 @@ object frmPBLUContracts: TfrmPBLUContracts
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 842
+    Width = 836
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -79,22 +79,22 @@ object frmPBLUContracts: TfrmPBLUContracts
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 842
+    Width = 836
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 836
+        Width = 830
       end>
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
-      Width = 827
+      Width = 821
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 59
+      ButtonHeight = 40
+      ButtonWidth = 67
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -107,7 +107,7 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 59
+        Left = 67
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -115,7 +115,7 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 118
+        Left = 134
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -123,14 +123,14 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 177
+        Left = 201
         Top = 0
         Caption = 'Print'
         Enabled = False
         ImageIndex = 4
       end
       object btnReports: TToolButton
-        Left = 236
+        Left = 268
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -140,8 +140,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 363
-    Width = 842
+    Top = 354
+    Width = 836
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -149,13 +149,13 @@ object frmPBLUContracts: TfrmPBLUContracts
     object Label60: TLabel
       Left = 8
       Top = 13
-      Width = 86
-      Height = 13
+      Width = 99
+      Height = 17
       Caption = 'Customer Search'
     end
     object btnSearch: TBitBtn
       Left = 304
-      Top = 7
+      Top = 9
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -163,36 +163,36 @@ object frmPBLUContracts: TfrmPBLUContracts
       OnClick = btnSearchClick
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 118
       Top = 9
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 568
+      Left = 520
       Top = 1
-      Width = 273
+      Width = 315
       Height = 39
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
       DesignSize = (
-        273
+        315
         39)
       object Label2: TLabel
-        Left = 6
+        Left = 19
         Top = 13
-        Width = 88
-        Height = 13
+        Width = 101
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Contract Number'
       end
       object btnClose: TButton
-        Left = 192
-        Top = 7
+        Left = 226
+        Top = 9
         Width = 75
         Height = 25
         Caption = 'Clos&e'
@@ -200,10 +200,10 @@ object frmPBLUContracts: TfrmPBLUContracts
         OnClick = btnCloseClick
       end
       object edtNumber: TEdit
-        Left = 95
+        Left = 125
         Top = 9
         Width = 90
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 1
         OnKeyPress = edtNumberKeyPress
@@ -213,14 +213,14 @@ object frmPBLUContracts: TfrmPBLUContracts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 842
-    Height = 288
+    Width = 836
+    Height = 279
     Align = alClient
     DataSource = dtmdlContract.dtsContractGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
@@ -229,7 +229,7 @@ object frmPBLUContracts: TfrmPBLUContracts
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick

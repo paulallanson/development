@@ -5,55 +5,56 @@ object PBLaserImportFrm: TPBLaserImportFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Import Laser Production Data'
-  ClientHeight = 499
-  ClientWidth = 624
+  ClientHeight = 523
+  ClientWidth = 622
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object mmErrorRecords: TMemo
     Left = 0
-    Top = 358
-    Width = 624
+    Top = 382
+    Width = 622
     Height = 100
     Align = alTop
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 0
+    ExplicitTop = 358
   end
   object pnlImportFile: TPanel
     Left = 0
-    Top = 185
-    Width = 624
-    Height = 56
+    Top = 201
+    Width = 622
+    Height = 64
     Align = alTop
     Enabled = False
     ParentBackground = False
     TabOrder = 1
     object lblStep2: TLabel
       Left = 8
-      Top = 8
-      Width = 164
-      Height = 13
+      Top = 5
+      Width = 187
+      Height = 17
       Caption = '2. Select the file to be imported.'
     end
     object edtImportFileName: TEdit
       Left = 8
-      Top = 24
+      Top = 26
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object btnFindFile: TButton
       Left = 304
-      Top = 22
+      Top = 26
       Width = 59
       Height = 25
       Caption = 'Find File'
@@ -63,69 +64,71 @@ object PBLaserImportFrm: TPBLaserImportFrm
   end
   object pnlProgress: TPanel
     Left = 0
-    Top = 282
-    Width = 624
+    Top = 306
+    Width = 622
     Height = 76
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 282
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 50
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Progress: '
     end
     object lblProgress: TLabel
       Left = 257
       Top = 8
-      Width = 5
-      Height = 13
+      Width = 6
+      Height = 17
       Caption = 'x'
       Visible = False
     end
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'records read.'
       Visible = False
     end
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 154
-      Height = 13
+      Width = 174
+      Height = 17
       Caption = 'Reading Laser Production file.'
     end
     object prgrsbrImport: TProgressBar
       Left = 8
-      Top = 24
+      Top = 34
       Width = 353
-      Height = 17
+      Height = 22
       TabOrder = 0
     end
   end
   object pnlImport: TPanel
     Left = 0
-    Top = 241
-    Width = 624
+    Top = 265
+    Width = 622
     Height = 41
     Align = alTop
     Enabled = False
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 241
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 90
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = '3. Run the Import'
     end
     object ImportBtn: TButton
-      Left = 288
-      Top = 8
+      Left = 304
+      Top = 6
       Width = 75
       Height = 25
       Caption = 'Import'
@@ -136,12 +139,13 @@ object PBLaserImportFrm: TPBLaserImportFrm
   end
   object pnlCancel: TPanel
     Left = 0
-    Top = 458
-    Width = 624
+    Top = 482
+    Width = 622
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 458
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8
@@ -156,20 +160,20 @@ object PBLaserImportFrm: TPBLaserImportFrm
   object pnlDepartment: TPanel
     Left = 0
     Top = 0
-    Width = 624
-    Height = 185
+    Width = 622
+    Height = 201
     Align = alTop
     ParentBackground = False
     TabOrder = 5
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 165
-      Height = 13
+      Width = 187
+      Height = 17
       Caption = '1. Select the department details.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -177,50 +181,50 @@ object PBLaserImportFrm: TPBLaserImportFrm
     object Label3: TLabel
       Left = 16
       Top = 35
-      Width = 64
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Department:'
     end
     object Label4: TLabel
       Left = 16
       Top = 68
-      Width = 41
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Process:'
     end
     object Label5: TLabel
       Left = 16
       Top = 100
-      Width = 56
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Operation:'
     end
     object Label2: TLabel
       Left = 16
       Top = 132
-      Width = 88
-      Height = 13
-      Caption = 'Default Operator'
+      Width = 102
+      Height = 17
+      Caption = 'Default Operator:'
     end
     object Label6: TLabel
       Left = 16
       Top = 162
-      Width = 75
-      Height = 13
+      Width = 86
+      Height = 17
       Caption = 'Labour time is:'
     end
     object Label7: TLabel
-      Left = 168
+      Left = 179
       Top = 160
-      Width = 95
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = '% of Machine time'
     end
     object dblkpDepartment: TDBLookupComboBox
-      Left = 112
+      Left = 123
       Top = 32
       Width = 137
-      Height = 21
+      Height = 25
       KeyField = 'Process_Group'
       ListField = 'Process_Group_Description'
       ListSource = dtmdlJobBagLog.dtsProcessGroup
@@ -228,10 +232,10 @@ object PBLaserImportFrm: TPBLaserImportFrm
       OnClick = dblkpDepartmentClick
     end
     object dblkpProcess: TDBLookupComboBox
-      Left = 112
+      Left = 123
       Top = 64
       Width = 169
-      Height = 21
+      Height = 25
       KeyField = 'Process'
       ListField = 'Process_Description'
       ListSource = dtmdlJobBagLog.dtsProcess
@@ -239,10 +243,10 @@ object PBLaserImportFrm: TPBLaserImportFrm
       OnClick = dblkpProcessClick
     end
     object dblkpOperation: TDBLookupComboBox
-      Left = 112
+      Left = 123
       Top = 96
       Width = 169
-      Height = 21
+      Height = 25
       KeyField = 'Operation'
       ListField = 'Operation_Description'
       ListSource = dtmdlJobBagLog.dtsProcessOps
@@ -250,10 +254,10 @@ object PBLaserImportFrm: TPBLaserImportFrm
       OnClick = dblkpOperationClick
     end
     object dblkpOperator: TDBLookupComboBox
-      Left = 112
+      Left = 123
       Top = 128
       Width = 169
-      Height = 21
+      Height = 25
       KeyField = 'Work_Centre_Operator'
       ListField = 'Name'
       ListSource = dtmdlJobBagLog.dtsWCOperators
@@ -261,10 +265,10 @@ object PBLaserImportFrm: TPBLaserImportFrm
       OnClick = dblkpOperationClick
     end
     object spnPerc: TSpinEdit
-      Left = 112
+      Left = 123
       Top = 157
       Width = 49
-      Height = 22
+      Height = 27
       Increment = 5
       MaxValue = 100
       MinValue = 0
@@ -278,7 +282,7 @@ object PBLaserImportFrm: TPBLaserImportFrm
       'Text files (*.txt)|*.TXT|Terms files (*.TMF)|*.TMF|Contract file' +
       's (*.css)|*.CSS'
     InitialDir = 'C:\My Documents'
-    Left = 448
-    Top = 128
+    Left = 392
+    Top = 40
   end
 end

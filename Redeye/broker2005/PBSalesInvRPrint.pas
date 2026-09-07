@@ -836,9 +836,14 @@ begin
       else
         parambyname('Show_Zero_Values').asstring := 'N';
 
+      parambyname('Invoice_or_Credit').asstring := 'I';
+
       {Print all lines of credit note}
       if self.CreditNotePrint then
-        parambyname('Show_Zero_Values').asstring := 'Y';
+        begin
+          parambyname('Show_Zero_Values').asstring := 'Y';
+          parambyname('Invoice_or_Credit').asstring := 'C';
+        end;
 
       parambyname('Sales_invoice_No').asstring := tempCode;
       open;
@@ -846,7 +851,7 @@ begin
       rTotal := 0;
       rResellerTotal := 0;
       iCount := 0;
-      
+
       while eof <> true do
       begin
         if fieldbyname('Price_Unit_Factor').asinteger = 0 then
@@ -999,9 +1004,14 @@ begin
       else
         parambyname('Show_Zero_Values').asstring := 'N';
 
+      parambyname('Invoice_or_Credit').asstring := 'I';
+
       {Print all lines of credit note}
       if self.CreditNotePrint then
-        parambyname('Show_Zero_Values').asstring := 'Y';
+        begin
+          parambyname('Show_Zero_Values').asstring := 'Y';
+          parambyname('Invoice_or_Credit').asstring := 'C';
+        end;
 
       parambyname('Sales_invoice_No').asstring := tempCode;
       open;
@@ -1230,9 +1240,14 @@ begin
       else
         parambyname('Show_Zero_Values').asstring := 'N';
 
+      parambyname('Invoice_or_Credit').asstring := 'I';
+
       {Print all lines of credit note}
       if self.CreditNotePrint then
-        parambyname('Show_Zero_Values').asstring := 'Y';
+        begin
+          parambyname('Show_Zero_Values').asstring := 'Y';
+          parambyname('Invoice_or_Credit').asstring := 'C';
+        end;
 
       parambyname('Int_Sel').asinteger := iIntSelCode;
       open;
@@ -1644,9 +1659,14 @@ begin
       else
         parambyname('Show_Zero_Values').asstring := 'N';
 
+      parambyname('Invoice_or_Credit').asstring := 'I';
+
       {Print all lines of credit note}
       if self.CreditNotePrint then
-        parambyname('Show_Zero_Values').asstring := 'Y';
+        begin
+          parambyname('Show_Zero_Values').asstring := 'Y';
+          parambyname('Invoice_or_Credit').asstring := 'C';
+        end;
 
       parambyname('Sales_invoice_No').asstring := tempCode;
       open;
@@ -1717,7 +1737,10 @@ begin
         end;
 
         iCount := iCount + 1;
-        tempStr := 'Invoice';
+        if self.CreditNotePrint then
+          tempStr := 'CR. Memo'
+        else
+          tempStr := 'Invoice';
         tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
         tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}
         tempStr := tempstr + ',' + pbDatestr(date); {Posting Date}
@@ -1759,7 +1782,10 @@ begin
         while InvLineChgsCSVSQL.eof <> true do
           begin
             iCount := iCount + 1;
-            tempStr := 'Invoice';
+            if self.CreditNotePrint then
+              tempStr := 'CR. Memo'
+            else
+              tempStr := 'Invoice';
             tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
             tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}   {CHECK*****}
             tempStr := tempstr + ',' + pbDatestr(date); {Posting Date}
@@ -1875,9 +1901,14 @@ begin
       else
         parambyname('Show_Zero_Values').asstring := 'N';
 
+      parambyname('Invoice_or_Credit').asstring := 'I';
+
       {Print all lines of credit note}
       if self.CreditNotePrint then
-        parambyname('Show_Zero_Values').asstring := 'Y';
+        begin
+          parambyname('Show_Zero_Values').asstring := 'Y';
+          parambyname('Invoice_or_Credit').asstring := 'C';
+        end;
 
       parambyname('Int_Sel').asinteger := iIntSelCode;
       open;
@@ -1955,7 +1986,10 @@ begin
           end;
 
         iCount := iCount + 1;
-        tempStr := 'Invoice';
+        if self.CreditNotePrint then
+          tempStr := 'CR. Memo'
+        else
+          tempStr := 'Invoice';
         tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
 //        tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}
         tempStr := tempstr + ',' + inttostr(10000 + iCount);    {Invoice Line}
@@ -1998,7 +2032,10 @@ begin
         while InvLineChgsCSVSQL.eof <> true do
           begin
             iCount := iCount + 1;
-            tempStr := 'Invoice';
+            if self.CreditNotePrint then
+              tempStr := 'CR. Memo'
+            else
+              tempStr := 'Invoice';
             tempStr := tempstr + ',' + fieldbyname('Sales_Invoice_No').asstring;    {Invoice Number}
 //            tempStr := tempstr + ',' + inttostr(10000 + fieldbyname('Invoice_Line_No').asinteger);    {Invoice Line}   {CHECK*****}
             tempStr := tempstr + ',' + inttostr(10000 + iCount);    {Invoice Line}

@@ -2,12 +2,12 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
   Left = 58
   Top = 126
   Caption = 'Update Supplier Responses'
-  ClientHeight = 496
-  ClientWidth = 744
+  ClientHeight = 524
+  ClientWidth = 756
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -18,12 +18,12 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Bevel3: TBevel
     Left = 384
     Top = 328
     Width = 353
-    Height = 121
+    Height = 151
     Shape = bsFrame
   end
   object Bevel2: TBevel
@@ -42,72 +42,72 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
   end
   object Label1: TLabel
     Left = 40
-    Top = 24
-    Width = 39
-    Height = 13
+    Top = 20
+    Width = 43
+    Height = 17
     Caption = 'Enquiry'
   end
   object Label2: TLabel
     Left = 24
-    Top = 50
-    Width = 49
-    Height = 13
+    Top = 46
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object Label3: TLabel
     Left = 40
-    Top = 76
-    Width = 35
-    Height = 13
+    Top = 72
+    Width = 39
+    Height = 17
     Caption = 'Branch'
   end
   object Label4: TLabel
     Left = 16
-    Top = 104
-    Width = 59
-    Height = 13
+    Top = 100
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label5: TLabel
     Left = 384
-    Top = 16
-    Width = 104
-    Height = 13
+    Top = 12
+    Width = 116
+    Height = 17
     Caption = 'Enquiry Line Details:'
   end
   object Label7: TLabel
     Left = 392
-    Top = 144
-    Width = 75
-    Height = 13
+    Top = 141
+    Width = 86
+    Height = 17
     Caption = 'Supplier Prices'
   end
   object Label12: TLabel
     Left = 392
     Top = 336
-    Width = 255
-    Height = 13
+    Width = 285
+    Height = 17
     Caption = 'Awaiting Responses from the following Suppliers'
   end
   object lblRunOnQty: TLabel
     Left = 392
     Top = 296
-    Width = 85
-    Height = 13
+    Width = 93
+    Height = 17
     Caption = 'Run on Quantity'
   end
   object lblRunOnCost: TLabel
     Left = 584
     Top = 296
-    Width = 23
-    Height = 13
+    Width = 26
+    Height = 17
     Caption = 'Cost'
   end
   object EnquiryEdit: TEdit
     Left = 88
     Top = 16
     Width = 73
-    Height = 21
+    Height = 25
     Hint = 'Enter an enquiry number and press return'
     ReadOnly = True
     TabOrder = 0
@@ -117,7 +117,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     Left = 88
     Top = 42
     Width = 289
-    Height = 21
+    Height = 25
     TabStop = False
     Color = clBtnFace
     ReadOnly = True
@@ -127,7 +127,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     Left = 88
     Top = 68
     Width = 289
-    Height = 21
+    Height = 25
     TabStop = False
     Color = clBtnFace
     ReadOnly = True
@@ -137,7 +137,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     Left = 88
     Top = 96
     Width = 289
-    Height = 21
+    Height = 25
     TabStop = False
     Color = clBtnFace
     ReadOnly = True
@@ -149,7 +149,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     Width = 345
     Height = 81
     TabStop = False
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 10
     OnClick = EnquiryLineListBoxClick
   end
@@ -180,8 +180,8 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
       20)
   end
   object SaveBitBtn: TBitBtn
-    Left = 568
-    Top = 456
+    Left = 565
+    Top = 490
     Width = 75
     Height = 25
     Caption = 'Save'
@@ -246,8 +246,8 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     OnClick = SaveBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 664
-    Top = 456
+    Left = 661
+    Top = 490
     Width = 75
     Height = 25
     Caption = 'Cancel'
@@ -312,8 +312,8 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     OnClick = CancelBitBtnClick
   end
   object BitBtn3: TBitBtn
-    Left = 376
-    Top = 456
+    Left = 384
+    Top = 490
     Width = 75
     Height = 25
     Kind = bkClose
@@ -326,7 +326,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     Left = 504
     Top = 184
     Width = 129
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 12
     Visible = False
@@ -338,19 +338,19 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
   end
   object ResponseList: TListBox
     Left = 392
-    Top = 352
+    Top = 359
     Width = 337
-    Height = 89
-    ItemHeight = 13
+    Height = 103
+    ItemHeight = 17
     TabOrder = 8
     OnClick = ResponseListClick
   end
   object ResponseCodeList: TListBox
-    Left = 432
-    Top = 336
+    Left = 636
+    Top = 375
     Width = 41
     Height = 41
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 14
     Visible = False
   end
@@ -372,51 +372,51 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
       282)
   end
   object SelectedSuppliersGroup: TGroupBox
-    Left = 8
-    Top = 130
+    Left = 9
+    Top = 127
     Width = 369
-    Height = 319
+    Height = 354
     Enabled = False
     ParentBackground = False
     TabOrder = 5
     object Label6: TLabel
       Left = 8
-      Top = 16
-      Width = 97
-      Height = 13
+      Top = 8
+      Width = 110
+      Height = 17
       Caption = 'Selected Suppliers:'
     end
     object Label9: TLabel
       Left = 8
-      Top = 56
-      Width = 35
-      Height = 13
+      Top = 54
+      Width = 39
+      Height = 17
       Caption = 'Branch'
     end
     object Label10: TLabel
       Left = 8
-      Top = 96
-      Width = 51
-      Height = 13
+      Top = 101
+      Width = 58
+      Height = 17
       Caption = 'Reference'
     end
     object Label11: TLabel
       Left = 168
-      Top = 96
-      Width = 77
-      Height = 13
+      Top = 101
+      Width = 88
+      Height = 17
       Caption = 'Response Date'
     end
     object Label13: TLabel
       Left = 168
-      Top = 138
-      Width = 99
-      Height = 13
+      Top = 148
+      Width = 111
+      Height = 17
       Caption = 'Additional Charges'
     end
     object ResponseDateBtn: TSpeedButton
       Left = 296
-      Top = 114
+      Top = 119
       Width = 23
       Height = 23
       Glyph.Data = {
@@ -437,16 +437,16 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     end
     object Label8: TLabel
       Left = 8
-      Top = 178
-      Width = 97
-      Height = 13
+      Top = 187
+      Width = 112
+      Height = 17
       Caption = 'Delivery Comments'
     end
     object SupplierCombo: TComboBox
       Left = 8
-      Top = 32
+      Top = 26
       Width = 313
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 0
       OnChange = SupplierComboChange
@@ -456,16 +456,16 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
       Left = 8
       Top = 72
       Width = 313
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 1
     end
     object SuppDateEdit: TEdit
       Tag = 1
       Left = 168
-      Top = 114
+      Top = 119
       Width = 121
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 3
       OnExit = SuppDateEditExit
@@ -473,9 +473,9 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     object SuppRefEdit: TEdit
       Tag = 1
       Left = 8
-      Top = 114
+      Top = 119
       Width = 153
-      Height = 21
+      Height = 25
       MaxLength = 20
       TabOrder = 2
       OnKeyUp = SuppRefEditKeyUp
@@ -483,7 +483,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     object SupplierMemo: TMemo
       Tag = 1
       Left = 8
-      Top = 192
+      Top = 208
       Width = 313
       Height = 65
       TabOrder = 6
@@ -492,7 +492,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     object AddChargesEdit: TMemo
       Tag = 1
       Left = 168
-      Top = 155
+      Top = 165
       Width = 73
       Height = 23
       Alignment = taRightJustify
@@ -502,7 +502,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     end
     object SpeedButton3: TButton
       Left = 248
-      Top = 156
+      Top = 166
       Width = 23
       Height = 23
       Hint = 'Maintain Supplier'#39's additional charges'
@@ -518,7 +518,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     end
     object btnDelete: TBitBtn
       Left = 8
-      Top = 272
+      Top = 279
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -528,7 +528,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     end
     object chkbxDecline: TCheckBox
       Left = 8
-      Top = 152
+      Top = 162
       Width = 153
       Height = 17
       Caption = 'Declined to quote'
@@ -565,8 +565,8 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     OnClick = SpeedButton2Click
   end
   object AddChargesGrid: TStringGrid
-    Left = 140
-    Top = 392
+    Left = 137
+    Top = 409
     Width = 233
     Height = 53
     ColCount = 4
@@ -586,7 +586,7 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
     Left = 488
     Top = 288
     Width = 81
-    Height = 21
+    Height = 25
     Color = clBtnFace
     Enabled = False
     TabOrder = 16
@@ -616,8 +616,8 @@ object PBEnqSupRespFrm: TPBEnqSupRespFrm
         'WHERE ((Price_unit_Inactive is NULL) or (Price_unit_inactive = '#39 +
         'N'#39'))'
       'Order By Description')
-    Left = 440
-    Top = 312
+    Left = 408
+    Top = 200
   end
   object UpEnqSuppSQL: TFDQuery
     ConnectionName = 'pb'

@@ -4,16 +4,16 @@ object PBAboutFrm: TPBAboutFrm
   BorderStyle = bsDialog
   Caption = 'About '
   ClientHeight = 223
-  ClientWidth = 469
+  ClientWidth = 515
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Image1: TImage
     Left = 0
     Top = 0
@@ -840,83 +840,84 @@ object PBAboutFrm: TPBAboutFrm
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 256
-    Top = 72
-    Width = 200
+    Left = 247
+    Top = 24
+    Width = 261
     Height = 20
     Alignment = taCenter
     AutoSize = False
-    Caption = '(C)opyright 2005 - 2023'
+    Caption = '(C)opyright 2005 - 2026'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 256
-    Top = 90
-    Width = 200
+    Left = 247
+    Top = 42
+    Width = 261
     Height = 20
     Alignment = taCenter
     AutoSize = False
     Caption = 'Quaystone Business Solutions Ltd'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     Visible = False
   end
   object VersionLabel: TLabel
-    Left = 256
-    Top = 112
-    Width = 200
+    Left = 247
+    Top = 64
+    Width = 261
     Height = 20
     Alignment = taCenter
     AutoSize = False
     Caption = 'Version'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object DataBaseLabel: TLabel
-    Left = 256
-    Top = 144
-    Width = 200
-    Height = 20
+    Left = 247
+    Top = 113
+    Width = 261
+    Height = 26
     Alignment = taCenter
     AutoSize = False
     Caption = 'Database'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object UserLabel: TLabel
-    Left = 267
-    Top = 144
-    Width = 48
-    Height = 13
+    Left = 247
+    Top = 90
+    Width = 261
+    Height = 26
     Alignment = taCenter
+    AutoSize = False
     Caption = 'Database'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object BitBtn1: TBitBtn
-    Left = 376
-    Top = 192
+    Left = 336
+    Top = 176
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET

@@ -2,51 +2,53 @@ object PBAuditViewFrm: TPBAuditViewFrm
   Left = 19
   Top = 20
   Caption = 'View Audit Trail - Test'
-  ClientHeight = 521
-  ClientWidth = 681
+  ClientHeight = 660
+  ClientWidth = 737
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    681
-    521)
-  TextHeight = 13
+    737
+    660)
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 595
-    Top = 421
-    Width = 71
-    Height = 13
+    Left = 638
+    Top = 520
+    Width = 78
+    Height = 17
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'Please Wait....'
-    ExplicitLeft = 601
+    ExplicitLeft = 627
+    ExplicitTop = 407
   end
   object SequenceLabel: TLabel
-    Left = 595
-    Top = 437
-    Width = 71
-    Height = 13
+    Left = 638
+    Top = 543
+    Width = 78
+    Height = 17
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'Please Wait....'
-    ExplicitLeft = 601
+    ExplicitLeft = 627
+    ExplicitTop = 430
   end
   object DetsDBGrid: TDBGrid
-    Left = 8
-    Top = 3
-    Width = 664
-    Height = 412
+    Left = 15
+    Top = 8
+    Width = 714
+    Height = 497
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsDS
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -89,16 +91,17 @@ object PBAuditViewFrm: TPBAuditViewFrm
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 424
+    Top = 520
     Width = 129
-    Height = 89
+    Height = 118
     Anchors = [akLeft, akBottom]
     Caption = 'Include'
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 407
     object ProgMoveCheckBox: TCheckBox
-      Left = 8
-      Top = 16
+      Left = 13
+      Top = 24
       Width = 113
       Height = 17
       Caption = 'Program Movement'
@@ -108,8 +111,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       OnClick = IncludeCheckBoxClick
     end
     object FieldChangeCheckBox: TCheckBox
-      Left = 8
-      Top = 64
+      Left = 13
+      Top = 88
       Width = 113
       Height = 17
       Caption = 'Field Changes'
@@ -117,8 +120,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       OnClick = IncludeCheckBoxClick
     end
     object UpdatesCheckBox: TCheckBox
-      Left = 8
-      Top = 32
+      Left = 13
+      Top = 45
       Width = 97
       Height = 17
       Caption = 'Updates'
@@ -126,8 +129,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       OnClick = IncludeCheckBoxClick
     end
     object ErrorsCheckBox: TCheckBox
-      Left = 8
-      Top = 48
+      Left = 13
+      Top = 66
       Width = 113
       Height = 17
       Caption = 'Errors'
@@ -136,18 +139,19 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object GroupBox2: TGroupBox
-    Left = 144
-    Top = 424
-    Width = 225
-    Height = 89
+    Left = 143
+    Top = 520
+    Width = 258
+    Height = 118
     Anchors = [akLeft, akBottom]
     Caption = 'Users'
     TabOrder = 2
+    ExplicitTop = 407
     object UsersRadioGroup: TRadioGroup
       Left = 8
       Top = 16
-      Width = 209
-      Height = 33
+      Width = 225
+      Height = 50
       Columns = 3
       ItemIndex = 1
       Items.Strings = (
@@ -159,10 +163,10 @@ object PBAuditViewFrm: TPBAuditViewFrm
       OnClick = UsersRadioGroupClick
     end
     object UserDBLookupComboBox: TDBLookupComboBox
-      Left = 8
-      Top = 56
-      Width = 209
-      Height = 21
+      Left = 10
+      Top = 72
+      Width = 223
+      Height = 25
       Enabled = False
       KeyField = 'Operator'
       ListField = 'Name'
@@ -172,27 +176,28 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object GroupBox3: TGroupBox
-    Left = 376
-    Top = 424
-    Width = 153
-    Height = 41
+    Left = 416
+    Top = 520
+    Width = 177
+    Height = 55
     Anchors = [akLeft, akBottom]
     Caption = 'Date From'
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 407
     object DateFromDateTimePicker: TDateTimePicker
       Left = 8
-      Top = 16
-      Width = 89
-      Height = 21
+      Top = 22
+      Width = 105
+      Height = 25
       Date = 37456.000000000000000000
       Time = 0.480307974503375600
       TabOrder = 0
       OnChange = DateFromDateTimePickerChange
     end
     object DateFromCheckBox: TCheckBox
-      Left = 104
-      Top = 17
+      Left = 128
+      Top = 26
       Width = 41
       Height = 17
       Caption = 'Any'
@@ -201,27 +206,28 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object GroupBox4: TGroupBox
-    Left = 376
-    Top = 472
-    Width = 153
-    Height = 41
+    Left = 416
+    Top = 581
+    Width = 177
+    Height = 55
     Anchors = [akLeft, akBottom]
     Caption = 'Date To'
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 468
     object DateToDateTimePicker: TDateTimePicker
       Left = 8
-      Top = 16
-      Width = 89
-      Height = 21
+      Top = 20
+      Width = 105
+      Height = 25
       Date = 37456.000000000000000000
       Time = 0.480307974503375600
       TabOrder = 0
       OnChange = DateToDateTimePickerChange
     end
     object DateToCheckBox: TCheckBox
-      Left = 104
-      Top = 17
+      Left = 128
+      Top = 24
       Width = 41
       Height = 17
       Caption = 'Any'
@@ -230,18 +236,20 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object CloseBitBtn: TBitBtn
-    Left = 597
-    Top = 458
+    Left = 638
+    Top = 580
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 5
+    ExplicitLeft = 627
+    ExplicitTop = 467
   end
   object btnExcel: TBitBtn
-    Left = 597
-    Top = 488
+    Left = 638
+    Top = 611
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -292,6 +300,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 6
     OnClick = btnExcelClick
+    ExplicitLeft = 627
+    ExplicitTop = 498
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'

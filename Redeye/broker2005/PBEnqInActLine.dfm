@@ -3,56 +3,56 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Inactive Enquiries'
-  ClientHeight = 262
-  ClientWidth = 461
+  ClientHeight = 303
+  ClientWidth = 486
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 0
-    Top = 212
-    Width = 146
-    Height = 13
+    Top = 221
+    Width = 166
+    Height = 17
     Caption = 'Reason for marking inactive '
   end
   object EnqNoDBText: TDBText
     Left = 0
-    Top = 0
+    Top = 5
     Width = 57
     Height = 15
     DataField = 'Enquiry'
     DataSource = DetsSRC
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object DescDBText: TDBText
     Left = 40
-    Top = 0
-    Width = 58
-    Height = 13
+    Top = 5
+    Width = 66
+    Height = 17
     AutoSize = True
     DataField = 'Description'
     DataSource = DetsSRC
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object EnqLinesStringGrid: TStringGrid
     Left = 0
-    Top = 24
+    Top = 29
     Width = 465
     Height = 169
     ColCount = 4
@@ -68,10 +68,10 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
       25)
   end
   object ReasonsDBLUCB: TDBLookupComboBox
-    Left = 160
-    Top = 208
+    Left = 172
+    Top = 217
     Width = 193
-    Height = 21
+    Height = 25
     KeyField = 'Enq_InActive_Reason'
     ListField = 'Description'
     ListSource = ReasonsSRC
@@ -79,8 +79,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
     OnClick = ReasonsDBLUCBClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 392
-    Top = 240
+    Left = 390
+    Top = 261
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -88,8 +88,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
     TabOrder = 2
   end
   object OKBitBtn: TBitBtn
-    Left = 312
-    Top = 240
+    Left = 310
+    Top = 261
     Width = 75
     Height = 25
     Kind = bkOK
@@ -98,8 +98,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
     OnClick = OKBitBtnClick
   end
   object ReasMntBitBtn: TBitBtn
-    Left = 360
-    Top = 208
+    Left = 372
+    Top = 218
     Width = 25
     Height = 23
     Hint = 'Maintain Reasons'
@@ -123,13 +123,13 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
         'son.Description'
       'from Enq_InActive_Reason'
       'Order By Enq_InActive_Reason.Description')
-    Left = 104
-    Top = 160
+    Left = 106
+    Top = 125
   end
   object ReasonsSRC: TDataSource
     DataSet = GetReasonsSQL
-    Left = 200
-    Top = 160
+    Left = 210
+    Top = 133
   end
   object UpdActiveLineSQL: TFDQuery
     ConnectionName = 'PB'
@@ -140,8 +140,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
       '    Enq_Inactive_Date = :Enq_Inactive_Date '
       'Where (Enquiry = :Enquiry) and'
       '      (Line = :Line)')
-    Left = 304
-    Top = 72
+    Left = 380
+    Top = 95
     ParamData = <
       item
         Name = 'Enq_Inactive_Reason'
@@ -165,8 +165,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
       'Update Enquiry'
       'Set Enq_InActive = :Enq_InActive'
       'Where (Enquiry = :Enquiry) ')
-    Left = 376
-    Top = 136
+    Left = 54
+    Top = 90
     ParamData = <
       item
         Name = 'Enq_InActive'
@@ -186,8 +186,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
         '      (Enquiry_Status.Enquiry_Status = EnquiryLine.Enquiry_Statu' +
         's) and'
       '      (EnquiryLine.Enq_Inactive <> :Enq_Inactive )')
-    Left = 256
-    Top = 24
+    Left = 320
+    Top = 35
     ParamData = <
       item
         Name = 'Enquiry'
@@ -205,8 +205,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
       '      (Enquiry.Description = Enquiry.Description) '
       ''
       '')
-    Left = 392
-    Top = 56
+    Left = 106
+    Top = 30
     ParamData = <
       item
         Name = 'Enquiry'
@@ -228,8 +228,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
   end
   object DetsSRC: TDataSource
     DataSet = GDetsSQL
-    Left = 320
-    Top = 24
+    Left = 400
+    Top = 35
   end
   object UpdInActiveSQL: TFDQuery
     ConnectionName = 'PB'
@@ -241,8 +241,8 @@ object PBEnqInActLineFrm: TPBEnqInActLineFrm
       'Where (Enquiry = :Enquiry) and'
       '      (Line = :Line)'
       ' ')
-    Left = 176
-    Top = 56
+    Left = 220
+    Top = 75
     ParamData = <
       item
         Name = 'Enquiry'

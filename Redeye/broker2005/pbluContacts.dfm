@@ -7,25 +7,25 @@ object frmpbluContacts: TfrmpbluContacts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
     Width = 599
-    Height = 260
+    Height = 248
     Align = alClient
     DataSource = dtsContacts
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -33,7 +33,7 @@ object frmpbluContacts: TfrmpbluContacts
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -92,29 +92,31 @@ object frmpbluContacts: TfrmpbluContacts
       item
         Width = 50
       end>
+    ExplicitTop = 307
+    ExplicitWidth = 693
   end
   object Panel1: TPanel
     Left = 0
-    Top = 260
+    Top = 248
     Width = 699
-    Height = 56
+    Height = 68
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
       699
-      56)
+      68)
     object Label1: TLabel
       Left = 8
-      Top = 12
-      Width = 34
-      Height = 13
+      Top = 15
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object btnClose: TButton
-      Left = 593
-      Top = 17
+      Left = 587
+      Top = 11
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -124,8 +126,8 @@ object frmpbluContacts: TfrmpbluContacts
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
-      Top = 33
-      Width = 129
+      Top = 42
+      Width = 201
       Height = 17
       Caption = 'show inactive contacts'
       TabOrder = 1
@@ -133,15 +135,15 @@ object frmpbluContacts: TfrmpbluContacts
     end
     object edtName: TEdit
       Left = 56
-      Top = 8
+      Top = 11
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = edtNameChange
     end
     object Button2: TButton
       Left = 250
-      Top = 6
+      Top = 11
       Width = 75
       Height = 25
       Caption = 'S&weep'
@@ -153,13 +155,15 @@ object frmpbluContacts: TfrmpbluContacts
     Left = 599
     Top = 0
     Width = 100
-    Height = 260
+    Height = 248
     Align = alRight
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 593
+    ExplicitHeight = 251
     DesignSize = (
       100
-      260)
+      248)
     object btnAdd: TButton
       Left = 17
       Top = 17
@@ -462,8 +466,8 @@ object frmpbluContacts: TfrmpbluContacts
       'Supplier = :Supplier and'
       'Branch_no = :Branch_no and '
       'Contact_no = :Contact_no')
-    Left = 488
-    Top = 200
+    Left = 466
+    Top = 146
     ParamData = <
       item
         Name = 'Supplier'

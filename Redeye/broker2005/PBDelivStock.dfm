@@ -3,92 +3,92 @@ object PBDelivStockFrm: TPBDelivStockFrm
   Top = 106
   BorderStyle = bsDialog
   Caption = 'Stock Location Selection'
-  ClientHeight = 328
-  ClientWidth = 321
+  ClientHeight = 345
+  ClientWidth = 346
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesktopCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 28
     Top = 112
-    Width = 46
-    Height = 13
+    Width = 53
+    Height = 17
     Caption = 'Pack Size'
   end
   object CountGroupBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 313
+    Width = 330
     Height = 185
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object PBinLbl: TLabel
-      Left = 58
+      Left = 64
       Top = 149
-      Width = 16
-      Height = 13
+      Width = 17
+      Height = 17
       Caption = 'Bin'
     end
     object Label6: TLabel
-      Left = 29
+      Left = 33
       Top = 21
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Alignment = taRightJustify
       Caption = 'Quantity'
       WordWrap = True
     end
     object LblPackSize: TLabel
-      Left = 27
+      Left = 29
       Top = 53
-      Width = 45
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Pack size'
     end
     object LblBox: TLabel
-      Left = 13
+      Left = 5
       Top = 85
-      Width = 65
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'No. of boxes'
     end
     object Label5: TLabel
-      Left = 25
+      Left = 27
       Top = 117
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Pack cost'
     end
     object lblSetsQty: TLabel
-      Left = 184
+      Left = 193
       Top = 21
-      Width = 67
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'Sets per pad:'
     end
     object BinEdit: TEdit
-      Left = 80
+      Left = 89
       Top = 145
       Width = 121
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 4
       OnChange = CheckOk
     end
     object MemoQty: TMemo
-      Left = 80
+      Left = 89
       Top = 16
       Width = 89
       Height = 25
@@ -100,7 +100,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
       OnKeyPress = MemoQtyKeyPress
     end
     object MemoPackSize: TMemo
-      Left = 80
+      Left = 89
       Top = 48
       Width = 89
       Height = 25
@@ -112,7 +112,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
       OnKeyPress = MemoQtyKeyPress
     end
     object MemoNoOfBoxes: TMemo
-      Left = 80
+      Left = 89
       Top = 80
       Width = 89
       Height = 25
@@ -125,7 +125,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
       WordWrap = False
     end
     object SearchBtn: TButton
-      Left = 208
+      Left = 217
       Top = 144
       Width = 25
       Height = 25
@@ -140,7 +140,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
       OnClick = SearchBtnClick
     end
     object MemoCost: TMemo
-      Left = 80
+      Left = 89
       Top = 112
       Width = 89
       Height = 25
@@ -156,13 +156,15 @@ object PBDelivStockFrm: TPBDelivStockFrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 293
-    Width = 321
+    Top = 310
+    Width = 346
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 284
+    ExplicitWidth = 315
     object OKBtn: TBitBtn
       Left = 71
       Top = 3
@@ -217,53 +219,53 @@ object PBDelivStockFrm: TPBDelivStockFrm
   object grpbxNumbered: TGroupBox
     Left = 8
     Top = 194
-    Width = 313
+    Width = 330
     Height = 103
     Caption = 'Numbered'
     ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
-      Left = 46
+      Left = 51
       Top = 24
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label3: TLabel
-      Left = 61
+      Left = 67
       Top = 52
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object Label4: TLabel
       Left = 16
       Top = 80
-      Width = 32
-      Height = 13
+      Width = 34
+      Height = 17
       Caption = 'Count'
     end
     object lblCount: TLabel
       Left = 88
       Top = 80
-      Width = 45
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'lblCount'
     end
     object edtNumberFrom: TEdit
-      Left = 80
+      Left = 89
       Top = 20
       Width = 137
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNumberFromChange
       OnKeyPress = MemoQtyKeyPress
     end
     object edtNumberTo: TEdit
-      Left = 80
+      Left = 89
       Top = 48
       Width = 137
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtNumberToChange
       OnKeyPress = MemoQtyKeyPress

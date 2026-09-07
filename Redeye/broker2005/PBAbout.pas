@@ -36,7 +36,7 @@ begin
   VersionLabel.Caption := 'Version ' + frmPBMainMenu.sSoft_Version + frmPBMainMenu.sSoft_subVersion;
   s := 'Logged in as: ' + frmPBMainMenu.sOperator_Name;
   x := Userlabel.Canvas.TextWidth(s);
-  UserLabel.Left := Self.ClientWidth - x - 6;
+//  UserLabel.Left := Self.ClientWidth - x - 6;
   UserLabel.Caption := s;
 end;
 

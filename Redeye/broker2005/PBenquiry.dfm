@@ -2,14 +2,14 @@ object PBEnquiryFrm: TPBEnquiryFrm
   Left = 286
   Top = 53
   Caption = 'Enter Enquiry details'
-  ClientHeight = 576
-  ClientWidth = 813
+  ClientHeight = 606
+  ClientWidth = 882
   Color = clBtnFace
   Constraints.MinHeight = 613
   Constraints.MinWidth = 800
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,11 +18,11 @@ object PBEnquiryFrm: TPBEnquiryFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 557
-    Width = 813
+    Top = 587
+    Width = 882
     Height = 19
     Panels = <
       item
@@ -31,42 +31,46 @@ object PBEnquiryFrm: TPBEnquiryFrm
       item
         Width = 300
       end>
+    ExplicitTop = 548
+    ExplicitWidth = 807
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 813
-    Height = 557
+    Width = 882
+    Height = 587
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 807
+    ExplicitHeight = 548
     DesignSize = (
-      813
-      557)
+      882
+      587)
     object EnquiryLbl: TLabel
-      Left = 628
+      Left = 622
       Top = 360
-      Width = 54
-      Height = 13
+      Width = 60
+      Height = 17
       Alignment = taRightJustify
       Caption = 'EnquiryLbl'
       Visible = False
     end
     object EnquiryMessageLbl: TLabel
       Left = 2
-      Top = 501
-      Width = 99
-      Height = 13
+      Top = 531
+      Width = 113
+      Height = 17
       Anchors = [akLeft, akBottom]
       Caption = 'EnquiryMessageLbl'
-      ExplicitTop = 520
+      ExplicitTop = 501
     end
     object Label8: TLabel
       Left = 8
       Top = 138
-      Width = 104
-      Height = 13
+      Width = 116
+      Height = 17
       Caption = 'Enquiry Line Details:'
     end
     object EnqLineList: TListBox
@@ -74,7 +78,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Top = 136
       Width = 339
       Height = 89
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 6
       OnClick = EnqLineListClick
     end
@@ -97,108 +101,114 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object pnlCustomer: TPanel
       Left = 0
       Top = 41
-      Width = 813
+      Width = 882
       Height = 129
       Align = alTop
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 807
       DesignSize = (
-        813
+        882
         129)
       object lblCustomerLabel: TLabel
-        Left = 106
-        Top = 12
-        Width = 49
-        Height = 13
+        Left = 122
+        Top = 10
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label2: TLabel
-        Left = 106
-        Top = 68
-        Width = 40
-        Height = 13
+        Left = 122
+        Top = 66
+        Width = 44
+        Height = 17
         Caption = 'Contact'
       end
       object Label4: TLabel
-        Left = 536
-        Top = 15
-        Width = 20
-        Height = 13
+        Left = 623
+        Top = 12
+        Width = 23
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Rep'
-        ExplicitLeft = 568
+        ExplicitLeft = 609
       end
       object Label5: TLabel
-        Left = 106
-        Top = 40
-        Width = 35
-        Height = 13
+        Left = 122
+        Top = 38
+        Width = 39
+        Height = 17
         Caption = 'Branch'
       end
       object Label6: TLabel
-        Left = 106
-        Top = 100
-        Width = 59
-        Height = 13
+        Left = 122
+        Top = 98
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object CustomerEdit: TEdit
-        Left = 166
-        Top = 8
-        Width = 249
-        Height = 21
+        Left = 194
+        Top = 6
+        Width = 312
+        Height = 25
         TabStop = False
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 0
         OnChange = CustomerEditChange
+        ExplicitWidth = 298
       end
       object CustRepCombo: TComboBox
-        Left = 568
-        Top = 11
+        Left = 655
+        Top = 8
         Width = 177
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         TabOrder = 1
         OnChange = CustRepComboChange
         OnDropDown = CustRepComboDropDown
+        ExplicitLeft = 641
       end
       object ContactCombo: TComboBox
-        Left = 166
-        Top = 64
-        Width = 249
-        Height = 21
+        Left = 194
+        Top = 62
+        Width = 312
+        Height = 25
         Style = csDropDownList
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 2
         OnChange = ContactComboChange
         OnDropDown = ContactComboDropDown
+        ExplicitWidth = 298
       end
       object BranchEdit: TEdit
-        Left = 166
-        Top = 36
-        Width = 249
-        Height = 21
+        Left = 194
+        Top = 34
+        Width = 312
+        Height = 25
         TabStop = False
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 3
         OnChange = BranchEditChange
+        ExplicitWidth = 298
       end
       object DescriptionEdit: TEdit
-        Left = 166
-        Top = 96
-        Width = 579
-        Height = 21
+        Left = 194
+        Top = 94
+        Width = 642
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         MaxLength = 80
         TabOrder = 4
         OnChange = DescriptionEditChange
+        ExplicitWidth = 628
       end
       object CustomerSpeedButton: TButton
-        Left = 424
-        Top = 7
+        Left = 515
+        Top = 5
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -211,10 +221,11 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParentFont = False
         TabOrder = 5
         OnClick = CustomerSpeedButtonClick
+        ExplicitLeft = 501
       end
       object BranchSpeedButton: TButton
-        Left = 424
-        Top = 36
+        Left = 515
+        Top = 34
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -227,10 +238,11 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParentFont = False
         TabOrder = 6
         OnClick = BranchSpeedButtonClick
+        ExplicitLeft = 501
       end
       object ContactSpeedButton: TButton
-        Left = 424
-        Top = 64
+        Left = 515
+        Top = 62
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -243,10 +255,11 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParentFont = False
         TabOrder = 7
         OnClick = ContactSpeedButtonClick
+        ExplicitLeft = 501
       end
       object RepSpeedButton: TButton
-        Left = 756
-        Top = 10
+        Left = 843
+        Top = 7
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -260,11 +273,12 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParentFont = False
         TabOrder = 8
         OnClick = RepSpeedButtonClick
+        ExplicitLeft = 829
       end
       object rdgType: TRadioGroup
         Left = 9
         Top = 2
-        Width = 78
+        Width = 96
         Height = 64
         Caption = 'Type'
         ItemIndex = 0
@@ -279,19 +293,20 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object pnlHeader: TPanel
       Left = 0
       Top = 0
-      Width = 813
+      Width = 882
       Height = 41
       Align = alTop
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 807
       DesignSize = (
-        813
+        882
         41)
       object Label7: TLabel
         Left = 184
-        Top = 15
-        Width = 24
-        Height = 13
+        Top = 13
+        Width = 27
+        Height = 17
         Caption = 'Date'
       end
       object EnqDateBtn: TSpeedButton
@@ -316,25 +331,25 @@ object PBEnquiryFrm: TPBEnquiryFrm
         OnClick = EnqDateBtnClick
       end
       object Label9: TLabel
-        Left = 536
-        Top = 15
-        Width = 74
-        Height = 13
+        Left = 624
+        Top = 13
+        Width = 82
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Office Contact'
-        ExplicitLeft = 542
+        ExplicitLeft = 610
       end
       object Label3: TLabel
-        Left = 335
-        Top = 15
-        Width = 74
-        Height = 13
+        Left = 387
+        Top = 13
+        Width = 84
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Date Required'
-        ExplicitLeft = 341
+        ExplicitLeft = 373
       end
       object DateBtn: TSpeedButton
-        Left = 500
+        Left = 563
         Top = 9
         Width = 25
         Height = 25
@@ -355,46 +370,48 @@ object PBEnquiryFrm: TPBEnquiryFrm
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
         OnClick = DateBtnClick
-        ExplicitLeft = 532
+        ExplicitLeft = 549
       end
       object lblQuoteNo: TLabel
         Left = 9
-        Top = 15
-        Width = 60
-        Height = 13
+        Top = 13
+        Width = 68
+        Height = 17
         Caption = 'Enquiry No.'
       end
       object EnqDateEdit: TEdit
         Left = 214
-        Top = 11
+        Top = 9
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnExit = EnqDateEditExit
       end
       object OfficeComboBox: TComboBox
-        Left = 616
-        Top = 11
+        Left = 712
+        Top = 9
         Width = 161
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         TabOrder = 1
+        ExplicitLeft = 698
       end
       object ReqByDateEdit: TEdit
-        Left = 414
-        Top = 11
+        Left = 477
+        Top = 9
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 2
         OnExit = ReqByDateEditExit
+        ExplicitLeft = 463
       end
       object edtEnquiryNo: TEdit
-        Left = 72
-        Top = 11
+        Left = 83
+        Top = 9
         Width = 81
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 3
         Text = '<New Enquiry>'
@@ -402,17 +419,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
     end
     object pnlFooter: TPanel
       Left = 0
-      Top = 520
-      Width = 813
+      Top = 550
+      Width = 882
       Height = 37
       Align = alBottom
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 511
+      ExplicitWidth = 807
       DesignSize = (
-        813
+        882
         37)
       object OKBitBtn: TBitBtn
-        Left = 607
+        Left = 670
         Top = 6
         Width = 75
         Height = 25
@@ -477,9 +496,10 @@ object PBEnquiryFrm: TPBEnquiryFrm
         NumGlyphs = 2
         TabOrder = 0
         OnClick = OKBitBtnClick
+        ExplicitLeft = 595
       end
       object CancelBitBtn: TBitBtn
-        Left = 703
+        Left = 766
         Top = 6
         Width = 75
         Height = 25
@@ -544,59 +564,62 @@ object PBEnquiryFrm: TPBEnquiryFrm
         NumGlyphs = 2
         TabOrder = 1
         OnClick = CancelBitBtnClick
+        ExplicitLeft = 691
       end
     end
     object pnlLineDetails: TPanel
       Left = 0
-      Top = 263
-      Width = 813
+      Top = 293
+      Width = 882
       Height = 257
       Align = alBottom
       Caption = 'pnlLineDetails'
       ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 254
+      ExplicitWidth = 807
       object EnquiryLinePage: TPageControl
         Tag = 180
         Left = 1
         Top = 1
-        Width = 811
+        Width = 880
         Height = 255
-        ActivePage = PartTabSheet
+        ActivePage = tbsDocuments
         Align = alClient
         TabOrder = 0
+        ExplicitTop = 2
         object PartTabSheet: TTabSheet
           Caption = 'Part Details'
           DesignSize = (
-            803
-            227)
+            872
+            223)
           object Bevel3: TBevel
             Left = 2
             Top = 5
-            Width = 694
-            Height = 188
+            Width = 757
+            Height = 198
             Anchors = [akLeft, akTop, akRight]
             Shape = bsFrame
-            ExplicitWidth = 726
           end
           object Label16: TLabel
             Left = 8
-            Top = 16
-            Width = 25
-            Height = 13
+            Top = 8
+            Width = 29
+            Height = 17
             Caption = 'Parts'
           end
           object Label17: TLabel
             Left = 96
-            Top = 16
-            Width = 44
-            Height = 13
+            Top = 8
+            Width = 49
+            Height = 17
             Caption = 'Heading'
           end
           object SameAsLbl: TLabel
             Left = 424
-            Top = 40
-            Width = 64
-            Height = 13
+            Top = 35
+            Width = 76
+            Height = 17
             Caption = 'Same as Part'
             Visible = False
           end
@@ -605,8 +628,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
             Left = 8
             Top = 32
             Width = 81
-            Height = 153
-            ItemHeight = 13
+            Height = 161
+            ItemHeight = 17
             TabOrder = 0
             OnClick = PartListClick
             OnDblClick = PartListDblClick
@@ -616,7 +639,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             Left = 96
             Top = 32
             Width = 297
-            Height = 21
+            Height = 25
             MaxLength = 40
             TabOrder = 1
             OnKeyUp = HeadEditKeyUp
@@ -625,37 +648,37 @@ object PBEnquiryFrm: TPBEnquiryFrm
             Left = 96
             Top = 64
             Width = 577
-            Height = 121
-            ActivePage = InkTabSheet
+            Height = 129
+            ActivePage = MarginsTabSheet
             TabOrder = 3
             object PaperTabSheet: TTabSheet
               Caption = 'Papers Details'
               object Label19: TLabel
                 Left = 268
-                Top = 47
-                Width = 42
-                Height = 13
+                Top = 45
+                Width = 48
+                Height = 17
                 Caption = 'Material'
               end
               object Label20: TLabel
                 Left = 268
-                Top = 6
-                Width = 30
-                Height = 13
+                Top = 0
+                Width = 34
+                Height = 17
                 Caption = 'Brand'
               end
               object Label21: TLabel
                 Left = 7
-                Top = 48
-                Width = 38
-                Height = 13
+                Top = 46
+                Width = 40
+                Height = 17
                 Caption = 'Weight'
               end
               object Label22: TLabel
                 Left = 7
-                Top = 5
-                Width = 35
-                Height = 13
+                Top = -1
+                Width = 39
+                Height = 17
                 Caption = 'Colour'
               end
               object ColourComboBox: TComboBox
@@ -663,7 +686,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 8
                 Top = 20
                 Width = 257
-                Height = 21
+                Height = 25
                 Hint = 'Paper_Colour'
                 MaxLength = 40
                 TabOrder = 0
@@ -675,7 +698,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 8
                 Top = 64
                 Width = 257
-                Height = 21
+                Height = 25
                 Hint = 'Paper_Weight'
                 TabOrder = 1
                 OnEnter = ColourComboBoxEnter
@@ -686,7 +709,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 269
                 Top = 20
                 Width = 260
-                Height = 21
+                Height = 25
                 Hint = 'Paper_Brand'
                 TabOrder = 2
                 OnEnter = ColourComboBoxEnter
@@ -697,7 +720,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 269
                 Top = 64
                 Width = 260
-                Height = 21
+                Height = 25
                 Hint = 'Paper_Material'
                 TabOrder = 3
                 OnEnter = ColourComboBoxEnter
@@ -723,23 +746,23 @@ object PBEnquiryFrm: TPBEnquiryFrm
               Caption = 'Inks Details'
               object Label23: TLabel
                 Left = 21
-                Top = 16
-                Width = 23
-                Height = 13
+                Top = 12
+                Width = 26
+                Height = 17
                 Caption = 'Face'
               end
               object Label24: TLabel
                 Left = 2
-                Top = 48
-                Width = 39
-                Height = 13
+                Top = 44
+                Width = 46
+                Height = 17
                 Caption = 'Reverse'
               end
               object PlateChangeLbl: TLabel
-                Left = 334
+                Left = 315
                 Top = 72
-                Width = 131
-                Height = 13
+                Width = 150
+                Height = 17
                 Alignment = taRightJustify
                 Caption = 'Number of Plate Changes'
               end
@@ -748,7 +771,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 52
                 Top = 8
                 Width = 301
-                Height = 21
+                Height = 25
                 MaxLength = 40
                 TabOrder = 0
                 OnKeyUp = HeadEditKeyUp
@@ -758,7 +781,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 52
                 Top = 40
                 Width = 301
-                Height = 21
+                Height = 25
                 MaxLength = 40
                 TabOrder = 1
                 OnKeyUp = HeadEditKeyUp
@@ -766,9 +789,9 @@ object PBEnquiryFrm: TPBEnquiryFrm
               object PlateChangeSpin: TSpinEdit
                 Tag = 108
                 Left = 472
-                Top = 64
+                Top = 67
                 Width = 41
-                Height = 22
+                Height = 27
                 MaxValue = 10
                 MinValue = 0
                 TabOrder = 2
@@ -781,29 +804,29 @@ object PBEnquiryFrm: TPBEnquiryFrm
               object Label26: TLabel
                 Left = 112
                 Top = 8
-                Width = 19
-                Height = 13
+                Width = 21
+                Height = 17
                 Caption = 'Left'
               end
               object Label27: TLabel
                 Left = 208
                 Top = 8
-                Width = 28
-                Height = 13
+                Width = 30
+                Height = 17
                 Caption = 'Right'
               end
               object Label28: TLabel
                 Left = 16
-                Top = 32
-                Width = 32
-                Height = 13
+                Top = 27
+                Width = 34
+                Height = 17
                 Caption = 'Width'
               end
               object Label29: TLabel
                 Left = 21
-                Top = 64
-                Width = 23
-                Height = 13
+                Top = 59
+                Width = 27
+                Height = 17
                 Caption = 'Type'
               end
               object LWMarginEdit: TEdit
@@ -811,7 +834,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 56
                 Top = 24
                 Width = 81
-                Height = 21
+                Height = 25
                 TabOrder = 0
                 OnKeyUp = HeadEditKeyUp
               end
@@ -820,7 +843,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 56
                 Top = 56
                 Width = 81
-                Height = 21
+                Height = 25
                 TabOrder = 1
                 OnKeyUp = HeadEditKeyUp
               end
@@ -829,7 +852,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 160
                 Top = 24
                 Width = 81
-                Height = 21
+                Height = 25
                 TabOrder = 2
                 OnKeyUp = HeadEditKeyUp
               end
@@ -838,7 +861,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 Left = 160
                 Top = 56
                 Width = 81
-                Height = 21
+                Height = 25
                 TabOrder = 3
                 OnKeyUp = HeadEditKeyUp
               end
@@ -858,7 +881,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             Left = 504
             Top = 32
             Width = 25
-            Height = 21
+            Height = 25
             TabOrder = 2
             Text = '0'
             Visible = False
@@ -878,16 +901,17 @@ object PBEnquiryFrm: TPBEnquiryFrm
         object TabSheet2: TTabSheet
           Caption = 'Additional Notes'
           DesignSize = (
-            803
-            227)
+            872
+            223)
           object Bevel4: TBevel
             Left = 2
             Top = 5
-            Width = 772
-            Height = 220
+            Width = 835
+            Height = 216
             Anchors = [akLeft, akTop, akRight, akBottom]
             Shape = bsFrame
             ExplicitWidth = 804
+            ExplicitHeight = 220
           end
           object AddNotesMemo: TMemo
             Left = 9
@@ -910,9 +934,9 @@ object PBEnquiryFrm: TPBEnquiryFrm
           end
           object Label12: TLabel
             Left = 16
-            Top = 16
-            Width = 92
-            Height = 13
+            Top = 11
+            Width = 102
+            Height = 17
             Caption = 'Additional Details'
           end
           object AddDetailsList: TListBox
@@ -921,7 +945,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             Top = 32
             Width = 269
             Height = 145
-            ItemHeight = 13
+            ItemHeight = 17
             TabOrder = 0
             OnClick = AddDetailsListClick
             OnDblClick = AddDetailsListDblClick
@@ -978,26 +1002,27 @@ object PBEnquiryFrm: TPBEnquiryFrm
         object CapabilityTabSheet: TTabSheet
           Caption = 'Capabilities'
           DesignSize = (
-            803
-            227)
+            872
+            223)
           object Bevel6: TBevel
             Left = 2
             Top = 5
-            Width = 777
-            Height = 219
+            Width = 840
+            Height = 215
             Anchors = [akLeft, akTop, akRight, akBottom]
             Shape = bsFrame
             ExplicitWidth = 809
+            ExplicitHeight = 219
           end
           object Label11: TLabel
             Left = 16
-            Top = 16
-            Width = 153
-            Height = 13
+            Top = 10
+            Width = 175
+            Height = 17
             Caption = 'Capabilities for Product Type: '
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -1005,13 +1030,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
           object ProductCLbl: TLabel
             Tag = 131
             Left = 184
-            Top = 16
-            Width = 62
-            Height = 13
+            Top = 10
+            Width = 70
+            Height = 17
             Caption = 'ProductCLbl'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -1025,7 +1050,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             HorzScrollBar.Visible = False
             Font.Charset = SYMBOL_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'MS Outlook'
             Font.Style = []
             ParentFont = False
@@ -1037,19 +1062,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
           object Bevel8: TBevel
             Left = 2
             Top = 5
-            Width = 743
-            Height = 212
+            Width = 751
+            Height = 217
             Shape = bsFrame
           end
           object Label10: TLabel
-            Left = 24
+            Left = 19
             Top = 8
-            Width = 116
-            Height = 26
+            Width = 164
+            Height = 17
             Caption = 'Questions for Product Type:'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -1057,22 +1082,22 @@ object PBEnquiryFrm: TPBEnquiryFrm
           end
           object ProductQLbl: TLabel
             Tag = 141
-            Left = 184
+            Left = 189
             Top = 8
-            Width = 63
-            Height = 13
+            Width = 72
+            Height = 17
             Caption = 'ProductQLbl'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object ScrollBox1: TScrollBox
             Tag = 140
-            Left = 16
-            Top = 24
+            Left = 19
+            Top = 31
             Width = 721
             Height = 185
             TabOrder = 0
@@ -1081,22 +1106,23 @@ object PBEnquiryFrm: TPBEnquiryFrm
         object TabSheet6: TTabSheet
           Caption = 'Assign Suppliers'
           DesignSize = (
-            803
-            227)
+            872
+            223)
           object Bevel9: TBevel
             Left = 2
             Top = 5
-            Width = 776
-            Height = 219
+            Width = 839
+            Height = 215
             Anchors = [akLeft, akTop, akRight, akBottom]
             Shape = bsFrame
             ExplicitWidth = 808
+            ExplicitHeight = 219
           end
           object SupplierGrid: TStringGrid
             Left = 16
             Top = 24
-            Width = 663
-            Height = 185
+            Width = 726
+            Height = 181
             Anchors = [akLeft, akTop, akRight, akBottom]
             ColCount = 3
             DefaultRowHeight = 20
@@ -1113,7 +1139,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               165)
           end
           object SuppSelectBtn: TBitBtn
-            Left = 690
+            Left = 753
             Top = 24
             Width = 75
             Height = 25
@@ -1148,9 +1174,10 @@ object PBEnquiryFrm: TPBEnquiryFrm
               FFFFFFFFFFFFFFFFFFFFFF3F00007F0000FFFFFFFFFFFFFFFFFF}
             TabOrder = 1
             OnClick = BitBtn4Click
+            ExplicitLeft = 739
           end
           object ContactSelBitBtn: TBitBtn
-            Left = 690
+            Left = 753
             Top = 56
             Width = 75
             Height = 25
@@ -1172,6 +1199,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             NumGlyphs = 2
             TabOrder = 2
             OnClick = ContactSelBitBtnClick
+            ExplicitLeft = 739
           end
         end
         object OptionsTabSheet: TTabSheet
@@ -1179,7 +1207,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           ImageIndex = 6
           object Bevel10: TBevel
             Left = 2
-            Top = 5
+            Top = 4
             Width = 747
             Height = 212
             Shape = bsFrame
@@ -1187,26 +1215,26 @@ object PBEnquiryFrm: TPBEnquiryFrm
           object lblPTOptions: TLabel
             Tag = 131
             Left = 216
-            Top = 16
-            Width = 62
-            Height = 13
+            Top = 9
+            Width = 70
+            Height = 17
             Caption = 'ProductCLbl'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object Label14: TLabel
             Left = 16
-            Top = 16
-            Width = 184
-            Height = 13
+            Top = 9
+            Width = 210
+            Height = 17
             Caption = 'Optional Charges for Product Type: '
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -1227,25 +1255,26 @@ object PBEnquiryFrm: TPBEnquiryFrm
           object pnlDocs: TPanel
             Left = 0
             Top = 0
-            Width = 803
-            Height = 227
+            Width = 872
+            Height = 223
             Align = alClient
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 858
             DesignSize = (
-              803
-              227)
+              872
+              223)
             object lblDocs: TLabel
               Left = 12
-              Top = 8
-              Width = 61
-              Height = 13
+              Top = 4
+              Width = 68
+              Height = 17
               Caption = 'Documents:'
             end
             object strgrdDocs: TStringGrid
               Left = 12
               Top = 26
-              Width = 790
+              Width = 859
               Height = 155
               Anchors = [akLeft, akTop, akRight]
               ColCount = 2
@@ -1302,7 +1331,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
                 0000000000000000000000000000000000000000000000000000000000000000
                 00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-                00000000C000000000000046000000000000000000000000A001EDBC2647DB01
+                00000000C000000000000046000000000000000000000000D0B458624A3CDD01
                 03000000400200000000000001004F006C006500000000000000000000000000
                 0000000000000000000000000000000000000000000000000000000000000000
                 0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1478,7 +1507,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 0000000000000000000000004F0062006A0065006300740050006F006F006C00
                 0000000000000000000000000000000000000000000000000000000000000000
                 000000000000000000000000160001010200000006000000FFFFFFFF00000000
-                00000000000000000000000000000000A001EDBC2647DB01A001EDBC2647DB01
+                00000000000000000000000000000000D0B458624A3CDD01D0B458624A3CDD01
                 00000000000000000000000002004F006C006500500072006500730030003000
                 3000000000000000000000000000000000000000000000000000000000000000
                 00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1955,7 +1984,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
                 FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
                 0000000000000000000000000000000000000000000000000000000000000000
                 00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-                00000000C000000000000046000000000000000000000000A001EDBC2647DB01
+                00000000C000000000000046000000000000000000000000D0B458624A3CDD01
                 03000000400D00000000000001004F006C006500000000000000000000000000
                 0000000000000000000000000000000000000000000000000000000000000000
                 0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -2288,23 +2317,27 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object pnlLines: TPanel
       Left = 0
       Top = 170
-      Width = 813
-      Height = 93
+      Width = 882
+      Height = 123
       Align = alClient
       Caption = 'pnlLines'
       ParentBackground = False
       TabOrder = 4
+      ExplicitWidth = 807
+      ExplicitHeight = 84
       object Panel1: TPanel
-        Left = 718
+        Left = 787
         Top = 1
         Width = 94
-        Height = 91
+        Height = 121
         Align = alRight
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 712
+        ExplicitHeight = 82
         DesignSize = (
           94
-          91)
+          121)
         object AddLineBitBtn: TBitBtn
           Left = 11
           Top = 7
@@ -2392,8 +2425,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       object EnquiryLineGrid: TStringGrid
         Left = 1
         Top = 1
-        Width = 717
-        Height = 91
+        Width = 786
+        Height = 121
         Align = alClient
         DefaultColWidth = 40
         DefaultRowHeight = 20
@@ -2403,6 +2436,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         TabOrder = 1
         OnClick = EnquiryLineGridClick
         OnDblClick = EnquiryLineGridDblClick
+        ExplicitWidth = 711
+        ExplicitHeight = 82
         ColWidths = (
           40
           213
@@ -2412,343 +2447,171 @@ object PBEnquiryFrm: TPBEnquiryFrm
       end
     end
   end
-  object CapabilitySQL: TFDQuery
+  object svDlgOfficeDoc: TSaveDialog
+    Left = 325
+    Top = 218
+  end
+  object qryGetActiveCustomerContact: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
-      'select DISTINCT Product_TypeCapability.Capability,'
-      #9#9'Product_TypeCapability.Default_for_all,'
-      #9#9'Product_TypeCapability.Description,'
-      #9#9'Product_TypeCapability.Inactive,'
-      #9#9'Product_TypeCapability.Product_Type'
-      'FROM Product_TypeCapability '
-      #9#9'LEFT JOIN EnquiryLinPrdct_TypCpblty '
+      'SELECT Customer_Contact.Customer,'
+      '        Customer_Contact.Branch_no,'
+      '        Customer_Contact.Contact_no'
+      'FROM Customer_Contact'
+      'WHERE Customer_Contact.Customer = :Customer AND'
+      '      Customer_Contact.Branch_no = :Branch_no AND'
+      '      Customer_Contact.Contact_no = :Contact_no AND'
+      '      ((inactive IS NULL) OR (inactive = '#39'N'#39'))')
+    Left = 944
+    Top = 600
+    ParamData = <
+      item
+        Name = 'Customer'
+      end
+      item
+        Name = 'Branch_no'
+      end
+      item
+        Name = 'Contact_no'
+      end>
+  end
+  object DocOpenDialog: TOpenDialog
+    Options = [ofHideReadOnly, ofAllowMultiSelect, ofEnableSizing]
+    Left = 288
+    Top = 56
+  end
+  object DropComboTarget1: TDropComboTarget
+    DragTypes = [dtCopy, dtLink]
+    OnDrop = DropComboTarget1Drop
+    Target = EnquiryLinePage
+    Left = 464
+    Top = 201
+  end
+  object QCustomer: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'select name '
+      'from Customer_branch '
+      'where customer = :customer and branch_no = :branch_no')
+    Left = 321
+    Top = 106
+    ParamData = <
+      item
+        Name = 'customer'
+        DataType = ftInteger
+      end
+      item
+        Name = 'branch_no'
+        DataType = ftInteger
+      end>
+  end
+  object ContactSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'Select Contact_No, Name'
+      'From Customer_Contact'
+      'Where (Customer = :Customer) and'
+      '      (Branch_No = :Branch) and'
       
-        #9#9#9'ON (Product_TypeCapability.Capability = EnquiryLinPrdct_TypCp' +
-        'blty.Capability) '
-      
-        #9#9#9#9'AND (Product_TypeCapability.Product_Type = EnquiryLinPrdct_T' +
-        'ypCpblty.Product_Type)'
-      'where (Product_TypeCapability.Product_Type = :Product) AND'
-      
-        '(((Product_TypeCapability.inactive = '#39'N'#39') or (Product_TypeCapabi' +
-        'lity.inactive IS NULL)) OR'
-      
-        '(EnquiryLinPrdct_TypCpblty.Enquiry = :Enquiry) AND (EnquiryLinPr' +
-        'dct_TypCpblty.Line = :Line))'
-      'order by Description')
-    Left = 760
+        '      ((Inactive = '#39'N'#39') or (Inactive is NULL) or (Contact_no = :' +
+        'Contact_no))'
+      'Order by Customer_Contact.Name'
+      '')
+    Left = 408
+    Top = 104
+    ParamData = <
+      item
+        Name = 'Customer'
+      end
+      item
+        Name = 'Branch'
+      end
+      item
+        Name = 'Contact_no'
+      end>
+  end
+  object CustRepSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'select Reps_branches.*, Name as Rep_Name'
+      'from Reps_branches, Rep'
+      'where '
+      '('
+      '(Customer = :Customer) and '
+      '(Branch_No = :Branch)'
+      ') AND'
+      '(Reps_branches.Rep = Rep.Rep)')
+    Left = 592
     Top = 96
     ParamData = <
       item
-        Name = 'Product'
+        Name = 'Customer'
+        DataType = ftInteger
       end
       item
-        Name = 'Enquiry'
+        Name = 'Branch'
+        DataType = ftInteger
+      end>
+  end
+  object custreps: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'SELECT Customer,'
+      'Branch_no , Rep.Rep , '
+      'Name, Is_Main_Rep'
+      'FROM Reps_Branches Reps_Branches , Rep Rep'
+      'WHERE ( Reps_Branches.Rep = Rep.Rep )'
+      '  AND'
+      ' ('
+      ' ( ( Customer = :custid ) AND'
+      '  ( Branch_no = :branchid ) )'
+      ' )')
+    Left = 820
+    Top = 114
+    ParamData = <
+      item
+        Name = 'custid'
+        DataType = ftInteger
+        ParamType = ptInput
       end
       item
-        Name = 'Line'
+        Name = 'branchid'
+        DataType = ftInteger
+        ParamType = ptInput
       end>
   end
-  object QuestionSQL: TFDQuery
+  object AddEnqSuppQtySQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
-      'select *'
-      'from Product_TypeQuestion'
-      'where Product_Type = :Product'
-      'order by Sequence_Reference')
-    Left = 624
-    Top = 184
+      'insert into Supplier_EnquiryQty (Enquiry,'
+      '                                                  Line,'
+      '                                                  Quantity,'
+      '                                                  Supplier,'
+      '                                                  Branch_no,'
+      
+        '                                                  Response_Quant' +
+        'ity,'
+      
+        '                                                  Price_Selected' +
+        ')'
+      'values                                       (:enquiry,'
+      '                                                  :Line,'
+      '                                                  :Qty,'
+      '                                                  :Supplier,'
+      '                                                  :Branch,'
+      '                                                  :Qty,'
+      '                                                  '#39'N'#39')')
+    Left = 668
+    Top = 154
     ParamData = <
       item
-        Name = 'Product'
-      end>
-  end
-  object InsEnqLineQtySQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into Enquiry_lineQuantity (enquiry,'
-      '                                           Line,'
-      '                                           Quantity)'
-      'values                                (:Enquiry,'
-      '                                           :Line,'
-      '                                           :Qty)')
-    Left = 32
-    Top = 200
-    ParamData = <
-      item
-        Name = 'Enquiry'
+        Name = 'enquiry'
       end
       item
         Name = 'Line'
       end
       item
         Name = 'Qty'
-      end>
-  end
-  object UpEnqLineCapSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into EnquiryLinPrdct_TypCpblty (enquiry,'
-      '                                                      Line,'
-      
-        '                                                      Product_Ty' +
-        'pe,'
-      
-        '                                                      Capability' +
-        ')'
-      'values                                           (:enquiry,'
-      '                                                      :Line,'
-      '                                                      :Product,'
-      '                                                      :Cap)')
-    Left = 32
-    Top = 160
-    ParamData = <
-      item
-        Name = 'enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Product'
-      end
-      item
-        Name = 'Cap'
-      end>
-  end
-  object UpEnqLineQSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into Enquiry_Questions (enquiry,'
-      '                                         line,'
-      '                                         Product_Type,'
-      '                                         Question,'
-      '                                         Product_Answer)'
-      'values                              (:enquiry,'
-      '                                         :Line,'
-      '                                         :Product,'
-      '                                         :Question,'
-      '                                         :Answer)')
-    Left = 32
-    Top = 232
-    ParamData = <
-      item
-        Name = 'enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Product'
-      end
-      item
-        Name = 'Question'
-      end
-      item
-        Name = 'Answer'
-      end>
-  end
-  object UpEnqLineAddSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into EnquiryLineAdditionl_Dtls (enquiry,'
-      '                                                   Line,'
-      
-        '                                                   Additional_De' +
-        'tails,'
-      '                                                   FAO_flag,'
-      '                                                   Details)'
-      'values                                        (:enquiry,'
-      '                                                   :Line,'
-      '                                                   :Code,'
-      '                                                   :FAO,'
-      '                                                   :Details)')
-    Left = 32
-    Top = 296
-    ParamData = <
-      item
-        Name = 'enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Code'
-      end
-      item
-        Name = 'FAO'
-      end
-      item
-        Name = 'Details'
-      end>
-  end
-  object UpEnqLinePartSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into EnquiryLinePart_Detail (enquiry,'
-      '                                               Line,'
-      '                                               Part_No,'
-      '                                               Heading,'
-      '                                               Same_as_part,'
-      '                                               Paper_Brand,'
-      '                                               Paper_Material,'
-      '                                               Paper_Weight,'
-      '                                               Paper_Colour,'
-      '                                               Face_inks,'
-      '                                               Reverse_inks,'
-      '                                               Left_Margin_type,'
-      
-        '                                               Left_Margin_Width' +
-        ','
-      
-        '                                               Right_Margin_Type' +
-        ','
-      
-        '                                               Right_Margin_Widt' +
-        'h,'
-      
-        '                                               No_of_Plate_chang' +
-        'es,'
-      '                                               Part_Description)'
-      'values                                    (:enquiry,'
-      '                                               :line,'
-      '                                               :Part,'
-      '                                               :Heading,'
-      '                                               :Same_as,'
-      '                                               :Brand,'
-      '                                               :Material,'
-      '                                               :Weight,'
-      '                                               :Colour,'
-      '                                               :Face,'
-      '                                               :Reverse,'
-      '                                               :L_Type,'
-      '                                               :L_Width,'
-      '                                               :R_Type,'
-      '                                               :R_Width,'
-      '                                               :Plates,'
-      
-        '                                               :Part_Description' +
-        ')'
-      ' ')
-    Left = 128
-    Top = 216
-    ParamData = <
-      item
-        Name = 'enquiry'
-      end
-      item
-        Name = 'line'
-      end
-      item
-        Name = 'Part'
-      end
-      item
-        Name = 'Heading'
-        DataType = ftString
-      end
-      item
-        Name = 'Same_as'
-      end
-      item
-        Name = 'Brand'
-        DataType = ftString
-      end
-      item
-        Name = 'Material'
-        DataType = ftString
-      end
-      item
-        Name = 'Weight'
-        DataType = ftString
-      end
-      item
-        Name = 'Colour'
-        DataType = ftString
-      end
-      item
-        Name = 'Face'
-        DataType = ftString
-      end
-      item
-        Name = 'Reverse'
-        DataType = ftString
-      end
-      item
-        Name = 'L_Type'
-        DataType = ftString
-      end
-      item
-        Name = 'L_Width'
-        DataType = ftString
-      end
-      item
-        Name = 'R_Type'
-        DataType = ftString
-      end
-      item
-        Name = 'R_Width'
-        DataType = ftString
-      end
-      item
-        Name = 'Plates'
-      end
-      item
-        Name = 'Part_Description'
-      end>
-  end
-  object UpCompanySQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'update Company'
-      'set Last_Enquiry_Number = Last_Enquiry_Number + 1')
-    Left = 132
-    Top = 122
-  end
-  object GetCompanySQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'select Last_Enquiry_Number'
-      'from Company')
-    Left = 268
-    Top = 186
-  end
-  object DelEnqSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'delete from enquiry where enquiry = :enquiry;')
-    Left = 208
-    Top = 160
-    ParamData = <
-      item
-        Name = 'enquiry'
-        DataType = ftInteger
-      end>
-  end
-  object AddEnqSupplierSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into Supplier_Enquiry (Enquiry,'
-      '                                            Line,'
-      '                                            Supplier,'
-      '                                            Branch_No,'
-      '                                            Contact_no,'
-      '                                            Printed_Enquiry,'
-      '                                            Run_on_Quantity)'
-      'values                                 (:Enquiry,'
-      '                                            :Line,'
-      '                                            :Supplier,'
-      '                                            :Branch,'
-      '                                            :Contact_no,'
-      '                                            '#39'N'#39','
-      '                                            :Run_on_Quantity)')
-    Left = 132
-    Top = 170
-    ParamData = <
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
       end
       item
         Name = 'Supplier'
@@ -2757,122 +2620,91 @@ object PBEnquiryFrm: TPBEnquiryFrm
         Name = 'Branch'
       end
       item
-        Name = 'Contact_no'
-        DataType = ftInteger
+        Name = 'Qty'
+      end>
+  end
+  object AddEnqHeaderSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'insert into Enquiry (enquiry,'
+      '                       Date_Point, '
+      '                       Operator, '
+      '                       Cust_Est_Contact, '
+      '                       Quote_Required_By,'
+      '                       Customer,'
+      '                       Branch_No,'
+      '                       Description,'
+      '                       Rep,'
+      '                       Enquiry_Status,'
+      '                       Enq_inactive,'
+      '                       Office_Contact,'
+      '                       Contact_no,'
+      '                       Prospect_Quote)'
+      'values            (:Enquiry,'
+      '                       :Enq_Date,'
+      '                       :Operator,'
+      '                       :Contact,'
+      '                       :Req_Date,'
+      '                       :Customer,'
+      '                       :Branch_No,'
+      '                       :Desc,'
+      '                       :Rep,'
+      '                       :Status,'
+      '                       '#39'N'#39','
+      '                       :Office_Contact,'
+      '                       :Contact_no,'
+      '                       :Prospect_Quote)'
+      '                       ')
+    Left = 408
+    Top = 168
+    ParamData = <
+      item
+        Name = 'Enquiry'
       end
       item
-        Name = 'Run_on_Quantity'
-      end>
-  end
-  object DelEnqLineSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from EnquiryLine where enquiry = :Enquiry')
-    Left = 216
-    Top = 208
-    ParamData = <
+        Name = 'Enq_Date'
+      end
       item
-        Name = 'Enquiry'
-      end>
-  end
-  object DelEnqLineQtySQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from Enquiry_LineQuantity where enquiry = :enquiry')
-    Left = 272
-    Top = 160
-    ParamData = <
+        Name = 'Operator'
+      end
       item
-        Name = 'enquiry'
-      end>
-  end
-  object DelEnqQStSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from enquiry_Questions where enquiry = :Enquiry')
-    Left = 288
-    Top = 160
-    ParamData = <
+        Name = 'Contact'
+      end
       item
-        Name = 'Enquiry'
-      end>
-  end
-  object DelEnqLineAddSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from EnquiryLineAdditionl_Dtls where enquiry = :enquiry')
-    Left = 336
-    Top = 160
-    ParamData = <
+        Name = 'Req_Date'
+      end
       item
-        Name = 'enquiry'
-      end>
-  end
-  object DelEnqPartSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete'
-      'from enquiryLinePart_Detail'
-      'where enquiry = :enquiry')
-    Left = 696
-    Top = 272
-    ParamData = <
+        Name = 'Customer'
+      end
       item
-        Name = 'enquiry'
-      end>
-  end
-  object DelEnqCapSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from EnquiryLinPrdct_typCpblty where enquiry = :enquiry')
-    Left = 400
-    Top = 160
-    ParamData = <
+        Name = 'Branch_No'
+      end
       item
-        Name = 'enquiry'
-      end>
-  end
-  object DelEnqSuppSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from Supplier_Enquiry where enquiry = :enquiry')
-    Left = 400
-    Top = 208
-    ParamData = <
+        Name = 'Desc'
+      end
       item
-        Name = 'enquiry'
-      end>
-  end
-  object DelEnqSuppQtySQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from Supplier_EnquiryQty where enquiry = :enquiry')
-    Left = 472
-    Top = 160
-    ParamData = <
+        Name = 'Rep'
+      end
       item
-        Name = 'enquiry'
-      end>
-  end
-  object DelEnqSuppAddSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from Supp_Enq_add_Charge where Enquiry = :Enquiry')
-    Left = 528
-    Top = 184
-    ParamData = <
+        Name = 'Status'
+      end
       item
-        Name = 'Enquiry'
+        Name = 'Office_Contact'
+      end
+      item
+        Name = 'Contact_no'
+      end
+      item
+        Name = 'Prospect_Quote'
       end>
   end
-  object GetLastNarrSQL: TFDQuery
-    ConnectionName = 'PB'
+  object UpCompanySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
-      'Select Max(Narrative) as Last_Code'
-      'From Narrative_Line'
-      '')
-    Left = 48
-    Top = 152
+      'update Company'
+      'set Last_Enquiry_Number = Last_Enquiry_Number + 1')
+    Left = 300
+    Top = 210
   end
   object AddNarrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -2884,8 +2716,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       'Values'
       '(:Narrative, :Narrative_Line, :Narrative_Text, '#39'Y'#39')'
       '')
-    Left = 184
-    Top = 120
+    Left = 352
+    Top = 208
     ParamData = <
       item
         Name = 'Narrative'
@@ -2951,8 +2783,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       '     :job_type)'
       '     '
       ' ')
-    Left = 240
-    Top = 128
+    Left = 408
+    Top = 216
     ParamData = <
       item
         Name = 'Enquiry'
@@ -3018,91 +2850,17 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptInput
       end>
   end
-  object DelEnqSupplierSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from Supplier_Enquiry'
-      'where Enquiry = :Enquiry and'
-      #9#9#9'Line = :Line and'
-      '        Supplier = :Supplier and'
-      '        Branch_no = :Branch_no')
-    Left = 340
-    Top = 154
-    ParamData = <
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_no'
-      end>
-  end
-  object DelAllEnqSuppQtysSQL: TFDQuery
+  object DelEnqSupplierQtySQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supplier_EnquiryQty'
-      'where '#9'Enquiry = :Enquiry and'
-      #9#9#9'Line = :Line and'
-      '        Supplier = :Supplier and'
-      '        Branch_no = :Branch_no')
-    Left = 348
-    Top = 178
-    ParamData = <
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_no'
-      end>
-  end
-  object CheckEnqSuppSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select *'
-      'from Supplier_Enquiry'
-      'where Enquiry = :Enquiry and'
-      #9#9#9'Line = :Line and'
-      '        Supplier = :Supplier and'
-      '        Branch_no = :Branch_no')
-    Left = 444
-    Top = 146
-    ParamData = <
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_no'
-      end>
-  end
-  object CheckEnqSuppQtySQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select *'
-      'from Supplier_EnquiryQty'
       'where Enquiry = :Enquiry and'
       #9#9#9'Line = :Line and'
       '        Supplier = :Supplier and'
       '        Branch_no = :Branch_no and'
       '        Quantity = :Quantity')
-    Left = 460
-    Top = 170
+    Left = 508
+    Top = 210
     ParamData = <
       item
         Name = 'Enquiry'
@@ -3120,146 +2878,81 @@ object PBEnquiryFrm: TPBEnquiryFrm
         Name = 'Quantity'
       end>
   end
-  object CheckEnqQtySQL: TFDQuery
+  object qryProductType: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'select * from Enquiry_LineQuantity'
-      'where Enquiry = :Enquiry and'
-      #9#9#9'Line = :Line and'
-      '        Quantity = :Quantity')
-    Left = 512
-    Top = 168
-    ParamData = <
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Quantity'
-      end>
-  end
-  object PaperDetailSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select * '
-      'from')
-    Left = 240
-    Top = 356
-  end
-  object qryCompany: TFDQuery
-    ConnectionName = 'PB'
-    Left = 616
-    Top = 128
-  end
-  object DelEnqOneSuppAddSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from Supp_enq_Add_Charge'
-      'where Enquiry = :Enquiry and'
-      'Line = :Line and'
-      'Supplier = :Supplier and'
-      'Branch_no = :Branch_no')
-    Left = 560
-    Top = 184
-    ParamData = <
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_no'
-      end>
-  end
-  object UpEnqSupplierSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'Update Supplier_Enquiry'
-      'set Contact_No = :Contact_no, '
-      'Run_on_quantity = :Run_on_Quantity'
-      'where '
-      'Enquiry = :Enquiry and'
-      'Line = :Line and'
-      'Supplier = :Supplier and'
-      'Branch_no = :Branch')
-    Left = 536
-    Top = 264
-    ParamData = <
-      item
-        Name = 'Contact_no'
-        DataType = ftInteger
-      end
-      item
-        Name = 'Run_on_Quantity'
-      end
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch'
-      end>
-  end
-  object QuestListSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select *'
-      'from Product_TypeQList'
-      'where Product_Type = :Product_Type and '
-      'Question = :Question')
-    Left = 272
-    Top = 304
+      'select * from Product_Type'
+      'where Product_Type = :Product_Type')
+    Left = 600
+    Top = 200
     ParamData = <
       item
         Name = 'Product_Type'
-      end
-      item
-        Name = 'Question'
       end>
   end
-  object OptionsSQL: TFDQuery
+  object GetEnqSupplierSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select Supplier, Branch_no, Quantity, Enquiry, Line'
+      'from Supplier_EnquiryQty'
+      'where Enquiry = :Enquiry and'
+      #9#9#9'Line = :Line'
+      'order by Supplier, Branch_no, Quantity')
+    Left = 636
+    Top = 186
+    ParamData = <
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end>
+  end
+  object oldCapabilitySQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
       'select * '
-      'from Product_TypeOChg'
-      'where Product_Type = :Product')
-    Left = 624
-    Top = 280
+      'from Product_TypeCapability'
+      'where Product_Type = :Product'
+      'order by Description')
+    Left = 847
+    Top = 184
     ParamData = <
       item
         Name = 'Product'
       end>
   end
-  object UpEnqLineOptSQL: TFDQuery
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
+    Left = 784
+    Top = 216
+  end
+  object GetLastNarrSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select Max(Narrative) as Last_Code'
+      'From Narrative_Line'
+      '')
+    Left = 216
+    Top = 240
+  end
+  object UpEnqLineCapSQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
-      'insert into EnquiryLineProduct_TypeOChg (enquiry,'
+      'insert into EnquiryLinPrdct_TypCpblty (enquiry,'
       '                                                      Line,'
       
         '                                                      Product_Ty' +
         'pe,'
       
-        '                                                      Optional_C' +
-        'harge)'
+        '                                                      Capability' +
+        ')'
       'values                                           (:enquiry,'
       '                                                      :Line,'
       '                                                      :Product,'
-      
-        '                                                      :Optional_' +
-        'Charge)')
-    Left = 472
-    Top = 320
+      '                                                      :Cap)')
+    Left = 200
+    Top = 248
     ParamData = <
       item
         Name = 'enquiry'
@@ -3271,418 +2964,29 @@ object PBEnquiryFrm: TPBEnquiryFrm
         Name = 'Product'
       end
       item
-        Name = 'Optional_Charge'
+        Name = 'Cap'
       end>
   end
-  object DelEnqOptSQL: TFDQuery
-    ConnectionName = 'PB'
+  object InsEnqLineQtySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
-      'delete from EnquiryLineProduct_TypeOChg where enquiry = :enquiry')
-    Left = 472
-    Top = 384
+      'insert into Enquiry_lineQuantity (enquiry,'
+      '                                           Line,'
+      '                                           Quantity)'
+      'values                                (:Enquiry,'
+      '                                           :Line,'
+      '                                           :Qty)')
+    Left = 200
+    Top = 288
     ParamData = <
-      item
-        Name = 'enquiry'
-      end>
-  end
-  object AddEnqSuppOChgsSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'insert into Supp_Enq_Add_charge'
-      'values (:Supplier, '
-      '            :Branch_no, '
-      '            :Enquiry, '
-      '            :Line, '
-      '            :Additional_Charge, '
-      '            :Details, '
-      '            0.00, '
-      '            0.00,'
-      '            '#39'O'#39')  ')
-    Left = 380
-    Top = 346
-    ParamData = <
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_no'
-      end
       item
         Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Additional_Charge'
-      end
-      item
-        Name = 'Details'
-      end>
-  end
-  object GetLastAddChgSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select Max(Additional_Charge) as Last_Charge_Number'
-      'from Supp_Enq_Add_charge'
-      'where Supplier = :Supplier and'
-      'Branch_no = :Branch_No and'
-      'Enquiry = :Enquiry and'
-      'Line = :Line')
-    Left = 68
-    Top = 362
-    ParamData = <
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_No'
-      end
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end>
-  end
-  object CheckEnqSuppOChgsSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select *'
-      'from Supp_Enq_Add_charge'
-      'where Supplier = :Supplier and'
-      'Branch_no = :Branch_no and'
-      'Enquiry = :Enquiry and'
-      'Line = :Line and'
-      'Details = :Details')
-    Left = 140
-    Top = 354
-    ParamData = <
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_no'
-      end
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Details'
-      end>
-  end
-  object DelEnqSuppOChgsSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from Supp_Enq_Add_charge'
-      'where Supplier = :Supplier and'
-      'Branch_no = :Branch_no and'
-      'Enquiry = :Enquiry and'
-      'Line = :Line and'
-      'Details = :Details')
-    Left = 292
-    Top = 410
-    ParamData = <
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch_no'
-      end
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Line'
-      end
-      item
-        Name = 'Details'
-      end>
-  end
-  object svDlgOfficeDoc: TSaveDialog
-    Left = 341
-    Top = 354
-  end
-  object qryGetLooseEnqLineQtys: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select quantity from enquiry_linequantity'
-      'where enquiry = :enquiry '
-      'and line = :line '
-      '')
-    Left = 404
-    Top = 298
-    ParamData = <
-      item
-        Name = 'enquiry'
-      end
-      item
-        Name = 'line'
-      end>
-  end
-  object qryDelEnqLineParts: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'delete from enquirylinepart_detail '
-      'where enquiry = :enquiry '
-      'and line = :line '
-      'and part_no > :part_no')
-    Left = 700
-    Top = 308
-    ParamData = <
-      item
-        Name = 'enquiry'
-      end
-      item
-        Name = 'line'
-      end
-      item
-        Name = 'part_no'
-      end>
-  end
-  object qryGetActiveCustomerContact: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'SELECT Customer_Contact.Customer,'
-      '        Customer_Contact.Branch_no,'
-      '        Customer_Contact.Contact_no'
-      'FROM Customer_Contact'
-      'WHERE Customer_Contact.Customer = :Customer AND'
-      '      Customer_Contact.Branch_no = :Branch_no AND'
-      '      Customer_Contact.Contact_no = :Contact_no AND'
-      '      ((inactive IS NULL) OR (inactive = '#39'N'#39'))')
-    Left = 944
-    Top = 600
-    ParamData = <
-      item
-        Name = 'Customer'
-      end
-      item
-        Name = 'Branch_no'
-      end
-      item
-        Name = 'Contact_no'
-      end>
-  end
-  object custreps: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'SELECT Customer,'
-      'Branch_no , Rep.Rep , '
-      'Name, Is_Main_Rep'
-      'FROM Reps_Branches Reps_Branches , Rep Rep'
-      'WHERE ( Reps_Branches.Rep = Rep.Rep )'
-      '  AND'
-      ' ('
-      ' ( ( Customer = :custid ) AND'
-      '  ( Branch_no = :branchid ) )'
-      ' )')
-    Left = 652
-    Top = 26
-    ParamData = <
-      item
-        Name = 'custid'
-        DataType = ftInteger
-        ParamType = ptInput
-      end
-      item
-        Name = 'branchid'
-        DataType = ftInteger
-        ParamType = ptInput
-      end>
-  end
-  object QCustomer: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'select name '
-      'from Customer_branch '
-      'where customer = :customer and branch_no = :branch_no')
-    Left = 153
-    Top = 18
-    ParamData = <
-      item
-        Name = 'customer'
-        DataType = ftInteger
-      end
-      item
-        Name = 'branch_no'
-        DataType = ftInteger
-      end>
-  end
-  object ContactSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'Select Contact_No, Name'
-      'From Customer_Contact'
-      'Where (Customer = :Customer) and'
-      '      (Branch_No = :Branch) and'
-      
-        '      ((Inactive = '#39'N'#39') or (Inactive is NULL) or (Contact_no = :' +
-        'Contact_no))'
-      'Order by Customer_Contact.Name'
-      '')
-    Left = 240
-    Top = 16
-    ParamData = <
-      item
-        Name = 'Customer'
-      end
-      item
-        Name = 'Branch'
-      end
-      item
-        Name = 'Contact_no'
-      end>
-  end
-  object AddEnqSuppQtySQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into Supplier_EnquiryQty (Enquiry,'
-      '                                                  Line,'
-      '                                                  Quantity,'
-      '                                                  Supplier,'
-      '                                                  Branch_no,'
-      
-        '                                                  Response_Quant' +
-        'ity,'
-      
-        '                                                  Price_Selected' +
-        ')'
-      'values                                       (:enquiry,'
-      '                                                  :Line,'
-      '                                                  :Qty,'
-      '                                                  :Supplier,'
-      '                                                  :Branch,'
-      '                                                  :Qty,'
-      '                                                  '#39'N'#39')')
-    Left = 500
-    Top = 66
-    ParamData = <
-      item
-        Name = 'enquiry'
       end
       item
         Name = 'Line'
       end
       item
         Name = 'Qty'
-      end
-      item
-        Name = 'Supplier'
-      end
-      item
-        Name = 'Branch'
-      end
-      item
-        Name = 'Qty'
-      end>
-  end
-  object CustRepSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'select Reps_branches.*, Name as Rep_Name'
-      'from Reps_branches, Rep'
-      'where '
-      '('
-      '(Customer = :Customer) and '
-      '(Branch_No = :Branch)'
-      ') AND'
-      '(Reps_branches.Rep = Rep.Rep)')
-    Left = 424
-    Top = 8
-    ParamData = <
-      item
-        Name = 'Customer'
-        DataType = ftInteger
-      end
-      item
-        Name = 'Branch'
-        DataType = ftInteger
-      end>
-  end
-  object OperatorSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'select * from operator')
-    Left = 480
-    Top = 264
-  end
-  object AddEnqHeaderSQL: TFDQuery
-    ConnectionName = 'pb'
-    SQL.Strings = (
-      'insert into Enquiry (enquiry,'
-      '                       Date_Point, '
-      '                       Operator, '
-      '                       Cust_Est_Contact, '
-      '                       Quote_Required_By,'
-      '                       Customer,'
-      '                       Branch_No,'
-      '                       Description,'
-      '                       Rep,'
-      '                       Enquiry_Status,'
-      '                       Enq_inactive,'
-      '                       Office_Contact,'
-      '                       Contact_no,'
-      '                       Prospect_Quote)'
-      'values            (:Enquiry,'
-      '                       :Enq_Date,'
-      '                       :Operator,'
-      '                       :Contact,'
-      '                       :Req_Date,'
-      '                       :Customer,'
-      '                       :Branch_No,'
-      '                       :Desc,'
-      '                       :Rep,'
-      '                       :Status,'
-      '                       '#39'N'#39','
-      '                       :Office_Contact,'
-      '                       :Contact_no,'
-      '                       :Prospect_Quote)'
-      '                       ')
-    Left = 240
-    Top = 80
-    ParamData = <
-      item
-        Name = 'Enquiry'
-      end
-      item
-        Name = 'Enq_Date'
-      end
-      item
-        Name = 'Operator'
-      end
-      item
-        Name = 'Contact'
-      end
-      item
-        Name = 'Req_Date'
-      end
-      item
-        Name = 'Customer'
-      end
-      item
-        Name = 'Branch_No'
-      end
-      item
-        Name = 'Desc'
-      end
-      item
-        Name = 'Rep'
-      end
-      item
-        Name = 'Status'
-      end
-      item
-        Name = 'Office_Contact'
-      end
-      item
-        Name = 'Contact_no'
-      end
-      item
-        Name = 'Prospect_Quote'
       end>
   end
   object UpEnqLineSQL: TFDQuery
@@ -3711,8 +3015,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       '    Line = :Line'
       ' '
       ' ')
-    Left = 48
-    Top = 192
+    Left = 216
+    Top = 280
     ParamData = <
       item
         Name = 'Desc'
@@ -3796,8 +3100,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       '    Contact_no=:Contact_no,'
       '    Prospect_Quote = :Prospect_Quote'
       'where Enquiry = :Enquiry')
-    Left = 56
-    Top = 200
+    Left = 224
+    Top = 288
     ParamData = <
       item
         Name = 'Enq_Date'
@@ -3839,35 +3143,287 @@ object PBEnquiryFrm: TPBEnquiryFrm
         Name = 'Enquiry'
       end>
   end
-  object GetEnqSupplierSQL: TFDQuery
-    ConnectionName = 'PB'
+  object AddEnqSupplierSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
-      'select Supplier, Branch_no, Quantity, Enquiry, Line'
-      'from Supplier_EnquiryQty'
-      'where Enquiry = :Enquiry and'
-      #9#9#9'Line = :Line'
-      'order by Supplier, Branch_no, Quantity')
-    Left = 468
-    Top = 98
+      'insert into Supplier_Enquiry (Enquiry,'
+      '                                            Line,'
+      '                                            Supplier,'
+      '                                            Branch_No,'
+      '                                            Contact_no,'
+      '                                            Printed_Enquiry,'
+      '                                            Run_on_Quantity)'
+      'values                                 (:Enquiry,'
+      '                                            :Line,'
+      '                                            :Supplier,'
+      '                                            :Branch,'
+      '                                            :Contact_no,'
+      '                                            '#39'N'#39','
+      '                                            :Run_on_Quantity)')
+    Left = 300
+    Top = 258
     ParamData = <
       item
         Name = 'Enquiry'
       end
       item
         Name = 'Line'
+      end
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch'
+      end
+      item
+        Name = 'Contact_no'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Run_on_Quantity'
       end>
   end
-  object DelEnqSupplierQtySQL: TFDQuery
+  object UpEnqLinePartSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'insert into EnquiryLinePart_Detail (enquiry,'
+      '                                               Line,'
+      '                                               Part_No,'
+      '                                               Heading,'
+      '                                               Same_as_part,'
+      '                                               Paper_Brand,'
+      '                                               Paper_Material,'
+      '                                               Paper_Weight,'
+      '                                               Paper_Colour,'
+      '                                               Face_inks,'
+      '                                               Reverse_inks,'
+      '                                               Left_Margin_type,'
+      
+        '                                               Left_Margin_Width' +
+        ','
+      
+        '                                               Right_Margin_Type' +
+        ','
+      
+        '                                               Right_Margin_Widt' +
+        'h,'
+      
+        '                                               No_of_Plate_chang' +
+        'es,'
+      '                                               Part_Description)'
+      'values                                    (:enquiry,'
+      '                                               :line,'
+      '                                               :Part,'
+      '                                               :Heading,'
+      '                                               :Same_as,'
+      '                                               :Brand,'
+      '                                               :Material,'
+      '                                               :Weight,'
+      '                                               :Colour,'
+      '                                               :Face,'
+      '                                               :Reverse,'
+      '                                               :L_Type,'
+      '                                               :L_Width,'
+      '                                               :R_Type,'
+      '                                               :R_Width,'
+      '                                               :Plates,'
+      
+        '                                               :Part_Description' +
+        ')'
+      ' ')
+    Left = 296
+    Top = 304
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end
+      item
+        Name = 'line'
+      end
+      item
+        Name = 'Part'
+      end
+      item
+        Name = 'Heading'
+        DataType = ftString
+      end
+      item
+        Name = 'Same_as'
+      end
+      item
+        Name = 'Brand'
+        DataType = ftString
+      end
+      item
+        Name = 'Material'
+        DataType = ftString
+      end
+      item
+        Name = 'Weight'
+        DataType = ftString
+      end
+      item
+        Name = 'Colour'
+        DataType = ftString
+      end
+      item
+        Name = 'Face'
+        DataType = ftString
+      end
+      item
+        Name = 'Reverse'
+        DataType = ftString
+      end
+      item
+        Name = 'L_Type'
+        DataType = ftString
+      end
+      item
+        Name = 'L_Width'
+        DataType = ftString
+      end
+      item
+        Name = 'R_Type'
+        DataType = ftString
+      end
+      item
+        Name = 'R_Width'
+        DataType = ftString
+      end
+      item
+        Name = 'Plates'
+      end
+      item
+        Name = 'Part_Description'
+      end>
+  end
+  object DelEnqLineSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from EnquiryLine where enquiry = :Enquiry')
+    Left = 384
+    Top = 296
+    ParamData = <
+      item
+        Name = 'Enquiry'
+      end>
+  end
+  object DelEnqSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'delete from enquiry where enquiry = :enquiry;')
+    Left = 376
+    Top = 248
+    ParamData = <
+      item
+        Name = 'enquiry'
+        DataType = ftInteger
+      end>
+  end
+  object DelEnqQStSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from enquiry_Questions where enquiry = :Enquiry')
+    Left = 456
+    Top = 248
+    ParamData = <
+      item
+        Name = 'Enquiry'
+      end>
+  end
+  object GetCompanySQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'select Last_Enquiry_Number'
+      'from Company')
+    Left = 436
+    Top = 274
+  end
+  object DelEnqSupplierSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from Supplier_Enquiry'
+      'where Enquiry = :Enquiry and'
+      #9#9#9'Line = :Line and'
+      '        Supplier = :Supplier and'
+      '        Branch_no = :Branch_no')
+    Left = 508
+    Top = 242
+    ParamData = <
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_no'
+      end>
+  end
+  object DelAllEnqSuppQtysSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supplier_EnquiryQty'
+      'where '#9'Enquiry = :Enquiry and'
+      #9#9#9'Line = :Line and'
+      '        Supplier = :Supplier and'
+      '        Branch_no = :Branch_no')
+    Left = 516
+    Top = 266
+    ParamData = <
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_no'
+      end>
+  end
+  object CheckEnqSuppSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from Supplier_Enquiry'
+      'where Enquiry = :Enquiry and'
+      #9#9#9'Line = :Line and'
+      '        Supplier = :Supplier and'
+      '        Branch_no = :Branch_no')
+    Left = 612
+    Top = 234
+    ParamData = <
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_no'
+      end>
+  end
+  object CheckEnqSuppQtySQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from Supplier_EnquiryQty'
       'where Enquiry = :Enquiry and'
       #9#9#9'Line = :Line and'
       '        Supplier = :Supplier and'
       '        Branch_no = :Branch_no and'
       '        Quantity = :Quantity')
-    Left = 340
-    Top = 122
+    Left = 628
+    Top = 258
     ParamData = <
       item
         Name = 'Enquiry'
@@ -3883,6 +3439,492 @@ object PBEnquiryFrm: TPBEnquiryFrm
       end
       item
         Name = 'Quantity'
+      end>
+  end
+  object DelEnqSuppSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from Supplier_Enquiry where enquiry = :enquiry')
+    Left = 568
+    Top = 296
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end>
+  end
+  object UpEnqLineQSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'insert into Enquiry_Questions (enquiry,'
+      '                                         line,'
+      '                                         Product_Type,'
+      '                                         Question,'
+      '                                         Product_Answer)'
+      'values                              (:enquiry,'
+      '                                         :Line,'
+      '                                         :Product,'
+      '                                         :Question,'
+      '                                         :Answer)')
+    Left = 200
+    Top = 320
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Product'
+      end
+      item
+        Name = 'Question'
+      end
+      item
+        Name = 'Answer'
+      end>
+  end
+  object UpEnqLineAddSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'insert into EnquiryLineAdditionl_Dtls (enquiry,'
+      '                                                   Line,'
+      
+        '                                                   Additional_De' +
+        'tails,'
+      '                                                   FAO_flag,'
+      '                                                   Details)'
+      'values                                        (:enquiry,'
+      '                                                   :Line,'
+      '                                                   :Code,'
+      '                                                   :FAO,'
+      '                                                   :Details)')
+    Left = 200
+    Top = 384
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Code'
+      end
+      item
+        Name = 'FAO'
+      end
+      item
+        Name = 'Details'
+      end>
+  end
+  object GetLastAddChgSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select Max(Additional_Charge) as Last_Charge_Number'
+      'from Supp_Enq_Add_charge'
+      'where Supplier = :Supplier and'
+      'Branch_no = :Branch_No and'
+      'Enquiry = :Enquiry and'
+      'Line = :Line')
+    Left = 236
+    Top = 450
+    ParamData = <
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_No'
+      end
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end>
+  end
+  object CheckEnqSuppOChgsSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from Supp_Enq_Add_charge'
+      'where Supplier = :Supplier and'
+      'Branch_no = :Branch_no and'
+      'Enquiry = :Enquiry and'
+      'Line = :Line and'
+      'Details = :Details')
+    Left = 308
+    Top = 442
+    ParamData = <
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_no'
+      end
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Details'
+      end>
+  end
+  object PaperDetailSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select * '
+      'from')
+    Left = 408
+    Top = 444
+  end
+  object QuestListSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from Product_TypeQList'
+      'where Product_Type = :Product_Type and '
+      'Question = :Question')
+    Left = 440
+    Top = 392
+    ParamData = <
+      item
+        Name = 'Product_Type'
+      end
+      item
+        Name = 'Question'
+      end>
+  end
+  object DelEnqSuppOChgsSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from Supp_Enq_Add_charge'
+      'where Supplier = :Supplier and'
+      'Branch_no = :Branch_no and'
+      'Enquiry = :Enquiry and'
+      'Line = :Line and'
+      'Details = :Details')
+    Left = 460
+    Top = 498
+    ParamData = <
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_no'
+      end
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Details'
+      end>
+  end
+  object AddEnqSuppOChgsSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'insert into Supp_Enq_Add_charge'
+      'values (:Supplier, '
+      '            :Branch_no, '
+      '            :Enquiry, '
+      '            :Line, '
+      '            :Additional_Charge, '
+      '            :Details, '
+      '            0.00, '
+      '            0.00,'
+      '            '#39'O'#39')  ')
+    Left = 548
+    Top = 434
+    ParamData = <
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_no'
+      end
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Additional_Charge'
+      end
+      item
+        Name = 'Details'
+      end>
+  end
+  object qryGetLooseEnqLineQtys: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select quantity from enquiry_linequantity'
+      'where enquiry = :enquiry '
+      'and line = :line '
+      '')
+    Left = 572
+    Top = 386
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end
+      item
+        Name = 'line'
+      end>
+  end
+  object OperatorSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'select * from operator')
+    Left = 648
+    Top = 352
+  end
+  object UpEnqSupplierSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Update Supplier_Enquiry'
+      'set Contact_No = :Contact_no, '
+      'Run_on_quantity = :Run_on_Quantity'
+      'where '
+      'Enquiry = :Enquiry and'
+      'Line = :Line and'
+      'Supplier = :Supplier and'
+      'Branch_no = :Branch')
+    Left = 704
+    Top = 352
+    ParamData = <
+      item
+        Name = 'Contact_no'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Run_on_Quantity'
+      end
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch'
+      end>
+  end
+  object UpEnqLineOptSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'insert into EnquiryLineProduct_TypeOChg (enquiry,'
+      '                                                      Line,'
+      
+        '                                                      Product_Ty' +
+        'pe,'
+      
+        '                                                      Optional_C' +
+        'harge)'
+      'values                                           (:enquiry,'
+      '                                                      :Line,'
+      '                                                      :Product,'
+      
+        '                                                      :Optional_' +
+        'Charge)')
+    Left = 640
+    Top = 408
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Product'
+      end
+      item
+        Name = 'Optional_Charge'
+      end>
+  end
+  object DelEnqOptSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from EnquiryLineProduct_TypeOChg where enquiry = :enquiry')
+    Left = 640
+    Top = 472
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end>
+  end
+  object OptionsSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'select * '
+      'from Product_TypeOChg'
+      'where Product_Type = :Product')
+    Left = 792
+    Top = 368
+    ParamData = <
+      item
+        Name = 'Product'
+      end>
+  end
+  object DelEnqPartSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete'
+      'from enquiryLinePart_Detail'
+      'where enquiry = :enquiry')
+    Left = 847
+    Top = 360
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end>
+  end
+  object qryDelEnqLineParts: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from enquirylinepart_detail '
+      'where enquiry = :enquiry '
+      'and line = :line '
+      'and part_no > :part_no')
+    Left = 847
+    Top = 396
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end
+      item
+        Name = 'line'
+      end
+      item
+        Name = 'part_no'
+      end>
+  end
+  object CapabilitySQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'select DISTINCT Product_TypeCapability.Capability,'
+      #9#9'Product_TypeCapability.Default_for_all,'
+      #9#9'Product_TypeCapability.Description,'
+      #9#9'Product_TypeCapability.Inactive,'
+      #9#9'Product_TypeCapability.Product_Type'
+      'FROM Product_TypeCapability '
+      #9#9'LEFT JOIN EnquiryLinPrdct_TypCpblty '
+      
+        #9#9#9'ON (Product_TypeCapability.Capability = EnquiryLinPrdct_TypCp' +
+        'blty.Capability) '
+      
+        #9#9#9#9'AND (Product_TypeCapability.Product_Type = EnquiryLinPrdct_T' +
+        'ypCpblty.Product_Type)'
+      'where (Product_TypeCapability.Product_Type = :Product) AND'
+      
+        '(((Product_TypeCapability.inactive = '#39'N'#39') or (Product_TypeCapabi' +
+        'lity.inactive IS NULL)) OR'
+      
+        '(EnquiryLinPrdct_TypCpblty.Enquiry = :Enquiry) AND (EnquiryLinPr' +
+        'dct_TypCpblty.Line = :Line))'
+      'order by Description')
+    Left = 760
+    Top = 96
+    ParamData = <
+      item
+        Name = 'Product'
+      end
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end>
+  end
+  object DelEnqLineQtySQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from Enquiry_LineQuantity where enquiry = :enquiry')
+    Left = 272
+    Top = 160
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end>
+  end
+  object DelEnqLineAddSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from EnquiryLineAdditionl_Dtls where enquiry = :enquiry')
+    Left = 336
+    Top = 160
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end>
+  end
+  object DelEnqCapSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from EnquiryLinPrdct_typCpblty where enquiry = :enquiry')
+    Left = 400
+    Top = 160
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end>
+  end
+  object DelEnqSuppQtySQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from Supplier_EnquiryQty where enquiry = :enquiry')
+    Left = 472
+    Top = 160
+    ParamData = <
+      item
+        Name = 'enquiry'
+      end>
+  end
+  object DelEnqOneSuppAddSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'delete from Supp_enq_Add_Charge'
+      'where Enquiry = :Enquiry and'
+      'Line = :Line and'
+      'Supplier = :Supplier and'
+      'Branch_no = :Branch_no')
+    Left = 560
+    Top = 184
+    ParamData = <
+      item
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Supplier'
+      end
+      item
+        Name = 'Branch_no'
+      end>
+  end
+  object QuestionSQL: TFDQuery
+    ConnectionName = 'pb'
+    SQL.Strings = (
+      'select *'
+      'from Product_TypeQuestion'
+      'where Product_Type = :Product'
+      'order by Sequence_Reference')
+    Left = 624
+    Top = 184
+    ParamData = <
+      item
+        Name = 'Product'
       end>
   end
   object DelEnqQtySQL: TFDQuery
@@ -3905,42 +3947,35 @@ object PBEnquiryFrm: TPBEnquiryFrm
         Name = 'Quantity'
       end>
   end
-  object qryProductType: TFDQuery
+  object CheckEnqQtySQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'select * from Product_Type'
-      'where Product_Type = :Product_Type')
-    Left = 432
-    Top = 112
+      'select * from Enquiry_LineQuantity'
+      'where Enquiry = :Enquiry and'
+      #9#9#9'Line = :Line and'
+      '        Quantity = :Quantity')
+    Left = 512
+    Top = 168
     ParamData = <
       item
-        Name = 'Product_Type'
+        Name = 'Enquiry'
+      end
+      item
+        Name = 'Line'
+      end
+      item
+        Name = 'Quantity'
       end>
   end
-  object DocOpenDialog: TOpenDialog
-    Options = [ofHideReadOnly, ofAllowMultiSelect, ofEnableSizing]
-    Left = 288
-    Top = 56
-  end
-  object oldCapabilitySQL: TFDQuery
-    ConnectionName = 'pb'
+  object DelEnqSuppAddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
-      'select * '
-      'from Product_TypeCapability'
-      'where Product_Type = :Product'
-      'order by Description')
-    Left = 696
-    Top = 96
+      'delete from Supp_Enq_add_Charge where Enquiry = :Enquiry')
+    Left = 528
+    Top = 184
     ParamData = <
       item
-        Name = 'Product'
+        Name = 'Enquiry'
       end>
-  end
-  object DropComboTarget1: TDropComboTarget
-    DragTypes = [dtCopy, dtLink]
-    OnDrop = DropComboTarget1Drop
-    Target = EnquiryLinePage
-    Left = 584
-    Top = 41
   end
 end

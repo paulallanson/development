@@ -3,42 +3,42 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
   Top = 70
   BorderStyle = bsDialog
   Caption = 'Contract Search'
-  ClientHeight = 374
-  ClientWidth = 282
+  ClientHeight = 402
+  ClientWidth = 323
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
-    282
-    374)
-  TextHeight = 13
+    323
+    402)
+  TextHeight = 17
   object Label9: TLabel
     Left = 11
-    Top = 2
-    Width = 54
-    Height = 13
+    Top = 8
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
     Left = 120
-    Top = 2
-    Width = 159
-    Height = 13
+    Top = 8
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -46,126 +46,128 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
   object Label13: TLabel
     Left = 11
     Top = 34
-    Width = 38
-    Height = 13
+    Width = 43
+    Height = 17
     Caption = 'Volume'
   end
   object lblDescription: TLabel
     Left = 11
-    Top = 106
-    Width = 59
-    Height = 13
+    Top = 115
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 11
-    Top = 82
-    Width = 32
-    Height = 13
+    Top = 88
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label1: TLabel
     Left = 11
-    Top = 227
-    Width = 72
-    Height = 13
+    Top = 251
+    Width = 83
+    Height = 17
     Caption = 'Ordered since'
   end
   object Label4: TLabel
     Left = 11
-    Top = 130
-    Width = 20
-    Height = 13
+    Top = 142
+    Width = 23
+    Height = 17
     Caption = 'Rep'
   end
   object Label5: TLabel
     Left = 11
-    Top = 178
-    Width = 91
-    Height = 13
+    Top = 196
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
   end
   object Label7: TLabel
     Left = 11
-    Top = 202
-    Width = 47
-    Height = 13
+    Top = 223
+    Width = 54
+    Height = 17
     Caption = 'Operator'
   end
   object Label10: TLabel
     Left = 11
-    Top = 251
-    Width = 62
-    Height = 13
+    Top = 275
+    Width = 71
+    Height = 17
     Caption = 'Required by'
   end
   object Label14: TLabel
     Left = 11
-    Top = 154
-    Width = 76
-    Height = 13
+    Top = 169
+    Width = 88
+    Height = 17
     Caption = 'Secondary Rep'
   end
   object Label3: TLabel
     Left = 11
-    Top = 58
-    Width = 89
-    Height = 13
+    Top = 61
+    Width = 101
+    Height = 17
     Caption = 'Minimum Volume'
   end
   object edtQuantity: TEdit
     Left = 120
     Top = 30
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
-    Left = 12
-    Top = 301
+    Left = 11
+    Top = 329
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive contracts'
     TabOrder = 13
+    ExplicitTop = 328
   end
   object SearchButton: TButton
-    Left = 12
-    Top = 333
+    Left = 11
+    Top = 361
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Start Search'
+    Caption = 'Search'
     Default = True
     TabOrder = 14
     OnClick = SearchButtonClick
+    ExplicitTop = 360
   end
   object edtDescription: TEdit
     Left = 120
-    Top = 102
+    Top = 111
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtStatus: TEdit
     Left = 120
-    Top = 78
+    Top = 84
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtDate: TEdit
     Left = 120
-    Top = 223
+    Top = 247
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 8
     OnExit = edtDateExit
   end
   object btnDate: TBitBtn
     Left = 216
-    Top = 221
+    Top = 245
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -187,56 +189,58 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
   end
   object edtRep: TEdit
     Left = 120
-    Top = 126
+    Top = 138
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object edtAccountMgr: TEdit
     Left = 120
-    Top = 174
+    Top = 192
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtOperator: TEdit
     Left = 120
-    Top = 198
+    Top = 219
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 7
   end
   object ClearButton: TButton
     Left = 198
-    Top = 334
+    Top = 362
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Clear Search'
+    Caption = 'Clear'
     TabOrder = 15
     OnClick = ClearButtonClick
+    ExplicitTop = 325
   end
   object chkbxShowWIP: TCheckBox
     Tag = 12
-    Left = 12
-    Top = 278
+    Left = 11
+    Top = 306
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY live contracts'
     TabOrder = 12
+    ExplicitTop = 305
   end
   object edtDateReq: TEdit
     Left = 120
-    Top = 247
+    Top = 274
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 10
     OnExit = edtDateReqExit
   end
   object btnDateReq: TBitBtn
     Left = 216
-    Top = 245
+    Top = 272
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -258,16 +262,16 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
   end
   object edtSubRep: TEdit
     Left = 120
-    Top = 150
+    Top = 165
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtMinimumQuantity: TEdit
     Left = 120
-    Top = 54
+    Top = 57
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
 end

@@ -7,35 +7,35 @@ object PBEnqRespQtyFrm: TPBEnqRespQtyFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 97
-    Height = 13
+    Width = 109
+    Height = 17
     Caption = 'Response Quantity'
   end
   object Label2: TLabel
     Left = 88
     Top = 48
-    Width = 24
-    Height = 13
+    Width = 28
+    Height = 17
     Caption = 'Price'
   end
   object Label3: TLabel
-    Left = 200
+    Left = 204
     Top = 48
-    Width = 22
-    Height = 13
+    Width = 23
+    Height = 17
     Caption = 'Unit'
   end
   object ResponseQtyMemo: TMemo
-    Left = 120
-    Top = 8
+    Left = 124
+    Top = 12
     Width = 73
     Height = 25
     Alignment = taRightJustify
@@ -46,8 +46,8 @@ object PBEnqRespQtyFrm: TPBEnqRespQtyFrm
     OnKeyPress = ResponseQtyMemoKeyPress
   end
   object PriceMemo: TMemo
-    Left = 120
-    Top = 40
+    Left = 124
+    Top = 44
     Width = 73
     Height = 25
     Alignment = taRightJustify
@@ -58,17 +58,17 @@ object PBEnqRespQtyFrm: TPBEnqRespQtyFrm
     OnKeyPress = PriceMemoKeyPress
   end
   object PUnitCombo: TComboBox
-    Left = 232
-    Top = 40
+    Left = 236
+    Top = 44
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 2
     OnClick = PUnitComboClick
   end
   object OKBtn: TBitBtn
     Left = 115
-    Top = 80
+    Top = 88
     Width = 75
     Height = 25
     Enabled = False
@@ -78,7 +78,7 @@ object PBEnqRespQtyFrm: TPBEnqRespQtyFrm
   end
   object CancelBtn: TBitBtn
     Left = 203
-    Top = 80
+    Top = 88
     Width = 75
     Height = 25
     Kind = bkCancel

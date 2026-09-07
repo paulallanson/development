@@ -3,21 +3,21 @@ object PBEnqNoteFrm: TPBEnqNoteFrm
   Top = 321
   BorderStyle = bsSingle
   Caption = 'Add Enquiry Note'
-  ClientHeight = 177
+  ClientHeight = 171
   ClientWidth = 180
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object RadioGroup1: TRadioGroup
     Left = 8
     Top = 8
-    Width = 161
-    Height = 121
+    Width = 164
+    Height = 97
     Caption = 'Audience'
     Items.Strings = (
       'Customer'
@@ -27,8 +27,8 @@ object PBEnqNoteFrm: TPBEnqNoteFrm
     TabOrder = 0
   end
   object BitBtn1: TBitBtn
-    Left = 8
-    Top = 144
+    Left = 9
+    Top = 128
     Width = 75
     Height = 25
     Kind = bkOK
@@ -36,8 +36,8 @@ object PBEnqNoteFrm: TPBEnqNoteFrm
     TabOrder = 1
   end
   object BitBtn2: TBitBtn
-    Left = 96
-    Top = 144
+    Left = 97
+    Top = 128
     Width = 75
     Height = 25
     Kind = bkCancel

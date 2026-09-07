@@ -8,12 +8,12 @@ object PBFileImportFrm: TPBFileImportFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlCustomer: TPanel
     Left = 0
     Top = 0
@@ -22,15 +22,16 @@ object PBFileImportFrm: TPBFileImportFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 372
     object lblStep1: TLabel
       Left = 8
-      Top = 8
-      Width = 129
-      Height = 13
+      Top = 9
+      Width = 156
+      Height = 18
       Caption = '1. Select the Import type.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -38,15 +39,15 @@ object PBFileImportFrm: TPBFileImportFrm
     object LblCustName: TLabel
       Left = 32
       Top = 32
-      Width = 18
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = '      '
     end
     object cmbImportType: TComboBox
       Left = 11
-      Top = 32
+      Top = 29
       Width = 193
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 0
       OnClick = cmbImportTypeClick
@@ -62,27 +63,27 @@ object PBFileImportFrm: TPBFileImportFrm
     Left = 0
     Top = 65
     Width = 378
-    Height = 56
+    Height = 64
     Align = alTop
     ParentBackground = False
     TabOrder = 1
     object lblStep3: TLabel
       Left = 8
       Top = 8
-      Width = 164
-      Height = 13
+      Width = 187
+      Height = 17
       Caption = '2. Select the file to be imported.'
     end
     object edtImportFileName: TEdit
       Left = 8
-      Top = 24
+      Top = 29
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object btnFindFile: TButton
       Left = 304
-      Top = 22
+      Top = 29
       Width = 59
       Height = 25
       Caption = 'Find File'
@@ -92,17 +93,19 @@ object PBFileImportFrm: TPBFileImportFrm
   end
   object pnlImport: TPanel
     Left = 0
-    Top = 121
+    Top = 129
     Width = 378
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 121
+    ExplicitWidth = 372
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 90
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = '3. Run the Import'
     end
     object ImportBtn: TButton
@@ -118,59 +121,62 @@ object PBFileImportFrm: TPBFileImportFrm
   end
   object pnlProgress: TPanel
     Left = 0
-    Top = 162
+    Top = 170
     Width = 378
-    Height = 55
+    Height = 62
     Align = alTop
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 50
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Progress: '
     end
     object lblProgress: TLabel
       Left = 257
       Top = 8
-      Width = 5
-      Height = 13
+      Width = 6
+      Height = 17
       Caption = 'x'
       Visible = False
     end
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'records read.'
       Visible = False
     end
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 108
-      Height = 13
+      Width = 121
+      Height = 17
       Caption = 'Reading Product file.'
     end
     object prgrsbrImport: TProgressBar
       Left = 8
-      Top = 24
+      Top = 30
       Width = 353
-      Height = 17
+      Height = 23
       TabOrder = 0
     end
   end
   object mmErrorRecords: TMemo
     Left = 0
-    Top = 217
+    Top = 232
     Width = 378
-    Height = 188
+    Height = 173
     Align = alClient
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 4
+    ExplicitTop = 217
+    ExplicitWidth = 372
+    ExplicitHeight = 179
   end
   object pnlCancel: TPanel
     Left = 0
@@ -180,6 +186,8 @@ object PBFileImportFrm: TPBFileImportFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 396
+    ExplicitWidth = 372
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8
