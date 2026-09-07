@@ -3,12 +3,12 @@ object PBLUCustFrm: TPBLUCustFrm
   Top = 150
   BorderStyle = bsDialog
   Caption = 'Look-Up A Customer'
-  ClientHeight = 440
-  ClientWidth = 469
+  ClientHeight = 473
+  ClientWidth = 479
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,12 +16,12 @@ object PBLUCustFrm: TPBLUCustFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 286
+    Left = 280
     Top = 272
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -36,23 +36,23 @@ object PBLUCustFrm: TPBLUCustFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 14
-    Top = 291
+    Top = 299
     Width = 331
-    Height = 62
+    Height = 74
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object edtName: TEdit
       Left = 8
-      Top = 16
+      Top = 20
       Width = 281
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNameChange
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
-      Top = 42
+      Top = 51
       Width = 209
       Height = 17
       Caption = 'Only show active customers'
@@ -64,7 +64,7 @@ object PBLUCustFrm: TPBLUCustFrm
   end
   object SelectBitBtn: TBitBtn
     Left = 369
-    Top = 346
+    Top = 367
     Width = 75
     Height = 25
     Caption = '&Select'
@@ -145,7 +145,7 @@ object PBLUCustFrm: TPBLUCustFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 369
-    Top = 407
+    Top = 428
     Width = 75
     Height = 25
     Caption = 'C&lose'
@@ -180,13 +180,13 @@ object PBLUCustFrm: TPBLUCustFrm
     Left = 360
     Top = 8
     Width = 97
-    Height = 49
+    Height = 53
     Caption = 'Go To'
     ParentBackground = False
     TabOrder = 5
     object BranchesBitBtn: TBitBtn
       Left = 7
-      Top = 16
+      Top = 19
       Width = 83
       Height = 25
       Caption = '&Branches'
@@ -212,13 +212,13 @@ object PBLUCustFrm: TPBLUCustFrm
     Left = 360
     Top = 112
     Width = 97
-    Height = 105
+    Height = 109
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 6
     object AddBitBtn: TBitBtn
       Left = 11
-      Top = 16
+      Top = 21
       Width = 75
       Height = 25
       Caption = '&Add'
@@ -241,7 +241,7 @@ object PBLUCustFrm: TPBLUCustFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 11
-      Top = 44
+      Top = 49
       Width = 75
       Height = 25
       Caption = '&Change'
@@ -264,7 +264,7 @@ object PBLUCustFrm: TPBLUCustFrm
     end
     object DelBitBtn: TBitBtn
       Left = 11
-      Top = 72
+      Top = 77
       Width = 75
       Height = 25
       Caption = '&Delete'
@@ -288,7 +288,7 @@ object PBLUCustFrm: TPBLUCustFrm
   end
   object DispPanel: TPanel
     Left = 14
-    Top = 358
+    Top = 379
     Width = 331
     Height = 75
     BevelOuter = bvLowered
@@ -338,29 +338,29 @@ object PBLUCustFrm: TPBLUCustFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 32
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 20
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'Fax:'
     end
     object RepLabel: TLabel
       Left = 28
       Top = 50
-      Width = 23
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'Rep:'
     end
     object DBRepText: TDBText
@@ -385,7 +385,7 @@ object PBLUCustFrm: TPBLUCustFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -393,7 +393,7 @@ object PBLUCustFrm: TPBLUCustFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = dbgDetailsColEnter
@@ -417,7 +417,7 @@ object PBLUCustFrm: TPBLUCustFrm
   end
   object SelBranchBitBtn: TBitBtn
     Left = 369
-    Top = 374
+    Top = 395
     Width = 75
     Height = 25
     Caption = 'B&ranch'

@@ -7,87 +7,87 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CustLabel: TLabel
     Left = 85
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 275
-    Top = 316
-    Width = 59
-    Height = 13
+    Left = 269
+    Top = 323
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object BranchLabel: TLabel
     Left = 85
     Top = 22
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 13
     Top = 22
-    Width = 38
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 13
     Top = 6
-    Width = 52
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer:'
   end
   object Label3: TLabel
     Left = 13
     Top = 38
-    Width = 43
-    Height = 13
+    Width = 47
+    Height = 17
     Caption = 'Contact:'
   end
   object ContactLabel: TLabel
     Left = 85
     Top = 38
-    Width = 40
-    Height = 13
+    Width = 44
+    Height = 17
     Caption = 'Contact'
   end
   object LblPhone: TLabel
     Left = 13
     Top = 54
-    Width = 36
-    Height = 13
+    Width = 39
+    Height = 17
     Caption = 'Phone:'
   end
   object LblTelNo: TLabel
     Left = 85
     Top = 54
-    Width = 33
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Phone'
   end
   object DetsDBGrid: TDBGrid
     Left = 13
-    Top = 72
+    Top = 79
     Width = 320
     Height = 241
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -95,7 +95,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -118,7 +118,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   end
   object SelectBitBtn: TBitBtn
     Left = 345
-    Top = 449
+    Top = 467
     Width = 75
     Height = 26
     Caption = 'Select'
@@ -129,7 +129,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 345
-    Top = 477
+    Top = 501
     Width = 75
     Height = 25
     Kind = bkClose
@@ -138,15 +138,15 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 341
-    Top = 168
+    Top = 175
     Width = 87
-    Height = 129
+    Height = 145
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 3
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 23
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -169,7 +169,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -192,7 +192,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 79
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -215,7 +215,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
     end
     object AppBitBtn: TBitBtn
       Left = 6
-      Top = 100
+      Top = 107
       Width = 75
       Height = 25
       Hint = 'Set appointment'
@@ -242,9 +242,9 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
   end
   object DispPanel: TPanel
     Left = 13
-    Top = 334
+    Top = 351
     Width = 321
-    Height = 171
+    Height = 175
     BevelOuter = bvLowered
     BevelWidth = 2
     BorderStyle = bsSingle
@@ -254,7 +254,7 @@ object PBLUCContaEventsFrm: TPBLUCContaEventsFrm
       Left = 0
       Top = 0
       Width = 321
-      Height = 169
+      Height = 171
       ReadOnly = True
       ScrollBars = ssVertical
       TabOrder = 0

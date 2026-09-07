@@ -8,31 +8,31 @@ object PBEmailToOneFrm: TPBEmailToOneFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object FaxDescrLabel: TLabel
     Left = 64
     Top = 10
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Emailing To:'
   end
   object Label1: TLabel
     Left = 8
     Top = 10
-    Width = 47
-    Height = 13
+    Width = 52
+    Height = 17
     Caption = 'Emailing:'
   end
   object Label2: TLabel
     Left = 8
     Top = 42
-    Width = 44
-    Height = 13
+    Width = 51
+    Height = 17
     Caption = 'Address:'
   end
   object Label3: TLabel
@@ -48,7 +48,7 @@ object PBEmailToOneFrm: TPBEmailToOneFrm
     Left = 93
     Top = 40
     Width = 369
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = FaxNoEditChange
   end
@@ -75,7 +75,7 @@ object PBEmailToOneFrm: TPBEmailToOneFrm
     Left = 93
     Top = 80
     Width = 145
-    Height = 21
+    Height = 25
     KeyField = 'ExportFilter'
     ListField = 'Description'
     ListSource = ExFilterSRC

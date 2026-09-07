@@ -3,14 +3,14 @@ object PBLUCContaFrm: TPBLUCContaFrm
   Top = 162
   BorderStyle = bsDialog
   Caption = 'Look-Up Customer/Branch Contacts'
-  ClientHeight = 391
+  ClientHeight = 425
   ClientWidth = 453
   Color = clBtnFace
   Constraints.MinHeight = 408
   Constraints.MinWidth = 430
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,56 +18,57 @@ object PBLUCContaFrm: TPBLUCContaFrm
   OnCreate = FormCreate
   DesignSize = (
     453
-    391)
-  TextHeight = 13
+    425)
+  TextHeight = 17
   object CustLabel: TLabel
     Left = 85
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 282
-    Top = 236
-    Width = 59
-    Height = 13
+    Left = 270
+    Top = 260
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'CountLabel'
+    ExplicitTop = 258
   end
   object BranchLabel: TLabel
     Left = 85
-    Top = 22
-    Width = 50
-    Height = 13
+    Top = 25
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 13
-    Top = 22
-    Width = 38
-    Height = 13
+    Top = 25
+    Width = 42
+    Height = 17
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 13
     Top = 6
-    Width = 52
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer:'
   end
   object DetsDBGrid: TDBGrid
     Left = 13
-    Top = 40
-    Width = 327
-    Height = 187
+    Top = 49
+    Width = 321
+    Height = 210
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -75,7 +76,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -92,29 +93,31 @@ object PBLUCContaFrm: TPBLUCContaFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 252
-    Width = 336
-    Height = 65
+    Top = 279
+    Width = 330
+    Height = 71
     Anchors = [akLeft, akRight, akBottom]
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 277
     DesignSize = (
-      336
-      65)
+      330
+      71)
     object NameEdit: TEdit
       Left = 8
-      Top = 16
-      Width = 320
-      Height = 21
+      Top = 22
+      Width = 314
+      Height = 25
       Anchors = [akLeft, akRight, akBottom]
       TabOrder = 0
       OnChange = NameEditChange
+      ExplicitTop = 16
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 42
-      Width = 217
+      Top = 51
+      Width = 305
       Height = 17
       Caption = 'Only show active customer contacts'
       Checked = True
@@ -124,8 +127,8 @@ object PBLUCContaFrm: TPBLUCContaFrm
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 358
-    Top = 323
+    Left = 352
+    Top = 357
     Width = 75
     Height = 26
     Anchors = [akRight, akBottom]
@@ -134,29 +137,33 @@ object PBLUCContaFrm: TPBLUCContaFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
+    ExplicitLeft = 346
+    ExplicitTop = 314
   end
   object CloseBitBtn: TBitBtn
-    Left = 358
-    Top = 356
+    Left = 352
+    Top = 390
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 3
+    ExplicitLeft = 346
+    ExplicitTop = 347
   end
   object FuncGrpBox: TGroupBox
-    Left = 352
+    Left = 346
     Top = 112
     Width = 87
-    Height = 105
+    Height = 113
     Anchors = [akTop, akRight]
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 23
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -179,7 +186,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -202,7 +209,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 79
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -226,8 +233,8 @@ object PBLUCContaFrm: TPBLUCContaFrm
   end
   object DispPanel: TPanel
     Left = 8
-    Top = 322
-    Width = 337
+    Top = 361
+    Width = 331
     Height = 59
     Anchors = [akLeft, akRight, akBottom]
     BevelOuter = bvLowered
@@ -235,6 +242,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     BorderStyle = bsSingle
     ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 359
     object DBContactText: TDBText
       Left = 67
       Top = 3
@@ -280,37 +288,37 @@ object PBLUCContaFrm: TPBLUCContaFrm
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 32
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 4
       Top = 18
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 4
       Top = 34
-      Width = 39
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Mobile:'
     end
   end
   object GoToGrpBox: TGroupBox
-    Left = 347
+    Left = 341
     Top = 8
     Width = 97
-    Height = 49
+    Height = 54
     Anchors = [akTop, akRight]
     Caption = 'Go To'
     ParentBackground = False
     TabOrder = 6
     object EventsBitBtn: TBitBtn
       Left = 7
-      Top = 16
+      Top = 21
       Width = 83
       Height = 25
       Caption = '&Events'
@@ -378,8 +386,8 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 205
-    Top = 152
+    Left = 232
+    Top = 142
   end
   object NullSRC: TDataSource
     Left = 224

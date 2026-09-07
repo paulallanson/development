@@ -3,69 +3,68 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   Top = 1
   BorderStyle = bsDialog
   Caption = 'Create Purchase Order From Enquiry'
-  ClientHeight = 565
-  ClientWidth = 657
+  ClientHeight = 606
+  ClientWidth = 682
   Color = clBtnFace
   Constraints.MinHeight = 581
   Constraints.MinWidth = 634
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlCustomer: TPanel
     Left = 0
     Top = 0
-    Width = 657
-    Height = 40
+    Width = 682
+    Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 1
-    ExplicitWidth = 738
+    ExplicitWidth = 657
     object EnqLabel: TLabel
       Left = 8
-      Top = 4
-      Width = 47
-      Height = 13
+      Top = 7
+      Width = 53
+      Height = 17
       Caption = 'EnqLabel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object CustomerLabel: TLabel
       Left = 8
-      Top = 22
-      Width = 76
-      Height = 13
+      Top = 30
+      Width = 87
+      Height = 17
       Caption = 'CustomerLabel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label11: TLabel
       Left = 384
-      Top = 17
-      Width = 108
-      Height = 13
+      Top = 30
+      Width = 124
+      Height = 17
       Caption = 'Expected Life (weeks)'
       Visible = False
     end
     object ExpectedLifeSpinEdit: TSpinEdit
-      Left = 544
-      Top = 8
+      Left = 538
+      Top = 24
       Width = 57
-      Height = 22
+      Height = 27
       MaxValue = 52
       MinValue = 0
       TabOrder = 0
@@ -75,24 +74,23 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlOrderQty: TPanel
     Left = 0
-    Top = 40
-    Width = 657
+    Top = 57
+    Width = 682
     Height = 40
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 63
-    ExplicitWidth = 738
+    ExplicitTop = 40
+    ExplicitWidth = 651
     object Label4: TLabel
       Left = 8
       Top = 13
-      Width = 77
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'Order Quantity'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -101,7 +99,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Left = 104
       Top = 9
       Width = 97
-      Height = 21
+      Height = 25
       KeyField = 'Quantity'
       ListField = 'Quantity'
       ListSource = PBAutoPODM.QtysSRC
@@ -111,17 +109,17 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlFunctions: TPanel
     Left = 0
-    Top = 527
-    Width = 657
+    Top = 568
+    Width = 682
     Height = 38
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 504
-    ExplicitWidth = 738
+    ExplicitTop = 518
+    ExplicitWidth = 651
     object OKBitBtn: TBitBtn
-      Left = 472
-      Top = 6
+      Left = 479
+      Top = 9
       Width = 75
       Height = 25
       Kind = bkOK
@@ -130,8 +128,8 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
-      Left = 560
-      Top = 6
+      Left = 567
+      Top = 9
       Width = 75
       Height = 25
       Kind = bkCancel
@@ -141,39 +139,40 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlRunOnQty: TPanel
     Left = 0
-    Top = 80
-    Width = 657
+    Top = 97
+    Width = 682
     Height = 40
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 622
+    ExplicitTop = 80
+    ExplicitWidth = 651
     object Label3: TLabel
       Left = 8
-      Top = 12
-      Width = 77
-      Height = 13
+      Top = 10
+      Width = 87
+      Height = 17
       Caption = 'Order Quantity'
     end
     object Label12: TLabel
-      Left = 424
-      Top = 12
-      Width = 37
-      Height = 13
+      Left = 452
+      Top = 10
+      Width = 39
+      Height = 17
       Caption = 'RunOn'
     end
     object Label13: TLabel
-      Left = 216
-      Top = 12
-      Width = 86
-      Height = 13
+      Left = 229
+      Top = 10
+      Width = 96
+      Height = 17
       Caption = 'Quoted Quantity'
     end
     object spedtQty: TSpinEdit
       Left = 104
-      Top = 7
+      Top = 5
       Width = 97
-      Height = 22
+      Height = 27
       MaxValue = 0
       MinValue = 0
       TabOrder = 0
@@ -181,19 +180,19 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnChange = spedtQtyChange
     end
     object edtQty: TEdit
-      Left = 312
-      Top = 8
+      Left = 340
+      Top = 6
       Width = 97
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 1
       Text = 'edtQty'
     end
     object edtRunOnQty: TEdit
-      Left = 472
-      Top = 8
+      Left = 500
+      Top = 6
       Width = 97
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 2
       Text = 'Edit1'
@@ -201,23 +200,24 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlOrder: TPanel
     Left = 0
-    Top = 233
-    Width = 657
-    Height = 158
+    Top = 250
+    Width = 682
+    Height = 173
     Align = alClient
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 738
-    ExplicitHeight = 160
+    ExplicitTop = 233
+    ExplicitWidth = 651
+    ExplicitHeight = 149
     object Label1: TLabel
-      Left = 8
-      Top = 61
-      Width = 74
-      Height = 13
+      Left = 6
+      Top = 69
+      Width = 86
+      Height = 17
       Caption = 'Cust Order No'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -225,45 +225,45 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object DatePointLabel: TLabel
       Left = 8
       Top = 20
-      Width = 57
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Order Date'
     end
     object Label10: TLabel
-      Left = 433
+      Left = 463
       Top = 12
       Width = 85
-      Height = 52
+      Height = 37
       Caption = 'Date required from Supplier'
       WordWrap = True
     end
     object Label2: TLabel
-      Left = 9
-      Top = 92
-      Width = 70
-      Height = 13
+      Left = 7
+      Top = 100
+      Width = 80
+      Height = 17
       Caption = 'Supplier Desc'
     end
     object Label5: TLabel
-      Left = 9
-      Top = 124
-      Width = 76
-      Height = 13
+      Left = 7
+      Top = 132
+      Width = 88
+      Height = 17
       Caption = 'Customer Desc'
     end
     object Label14: TLabel
-      Left = 225
+      Left = 239
       Top = 12
-      Width = 74
-      Height = 26
+      Width = 83
+      Height = 39
       Caption = 'Date required by Customer'
       WordWrap = True
     end
     object CustOrdEdit: TEdit
-      Left = 104
-      Top = 57
+      Left = 102
+      Top = 65
       Width = 193
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 5
       OnChange = CustOrdEditChange
@@ -272,14 +272,14 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Left = 104
       Top = 16
       Width = 81
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = DateEditExit
     end
     object ProofsGrpBox: TGroupBox
-      Left = 392
-      Top = 62
+      Left = 424
+      Top = 78
       Width = 243
       Height = 78
       ParentBackground = False
@@ -287,22 +287,22 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       object ProofByLabel: TLabel
         Left = 36
         Top = 25
-        Width = 11
-        Height = 13
+        Width = 13
+        Height = 17
         Caption = 'By'
       end
       object ProofStatLabel: TLabel
         Left = 12
         Top = 52
-        Width = 32
-        Height = 13
+        Width = 35
+        Height = 17
         Caption = 'Status'
       end
       object ProofsDateEdit: TEdit
         Left = 60
         Top = 21
         Width = 81
-        Height = 21
+        Height = 25
         TabStop = False
         MaxLength = 10
         TabOrder = 0
@@ -312,7 +312,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
         Left = 61
         Top = 48
         Width = 172
-        Height = 21
+        Height = 25
         KeyField = 'Proof_Status'
         ListField = 'Description'
         ListSource = PBAutoPODM.ProofStatSRC
@@ -343,38 +343,38 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       end
     end
     object ReqByDateEdit: TEdit
-      Left = 524
+      Left = 554
       Top = 16
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       MaxLength = 10
       TabOrder = 3
       OnExit = ReqByDateEditExit
     end
     object SuppDescEdit: TEdit
-      Left = 104
-      Top = 88
+      Left = 102
+      Top = 96
       Width = 273
-      Height = 21
+      Height = 25
       MaxLength = 20
       TabOrder = 6
       OnChange = SuppDescEditChange
     end
     object CustDescEdit: TEdit
-      Left = 104
-      Top = 120
+      Left = 102
+      Top = 128
       Width = 273
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 7
       OnChange = CustDescEditChange
     end
     object CustReqDateEdit: TEdit
-      Left = 304
+      Left = 328
       Top = 16
       Width = 81
-      Height = 21
+      Height = 25
       TabStop = False
       MaxLength = 10
       TabOrder = 1
@@ -405,7 +405,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnClick = SelDateBtnClick
     end
     object ReqByDateLUBtn: TBitBtn
-      Left = 612
+      Left = 642
       Top = 16
       Width = 25
       Height = 25
@@ -427,7 +427,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnClick = ReqByDateLUBtnClick
     end
     object CustReqDateBtn: TBitBtn
-      Left = 392
+      Left = 416
       Top = 16
       Width = 25
       Height = 25
@@ -449,9 +449,9 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       OnClick = CustReqDateBtnClick
     end
     object ProofsReqChkBox: TCheckBox
-      Left = 400
-      Top = 55
-      Width = 102
+      Left = 436
+      Top = 68
+      Width = 117
       Height = 17
       Caption = 'Proofs required'
       TabOrder = 10
@@ -460,19 +460,18 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlDelivery: TPanel
     Left = 0
-    Top = 391
-    Width = 657
-    Height = 136
+    Top = 423
+    Width = 682
+    Height = 145
     Align = alBottom
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 369
-    ExplicitWidth = 622
+    ExplicitTop = 424
     object AddrTypeRadGrp: TRadioGroup
       Left = 7
       Top = 6
       Width = 105
-      Height = 123
+      Height = 131
       Caption = 'Deliver To'
       Items.Strings = (
         'Ad Hoc'
@@ -488,7 +487,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Left = 118
       Top = 6
       Width = 259
-      Height = 123
+      Height = 131
       Caption = 'Delivery Address'
       ParentBackground = False
       TabOrder = 1
@@ -496,12 +495,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
         Left = 8
         Top = 16
         Width = 249
-        Height = 105
+        Height = 112
         BorderStyle = bsNone
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         Lines.Strings = (
@@ -550,22 +549,23 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlSupplier: TPanel
     Left = 0
-    Top = 120
-    Width = 657
+    Top = 137
+    Width = 682
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 6
-    ExplicitWidth = 622
+    ExplicitTop = 120
+    ExplicitWidth = 651
     object SuppLabel: TLabel
       Left = 8
       Top = 6
-      Width = 88
-      Height = 13
+      Width = 99
+      Height = 17
       Caption = 'Supplier/Branch: '
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -573,12 +573,12 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object Label7: TLabel
       Left = 8
       Top = 30
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -587,7 +587,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Left = 104
       Top = 26
       Width = 257
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = PBAutoPODM.ContactSRC
@@ -596,14 +596,14 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     end
     object SelContactBtn: TButton
       Left = 368
-      Top = 25
+      Top = 26
       Width = 25
       Height = 25
       Caption = '...'
       Enabled = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -613,22 +613,23 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   end
   object pnlPrices: TPanel
     Left = 0
-    Top = 177
-    Width = 657
+    Top = 194
+    Width = 682
     Height = 56
     Align = alTop
     ParentBackground = False
     TabOrder = 7
-    ExplicitWidth = 622
+    ExplicitTop = 177
+    ExplicitWidth = 651
     object Label6: TLabel
       Left = 8
-      Top = 13
-      Width = 57
-      Height = 13
+      Top = 12
+      Width = 67
+      Height = 17
       Caption = 'Order Price'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -636,20 +637,20 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object PriceLbl: TLabel
       Left = 104
       Top = 37
-      Width = 39
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'PriceLbl'
       Visible = False
     end
     object Label8: TLabel
       Left = 208
-      Top = 13
-      Width = 62
-      Height = 13
+      Top = 12
+      Width = 70
+      Height = 17
       Caption = 'Selling Price'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -657,20 +658,20 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object SellLbl: TLabel
       Left = 288
       Top = 37
-      Width = 33
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'SellLbl'
       Visible = False
     end
     object Label9: TLabel
       Left = 408
-      Top = 13
-      Width = 44
-      Height = 13
+      Top = 12
+      Width = 51
+      Height = 17
       Caption = 'List Price'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -679,8 +680,8 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object ListLbl: TLabel
       Left = 472
       Top = 37
-      Width = 30
-      Height = 13
+      Width = 33
+      Height = 17
       Caption = 'Listlbl'
       Visible = False
     end

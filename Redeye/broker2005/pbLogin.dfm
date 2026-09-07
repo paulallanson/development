@@ -5,72 +5,72 @@ object frmpbLogin: TfrmpbLogin
   BorderStyle = bsDialog
   Caption = 'Logon'
   ClientHeight = 183
-  ClientWidth = 449
+  ClientWidth = 458
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 32
     Top = 84
-    Width = 65
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'Logon Name'
   end
   object Label2: TLabel
     Left = 32
     Top = 116
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Password'
   end
   object lblLogInto: TLabel
     Left = 32
     Top = 148
-    Width = 48
-    Height = 13
+    Width = 55
+    Height = 17
     Caption = 'Database'
   end
   object Label3: TLabel
     Left = 32
     Top = 16
-    Width = 281
-    Height = 13
+    Width = 318
+    Height = 17
     Caption = 'Welcome to the Print Management Information System'
   end
   object Label4: TLabel
     Left = 32
     Top = 48
-    Width = 229
-    Height = 13
+    Width = 262
+    Height = 17
     Caption = 'Please enter your logon name and password'
   end
   object UserEdit: TEdit
-    Left = 104
-    Top = 80
+    Left = 115
+    Top = 81
     Width = 209
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = UserEditChange
   end
   object PasswordEdit: TEdit
-    Left = 104
+    Left = 115
     Top = 112
     Width = 209
-    Height = 21
+    Height = 25
     PasswordChar = '*'
     TabOrder = 1
     OnChange = PasswordEditChange
   end
   object OKBitBtn: TBitBtn
-    Left = 344
+    Left = 365
     Top = 16
     Width = 75
     Height = 25
@@ -82,7 +82,7 @@ object frmpbLogin: TfrmpbLogin
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 344
+    Left = 365
     Top = 56
     Width = 75
     Height = 25
@@ -94,10 +94,10 @@ object frmpbLogin: TfrmpbLogin
     OnClick = CancelBitBtnClick
   end
   object cmbAliasList: TComboBox
-    Left = 104
+    Left = 115
     Top = 144
     Width = 161
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 2
   end
@@ -106,7 +106,7 @@ object frmpbLogin: TfrmpbLogin
     SQL.Strings = (
       'Select * From Operator'
       'Where Login_Name = :Login_Name')
-    Left = 276
+    Left = 273
     ParamData = <
       item
         Name = 'Login_Name'

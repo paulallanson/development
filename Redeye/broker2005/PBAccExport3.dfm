@@ -2,12 +2,12 @@ object PBAccExport3Frm: TPBAccExport3Frm
   Left = 145
   Top = 140
   Caption = 'Export & Import Wizard'
-  ClientHeight = 280
-  ClientWidth = 331
+  ClientHeight = 300
+  ClientWidth = 358
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,40 +15,40 @@ object PBAccExport3Frm: TPBAccExport3Frm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object AliasLbl: TLabel
     Left = 8
-    Top = 72
-    Width = 99
-    Height = 13
+    Top = 70
+    Width = 113
+    Height = 15
     Caption = 'Alias of Datasource'
   end
   object ExportLbl: TLabel
     Left = 8
-    Top = 128
-    Width = 120
-    Height = 13
+    Top = 126
+    Width = 139
+    Height = 17
     Caption = 'Export/Import Directory'
   end
   object Label2: TLabel
     Left = 8
-    Top = 16
-    Width = 97
-    Height = 13
+    Top = 14
+    Width = 109
+    Height = 17
     Caption = 'Accounting System'
   end
   object fileNameLbl: TLabel
     Left = 8
-    Top = 72
-    Width = 50
-    Height = 13
+    Top = 70
+    Width = 58
+    Height = 15
     Caption = 'File Name'
   end
   object lblStatus: TLabel
     Left = 8
-    Top = 192
-    Width = 55
-    Height = 13
+    Top = 189
+    Width = 63
+    Height = 17
     Caption = 'Processing'
     Visible = False
   end
@@ -56,7 +56,7 @@ object PBAccExport3Frm: TPBAccExport3Frm
     Left = 8
     Top = 88
     Width = 177
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 7
     OnChange = cbsourceChange
@@ -65,14 +65,14 @@ object PBAccExport3Frm: TPBAccExport3Frm
     Left = 8
     Top = 144
     Width = 249
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 0
     Text = 'ExportPathEdit'
     OnKeyUp = ExportPathEditKeyUp
   end
   object BitBtn1: TBitBtn
-    Left = 96
+    Left = 102
     Top = 256
     Width = 75
     Height = 25
@@ -81,7 +81,7 @@ object PBAccExport3Frm: TPBAccExport3Frm
     OnClick = BitBtn1Click
   end
   object FinishBtn: TBitBtn
-    Left = 176
+    Left = 182
     Top = 256
     Width = 75
     Height = 25
@@ -90,7 +90,7 @@ object PBAccExport3Frm: TPBAccExport3Frm
     OnClick = FinishBtnClick
   end
   object BitBtn3: TBitBtn
-    Left = 256
+    Left = 262
     Top = 256
     Width = 75
     Height = 25
@@ -102,7 +102,7 @@ object PBAccExport3Frm: TPBAccExport3Frm
     Left = 8
     Top = 32
     Width = 329
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 4
     Text = 'AccSystemEdit'
@@ -111,7 +111,7 @@ object PBAccExport3Frm: TPBAccExport3Frm
     Left = 8
     Top = 88
     Width = 137
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 5
     Text = 'FileNameEdit'
@@ -127,10 +127,10 @@ object PBAccExport3Frm: TPBAccExport3Frm
     OnClick = BrowseBtnClick
   end
   object Progress: TProgressBar
-    Left = 7
-    Top = 209
-    Width = 330
-    Height = 18
+    Left = 8
+    Top = 212
+    Width = 331
+    Height = 22
     TabOrder = 8
     Visible = False
   end

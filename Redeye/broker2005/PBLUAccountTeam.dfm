@@ -8,18 +8,18 @@ object PBLUAccountTeamfrm: TPBLUAccountTeamfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 232
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -56,23 +56,23 @@ object PBLUAccountTeamfrm: TPBLUAccountTeamfrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 244
+    Top = 233
     Width = 321
-    Height = 64
+    Height = 74
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 22
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 42
+      Top = 51
       Width = 209
       Height = 17
       Caption = 'Only show active account teams'

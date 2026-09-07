@@ -8,13 +8,13 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 309
     Top = 0
@@ -24,6 +24,7 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = 315
     DesignSize = (
       105
       306)
@@ -36,6 +37,7 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 123
       object AddBitBtn: TBitBtn
         Left = 6
         Top = 16
@@ -181,6 +183,7 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = SelectBitBtnClick
+      ExplicitTop = 239
     end
     object CloseBitBtn: TBitBtn
       Left = 16
@@ -191,6 +194,7 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitTop = 267
     end
   end
   object Panel2: TPanel
@@ -202,6 +206,8 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 303
+    ExplicitHeight = 297
     object Panel3: TPanel
       Left = 0
       Top = 0
@@ -211,6 +217,8 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 303
+      ExplicitHeight = 256
       object dbgrdDets: TDBGrid
         Left = 0
         Top = 0
@@ -221,7 +229,7 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -229,7 +237,7 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
         TabOrder = 0
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -13
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnCellClick = dbgrdDetsCellClick
@@ -269,14 +277,16 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 256
+      ExplicitWidth = 303
       DesignSize = (
         309
         41)
       object CountLabel: TLabel
-        Left = 233
+        Left = 227
         Top = 18
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'CountLabel'

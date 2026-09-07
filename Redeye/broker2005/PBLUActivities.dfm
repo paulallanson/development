@@ -2,12 +2,12 @@ object frmPBLUActivities: TfrmPBLUActivities
   Left = 269
   Top = 66
   Caption = 'Activities'
-  ClientHeight = 414
-  ClientWidth = 862
+  ClientHeight = 405
+  ClientWidth = 856
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmPBLUActivities: TfrmPBLUActivities
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 862
+    Width = 856
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -62,8 +62,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 395
-    Width = 862
+    Top = 386
+    Width = 856
     Height = 19
     Panels = <
       item
@@ -78,8 +78,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   end
   object Panel1: TPanel
     Left = 0
-    Top = 354
-    Width = 862
+    Top = 345
+    Width = 856
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -87,22 +87,22 @@ object frmPBLUActivities: TfrmPBLUActivities
     object Label60: TLabel
       Left = 8
       Top = 13
-      Width = 86
-      Height = 13
+      Width = 99
+      Height = 17
       Caption = 'Customer Search'
     end
     object Panel2: TPanel
-      Left = 588
+      Left = 672
       Top = 1
-      Width = 273
+      Width = 183
       Height = 39
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
       object btnClose: TButton
-        Left = 192
-        Top = 7
+        Left = 96
+        Top = 8
         Width = 75
         Height = 25
         Caption = 'Clos&e'
@@ -112,7 +112,7 @@ object frmPBLUActivities: TfrmPBLUActivities
     end
     object btnSearch: TBitBtn
       Left = 304
-      Top = 7
+      Top = 9
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -120,17 +120,17 @@ object frmPBLUActivities: TfrmPBLUActivities
       OnClick = btnSearchClick
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 115
       Top = 9
-      Width = 177
-      Height = 21
+      Width = 161
+      Height = 25
       TabOrder = 2
       OnChange = edtSearchChange
     end
     object chkbxShowAll: TCheckBox
       Left = 408
-      Top = 11
-      Width = 161
+      Top = 13
+      Width = 217
       Height = 17
       Caption = 'Show all operator activities'
       TabOrder = 3
@@ -140,22 +140,22 @@ object frmPBLUActivities: TfrmPBLUActivities
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 862
+    Width = 856
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 856
+        Width = 850
       end>
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
-      Width = 847
+      Width = 841
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 60
+      ButtonHeight = 40
+      ButtonWidth = 67
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -168,7 +168,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 60
+        Left = 67
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -176,7 +176,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnChangeClick
       end
       object btnFollowUp: TToolButton
-        Left = 120
+        Left = 134
         Top = 0
         Caption = 'Follow Up'
         Enabled = False
@@ -184,7 +184,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnFollowUpClick
       end
       object btnDelete: TToolButton
-        Left = 180
+        Left = 201
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -192,7 +192,7 @@ object frmPBLUActivities: TfrmPBLUActivities
         OnClick = btnDeleteClick
       end
       object btnReports: TToolButton
-        Left = 240
+        Left = 268
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -203,14 +203,14 @@ object frmPBLUActivities: TfrmPBLUActivities
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 862
-    Height = 279
+    Width = 856
+    Height = 270
     Align = alClient
     DataSource = dtmdlActivity.dtsActivityGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
@@ -218,7 +218,7 @@ object frmPBLUActivities: TfrmPBLUActivities
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell

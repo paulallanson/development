@@ -2,17 +2,17 @@ object PBAuditControlFrm: TPBAuditControlFrm
   Left = 147
   Top = 135
   Caption = 'Audit Control'
-  ClientHeight = 131
+  ClientHeight = 153
   ClientWidth = 276
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object ProgMoveCheckBox: TCheckBox
     Left = 8
     Top = 16
@@ -23,7 +23,7 @@ object PBAuditControlFrm: TPBAuditControlFrm
   end
   object FieldChangeCheckBox: TCheckBox
     Left = 8
-    Top = 64
+    Top = 88
     Width = 113
     Height = 17
     Caption = 'Field Changes'
@@ -31,7 +31,7 @@ object PBAuditControlFrm: TPBAuditControlFrm
   end
   object UpdatesCheckBox: TCheckBox
     Left = 8
-    Top = 32
+    Top = 40
     Width = 97
     Height = 17
     Caption = 'Updates'
@@ -39,15 +39,15 @@ object PBAuditControlFrm: TPBAuditControlFrm
   end
   object ErrorsCheckBox: TCheckBox
     Left = 8
-    Top = 48
+    Top = 64
     Width = 113
     Height = 17
     Caption = 'Errors'
     TabOrder = 3
   end
   object OKBitBtn: TBitBtn
-    Left = 104
-    Top = 96
+    Left = 96
+    Top = 120
     Width = 75
     Height = 25
     Kind = bkOK
@@ -56,8 +56,8 @@ object PBAuditControlFrm: TPBAuditControlFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 192
-    Top = 96
+    Left = 184
+    Top = 120
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -72,8 +72,8 @@ object PBAuditControlFrm: TPBAuditControlFrm
         'g_Errors'
       'From Company'
       'Where Company = 1 ')
-    Left = 120
-    Top = 24
+    Left = 214
+    Top = 46
   end
   object UpdAuditFlagsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -85,8 +85,8 @@ object PBAuditControlFrm: TPBAuditControlFrm
       'Audit_Log_Fields = :Audit_Log_Fields,'
       'Audit_Log_Errors = :Audit_Log_Errors'
       'Where Company = 1 ')
-    Left = 88
-    Top = 24
+    Left = 214
+    Top = 6
     ParamData = <
       item
         Name = 'Audit_Log_Prog'

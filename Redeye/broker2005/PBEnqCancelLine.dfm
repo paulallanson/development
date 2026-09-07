@@ -3,12 +3,12 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Decline Enquiry Line'
-  ClientHeight = 394
+  ClientHeight = 418
   ClientWidth = 654
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlHeader: TPanel
     Left = 0
     Top = 0
@@ -28,33 +28,34 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     object lblEnquiryNo: TLabel
       Left = 24
       Top = 16
-      Width = 60
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Enquiry No:'
     end
     object lblCustomer: TLabel
       Left = 24
       Top = 44
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object lblDescription: TLabel
       Left = 24
       Top = 71
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 336
+    Top = 360
     Width = 654
     Height = 58
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 336
     object btnOK: TBitBtn
       Left = 248
       Top = 17
@@ -80,33 +81,34 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     Left = 0
     Top = 97
     Width = 654
-    Height = 239
+    Height = 263
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitHeight = 239
     object Label1: TLabel
       Left = 24
       Top = 21
-      Width = 41
-      Height = 13
+      Width = 46
+      Height = 17
       Caption = 'Reason:'
     end
     object Label5: TLabel
       Left = 24
-      Top = 58
-      Width = 72
-      Height = 13
+      Top = 56
+      Width = 79
+      Height = 17
       Caption = 'Winning Price'
     end
     object Label6: TLabel
       Left = 24
       Top = 95
-      Width = 61
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Competitor:'
     end
     object Label45: TLabel
-      Left = 215
+      Left = 220
       Top = 58
       Width = 49
       Height = 13
@@ -120,16 +122,16 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
     end
     object Label2: TLabel
       Left = 24
-      Top = 127
-      Width = 33
-      Height = 13
+      Top = 128
+      Width = 38
+      Height = 17
       Caption = 'Notes:'
     end
     object dblkpReasons: TDBLookupComboBox
-      Left = 104
+      Left = 109
       Top = 17
       Width = 257
-      Height = 21
+      Height = 25
       KeyField = 'Enq_InActive_Reason'
       ListField = 'Description'
       ListSource = dtmdlEnqs.dtsReasons
@@ -137,8 +139,8 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
       OnClick = EnableOK
     end
     object ReasMntBitBtn: TBitBtn
-      Left = 384
-      Top = 16
+      Left = 389
+      Top = 18
       Width = 25
       Height = 23
       Hint = 'Maintain Reasons'
@@ -155,8 +157,8 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
       OnClick = ReasMntBitBtnClick
     end
     object memUnitPrice: TMemo
-      Left = 104
-      Top = 53
+      Left = 109
+      Top = 54
       Width = 89
       Height = 21
       Alignment = taRightJustify
@@ -169,20 +171,20 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
       OnKeyPress = memUnitPriceKeyPress
     end
     object dblkpPriceUnit: TDBLookupComboBox
-      Left = 272
-      Top = 54
+      Left = 277
+      Top = 52
       Width = 137
-      Height = 21
+      Height = 25
       KeyField = 'Price_Unit'
       ListField = 'Description'
       TabOrder = 3
       OnClick = EnableOK
     end
     object edtCompetitor: TEdit
-      Left = 104
+      Left = 109
       Top = 91
       Width = 457
-      Height = 21
+      Height = 25
       TabOrder = 4
       Text = 'edtCompetitor'
       OnChange = EnableOK
@@ -196,7 +198,7 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
       TabOrder = 6
     end
     object memNotes: TMemo
-      Left = 104
+      Left = 109
       Top = 128
       Width = 457
       Height = 89

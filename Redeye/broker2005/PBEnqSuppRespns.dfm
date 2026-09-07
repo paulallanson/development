@@ -7,12 +7,12 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -13
   Font.Name = 'Arial'
   Font.Style = []
   OnClose = FormClose
   OnShow = FormShow
-  TextHeight = 15
+  TextHeight = 16
   object pnlPriceGrid: TPanel
     Left = 0
     Top = 274
@@ -22,20 +22,22 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 265
+    ExplicitWidth = 537
     DesignSize = (
       543
       153)
     object lblRunOn: TLabel
       Left = 16
       Top = 125
-      Width = 46
-      Height = 15
+      Width = 48
+      Height = 16
       Caption = 'Run-On:'
     end
     object strgrdPrices: TStringGrid
       Left = 72
       Top = 8
-      Width = 465
+      Width = 459
       Height = 97
       Anchors = [akLeft, akTop, akRight]
       ColCount = 2
@@ -45,12 +47,13 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       TabOrder = 0
       OnSelectCell = strgrdPricesSelectCell
       OnSetEditText = strgrdPricesSetEditText
+      ExplicitWidth = 453
     end
     object edtRunOn: TEdit
       Left = 72
       Top = 121
       Width = 121
-      Height = 23
+      Height = 24
       TabOrder = 1
       Text = 'edtRunOn'
       OnChange = edtRunOnChange
@@ -58,9 +61,9 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     end
     object cmbbxPriceUnit: TDBLookupComboBox
       Left = 200
-      Top = 120
+      Top = 121
       Width = 145
-      Height = 23
+      Height = 24
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = PBEnqDM.PriceUnitSRC
@@ -69,7 +72,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       OnCloseUp = cmbbxPriceUnitCloseUp
     end
     object BitBtn2: TBitBtn
-      Left = 463
+      Left = 455
       Top = 120
       Width = 75
       Height = 25
@@ -113,6 +116,8 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 537
+    ExplicitHeight = 224
     object pnlHeader: TPanel
       Left = 0
       Top = 0
@@ -122,6 +127,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 224
       object pnlHeaderTop: TPanel
         Left = 0
         Top = 0
@@ -134,29 +140,29 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         object lblContact: TLabel
           Left = 16
           Top = 8
-          Width = 45
-          Height = 15
+          Width = 49
+          Height = 16
           Caption = 'Contact:'
         end
         object lblRespDate: TLabel
-          Left = 32
+          Left = 34
           Top = 40
-          Width = 29
-          Height = 15
+          Width = 31
+          Height = 16
           Caption = 'Date:'
         end
         object lblSuppRef: TLabel
-          Left = 40
+          Left = 42
           Top = 66
-          Width = 22
-          Height = 15
+          Width = 23
+          Height = 16
           Caption = 'Ref:'
         end
         object dtpckrRespDate: TDateTimePicker
           Left = 72
-          Top = 36
+          Top = 35
           Width = 153
-          Height = 23
+          Height = 24
           Date = 37497.000000000000000000
           Time = 0.394036342600884400
           TabOrder = 0
@@ -166,16 +172,16 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
           Left = 72
           Top = 62
           Width = 153
-          Height = 23
+          Height = 24
           TabOrder = 1
           Text = 'edtRef'
           OnChange = edtRefChange
         end
         object cmbbxContact: TDBLookupComboBox
           Left = 72
-          Top = 8
+          Top = 3
           Width = 153
-          Height = 23
+          Height = 24
           KeyField = 'Contact_no'
           ListField = 'Name'
           ListSource = PBEnqDM.dtsrcSuppBrnchConts
@@ -192,18 +198,19 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
+        ExplicitHeight = 127
         object lblDelComm2: TLabel
           Left = 6
           Top = 20
-          Width = 58
-          Height = 15
+          Width = 60
+          Height = 16
           Caption = 'Comment:'
         end
         object lblDelComm1: TLabel
           Left = 16
           Top = 4
-          Width = 43
-          Height = 15
+          Width = 45
+          Height = 16
           Caption = 'Delivery'
         end
       end
@@ -216,6 +223,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
+        ExplicitHeight = 127
         DesignSize = (
           176
           136)
@@ -229,6 +237,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
             'mmDelComm')
           TabOrder = 0
           OnChange = mmDelCommChange
+          ExplicitHeight = 113
         end
       end
     end
@@ -241,20 +250,22 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 296
+      ExplicitHeight = 224
       DesignSize = (
         302
         233)
       object lblExCharges: TLabel
-        Left = 16
+        Left = 21
         Top = 8
-        Width = 81
-        Height = 15
+        Width = 87
+        Height = 16
         Caption = 'Extra Charges:'
       end
       object strgrdExChrgs: TStringGrid
-        Left = 16
+        Left = 21
         Top = 32
-        Width = 274
+        Width = 268
         Height = 160
         Anchors = [akLeft, akTop, akRight, akBottom]
         ColCount = 3
@@ -270,27 +281,29 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 183
+        ExplicitWidth = 296
         DesignSize = (
           302
           41)
         object Label2: TLabel
-          Left = 113
+          Left = 107
           Top = 12
-          Width = 53
-          Height = 15
+          Width = 58
+          Height = 16
           Anchors = [akRight, akBottom]
           Caption = 'Ex Chrgs:'
         end
         object edtExChrgs: TEdit
-          Left = 173
+          Left = 167
           Top = 8
           Width = 89
-          Height = 23
+          Height = 24
           Anchors = [akRight, akBottom]
           TabOrder = 0
         end
         object btnExCharges: TButton
-          Left = 269
+          Left = 263
           Top = 8
           Width = 25
           Height = 25
@@ -315,20 +328,27 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     Height = 41
     Align = alTop
     BevelOuter = bvNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 537
     object lblSupplierlbl: TLabel
-      Left = 8
+      Left = 10
       Top = 12
-      Width = 49
-      Height = 15
+      Width = 51
+      Height = 16
       Caption = 'Supplier:'
     end
     object cmbbxSupplierList: TComboBox
       Left = 72
       Top = 8
       Width = 393
-      Height = 23
+      Height = 24
       TabOrder = 0
       Text = 'cmbbxSupplierList'
       OnChange = cmbbxSupplierListChange

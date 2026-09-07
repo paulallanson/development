@@ -8,33 +8,33 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 240
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object CustLabel: TLabel
     Left = 113
     Top = 14
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label2: TLabel
     Left = 17
     Top = 14
-    Width = 91
-    Height = 13
+    Width = 103
+    Height = 17
     Caption = 'Customer/Branch:'
   end
   object DetsDBGrid: TDBGrid
@@ -46,7 +46,7 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -54,7 +54,7 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -162,13 +162,13 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
     Left = 424
     Top = 120
     Width = 87
-    Height = 105
+    Height = 121
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 1
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 25
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -191,7 +191,7 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 53
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -214,7 +214,7 @@ object PBLUBranchCstCntrFrm: TPBLUBranchCstCntrFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 81
       Width = 75
       Height = 25
       Caption = 'Delete'

@@ -3,12 +3,12 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   Top = 10
   BorderStyle = bsDialog
   Caption = 'Select Suppliers'
-  ClientHeight = 529
-  ClientWidth = 509
+  ClientHeight = 575
+  ClientWidth = 510
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,40 +16,40 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 8
     Top = 8
-    Width = 67
-    Height = 13
+    Width = 77
+    Height = 17
     Caption = 'Not selected:'
   end
   object Label3: TLabel
     Left = 8
-    Top = 228
-    Width = 46
-    Height = 13
+    Top = 239
+    Width = 52
+    Height = 17
     Caption = 'Selected:'
   end
   object NoOfSuppsLabel: TLabel
-    Left = 344
+    Left = 334
     Top = 8
-    Width = 59
-    Height = 13
+    Width = 69
+    Height = 17
     Alignment = taRightJustify
     Caption = 'No of items'
   end
   object NoOfSelSupLabel: TLabel
-    Left = 344
-    Top = 400
-    Width = 59
-    Height = 13
+    Left = 332
+    Top = 410
+    Width = 69
+    Height = 17
     Alignment = taRightJustify
     Caption = 'No of items'
   end
   object WaitLabel: TLabel
     Left = 136
-    Top = 7
+    Top = 8
     Width = 92
     Height = 16
     Caption = 'Please Wait....'
@@ -62,14 +62,14 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object SuppsDBGrid: TDBGrid
     Left = 8
-    Top = 24
+    Top = 34
     Width = 393
     Height = 193
     DataSource = SuppsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -78,7 +78,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     TabOrder = 6
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = SuppsDBGridCellClick
@@ -147,7 +147,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 414
-    Top = 472
+    Top = 520
     Width = 75
     Height = 25
     Cancel = True
@@ -222,7 +222,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object OKBitBtn: TBitBtn
     Left = 414
-    Top = 440
+    Top = 488
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -298,7 +298,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object CapableChkBox: TCheckBox
     Left = 8
-    Top = 400
+    Top = 433
     Width = 273
     Height = 17
     Caption = 'Only show suppliers with required capabilities'
@@ -309,7 +309,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object OtherBranchesChkBox: TCheckBox
     Left = 8
-    Top = 416
+    Top = 452
     Width = 265
     Height = 17
     Caption = 'Show other branches for selected suppliers'
@@ -318,14 +318,14 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object SupSelDBGrid: TDBGrid
     Left = 8
-    Top = 246
+    Top = 262
     Width = 393
     Height = 147
     DataSource = SelSupSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -334,7 +334,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     TabOrder = 7
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = SupSelDBGridDblClick
@@ -355,8 +355,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       end>
   end
   object SelSuppBitBtn: TBitBtn
-    Left = 416
-    Top = 24
+    Left = 414
+    Top = 34
     Width = 25
     Height = 25
     Hint = 'Maintain Suppliers'
@@ -374,7 +374,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 453
+    Top = 501
     Width = 321
     Height = 49
     Caption = 'Type here to narrow the search'
@@ -384,7 +384,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = SearchEditChange
     end
@@ -437,7 +437,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object chkbxShowInactive: TCheckBox
     Left = 8
-    Top = 432
+    Top = 472
     Width = 265
     Height = 17
     Caption = 'Show Inactive Suppliers'
@@ -446,14 +446,16 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 510
-    Width = 509
+    Top = 556
+    Width = 510
     Height = 19
     Panels = <
       item
         Text = 'You may assign upto x suppliers.'
         Width = 50
       end>
+    ExplicitTop = 501
+    ExplicitWidth = 503
   end
   object GetSuppsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -494,8 +496,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       '      (S1.Name Like :Name_From)'
       'Order By S1.Name, SB1.Name'
       ' ')
-    Left = 24
-    Top = 136
+    Left = 46
+    Top = 138
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -523,8 +525,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       'WHERE (Supplier_Enquiry.Enquiry = :Enquiry ) AND'
       '      (Supplier_Enquiry.Line = :Line )'
       '')
-    Left = 312
-    Top = 152
+    Left = 326
+    Top = 126
     ParamData = <
       item
         Name = 'Enquiry'
@@ -540,8 +542,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       'where (Enquiry = :Enquiry) and'
       '      (Line = :Line) and'
       '      (Is_Updated = '#39'N'#39')')
-    Left = 240
-    Top = 184
+    Left = 284
+    Top = 286
     ParamData = <
       item
         Name = 'Enquiry'
@@ -602,8 +604,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       'Values'
       '(:Supplier, :Branch_No, :Enquiry, :Line, '#39'Y'#39', '#39'N'#39')'
       '')
-    Left = 232
-    Top = 304
+    Left = 322
+    Top = 276
     ParamData = <
       item
         Name = 'Supplier'
@@ -627,8 +629,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       '      (Line = :Line) and'
       '      (Supplier = :Supplier) and'
       '      (Branch_No = :Branch_No)')
-    Left = 104
-    Top = 176
+    Left = 122
+    Top = 300
     ParamData = <
       item
         Name = 'Enquiry'
@@ -653,8 +655,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       'Where (Supplier.Supplier = :Supplier) and'
       '      (Supplier_Branch.Supplier = Supplier.Supplier) and'
       '      (Supplier_Branch.Branch_No = :Branch_No)')
-    Left = 288
-    Top = 72
+    Left = 328
+    Top = 66
     ParamData = <
       item
         Name = 'Supplier'
@@ -703,8 +705,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4)'
       'Values'
       '(:Int_Sel_Code, :Sel1, :Sel2, :Sel3, :Sel4)')
-    Left = 40
-    Top = 304
+    Left = 42
+    Top = 324
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -729,8 +731,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object SuppsSRC: TDataSource
     DataSet = GetSuppsSQL
-    Left = 168
-    Top = 168
+    Left = 218
+    Top = 282
   end
   object DelIntSelsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -738,7 +740,7 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) and'
       '      (Sel1 = :Sel1) ')
-    Left = 208
+    Left = 252
     Top = 128
     ParamData = <
       item
@@ -751,8 +753,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
   end
   object SelSupSRC: TDataSource
     DataSet = SelSupSQL
-    Left = 104
-    Top = 336
+    Left = 114
+    Top = 284
   end
   object SelSupSQL: TFDQuery
     ConnectionName = 'PB'
@@ -769,8 +771,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       '      (Supplier.Supplier = Supplier_Branch.Supplier)'
       'Order by Supplier.Name, Supplier_Branch.Name'
       '')
-    Left = 296
-    Top = 312
+    Left = 258
+    Top = 286
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -785,8 +787,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       '      (Sel2 = :Sel2) and'
       '      (Sel3 = :Sel3) and'
       '      (Sel4 = :Sel4) ')
-    Left = 168
-    Top = 320
+    Left = 162
+    Top = 288
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -821,8 +823,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       '      (Sel3 = :Sel3) and'
       '      (sel4 = :Sel4))'
       '')
-    Left = 40
-    Top = 344
+    Left = 42
+    Top = 278
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -846,8 +848,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
       end>
   end
   object SelPopUpMenu: TPopupMenu
-    Left = 264
-    Top = 136
+    Left = 330
+    Top = 114
     object Select1: TMenuItem
       Caption = 'Select'
       OnClick = Select1Click
@@ -858,8 +860,8 @@ object PBEnqSelSupFrm: TPBEnqSelSupFrm
     end
   end
   object DeSelPopUpMenu: TPopupMenu
-    Left = 352
-    Top = 336
+    Left = 216
+    Top = 284
     object DeselPopUp: TMenuItem
       Caption = 'De-select'
       ImageIndex = 0

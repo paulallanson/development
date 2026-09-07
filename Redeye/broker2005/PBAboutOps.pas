@@ -7,7 +7,7 @@ uses
   Dialogs, Grids, DBGrids, StdCtrls, ExtCtrls, DB,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ComCtrls;
 
 type
   TPBAboutOpsFrm = class(TForm)
@@ -32,6 +32,8 @@ type
     qryOperatorCan_Authorise_Desc: TWideStringField;
     qryOperatorSales_Value_Type_Desc: TWideStringField;
     lblAuthoriseLevel: TLabel;
+    Panel3: TPanel;
+    StatusBar1: TStatusBar;
     procedure FormActivate(Sender: TObject);
     procedure qryOperatorCalcFields(DataSet: TDataSet);
   private

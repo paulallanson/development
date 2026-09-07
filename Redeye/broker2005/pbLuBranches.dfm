@@ -3,14 +3,14 @@ object frmpbluBranches: TfrmpbluBranches
   Top = 81
   BorderIcons = [biSystemMenu]
   Caption = 'Branch details'
-  ClientHeight = 282
+  ClientHeight = 303
   ClientWidth = 618
   Color = clBtnFace
   Constraints.MinHeight = 230
   Constraints.MinWidth = 630
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,7 +18,7 @@ object frmpbluBranches: TfrmpbluBranches
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -29,7 +29,7 @@ object frmpbluBranches: TfrmpbluBranches
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -37,7 +37,7 @@ object frmpbluBranches: TfrmpbluBranches
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -87,24 +87,24 @@ object frmpbluBranches: TfrmpbluBranches
     Left = 0
     Top = 214
     Width = 618
-    Height = 49
+    Height = 70
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
       618
-      49)
+      70)
     object Label1: TLabel
       Left = 8
       Top = 13
-      Width = 34
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Search'
     end
     object btnAdd: TButton
-      Left = 261
-      Top = 8
+      Left = 255
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -113,8 +113,8 @@ object frmpbluBranches: TfrmpbluBranches
       OnClick = btnAddClick
     end
     object btnChange: TButton
-      Left = 349
-      Top = 8
+      Left = 343
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -124,8 +124,8 @@ object frmpbluBranches: TfrmpbluBranches
       OnClick = btnChangeClick
     end
     object btnDelete: TButton
-      Left = 437
-      Top = 8
+      Left = 431
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -135,8 +135,8 @@ object frmpbluBranches: TfrmpbluBranches
       OnClick = btnDeleteClick
     end
     object btnClose: TButton
-      Left = 523
-      Top = 8
+      Left = 517
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -148,13 +148,13 @@ object frmpbluBranches: TfrmpbluBranches
       Left = 56
       Top = 9
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = edtNameChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 56
-      Top = 34
+      Top = 46
       Width = 177
       Height = 14
       Caption = 'Only show active branches'
@@ -166,7 +166,7 @@ object frmpbluBranches: TfrmpbluBranches
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 263
+    Top = 284
     Width = 618
     Height = 19
     Panels = <
@@ -176,6 +176,8 @@ object frmpbluBranches: TfrmpbluBranches
       item
         Width = 50
       end>
+    ExplicitTop = 254
+    ExplicitWidth = 612
   end
   object dtsBranch: TDataSource
     DataSet = qrySBranch
@@ -248,7 +250,7 @@ object frmpbluBranches: TfrmpbluBranches
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 314
+    Top = 70
   end
 end

@@ -2,17 +2,17 @@ object PBAccExport2Frm: TPBAccExport2Frm
   Left = 225
   Top = 127
   Caption = 'Export & Import Wizard'
-  ClientHeight = 281
-  ClientWidth = 338
+  ClientHeight = 303
+  ClientWidth = 359
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object BackBitBtn: TBitBtn
     Left = 16
     Top = 256

@@ -4,32 +4,32 @@ object PBLUBranchFrm: TPBLUBranchFrm
   BorderStyle = bsDialog
   Caption = 'Look-Up A Branch'
   ClientHeight = 433
-  ClientWidth = 451
+  ClientWidth = 441
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    451
+    441
     433)
-  TextHeight = 13
+  TextHeight = 17
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 270
+    Left = 264
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -44,15 +44,15 @@ object PBLUBranchFrm: TPBLUBranchFrm
     object lblImport: TLabel
       Left = 16
       Top = 16
-      Width = 51
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'Importing'
     end
     object lblProgress: TLabel
-      Left = 232
+      Left = 211
       Top = 64
-      Width = 121
-      Height = 13
+      Width = 142
+      Height = 17
       Alignment = taRightJustify
       Caption = 'x of y Records Imported'
     end
@@ -67,14 +67,14 @@ object PBLUBranchFrm: TPBLUBranchFrm
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 24
+    Top = 31
     Width = 320
     Height = 193
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -82,7 +82,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -98,23 +98,23 @@ object PBLUBranchFrm: TPBLUBranchFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 242
+    Top = 253
     Width = 313
-    Height = 63
+    Height = 81
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 22
       Width = 297
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
-      Top = 42
+      Top = 53
       Width = 209
       Height = 17
       Caption = 'Only show active branches'
@@ -135,6 +135,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
+    ExplicitTop = 347
   end
   object CloseBitBtn: TBitBtn
     Left = 343
@@ -146,10 +147,11 @@ object PBLUBranchFrm: TPBLUBranchFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 3
+    ExplicitTop = 375
   end
   object ThisChkBox: TCheckBox
-    Left = 16
-    Top = 224
+    Left = 8
+    Top = 230
     Width = 185
     Height = 17
     Caption = 'Head Office'
@@ -158,15 +160,15 @@ object PBLUBranchFrm: TPBLUBranchFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 336
-    Top = 120
+    Top = 148
     Width = 89
-    Height = 109
+    Height = 121
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 5
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 76
+      Top = 83
       Width = 75
       Height = 25
       Caption = '&Delete'
@@ -189,7 +191,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 45
+      Top = 52
       Width = 75
       Height = 25
       Caption = '&Change'
@@ -212,7 +214,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
     end
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 23
       Width = 75
       Height = 25
       Caption = '&Add'
@@ -238,13 +240,13 @@ object PBLUBranchFrm: TPBLUBranchFrm
     Left = 336
     Top = 8
     Width = 89
-    Height = 103
+    Height = 114
     Caption = 'Go To'
     ParentBackground = False
     TabOrder = 6
     object ContactsBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 21
       Width = 75
       Height = 25
       Caption = 'Contacts'
@@ -267,7 +269,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
     end
     object CRepsBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 49
       Width = 75
       Height = 25
       Caption = 'Reps'
@@ -290,7 +292,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
     end
     object FormRefBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 77
       Width = 75
       Height = 25
       Caption = 'Stock'
@@ -323,6 +325,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
     BorderStyle = bsSingle
     ParentBackground = False
     TabOrder = 7
+    ExplicitTop = 331
     object DBBranchText: TDBText
       Left = 83
       Top = 3
@@ -368,29 +371,29 @@ object PBLUBranchFrm: TPBLUBranchFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 32
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 20
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'Fax:'
     end
     object RepLabel: TLabel
       Left = 28
       Top = 50
-      Width = 23
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'Rep:'
     end
     object DBRepText: TDBText
@@ -410,7 +413,7 @@ object PBLUBranchFrm: TPBLUBranchFrm
   end
   object btbtnImport: TBitBtn
     Left = 342
-    Top = 235
+    Top = 275
     Width = 75
     Height = 25
     Caption = '&Import'
@@ -520,8 +523,8 @@ object PBLUBranchFrm: TPBLUBranchFrm
       ''
       ' '
       ' ')
-    Left = 240
-    Top = 80
+    Left = 180
+    Top = 132
     ParamData = <
       item
         Name = 'custNo'
@@ -576,8 +579,8 @@ object PBLUBranchFrm: TPBLUBranchFrm
       ' and branch_no = :branchNo'
       ' '
       ' ')
-    Left = 208
-    Top = 80
+    Left = 196
+    Top = 108
     ParamData = <
       item
         Name = 'name'
@@ -634,8 +637,8 @@ object PBLUBranchFrm: TPBLUBranchFrm
       'select (max(branch_No)  + 1) as next_branch '
       'from customer_branch '
       'where customer = :customer ')
-    Left = 240
-    Top = 48
+    Left = 236
+    Top = 36
     ParamData = <
       item
         Name = 'customer'

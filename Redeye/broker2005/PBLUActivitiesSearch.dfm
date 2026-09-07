@@ -3,28 +3,28 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   Top = 99
   BorderStyle = bsDialog
   Caption = 'Activity Search'
-  ClientHeight = 409
-  ClientWidth = 289
+  ClientHeight = 439
+  ClientWidth = 315
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    289
-    409)
-  TextHeight = 13
+    315
+    439)
+  TextHeight = 17
   object Label9: TLabel
     Left = 11
     Top = 10
-    Width = 54
-    Height = 13
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -32,132 +32,129 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   object Label12: TLabel
     Left = 120
     Top = 10
-    Width = 159
-    Height = 13
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label6: TLabel
     Left = 11
-    Top = 35
-    Width = 35
-    Height = 13
+    Top = 38
+    Width = 39
+    Height = 17
     Caption = 'Branch'
   end
   object Label13: TLabel
     Left = 11
-    Top = 82
-    Width = 38
-    Height = 13
+    Top = 92
+    Width = 42
+    Height = 17
     Caption = 'Subject'
   end
   object Label1: TLabel
     Left = 11
-    Top = 312
-    Width = 69
-    Height = 13
+    Top = 341
+    Width = 79
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
-    ExplicitTop = 300
   end
   object Label4: TLabel
     Left = 11
-    Top = 178
-    Width = 23
-    Height = 13
+    Top = 200
+    Width = 27
+    Height = 17
     Caption = 'Type'
   end
   object Label2: TLabel
     Left = 11
-    Top = 58
-    Width = 40
-    Height = 13
+    Top = 65
+    Width = 44
+    Height = 17
     Caption = 'Contact'
   end
   object Label5: TLabel
     Left = 11
-    Top = 155
-    Width = 59
-    Height = 13
+    Top = 173
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label10: TLabel
     Left = 11
-    Top = 202
-    Width = 32
-    Height = 13
+    Top = 227
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label14: TLabel
     Left = 11
-    Top = 250
-    Width = 54
-    Height = 13
+    Top = 281
+    Width = 63
+    Height = 17
     Caption = 'Created By'
   end
   object Label15: TLabel
     Left = 11
-    Top = 226
-    Width = 62
-    Height = 13
+    Top = 254
+    Width = 71
+    Height = 17
     Caption = 'Assigned To'
   end
   object lblDueDate: TLabel
     Left = 11
-    Top = 282
-    Width = 48
-    Height = 13
+    Top = 311
+    Width = 54
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Due Date'
-    ExplicitTop = 270
   end
   object Label3: TLabel
     Left = 11
-    Top = 107
-    Width = 36
-    Height = 13
+    Top = 119
+    Width = 41
+    Height = 17
     Caption = 'Priority'
   end
   object Label7: TLabel
     Left = 11
-    Top = 131
-    Width = 51
-    Height = 13
+    Top = 146
+    Width = 58
+    Height = 17
     Caption = 'Reference'
   end
   object edtSubject: TEdit
     Left = 120
-    Top = 78
+    Top = 89
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtBranch: TEdit
     Left = 120
-    Top = 30
+    Top = 35
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object chkbxShowOnlyLive: TCheckBox
     Tag = 12
-    Left = 12
-    Top = 336
+    Left = 11
+    Top = 367
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show only live activities'
     TabOrder = 14
-    ExplicitTop = 315
   end
   object SearchButton: TButton
-    Left = 12
-    Top = 368
+    Left = 11
+    Top = 398
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -165,21 +162,20 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Default = True
     TabOrder = 15
     OnClick = SearchButtonClick
-    ExplicitTop = 347
   end
   object edtDate: TEdit
     Left = 120
-    Top = 308
+    Top = 338
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akLeft, akBottom]
     TabOrder = 12
     OnExit = edtDateExit
-    ExplicitTop = 287
+    ExplicitTop = 308
   end
   object btnDate: TBitBtn
     Left = 216
-    Top = 306
+    Top = 338
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -199,74 +195,73 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     NumGlyphs = 2
     TabOrder = 13
     OnClick = btnDateClick
-    ExplicitTop = 285
   end
   object edtType: TEdit
     Left = 120
-    Top = 174
+    Top = 197
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtPriority: TEdit
     Left = 120
-    Top = 102
+    Top = 116
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object ClearButton: TButton
     Left = 196
-    Top = 369
+    Top = 399
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 16
     OnClick = ClearButtonClick
-    ExplicitTop = 348
+    ExplicitTop = 360
   end
   object edtContact: TEdit
     Left = 120
-    Top = 54
+    Top = 62
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object edtStatus: TEdit
     Left = 120
-    Top = 198
+    Top = 224
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 7
   end
   object edtCreatedBy: TEdit
     Left = 120
-    Top = 246
+    Top = 278
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 9
   end
   object edtAssignedTo: TEdit
     Left = 120
-    Top = 222
+    Top = 251
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 8
   end
   object edtDueDate: TEdit
     Left = 120
-    Top = 278
+    Top = 308
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akLeft, akBottom]
     TabOrder = 10
     OnExit = edtDueDateExit
-    ExplicitTop = 257
+    ExplicitTop = 278
   end
   object BitBtn1: TBitBtn
     Left = 216
-    Top = 276
+    Top = 308
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -286,20 +281,19 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     NumGlyphs = 2
     TabOrder = 11
     OnClick = BitBtn1Click
-    ExplicitTop = 255
   end
   object edtDescription: TEdit
     Left = 120
-    Top = 150
+    Top = 170
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtReference: TEdit
     Left = 120
-    Top = 126
+    Top = 143
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
 end

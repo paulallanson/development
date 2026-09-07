@@ -8,12 +8,12 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
     Top = 155
@@ -60,15 +60,15 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       object lblInvNumber: TLabel
         Left = 9
         Top = 6
-        Width = 91
-        Height = 13
+        Width = 106
+        Height = 17
         Caption = 'Invoice Number(s)'
       end
       object Label1: TLabel
         Left = 8
         Top = 68
-        Width = 194
-        Height = 39
+        Width = 177
+        Height = 68
         Caption = 
           'Enter Invoice numbers and/or Invoice ranges separated by commas.' +
           ' For example, 1234, 1236, 1240-1245'
@@ -78,7 +78,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         Left = 8
         Top = 26
         Width = 41
-        Height = 21
+        Height = 25
         TabOrder = 0
       end
       object SelectionMemo: TMemo
@@ -93,7 +93,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         Top = 8
         Width = 25
         Height = 33
-        ItemHeight = 13
+        ItemHeight = 17
         Sorted = True
         TabOrder = 2
         Visible = False
@@ -108,7 +108,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       TabOrder = 1
       object btnDateFrom: TSpeedButton
         Left = 200
-        Top = 15
+        Top = 16
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -129,7 +129,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       end
       object btnDateTo: TSpeedButton
         Left = 200
-        Top = 52
+        Top = 53
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -151,22 +151,22 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       object lblDateFrom: TLabel
         Left = 9
         Top = 20
-        Width = 56
-        Height = 13
+        Width = 64
+        Height = 17
         Caption = 'Date From:'
       end
       object lblDateTo: TLabel
         Left = 24
         Top = 57
-        Width = 42
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Date To:'
       end
       object edtDateFrom: TEdit
         Left = 79
         Top = 16
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 0
         OnExit = edtDateFromExit
@@ -175,7 +175,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         Left = 79
         Top = 53
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 1
         OnExit = edtDateToExit
@@ -237,17 +237,17 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     ParentBackground = False
     TabOrder = 2
     object lblExpTo: TLabel
-      Left = 72
+      Left = 68
       Top = 16
-      Width = 51
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Export To:'
     end
     object edtExpFile: TEdit
       Left = 136
       Top = 12
       Width = 257
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object btnBrowse: TButton
@@ -300,8 +300,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       ' '
       ' '
       ' ')
-    Left = 40
-    Top = 88
+    Left = 90
+    Top = 14
     ParamData = <
       item
         Name = 'DateFrom'
@@ -343,8 +343,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       ' '
       ' '
       ' ')
-    Left = 40
-    Top = 120
+    Left = 18
+    Top = 6
     ParamData = <
       item
         Name = 'IntSel'
@@ -355,14 +355,13 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
   end
   object qrySalesInvs: TFDQuery
     ConnectionName = 'PB'
-    Left = 8
-    Top = 96
+    Left = 74
   end
   object OpenDialog1: TOpenDialog
     FileName = 'FactorFile.csv'
     Filter = 'CSV Files (*.csv)|*.csv'
-    Left = 368
-    Top = 128
+    Left = 332
+    Top = 48
   end
   object GetInvRngSQL: TFDQuery
     ConnectionName = 'PB'
@@ -381,8 +380,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       ' '
       ' '
       ' ')
-    Left = 348
-    Top = 84
+    Left = 355
+    Top = 9
     ParamData = <
       item
         Name = 'From_InvNum'
@@ -397,8 +396,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
       ' ')
-    Left = 408
-    Top = 84
+    Left = 230
+    Top = 17
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -422,8 +421,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       ' '
       ' '
       ' ')
-    Left = 378
-    Top = 84
+    Left = 377
+    Top = 81
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -447,8 +446,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       ''
       ' '
       ' ')
-    Left = 318
-    Top = 84
+    Left = 302
+    Top = 1
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -464,8 +463,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       'From Int_Sel'
       ' '
       ' ')
-    Left = 288
-    Top = 84
+    Left = 232
+    Top = 65529
   end
   object qryUpdInvs: TFDQuery
     ConnectionName = 'PB'
@@ -474,8 +473,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       'set Factoring_Filename = :Factoring_Filename,'
       ' Factoring_date = :Factoring_date'
       'where sales_invoice.sales_invoice = :sales_invoice')
-    Left = 88
-    Top = 96
+    Left = 166
+    Top = 65528
     ParamData = <
       item
         Name = 'Factoring_Filename'

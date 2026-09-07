@@ -3,28 +3,28 @@ object PBAccExport1Frm: TPBAccExport1Frm
   Top = 122
   BorderStyle = bsSingle
   Caption = 'Import and Export Wizard'
-  ClientHeight = 384
-  ClientWidth = 340
+  ClientHeight = 478
+  ClientWidth = 393
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
-    Top = 8
-    Width = 151
-    Height = 13
+    Top = 4
+    Width = 172
+    Height = 17
     Caption = 'Choose an action to perform:'
   end
   object NextBitBtn: TBitBtn
-    Left = 176
-    Top = 360
+    Left = 206
+    Top = 439
     Width = 75
     Height = 25
     Caption = 'Next'
@@ -32,8 +32,8 @@ object PBAccExport1Frm: TPBAccExport1Frm
     OnClick = NextBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 256
-    Top = 360
+    Left = 302
+    Top = 439
     Width = 75
     Height = 25
     Caption = 'Cancel'
@@ -43,9 +43,9 @@ object PBAccExport1Frm: TPBAccExport1Frm
   object ActionListBox: TListBox
     Left = 16
     Top = 24
-    Width = 313
-    Height = 233
-    ItemHeight = 13
+    Width = 361
+    Height = 312
+    ItemHeight = 17
     Items.Strings = (
       'Export Customer details'
       'Export Supplier details'
@@ -69,16 +69,16 @@ object PBAccExport1Frm: TPBAccExport1Frm
   end
   object GroupBox1: TGroupBox
     Left = 16
-    Top = 264
-    Width = 313
+    Top = 337
+    Width = 361
     Height = 89
     Caption = 'Description'
     ParentBackground = False
     TabOrder = 3
     object DescriptionLbl: TLabel
-      Left = 8
-      Top = 17
-      Width = 289
+      Left = 15
+      Top = 22
+      Width = 330
       Height = 64
       AutoSize = False
       Caption = 
@@ -88,8 +88,8 @@ object PBAccExport1Frm: TPBAccExport1Frm
     end
   end
   object UpdateBitBtn: TBitBtn
-    Left = 16
-    Top = 360
+    Left = 14
+    Top = 439
     Width = 75
     Height = 25
     Caption = 'Update'
@@ -97,8 +97,8 @@ object PBAccExport1Frm: TPBAccExport1Frm
     OnClick = UpdateBitBtnClick
   end
   object ResetBitBtn: TBitBtn
-    Left = 96
-    Top = 360
+    Left = 110
+    Top = 439
     Width = 75
     Height = 25
     Caption = 'Reset'

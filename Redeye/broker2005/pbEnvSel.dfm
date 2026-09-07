@@ -7,10 +7,10 @@ object frmpbEnvSel: TfrmpbEnvSel
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  TextHeight = 17
   object DBRadioGroup: TRadioGroup
     Left = 8
     Top = 8

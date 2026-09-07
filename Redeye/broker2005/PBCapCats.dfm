@@ -4,40 +4,39 @@ object PBCapCatsFrm: TPBCapCatsFrm
   BorderStyle = bsDialog
   Caption = 'Capabilities For Categories'
   ClientHeight = 422
-  ClientWidth = 454
+  ClientWidth = 481
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    454
+    481
     422)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
-    Top = 8
-    Width = 60
-    Height = 13
+    Top = 3
+    Width = 67
+    Height = 17
     Caption = 'Capabilities'
   end
   object Label2: TLabel
-    Left = 302
-    Top = 8
-    Width = 66
-    Height = 13
+    Left = 291
+    Top = 3
+    Width = 76
+    Height = 17
     Anchors = [akRight]
     Caption = 'Product Type'
   end
   object CapDBGrid: TDBGrid
     Left = 16
     Top = 24
-    Width = 265
+    Width = 259
     Height = 385
-    Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = CapsDS
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -64,7 +63,7 @@ object PBCapCatsFrm: TPBCapCatsFrm
       end>
   end
   object CloseBitBtn: TBitBtn
-    Left = 363
+    Left = 398
     Top = 381
     Width = 75
     Height = 25
@@ -74,7 +73,7 @@ object PBCapCatsFrm: TPBCapCatsFrm
     TabOrder = 1
   end
   object OKBitBtn: TBitBtn
-    Left = 363
+    Left = 398
     Top = 349
     Width = 75
     Height = 25
@@ -103,9 +102,9 @@ object PBCapCatsFrm: TPBCapCatsFrm
     OnClick = OKBitBtnClick
   end
   object AddMemo: TMemo
-    Left = 302
-    Top = 245
-    Width = 137
+    Left = 291
+    Top = 213
+    Width = 182
     Height = 89
     Anchors = [akRight, akBottom]
     Enabled = False
@@ -122,10 +121,10 @@ object PBCapCatsFrm: TPBCapCatsFrm
     TabOrder = 3
   end
   object dblkpProductType: TDBLookupComboBox
-    Left = 301
-    Top = 25
-    Width = 145
-    Height = 21
+    Left = 291
+    Top = 24
+    Width = 182
+    Height = 25
     Anchors = [akRight]
     KeyField = 'Product_type'
     ListField = 'Description'
@@ -230,8 +229,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
       'From Product_Type'
       'Where Product_Type = :Product_Type'
       '')
-    Left = 344
-    Top = 160
+    Left = 350
+    Top = 72
     ParamData = <
       item
         Name = 'Product_Type'

@@ -3,123 +3,123 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   Top = 122
   Caption = 'Add Enquiry Line details'
   ClientHeight = 404
-  ClientWidth = 651
+  ClientWidth = 676
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Bevel2: TBevel
     Left = 0
-    Top = 0
-    Width = 635
+    Top = 5
+    Width = 668
     Height = 348
     Shape = bsFrame
   end
   object Label7: TLabel
-    Left = 34
-    Top = 19
-    Width = 59
-    Height = 13
+    Left = 38
+    Top = 14
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label9: TLabel
-    Left = 26
-    Top = 47
-    Width = 66
-    Height = 13
+    Left = 28
+    Top = 44
+    Width = 76
+    Height = 17
     Caption = 'Product Type'
   end
   object Label12: TLabel
-    Left = 64
-    Top = 134
-    Width = 32
-    Height = 13
+    Left = 69
+    Top = 129
+    Width = 35
+    Height = 17
     Caption = 'Depth'
   end
   object Label13: TLabel
-    Left = 66
-    Top = 163
-    Width = 32
-    Height = 13
+    Left = 70
+    Top = 158
+    Width = 34
+    Height = 17
     Caption = 'Width'
   end
   object Label10: TLabel
     Left = 7
-    Top = 195
-    Width = 83
-    Height = 13
+    Top = 193
+    Width = 97
+    Height = 17
     Caption = 'Number of Parts'
   end
   object Label15: TLabel
-    Left = 36
-    Top = 251
-    Width = 58
-    Height = 13
+    Left = 35
+    Top = 246
+    Width = 69
+    Height = 17
     Caption = 'Qty per Box'
   end
   object Label11: TLabel
-    Left = 482
-    Top = 283
-    Width = 88
-    Height = 13
+    Left = 497
+    Top = 280
+    Width = 102
+    Height = 17
     Caption = 'Number of Plates'
   end
   object Label1: TLabel
-    Left = 56
+    Left = 59
     Top = 275
-    Width = 41
-    Height = 13
+    Width = 45
+    Height = 17
     Alignment = taRightJustify
     Caption = 'Artwork'
   end
   object Label2: TLabel
-    Left = 8
-    Top = 224
-    Width = 82
-    Height = 13
+    Left = 9
+    Top = 222
+    Width = 95
+    Height = 17
     Caption = 'NCR/OTC/Mixed'
   end
   object Label5: TLabel
-    Left = 8
-    Top = 75
-    Width = 80
-    Height = 13
+    Left = 12
+    Top = 73
+    Width = 92
+    Height = 17
     Caption = 'Form Reference'
   end
   object Label3: TLabel
-    Left = 434
-    Top = 227
-    Width = 87
-    Height = 13
+    Left = 454
+    Top = 222
+    Width = 95
+    Height = 17
     Caption = 'Run On Quantity'
   end
   object Label4: TLabel
-    Left = 36
-    Top = 104
-    Width = 53
-    Height = 13
+    Left = 42
+    Top = 99
+    Width = 62
+    Height = 17
     Caption = 'Form Desc'
   end
   object Label6: TLabel
-    Left = 188
-    Top = 195
-    Width = 44
-    Height = 13
+    Left = 197
+    Top = 193
+    Width = 52
+    Height = 17
     Caption = 'Job Type'
   end
   object LineDescEdit: TEdit
     Tag = 1
-    Left = 108
+    Left = 117
     Top = 11
     Width = 359
-    Height = 21
+    Height = 25
     Ctl3D = True
     MaxLength = 80
     ParentCtl3D = False
@@ -128,30 +128,30 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object DepthEdit: TEdit
     Tag = 3
-    Left = 108
+    Left = 117
     Top = 126
     Width = 65
-    Height = 21
+    Height = 25
     TabOrder = 7
     OnChange = DepthEditChange
     OnKeyPress = DepthEditKeyPress
   end
   object WidthEdit: TEdit
     Tag = 4
-    Left = 108
+    Left = 117
     Top = 155
     Width = 65
-    Height = 21
+    Height = 25
     TabOrder = 10
     OnChange = WidthEditChange
     OnKeyPress = WidthEditKeyPress
   end
   object NoPartSpin: TSpinEdit
     Tag = 7
-    Left = 108
+    Left = 117
     Top = 187
     Width = 41
-    Height = 22
+    Height = 27
     MaxValue = 100
     MinValue = 0
     TabOrder = 13
@@ -160,20 +160,20 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object BoxQtyEdit: TEdit
     Tag = 8
-    Left = 108
+    Left = 117
     Top = 243
     Width = 221
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 15
     OnChange = BoxQtyEditChange
   end
   object PlateSpin: TSpinEdit
     Tag = 12
-    Left = 582
+    Left = 603
     Top = 275
     Width = 41
-    Height = 22
+    Height = 27
     MaxValue = 100
     MinValue = 0
     TabOrder = 18
@@ -181,7 +181,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object QtyGrid: TStringGrid
     Tag = 20
-    Left = 532
+    Left = 556
     Top = 11
     Width = 89
     Height = 201
@@ -200,7 +200,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object OKBtn: TBitBtn
     Left = 236
-    Top = 355
+    Top = 365
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -268,7 +268,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 324
-    Top = 355
+    Top = 365
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -278,17 +278,17 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object Unit1: TEdit
     Tag = 5
-    Left = 178
+    Left = 187
     Top = 126
     Width = 49
-    Height = 21
+    Height = 25
     TabStop = False
     ReadOnly = True
     TabOrder = 8
     Text = 'mm'
   end
   object UpDown1: TUpDown
-    Left = 210
+    Left = 219
     Top = 126
     Width = 16
     Height = 23
@@ -298,17 +298,17 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object Unit2: TEdit
     Tag = 6
-    Left = 178
+    Left = 187
     Top = 155
     Width = 49
-    Height = 21
+    Height = 25
     TabStop = False
     ReadOnly = True
     TabOrder = 11
     Text = 'mm'
   end
   object UpDown2: TUpDown
-    Left = 210
+    Left = 219
     Top = 155
     Width = 16
     Height = 23
@@ -318,10 +318,10 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object NCR_OTCCombo: TComboBox
     Tag = 10
-    Left = 108
+    Left = 117
     Top = 216
     Width = 167
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 14
     OnChange = NCR_OTCComboChange
@@ -330,20 +330,20 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object NCR_OTCEdit: TEdit
     Tag = 11
-    Left = 490
+    Left = 499
     Top = 107
     Width = 33
-    Height = 21
+    Height = 25
     TabStop = False
     TabOrder = 23
     Visible = False
   end
   object ProductTypeEdit: TEdit
     Tag = 2
-    Left = 108
+    Left = 117
     Top = 39
     Width = 255
-    Height = 21
+    Height = 25
     TabStop = False
     ReadOnly = True
     TabOrder = 1
@@ -351,8 +351,8 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object CheckBox1: TCheckBox
     Tag = 13
-    Left = 0
-    Top = 363
+    Left = 8
+    Top = 369
     Width = 137
     Height = 17
     TabStop = False
@@ -362,27 +362,27 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object FormRefEdit: TEdit
     Tag = 14
-    Left = 108
+    Left = 117
     Top = 68
     Width = 255
-    Height = 21
+    Height = 25
     TabStop = False
     ReadOnly = True
     TabOrder = 3
   end
   object FormRefDescEdit: TEdit
     Tag = 15
-    Left = 108
+    Left = 117
     Top = 96
     Width = 345
-    Height = 21
+    Height = 25
     TabStop = False
     Color = clBtnFace
     ReadOnly = True
     TabOrder = 6
   end
   object ProductTypeBitBtn: TBitBtn
-    Left = 370
+    Left = 379
     Top = 39
     Width = 25
     Height = 25
@@ -400,7 +400,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
     OnClick = ProductTypeBitBtnClick
   end
   object FormRefBitBtn: TBitBtn
-    Left = 370
+    Left = 379
     Top = 68
     Width = 25
     Height = 25
@@ -418,7 +418,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
     OnClick = FormRefBitBtnClick
   end
   object BitBtn1: TBitBtn
-    Left = 402
+    Left = 411
     Top = 68
     Width = 75
     Height = 25
@@ -445,7 +445,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object ArtEdit: TMemo
     Tag = 9
-    Left = 108
+    Left = 117
     Top = 275
     Width = 329
     Height = 65
@@ -454,7 +454,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
     TabOrder = 16
   end
   object ArtworkBitBtn: TBitBtn
-    Left = 442
+    Left = 451
     Top = 275
     Width = 25
     Height = 25
@@ -473,14 +473,14 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
   end
   object edtRunOnQty: TEdit
     Tag = 17
-    Left = 532
+    Left = 556
     Top = 219
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 20
   end
   object btnDefaultSize: TBitBtn
-    Left = 234
+    Left = 243
     Top = 124
     Width = 25
     Height = 25
@@ -498,15 +498,15 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
     OnClick = btnDefaultSizeClick
   end
   object cmbbxJobType: TComboBox
-    Left = 256
+    Left = 265
     Top = 188
     Width = 213
-    Height = 21
+    Height = 25
     TabOrder = 26
     OnChange = cmbbxJobTypeChange
   end
   object btbtnDelJobType: TBitBtn
-    Left = 474
+    Left = 483
     Top = 188
     Width = 27
     Height = 25
@@ -534,8 +534,8 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
     ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Product_Type')
-    Left = 400
-    Top = 40
+    Left = 301
+    Top = 114
   end
   object NCRSQL: TFDQuery
     ConnectionName = 'pb'
@@ -556,7 +556,7 @@ object PBEnqLineDtlsFrm: TPBEnqLineDtlsFrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from job_type')
-    Left = 404
-    Top = 184
+    Left = 330
+    Top = 190
   end
 end

@@ -8,18 +8,18 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -32,7 +32,7 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +40,7 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -57,23 +57,23 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 240
+    Top = 230
     Width = 321
-    Height = 73
+    Height = 76
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 21
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 50
+      Top = 55
       Width = 217
       Height = 17
       Caption = 'Only show active activity types'
@@ -85,7 +85,7 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
   end
   object SelectBitBtn: TBitBtn
     Left = 344
-    Top = 258
+    Top = 251
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -160,7 +160,7 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 344
-    Top = 286
+    Top = 279
     Width = 75
     Height = 25
     Kind = bkClose
@@ -169,7 +169,7 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 336
-    Top = 128
+    Top = 121
     Width = 87
     Height = 105
     Caption = 'Function'
