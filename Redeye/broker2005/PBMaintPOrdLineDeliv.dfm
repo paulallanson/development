@@ -3,37 +3,39 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
   Top = 14
   Caption = 'Maintain Purchase Order Line Deliveries'
   ClientHeight = 546
-  ClientWidth = 586
+  ClientWidth = 618
   Color = clBtnFace
   Constraints.MinHeight = 575
   Constraints.MinWidth = 600
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesktopCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlBottom: TPanel
     Left = 0
     Top = 505
-    Width = 586
+    Width = 618
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 496
+    ExplicitWidth = 582
     object DelLabel: TLabel
-      Left = 224
+      Left = 221
       Top = 11
-      Width = 145
-      Height = 15
-      Caption = 'Delete the above details ?'
+      Width = 154
+      Height = 16
+      Caption = 'Delete the above details'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -193,58 +195,60 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 586
+    Width = 618
     Height = 505
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 208
-    ExplicitTop = 272
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 582
+    ExplicitHeight = 496
     object pnlDetails: TPanel
       Left = 0
-      Top = 41
-      Width = 586
-      Height = 464
+      Top = 59
+      Width = 618
+      Height = 446
       Align = alClient
       Caption = 'pnlDetails'
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 41
+      ExplicitWidth = 582
+      ExplicitHeight = 455
       object Panel2: TPanel
         Left = 1
         Top = 1
-        Width = 584
+        Width = 616
         Height = 292
         Align = alTop
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 580
         object Label9: TLabel
           Left = 160
-          Top = 270
-          Width = 79
-          Height = 13
+          Top = 265
+          Width = 90
+          Height = 17
           Caption = 'Cust req'#39'd date'
         end
         object Label11: TLabel
           Left = 378
-          Top = 270
-          Width = 74
-          Height = 13
+          Top = 265
+          Width = 85
+          Height = 17
           Caption = 'Date delivered'
         end
         object Label13: TLabel
           Left = 160
-          Top = 242
-          Width = 83
-          Height = 13
+          Top = 239
+          Width = 95
+          Height = 17
           Caption = 'Supp req'#39'd date'
         end
         object AddrTypeRadGrp: TRadioGroup
           Left = 8
           Top = 4
           Width = 105
-          Height = 105
+          Height = 113
           Caption = 'Address Type'
           Items.Strings = (
             'Ad Hoc'
@@ -267,19 +271,19 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object AddrTypeLabel: TLabel
             Left = 8
             Top = 24
-            Width = 51
-            Height = 13
+            Width = 60
+            Height = 17
             Caption = 'Addr Type'
           end
           object BranchNameLabel: TLabel
             Left = 8
             Top = 74
-            Width = 35
-            Height = 13
+            Width = 39
+            Height = 17
             Caption = 'Branch'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -287,12 +291,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object Label4: TLabel
             Left = 8
             Top = 100
-            Width = 41
-            Height = 13
+            Width = 48
+            Height = 17
             Caption = 'Address'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -300,12 +304,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object Label7: TLabel
             Left = 8
             Top = 198
-            Width = 47
-            Height = 13
+            Width = 54
+            Height = 17
             Caption = 'Postcode'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -313,19 +317,19 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object lblFAO: TLabel
             Left = 8
             Top = 49
-            Width = 21
-            Height = 13
+            Width = 23
+            Height = 17
             Caption = 'FAO'
           end
           object Label3: TLabel
             Left = 184
             Top = 198
-            Width = 37
-            Height = 13
+            Width = 40
+            Height = 17
             Caption = 'County'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -334,7 +338,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 20
             Width = 260
-            Height = 21
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 0
@@ -343,7 +347,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 70
             Width = 260
-            Height = 21
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 1
@@ -352,7 +356,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 95
             Width = 260
-            Height = 21
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 2
@@ -361,7 +365,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 120
             Width = 260
-            Height = 21
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 3
@@ -370,7 +374,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 145
             Width = 260
-            Height = 21
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 4
@@ -379,7 +383,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 170
             Width = 260
-            Height = 21
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 5
@@ -388,7 +392,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 194
             Width = 84
-            Height = 21
+            Height = 25
             CharCase = ecUpperCase
             MaxLength = 10
             ReadOnly = True
@@ -398,7 +402,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 85
             Top = 45
             Width = 260
-            Height = 21
+            Height = 25
             MaxLength = 40
             TabOrder = 8
           end
@@ -421,7 +425,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
             Left = 229
             Top = 194
             Width = 116
-            Height = 21
+            Height = 25
             CharCase = ecUpperCase
             MaxLength = 10
             ReadOnly = True
@@ -439,12 +443,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object Label5: TLabel
             Left = 8
             Top = 20
-            Width = 50
-            Height = 13
+            Width = 58
+            Height = 17
             Caption = 'To Deliver'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -452,12 +456,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object Label6: TLabel
             Left = 8
             Top = 46
-            Width = 48
-            Height = 13
+            Width = 55
+            Height = 17
             Caption = 'Delivered'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -465,12 +469,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object Label8: TLabel
             Left = 8
             Top = 72
-            Width = 43
-            Height = 13
+            Width = 48
+            Height = 17
             Caption = 'Invoiced'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -478,12 +482,12 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           object Label1: TLabel
             Left = 8
             Top = 98
-            Width = 32
-            Height = 26
+            Width = 58
+            Height = 34
             Caption = 'No of boxes'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -491,13 +495,13 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           end
           object Label14: TLabel
             Left = 8
-            Top = 125
-            Width = 68
-            Height = 13
+            Top = 135
+            Width = 77
+            Height = 17
             Caption = 'Weight (gms)'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -560,7 +564,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           end
           object WeightMemo: TMemo
             Left = 72
-            Top = 121
+            Top = 131
             Width = 65
             Height = 21
             Alignment = taRightJustify
@@ -588,33 +592,33 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           OnClick = SearchBtnClick
         end
         object DeliveryDateEdit: TEdit
-          Left = 464
+          Left = 472
           Top = 262
           Width = 81
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 4
           OnExit = DeliveryDateEditExit
         end
         object DatePointEdit: TEdit
-          Left = 250
+          Left = 259
           Top = 238
           Width = 81
-          Height = 21
+          Height = 25
           TabOrder = 5
           OnExit = DatePointEditExit
         end
         object CustReqDateEdit: TEdit
-          Left = 250
-          Top = 262
+          Left = 259
+          Top = 261
           Width = 81
-          Height = 21
+          Height = 25
           TabOrder = 6
           OnExit = CustReqDateEditExit
         end
         object DatePointBtn: TBitBtn
-          Left = 338
-          Top = 236
+          Left = 347
+          Top = 238
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -635,8 +639,8 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           OnClick = DatePointBtnClick
         end
         object DeliveryDateBtn: TBitBtn
-          Left = 552
-          Top = 258
+          Left = 560
+          Top = 262
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -658,8 +662,8 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           OnClick = DeliveryDateBtnClick
         end
         object CustReqDateBtn: TBitBtn
-          Left = 338
-          Top = 258
+          Left = 347
+          Top = 261
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -680,7 +684,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           OnClick = CustReqDateBtnClick
         end
         object btnClear: TBitBtn
-          Left = 554
+          Left = 558
           Top = 23
           Width = 27
           Height = 25
@@ -703,7 +707,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
         end
         object DeliveryToStockChk: TCheckBox
           Left = 376
-          Top = 237
+          Top = 239
           Width = 133
           Height = 17
           Caption = 'Delivery in to stock'
@@ -713,38 +717,38 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       object pnlCourierService: TPanel
         Left = 1
         Top = 293
-        Width = 584
-        Height = 36
+        Width = 616
+        Height = 40
         Align = alTop
         ParentBackground = False
         TabOrder = 1
         object Label2: TLabel
           Left = 160
           Top = 12
-          Width = 35
-          Height = 13
+          Width = 41
+          Height = 17
           Caption = 'Service'
         end
         object lblCourier: TLabel
           Left = 16
           Top = 12
           Width = 137
-          Height = 13
+          Height = 17
           AutoSize = False
           Caption = 'Courier Details'
         end
         object Label16: TLabel
           Left = 377
           Top = 12
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Caption = 'Package Type'
         end
         object dblkppackageType: TDBLookupComboBox
           Left = 464
           Top = 8
           Width = 115
-          Height = 21
+          Height = 25
           KeyField = 'Package_Type'
           ListField = 'Package_Type_Descr'
           ListSource = PBPODM.dtsPackageType
@@ -754,7 +758,7 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
           Left = 208
           Top = 8
           Width = 153
-          Height = 21
+          Height = 25
           KeyField = 'Service_no'
           ListField = 'Service_Description'
           ListSource = PBPODM.dtsCourierService
@@ -763,17 +767,20 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       end
       object Panel3: TPanel
         Left = 1
-        Top = 329
-        Width = 584
-        Height = 65
+        Top = 333
+        Width = 616
+        Height = 43
         Align = alClient
         ParentBackground = False
         TabOrder = 2
+        ExplicitTop = 329
+        ExplicitWidth = 580
+        ExplicitHeight = 56
         object Label12: TLabel
           Left = 17
           Top = 10
-          Width = 73
-          Height = 13
+          Width = 85
+          Height = 17
           Caption = 'Delivery Notes'
         end
         object DelNotesMemo: TMemo
@@ -788,17 +795,19 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
       end
       object DelInstructPanel: TPanel
         Left = 1
-        Top = 394
-        Width = 584
+        Top = 376
+        Width = 616
         Height = 69
         Align = alBottom
         ParentBackground = False
         TabOrder = 3
+        ExplicitTop = 385
+        ExplicitWidth = 580
         object Label10: TLabel
           Left = 17
           Top = 10
-          Width = 104
-          Height = 13
+          Width = 116
+          Height = 17
           Caption = 'Delivery Instructions'
         end
         object DelInstructMemo: TMemo
@@ -813,21 +822,21 @@ object PBMaintPOrdLineDelivFrm: TPBMaintPOrdLineDelivFrm
     object pnlHeader: TPanel
       Left = 0
       Top = 0
-      Width = 586
-      Height = 41
+      Width = 618
+      Height = 59
       Align = alTop
       ParentBackground = False
       TabOrder = 1
       object POrdLabel: TLabel
         Left = 8
-        Top = 3
-        Width = 53
-        Height = 13
+        Top = 8
+        Width = 61
+        Height = 17
         Caption = 'POrdLabel'
       end
       object DeliverViachk: TCheckBox
         Left = 8
-        Top = 19
+        Top = 30
         Width = 385
         Height = 17
         Caption = 'DeliverViachk'

@@ -2,23 +2,23 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
   Left = 215
   Top = 128
   Caption = 'Look-Up A Product Type'
-  ClientHeight = 294
+  ClientHeight = 333
   ClientWidth = 442
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -31,7 +31,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -39,7 +39,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clBlack
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -55,23 +55,23 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 248
+    Top = 250
     Width = 321
-    Height = 49
+    Height = 54
     Caption = 'Type here to narrow the search'
     TabOrder = 1
     object NameEdit: TEdit
-      Left = 8
-      Top = 16
+      Left = 13
+      Top = 21
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
     Left = 344
-    Top = 244
+    Top = 250
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -146,7 +146,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 344
-    Top = 272
+    Top = 278
     Width = 75
     Height = 25
     Kind = bkClose
@@ -155,14 +155,14 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 336
-    Top = 128
+    Top = 102
     Width = 87
-    Height = 105
+    Height = 115
     Caption = 'Function'
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 26
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -185,7 +185,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 54
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -208,7 +208,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 82
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -262,7 +262,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 186
+    Top = 70
   end
 end

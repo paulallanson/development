@@ -3,39 +3,39 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain FSC Material Claims'
-  ClientHeight = 210
-  ClientWidth = 455
+  ClientHeight = 224
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 149
-    Top = 184
-    Width = 109
-    Height = 13
-    Caption = 'Delete these details ?'
+    Left = 156
+    Top = 187
+    Width = 122
+    Height = 17
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    Left = 16
+    Left = 8
     Top = 8
-    Width = 425
+    Width = 441
     Height = 161
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -43,40 +43,40 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 91
-      Height = 13
+      Width = 103
+      Height = 17
       Caption = 'Claim/Declaration'
     end
     object Label2: TLabel
       Left = 16
       Top = 52
-      Width = 83
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'Short Descrition'
     end
     object DescrEdit: TEdit
-      Left = 110
+      Left = 125
       Top = 16
       Width = 299
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = CheckOK
     end
     object chkbxMixedClaim: TCheckBox
-      Left = 112
-      Top = 85
+      Left = 125
+      Top = 88
       Width = 105
       Height = 17
       Caption = 'Mixed Claim'
       TabOrder = 2
     end
     object edtShortDescription: TEdit
-      Left = 110
+      Left = 125
       Top = 48
       Width = 203
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'edtShortDescription'
@@ -97,8 +97,8 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 285
-    Top = 176
+    Left = 292
+    Top = 184
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -173,8 +173,8 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 365
-    Top = 176
+    Left = 372
+    Top = 184
     Width = 75
     Height = 25
     Cancel = True
@@ -254,8 +254,8 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
       'Select FSC_Material_Claim'
       'From FSC_Material_Claim'
       'Where Claim_Description = :GUID')
-    Left = 192
-    Top = 24
+    Left = 304
+    Top = 64
     ParamData = <
       item
         Name = 'GUID'
@@ -277,8 +277,8 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
       ''
       ''
       ' ')
-    Left = 276
-    Top = 32
+    Left = 244
+    Top = 120
     ParamData = <
       item
         Name = 'GUID'
@@ -297,8 +297,8 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
       'Where'
       '(FSC_Material_Claim = :FSC_Material_Claim) '
       '')
-    Left = 144
-    Top = 16
+    Left = 232
+    Top = 64
     ParamData = <
       item
         Name = 'Claim_Description'
@@ -322,8 +322,8 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
       'Delete From FSC_Material_Claim'
       'Where'
       '(FSC_Material_Claim = :FSC_Material_Claim)')
-    Left = 240
-    Top = 16
+    Left = 344
+    Top = 96
     ParamData = <
       item
         Name = 'FSC_Material_Claim'
@@ -331,8 +331,8 @@ object PBMaintFSCClaimFrm: TPBMaintFSCClaimFrm
   end
   object DetsSRC: TDataSource
     DataSet = AddSQL
-    Left = 320
-    Top = 16
+    Left = 184
+    Top = 112
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'

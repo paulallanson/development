@@ -3,33 +3,33 @@ object frmPBLUStockRpts: TfrmPBLUStockRpts
   Top = 109
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Stock Reports'
-  ClientHeight = 392
+  ClientHeight = 480
   ClientWidth = 419
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 419
-    Height = 351
+    Height = 439
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 407
-    ExplicitHeight = 300
+    ExplicitWidth = 413
+    ExplicitHeight = 342
     object lstvwReports: TListView
       Left = 0
       Top = 0
       Width = 419
-      Height = 351
+      Height = 439
       Align = alClient
       Columns = <
         item
@@ -108,21 +108,20 @@ object frmPBLUStockRpts: TfrmPBLUStockRpts
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
-      ExplicitWidth = 413
-      ExplicitHeight = 309
+      ExplicitHeight = 351
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 351
+    Top = 439
     Width = 419
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 300
-    ExplicitWidth = 407
+    ExplicitTop = 342
+    ExplicitWidth = 413
     DesignSize = (
       419
       41)
@@ -144,7 +143,7 @@ object frmPBLUStockRpts: TfrmPBLUStockRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitLeft = 316
+      ExplicitLeft = 322
     end
   end
 end

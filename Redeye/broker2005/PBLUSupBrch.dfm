@@ -2,30 +2,30 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   Left = 195
   Top = 104
   Caption = 'Look-Up A Branch'
-  ClientHeight = 387
+  ClientHeight = 409
   ClientWidth = 458
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object SuppLabel: TLabel
     Left = 8
-    Top = 6
-    Width = 54
-    Height = 13
+    Top = 2
+    Width = 61
+    Height = 17
     Caption = 'SuppLabel'
   end
   object CountLabel: TLabel
-    Left = 270
+    Left = 264
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -38,7 +38,7 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -46,7 +46,7 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -62,23 +62,23 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 236
+    Top = 248
     Width = 313
-    Height = 61
+    Height = 79
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 22
       Width = 297
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object ThisChkBox: TCheckBox
       Left = 8
-      Top = 40
+      Top = 53
       Width = 185
       Height = 17
       Caption = 'Head Office'
@@ -88,7 +88,7 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   end
   object SelectBitBtn: TBitBtn
     Left = 340
-    Top = 284
+    Top = 334
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -99,7 +99,7 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 340
-    Top = 312
+    Top = 362
     Width = 75
     Height = 25
     Kind = bkClose
@@ -107,8 +107,8 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 336
-    Top = 128
+    Left = 335
+    Top = 112
     Width = 87
     Height = 105
     Caption = 'Function'
@@ -218,7 +218,7 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
   end
   object DispPanel: TPanel
     Left = 9
-    Top = 305
+    Top = 333
     Width = 313
     Height = 57
     BevelOuter = bvLowered
@@ -271,22 +271,22 @@ object PBLUSupBrchFrm: TPBLUSupBrchFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 32
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 20
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'Fax:'
     end
   end

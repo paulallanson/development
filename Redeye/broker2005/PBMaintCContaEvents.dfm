@@ -4,27 +4,27 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Maintain Customer/Branch Contact Events'
-  ClientHeight = 374
-  ClientWidth = 331
+  ClientHeight = 383
+  ClientWidth = 354
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 16
     Top = 347
-    Width = 133
-    Height = 13
+    Width = 160
+    Height = 17
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -189,7 +189,7 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -198,22 +198,22 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Operator'
     end
     object Label2: TLabel
       Left = 8
       Top = 60
-      Width = 24
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Date'
     end
     object Label3: TLabel
       Left = 192
       Top = 60
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Time'
       Visible = False
     end
@@ -227,20 +227,20 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
       OnChange = DispMemoChange
     end
     object OperatorDBLookupComboBox: TDBLookupComboBox
-      Left = 64
+      Left = 67
       Top = 24
       Width = 241
-      Height = 21
+      Height = 25
       KeyField = 'Operator'
       ListField = 'Name'
       ListSource = OperatorsSRC
       TabOrder = 1
     end
     object TimeDateTimePicker: TDateTimePicker
-      Left = 224
+      Left = 227
       Top = 56
       Width = 81
-      Height = 21
+      Height = 25
       Date = 45197.000000000000000000
       Time = 0.434360891202231900
       ShowCheckbox = True
@@ -252,7 +252,7 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
       Left = 64
       Top = 56
       Width = 97
-      Height = 21
+      Height = 25
       Date = 37453.000000000000000000
       Time = 37453.000000000000000000
       TabOrder = 3
@@ -384,13 +384,13 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
       'Select Operator, Name'
       'From Operator'
       'Order By Name')
-    Left = 96
-    Top = 28
+    Left = 120
+    Top = 131
   end
   object OperatorsSRC: TDataSource
     DataSet = GetOperatorsSQL
-    Left = 136
-    Top = 28
+    Left = 202
+    Top = 155
   end
   object QryZero: TFDQuery
     ConnectionName = 'PB'

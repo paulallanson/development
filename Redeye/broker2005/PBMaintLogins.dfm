@@ -7,14 +7,14 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 454
@@ -23,6 +23,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 445
+    ExplicitWidth = 685
     DesignSize = (
       691
       41)
@@ -45,7 +47,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       OnClick = btnRefreshClick
     end
     object btnClose: TButton
-      Left = 607
+      Left = 601
       Top = 8
       Width = 75
       Height = 25
@@ -53,6 +55,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 595
     end
   end
   object dbgDetails: TDBGrid
@@ -65,7 +68,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
@@ -73,7 +76,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnTitleClick = dbgDetailsTitleClick
@@ -126,6 +129,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 486
+    ExplicitWidth = 685
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'PB'

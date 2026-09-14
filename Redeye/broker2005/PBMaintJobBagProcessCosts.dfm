@@ -7,7 +7,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -16,7 +16,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object pnlBottom: TPanel
     Left = 0
     Top = 398
@@ -25,6 +25,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 389
+    ExplicitWidth = 1228
     object OKBitBtn: TBitBtn
       Left = 536
       Top = 7
@@ -210,7 +212,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 488
     Top = 184
     Width = 129
-    Height = 21
+    Height = 25
     KeyField = 'Price_Unit'
     ListField = 'Description'
     ListSource = dtsPriceUnit
@@ -224,7 +226,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 256
     Top = 64
     Width = 201
-    Height = 21
+    Height = 25
     KeyField = 'Process'
     ListField = 'Process_Description'
     ListSource = dtsProcess
@@ -242,12 +244,13 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1228
   end
   object dblkpVAT: TDBLookupComboBox
     Left = 488
     Top = 224
     Width = 129
-    Height = 21
+    Height = 25
     KeyField = 'VAT_Code'
     ListField = 'Description'
     ListSource = dtsVAT
@@ -261,7 +264,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 488
     Top = 64
     Width = 201
-    Height = 21
+    Height = 25
     KeyField = 'Cost_Number'
     ListField = 'Cost_Description'
     ListSource = dtsOperation
@@ -275,7 +278,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 488
     Top = 104
     Width = 201
-    Height = 21
+    Height = 25
     KeyField = 'Category_Number'
     ListField = 'Cost_Description'
     ListSource = dtsCategory
@@ -289,7 +292,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 488
     Top = 144
     Width = 201
-    Height = 21
+    Height = 25
     KeyField = 'Sub_Category'
     ListField = 'Cost_Description'
     ListSource = dtsSubCategory

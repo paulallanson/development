@@ -9,13 +9,13 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
   Constraints.MinWidth = 723
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgSO: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -33,7 +33,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgSOCellClick
@@ -70,7 +70,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
         Expanded = False
         FieldName = 'Actual_Delivery_Date'
         Title.Caption = 'Date Delivered'
-        Width = 77
+        Width = 115
         Visible = True
       end>
   end
@@ -86,6 +86,8 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       item
         Width = 50
       end>
+    ExplicitTop = 398
+    ExplicitWidth = 705
   end
   object Panel1: TPanel
     Left = 0
@@ -96,6 +98,8 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 302
+    ExplicitWidth = 705
     DesignSize = (
       711
       96)
@@ -108,23 +112,23 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
-        Left = 24
+        Left = 14
         Top = 22
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object edtCustomerName: TEdit
-        Left = 72
+        Left = 76
         Top = 18
         Width = 209
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = edtCustomerNameChange
       end
       object btnSweep: TBitBtn
         Left = 296
-        Top = 16
+        Top = 18
         Width = 75
         Height = 25
         Caption = 'S&weep'
@@ -142,11 +146,12 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       Caption = 'Selected Sales Order'
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 410
       object edtSONumber: TEdit
-        Left = 3
-        Top = 16
+        Left = 8
+        Top = 19
         Width = 137
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnKeyPress = edtSONumberKeyPress
       end
@@ -160,6 +165,7 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 2
+      ExplicitLeft = 578
       object btnSelect: TBitBtn
         Left = 16
         Top = 20

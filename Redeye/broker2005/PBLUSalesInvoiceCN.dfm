@@ -9,14 +9,14 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
   Constraints.MinWidth = 650
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetail: TPanel
     Left = 0
     Top = 0
@@ -26,6 +26,8 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 753
+    ExplicitHeight = 363
     object dbgSalesInvoice: TDBGrid
       Left = 0
       Top = 0
@@ -36,7 +38,7 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -44,7 +46,7 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDrawColumnCell = dbgSalesInvoiceDrawColumnCell
@@ -62,7 +64,6 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
           FieldName = 'Goods_Value'
           Title.Alignment = taRightJustify
           Title.Caption = 'Goods Value'
-          Width = 79
           Visible = True
         end
         item
@@ -119,14 +120,16 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 363
+    ExplicitWidth = 753
     DesignSize = (
       759
       80)
     object lblSalesInvNo: TLabel
-      Left = 460
-      Top = 62
-      Width = 65
-      Height = 13
+      Left = 429
+      Top = 56
+      Width = 74
+      Height = 17
       Caption = 'Sales Invoice'
     end
     object GroupBox1: TGroupBox
@@ -140,29 +143,29 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       object Label1: TLabel
         Left = 16
         Top = 16
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object NameEdit: TEdit
         Left = 16
         Top = 32
         Width = 257
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = NameEditChange
       end
     end
     object edtSalesInvNo: TEdit
-      Left = 544
-      Top = 54
+      Left = 513
+      Top = 48
       Width = 110
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnKeyPress = edtSalesInvNoKeyPress
     end
     object GroupBox2: TGroupBox
-      Left = 634
+      Left = 628
       Top = 1
       Width = 105
       Height = 76
@@ -170,6 +173,7 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 2
+      ExplicitLeft = 622
       object btnSelect: TBitBtn
         Left = 14
         Top = 16
@@ -262,6 +266,8 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       item
         Width = 50
       end>
+    ExplicitTop = 443
+    ExplicitWidth = 753
   end
   object SearchTimer: TTimer
     Enabled = False

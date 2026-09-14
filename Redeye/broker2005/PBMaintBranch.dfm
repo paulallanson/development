@@ -3,12 +3,12 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   Top = 18
   BorderStyle = bsDialog
   Caption = 'Maintain Branches'
-  ClientHeight = 614
-  ClientWidth = 452
+  ClientHeight = 628
+  ClientWidth = 474
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,47 +17,46 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    452
-    614)
-  TextHeight = 13
+    474
+    628)
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 136
-    Top = 587
-    Width = 145
-    Height = 15
+    Left = 127
+    Top = 599
+    Width = 154
+    Height = 16
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete the above details ?'
+    Caption = 'Delete the above details'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitTop = 588
   end
   object Label1: TLabel
     Left = 8
-    Top = 18
-    Width = 49
-    Height = 13
+    Top = 15
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object Label2: TLabel
     Left = 8
-    Top = 47
-    Width = 70
-    Height = 13
+    Top = 44
+    Width = 82
+    Height = 17
     Caption = 'Branch Name '
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
     Left = 292
-    Top = 581
+    Top = 595
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -131,10 +130,11 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = OKBitBtnClick
+    ExplicitTop = 572
   end
   object CancelBitBtn: TBitBtn
     Left = 372
-    Top = 581
+    Top = 595
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -208,16 +208,18 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = CancelBitBtnClick
+    ExplicitTop = 572
   end
   object PrintBitBtn: TBitBtn
     Left = 8
-    Top = 581
+    Top = 595
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Print'
     TabOrder = 5
     OnClick = PrintBitBtnClick
+    ExplicitTop = 572
   end
   object pgBranches: TPageControl
     Left = 8
@@ -232,23 +234,24 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         Left = 0
         Top = 0
         Width = 425
-        Height = 477
+        Height = 473
         Align = alClient
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 477
         DesignSize = (
           425
-          477)
+          473)
         object Label3: TLabel
           Left = 16
           Top = 12
-          Width = 41
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -256,12 +259,12 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label7: TLabel
           Left = 16
           Top = 108
-          Width = 47
-          Height = 13
+          Width = 54
+          Height = 17
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -269,12 +272,12 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label8: TLabel
           Left = 16
           Top = 132
-          Width = 33
-          Height = 13
+          Width = 36
+          Height = 17
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -282,12 +285,12 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label9: TLabel
           Left = 16
           Top = 154
-          Width = 19
-          Height = 15
+          Width = 22
+          Height = 16
           Caption = 'Fax'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = []
           ParentFont = False
@@ -295,12 +298,12 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label10: TLabel
           Left = 16
           Top = 181
-          Width = 27
-          Height = 13
+          Width = 31
+          Height = 17
           Caption = 'Email'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -308,12 +311,12 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label11: TLabel
           Left = 16
           Top = 212
-          Width = 72
-          Height = 13
+          Width = 81
+          Height = 17
           Caption = 'Account Code'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -321,19 +324,19 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label4: TLabel
           Left = 16
           Top = 238
-          Width = 32
-          Height = 13
+          Width = 35
+          Height = 17
           Caption = 'Status'
         end
         object lblShortCode: TLabel
           Left = 16
           Top = 268
-          Width = 58
-          Height = 13
+          Width = 66
+          Height = 17
           Caption = 'Short Code'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -341,31 +344,31 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object Label5: TLabel
           Left = 16
           Top = 84
-          Width = 51
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Town/City'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object Label18: TLabel
-          Left = 223
+          Left = 230
           Top = 108
-          Width = 37
-          Height = 13
+          Width = 40
+          Height = 17
           Caption = 'County'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object NotesBitBtn: TBitBtn
-          Left = 236
+          Left = 277
           Top = 300
           Width = 89
           Height = 25
@@ -395,89 +398,89 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           OnClick = NotesBitBtnClick
         end
         object BuildingEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 8
           Width = 306
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 40
           TabOrder = 0
           Text = 'BuildingEdit'
         end
         object StreetEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 32
           Width = 306
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 40
           TabOrder = 1
           Text = 'StreetEdit'
         end
         object LocaleEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 56
           Width = 306
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 40
           TabOrder = 2
           Text = 'LocaleEdit'
         end
         object TownEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 80
           Width = 306
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 40
           TabOrder = 3
           Text = 'TownEdit'
         end
         object PhoneEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 128
           Width = 139
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 6
           Text = 'PhoneEdit'
           OnChange = PhoneEditChange
         end
         object FaxEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 152
           Width = 139
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 7
           Text = 'FaxEdit'
         end
         object EMailEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 176
           Width = 306
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 40
           TabOrder = 8
           Text = 'EMailEdit'
         end
         object PostCodeEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 104
           Width = 105
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 10
           TabOrder = 4
           Text = 'POSTCODEEDIT'
         end
         object AccCodeEdit: TEdit
-          Left = 95
+          Left = 104
           Top = 208
           Width = 90
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 8
           TabOrder = 9
@@ -498,40 +501,40 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
             409
             110)
           object InvToCustLabel: TLabel
-            Left = 72
+            Left = 76
             Top = 25
-            Width = 81
-            Height = 13
+            Width = 95
+            Height = 17
             Anchors = [akLeft, akTop, akRight]
             Caption = 'Customer Name'
           end
           object InvToBranchLabel: TLabel
-            Left = 72
+            Left = 76
             Top = 53
-            Width = 67
-            Height = 13
+            Width = 78
+            Height = 17
             Anchors = [akLeft, akTop, akRight]
             Caption = 'Branch Name'
           end
           object Label35: TLabel
             Left = 16
             Top = 25
-            Width = 49
-            Height = 13
+            Width = 56
+            Height = 17
             Caption = 'Customer'
           end
           object Label36: TLabel
             Left = 16
             Top = 53
-            Width = 35
-            Height = 13
+            Width = 39
+            Height = 17
             Caption = 'Branch'
           end
           object Label37: TLabel
             Left = 16
-            Top = 85
-            Width = 27
-            Height = 13
+            Top = 84
+            Width = 31
+            Height = 17
             Caption = 'Email'
           end
           object InvCustBtn: TButton
@@ -553,10 +556,10 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
             OnClick = InvToBranchClick
           end
           object edtInvToContact: TEdit
-            Left = 72
+            Left = 76
             Top = 80
             Width = 241
-            Height = 21
+            Height = 25
             Color = clMenuBar
             ReadOnly = True
             TabOrder = 2
@@ -564,7 +567,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           end
           object BitBtn5: TBitBtn
             Left = 336
-            Top = 79
+            Top = 81
             Width = 25
             Height = 23
             Hint = 'Customer Type maintenance'
@@ -582,10 +585,10 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           end
         end
         object ProspectComboBox: TComboBox
-          Left = 95
+          Left = 104
           Top = 235
           Width = 155
-          Height = 21
+          Height = 25
           Style = csDropDownList
           TabOrder = 10
           Items.Strings = (
@@ -593,7 +596,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
             'Put on Ledger')
         end
         object DelivNotesBitBtn: TBitBtn
-          Left = 236
+          Left = 277
           Top = 329
           Width = 89
           Height = 25
@@ -631,7 +634,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           Caption = 'Use Branch Name '
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -640,10 +643,10 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           TabOrder = 14
         end
         object edtShortCode: TEdit
-          Left = 95
+          Left = 104
           Top = 264
           Width = 90
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 10
           TabOrder = 11
@@ -661,13 +664,13 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         object chkbxUseHODeliveryNotes: TCheckBox
           Left = 16
           Top = 336
-          Width = 217
+          Width = 255
           Height = 17
           Hint = 'Use Head Office Delivery Notes'
           Caption = 'Use Head Office Delivery Note details'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -684,10 +687,10 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           TabOrder = 12
         end
         object CountyEdit: TEdit
-          Left = 264
+          Left = 273
           Top = 104
           Width = 137
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 5
           Text = 'CountyEdit'
@@ -738,7 +741,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -826,7 +829,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -859,25 +862,25 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       ImageIndex = 3
       DesignSize = (
         425
-        477)
+        473)
       object Label6: TLabel
         Left = 8
         Top = 21
-        Width = 78
-        Height = 13
+        Width = 88
+        Height = 17
         Caption = 'Recipient Email'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object edtRecipientEmail: TEdit
-        Left = 95
+        Left = 102
         Top = 17
         Width = 306
-        Height = 21
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         MaxLength = 40
         TabOrder = 0
@@ -886,10 +889,10 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     end
   end
   object CustNameEdit: TEdit
-    Left = 87
-    Top = 14
-    Width = 291
-    Height = 21
+    Left = 92
+    Top = 11
+    Width = 307
+    Height = 25
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 40
     ReadOnly = True
@@ -897,10 +900,10 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     Text = 'CustNameEdit'
   end
   object NameEdit: TEdit
-    Left = 87
-    Top = 43
-    Width = 291
-    Height = 21
+    Left = 92
+    Top = 40
+    Width = 307
+    Height = 25
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 40
     TabOrder = 1
@@ -913,8 +916,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       'Select Max(Branch_No) as Last_Code'
       'From Customer_Branch'
       'Where (Customer = :Customer)')
-    Left = 204
-    Top = 436
+    Left = 255
+    Top = 441
     ParamData = <
       item
         Name = 'Customer'
@@ -978,8 +981,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       ' '
       ' '
       ' ')
-    Left = 240
-    Top = 436
+    Left = 300
+    Top = 441
     ParamData = <
       item
         Name = 'Customer'
@@ -1102,8 +1105,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       ' '
       ' '
       ' ')
-    Left = 272
-    Top = 436
+    Left = 340
+    Top = 441
     ParamData = <
       item
         Name = 'Name'
@@ -1196,8 +1199,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       'Where'
       '(Customer = :Customer) and'
       '(Branch_No = :Branch_No)')
-    Left = 308
-    Top = 436
+    Left = 385
+    Top = 441
     ParamData = <
       item
         Name = 'Customer'
@@ -1211,8 +1214,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     SQL.Strings = (
       'Select Name from Customer'
       'Where Customer = :Customer')
-    Left = 216
-    Top = 32
+    Left = 256
+    Top = 136
     ParamData = <
       item
         Name = 'Customer'
@@ -1224,8 +1227,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       'Select Name from Customer_Branch'
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)')
-    Left = 244
-    Top = 56
+    Left = 268
+    Top = 176
     ParamData = <
       item
         Name = 'Customer'
@@ -1237,8 +1240,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 304
-    Top = 120
+    Left = 312
+    Top = 192
   end
   object CheckCustAccExistsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1248,8 +1251,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       'Where (Customer.Customer <> :Customer) and'
       '      (Customer_Branch.Customer = Customer.Customer) and'
       '      (Customer_Branch.Account_Code = :Acc_Code)')
-    Left = 228
-    Top = 276
+    Left = 381
+    Top = 233
     ParamData = <
       item
         Name = 'Customer'
@@ -1273,8 +1276,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       'From Supplier, Supplier_Branch'
       'Where (Supplier_Branch.Supplier = Supplier.Supplier) and'
       '      (Supplier_Branch.Account_Code = :Acc_Code)')
-    Left = 228
-    Top = 212
+    Left = 324
+    Top = 276
     ParamData = <
       item
         Name = 'Acc_Code'
@@ -1284,8 +1287,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   object FlashDelivTimer: TTimer
     Enabled = False
     OnTimer = FlashDelivTimerTimer
-    Left = 264
-    Top = 144
+    Left = 304
+    Top = 224
   end
   object UpdDelivNotesOnlySQL: TFDQuery
     ConnectionName = 'PB'
@@ -1298,7 +1301,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       ' '
       ' '
       ' ')
-    Left = 268
+    Left = 196
     Top = 216
     ParamData = <
       item
@@ -1320,8 +1323,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       '(Customer = :Customer) and'
       '(Branch_No = :Branch_No)'
       ' ')
-    Left = 308
-    Top = 220
+    Left = 228
+    Top = 236
     ParamData = <
       item
         Name = 'Narrative'
@@ -1343,8 +1346,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       '(Customer_Branch.Customer = :Customer) and'
       '(Customer_Branch.Branch_no = :Branch_no) and'
       '(Customer.Customer = Customer_Branch.Customer)')
-    Left = 360
-    Top = 111
+    Left = 274
+    Top = 203
     ParamData = <
       item
         Name = 'Customer'
@@ -1360,8 +1363,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       'from Customer_Branch_CostCentre'
       'where Customer = :Customer and Branch_no = :Branch_no'
       'order by Description')
-    Left = 20
-    Top = 88
+    Left = 169
+    Top = 110
     ParamData = <
       item
         Name = 'Customer'
@@ -1372,8 +1375,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   end
   object dtsCostCentres: TDataSource
     DataSet = qryCostCentres
-    Left = 52
-    Top = 128
+    Left = 337
+    Top = 104
   end
   object qryContacts: TFDQuery
     ConnectionName = 'PB'
@@ -1386,8 +1389,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         'active is NULL)'
       '      or (Customer_Contact.Inactive = :Inactive))       '
       'order by Name')
-    Left = 20
-    Top = 120
+    Left = 161
+    Top = 174
     ParamData = <
       item
         Name = 'Customer'
@@ -1401,8 +1404,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   end
   object dtsContacts: TDataSource
     DataSet = qryContacts
-    Left = 92
-    Top = 120
+    Left = 379
+    Top = 70
   end
   object GetContactNameSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1411,8 +1414,8 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No) and'
       '(Contact_no = :Contact_no)')
-    Left = 296
-    Top = 304
+    Left = 402
+    Top = 372
     ParamData = <
       item
         Name = 'Customer'

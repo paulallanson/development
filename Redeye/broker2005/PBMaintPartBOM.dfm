@@ -8,21 +8,21 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 168
     Top = 138
-    Width = 109
-    Height = 13
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -181,54 +181,54 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
   object grpbxDetails: TGroupBox
     Left = 8
     Top = 8
-    Width = 457
+    Width = 466
     Height = 113
     ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 98
-      Height = 13
+      Width = 112
+      Height = 17
       Caption = 'Composite Product'
     end
     object Label2: TLabel
       Left = 8
       Top = 52
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label3: TLabel
       Left = 8
       Top = 85
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object edtProduct: TEdit
-      Left = 112
+      Left = 127
       Top = 16
       Width = 153
-      Height = 21
+      Height = 25
       Enabled = False
       ReadOnly = True
       TabOrder = 0
     end
     object edtDescription: TEdit
-      Left = 112
+      Left = 127
       Top = 48
       Width = 329
-      Height = 21
+      Height = 25
       Enabled = False
       ReadOnly = True
       TabOrder = 1
     end
     object spnQuantity: TSpinEdit
-      Left = 112
+      Left = 127
       Top = 80
       Width = 81
-      Height = 22
+      Height = 27
       MaxValue = 100
       MinValue = 0
       TabOrder = 2

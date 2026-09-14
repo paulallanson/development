@@ -8,12 +8,12 @@ object frmPBLUCustomerRpts: TfrmPBLUCustomerRpts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -23,6 +23,8 @@ object frmPBLUCustomerRpts: TfrmPBLUCustomerRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 407
+    ExplicitHeight = 233
     object lstvwReports: TListView
       Left = 0
       Top = 0
@@ -60,6 +62,8 @@ object frmPBLUCustomerRpts: TfrmPBLUCustomerRpts
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 407
+      ExplicitHeight = 233
     end
   end
   object Panel2: TPanel
@@ -71,6 +75,8 @@ object frmPBLUCustomerRpts: TfrmPBLUCustomerRpts
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 233
+    ExplicitWidth = 407
     DesignSize = (
       413
       41)
@@ -92,6 +98,7 @@ object frmPBLUCustomerRpts: TfrmPBLUCustomerRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 322
     end
   end
 end

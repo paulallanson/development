@@ -3,35 +3,35 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
   Top = 104
   BorderStyle = bsDialog
   Caption = 'Maintain Supplier Order type'
-  ClientHeight = 244
-  ClientWidth = 425
+  ClientHeight = 255
+  ClientWidth = 435
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object SuppLabel: TLabel
     Left = 8
     Top = 6
-    Width = 54
-    Height = 13
+    Width = 61
+    Height = 17
     Caption = 'SuppLabel'
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 24
+    Top = 32
     Width = 320
     Height = 193
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -39,7 +39,7 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = DetsDBGridDblClick
@@ -48,7 +48,7 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
         Expanded = False
         FieldName = 'Supp_order_type'
         Title.Caption = 'Order Type'
-        Width = 69
+        Width = 81
         Visible = True
       end
       item
@@ -61,7 +61,7 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 340
-    Top = 192
+    Top = 200
     Width = 75
     Height = 25
     Kind = bkClose
@@ -70,7 +70,7 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 336
-    Top = 64
+    Top = 72
     Width = 87
     Height = 105
     Caption = 'Function'
@@ -148,8 +148,8 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
   end
   object stsBrDets: TStatusBar
     Left = 0
-    Top = 225
-    Width = 425
+    Top = 236
+    Width = 435
     Height = 19
     Panels = <
       item
@@ -158,6 +158,8 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
       item
         Width = 50
       end>
+    ExplicitTop = 225
+    ExplicitWidth = 425
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

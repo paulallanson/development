@@ -2,57 +2,57 @@ object PBLUSContaFrm: TPBLUSContaFrm
   Left = 58
   Top = 113
   Caption = 'Look-Up Supplier/Branch Contacts'
-  ClientHeight = 384
-  ClientWidth = 432
+  ClientHeight = 420
+  ClientWidth = 445
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object SuppLabel: TLabel
     Left = 80
     Top = 6
-    Width = 54
-    Height = 13
+    Width = 61
+    Height = 17
     Caption = 'SuppLabel'
   end
   object CountLabel: TLabel
-    Left = 270
-    Top = 224
-    Width = 59
-    Height = 13
+    Left = 264
+    Top = 231
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 38
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 46
-    Height = 13
+    Width = 51
+    Height = 17
     Caption = 'Supplier:'
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 40
+    Top = 47
     Width = 320
     Height = 177
     DataSource = DetsSRC
@@ -84,9 +84,9 @@ object PBLUSContaFrm: TPBLUSContaFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 248
+    Top = 257
     Width = 321
-    Height = 65
+    Height = 76
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
@@ -94,13 +94,13 @@ object PBLUSContaFrm: TPBLUSContaFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 42
+      Top = 49
       Width = 217
       Height = 17
       Caption = 'Only show active supplier contacts'
@@ -111,8 +111,8 @@ object PBLUSContaFrm: TPBLUSContaFrm
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 340
-    Top = 316
+    Left = 338
+    Top = 339
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -122,8 +122,8 @@ object PBLUSContaFrm: TPBLUSContaFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 340
-    Top = 344
+    Left = 338
+    Top = 367
     Width = 75
     Height = 25
     Kind = bkClose
@@ -131,8 +131,8 @@ object PBLUSContaFrm: TPBLUSContaFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 336
-    Top = 128
+    Left = 334
+    Top = 119
     Width = 87
     Height = 105
     Caption = 'Function'
@@ -210,7 +210,7 @@ object PBLUSContaFrm: TPBLUSContaFrm
   end
   object DispPanel: TPanel
     Left = 7
-    Top = 316
+    Top = 339
     Width = 324
     Height = 57
     BevelOuter = bvLowered
@@ -263,22 +263,22 @@ object PBLUSContaFrm: TPBLUSContaFrm
     object LabelName: TLabel
       Left = 28
       Top = 2
-      Width = 32
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 28
       Top = 18
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 28
       Top = 34
-      Width = 39
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Mobile:'
     end
   end

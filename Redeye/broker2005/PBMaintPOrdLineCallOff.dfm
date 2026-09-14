@@ -3,25 +3,25 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
   Top = 50
   Caption = 'Maintain Call Off Orders'
   ClientHeight = 570
-  ClientWidth = 740
+  ClientWidth = 768
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 160
     Top = 545
-    Width = 104
-    Height = 15
+    Width = 118
+    Height = 16
     Caption = 'Delete this Call Off'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,12 +30,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
   object DetsGrpBox: TGroupBox
     Left = 2
     Top = 215
-    Width = 727
+    Width = 758
     Height = 319
     Caption = 'Delivery to'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -43,22 +43,22 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     object Label9: TLabel
       Left = 16
       Top = 158
-      Width = 48
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Due Date'
     end
     object Label11: TLabel
       Left = 16
       Top = 191
-      Width = 67
-      Height = 13
+      Width = 77
+      Height = 17
       Caption = 'Delivery Date'
     end
     object AddrTypeRadGrp: TRadioGroup
       Left = 216
       Top = 13
       Width = 105
-      Height = 95
+      Height = 108
       Caption = 'Address Type'
       Items.Strings = (
         'Ad Hoc'
@@ -72,7 +72,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     object AddrGrpBox: TGroupBox
       Left = 336
       Top = 13
-      Width = 385
+      Width = 391
       Height = 208
       Caption = 'Address Details'
       ParentBackground = False
@@ -80,19 +80,19 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object AddrTypeLabel: TLabel
         Left = 8
         Top = 20
-        Width = 51
-        Height = 13
+        Width = 60
+        Height = 17
         Caption = 'Addr Type'
       end
       object BranchNameLabel: TLabel
         Left = 8
         Top = 67
-        Width = 35
-        Height = 13
+        Width = 39
+        Height = 17
         Caption = 'Branch'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -100,12 +100,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label10: TLabel
         Left = 8
         Top = 91
-        Width = 41
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Address'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -113,12 +113,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label12: TLabel
         Left = 8
         Top = 186
-        Width = 47
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Postcode'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -126,15 +126,15 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object lblFAO: TLabel
         Left = 8
         Top = 44
-        Width = 21
-        Height = 13
+        Width = 23
+        Height = 17
         Caption = 'FAO'
       end
       object NameEdit: TEdit
         Left = 85
         Top = 16
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 0
@@ -143,7 +143,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 85
         Top = 63
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 1
@@ -152,7 +152,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 85
         Top = 87
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 2
@@ -161,7 +161,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 85
         Top = 111
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 3
@@ -170,7 +170,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 85
         Top = 135
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 4
@@ -179,7 +179,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 85
         Top = 158
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 5
@@ -188,7 +188,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 85
         Top = 182
         Width = 105
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         MaxLength = 10
         ReadOnly = True
@@ -213,7 +213,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Left = 85
         Top = 40
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 8
       end
@@ -244,12 +244,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label13: TLabel
         Left = 8
         Top = 18
-        Width = 50
-        Height = 13
+        Width = 58
+        Height = 17
         Caption = 'To Deliver'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -257,12 +257,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label14: TLabel
         Left = 8
         Top = 50
-        Width = 48
-        Height = 13
+        Width = 55
+        Height = 17
         Caption = 'Delivered'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -270,12 +270,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label16: TLabel
         Left = 8
         Top = 104
-        Width = 31
-        Height = 13
+        Width = 36
+        Height = 17
         Caption = 'No Of'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -283,7 +283,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label17: TLabel
         Left = 8
         Top = 118
-        Width = 29
+        Width = 30
         Height = 13
         Caption = 'Boxes'
         Font.Charset = ANSI_CHARSET
@@ -296,8 +296,8 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       object Label2: TLabel
         Left = 8
         Top = 80
-        Width = 38
-        Height = 13
+        Width = 45
+        Height = 17
         Caption = 'Box Qty'
       end
       object QtyToDeliverMemo: TMemo
@@ -347,35 +347,35 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Left = 96
       Top = 154
       Width = 105
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnExit = DatePointEditExit
     end
     object DelInstructPanel: TPanel
       Left = 2
       Top = 224
-      Width = 723
+      Width = 754
       Height = 93
       Align = alBottom
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
       ParentFont = False
       TabOrder = 4
-      ExplicitTop = 225
+      ExplicitWidth = 723
       object Label18: TLabel
-        Left = 337
-        Top = 2
-        Width = 104
-        Height = 13
+        Left = 338
+        Top = 18
+        Width = 116
+        Height = 17
         Caption = 'Delivery Instructions'
       end
       object DelInstructMemo: TMemo
-        Left = 451
-        Top = 1
+        Left = 460
+        Top = 17
         Width = 270
         Height = 53
         TabOrder = 0
@@ -391,29 +391,29 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         object Label15: TLabel
           Left = 8
           Top = 43
-          Width = 18
-          Height = 13
+          Width = 20
+          Height = 17
           Caption = 'Sell'
         end
         object Label19: TLabel
           Left = 8
           Top = 19
-          Width = 23
-          Height = 13
+          Width = 26
+          Height = 17
           Caption = 'Cost'
         end
         object Label21: TLabel
           Left = 136
           Top = 43
-          Width = 43
-          Height = 13
+          Width = 47
+          Height = 17
           Caption = 'Sell Unit'
         end
         object Label22: TLabel
           Left = 136
           Top = 19
-          Width = 48
-          Height = 13
+          Width = 53
+          Height = 17
           Caption = 'Cost Unit'
         end
         object SellPriceMemo: TMemo
@@ -444,7 +444,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
           Left = 192
           Top = 40
           Width = 129
-          Height = 21
+          Height = 25
           KeyField = 'Price_Unit'
           ListField = 'Description'
           ListSource = PBPODM.PriceUnitSRC2
@@ -454,7 +454,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
           Left = 192
           Top = 16
           Width = 129
-          Height = 21
+          Height = 25
           KeyField = 'Price_Unit'
           ListField = 'Description'
           ListSource = PBPODM.PriceUnitSRC1
@@ -469,7 +469,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         Caption = 'Make available to invoice'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -482,7 +482,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Left = 96
       Top = 186
       Width = 105
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 5
     end
@@ -533,7 +533,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     Caption = 'Supplier'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -545,15 +545,15 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     object Label1: TLabel
       Left = 33
       Top = 22
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
     end
     object Label7: TLabel
-      Left = 512
-      Top = 23
-      Width = 57
-      Height = 13
+      Left = 509
+      Top = 17
+      Width = 66
+      Height = 17
       Caption = 'Order Date'
     end
     object Label25: TLabel
@@ -573,7 +573,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Left = 74
       Top = 14
       Width = 271
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -596,7 +596,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Left = 578
       Top = 14
       Width = 111
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnExit = OrderDateEdtExit
     end
@@ -626,7 +626,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Left = 74
       Top = 38
       Width = 209
-      Height = 21
+      Height = 25
       TabStop = False
       Anchors = [akLeft, akTop, akRight]
       MaxLength = 40
@@ -653,12 +653,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
   object GroupBox1: TGroupBox
     Left = 2
     Top = 72
-    Width = 727
+    Width = 758
     Height = 140
     Caption = 'Customer'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -667,64 +667,64 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     object Label6: TLabel
       Left = 32
       Top = 20
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
     end
     object Label8: TLabel
       Left = 23
       Top = 45
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
     end
     object Label5: TLabel
-      Left = 7
+      Left = 1
       Top = 93
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label20: TLabel
       Left = 382
       Top = 45
-      Width = 46
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Form Ref'
     end
     object Label3: TLabel
       Left = 372
       Top = 70
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label4: TLabel
       Left = 379
       Top = 20
-      Width = 51
-      Height = 13
+      Width = 60
+      Height = 17
       Caption = 'Order No.'
     end
     object Label23: TLabel
       Left = 374
       Top = 118
-      Width = 58
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Numbering'
     end
     object Label24: TLabel
-      Left = 40
+      Left = 44
       Top = 70
-      Width = 20
-      Height = 13
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object CustomerEdt: TEdit
       Left = 73
       Top = 12
       Width = 272
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -755,16 +755,16 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       WantReturns = False
     end
     object FormRefEdit: TEdit
-      Left = 436
+      Left = 447
       Top = 37
       Width = 221
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 3
     end
     object FormRefButton: TButton
-      Left = 664
+      Left = 675
       Top = 35
       Width = 25
       Height = 25
@@ -779,7 +779,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       OnClick = FormRefButtonClick
     end
     object FormRefClrBitBtn: TBitBtn
-      Left = 696
+      Left = 707
       Top = 35
       Width = 25
       Height = 25
@@ -801,34 +801,34 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       OnClick = FormRefClrBitBtnClick
     end
     object FormDescEdit: TEdit
-      Left = 436
+      Left = 447
       Top = 62
       Width = 285
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 6
     end
     object CustRefEdit: TEdit
-      Left = 436
+      Left = 447
       Top = 12
       Width = 160
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 7
       OnChange = CustRefEditChange
     end
     object NumberingEdit: TEdit
-      Left = 436
+      Left = 447
       Top = 110
       Width = 285
-      Height = 21
+      Height = 25
       TabOrder = 8
     end
     object CustContactDBCmbo: TDBLookupComboBox
       Left = 73
       Top = 37
       Width = 209
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = PBPODM.CustContactSRC
@@ -838,7 +838,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Left = 73
       Top = 62
       Width = 209
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 10
     end

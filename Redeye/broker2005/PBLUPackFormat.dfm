@@ -8,13 +8,13 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 332
     Top = 0
@@ -24,21 +24,22 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = 338
     DesignSize = (
       105
       306)
     object FuncGrpBox: TGroupBox
-      Left = 10
-      Top = 132
+      Left = 6
+      Top = 92
       Width = 87
-      Height = 105
+      Height = 117
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
         Left = 6
-        Top = 16
+        Top = 29
         Width = 75
         Height = 25
         Caption = 'Add'
@@ -61,7 +62,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       end
       object ChgBitBtn: TBitBtn
         Left = 6
-        Top = 44
+        Top = 57
         Width = 75
         Height = 25
         Caption = 'Change'
@@ -84,7 +85,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       end
       object DelBitBtn: TBitBtn
         Left = 6
-        Top = 72
+        Top = 85
         Width = 75
         Height = 25
         Caption = 'Delete'
@@ -107,8 +108,8 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       end
     end
     object SelectBitBtn: TBitBtn
-      Left = 16
-      Top = 248
+      Left = 12
+      Top = 224
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -183,8 +184,8 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       OnClick = SelectBitBtnClick
     end
     object CloseBitBtn: TBitBtn
-      Left = 16
-      Top = 276
+      Left = 12
+      Top = 269
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -202,6 +203,8 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 326
+    ExplicitHeight = 297
     object Panel3: TPanel
       Left = 0
       Top = 0
@@ -211,6 +214,8 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 326
+      ExplicitHeight = 256
       object dbgrdDets: TDBGrid
         Left = 0
         Top = 0
@@ -221,7 +226,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -229,7 +234,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
         TabOrder = 0
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -13
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnCellClick = dbgrdDetsCellClick
@@ -255,14 +260,16 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 256
+      ExplicitWidth = 326
       DesignSize = (
         332
         41)
       object CountLabel: TLabel
-        Left = 256
+        Left = 250
         Top = 10
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'CountLabel'

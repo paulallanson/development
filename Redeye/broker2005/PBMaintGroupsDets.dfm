@@ -3,12 +3,12 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
   Top = 185
   BorderStyle = bsDialog
   Caption = 'PBMaintGroupsDetsFrm'
-  ClientHeight = 170
-  ClientWidth = 419
+  ClientHeight = 175
+  ClientWidth = 425
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,26 +16,27 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    419
-    170)
-  TextHeight = 13
+    425
+    175)
+  TextHeight = 17
   object DeleteLabel: TLabel
-    Left = 134
-    Top = 137
-    Width = 79
-    Height = 13
+    Left = 158
+    Top = 142
+    Width = 87
+    Height = 17
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete Details ?'
+    Caption = 'Delete Details'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 137
   end
   object OKBitBtn: TBitBtn
     Left = 254
-    Top = 131
+    Top = 136
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -43,16 +44,18 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = OKBitBtnClick
+    ExplicitTop = 122
   end
   object CancelBitBtn: TBitBtn
     Left = 334
-    Top = 131
+    Top = 136
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 1
+    ExplicitTop = 122
   end
   object DetsGroupBox: TGroupBox
     Left = 8
@@ -64,15 +67,15 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object edtDescription: TEdit
       Left = 94
       Top = 16
       Width = 257
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       OnChange = edtDescriptionChange
@@ -89,8 +92,8 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
       object Label3: TLabel
         Left = 14
         Top = 12
-        Width = 62
-        Height = 13
+        Width = 71
+        Height = 17
         Caption = 'Commission'
       end
       object MemoCommRt: TMemo
@@ -115,16 +118,16 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
       TabOrder = 2
       object Label2: TLabel
         Left = 14
-        Top = 12
-        Width = 35
-        Height = 13
+        Top = 15
+        Width = 39
+        Height = 17
         Caption = 'Colour'
       end
       object edtColor: TEdit
         Left = 92
-        Top = 8
+        Top = 11
         Width = 131
-        Height = 21
+        Height = 25
         MaxLength = 40
         ReadOnly = True
         TabOrder = 0
@@ -132,7 +135,7 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
       end
       object Button1: TButton
         Left = 232
-        Top = 6
+        Top = 11
         Width = 75
         Height = 25
         Caption = 'Colour'
@@ -141,7 +144,7 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
       end
       object Button2: TButton
         Left = 314
-        Top = 6
+        Top = 11
         Width = 75
         Height = 25
         Caption = 'Font'
@@ -151,7 +154,7 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
     end
   end
   object ColorDialog1: TColorDialog
-    Left = 360
-    Top = 59
+    Left = 42
+    Top = 82
   end
 end

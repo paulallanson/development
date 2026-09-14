@@ -3,23 +3,23 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
   Top = 70
   BorderStyle = bsDialog
   Caption = 'Email details'
-  ClientHeight = 192
+  ClientHeight = 206
   ClientWidth = 516
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object rgAddressType: TRadioGroup
     Left = 8
     Top = 8
     Width = 121
-    Height = 65
+    Height = 77
     Caption = 'Address type'
     ItemIndex = 0
     Items.Strings = (
@@ -40,30 +40,30 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 60
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Email'
     end
     object edtEmail: TEdit
-      Left = 56
+      Left = 59
       Top = 56
       Width = 297
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = EnableOK
     end
     object dblkpContacts: TDBLookupComboBox
-      Left = 56
+      Left = 59
       Top = 24
       Width = 233
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = dtsContacts
@@ -80,15 +80,15 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
     object Label3: TLabel
       Left = 8
       Top = 20
-      Width = 38
-      Height = 13
+      Width = 42
+      Height = 17
       Caption = 'Subject'
     end
     object edtSubject: TEdit
       Left = 64
       Top = 16
       Width = 425
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EnableOK
     end
@@ -146,7 +146,7 @@ object PBMaintPOEmailFrm: TPBMaintPOEmailFrm
   object dtsContacts: TDataSource
     DataSet = qrySContacts
     OnDataChange = dtsContactsDataChange
-    Left = 288
-    Top = 32
+    Left = 456
+    Top = 104
   end
 end

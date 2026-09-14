@@ -100,14 +100,12 @@ type
     BoxQtyMemo: TMemo;
     WeightMemo: TMemo;
     DatePointEdit: TEdit;
-    SearchBtn: TButton;
     DeliveryDateEdit: TEdit;
     DeliverViachk: TCheckBox;
     DatePointBtn: TBitBtn;
     DeliveryDateBtn: TBitBtn;
     CustReqDateEdit: TEdit;
     CustReqDatebtn: TBitBtn;
-    btnClear: TBitBtn;
     lblCourier: TLabel;
     Label20: TLabel;
     dblkpCourierService: TDBLookupComboBox;
@@ -120,10 +118,12 @@ type
     qryGetPODelivery: TFDQuery;
     qryAddPODelivery: TFDQuery;
     qryGetNextPODelivery: TFDQuery;
-    DeliveryToStockChk: TCheckBox;
     Label19: TLabel;
     CountyEdit: TEdit;
     StatusBar1: TStatusBar;
+    DeliveryToStockChk: TCheckBox;
+    SearchBtn: TButton;
+    btnClear: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

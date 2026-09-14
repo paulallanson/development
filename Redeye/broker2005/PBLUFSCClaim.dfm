@@ -8,18 +8,18 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -32,7 +32,7 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +40,7 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -66,14 +66,14 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 344
-    Top = 244
+    Left = 350
+    Top = 241
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -147,7 +147,7 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 344
+    Left = 350
     Top = 272
     Width = 75
     Height = 25
@@ -156,18 +156,18 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 338
-    Top = 112
+    Left = 343
+    Top = 96
     Width = 87
-    Height = 105
+    Height = 121
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
-      Left = 6
-      Top = 16
+      Left = 7
+      Top = 24
       Width = 75
-      Height = 25
+      Height = 26
       Caption = 'Add'
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -187,10 +187,10 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
       OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
-      Left = 6
-      Top = 44
+      Left = 7
+      Top = 52
       Width = 75
-      Height = 25
+      Height = 26
       Caption = 'Change'
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -210,10 +210,10 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
       OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
-      Left = 6
-      Top = 72
+      Left = 7
+      Top = 80
       Width = 75
-      Height = 25
+      Height = 26
       Caption = 'Delete'
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
@@ -257,7 +257,7 @@ object PBLUFSCClaimFrm: TPBLUFSCClaimFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 202
+    Top = 70
   end
 end

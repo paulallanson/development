@@ -8,58 +8,58 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 40
-    Width = 138
-    Height = 13
+    Top = 36
+    Width = 156
+    Height = 17
     Caption = 'Current Account Managers'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 98
-    Height = 13
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object Label3: TLabel
     Left = 8
-    Top = 16
-    Width = 53
-    Height = 13
+    Top = 13
+    Width = 64
+    Height = 17
     Caption = 'Customer:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblDetails: TLabel
-    Left = 72
-    Top = 16
-    Width = 48
-    Height = 13
+    Left = 76
+    Top = 14
+    Width = 59
+    Height = 17
     Caption = 'lblDetails'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object Label4: TLabel
     Left = 288
-    Top = 40
-    Width = 164
-    Height = 13
+    Top = 36
+    Width = 186
+    Height = 17
     Caption = 'Un-assigned Account Managers'
   end
   object lstbxMembers: TListBox
@@ -67,7 +67,7 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 0
     OnClick = lstbxMembersClick
@@ -126,7 +126,7 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 3
     OnClick = lstbxNonMembersClick
@@ -140,6 +140,8 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 275
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 153
       Top = 8
@@ -165,7 +167,7 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 5
     Visible = False
   end
@@ -174,7 +176,7 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 6
     Visible = False
   end

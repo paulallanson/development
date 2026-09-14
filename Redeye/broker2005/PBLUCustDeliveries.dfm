@@ -7,7 +7,7 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,7 +15,7 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlTop: TPanel
     Left = 0
     Top = 0
@@ -26,15 +26,15 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomerName: TEdit
       Left = 88
       Top = 12
       Width = 361
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -53,12 +53,12 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
     object Label2: TLabel
       Left = 8
       Top = 22
-      Width = 77
-      Height = 13
+      Width = 88
+      Height = 17
       Caption = 'Product Search'
     end
     object btnClose: TButton
-      Left = 774
+      Left = 768
       Top = 16
       Width = 75
       Height = 25
@@ -68,7 +68,7 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       OnClick = btnCloseClick
     end
     object btnNone: TButton
-      Left = 678
+      Left = 672
       Top = 16
       Width = 75
       Height = 25
@@ -79,7 +79,7 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       OnClick = btnNoneClick
     end
     object btnSelect: TButton
-      Left = 582
+      Left = 576
       Top = 16
       Width = 75
       Height = 25
@@ -90,10 +90,10 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
       OnClick = btnSelectClick
     end
     object edtSearch: TEdit
-      Left = 96
+      Left = 105
       Top = 18
       Width = 145
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnChange = edtSearchChange
     end
@@ -107,7 +107,7 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -115,7 +115,7 @@ object PBLUCustDeliveriesFrm: TPBLUCustDeliveriesFrm
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <

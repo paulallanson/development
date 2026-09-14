@@ -3,26 +3,26 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
   Top = 220
   BorderStyle = bsSingle
   Caption = 'Maintain Job types'
-  ClientHeight = 162
-  ClientWidth = 390
+  ClientHeight = 171
+  ClientWidth = 410
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 72
-    Top = 132
-    Width = 144
-    Height = 15
+    Top = 140
+    Width = 160
+    Height = 17
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -38,12 +38,12 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     object lblDescription: TLabel
       Left = 18
       Top = 22
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -92,7 +92,7 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
   end
   object OKBitBtn: TBitBtn
     Left = 231
-    Top = 127
+    Top = 135
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -169,7 +169,7 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 310
-    Top = 127
+    Top = 135
     Width = 75
     Height = 25
     Cancel = True

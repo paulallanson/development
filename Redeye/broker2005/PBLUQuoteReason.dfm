@@ -3,23 +3,23 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
   Top = 155
   BorderStyle = bsDialog
   Caption = 'Quote Lost/Won Reason'
-  ClientHeight = 317
+  ClientHeight = 332
   ClientWidth = 432
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 232
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -32,7 +32,7 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -40,7 +40,7 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -58,22 +58,22 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
     Left = 8
     Top = 256
     Width = 321
-    Height = 49
+    Height = 57
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 23
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
     Left = 343
-    Top = 252
+    Top = 257
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -148,7 +148,7 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 343
-    Top = 280
+    Top = 285
     Width = 75
     Height = 25
     Kind = bkClose
@@ -156,16 +156,16 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 336
-    Top = 136
+    Left = 337
+    Top = 104
     Width = 87
-    Height = 105
+    Height = 121
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 23
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -188,7 +188,7 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -211,7 +211,7 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 79
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -237,7 +237,7 @@ object PBLUQuoteReasonFrm: TPBLUQuoteReasonFrm
     Left = 336
     Top = 11
     Width = 87
-    Height = 57
+    Height = 70
     Caption = 'Type'
     ItemIndex = 0
     Items.Strings = (

@@ -8,15 +8,13 @@ object PBLUPartOversFrm: TPBLUPartOversFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 17
   object pnlBottom: TPanel
     Left = 0
     Top = 288
@@ -31,8 +29,6 @@ object PBLUPartOversFrm: TPBLUPartOversFrm
       Height = 25
       Caption = 'Select'
       Default = True
-      TabOrder = 0
-      OnClick = btnSelectClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -51,14 +47,17 @@ object PBLUPartOversFrm: TPBLUPartOversFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnSelectClick
     end
     object btnCancel: TBitBtn
       Left = 553
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlTop: TPanel
@@ -70,44 +69,44 @@ object PBLUPartOversFrm: TPBLUPartOversFrm
     TabOrder = 1
     object Label1: TLabel
       Left = 16
-      Top = 16
-      Width = 40
-      Height = 13
+      Top = 12
+      Width = 48
+      Height = 17
       Caption = 'Product:'
     end
     object Label2: TLabel
       Left = 16
       Top = 40
-      Width = 56
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object lblProduct: TLabel
       Left = 88
-      Top = 16
-      Width = 47
-      Height = 13
+      Top = 12
+      Width = 59
+      Height = 17
       Caption = 'lblProduct'
     end
     object lblDescription: TLabel
       Left = 88
       Top = 40
-      Width = 63
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
     object Label3: TLabel
       Left = 472
-      Top = 16
-      Width = 42
-      Height = 13
+      Top = 12
+      Width = 51
+      Height = 17
       Caption = 'Quantity:'
     end
     object lblQuantity: TLabel
       Left = 544
-      Top = 16
-      Width = 49
-      Height = 13
+      Top = 12
+      Width = 62
+      Height = 17
       Caption = 'lblQuantity'
     end
   end
@@ -122,6 +121,7 @@ object PBLUPartOversFrm: TPBLUPartOversFrm
     DefaultRowHeight = 19
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goTabs, goRowSelect]
     TabOrder = 2
+    ExplicitTop = 63
     ColWidths = (
       50
       93
@@ -144,14 +144,10 @@ object PBLUPartOversFrm: TPBLUPartOversFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end>
   end
 end

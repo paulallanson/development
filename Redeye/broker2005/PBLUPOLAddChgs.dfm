@@ -3,7 +3,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
   Top = 133
   BorderStyle = bsDialog
   Caption = 'Current period additional costs'
-  ClientHeight = 288
+  ClientHeight = 297
   ClientWidth = 440
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -24,52 +24,53 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     BevelOuter = bvNone
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 434
     object lblPONumber: TLabel
-      Left = 104
+      Left = 110
       Top = 8
-      Width = 69
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'lblPONumber'
     end
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 82
-      Height = 13
+      Width = 94
+      Height = 17
       Caption = 'Purchase Order:'
     end
     object Label2: TLabel
       Left = 8
       Top = 28
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label3: TLabel
       Left = 8
       Top = 48
-      Width = 46
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Supplier:'
     end
     object lblCustomer: TLabel
-      Left = 104
+      Left = 110
       Top = 28
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'lblCustomer'
     end
     object lblSupplier: TLabel
-      Left = 104
+      Left = 110
       Top = 48
-      Width = 56
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'lblSupplier'
     end
   end
@@ -77,7 +78,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Left = 346
     Top = 73
     Width = 94
-    Height = 215
+    Height = 224
     Align = alRight
     BevelOuter = bvNone
     Font.Charset = ANSI_CHARSET
@@ -88,6 +89,8 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitLeft = 340
+    ExplicitHeight = 206
     object DelBitBtn: TBitBtn
       Left = 10
       Top = 80
@@ -129,22 +132,24 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Left = 0
     Top = 73
     Width = 346
-    Height = 215
+    Height = 224
     Align = alClient
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 340
+    ExplicitHeight = 206
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
       Width = 344
-      Height = 213
+      Height = 222
       Align = alClient
       DataSource = DetsSRC
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -152,7 +157,7 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <

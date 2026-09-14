@@ -3,61 +3,61 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   Top = 163
   BorderStyle = bsDialog
   Caption = 'Search Data Collection'
-  ClientHeight = 343
-  ClientWidth = 285
+  ClientHeight = 374
+  ClientWidth = 325
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   DesignSize = (
-    285
-    343)
-  TextHeight = 13
+    325
+    374)
+  TextHeight = 17
   object lblFormReference: TLabel
     Left = 11
-    Top = 251
-    Width = 65
-    Height = 13
+    Top = 269
+    Width = 72
+    Height = 17
     Caption = 'Work Centre'
   end
   object lblQuantity: TLabel
     Left = 11
-    Top = 154
-    Width = 50
-    Height = 13
+    Top = 160
+    Width = 60
+    Height = 17
     Caption = 'Job Name'
   end
   object lblProductCode: TLabel
     Left = 11
-    Top = 227
-    Width = 38
-    Height = 13
+    Top = 242
+    Width = 45
+    Height = 17
     Caption = 'Process'
   end
   object Label9: TLabel
     Left = 11
-    Top = 2
-    Width = 54
-    Height = 13
+    Top = 6
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 120
-    Top = 2
-    Width = 159
-    Height = 13
+    Left = 128
+    Top = 6
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -65,76 +65,76 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
   object Label2: TLabel
     Left = 11
     Top = 34
-    Width = 51
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Date from'
   end
   object lblDescription: TLabel
     Left = 11
-    Top = 274
-    Width = 53
-    Height = 13
+    Top = 295
+    Width = 59
+    Height = 17
     Caption = 'Operation'
   end
   object lblDescriptiveRef: TLabel
     Left = 11
-    Top = 178
-    Width = 95
-    Height = 13
+    Top = 187
+    Width = 111
+    Height = 17
     Caption = 'Non Job Bag Code'
   end
   object lblJobNumber: TLabel
     Left = 11
-    Top = 130
-    Width = 62
-    Height = 13
+    Top = 133
+    Width = 73
+    Height = 17
     Caption = 'Job Number'
   end
   object lblStatus: TLabel
     Left = 11
-    Top = 202
-    Width = 61
-    Height = 13
+    Top = 214
+    Width = 69
+    Height = 17
     Caption = 'Department'
   end
   object Label1: TLabel
     Left = 11
     Top = 68
-    Width = 38
-    Height = 13
+    Width = 43
+    Height = 17
     Caption = 'Date to'
   end
   object Label4: TLabel
     Left = 11
     Top = 106
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object edtProcess: TEdit
-    Left = 120
-    Top = 222
+    Left = 128
+    Top = 237
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtWorkCentre: TEdit
-    Left = 120
-    Top = 246
+    Left = 128
+    Top = 264
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtJobName: TEdit
-    Left = 120
-    Top = 150
+    Left = 128
+    Top = 156
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object SearchButton: TButton
     Left = 12
-    Top = 308
+    Top = 339
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -142,66 +142,68 @@ object frmPBLUJobLogSearch: TfrmPBLUJobLogSearch
     Default = True
     TabOrder = 8
     OnClick = SearchButtonClick
+    ExplicitTop = 299
   end
   object edtOperation: TEdit
-    Left = 120
-    Top = 270
+    Left = 128
+    Top = 291
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 7
   end
   object edtNonJobCode: TEdit
-    Left = 120
-    Top = 174
+    Left = 128
+    Top = 183
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtJobNumber: TEdit
-    Left = 120
-    Top = 126
+    Left = 128
+    Top = 129
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object edtDepartment: TEdit
-    Left = 120
-    Top = 198
+    Left = 128
+    Top = 210
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object ClearButton: TButton
     Left = 196
-    Top = 308
+    Top = 339
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 9
     OnClick = ClearButtonClick
+    ExplicitTop = 299
   end
   object edtCustomer: TEdit
-    Left = 120
+    Left = 128
     Top = 102
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object dtmDateFrom: TDateTimePicker
-    Left = 120
+    Left = 128
     Top = 30
     Width = 90
-    Height = 21
+    Height = 25
     Date = 39825.000000000000000000
     Time = 0.487247696757549400
     TabOrder = 10
   end
   object dtmDateTo: TDateTimePicker
-    Left = 120
+    Left = 128
     Top = 64
     Width = 90
-    Height = 21
+    Height = 25
     Date = 39825.000000000000000000
     Time = 0.487276446758187400
     TabOrder = 11

@@ -7,7 +7,7 @@ object frmPBLUReps: TfrmPBLUReps
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,7 +15,7 @@ object frmPBLUReps: TfrmPBLUReps
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -26,7 +26,7 @@ object frmPBLUReps: TfrmPBLUReps
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -34,7 +34,7 @@ object frmPBLUReps: TfrmPBLUReps
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -83,6 +83,8 @@ object frmPBLUReps: TfrmPBLUReps
       item
         Width = 100
       end>
+    ExplicitTop = 317
+    ExplicitWidth = 528
   end
   object Panel1: TPanel
     Left = 0
@@ -93,11 +95,13 @@ object frmPBLUReps: TfrmPBLUReps
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 278
+    ExplicitWidth = 528
     DesignSize = (
       534
       39)
     object btnAdd: TButton
-      Left = 187
+      Left = 181
       Top = 9
       Width = 75
       Height = 25
@@ -105,9 +109,10 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = '&Add'
       TabOrder = 0
       OnClick = btnAddClick
+      ExplicitLeft = 175
     end
     object btnDelete: TButton
-      Left = 354
+      Left = 348
       Top = 9
       Width = 75
       Height = 25
@@ -115,9 +120,10 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = '&Delete'
       TabOrder = 1
       OnClick = btnDeleteClick
+      ExplicitLeft = 342
     end
     object btnClose: TButton
-      Left = 445
+      Left = 439
       Top = 9
       Width = 75
       Height = 25
@@ -125,9 +131,10 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = 'Clos&e'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 433
     end
     object btnChange: TButton
-      Left = 271
+      Left = 265
       Top = 9
       Width = 75
       Height = 25
@@ -135,6 +142,7 @@ object frmPBLUReps: TfrmPBLUReps
       Caption = '&Change'
       TabOrder = 3
       OnClick = btnChangeClick
+      ExplicitLeft = 259
     end
   end
   object qryReps: TFDQuery

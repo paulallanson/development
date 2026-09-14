@@ -4,20 +4,20 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
   ActiveControl = cmbbxAddChrg
   BorderStyle = bsDialog
   Caption = 'Additional charge details'
-  ClientHeight = 182
-  ClientWidth = 489
+  ClientHeight = 193
+  ClientWidth = 488
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 152
-    Top = 148
+    Top = 162
     Width = 133
     Height = 16
     Caption = 'Delete these charges'
@@ -30,7 +30,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
   end
   object btnOK: TBitBtn
     Left = 299
-    Top = 144
+    Top = 158
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -59,7 +59,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
   end
   object BitBtn2: TBitBtn
     Left = 387
-    Top = 144
+    Top = 158
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -69,52 +69,53 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 489
+    Width = 488
     Height = 137
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 483
     object Label1: TLabel
       Left = 24
       Top = 12
-      Width = 35
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Details'
     end
     object Label2: TLabel
       Left = 24
       Top = 44
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Price'
     end
     object Label3: TLabel
       Left = 24
       Top = 76
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'VAT'
     end
     object Nominal: TLabel
-      Left = 271
+      Left = 265
       Top = 76
-      Width = 43
-      Height = 13
+      Width = 49
+      Height = 17
       Caption = 'Nominal'
     end
     object Label4: TLabel
       Left = 288
       Top = 44
-      Width = 23
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'Cost'
     end
     object Label5: TLabel
-      Left = 196
+      Left = 180
       Top = 108
-      Width = 118
-      Height = 13
+      Width = 134
+      Height = 17
       Caption = 'Associated Invoice Line'
     end
     object memPrice: TMemo
@@ -134,7 +135,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       Left = 72
       Top = 72
       Width = 169
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = dsVAT
@@ -160,7 +161,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       Left = 72
       Top = 8
       Width = 353
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnClick = cmbbxAddChrgClick
     end
@@ -181,7 +182,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       Left = 320
       Top = 72
       Width = 145
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
@@ -193,7 +194,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       Left = 320
       Top = 104
       Width = 65
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 6
     end
@@ -215,7 +216,7 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
     SQL.Strings = (
       'select * from additional_charge'
       'order by details')
-    Left = 352
-    Top = 40
+    Left = 32
+    Top = 114
   end
 end

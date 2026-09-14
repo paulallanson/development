@@ -4,20 +4,20 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
   BorderStyle = bsDialog
   Caption = 'Supplier Email details'
   ClientHeight = 223
-  ClientWidth = 516
+  ClientWidth = 514
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    516
+    514
     223)
-  TextHeight = 13
+  TextHeight = 17
   object grpbxContact: TGroupBox
     Left = 8
     Top = 8
@@ -28,29 +28,29 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     object Label1: TLabel
       Left = 8
       Top = 60
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 92
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Email'
     end
     object Label4: TLabel
       Left = 8
       Top = 26
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object edtEmail: TEdit
       Left = 64
       Top = 88
       Width = 425
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EnableOK
     end
@@ -58,7 +58,7 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
       Left = 64
       Top = 56
       Width = 233
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = dtsContacts
@@ -68,7 +68,7 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
       Left = 64
       Top = 24
       Width = 233
-      Height = 21
+      Height = 25
       KeyField = 'Supplier'
       ListField = 'Name'
       ListSource = dtsSuppliers
@@ -84,18 +84,19 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Anchors = [akLeft, akBottom]
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 121
     object Label3: TLabel
       Left = 8
       Top = 20
-      Width = 38
-      Height = 13
+      Width = 42
+      Height = 17
       Caption = 'Subject'
     end
     object edtSubject: TEdit
       Left = 64
       Top = 16
       Width = 425
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EnableOK
     end
@@ -110,6 +111,7 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Kind = bkOK
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 177
   end
   object btnCancel: TBitBtn
     Left = 265
@@ -120,6 +122,7 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 3
+    ExplicitTop = 177
   end
   object qrySContacts: TFDQuery
     MasterSource = dtsSuppliers
@@ -130,8 +133,8 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
       'where Supplier = :Supplier'
       'Order By Name'
       '')
-    Left = 456
-    Top = 64
+    Left = 370
+    Top = 24
     ParamData = <
       item
         Name = 'Supplier'
@@ -141,8 +144,8 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
   object dtsContacts: TDataSource
     DataSet = qrySContacts
     OnDataChange = dtsContactsDataChange
-    Left = 392
-    Top = 64
+    Left = 322
+    Top = 32
   end
   object qrySuppliers: TFDQuery
     ConnectionName = 'PB'
@@ -152,13 +155,13 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
       'where 1 = 1'
       ''
       '')
-    Left = 456
-    Top = 16
+    Left = 250
+    Top = 36
   end
   object dtsSuppliers: TDataSource
     DataSet = qrySuppliers
-    Left = 392
-    Top = 16
+    Left = 394
+    Top = 36
   end
   object qryCContacts: TFDQuery
     ConnectionName = 'PB'
@@ -167,8 +170,8 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
       'from customer_Contact'
       'where customer = :Customer'
       'Order By Name')
-    Left = 368
-    Top = 120
+    Left = 220
+    Top = 30
     ParamData = <
       item
         Name = 'Customer'

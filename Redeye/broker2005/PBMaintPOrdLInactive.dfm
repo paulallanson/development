@@ -8,24 +8,24 @@ object PBMaintPOrdLInactiveFrm: TPBMaintPOrdLInactiveFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 38
-    Height = 13
+    Width = 43
+    Height = 17
     Caption = 'Reason'
   end
   object DBLUReason: TDBLookupComboBox
     Left = 72
     Top = 16
     Width = 257
-    Height = 21
+    Height = 25
     KeyField = 'InActive_Reason'
     ListField = 'Description'
     ListSource = srcReason

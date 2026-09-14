@@ -3,225 +3,223 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
   Top = 70
   BorderStyle = bsDialog
   Caption = 'Jobs Search'
-  ClientHeight = 522
-  ClientWidth = 288
+  ClientHeight = 556
+  ClientWidth = 357
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
-    288
-    522)
-  TextHeight = 13
+    357
+    556)
+  TextHeight = 17
   object Label9: TLabel
     Left = 11
-    Top = 2
-    Width = 54
-    Height = 13
+    Top = 7
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 120
-    Top = 2
-    Width = 158
-    Height = 13
+    Left = 146
+    Top = 7
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label6: TLabel
     Left = 11
-    Top = 51
-    Width = 103
-    Height = 13
+    Top = 58
+    Width = 118
+    Height = 17
     Caption = 'Customer Reference'
   end
   object Label13: TLabel
     Left = 11
-    Top = 74
-    Width = 65
-    Height = 13
+    Top = 83
+    Width = 73
+    Height = 17
     Caption = 'Job Quantity'
   end
   object lblDescription: TLabel
     Left = 11
-    Top = 146
-    Width = 59
-    Height = 13
+    Top = 161
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 11
-    Top = 98
-    Width = 32
-    Height = 13
+    Top = 109
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label3: TLabel
     Left = 11
-    Top = 27
-    Width = 36
-    Height = 13
+    Top = 32
+    Width = 39
+    Height = 17
     Caption = 'Branch'
   end
   object Label1: TLabel
     Left = 11
-    Top = 341
-    Width = 72
-    Height = 13
+    Top = 376
+    Width = 83
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Ordered since'
   end
   object lblDescriptiveRef: TLabel
     Left = 11
-    Top = 170
-    Width = 110
-    Height = 13
+    Top = 187
+    Width = 126
+    Height = 17
     Caption = 'Descriptive Reference'
   end
   object Label4: TLabel
     Left = 11
-    Top = 218
-    Width = 20
-    Height = 13
+    Top = 239
+    Width = 23
+    Height = 17
     Caption = 'Rep'
   end
   object Label5: TLabel
     Left = 11
-    Top = 266
-    Width = 91
-    Height = 13
+    Top = 291
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
   end
   object Label7: TLabel
     Left = 11
-    Top = 290
-    Width = 47
-    Height = 13
+    Top = 317
+    Width = 54
+    Height = 17
     Caption = 'Operator'
   end
   object Label8: TLabel
     Left = 11
-    Top = 122
-    Width = 92
-    Height = 13
+    Top = 135
+    Width = 102
+    Height = 17
     Caption = 'Production Status'
   end
   object Label10: TLabel
     Left = 11
-    Top = 366
-    Width = 62
-    Height = 13
+    Top = 402
+    Width = 71
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Required by'
-    ExplicitTop = 397
   end
   object Label11: TLabel
     Left = 11
-    Top = 194
-    Width = 32
-    Height = 13
+    Top = 213
+    Width = 36
+    Height = 17
     Caption = 'Quote'
   end
   object Label14: TLabel
     Left = 11
-    Top = 242
-    Width = 76
-    Height = 13
+    Top = 265
+    Width = 88
+    Height = 17
     Caption = 'Secondary Rep'
   end
   object Label15: TLabel
     Left = 11
-    Top = 316
-    Width = 46
-    Height = 13
+    Top = 343
+    Width = 53
+    Height = 17
     Caption = 'End User'
   end
   object edtQuantity: TEdit
-    Left = 120
-    Top = 70
+    Left = 146
+    Top = 79
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtCustOrderNo: TEdit
-    Left = 120
-    Top = 46
+    Left = 146
+    Top = 53
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
     Left = 11
-    Top = 449
+    Top = 483
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive jobs'
     TabOrder = 18
-    ExplicitTop = 466
+    ExplicitTop = 440
   end
   object SearchButton: TButton
     Left = 12
-    Top = 481
+    Top = 515
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Start Search'
+    Caption = 'Search'
     Default = True
     TabOrder = 19
     OnClick = SearchButtonClick
-    ExplicitTop = 452
+    ExplicitTop = 472
   end
   object edtDescription: TEdit
-    Left = 120
-    Top = 142
+    Left = 146
+    Top = 157
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtStatus: TEdit
-    Left = 120
-    Top = 94
+    Left = 146
+    Top = 105
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtBranch: TEdit
-    Left = 120
-    Top = 22
+    Left = 146
+    Top = 27
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtDate: TEdit
-    Left = 120
-    Top = 338
+    Left = 146
+    Top = 372
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akLeft, akBottom]
     TabOrder = 13
     OnExit = edtDateExit
-    ExplicitTop = 369
   end
   object btnDate: TBitBtn
-    Left = 216
-    Top = 336
+    Left = 242
+    Top = 372
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -241,78 +239,75 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     NumGlyphs = 2
     TabOrder = 14
     OnClick = btnDateClick
-    ExplicitTop = 367
   end
   object edtDescriptiveRef: TEdit
-    Left = 120
-    Top = 166
+    Left = 146
+    Top = 183
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtRep: TEdit
-    Left = 120
-    Top = 214
+    Left = 146
+    Top = 235
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 8
   end
   object edtAccountMgr: TEdit
-    Left = 120
-    Top = 262
+    Left = 146
+    Top = 287
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 10
   end
   object edtOperator: TEdit
-    Left = 120
-    Top = 286
+    Left = 146
+    Top = 313
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 11
   end
   object ClearButton: TButton
-    Left = 198
-    Top = 482
+    Left = 224
+    Top = 515
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Clear Search'
+    Caption = 'Clear'
     TabOrder = 20
     OnClick = ClearButtonClick
-    ExplicitTop = 453
   end
   object chkbxShowWIP: TCheckBox
     Tag = 12
     Left = 11
-    Top = 400
+    Top = 434
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY Work in Progress'
     TabOrder = 17
-    ExplicitTop = 417
+    ExplicitTop = 391
   end
   object edtProductionStatus: TEdit
-    Left = 120
-    Top = 118
+    Left = 146
+    Top = 131
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object edtDateReq: TEdit
-    Left = 120
-    Top = 362
+    Left = 146
+    Top = 398
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akLeft, akBottom]
     TabOrder = 15
     OnExit = edtDateReqExit
-    ExplicitTop = 393
   end
   object btnDateReq: TBitBtn
-    Left = 216
-    Top = 360
+    Left = 242
+    Top = 398
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -332,38 +327,37 @@ object frmpbluJobsSearch: TfrmpbluJobsSearch
     NumGlyphs = 2
     TabOrder = 16
     OnClick = btnDateReqClick
-    ExplicitTop = 391
   end
   object edtQuote: TEdit
-    Left = 120
-    Top = 190
+    Left = 146
+    Top = 209
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 7
   end
   object edtSubRep: TEdit
-    Left = 120
-    Top = 238
+    Left = 146
+    Top = 261
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 9
   end
   object edtEndUser: TEdit
-    Left = 120
-    Top = 312
+    Left = 146
+    Top = 339
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 12
   end
   object chkbxShowOnHold: TCheckBox
     Tag = 12
     Left = 11
-    Top = 423
+    Top = 457
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY On Hold'
     TabOrder = 21
-    ExplicitTop = 440
+    ExplicitTop = 414
   end
 end

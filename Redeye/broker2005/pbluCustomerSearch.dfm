@@ -3,199 +3,201 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
   Top = 19
   BorderStyle = bsDialog
   Caption = 'Customer Search'
-  ClientHeight = 531
-  ClientWidth = 288
+  ClientHeight = 570
+  ClientWidth = 323
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    288
-    531)
-  TextHeight = 13
+    323
+    570)
+  TextHeight = 17
   object Label9: TLabel
     Left = 11
-    Top = 2
-    Width = 54
-    Height = 13
+    Top = 7
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
     Left = 120
-    Top = 2
-    Width = 159
-    Height = 13
+    Top = 7
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label6: TLabel
     Left = 11
-    Top = 51
-    Width = 47
-    Height = 13
+    Top = 60
+    Width = 54
+    Height = 17
     Caption = 'Postcode'
   end
   object Label13: TLabel
     Left = 11
-    Top = 98
-    Width = 54
-    Height = 13
+    Top = 112
+    Width = 60
+    Height = 17
     Caption = 'Telephone'
   end
   object Label3: TLabel
     Left = 11
-    Top = 27
-    Width = 51
-    Height = 13
+    Top = 34
+    Width = 56
+    Height = 17
     Caption = 'Town/City'
   end
   object Label1: TLabel
     Left = 11
-    Top = 437
-    Width = 69
-    Height = 13
+    Top = 476
+    Width = 79
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
+    ExplicitTop = 437
   end
   object Label4: TLabel
     Left = 11
-    Top = 146
-    Width = 20
-    Height = 13
+    Top = 166
+    Width = 23
+    Height = 17
     Caption = 'Rep'
   end
   object Label2: TLabel
     Left = 11
-    Top = 122
-    Width = 17
-    Height = 13
+    Top = 139
+    Width = 19
+    Height = 17
     Caption = 'Fax'
   end
   object Label5: TLabel
     Left = 11
-    Top = 75
-    Width = 37
-    Height = 13
+    Top = 86
+    Width = 40
+    Height = 17
     Caption = 'County'
   end
   object Label7: TLabel
     Left = 11
-    Top = 386
-    Width = 29
-    Height = 13
+    Top = 425
+    Width = 35
+    Height = 15
     Caption = 'Terms'
   end
   object Label8: TLabel
     Left = 11
-    Top = 410
-    Width = 81
-    Height = 13
+    Top = 450
+    Width = 91
+    Height = 15
     Caption = 'Revenue Centre'
   end
   object Label10: TLabel
     Left = 11
-    Top = 194
-    Width = 91
-    Height = 13
+    Top = 220
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
   end
   object Label11: TLabel
     Left = 11
-    Top = 266
-    Width = 58
-    Height = 13
+    Top = 300
+    Width = 66
+    Height = 16
     Caption = 'Importance'
   end
   object lblAnalysis1: TLabel
     Left = 11
-    Top = 290
-    Width = 50
-    Height = 13
+    Top = 326
+    Width = 57
+    Height = 15
     Caption = 'Analysis 1'
   end
   object lblAnalysis2: TLabel
     Left = 11
-    Top = 314
-    Width = 50
-    Height = 13
+    Top = 350
+    Width = 57
+    Height = 15
     Caption = 'Analysis 2'
   end
   object Label14: TLabel
     Left = 11
-    Top = 242
-    Width = 75
-    Height = 13
+    Top = 274
+    Width = 87
+    Height = 17
     Caption = 'Customer Type'
   end
   object Label15: TLabel
     Left = 11
-    Top = 218
-    Width = 84
-    Height = 13
+    Top = 247
+    Width = 95
+    Height = 17
     Caption = 'Customer Status'
   end
   object Label16: TLabel
     Left = 11
-    Top = 170
-    Width = 76
-    Height = 13
+    Top = 193
+    Width = 88
+    Height = 17
     Caption = 'Secondary Rep'
   end
   object lblAnalysis3: TLabel
     Left = 11
-    Top = 338
-    Width = 50
-    Height = 13
+    Top = 375
+    Width = 57
+    Height = 15
     Caption = 'Analysis 3'
   end
   object lblAnalysis4: TLabel
     Left = 11
-    Top = 362
-    Width = 50
-    Height = 13
+    Top = 400
+    Width = 57
+    Height = 15
     Caption = 'Analysis 4'
   end
   object edtTelephone: TEdit
     Left = 120
-    Top = 94
+    Top = 108
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtPostcode: TEdit
     Left = 120
-    Top = 46
+    Top = 54
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 464
+    Top = 503
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive customers'
     TabOrder = 19
+    ExplicitTop = 455
   end
   object SearchButton: TButton
     Left = 12
-    Top = 496
+    Top = 535
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -203,26 +205,28 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
     Default = True
     TabOrder = 20
     OnClick = SearchButtonClick
+    ExplicitTop = 487
   end
   object edtTown: TEdit
     Left = 120
-    Top = 22
+    Top = 27
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtDate: TEdit
     Left = 120
-    Top = 433
+    Top = 472
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akLeft, akBottom]
     TabOrder = 17
     OnExit = edtDateExit
+    ExplicitTop = 433
   end
   object btnDate: TBitBtn
     Left = 216
-    Top = 431
+    Top = 472
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -245,110 +249,111 @@ object frmpbluCustomerSearch: TfrmpbluCustomerSearch
   end
   object edtRep: TEdit
     Left = 120
-    Top = 142
+    Top = 162
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtFax: TEdit
     Left = 120
-    Top = 118
+    Top = 135
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object ClearButton: TButton
     Left = 196
-    Top = 497
+    Top = 536
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 21
     OnClick = ClearButtonClick
+    ExplicitTop = 488
   end
   object edtCounty: TEdit
     Left = 120
-    Top = 70
+    Top = 81
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtTerms: TEdit
     Left = 120
-    Top = 382
+    Top = 421
     Width = 153
-    Height = 21
+    Height = 23
     TabOrder = 15
   end
   object edtRevenueCentre: TEdit
     Left = 120
-    Top = 406
+    Top = 446
     Width = 153
-    Height = 21
+    Height = 23
     TabOrder = 16
   end
   object edtAccountManager: TEdit
     Left = 120
-    Top = 190
+    Top = 216
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 7
   end
   object edtImportance: TEdit
     Left = 120
-    Top = 262
+    Top = 296
     Width = 153
-    Height = 21
+    Height = 24
     TabOrder = 10
   end
   object edtAnalysis1: TEdit
     Left = 120
-    Top = 286
+    Top = 322
     Width = 153
-    Height = 21
+    Height = 23
     TabOrder = 11
   end
   object edtAnalysis2: TEdit
     Left = 120
-    Top = 310
+    Top = 346
     Width = 153
-    Height = 21
+    Height = 23
     TabOrder = 12
   end
   object edtCustomerType: TEdit
     Left = 120
-    Top = 238
+    Top = 270
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 9
   end
   object edtCustomerStatus: TEdit
     Left = 120
-    Top = 214
+    Top = 243
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 8
   end
   object edtSubRep: TEdit
     Left = 120
-    Top = 166
+    Top = 189
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtAnalysis3: TEdit
     Left = 120
-    Top = 334
+    Top = 371
     Width = 153
-    Height = 21
+    Height = 23
     TabOrder = 13
   end
   object edtAnalysis4: TEdit
     Left = 120
-    Top = 358
+    Top = 396
     Width = 153
-    Height = 21
+    Height = 23
     TabOrder = 14
   end
 end

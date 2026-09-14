@@ -7,14 +7,14 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlTop: TPanel
     Left = 0
     Top = 0
@@ -25,22 +25,22 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
     object Label1: TLabel
       Left = 16
       Top = 12
-      Width = 70
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 16
       Top = 40
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object edtPart: TEdit
       Left = 104
       Top = 8
       Width = 217
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -49,7 +49,7 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
       Left = 104
       Top = 36
       Width = 361
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 1
@@ -101,7 +101,7 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -109,7 +109,7 @@ object PBLUPartDeliveriesFrm: TPBLUPartDeliveriesFrm
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <

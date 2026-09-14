@@ -8,21 +8,21 @@ object PBMaintBranchCstCntrFrm: TPBMaintBranchCstCntrFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 14
-    Top = 158
-    Width = 145
-    Height = 15
-    Caption = 'Delete the above details ?'
+    Left = 23
+    Top = 157
+    Width = 154
+    Height = 16
+    Caption = 'Delete the above details'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,15 +30,15 @@ object PBMaintBranchCstCntrFrm: TPBMaintBranchCstCntrFrm
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object BranchLabel: TLabel
     Left = 8
     Top = 32
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'BranchLabel'
   end
   object OKBitBtn: TBitBtn
@@ -201,7 +201,7 @@ object PBMaintBranchCstCntrFrm: TPBMaintBranchCstCntrFrm
     Caption = 'Cost Centre Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -210,22 +210,22 @@ object PBMaintBranchCstCntrFrm: TPBMaintBranchCstCntrFrm
     object CstCntrLabel: TLabel
       Left = 11
       Top = 24
-      Width = 60
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Cost Centre'
     end
     object DescLabel: TLabel
       Left = 11
       Top = 56
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object CstCntrEdit: TEdit
       Left = 96
-      Top = 16
+      Top = 21
       Width = 121
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 10
       ReadOnly = True
@@ -234,9 +234,9 @@ object PBMaintBranchCstCntrFrm: TPBMaintBranchCstCntrFrm
     end
     object DescEdit: TEdit
       Left = 96
-      Top = 48
+      Top = 53
       Width = 321
-      Height = 21
+      Height = 25
       MaxLength = 50
       TabOrder = 1
       OnChange = DescEditChange

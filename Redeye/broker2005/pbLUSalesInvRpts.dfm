@@ -3,33 +3,33 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
   Top = 107
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Sales Invoice Reports'
-  ClientHeight = 324
-  ClientWidth = 453
+  ClientHeight = 387
+  ClientWidth = 497
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 453
-    Height = 283
+    Width = 497
+    Height = 346
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 445
-    ExplicitHeight = 248
+    ExplicitWidth = 447
+    ExplicitHeight = 274
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 453
-      Height = 283
+      Width = 497
+      Height = 346
       Align = alClient
       Columns = <
         item
@@ -106,23 +106,23 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
-      ExplicitWidth = 451
-      ExplicitHeight = 257
+      ExplicitWidth = 453
+      ExplicitHeight = 283
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 283
-    Width = 453
+    Top = 346
+    Width = 497
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 248
-    ExplicitWidth = 445
+    ExplicitTop = 274
+    ExplicitWidth = 447
     DesignSize = (
-      453
+      497
       41)
     object btnRun: TButton
       Left = 16
@@ -134,7 +134,7 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 362
+      Left = 400
       Top = 8
       Width = 75
       Height = 25
@@ -142,7 +142,7 @@ object frmPBLUSalesInvRpts: TfrmPBLUSalesInvRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitLeft = 354
+      ExplicitLeft = 350
     end
   end
 end

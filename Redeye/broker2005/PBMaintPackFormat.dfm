@@ -8,7 +8,7 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,17 +16,17 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
   DesignSize = (
     410
     157)
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 80
     Top = 124
-    Width = 144
-    Height = 15
+    Width = 150
+    Height = 17
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete the above details ?'
+    Caption = 'Delete the above details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -41,19 +41,19 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
     object lblDescription: TLabel
       Left = 18
       Top = 22
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object edtDescription: TEdit
       Left = 100
-      Top = 18
+      Top = 20
       Width = 261
       Height = 21
       Font.Charset = ANSI_CHARSET
@@ -151,6 +151,7 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 109
   end
   object CancelBitBtn: TBitBtn
     Left = 318
@@ -227,6 +228,7 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 109
   end
   object qryInsPackFormat: TFDQuery
     ConnectionName = 'PB'
@@ -289,7 +291,7 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
     SQL.Strings = (
       'SELECT MAX(ID) as Last_ID'
       'FROM Pack_Format')
-    Left = 72
-    Top = 24
+    Left = 90
+    Top = 30
   end
 end

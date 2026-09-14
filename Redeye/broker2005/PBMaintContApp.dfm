@@ -8,31 +8,31 @@ object PBMaintContAppfrm: TPBMaintContAppfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 24
-    Height = 13
+    Width = 27
+    Height = 17
     Caption = 'Date'
   end
   object Label2: TLabel
     Left = 160
     Top = 8
-    Width = 24
-    Height = 13
+    Width = 28
+    Height = 17
     Caption = 'Time'
   end
   object dtpckAppTime: TDateTimePicker
     Left = 160
     Top = 24
     Width = 81
-    Height = 21
+    Height = 25
     Date = 37565.000000000000000000
     Time = 0.539912499996717100
     Kind = dtkTime
@@ -60,7 +60,7 @@ object PBMaintContAppfrm: TPBMaintContAppfrm
     Left = 16
     Top = 24
     Width = 121
-    Height = 21
+    Height = 25
     Date = 37568.000000000000000000
     Time = 37568.000000000000000000
     TabOrder = 3

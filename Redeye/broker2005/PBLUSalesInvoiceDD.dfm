@@ -7,14 +7,14 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stbrDetails: TStatusBar
     Left = 0
     Top = 422
@@ -27,6 +27,8 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       item
         Width = 250
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 906
   end
   object Panel1: TPanel
     Left = 0
@@ -36,6 +38,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 906
     object GroupBox2: TGroupBox
       Left = 16
       Top = 8
@@ -47,19 +50,19 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       object lblDateFrom: TLabel
         Left = 9
         Top = 28
-        Width = 56
-        Height = 13
+        Width = 64
+        Height = 17
         Caption = 'Date From:'
       end
       object lblDateTo: TLabel
         Left = 9
         Top = 57
-        Width = 42
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Date To:'
       end
       object btnDateFrom: TSpeedButton
-        Left = 192
+        Left = 184
         Top = 23
         Width = 25
         Height = 25
@@ -80,7 +83,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
         OnClick = btnDateFromClick
       end
       object btnDateTo: TSpeedButton
-        Left = 192
+        Left = 184
         Top = 52
         Width = 25
         Height = 25
@@ -104,7 +107,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
         Left = 79
         Top = 24
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 0
         OnChange = EnableExport
@@ -114,7 +117,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
         Left = 79
         Top = 53
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 1
         OnChange = EnableExport
@@ -124,7 +127,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     object chkbxShowExported: TCheckBox
       Left = 264
       Top = 16
-      Width = 233
+      Width = 169
       Height = 17
       Caption = 'Show Exported Invoices'
       TabOrder = 1
@@ -151,14 +154,14 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -224,11 +227,13 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 372
+    ExplicitWidth = 906
     object lblExpTo: TLabel
       Left = 8
-      Top = 16
-      Width = 51
-      Height = 13
+      Top = 12
+      Width = 59
+      Height = 17
       Caption = 'Export To:'
     end
     object btnExport: TButton
@@ -251,16 +256,16 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       OnClick = btnCancelClick
     end
     object edtExpFile: TEdit
-      Left = 64
-      Top = 12
+      Left = 73
+      Top = 8
       Width = 377
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = EnableExport
     end
     object btnBrowse: TButton
-      Left = 448
-      Top = 10
+      Left = 457
+      Top = 8
       Width = 75
       Height = 25
       Caption = 'Browse'

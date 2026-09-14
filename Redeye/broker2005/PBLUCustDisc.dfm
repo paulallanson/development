@@ -8,19 +8,19 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 270
+    Left = 264
     Top = 448
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -40,6 +40,8 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
       00200044006900730063006F0075006E0074003E0000000000000000000000FF
       FFFFFFFFFFFFFF0000000000000000000000000110500072006F006400750063
       007400200044006900730063006F0075006E007400}
+    ExplicitWidth = 530
+    ExplicitHeight = 408
   end
   object Panel1: TPanel
     Left = 0
@@ -49,50 +51,51 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 631
     object CustLabel: TLabel
-      Left = 24
+      Left = 16
       Top = 12
-      Width = 81
-      Height = 13
+      Width = 95
+      Height = 17
       Caption = 'Customer Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label1: TLabel
-      Left = 24
+      Left = 16
       Top = 44
-      Width = 75
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'Supplier Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object edtSupplier: TEdit
-      Left = 112
+      Left = 121
       Top = 40
       Width = 249
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
       Text = 'edtSupplier'
     end
     object btnSupplier: TBitBtn
-      Left = 376
+      Left = 385
       Top = 38
       Width = 25
       Height = 25
       Caption = '...'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -100,13 +103,13 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
       OnClick = btnSupplierClick
     end
     object btnClear: TBitBtn
-      Left = 408
+      Left = 417
       Top = 38
       Width = 25
       Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       Glyph.Data = {
@@ -136,6 +139,8 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
     Align = alRight
     ParentBackground = False
     TabOrder = 2
+    ExplicitLeft = 530
+    ExplicitHeight = 408
     DesignSize = (
       101
       417)
@@ -143,14 +148,14 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
       Left = 8
       Top = 8
       Width = 87
-      Height = 121
+      Height = 137
       Anchors = [akTop, akRight]
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
         Left = 6
-        Top = 16
+        Top = 25
         Width = 75
         Height = 25
         Caption = 'Add'
@@ -174,7 +179,7 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
       end
       object ChgBitBtn: TBitBtn
         Left = 6
-        Top = 52
+        Top = 61
         Width = 75
         Height = 25
         Caption = 'Change'
@@ -198,7 +203,7 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
       end
       object DelBitBtn: TBitBtn
         Left = 6
-        Top = 88
+        Top = 97
         Width = 75
         Height = 25
         Caption = 'Delete'
@@ -295,6 +300,7 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitTop = 336
     end
     object CloseBitBtn: TBitBtn
       Left = 14
@@ -305,6 +311,7 @@ object PBLUCustDiscFrm: TPBLUCustDiscFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitTop = 372
     end
   end
   object DetsSRC: TDataSource

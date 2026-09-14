@@ -2,36 +2,36 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   Left = 172
   Top = 128
   Caption = 'Select A Paper Catagory'
-  ClientHeight = 306
+  ClientHeight = 341
   ClientWidth = 421
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
-    Top = 280
-    Width = 59
-    Height = 13
+    Left = 248
+    Top = 298
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 104
+    Top = 122
     Width = 305
     Height = 169
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -46,7 +46,7 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 326
-    Top = 248
+    Top = 266
     Width = 75
     Height = 25
     Kind = bkClose
@@ -55,7 +55,7 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 320
-    Top = 88
+    Top = 106
     Width = 89
     Height = 105
     Caption = 'Function'
@@ -135,8 +135,8 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
   object TypeRadioGroup: TRadioGroup
     Left = 8
     Top = 0
-    Width = 185
-    Height = 97
+    Width = 121
+    Height = 111
     Items.Strings = (
       'Colour'
       'Weight'
@@ -147,8 +147,8 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
     OnClick = TypeRadioGroupClick
   end
   object DetsSRC: TDataSource
-    Left = 128
-    Top = 136
+    Left = 160
+    Top = 188
   end
   object GetWeightSQL: TFDQuery
     ConnectionName = 'PB'
@@ -163,8 +163,8 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 250
+    Top = 208
   end
   object GetBrandSQL: TFDQuery
     ConnectionName = 'PB'
@@ -191,7 +191,7 @@ object PBMaintPaperFrm: TPBMaintPaperFrm
       'From Paper_Colour'
       'Order By Paper_Colour_Description'
       '')
-    Left = 200
-    Top = 8
+    Left = 202
+    Top = 156
   end
 end

@@ -3,18 +3,18 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Maintain Form Reference'
-  ClientHeight = 213
-  ClientWidth = 462
+  ClientHeight = 250
+  ClientWidth = 477
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 4
@@ -22,7 +22,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     Height = 181
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -31,19 +31,19 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Branch '
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -51,12 +51,12 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     object Label6: TLabel
       Left = 8
       Top = 72
-      Width = 80
-      Height = 13
+      Width = 92
+      Height = 17
       Caption = 'Form Reference'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -64,29 +64,29 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     object Label8: TLabel
       Left = 8
       Top = 124
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label11: TLabel
       Left = 264
       Top = 154
-      Width = 69
-      Height = 13
+      Width = 81
+      Height = 17
       Caption = 'Reorder Level'
     end
     object Label3: TLabel
       Left = 8
       Top = 98
-      Width = 58
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Stock Code'
     end
     object CustNameEdit: TEdit
       Left = 104
       Top = 16
       Width = 250
-      Height = 21
+      Height = 25
       MaxLength = 40
       ParentShowHint = False
       ReadOnly = True
@@ -98,7 +98,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       Left = 104
       Top = 42
       Width = 250
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 1
@@ -108,7 +108,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       Left = 104
       Top = 68
       Width = 329
-      Height = 21
+      Height = 25
       MaxLength = 50
       ParentShowHint = False
       ShowHint = True
@@ -121,7 +121,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       Left = 104
       Top = 120
       Width = 329
-      Height = 21
+      Height = 25
       MaxLength = 50
       TabOrder = 4
       Text = 'RefDescrEdit'
@@ -154,7 +154,7 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       Left = 104
       Top = 94
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 15
       TabOrder = 3
@@ -202,13 +202,15 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 182
-    Width = 462
+    Top = 219
+    Width = 477
     Height = 31
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 173
+    ExplicitWidth = 456
     object DelLabel: TLabel
       Left = 128
       Top = 6
@@ -415,8 +417,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
         ' '#39'N'#39',0, '#39' '#39
       '  From Form_Reference'
       '')
-    Left = 16
-    Top = 56
+    Left = 148
+    Top = 86
     ParamData = <
       item
         Name = 'Customer'
@@ -445,8 +447,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       '  Reorder_Level=:Reorder_Level,'
       '  Stock_Reference = :Stock_Reference'
       'Where Form_Reference = :Form_Reference')
-    Left = 56
-    Top = 56
+    Left = 198
+    Top = 86
     ParamData = <
       item
         Name = 'Form_Reference_Descr'
@@ -474,8 +476,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'Where'
       '(Form_Reference=:Form_Reference)'
       '')
-    Left = 96
-    Top = 56
+    Left = 248
+    Top = 86
     ParamData = <
       item
         Name = 'Form_Reference'
@@ -488,21 +490,21 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'From Form_Reference'
       ''
       '')
-    Left = 48
-    Top = 4
+    Left = 188
+    Top = 21
   end
   object FormRefSRC: TDataSource
     DataSet = GetFormRefSQL
-    Left = 176
-    Top = 4
+    Left = 268
+    Top = 21
   end
   object MaxSQL: TFDQuery
     SQL.Strings = (
       'Select Max(Form_Reference_Code) as Last_Code'
       'From Form_Reference'
       '')
-    Left = 88
-    Top = 120
+    Left = 238
+    Top = 166
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -511,8 +513,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'From Form_Reference'
       'Where Form_Reference_Descr = :GUID'
       '')
-    Left = 16
-    Top = 124
+    Left = 148
+    Top = 171
     ParamData = <
       item
         Name = 'GUID'
@@ -527,8 +529,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'where Customer=:Customer and'
       '          Branch_No=:Branch_No and'
       '          Form_Reference_ID=:Form_Reference_ID')
-    Left = 328
-    Top = 4
+    Left = 362
+    Top = 29
     ParamData = <
       item
         Name = 'Customer'
@@ -547,8 +549,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'From Form_Reference'
       'Where Form_Reference_Descr = :GUID'
       '')
-    Left = 56
-    Top = 124
+    Left = 54
+    Top = 171
     ParamData = <
       item
         Name = 'GUID'
@@ -560,8 +562,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Company')
-    Left = 16
-    Top = 4
+    Left = 148
+    Top = 21
   end
   object CheckFormRef2SQL: TFDQuery
     ConnectionName = 'PB'
@@ -582,8 +584,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'and (form_reference_id <> :form_reference_id)'
       'and (form_reference_id <> :Old_Form_Reference_id)'
       ' ')
-    Left = 272
-    Top = 8
+    Left = 316
+    Top = 26
     ParamData = <
       item
         Name = 'stock_reference'
@@ -607,7 +609,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       '          Form_Reference.stock_reference=:stock_reference'
       ' '
       ' ')
-    Left = 432
+    Left = 108
+    Top = 8
     ParamData = <
       item
         Name = 'Customer'
@@ -625,8 +628,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'and form_reference.form_reference_id = :form_reference_id'
       'and form_reference.stock_reference = :stock_reference '
       ' ')
-    Left = 376
-    Top = 84
+    Left = 38
+    Top = 113
     ParamData = <
       item
         Name = 'customer'
@@ -643,8 +646,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     SQL.Strings = (
       'delete from ecommerce_info '
       'where stock_reference = :stock_reference;')
-    Left = 192
-    Top = 108
+    Left = 368
+    Top = 151
     ParamData = <
       item
         Name = 'stock_reference'
@@ -655,8 +658,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     SQL.Strings = (
       'select top 1 * from ecommerce_info '
       'where stock_reference = :stock_reference;')
-    Left = 56
-    Top = 92
+    Left = 358
+    Top = 115
     ParamData = <
       item
         Name = 'stock_reference'
@@ -680,8 +683,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'and part.customer <> :customer'
       ' '
       ' ')
-    Left = 432
-    Top = 32
+    Left = 108
+    Top = 48
     ParamData = <
       item
         Name = 'part'
@@ -696,8 +699,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
       'select Product_Code_Prefix'
       'from customer'
       'where customer = :customer')
-    Left = 384
-    Top = 44
+    Left = 48
+    Top = 63
     ParamData = <
       item
         Name = 'customer'

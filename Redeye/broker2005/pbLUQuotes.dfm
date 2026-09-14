@@ -2,12 +2,12 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   Left = 277
   Top = 110
   Caption = 'Quotes'
-  ClientHeight = 423
-  ClientWidth = 842
+  ClientHeight = 414
+  ClientWidth = 836
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 842
+    Width = 836
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -63,22 +63,22 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 842
+    Width = 836
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 836
+        Width = 830
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 827
+      Width = 821
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 59
+      ButtonHeight = 40
+      ButtonWidth = 67
       Caption = 'ToolBar1'
       Images = imglstButtons
       ShowCaptions = True
@@ -91,7 +91,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 59
+        Left = 67
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -99,7 +99,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 118
+        Left = 134
         Top = 0
         Caption = 'C&opy'
         Enabled = False
@@ -107,7 +107,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 177
+        Left = 201
         Top = 0
         Caption = 'Re-&Quote'
         Enabled = False
@@ -115,7 +115,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 236
+        Left = 268
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -123,7 +123,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 295
+        Left = 335
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -131,7 +131,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnPrintClick
       end
       object ToolButton1: TToolButton
-        Left = 354
+        Left = 402
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -139,7 +139,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         Style = tbsSeparator
       end
       object btnConvert: TToolButton
-        Left = 362
+        Left = 410
         Top = 0
         Caption = 'Con&vert'
         Enabled = False
@@ -147,7 +147,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnConvertClick
       end
       object ToolButton3: TToolButton
-        Left = 421
+        Left = 477
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -155,7 +155,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 429
+        Left = 485
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -166,14 +166,14 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 842
-    Height = 288
+    Width = 836
+    Height = 279
     Align = alClient
     DataSource = dtmdlQuotes.dsQHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -182,7 +182,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -314,29 +314,29 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 363
-    Width = 842
+    Top = 354
+    Width = 836
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
-      Top = 14
-      Width = 86
-      Height = 13
-      Caption = 'Customer Search'
+      Top = 12
+      Width = 56
+      Height = 17
+      Caption = 'Customer'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 10
+      Left = 79
+      Top = 8
       Width = 233
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 568
+      Left = 562
       Top = 1
       Width = 273
       Height = 39
@@ -348,10 +348,10 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         273
         39)
       object Label2: TLabel
-        Left = 14
-        Top = 13
-        Width = 76
-        Height = 13
+        Left = 1
+        Top = 11
+        Width = 88
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Quote Number'
       end
@@ -366,16 +366,16 @@ object frmPBLUQuotes: TfrmPBLUQuotes
       end
       object edtNumber: TEdit
         Left = 95
-        Top = 9
+        Top = 7
         Width = 90
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 1
         OnKeyPress = edtNumberKeyPress
       end
     end
     object btnSearch: TBitBtn
-      Left = 352
+      Left = 327
       Top = 8
       Width = 75
       Height = 25
@@ -386,8 +386,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 404
-    Width = 842
+    Top = 395
+    Width = 836
     Height = 19
     Panels = <
       item

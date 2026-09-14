@@ -2,12 +2,12 @@ object frmpbluCustStock: TfrmpbluCustStock
   Left = 0
   Top = 0
   Caption = 'Customer stock details'
-  ClientHeight = 543
-  ClientWidth = 804
+  ClientHeight = 534
+  ClientWidth = 798
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmpbluCustStock: TfrmpbluCustStock
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 524
-    Width = 804
+    Top = 515
+    Width = 798
     Height = 19
     Panels = <
       item
@@ -36,34 +36,35 @@ object frmpbluCustStock: TfrmpbluCustStock
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 804
+    Width = 798
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 798
+        Width = 792
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 789
+      Width = 783
       Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 777
+        Width = 783
         Height = 41
-        ButtonHeight = 44
-        ButtonWidth = 65
+        ButtonHeight = 48
+        ButtonWidth = 73
         Caption = 'ToolBar1'
         Images = imglstMaint
         ShowCaptions = True
         TabOrder = 0
         Wrapable = False
+        ExplicitWidth = 771
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -75,7 +76,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 65
+          Left = 73
           Top = 0
           Hint = 'Change product'
           Caption = '  &Change  '
@@ -86,7 +87,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 130
+          Left = 146
           Top = 0
           Hint = 'Delete product'
           Caption = '&Delete'
@@ -96,7 +97,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           ShowHint = True
         end
         object btnLabels: TToolButton
-          Left = 195
+          Left = 219
           Top = 0
           Hint = 'Print labels'
           Caption = 'Labels'
@@ -107,7 +108,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           OnClick = btnLabelsClick
         end
         object ToolButton1: TToolButton
-          Left = 260
+          Left = 292
           Top = 0
           Width = 8
           Caption = 'ToolButton1'
@@ -115,7 +116,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           Style = tbsSeparator
         end
         object btnStockLevels: TToolButton
-          Left = 268
+          Left = 300
           Top = 0
           Hint = 'Maintain stock levels'
           Caption = '&Levels'
@@ -126,7 +127,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           OnClick = btnStockLevelsClick
         end
         object btnEnquiry: TToolButton
-          Left = 333
+          Left = 373
           Top = 0
           Caption = 'Enquiry'
           DropdownMenu = pmnEnquiry
@@ -135,7 +136,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           Style = tbsDropDown
         end
         object btnMaintain: TToolButton
-          Left = 413
+          Left = 465
           Top = 0
           Caption = 'Maintain'
           Enabled = False
@@ -143,7 +144,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           OnClick = btnMaintainClick
         end
         object btnTransfers: TToolButton
-          Left = 478
+          Left = 538
           Top = 0
           Caption = '&Moves'
           DropdownMenu = pmnMovements
@@ -156,20 +157,20 @@ object frmpbluCustStock: TfrmpbluCustStock
   end
   object Panel1: TPanel
     Left = 0
-    Top = 483
-    Width = 804
+    Top = 474
+    Width = 798
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      804
+      798
       41)
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 77
-      Height = 13
+      Top = 12
+      Width = 88
+      Height = 17
       Anchors = [akLeft, akBottom]
       Caption = 'Product Search'
     end
@@ -177,14 +178,14 @@ object frmpbluCustStock: TfrmpbluCustStock
       Left = 104
       Top = 8
       Width = 233
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akBottom]
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 618
+      Left = 612
       Top = 1
       Width = 185
       Height = 39
@@ -208,7 +209,7 @@ object frmpbluCustStock: TfrmpbluCustStock
     end
     object chkbxShowNotinUse: TCheckBox
       Left = 360
-      Top = 8
+      Top = 12
       Width = 217
       Height = 17
       Caption = 'Show products not in use'
@@ -219,14 +220,14 @@ object frmpbluCustStock: TfrmpbluCustStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 804
-    Height = 409
+    Width = 798
+    Height = 400
     Align = alClient
     DataSource = dtmdlStock.dtsStock
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -235,7 +236,7 @@ object frmpbluCustStock: TfrmpbluCustStock
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -354,7 +355,7 @@ object frmpbluCustStock: TfrmpbluCustStock
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 804
+    Width = 798
     Height = 30
     Align = alTop
     BevelOuter = bvNone
@@ -389,7 +390,7 @@ object frmpbluCustStock: TfrmpbluCustStock
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 395
+      Width = 389
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -397,21 +398,23 @@ object frmpbluCustStock: TfrmpbluCustStock
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 383
+        Width = 389
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 377
+            Width = 383
           end>
+        ExplicitWidth = 377
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 368
+          Width = 374
           Height = 25
           Align = alClient
-          ButtonWidth = 66
+          ButtonHeight = 23
+          ButtonWidth = 70
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -430,42 +433,42 @@ object frmpbluCustStock: TfrmpbluCustStock
             OnClick = btnCustomersClick
           end
           object btnQuotes: TToolButton
-            Left = 66
+            Left = 70
             Top = 0
             Caption = 'Quotes'
             ImageIndex = 6
             OnClick = btnQuotesClick
           end
           object btnEnquiries: TToolButton
-            Left = 132
+            Left = 140
             Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
-            Left = 198
+            Left = 210
             Top = 0
             Caption = 'Orders'
             ImageIndex = 8
             OnClick = ToolButton5Click
           end
           object btnJobs: TToolButton
-            Left = 264
+            Left = 280
             Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
-            Left = 330
+            Left = 350
             Top = 0
             Caption = 'Stock'
             Enabled = False
             ImageIndex = 4
           end
           object btnSalesInvoicing: TToolButton
-            Left = 396
+            Left = 420
             Top = 0
             Caption = 'Sales'
             ImageIndex = 5

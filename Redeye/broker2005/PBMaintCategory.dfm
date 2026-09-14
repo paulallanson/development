@@ -2,27 +2,27 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
   Left = 225
   Top = 152
   Caption = 'Maintain Categories'
-  ClientHeight = 239
-  ClientWidth = 414
+  ClientHeight = 272
+  ClientWidth = 504
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 117
-    Top = 216
-    Width = 109
-    Height = 13
+    Left = 142
+    Top = 220
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,12 +30,12 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
   object DetsGrpBox: TGroupBox
     Left = 16
     Top = 8
-    Width = 393
+    Width = 449
     Height = 193
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -44,19 +44,19 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label5: TLabel
       Left = 240
       Top = 47
-      Width = 59
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Short Descr'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -65,37 +65,43 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     object Label2: TLabel
       Left = 16
       Top = 56
-      Width = 62
-      Height = 13
+      Width = 71
+      Height = 17
       Caption = 'Commission'
     end
     object Label3: TLabel
       Left = 176
       Top = 56
-      Width = 9
-      Height = 13
+      Width = 11
+      Height = 17
       Caption = '%'
     end
     object Label4: TLabel
-      Left = 208
-      Top = 56
-      Width = 71
-      Height = 13
+      Left = 240
+      Top = 61
+      Width = 81
+      Height = 17
       Caption = 'Analysis Code'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
     end
     object DescrEdit: TEdit
       Left = 94
       Top = 16
-      Width = 263
-      Height = 21
+      Width = 322
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = CheckOK
     end
     object NotesBitBtn: TBitBtn
-      Left = 304
-      Top = 132
+      Left = 342
+      Top = 157
       Width = 75
       Height = 25
       Hint = 'Invoice Notes'
@@ -126,7 +132,7 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     object chkbxInvoice: TCheckBox
       Left = 16
       Top = 88
-      Width = 241
+      Width = 292
       Height = 17
       Caption = 'Invoice all orders before receipt of goods'
       TabOrder = 3
@@ -134,7 +140,7 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     object chkbxHold: TCheckBox
       Left = 16
       Top = 108
-      Width = 273
+      Width = 329
       Height = 17
       Caption = 'Hold orders/job bags until cleared funds received'
       TabOrder = 4
@@ -142,7 +148,7 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     object chkbxInvoiceNumber: TCheckBox
       Left = 16
       Top = 128
-      Width = 273
+      Width = 320
       Height = 17
       Caption = 'Invoice using separate invoice number sequence'
       TabOrder = 5
@@ -160,8 +166,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       OnChange = CheckOK
     end
     object btnPayment: TBitBtn
-      Left = 304
-      Top = 100
+      Left = 342
+      Top = 125
       Width = 75
       Height = 25
       Hint = 'Payment Notes'
@@ -198,10 +204,10 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       TabOrder = 7
     end
     object edtAnalysis: TEdit
-      Left = 278
-      Top = 52
+      Left = 336
+      Top = 47
       Width = 80
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
       Text = 'edtAnalysis'
@@ -217,8 +223,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 253
-    Top = 210
+    Left = 278
+    Top = 216
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -293,8 +299,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 333
-    Top = 210
+    Left = 358
+    Top = 216
     Width = 75
     Height = 25
     Cancel = True
@@ -374,8 +380,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       'Select Category'
       'From Category'
       'Where Description = :GUID')
-    Left = 160
-    Top = 8
+    Left = 232
+    Top = 82
     ParamData = <
       item
         Name = 'GUID'
@@ -392,8 +398,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       'Select Max(Category)+1, :GUID'
       'From Category'
       ' ')
-    Left = 344
-    Top = 96
+    Left = 302
+    Top = 104
     ParamData = <
       item
         Name = 'GUID'
@@ -421,8 +427,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       '(Category = :Category) '
       ''
       '')
-    Left = 288
-    Top = 88
+    Left = 160
+    Top = 110
     ParamData = <
       item
         Name = 'Description'
@@ -477,8 +483,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       'Delete From Category'
       'Where'
       '(Category = :Category)')
-    Left = 240
-    Top = 16
+    Left = 156
+    Top = 172
     ParamData = <
       item
         Name = 'Category'
@@ -487,8 +493,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 288
-    Top = 16
+    Left = 128
+    Top = 124
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -503,8 +509,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       'Where'
       '(Category = :Category) '
       '')
-    Left = 224
-    Top = 88
+    Left = 216
+    Top = 142
     ParamData = <
       item
         Name = 'Description'
@@ -538,8 +544,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 136
+    Left = 150
+    Top = 170
     ParamData = <
       item
         Name = 'Narrative'
@@ -564,8 +570,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       ':Last_Invoice_no,'
       ':Inactive'
       ')')
-    Left = 72
-    Top = 88
+    Left = 138
+    Top = 46
     ParamData = <
       item
         Name = 'Company'
@@ -587,8 +593,8 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
       'set Inactive = :Inactive'
       'where Company = :Company and'
       'Category = :Category')
-    Left = 168
-    Top = 96
+    Left = 330
+    Top = 48
     ParamData = <
       item
         Name = 'Inactive'
@@ -603,7 +609,7 @@ object PBMaintCategoryFrm: TPBMaintCategoryFrm
   object FlashTimerPay: TTimer
     Enabled = False
     OnTimer = FlashTimerPayTimer
-    Left = 352
-    Top = 24
+    Left = 232
+    Top = 46
   end
 end

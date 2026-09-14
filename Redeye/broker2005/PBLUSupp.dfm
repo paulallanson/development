@@ -3,12 +3,12 @@ object PBLUSuppFrm: TPBLUSuppFrm
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Look-Up A Supplier'
-  ClientHeight = 441
+  ClientHeight = 467
   ClientWidth = 464
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,12 +16,12 @@ object PBLUSuppFrm: TPBLUSuppFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 286
-    Top = 286
-    Width = 59
-    Height = 13
+    Left = 280
+    Top = 276
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -33,7 +33,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -41,7 +41,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = dbgDetailsColEnter
@@ -64,23 +64,23 @@ object PBLUSuppFrm: TPBLUSuppFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 300
+    Top = 305
     Width = 337
-    Height = 69
+    Height = 89
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object edtName: TEdit
       Left = 8
-      Top = 16
+      Top = 23
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtNameChange
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
-      Top = 44
+      Top = 58
       Width = 185
       Height = 17
       Caption = 'Only show active suppliers'
@@ -92,7 +92,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
   end
   object SelectBitBtn: TBitBtn
     Left = 373
-    Top = 342
+    Top = 370
     Width = 75
     Height = 26
     Caption = 'Select'
@@ -167,7 +167,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 373
-    Top = 403
+    Top = 431
     Width = 75
     Height = 25
     Kind = bkClose
@@ -286,7 +286,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
   end
   object DispPanel: TPanel
     Left = 8
-    Top = 372
+    Top = 400
     Width = 337
     Height = 57
     BevelOuter = bvLowered
@@ -296,22 +296,22 @@ object PBLUSuppFrm: TPBLUSuppFrm
     object LabelName: TLabel
       Left = 24
       Top = 3
-      Width = 32
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Name:'
     end
     object LabelPhone: TLabel
       Left = 24
       Top = 18
-      Width = 36
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Phone:'
     end
     object LabelFax: TLabel
       Left = 24
       Top = 33
-      Width = 20
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'Fax:'
     end
     object DBSupText: TDBText
@@ -356,7 +356,7 @@ object PBLUSuppFrm: TPBLUSuppFrm
   end
   object SelBranchBitBtn: TBitBtn
     Left = 373
-    Top = 370
+    Top = 398
     Width = 75
     Height = 25
     Caption = 'Branch'

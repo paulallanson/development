@@ -8,7 +8,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,17 +17,17 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
   DesignSize = (
     415
     257)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 104
-    Top = 229
-    Width = 109
-    Height = 13
+    Left = 98
+    Top = 223
+    Width = 132
+    Height = 17
     Anchors = [akRight, akBottom]
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -40,7 +40,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -49,89 +49,89 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 47
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Question'
     end
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object Label3: TLabel
       Left = 16
       Top = 144
-      Width = 50
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Sequence'
     end
     object Label4: TLabel
       Left = 16
       Top = 112
-      Width = 46
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Category'
     end
     object Label5: TLabel
       Left = 16
       Top = 83
-      Width = 63
-      Height = 13
+      Width = 74
+      Height = 17
       Caption = 'Prompt Type'
     end
     object lblItems: TLabel
-      Left = 312
-      Top = 80
-      Width = 27
-      Height = 13
+      Left = 317
+      Top = 81
+      Width = 31
+      Height = 17
       Caption = 'Items'
     end
     object TextEdit: TEdit
-      Left = 94
-      Top = 48
+      Left = 99
+      Top = 49
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'TextEdit'
       OnChange = TextEditChange
     end
     object PrdTypDescrEdit: TEdit
-      Left = 94
-      Top = 16
+      Left = 99
+      Top = 17
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 0
       Text = 'DescrEdit'
     end
     object SequenceEdit: TEdit
-      Left = 94
-      Top = 136
+      Left = 99
+      Top = 137
       Width = 121
-      Height = 21
+      Height = 25
       MaxLength = 5
       TabOrder = 4
       Text = 'SequenceEdit'
     end
     object DBLUQuestionCat: TDBLookupComboBox
-      Left = 94
-      Top = 104
+      Left = 99
+      Top = 105
       Width = 171
-      Height = 21
+      Height = 25
       KeyField = 'Question_Category'
       ListField = 'Question_Category_Descr'
       ListSource = srcQuestionCat
       TabOrder = 3
     end
     object DBLUPromptType: TDBLookupComboBox
-      Left = 94
-      Top = 75
+      Left = 99
+      Top = 76
       Width = 171
-      Height = 21
+      Height = 25
       KeyField = 'Prompt_Type'
       ListField = 'Prompt_type_Description'
       ListSource = srcPromptType
@@ -139,8 +139,8 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
       OnClick = DBLUPromptTypeClick
     end
     object BtnItems: TBitBtn
-      Left = 360
-      Top = 72
+      Left = 365
+      Top = 73
       Width = 23
       Height = 23
       Caption = '...'
@@ -163,7 +163,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 240
+    Left = 234
     Top = 221
     Width = 75
     Height = 25
@@ -238,9 +238,11 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitLeft = 228
+    ExplicitTop = 212
   end
   object CancelBitBtn: TBitBtn
-    Left = 320
+    Left = 314
     Top = 221
     Width = 75
     Height = 25
@@ -315,6 +317,8 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitLeft = 308
+    ExplicitTop = 212
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -428,8 +432,8 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
       'Select :Product_Type, Max(Capability)+1, :GUID'
       'From Product_TypeCapability'
       'Where Product_Type = :Product_Type')
-    Left = 16
-    Top = 112
+    Left = 4
+    Top = 60
     ParamData = <
       item
         Name = 'Product_Type'

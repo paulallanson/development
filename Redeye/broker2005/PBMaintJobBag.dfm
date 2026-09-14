@@ -2,14 +2,14 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   Left = 142
   Top = 3
   Caption = 'Job Bag Details'
-  ClientHeight = 706
-  ClientWidth = 1058
+  ClientHeight = 752
+  ClientWidth = 1075
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 964
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -19,11 +19,11 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   OnDestroy = FormDestroy
   OnResize = FormResize
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 687
-    Width = 1058
+    Top = 733
+    Width = 1075
     Height = 19
     Panels = <
       item
@@ -44,8 +44,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 1058
-    Height = 687
+    Width = 1075
+    Height = 733
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
@@ -55,84 +55,84 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 1058
-      Height = 66
+      Width = 1075
+      Height = 70
       Align = alTop
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 1052
+      ExplicitWidth = 1058
       DesignSize = (
-        1058
-        66)
+        1075
+        70)
       object labJobBagInfo: TLabel
         Left = 9
         Top = 15
-        Width = 62
-        Height = 13
+        Width = 72
+        Height = 17
         Caption = 'Job Bag No.'
       end
       object Label4: TLabel
-        Left = 172
+        Left = 177
         Top = 15
-        Width = 24
-        Height = 13
+        Width = 27
+        Height = 17
         Caption = 'Date'
       end
       object Label3: TLabel
-        Left = 546
+        Left = 567
         Top = 15
-        Width = 74
-        Height = 13
+        Width = 84
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Date Required'
-        ExplicitLeft = 576
+        ExplicitLeft = 550
       end
       object Label25: TLabel
-        Left = 371
+        Left = 382
         Top = 15
-        Width = 51
-        Height = 13
+        Width = 58
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Start Date'
-        ExplicitLeft = 401
+        ExplicitLeft = 365
       end
       object Label5: TLabel
-        Left = 741
+        Left = 785
         Top = 15
-        Width = 91
-        Height = 13
+        Width = 103
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Account Manager'
-        ExplicitLeft = 771
+        ExplicitLeft = 768
       end
       object lblAccountteam: TLabel
-        Left = 756
+        Left = 807
         Top = 44
-        Width = 70
-        Height = 13
+        Width = 81
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Account Team'
-        ExplicitLeft = 762
+        ExplicitLeft = 790
       end
       object edtJobBag: TEdit
-        Left = 80
+        Left = 85
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
       object edtDate: TEdit
-        Left = 204
+        Left = 209
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnExit = edtDateExit
       end
       object btnDate: TBitBtn
-        Left = 291
-        Top = 9
+        Left = 296
+        Top = 11
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -153,19 +153,19 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnClick = btnDateClick
       end
       object edtDateReq: TEdit
-        Left = 622
+        Left = 655
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 5
         OnChange = CheckOK
         OnExit = edtDateReqExit
-        ExplicitLeft = 616
+        ExplicitLeft = 638
       end
       object BitBtn2: TBitBtn
-        Left = 708
-        Top = 9
+        Left = 741
+        Top = 11
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -185,21 +185,21 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         NumGlyphs = 2
         TabOrder = 6
         OnClick = BitBtn2Click
-        ExplicitLeft = 702
+        ExplicitLeft = 724
       end
       object edtStartDate: TEdit
-        Left = 424
+        Left = 445
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 3
         OnExit = edtDateExit
-        ExplicitLeft = 418
+        ExplicitLeft = 428
       end
       object BitBtn6: TBitBtn
-        Left = 510
-        Top = 9
+        Left = 531
+        Top = 11
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -219,23 +219,23 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         NumGlyphs = 2
         TabOrder = 4
         OnClick = BitBtn6Click
-        ExplicitLeft = 504
+        ExplicitLeft = 514
       end
       object edtAccountManager: TEdit
-        Left = 836
+        Left = 895
         Top = 11
         Width = 115
-        Height = 21
+        Height = 25
         TabStop = False
         Anchors = [akTop, akRight]
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 7
-        ExplicitLeft = 830
+        ExplicitLeft = 878
       end
       object btnAccountManager: TBitBtn
-        Left = 959
-        Top = 9
+        Left = 1018
+        Top = 11
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -248,54 +248,54 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentFont = False
         TabOrder = 8
         OnClick = btnAccountManagerClick
-        ExplicitLeft = 953
+        ExplicitLeft = 1001
       end
       object edtAccountTeam: TEdit
-        Left = 836
+        Left = 895
         Top = 40
         Width = 115
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 9
-        ExplicitLeft = 830
+        ExplicitLeft = 878
       end
     end
     object pnlEndUser: TPanel
       Left = 0
-      Top = 209
-      Width = 1058
-      Height = 23
+      Top = 213
+      Width = 1075
+      Height = 28
       Align = alTop
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       Visible = False
-      ExplicitWidth = 1052
+      ExplicitWidth = 1058
       DesignSize = (
-        1058
-        23)
+        1075
+        28)
       object Label53: TLabel
         Left = 8
         Top = 4
-        Width = 46
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'End User'
       end
       object edtEndUser: TEdit
         Left = 80
         Top = 0
-        Width = 433
-        Height = 21
+        Width = 444
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 0
         ExplicitWidth = 427
       end
       object btnEndUser: TBitBtn
-        Left = 525
-        Top = -2
+        Left = 536
+        Top = 0
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -313,93 +313,94 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
     object pnlHeader: TPanel
       Left = 0
-      Top = 66
-      Width = 1058
+      Top = 70
+      Width = 1075
       Height = 143
       Align = alTop
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 66
       ExplicitWidth = 1052
       DesignSize = (
-        1058
+        1075
         143)
       object Label2: TLabel
         Left = 8
         Top = 10
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label6: TLabel
         Left = 8
         Top = 37
-        Width = 40
-        Height = 13
+        Width = 44
+        Height = 17
         Caption = 'Contact'
       end
       object Label1: TLabel
         Left = 8
-        Top = 118
-        Width = 59
-        Height = 13
+        Top = 120
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object Label7: TLabel
-        Left = 733
-        Top = 10
-        Width = 102
-        Height = 13
+        Left = 770
+        Top = 8
+        Width = 118
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Customer Order Ref'
-        ExplicitLeft = 763
+        ExplicitLeft = 753
       end
       object Label8: TLabel
-        Left = 787
-        Top = 37
-        Width = 44
-        Height = 13
+        Left = 840
+        Top = 35
+        Width = 48
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Quantity'
-        ExplicitLeft = 817
+        ExplicitLeft = 823
       end
       object Label9: TLabel
         Left = 8
         Top = 64
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Caption = 'Rep'
       end
       object Label11: TLabel
-        Left = 672
-        Top = 118
-        Width = 110
-        Height = 13
+        Left = 722
+        Top = 120
+        Width = 126
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Descriptive Reference'
-        ExplicitLeft = 702
+        ExplicitLeft = 705
       end
       object Label10: TLabel
-        Left = 746
-        Top = 64
-        Width = 84
-        Height = 13
+        Left = 792
+        Top = 62
+        Width = 96
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'ON HOLD status'
-        ExplicitLeft = 776
+        ExplicitLeft = 775
       end
       object edtCustomer: TEdit
         Left = 80
         Top = 6
-        Width = 305
-        Height = 21
+        Width = 316
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 0
         ExplicitWidth = 299
       end
       object btnCustomer: TBitBtn
-        Left = 395
+        Left = 406
         Top = 4
         Width = 25
         Height = 25
@@ -413,11 +414,11 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnCustomerClick
-        ExplicitLeft = 389
+        ExplicitLeft = 383
       end
       object BitBtn4: TBitBtn
         Left = 280
-        Top = 31
+        Top = 33
         Width = 25
         Height = 25
         Caption = '...'
@@ -432,8 +433,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       end
       object edtDescription: TEdit
         Left = 80
-        Top = 114
-        Width = 529
+        Top = 118
+        Width = 540
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         Font.Charset = ANSI_CHARSET
@@ -450,7 +451,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Left = 80
         Top = 33
         Width = 193
-        Height = 21
+        Height = 25
         KeyField = 'Contact_no'
         ListField = 'Name'
         ListSource = dmJobBag.srcCustContact
@@ -458,17 +459,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnClick = dblkpCustomerContactClick
       end
       object edtCustOrderNo: TEdit
-        Left = 836
+        Left = 895
         Top = 6
         Width = 152
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 9
         OnChange = edtCustOrderNoChange
-        ExplicitLeft = 830
+        ExplicitLeft = 878
       end
       object memQuantity: TMemo
-        Left = 836
+        Left = 895
         Top = 32
         Width = 81
         Height = 23
@@ -478,11 +479,11 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnEnter = memQuantityEnter
         OnExit = ValidateQty
         OnKeyPress = memQuantityKeyPress
-        ExplicitLeft = 830
+        ExplicitLeft = 878
       end
       object btnRep: TBitBtn
         Left = 280
-        Top = 58
+        Top = 60
         Width = 25
         Height = 25
         Caption = '...'
@@ -496,38 +497,38 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnClick = btnRepClick
       end
       object edtDescriptiveRef: TEdit
-        Left = 800
-        Top = 114
+        Left = 854
+        Top = 116
         Width = 193
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 8
         OnChange = CheckOK
-        ExplicitLeft = 794
+        ExplicitLeft = 837
       end
       object edtRep: TEdit
         Left = 80
         Top = 60
         Width = 193
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 2
       end
       object cmbOnHold: TComboBox
-        Left = 836
+        Left = 895
         Top = 60
         Width = 128
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         TabOrder = 11
         Items.Strings = (
           'Job ON HOLD'
           'Postage Pay Reqd')
-        ExplicitLeft = 830
+        ExplicitLeft = 878
       end
       object BitBtn3: TBitBtn
-        Left = 968
+        Left = 1027
         Top = 58
         Width = 23
         Height = 24
@@ -557,10 +558,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ShowHint = True
         TabOrder = 12
         OnClick = BitBtn3Click
-        ExplicitLeft = 962
+        ExplicitLeft = 1010
       end
       object pnlCostCentre: TPanel
-        Left = 424
+        Left = 435
         Top = 2
         Width = 290
         Height = 29
@@ -569,24 +570,24 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentBackground = False
         TabOrder = 6
         Visible = False
-        ExplicitLeft = 418
+        ExplicitLeft = 412
         object Label35: TLabel
           Left = 8
           Top = 8
-          Width = 60
-          Height = 13
+          Width = 68
+          Height = 17
           Caption = 'Cost Centre'
         end
         object edtCostCentre: TEdit
-          Left = 72
+          Left = 81
           Top = 4
           Width = 177
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
         object btnCostCentre: TBitBtn
-          Left = 256
+          Left = 265
           Top = 2
           Width = 25
           Height = 25
@@ -603,7 +604,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       end
       object chkbxCashSale: TCheckBox
         Left = 336
-        Top = 35
+        Top = 37
         Width = 77
         Height = 17
         Caption = 'Cash Sale'
@@ -620,21 +621,21 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Label52: TLabel
           Left = 24
           Top = 8
-          Width = 43
-          Height = 13
+          Width = 49
+          Height = 17
           Caption = 'Sub Rep'
         end
         object edtSubRep: TEdit
           Left = 97
           Top = 4
           Width = 193
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
         object btnSubRep: TBitBtn
           Left = 297
-          Top = 2
+          Top = 4
           Width = 25
           Height = 25
           Caption = '...'
@@ -651,8 +652,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
     object pnlBottom: TPanel
       Left = 0
-      Top = 579
-      Width = 1058
+      Top = 625
+      Width = 1075
       Height = 108
       Align = alBottom
       BevelOuter = bvLowered
@@ -802,17 +803,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Visible = False
       end
       object lblJobRevenue: TLabel
-        Left = 224
-        Top = 57
-        Width = 97
-        Height = 13
+        Left = 237
+        Top = 55
+        Width = 111
+        Height = 17
         Caption = 'Job revenue centre'
       end
       object lblCopiesReceivedBy: TLabel
-        Left = 328
+        Left = 351
         Top = 83
-        Width = 105
-        Height = 13
+        Width = 119
+        Height = 17
         Caption = 'lblCopiesReceivedBy'
       end
       object lblNonConformance: TLabel
@@ -844,21 +845,23 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Visible = False
       end
       object Panel4: TPanel
-        Left = 853
-        Top = 48
+        Left = 870
+        Top = 50
         Width = 204
-        Height = 59
+        Height = 57
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
         ExplicitLeft = 847
+        ExplicitTop = 48
+        ExplicitHeight = 59
         DesignSize = (
           204
-          59)
+          57)
         object btnOK: TBitBtn
           Left = 25
-          Top = 28
+          Top = 26
           Width = 75
           Height = 25
           Anchors = [akRight, akBottom]
@@ -885,10 +888,11 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           NumGlyphs = 2
           TabOrder = 0
           OnClick = btnOKClick
+          ExplicitTop = 28
         end
         object btnCancel: TBitBtn
           Left = 113
-          Top = 28
+          Top = 26
           Width = 75
           Height = 25
           Anchors = [akRight, akBottom]
@@ -896,54 +900,56 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           NumGlyphs = 2
           TabOrder = 1
           OnClick = btnCancelClick
+          ExplicitTop = 28
         end
       end
       object pnlProduction: TPanel
         Left = 1
         Top = 1
-        Width = 1056
-        Height = 47
+        Width = 1073
+        Height = 49
         Align = alTop
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1050
+        ExplicitTop = 0
+        ExplicitWidth = 1056
         object lblCompleteBy: TLabel
           Left = 482
-          Top = 26
-          Width = 76
-          Height = 13
+          Top = 27
+          Width = 90
+          Height = 17
           Caption = 'lblCompleteBy'
           Font.Charset = ANSI_CHARSET
           Font.Color = clGreen
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object lblInvoiceThisWeekBy: TLabel
-          Left = 250
-          Top = 5
-          Width = 110
-          Height = 13
+          Left = 267
+          Top = 3
+          Width = 121
+          Height = 17
           Caption = 'lblInvoiceThisWeekBy'
         end
         object lblInvoiceThisWeekDate: TLabel
-          Left = 138
-          Top = 5
-          Width = 122
-          Height = 13
+          Left = 150
+          Top = 3
+          Width = 135
+          Height = 17
           Caption = 'lblInvoiceThisWeekDate'
         end
         object chkbxProductionComplete: TCheckBox
           Left = 10
-          Top = 24
+          Top = 25
           Width = 311
           Height = 21
           Caption = 'Production is complete and was completed on date:'
           Font.Charset = ANSI_CHARSET
           Font.Color = clGreen
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -952,16 +958,16 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         end
         object edtdateComplete: TEdit
           Left = 327
-          Top = 24
+          Top = 23
           Width = 98
-          Height = 21
+          Height = 25
           TabOrder = 1
           OnChange = CheckOK
           OnExit = edtdateCompleteExit
         end
         object btnDateComplete: TBitBtn
           Left = 444
-          Top = 22
+          Top = 23
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -983,13 +989,13 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         end
         object chkbxInvoiceThisWeek: TCheckBox
           Left = 10
-          Top = 0
-          Width = 119
+          Top = 2
+          Width = 134
           Height = 22
           Caption = 'Invoice This Week'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -1000,17 +1006,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object chkbxReadytoInvoice: TCheckBox
         Left = 11
         Top = 55
-        Width = 198
+        Width = 230
         Height = 17
         Caption = 'This job is now ready for invoicing'
         TabOrder = 2
         OnClick = chkbxReadytoInvoiceClick
       end
       object dblkpJobRevenue: TDBLookupComboBox
-        Left = 328
-        Top = 53
+        Left = 351
+        Top = 51
         Width = 145
-        Height = 21
+        Height = 25
         KeyField = 'Invoice_Location'
         ListField = 'Invoice_Location_Descr'
         ListSource = dmJobBag.srcInvoiceLoc
@@ -1019,25 +1025,25 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       end
       object chkbxFileCopies: TCheckBox
         Left = 11
-        Top = 81
-        Width = 167
+        Top = 83
+        Width = 189
         Height = 17
         Caption = 'File Copies Received on date:'
         TabOrder = 4
         OnClick = chkbxFileCopiesClick
       end
       object edtDateCopiesReceived: TEdit
-        Left = 183
+        Left = 206
         Top = 79
         Width = 98
-        Height = 21
+        Height = 25
         TabOrder = 5
         OnChange = CheckOK
         OnExit = edtdateCompleteExit
       end
       object btnDateCopiesReceived: TBitBtn
-        Left = 292
-        Top = 77
+        Left = 315
+        Top = 79
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -1060,18 +1066,18 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
     object pnlFooter: TPanel
       Left = 0
-      Top = 434
-      Width = 1058
-      Height = 145
+      Top = 475
+      Width = 1075
+      Height = 150
       Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 4
-      ExplicitTop = 425
-      ExplicitWidth = 1052
+      ExplicitTop = 429
+      ExplicitWidth = 1058
       object btnNotes: TBitBtn
         Left = 11
-        Top = 112
+        Top = 118
         Width = 75
         Height = 25
         Caption = 'Notes'
@@ -1100,7 +1106,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       end
       object Button1: TButton
         Left = 96
-        Top = 112
+        Top = 118
         Width = 75
         Height = 25
         Caption = 'Print'
@@ -1109,92 +1115,101 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       end
       object chkbxAuthorise: TCheckBox
         Left = 200
-        Top = 116
+        Top = 126
         Width = 105
         Height = 17
         Caption = 'Authorise Job Bag'
         TabOrder = 2
       end
       object pnlOurTotals: TPanel
-        Left = 819
+        Left = 836
         Top = 0
         Width = 239
-        Height = 145
+        Height = 150
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 3
         ExplicitLeft = 813
+        ExplicitHeight = 145
         DesignSize = (
           239
-          145)
+          150)
         object labCosts: TLabel
           Left = 66
-          Top = 36
-          Width = 55
-          Height = 13
+          Top = 41
+          Width = 64
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Costs'
+          ExplicitTop = 36
         end
         object labSales: TLabel
           Left = 66
-          Top = 54
-          Width = 53
-          Height = 13
+          Top = 59
+          Width = 62
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Sales'
+          ExplicitTop = 54
         end
         object labMargin: TLabel
           Left = 57
-          Top = 72
-          Width = 68
-          Height = 13
+          Top = 77
+          Width = 77
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin Value'
+          ExplicitTop = 72
         end
         object LabMarginPerc: TLabel
           Left = 76
-          Top = 88
-          Width = 49
-          Height = 13
+          Top = 93
+          Width = 57
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin %'
+          ExplicitTop = 88
         end
         object labTotalCost: TLabel
-          Left = 155
-          Top = 36
-          Width = 68
-          Height = 13
+          Left = 144
+          Top = 41
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 36
         end
         object labTotalSell: TLabel
-          Left = 155
-          Top = 54
-          Width = 68
-          Height = 13
+          Left = 144
+          Top = 59
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 54
         end
         object LabTotalMargin: TLabel
-          Left = 155
-          Top = 72
-          Width = 68
-          Height = 13
+          Left = 144
+          Top = 77
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 72
         end
         object labTotalMarginPerc: TLabel
-          Left = 155
-          Top = 88
-          Width = 68
-          Height = 13
+          Left = 144
+          Top = 93
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 88
         end
         object lblCompany: TLabel
           Left = 73
@@ -1213,29 +1228,30 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         end
         object pnlPackPrice: TPanel
           Left = 0
-          Top = 115
+          Top = 120
           Width = 239
           Height = 30
           Align = alBottom
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 115
           DesignSize = (
             239
             30)
           object Label51: TLabel
             Left = 1
             Top = 6
-            Width = 27
-            Height = 13
+            Width = 31
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Price:'
           end
           object labUnitSell: TLabel
             Left = 34
             Top = 6
-            Width = 68
-            Height = 13
+            Width = 79
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'TotalsGoHere'
           end
@@ -1243,7 +1259,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Left = 107
             Top = 2
             Width = 90
-            Height = 21
+            Height = 25
             Anchors = [akRight, akBottom]
             KeyField = 'Price_Unit'
             ListField = 'Description'
@@ -1278,97 +1294,107 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         end
       end
       object Panel5: TPanel
-        Left = 361
+        Left = 378
         Top = 0
         Width = 21
-        Height = 145
+        Height = 150
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 4
         ExplicitLeft = 355
+        ExplicitHeight = 145
       end
       object pnlReseller: TPanel
-        Left = 611
+        Left = 628
         Top = 0
         Width = 208
-        Height = 145
+        Height = 150
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 5
         Visible = False
         ExplicitLeft = 605
+        ExplicitHeight = 145
         DesignSize = (
           208
-          145)
+          150)
         object Label54: TLabel
           Left = 21
-          Top = 37
-          Width = 55
-          Height = 13
+          Top = 42
+          Width = 64
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Costs'
+          ExplicitTop = 37
         end
         object Label55: TLabel
           Left = 21
-          Top = 55
-          Width = 53
-          Height = 13
+          Top = 60
+          Width = 62
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Sales'
+          ExplicitTop = 55
         end
         object Label56: TLabel
           Left = 12
-          Top = 73
-          Width = 68
-          Height = 13
+          Top = 78
+          Width = 77
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin Value'
+          ExplicitTop = 73
         end
         object Label57: TLabel
           Left = 31
-          Top = 89
-          Width = 49
-          Height = 13
+          Top = 94
+          Width = 57
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin %'
+          ExplicitTop = 89
         end
         object reselTotalCost: TLabel
-          Left = 126
-          Top = 37
-          Width = 68
-          Height = 13
+          Left = 115
+          Top = 42
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 37
         end
         object reselTotalSell: TLabel
-          Left = 126
-          Top = 55
-          Width = 68
-          Height = 13
+          Left = 115
+          Top = 60
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 55
         end
         object reselTotalMargin: TLabel
-          Left = 126
-          Top = 73
-          Width = 68
-          Height = 13
+          Left = 115
+          Top = 78
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 73
         end
         object reselTotalMarginPerc: TLabel
-          Left = 126
-          Top = 89
-          Width = 68
-          Height = 13
+          Left = 115
+          Top = 94
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 89
         end
         object Label58: TLabel
           Left = 46
@@ -1389,22 +1415,22 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Left = 0
         Top = -2
         Width = 377
-        Height = 109
+        Height = 117
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 6
         object Label59: TLabel
           Left = 16
-          Top = 8
-          Width = 62
-          Height = 13
+          Top = 6
+          Width = 71
+          Height = 17
           Caption = 'Pack Format'
         end
         object dblkpPackFormat: TDBLookupComboBox
           Left = 16
           Top = 25
           Width = 170
-          Height = 21
+          Height = 25
           KeyField = 'ID'
           ListField = 'Pack_Format_Description'
           ListSource = dmJobBag.dtsPackFormat
@@ -1430,7 +1456,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Left = 232
           Top = 8
           Width = 129
-          Height = 97
+          Height = 108
           Caption = ' Enclosing '
           ItemIndex = 0
           Items.Strings = (
@@ -1444,86 +1470,95 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         end
       end
       object pnlRep: TPanel
-        Left = 382
+        Left = 399
         Top = 0
         Width = 229
-        Height = 145
+        Height = 150
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 7
         Visible = False
         ExplicitLeft = 376
+        ExplicitHeight = 145
         DesignSize = (
           229
-          145)
+          150)
         object Label60: TLabel
           Left = 2
-          Top = 37
-          Width = 99
-          Height = 13
+          Top = 42
+          Width = 113
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Costs (Incl Int)'
+          ExplicitTop = 37
         end
         object Label61: TLabel
           Left = 42
-          Top = 55
-          Width = 53
-          Height = 13
+          Top = 60
+          Width = 62
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Sales'
+          ExplicitTop = 55
         end
         object Label62: TLabel
           Left = 33
-          Top = 73
-          Width = 68
-          Height = 13
+          Top = 78
+          Width = 77
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin Value'
+          ExplicitTop = 73
         end
         object Label63: TLabel
           Left = 52
-          Top = 89
-          Width = 49
-          Height = 13
+          Top = 94
+          Width = 57
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin %'
+          ExplicitTop = 89
         end
         object repTotalCost: TLabel
-          Left = 147
-          Top = 37
-          Width = 68
-          Height = 13
+          Left = 136
+          Top = 42
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 37
         end
         object RepTotalSell: TLabel
-          Left = 147
-          Top = 55
-          Width = 68
-          Height = 13
+          Left = 136
+          Top = 60
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 55
         end
         object RepTotalMargin: TLabel
-          Left = 147
-          Top = 73
-          Width = 68
-          Height = 13
+          Left = 136
+          Top = 78
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 73
         end
         object repTotalMarginPerc: TLabel
-          Left = 147
-          Top = 89
-          Width = 68
-          Height = 13
+          Left = 136
+          Top = 94
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitTop = 89
         end
         object Label68: TLabel
           Left = 67
@@ -1543,21 +1578,22 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
     object pgDetails: TPageControl
       Left = 0
-      Top = 232
-      Width = 1058
-      Height = 202
-      ActivePage = tsOrders
+      Top = 241
+      Width = 1075
+      Height = 234
+      ActivePage = tsSpecification
       Align = alClient
       TabOrder = 5
-      ExplicitWidth = 1052
-      ExplicitHeight = 193
+      ExplicitTop = 232
+      ExplicitWidth = 1058
+      ExplicitHeight = 202
       object tsOrders: TTabSheet
         Caption = 'Charges'
         object pnlCharges: TPanel
-          Left = 965
+          Left = 982
           Top = 0
           Width = 85
-          Height = 174
+          Height = 202
           Align = alRight
           ParentBackground = False
           TabOrder = 0
@@ -1746,8 +1782,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object sgLines: TStringGrid
           Left = 0
           Top = 0
-          Width = 965
-          Height = 174
+          Width = 982
+          Height = 202
           Align = alClient
           ColCount = 10
           DefaultColWidth = 40
@@ -1796,8 +1832,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object sgRequests: TStringGrid
           Left = 0
           Top = 0
-          Width = 965
-          Height = 174
+          Width = 982
+          Height = 202
           Align = alClient
           ColCount = 9
           DefaultColWidth = 40
@@ -1809,6 +1845,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           TabOrder = 0
           OnDblClick = sgRequestsDblClick
           OnDrawCell = sgRequestsDrawCell
+          ExplicitWidth = 965
+          ExplicitHeight = 156
           ColWidths = (
             40
             63
@@ -1821,13 +1859,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             178)
         end
         object pnlRequests: TPanel
-          Left = 965
+          Left = 982
           Top = 0
           Width = 85
-          Height = 174
+          Height = 202
           Align = alRight
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 965
+          ExplicitHeight = 170
           object btnAddRequest: TBitBtn
             Left = 8
             Top = 8
@@ -1880,10 +1920,11 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Left = 0
           Top = 0
           Width = 265
-          Height = 174
+          Height = 202
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 170
           object Panel15: TPanel
             Left = 1
             Top = 1
@@ -1895,7 +1936,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             object chkbxArtRequired: TCheckBox
               Left = 8
               Top = 1
-              Width = 105
+              Width = 158
               Height = 17
               Caption = 'Artwork Required'
               TabOrder = 0
@@ -1916,38 +1957,38 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             object Label13: TLabel
               Left = 9
               Top = 12
-              Width = 34
-              Height = 13
+              Width = 37
+              Height = 17
               Caption = 'Due In'
             end
             object Label14: TLabel
               Left = 9
               Top = 39
-              Width = 78
-              Height = 13
+              Width = 89
+              Height = 17
               Caption = 'Proof Required'
             end
             object Label15: TLabel
               Left = 9
               Top = 67
-              Width = 96
-              Height = 13
+              Width = 110
+              Height = 17
               Caption = 'Approval Required'
             end
             object edtArtDueInDate: TEdit
               Tag = 10
-              Left = 104
+              Left = 124
               Top = 8
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 0
               OnExit = edtArtDueInDateExit
             end
             object btnArtDueInDate: TBitBtn
               Tag = 10
-              Left = 192
-              Top = 6
+              Left = 212
+              Top = 8
               Width = 25
               Height = 25
               Enabled = False
@@ -1970,8 +2011,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object btnArtProofReqDate: TBitBtn
               Tag = 10
-              Left = 192
-              Top = 33
+              Left = 212
+              Top = 35
               Width = 25
               Height = 25
               Enabled = False
@@ -1994,28 +2035,28 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtArtProofReqDate: TEdit
               Tag = 10
-              Left = 104
+              Left = 124
               Top = 35
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 2
               OnExit = edtArtDueInDateExit
             end
             object edtArtApprovalDate: TEdit
               Tag = 10
-              Left = 104
+              Left = 124
               Top = 63
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 4
               OnExit = edtArtDueInDateExit
             end
             object btnArtApprovalDate: TBitBtn
               Tag = 10
-              Left = 192
-              Top = 61
+              Left = 212
+              Top = 63
               Width = 25
               Height = 25
               Enabled = False
@@ -2037,8 +2078,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = btnArtDueInDateClick
             end
             object chkbxArtDueInDate: TCheckBox
-              Left = 231
-              Top = 10
+              Left = 237
+              Top = 12
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2047,8 +2088,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxArtProofReqDate: TCheckBox
-              Left = 231
-              Top = 37
+              Left = 237
+              Top = 39
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2057,8 +2098,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxArtApprovalDate: TCheckBox
-              Left = 231
-              Top = 65
+              Left = 237
+              Top = 67
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2081,19 +2122,22 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Left = 1
             Top = 133
             Width = 263
-            Height = 40
+            Height = 68
             Align = alClient
             TabOrder = 3
+            ExplicitHeight = 36
           end
         end
         object pnlSamples: TPanel
-          Left = 787
+          Left = 804
           Top = 0
           Width = 263
-          Height = 174
+          Height = 202
           Align = alRight
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 787
+          ExplicitHeight = 170
           object Panel17: TPanel
             Left = 1
             Top = 1
@@ -2116,25 +2160,26 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Left = 1
             Top = 21
             Width = 261
-            Height = 45
+            Height = 73
             Align = alClient
             BevelInner = bvNone
             BevelOuter = bvNone
             BorderStyle = bsNone
             Enabled = False
             TabOrder = 1
+            ExplicitHeight = 41
             object Label27: TLabel
               Left = 9
               Top = 12
-              Width = 94
-              Height = 13
+              Width = 107
+              Height = 17
               Caption = 'SEPs to client date'
             end
             object Label28: TLabel
               Left = 9
               Top = 39
-              Width = 98
-              Height = 13
+              Width = 114
+              Height = 17
               Caption = 'SEPs Approval date'
             end
             object edtSEPClientDate: TEdit
@@ -2142,7 +2187,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               Left = 112
               Top = 8
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 0
               OnExit = edtArtDueInDateExit
@@ -2200,7 +2245,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               Left = 112
               Top = 35
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 2
               OnExit = edtArtDueInDateExit
@@ -2228,42 +2273,43 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object Panel14: TPanel
             Left = 1
-            Top = 66
+            Top = 94
             Width = 261
             Height = 107
             Align = alBottom
             BevelInner = bvLowered
             ParentBackground = False
             TabOrder = 2
+            ExplicitTop = 62
             DesignSize = (
               261
               107)
             object lblRevision: TLabel
               Left = 8
               Top = 13
-              Width = 64
-              Height = 13
+              Width = 73
+              Height = 17
               Caption = 'Revision No:'
             end
             object lblScheduleDate: TLabel
               Left = 8
               Top = 34
-              Width = 27
-              Height = 13
+              Width = 30
+              Height = 17
               Caption = 'Date:'
             end
             object lblScheduleOp: TLabel
               Left = 8
               Top = 55
-              Width = 50
-              Height = 13
+              Width = 57
+              Height = 17
               Caption = 'Operator:'
             end
             object Label26: TLabel
               Left = 8
               Top = 84
-              Width = 67
-              Height = 13
+              Width = 77
+              Height = 17
               Caption = 'Shedule Type'
             end
             object btnNewSchedule: TBitBtn
@@ -2294,7 +2340,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               Left = 104
               Top = 80
               Width = 145
-              Height = 21
+              Height = 25
               Style = csDropDownList
               Anchors = [akRight, akBottom]
               ItemIndex = 0
@@ -2310,23 +2356,26 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object pnlDataServices: TPanel
           Left = 265
           Top = 0
-          Width = 522
-          Height = 174
+          Width = 539
+          Height = 202
           Align = alClient
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 522
+          ExplicitHeight = 170
           object Panel16: TPanel
             Left = 1
             Top = 1
-            Width = 520
+            Width = 537
             Height = 20
             Align = alTop
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 520
             object chkbxDSRequired: TCheckBox
               Left = 8
               Top = 1
-              Width = 137
+              Width = 184
               Height = 17
               Caption = 'Data Services Required'
               TabOrder = 0
@@ -2336,112 +2385,116 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object scrlDataServices: TScrollBox
             Left = 1
             Top = 21
-            Width = 520
-            Height = 152
+            Width = 537
+            Height = 180
             Align = alClient
             BevelInner = bvNone
             BevelOuter = bvNone
             BorderStyle = bsNone
             Enabled = False
             TabOrder = 1
+            ExplicitLeft = -3
+            ExplicitTop = 20
+            ExplicitWidth = 520
+            ExplicitHeight = 134
             object Label16: TLabel
               Left = 9
               Top = 12
-              Width = 61
-              Height = 13
+              Width = 68
+              Height = 17
               Caption = 'Data Due In'
             end
             object Label17: TLabel
               Left = 9
               Top = 39
-              Width = 70
-              Height = 13
+              Width = 76
+              Height = 17
               Caption = 'Client Brief In'
             end
             object Label18: TLabel
               Left = 9
               Top = 67
-              Width = 56
-              Height = 13
+              Width = 64
+              Height = 17
               Caption = 'Text Due In'
             end
             object Label19: TLabel
               Left = 9
               Top = 108
-              Width = 55
-              Height = 13
+              Width = 62
+              Height = 17
               Caption = 'Brief to DS'
             end
             object Label20: TLabel
               Left = 9
               Top = 160
-              Width = 50
-              Height = 13
+              Width = 59
+              Height = 17
               Caption = 'Text to DS'
             end
             object Label21: TLabel
               Left = 9
               Top = 201
-              Width = 98
-              Height = 13
+              Width = 115
+              Height = 17
               Caption = 'Text Proof Req'#39'd by'
             end
             object Label22: TLabel
               Left = 9
               Top = 332
-              Width = 103
-              Height = 13
+              Width = 120
+              Height = 17
               Caption = 'Live Proofs Req'#39'd by'
             end
             object Label23: TLabel
               Left = 9
               Top = 359
-              Width = 99
-              Height = 13
+              Width = 115
+              Height = 17
               Caption = 'Live Proof Approval'
             end
             object Label24: TLabel
               Left = 9
               Top = 134
-              Width = 55
-              Height = 13
+              Width = 63
+              Height = 17
               Caption = 'Data to DS'
             end
             object Label29: TLabel
               Left = 9
               Top = 266
-              Width = 99
-              Height = 13
+              Width = 114
+              Height = 17
               Caption = 'PDF Proof Req'#39'd by'
             end
             object Label30: TLabel
               Left = 9
               Top = 292
-              Width = 100
-              Height = 13
+              Width = 115
+              Height = 17
               Caption = 'PDF Proof Approval'
             end
             object Label31: TLabel
               Left = 9
               Top = 240
-              Width = 113
-              Height = 13
+              Width = 128
+              Height = 17
               Caption = 'Artwork for PDF Proof'
             end
             object edtDataDueInDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 145
               Top = 8
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 0
               OnExit = edtArtDueInDateExit
             end
             object btnDataDueInDate: TBitBtn
               Tag = 20
-              Left = 203
-              Top = 6
+              Left = 236
+              Top = 8
               Width = 25
               Height = 25
               Enabled = False
@@ -2464,8 +2517,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object btnClientBriefInDate: TBitBtn
               Tag = 20
-              Left = 203
-              Top = 33
+              Left = 236
+              Top = 35
               Width = 25
               Height = 25
               Enabled = False
@@ -2488,28 +2541,28 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtClientBriefInDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 145
               Top = 35
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 2
               OnExit = edtArtDueInDateExit
             end
             object edtTextDueInDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 145
               Top = 63
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 4
               OnExit = edtArtDueInDateExit
             end
             object btnTextDueInDate: TBitBtn
               Tag = 20
-              Left = 203
-              Top = 61
+              Left = 236
+              Top = 63
               Width = 25
               Height = 25
               Enabled = False
@@ -2532,7 +2585,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object btnBriefToDSDate: TBitBtn
               Tag = 20
-              Left = 203
+              Left = 236
               Top = 102
               Width = 25
               Height = 25
@@ -2556,27 +2609,27 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtBriefToDSDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 145
               Top = 104
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 6
               OnExit = edtArtDueInDateExit
             end
             object edtTextToDSDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 145
               Top = 156
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 10
               OnExit = edtArtDueInDateExit
             end
             object btnTextToDSDate: TBitBtn
               Tag = 20
-              Left = 203
+              Left = 236
               Top = 154
               Width = 25
               Height = 25
@@ -2600,7 +2653,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object btnTextProofReqDate: TBitBtn
               Tag = 20
-              Left = 203
+              Left = 235
               Top = 195
               Width = 25
               Height = 25
@@ -2624,28 +2677,28 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtTextProofReqDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 144
               Top = 197
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 12
               OnExit = edtArtDueInDateExit
             end
             object edtLiveProofReqDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 144
               Top = 328
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 20
               OnExit = edtArtDueInDateExit
             end
             object btnLiveProofReqDate: TBitBtn
               Tag = 20
-              Left = 203
-              Top = 326
+              Left = 235
+              Top = 328
               Width = 25
               Height = 25
               Enabled = False
@@ -2668,8 +2721,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object btnLiveProofAppDate: TBitBtn
               Tag = 20
-              Left = 203
-              Top = 353
+              Left = 235
+              Top = 355
               Width = 25
               Height = 25
               Enabled = False
@@ -2692,17 +2745,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtLiveProofAppDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 144
               Top = 355
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 22
               OnExit = edtArtDueInDateExit
             end
             object chkbxDataDueInDate: TCheckBox
-              Left = 239
-              Top = 10
+              Left = 272
+              Top = 12
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2711,8 +2764,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxClientBriefInDate: TCheckBox
-              Left = 239
-              Top = 37
+              Left = 272
+              Top = 39
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2721,8 +2774,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxTextDueInDate: TCheckBox
-              Left = 239
-              Top = 65
+              Left = 272
+              Top = 67
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2731,7 +2784,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxBriefToDSDate: TCheckBox
-              Left = 239
+              Left = 272
               Top = 106
               Width = 16
               Height = 17
@@ -2741,7 +2794,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxTextToDSDate: TCheckBox
-              Left = 239
+              Left = 272
               Top = 158
               Width = 16
               Height = 17
@@ -2751,7 +2804,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxTextProofReqDate: TCheckBox
-              Left = 239
+              Left = 271
               Top = 199
               Width = 16
               Height = 17
@@ -2761,8 +2814,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxLiveProofReqDate: TCheckBox
-              Left = 239
-              Top = 330
+              Left = 271
+              Top = 332
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2771,8 +2824,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxLiveProofAppDate: TCheckBox
-              Left = 239
-              Top = 357
+              Left = 271
+              Top = 359
               Width = 16
               Height = 17
               ParentShowHint = False
@@ -2782,17 +2835,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtDataToDSDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 145
               Top = 130
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 8
               OnExit = edtArtDueInDateExit
             end
             object btnDatatoDSDate: TBitBtn
               Tag = 20
-              Left = 203
+              Left = 236
               Top = 128
               Width = 25
               Height = 25
@@ -2815,7 +2868,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = btnArtDueInDateClick
             end
             object chkbxDataToDSDate: TCheckBox
-              Left = 239
+              Left = 272
               Top = 132
               Width = 16
               Height = 17
@@ -2826,17 +2879,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtPDFProofReqDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 144
               Top = 262
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 16
               OnExit = edtArtDueInDateExit
             end
             object btnPDFProofReqDate: TBitBtn
               Tag = 20
-              Left = 203
+              Left = 235
               Top = 260
               Width = 25
               Height = 25
@@ -2859,7 +2912,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = btnArtDueInDateClick
             end
             object chkbxPDFProofReqDate: TCheckBox
-              Left = 238
+              Left = 270
               Top = 264
               Width = 16
               Height = 17
@@ -2869,7 +2922,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = chkbxArtDueInDateClick
             end
             object chkbxPDFProofAppDate: TCheckBox
-              Left = 238
+              Left = 270
               Top = 290
               Width = 16
               Height = 17
@@ -2880,7 +2933,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object btnPDFProofAppDate: TBitBtn
               Tag = 20
-              Left = 203
+              Left = 235
               Top = 286
               Width = 25
               Height = 25
@@ -2904,27 +2957,27 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
             object edtPDFProofAppDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 144
               Top = 288
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 18
               OnExit = edtArtDueInDateExit
             end
             object edtPDFProofArtDate: TEdit
               Tag = 20
-              Left = 112
+              Left = 144
               Top = 236
               Width = 80
-              Height = 21
+              Height = 25
               Color = clBtnFace
               TabOrder = 14
               OnExit = edtArtDueInDateExit
             end
             object btnPDFProofArtDate: TBitBtn
               Tag = 20
-              Left = 203
+              Left = 235
               Top = 234
               Width = 25
               Height = 25
@@ -2947,7 +3000,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = btnArtDueInDateClick
             end
             object chkbxPDFProofArtDate: TCheckBox
-              Left = 238
+              Left = 270
               Top = 238
               Width = 16
               Height = 17
@@ -2966,51 +3019,53 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Left = 0
           Top = 0
           Width = 257
-          Height = 174
+          Height = 202
+          VertScrollBar.Position = 69
           Align = alLeft
           TabOrder = 0
+          ExplicitHeight = 170
           object Label32: TLabel
             Left = 8
-            Top = 8
-            Width = 80
-            Height = 13
+            Top = -67
+            Width = 95
+            Height = 17
             Caption = 'Personalisation'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object Label33: TLabel
             Left = 8
-            Top = 120
-            Width = 50
-            Height = 13
+            Top = 48
+            Width = 59
+            Height = 17
             Caption = 'Enclosing'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object Label34: TLabel
             Left = 8
-            Top = 176
-            Width = 48
-            Height = 13
+            Top = 105
+            Width = 57
+            Height = 17
             Caption = 'Finishing'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object CheckBox1: TCheckBox
             Left = 32
-            Top = 24
+            Top = -45
             Width = 225
             Height = 17
             Caption = 'Continuous Personalisation'
@@ -3019,7 +3074,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox2: TCheckBox
             Left = 32
-            Top = 43
+            Top = -26
             Width = 225
             Height = 17
             Caption = 'Continuous Fanfold Personalisation'
@@ -3027,7 +3082,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox3: TCheckBox
             Left = 32
-            Top = 62
+            Top = -7
             Width = 225
             Height = 14
             Caption = 'Sheet Personalisation'
@@ -3035,7 +3090,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox4: TCheckBox
             Left = 32
-            Top = 79
+            Top = 10
             Width = 225
             Height = 17
             Caption = 'Inkjet'
@@ -3043,7 +3098,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox5: TCheckBox
             Left = 32
-            Top = 98
+            Top = 29
             Width = 225
             Height = 17
             Caption = 'Thermal Card Personalisation'
@@ -3051,7 +3106,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox7: TCheckBox
             Left = 32
-            Top = 136
+            Top = 67
             Width = 225
             Height = 17
             Caption = 'Machine Enclosing'
@@ -3059,7 +3114,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox8: TCheckBox
             Left = 32
-            Top = 155
+            Top = 86
             Width = 225
             Height = 17
             Caption = 'Hand Enclosing'
@@ -3067,7 +3122,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox9: TCheckBox
             Left = 32
-            Top = 192
+            Top = 123
             Width = 225
             Height = 17
             Caption = 'Guilotine'
@@ -3075,7 +3130,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox10: TCheckBox
             Left = 32
-            Top = 211
+            Top = 142
             Width = 225
             Height = 17
             Caption = 'Folding'
@@ -3083,7 +3138,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           end
           object CheckBox6: TCheckBox
             Left = 32
-            Top = 229
+            Top = 160
             Width = 225
             Height = 17
             Caption = 'Stitching'
@@ -3093,16 +3148,18 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Panel10: TPanel
           Left = 257
           Top = 0
-          Width = 793
-          Height = 174
+          Width = 810
+          Height = 202
           Align = alClient
           Caption = 'Panel10'
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 793
+          ExplicitHeight = 170
           object Panel13: TPanel
             Left = 1
             Top = 1
-            Width = 791
+            Width = 808
             Height = 18
             Align = alTop
             Alignment = taLeftJustify
@@ -3110,18 +3167,19 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Caption = 'Works Instructions'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
+            ExplicitWidth = 791
           end
           object sgWorks: TStringGrid
             Left = 1
             Top = 19
-            Width = 706
-            Height = 154
+            Width = 723
+            Height = 182
             Align = alClient
             ColCount = 8
             DefaultColWidth = 40
@@ -3133,6 +3191,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             TabOrder = 1
             OnDblClick = sgWorksDblClick
             OnDrawCell = sgWorksDrawCell
+            ExplicitWidth = 706
+            ExplicitHeight = 136
             ColWidths = (
               40
               79
@@ -3144,13 +3204,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               189)
           end
           object pnlWorks: TPanel
-            Left = 707
+            Left = 724
             Top = 19
             Width = 85
-            Height = 154
+            Height = 182
             Align = alRight
             ParentBackground = False
             TabOrder = 2
+            ExplicitLeft = 707
+            ExplicitHeight = 150
             object btnAddWorks: TBitBtn
               Left = 8
               Top = 8
@@ -3245,21 +3307,25 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Panel6: TPanel
           Left = 0
           Top = 0
-          Width = 1050
-          Height = 174
+          Width = 1067
+          Height = 202
           Align = alClient
           Caption = 'Panel6'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1050
+          ExplicitHeight = 170
           object Panel7: TPanel
             Left = 1
-            Top = 149
-            Width = 1048
+            Top = 177
+            Width = 1065
             Height = 24
             Align = alBottom
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 0
+            ExplicitTop = 145
+            ExplicitWidth = 1048
             object lblDocumentDir: TLabel
               Left = 8
               Top = 6
@@ -3275,10 +3341,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             end
           end
           object tlbrDocuments: TToolBar
-            Left = 1015
+            Left = 1032
             Top = 1
             Width = 34
-            Height = 148
+            Height = 176
             Align = alRight
             ButtonHeight = 30
             ButtonWidth = 30
@@ -3290,6 +3356,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             ShowHint = True
             TabOrder = 1
             Wrapable = False
+            ExplicitLeft = 1015
+            ExplicitHeight = 144
             object btnExcel: TToolButton
               Left = 0
               Top = 0
@@ -3347,8 +3415,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object lstvwDocuments: TListView
             Left = 225
             Top = 1
-            Width = 790
-            Height = 148
+            Width = 807
+            Height = 176
             Align = alClient
             Columns = <
               item
@@ -3372,24 +3440,29 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             OnColumnClick = lstvwDocumentsColumnClick
             OnCompare = lstvwDocumentsCompare
             OnDblClick = lstvwDocumentsDblClick
+            ExplicitWidth = 790
+            ExplicitHeight = 144
           end
           object dirlstJobDocuments: TDirectoryListBox
             Left = 1
             Top = 1
             Width = 176
-            Height = 148
+            Height = 176
             Align = alLeft
+            ItemHeight = 17
             TabOrder = 3
             OnChange = dirlstJobDocumentsChange
+            ExplicitHeight = 144
           end
           object pnlDocumentsLeft: TPanel
             Left = 177
             Top = 1
             Width = 48
-            Height = 148
+            Height = 176
             Align = alLeft
             ParentBackground = False
             TabOrder = 4
+            ExplicitHeight = 144
           end
         end
       end
@@ -3399,42 +3472,48 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object pnlSInvoices: TPanel
           Left = 0
           Top = 0
-          Width = 1050
-          Height = 66
+          Width = 1067
+          Height = 94
           Align = alClient
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1050
+          ExplicitHeight = 62
           DesignSize = (
-            1050
-            66)
+            1067
+            94)
           object Label38: TLabel
-            Left = 799
-            Top = -47
-            Width = 101
-            Height = 13
+            Left = 816
+            Top = -19
+            Width = 116
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Total Invoiced Costs'
+            ExplicitLeft = 799
+            ExplicitTop = -47
           end
           object Label41: TLabel
-            Left = 929
-            Top = -47
-            Width = 68
-            Height = 13
+            Left = 935
+            Top = -19
+            Width = 79
+            Height = 17
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             Caption = 'TotalsGoHere'
+            ExplicitLeft = 918
+            ExplicitTop = -47
           end
           object dbgSalesInvoices: TDBGrid
             Left = 0
             Top = 25
-            Width = 965
-            Height = 13
+            Width = 982
+            Height = 41
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -3442,7 +3521,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgSalesInvoicesDrawColumnCell
@@ -3490,13 +3569,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               end>
           end
           object Panel8: TPanel
-            Left = 965
+            Left = 982
             Top = 25
             Width = 85
-            Height = 13
+            Height = 41
             Align = alRight
             ParentBackground = False
             TabOrder = 1
+            ExplicitLeft = 965
+            ExplicitHeight = 9
             object btnViewSI: TBitBtn
               Left = 8
               Top = 8
@@ -3520,35 +3601,38 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object Panel9: TPanel
             Left = 0
             Top = 0
-            Width = 1050
+            Width = 1067
             Height = 25
             Align = alTop
             ParentBackground = False
             TabOrder = 2
+            ExplicitWidth = 1050
             object Label36: TLabel
               Left = 13
-              Top = 6
-              Width = 70
-              Height = 13
+              Top = 1
+              Width = 80
+              Height = 17
               Caption = 'Sales Invoices'
             end
           end
           object Panel19: TPanel
             Left = 0
-            Top = 38
-            Width = 1050
+            Top = 66
+            Width = 1067
             Height = 28
             Align = alBottom
             ParentBackground = False
             TabOrder = 3
+            ExplicitTop = 34
+            ExplicitWidth = 1050
             DesignSize = (
-              1050
+              1067
               28)
             object Label42: TLabel
               Left = 342
-              Top = 8
-              Width = 99
-              Height = 13
+              Top = 6
+              Width = 114
+              Height = 17
               Anchors = [akLeft, akBottom]
               Caption = 'Total Invoiced Sales'
             end
@@ -3568,23 +3652,25 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         end
         object pnlPInvoices: TPanel
           Left = 0
-          Top = 66
-          Width = 1050
+          Top = 94
+          Width = 1067
           Height = 108
           Align = alBottom
           Caption = 'pnlPInvoices'
           ParentBackground = False
           TabOrder = 1
+          ExplicitTop = 62
+          ExplicitWidth = 1050
           object dbgPurchaseInvoices: TDBGrid
             Left = 1
             Top = 26
-            Width = 963
+            Width = 980
             Height = 53
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -3592,7 +3678,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgPurchaseInvoicesDrawColumnCell
@@ -3652,13 +3738,14 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               end>
           end
           object Panel20: TPanel
-            Left = 964
+            Left = 981
             Top = 26
             Width = 85
             Height = 53
             Align = alRight
             ParentBackground = False
             TabOrder = 1
+            ExplicitLeft = 964
             object btnViewPI: TBitBtn
               Left = 8
               Top = 8
@@ -3672,35 +3759,37 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object Panel18: TPanel
             Left = 1
             Top = 1
-            Width = 1048
+            Width = 1065
             Height = 25
             Align = alTop
             ParentBackground = False
             TabOrder = 2
+            ExplicitWidth = 1048
             object Label37: TLabel
               Left = 13
-              Top = 6
-              Width = 90
-              Height = 13
+              Top = 3
+              Width = 102
+              Height = 17
               Caption = 'Purchase Invoices'
             end
           end
           object Panel1: TPanel
             Left = 1
             Top = 79
-            Width = 1048
+            Width = 1065
             Height = 28
             Align = alBottom
             ParentBackground = False
             TabOrder = 3
+            ExplicitWidth = 1048
             DesignSize = (
-              1048
+              1065
               28)
             object Label12: TLabel
               Left = 342
               Top = 8
-              Width = 101
-              Height = 13
+              Width = 116
+              Height = 17
               Anchors = [akLeft, akBottom]
               Caption = 'Total Invoiced Costs'
             end
@@ -3723,13 +3812,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'Pending Enquiries'
         ImageIndex = 7
         object Panel11: TPanel
-          Left = 965
+          Left = 982
           Top = 0
           Width = 85
-          Height = 174
+          Height = 202
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 965
+          ExplicitHeight = 170
           object btnConvertSupply: TBitBtn
             Left = 6
             Top = 8
@@ -3743,8 +3834,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object sgSupply: TStringGrid
           Left = 0
           Top = 0
-          Width = 965
-          Height = 174
+          Width = 982
+          Height = 202
           Align = alClient
           ColCount = 7
           DefaultColWidth = 40
@@ -3770,23 +3861,24 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Panel21: TPanel
           Left = 0
           Top = 0
-          Width = 1050
+          Width = 1067
           Height = 33
           Align = alTop
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1050
           object Label39: TLabel
             Left = 13
             Top = 9
-            Width = 61
-            Height = 13
+            Width = 69
+            Height = 17
             Caption = 'Department'
           end
           object cmbDepartment: TComboBox
-            Left = 80
+            Left = 89
             Top = 6
             Width = 145
-            Height = 21
+            Height = 25
             Style = csDropDownList
             ItemIndex = 0
             TabOrder = 0
@@ -3799,13 +3891,13 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object dbgDataCollect: TDBGrid
           Left = 0
           Top = 33
-          Width = 1050
-          Height = 109
+          Width = 1067
+          Height = 137
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -3813,7 +3905,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           TabOrder = 1
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           Columns = <
@@ -3915,57 +4007,56 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         end
         object Panel22: TPanel
           Left = 0
-          Top = 142
-          Width = 1050
+          Top = 170
+          Width = 1067
           Height = 32
           Align = alBottom
           Alignment = taRightJustify
           ParentBackground = False
           TabOrder = 2
+          ExplicitTop = 138
+          ExplicitWidth = 1050
           DesignSize = (
-            1050
+            1067
             32)
           object lblMachineHours: TLabel
-            Left = 840
-            Top = 10
+            Left = 851
+            Top = 7
             Width = 138
-            Height = 13
+            Height = 21
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             AutoSize = False
             Caption = 'Total Machine Hours: 000.00'
-            ExplicitLeft = 912
           end
           object TLabel
-            Left = 982
+            Left = 998
             Top = 9
-            Width = 3
-            Height = 13
+            Width = 4
+            Height = 17
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
-            ExplicitLeft = 1054
+            ExplicitLeft = 981
           end
           object lblOvertimeHours: TLabel
-            Left = 671
-            Top = 10
+            Left = 682
+            Top = 7
             Width = 139
-            Height = 13
+            Height = 21
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             AutoSize = False
             Caption = 'Total Overtime Hours: 000.00'
-            ExplicitLeft = 743
           end
           object lblLabourHours: TLabel
-            Left = 504
-            Top = 10
+            Left = 515
+            Top = 7
             Width = 130
-            Height = 13
+            Height = 21
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             AutoSize = False
             Caption = 'Total Labour Hours: 000.00'
-            ExplicitLeft = 576
           end
         end
       end
@@ -3973,13 +4064,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'NCA'
         ImageIndex = 8
         object pnlFunctions: TPanel
-          Left = 965
+          Left = 982
           Top = 0
           Width = 85
-          Height = 174
+          Height = 202
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 965
+          ExplicitHeight = 170
           object btnAddNCA: TBitBtn
             Left = 8
             Top = 8
@@ -4027,16 +4120,18 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Panel25: TPanel
           Left = 0
           Top = 0
-          Width = 965
-          Height = 174
+          Width = 982
+          Height = 202
           Align = alClient
           Caption = 'Panel25'
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 965
+          ExplicitHeight = 170
           object sgNCADetails: TStringGrid
             Left = 1
             Top = 1
-            Width = 963
+            Width = 980
             Height = 112
             Align = alTop
             ColCount = 10
@@ -4064,30 +4159,33 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object Panel26: TPanel
             Left = 1
             Top = 113
-            Width = 963
+            Width = 980
             Height = 24
             Align = alTop
             ParentBackground = False
             TabOrder = 1
+            ExplicitWidth = 963
             object Label40: TLabel
               Left = 9
               Top = 6
-              Width = 135
-              Height = 13
+              Width = 153
+              Height = 17
               Caption = 'Non Conformance Details:'
             end
           end
           object memNCADetails: TMemo
             Left = 1
             Top = 137
-            Width = 963
-            Height = 36
+            Width = 980
+            Height = 64
             Align = alClient
             Color = clBtnFace
             Lines.Strings = (
               '')
             ReadOnly = True
             TabOrder = 2
+            ExplicitWidth = 963
+            ExplicitHeight = 32
           end
         end
       end
@@ -4095,13 +4193,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'Deliveries'
         ImageIndex = 10
         object pnlDeliveries: TPanel
-          Left = 965
+          Left = 982
           Top = 0
           Width = 85
-          Height = 174
+          Height = 202
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 965
+          ExplicitHeight = 170
           object btnAddDelivery: TBitBtn
             Left = 8
             Top = 8
@@ -4155,8 +4255,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object sgDeliveries: TStringGrid
           Left = 0
           Top = 0
-          Width = 965
-          Height = 174
+          Width = 982
+          Height = 202
           Align = alClient
           ColCount = 4
           DefaultColWidth = 40
@@ -4181,56 +4281,57 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object lblTotalPInvoices: TLabel
           Left = 312
           Top = 48
-          Width = 63
-          Height = 13
+          Width = 72
+          Height = 17
           Caption = 'lblTotalSales'
         end
         object Panel23: TPanel
           Left = 0
           Top = 0
-          Width = 1050
+          Width = 1067
           Height = 22
           Align = alTop
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1050
           object Label43: TLabel
             Left = 13
-            Top = 5
-            Width = 129
-            Height = 13
+            Top = -1
+            Width = 155
+            Height = 17
             Caption = 'Job Profitability Analysis'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object Label49: TLabel
-            Left = 550
-            Top = 5
-            Width = 38
-            Height = 13
+            Left = 543
+            Top = -1
+            Width = 45
+            Height = 17
             Alignment = taRightJustify
             Caption = 'Actuals'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object Label50: TLabel
-            Left = 638
-            Top = 5
-            Width = 38
-            Height = 13
+            Left = 632
+            Top = -1
+            Width = 44
+            Height = 17
             Alignment = taRightJustify
             Caption = 'Budget'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -4239,21 +4340,23 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object Panel24: TPanel
           Left = 0
           Top = 108
-          Width = 1050
-          Height = 66
+          Width = 1067
+          Height = 94
           Align = alClient
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 1050
+          ExplicitHeight = 62
           object Label45: TLabel
             Left = 32
             Top = 6
-            Width = 117
-            Height = 13
+            Width = 134
+            Height = 17
             Caption = 'Total Purchase Invoices'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -4261,12 +4364,12 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object Label46: TLabel
             Left = 32
             Top = 30
-            Width = 103
-            Height = 13
+            Width = 117
+            Height = 17
             Caption = 'Total Sales Invoicing'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -4274,12 +4377,12 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object Label47: TLabel
             Left = 32
             Top = 54
-            Width = 95
-            Height = 13
+            Width = 109
+            Height = 17
             Caption = 'Total Margin Value'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -4287,26 +4390,26 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object Label48: TLabel
             Left = 32
             Top = 78
-            Width = 49
-            Height = 13
+            Width = 57
+            Height = 17
             Caption = 'Margin %'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object lblPICount: TLabel
-            Left = 374
+            Left = 357
             Top = 6
-            Width = 117
-            Height = 13
+            Width = 134
+            Height = 17
             Alignment = taRightJustify
             Caption = 'Total Purchase Invoices'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -4403,30 +4506,32 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         object pnlDataAnalysis: TPanel
           Left = 0
           Top = 22
-          Width = 1050
+          Width = 1067
           Height = 86
           Align = alTop
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 1050
           object Panel28: TPanel
             Left = 0
             Top = 60
-            Width = 1050
+            Width = 1067
             Height = 26
             Align = alBottom
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 1050
             object Label44: TLabel
               Left = 32
-              Top = 8
-              Width = 117
-              Height = 13
+              Top = 4
+              Width = 140
+              Height = 17
               Caption = 'Total Production Costs'
               Font.Charset = ANSI_CHARSET
               Font.Color = clWindowText
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -4501,7 +4606,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           object sgAnalysis: TStringGrid
             Left = 0
             Top = 0
-            Width = 1050
+            Width = 1067
             Height = 60
             Align = alClient
             ColCount = 8
@@ -4526,13 +4631,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'Specification'
         ImageIndex = 11
         object Panel2: TPanel
-          Left = 965
+          Left = 982
           Top = 0
           Width = 85
-          Height = 174
+          Height = 202
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 965
+          ExplicitHeight = 170
           object BitBtn1: TBitBtn
             Left = 8
             Top = 8
@@ -4548,17 +4655,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
   end
   object PrinterSetupDialog1: TPrinterSetupDialog
-    Left = 420
-    Top = 108
+    Left = 541
+    Top = 103
   end
   object pmnDummy: TPopupMenu
-    Left = 204
-    Top = 265
+    Left = 268
+    Top = 153
   end
   object pmnFunctions: TPopupMenu
     OnPopup = pmnFunctionsPopup
-    Left = 148
-    Top = 225
+    Left = 220
+    Top = 121
     object mnuInsertexistingPO: TMenuItem
       Caption = 'Insert an existing PO'
       OnClick = btnAddPOClick
@@ -4621,8 +4728,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
   end
   object pmnPOrders: TPopupMenu
-    Left = 204
-    Top = 329
+    Left = 359
+    Top = 139
     object InsertanexistingPO1: TMenuItem
       Caption = '&Insert an existing PO'
       OnClick = btnAddPOClick
@@ -4675,13 +4782,13 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 544
-    Top = 208
+    Left = 752
+    Top = 160
   end
   object pmnSOrders: TPopupMenu
     OnPopup = pmnSOrdersPopup
-    Left = 300
-    Top = 305
+    Left = 388
+    Top = 145
     object mnuChange: TMenuItem
       Caption = 'Change'
       OnClick = mnuChangeClick
@@ -4744,17 +4851,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   end
   object DocOpenDialog: TOpenDialog
     Options = [ofHideReadOnly, ofNoChangeDir, ofAllowMultiSelect, ofEnableSizing]
-    Left = 552
-    Top = 120
+    Left = 610
+    Top = 270
   end
   object svDlgOfficeDoc: TSaveDialog
-    Left = 217
-    Top = 86
+    Left = 687
+    Top = 116
   end
   object pmnRequests: TPopupMenu
     OnPopup = pmnRequestsPopup
-    Left = 388
-    Top = 305
+    Left = 460
+    Top = 129
     object mnuRequestChange: TMenuItem
       Caption = 'Change'
       OnClick = mnuRequestChangeClick
@@ -4814,8 +4921,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
   end
   object imgIcons: TImageList
-    Left = 32
-    Top = 276
+    Left = 72
+    Top = 140
     Bitmap = {
       494C010105000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
@@ -5089,8 +5196,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       000000000000}
   end
   object pmnuDocuments: TPopupMenu
-    Left = 30
-    Top = 342
+    Left = 86
+    Top = 92
     object CreateExcelDocument1: TMenuItem
       Caption = 'Create Excel Document'
       OnClick = btnExcelClick
@@ -5130,8 +5237,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
   end
   object imgDocuments: TImageList
-    Left = 96
-    Top = 284
+    Left = 176
+    Top = 124
   end
   object pmnuSI: TPopupMenu
     Left = 692
@@ -5146,8 +5253,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
   end
   object pmnuPI: TPopupMenu
-    Left = 780
-    Top = 400
+    Left = 836
+    Top = 448
     object pmnuViewPI: TMenuItem
       Caption = 'View'
       OnClick = btnViewPIClick
@@ -5157,7 +5264,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     DragTypes = [dtCopy, dtLink]
     OnDrop = DropComboTarget1Drop
     Target = pgDetails
-    Left = 648
-    Top = 106
+    Left = 618
+    Top = 165
   end
 end

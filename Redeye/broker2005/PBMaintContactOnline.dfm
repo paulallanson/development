@@ -8,12 +8,12 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object btnOK: TBitBtn
     Left = 206
     Top = 208
@@ -63,37 +63,37 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 55
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'User Name'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Password'
     end
     object Label4: TLabel
       Left = 16
       Top = 92
-      Width = 49
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'User Role'
     end
     object edtUserName: TEdit
-      Left = 80
+      Left = 87
       Top = 24
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EnableOK
     end
     object edtPassword: TEdit
-      Left = 80
+      Left = 87
       Top = 56
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = EnableOK
     end
@@ -108,10 +108,10 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
       TabOrder = 4
     end
     object dblkpWebRole: TDBLookupComboBox
-      Left = 80
+      Left = 87
       Top = 88
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Web_User_Role_Id'
       ListField = 'Description'
       ListSource = dtsWebRole
@@ -137,15 +137,15 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     object Label3: TLabel
       Left = 8
       Top = 28
-      Width = 66
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'Consumer ID'
     end
     object edtConsumerID: TEdit
       Left = 72
       Top = 24
       Width = 177
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EnableOK
     end
@@ -156,8 +156,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
       'select max(Web_User_ID) +1 as '#39'Web_User_ID'#39' '
       'from Web_Users'
       '')
-    Left = 272
-    Top = 8
+    Left = 460
+    Top = 114
   end
   object qryInsWebUser: TFDQuery
     ConnectionName = 'PB'
@@ -224,8 +224,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
       
         'where Customer = :Customer and Branch_no = :Branch_no and Contac' +
         't_no = :Contact_no')
-    Left = 456
-    Top = 72
+    Left = 306
+    Top = 58
     ParamData = <
       item
         Name = 'Web_User_ID'

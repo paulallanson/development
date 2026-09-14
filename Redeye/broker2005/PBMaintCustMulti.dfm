@@ -3,12 +3,12 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
   Top = 28
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Details'
-  ClientHeight = 592
+  ClientHeight = 622
   ClientWidth = 755
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,130 +16,130 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
   OnCreate = FormCreate
   DesignSize = (
     755
-    592)
-  TextHeight = 13
+    622)
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 40
-    Width = 51
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Town/City'
   end
   object Label2: TLabel
     Left = 16
     Top = 70
-    Width = 37
-    Height = 13
+    Width = 40
+    Height = 17
     Caption = 'County'
   end
   object Label3: TLabel
     Left = 16
     Top = 194
-    Width = 44
-    Height = 13
+    Width = 51
+    Height = 17
     Caption = 'VAT Rate'
   end
   object Label4: TLabel
     Left = 16
     Top = 224
-    Width = 75
-    Height = 13
+    Width = 87
+    Height = 17
     Caption = 'Customer Type'
   end
   object Label5: TLabel
     Left = 16
     Top = 287
-    Width = 81
-    Height = 13
+    Width = 91
+    Height = 17
     Caption = 'Revenue Centre'
   end
   object Label6: TLabel
     Left = 16
     Top = 467
-    Width = 75
-    Height = 13
+    Width = 88
+    Height = 17
     Caption = 'Payment Terms'
   end
   object Label7: TLabel
     Left = 16
     Top = 437
-    Width = 32
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label8: TLabel
     Left = 16
     Top = 497
-    Width = 87
-    Height = 13
+    Width = 97
+    Height = 17
     Caption = 'Invoiced Upfront'
   end
   object Label9: TLabel
     Left = 16
     Top = 528
-    Width = 82
-    Height = 13
+    Width = 94
+    Height = 17
     Caption = 'Customer Active'
   end
   object Label10: TLabel
     Left = 16
     Top = 132
-    Width = 60
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Primary Rep'
   end
   object Label11: TLabel
     Left = 16
     Top = 256
-    Width = 58
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Importance'
   end
   object lblAnalysis1: TLabel
     Left = 16
     Top = 316
-    Width = 80
-    Height = 13
+    Width = 92
+    Height = 17
     Caption = 'Analysis Code 1'
   end
   object lblAnalysis2: TLabel
     Left = 16
     Top = 348
-    Width = 80
-    Height = 13
+    Width = 92
+    Height = 17
     Caption = 'Analysis Code 2'
   end
   object Label12: TLabel
     Left = 16
     Top = 100
-    Width = 91
-    Height = 13
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
   end
   object Label13: TLabel
     Left = 16
     Top = 164
-    Width = 76
-    Height = 13
+    Width = 88
+    Height = 17
     Caption = 'Secondary Rep'
   end
   object lblAnalysis3: TLabel
     Left = 16
     Top = 380
-    Width = 80
-    Height = 13
+    Width = 92
+    Height = 17
     Caption = 'Analysis Code 3'
   end
   object lblAnalysis4: TLabel
     Left = 16
     Top = 412
-    Width = 80
-    Height = 13
+    Width = 92
+    Height = 17
     Caption = 'Analysis Code 4'
   end
   object OKBitBtn: TBitBtn
-    Left = 278
-    Top = 557
+    Left = 302
+    Top = 581
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -168,8 +168,8 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 366
-    Top = 557
+    Left = 390
+    Top = 581
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -178,21 +178,21 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
     TabOrder = 3
   end
   object GroupBox1: TGroupBox
-    Left = 112
+    Left = 126
     Top = 8
     Width = 265
-    Height = 537
+    Height = 545
     Caption = 'Change from  '
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
       265
-      537)
+      545)
     object edtTown: TEdit
       Left = 32
       Top = 28
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
       Text = 'edtTown'
@@ -201,7 +201,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 58
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 1
       Text = 'edtCounty'
@@ -217,7 +217,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 183
       Width = 121
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 5
       Text = 'edtVatRate'
@@ -226,7 +226,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 213
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 6
       Text = 'edtType'
@@ -235,7 +235,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 276
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 8
       Text = 'edtRevenuecentre'
@@ -244,7 +244,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 426
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 11
       Text = 'edtStatus'
@@ -253,7 +253,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 457
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 12
       Text = 'edtPaymentTerms'
@@ -269,7 +269,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 120
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 3
       Text = 'edtRep'
@@ -278,7 +278,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 245
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 7
       Text = 'edtImportance'
@@ -287,7 +287,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 304
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 9
       Text = 'edtAnalysis1'
@@ -296,7 +296,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 336
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 10
       Text = 'edtAnalysis2'
@@ -305,7 +305,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 88
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 2
       Text = 'edtAccManager'
@@ -314,7 +314,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 152
       Width = 201
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 4
       Text = 'edtSecondaryRep'
@@ -323,7 +323,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 368
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 15
       Text = 'edtAnalysis3'
@@ -332,7 +332,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 400
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 16
       Text = 'edtAnalysis4'
@@ -342,19 +342,19 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
     Left = 408
     Top = 8
     Width = 337
-    Height = 537
+    Height = 545
     Caption = 'Change to  '
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
       337
-      537)
+      545)
     object edtTownTo: TEdit
       Tag = 1
       Left = 32
       Top = 28
       Width = 201
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtTownTo'
       OnChange = CheckOK
@@ -364,7 +364,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 58
       Width = 201
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtCountyTo'
       OnChange = CheckOK
@@ -464,7 +464,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 184
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Description'
       TabOrder = 5
@@ -475,7 +475,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 214
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Customer_Type'
       ListField = 'Description'
       TabOrder = 8
@@ -486,7 +486,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 276
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Invoice_location'
       ListField = 'Invoice_Location_Descr'
       TabOrder = 14
@@ -497,7 +497,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 424
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Customer_Status'
       ListField = 'Customer_Status_Descr'
       TabOrder = 19
@@ -508,7 +508,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 455
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Payment_Terms'
       ListField = 'Payment_Terms_Description'
       TabOrder = 21
@@ -519,7 +519,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 120
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Rep'
       ListField = 'Rep_Name'
       TabOrder = 2
@@ -680,7 +680,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 246
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Level_of_Importance'
       ListField = 'Importance_Description'
       TabOrder = 11
@@ -731,7 +731,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 304
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 17
       Text = 'edtAnalysisTo1'
@@ -741,7 +741,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 336
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 18
       Text = 'edtAnalysisTo2'
@@ -751,7 +751,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 88
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Operator'
       ListField = 'Operator_Name'
       TabOrder = 26
@@ -802,7 +802,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 152
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Rep'
       ListField = 'Rep_Name'
       TabOrder = 29
@@ -853,7 +853,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 368
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 32
       Text = 'edtAnalysisTo3'
@@ -863,7 +863,7 @@ object PBMaintCustMultiFrm: TPBMaintCustMultiFrm
       Left = 32
       Top = 400
       Width = 201
-      Height = 21
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 33
       Text = 'edtAnalysisTo4'

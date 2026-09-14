@@ -3,26 +3,26 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
   Top = 177
   BorderStyle = bsSingle
   Caption = 'Maintain Additional Charges'
-  ClientHeight = 134
-  ClientWidth = 390
+  ClientHeight = 153
+  ClientWidth = 409
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 72
-    Top = 110
-    Width = 133
-    Height = 13
+    Top = 124
+    Width = 160
+    Height = 17
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -37,13 +37,13 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     TabOrder = 0
     object lblDescription: TLabel
       Left = 16
-      Top = 22
-      Width = 59
-      Height = 13
+      Top = 25
+      Width = 66
+      Height = 17
       Caption = 'Description'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -51,12 +51,12 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     object lblCost: TLabel
       Left = 16
       Top = 62
-      Width = 23
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'Cost'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -76,9 +76,9 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     end
     object edtDescription: TEdit
       Left = 88
-      Top = 18
+      Top = 21
       Width = 273
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = CheckOK
     end
@@ -97,7 +97,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     end
     object memCost: TMemo
       Left = 88
-      Top = 58
+      Top = 61
       Width = 81
       Height = 23
       Alignment = taRightJustify
@@ -111,7 +111,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
   end
   object OKBitBtn: TBitBtn
     Left = 231
-    Top = 103
+    Top = 117
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -188,7 +188,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 310
-    Top = 103
+    Top = 117
     Width = 75
     Height = 25
     Cancel = True
@@ -275,8 +275,8 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
       '  :Amount,'
       '  :Quotation_price);'
       ' ')
-    Left = 112
-    Top = 16
+    Left = 92
+    Top = 44
     ParamData = <
       item
         Name = 'Additional_charge'
@@ -335,6 +335,6 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
         'Select Max(Additional_charge) as last_chrg_no from additional_ch' +
         'arge;')
     Left = 32
-    Top = 16
+    Top = 92
   end
 end

@@ -7,12 +7,12 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 347
@@ -21,15 +21,17 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 338
+    ExplicitWidth = 828
     DesignSize = (
       834
       41)
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 96
-      Height = 13
-      Caption = 'Description Search'
+      Top = 13
+      Width = 66
+      Height = 17
+      Caption = 'Description'
     end
     object btnClose: TButton
       Left = 753
@@ -40,12 +42,13 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       Caption = '&Close'
       TabOrder = 1
       OnClick = btnCloseClick
+      ExplicitLeft = 747
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 96
+      Top = 10
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
@@ -58,6 +61,7 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       Caption = '&Select'
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 659
     end
   end
   object stsbrDetails: TStatusBar
@@ -72,6 +76,8 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
       item
         Width = 50
       end>
+    ExplicitTop = 379
+    ExplicitWidth = 828
   end
   object dbgDetails: TDBGrid
     Left = 0
@@ -83,7 +89,7 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -91,7 +97,7 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick

@@ -2,23 +2,23 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
   Left = 215
   Top = 128
   Caption = 'Lookup a Process Group'
-  ClientHeight = 306
-  ClientWidth = 425
+  ClientHeight = 320
+  ClientWidth = 439
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -31,7 +31,7 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -39,7 +39,7 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -65,14 +65,14 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 343
-    Top = 244
+    Left = 350
+    Top = 243
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -146,8 +146,8 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 343
-    Top = 272
+    Left = 350
+    Top = 271
     Width = 75
     Height = 25
     Kind = bkClose
@@ -155,16 +155,16 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 336
-    Top = 128
+    Left = 344
+    Top = 96
     Width = 87
-    Height = 105
+    Height = 121
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 25
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -187,7 +187,7 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 53
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -210,7 +210,7 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 81
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -256,7 +256,7 @@ object PBLUProcessGroupFrm: TPBLUProcessGroupFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 250
+    Top = 94
   end
 end

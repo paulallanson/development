@@ -8,13 +8,13 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
   Constraints.MinWidth = 354
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DetsGrpBox: TGroupBox
     Left = 0
     Top = 0
@@ -24,50 +24,54 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 340
+    ExplicitHeight = 392
     DesignSize = (
       346
       401)
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Operator'
     end
     object Label2: TLabel
       Left = 8
       Top = 60
-      Width = 24
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Date'
     end
     object Label3: TLabel
-      Left = 176
+      Left = 180
       Top = 60
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Time'
     end
     object mmNoteText: TMemo
       Left = 16
       Top = 88
-      Width = 316
+      Width = 310
       Height = 296
       Anchors = [akLeft, akTop, akRight, akBottom]
       ScrollBars = ssVertical
       TabOrder = 0
+      ExplicitWidth = 304
+      ExplicitHeight = 287
     end
     object dblucmbbxOperator: TDBLookupComboBox
-      Left = 64
+      Left = 68
       Top = 24
       Width = 241
-      Height = 21
+      Height = 25
       DataField = 'Name'
       KeyField = 'Operator'
       ListField = 'Name'
@@ -75,20 +79,20 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
       TabOrder = 1
     end
     object dtpckTime: TDateTimePicker
-      Left = 208
+      Left = 212
       Top = 56
       Width = 97
-      Height = 21
+      Height = 25
       Date = 45197.000000000000000000
       Time = 0.434360891202231900
       Kind = dtkTime
       TabOrder = 2
     end
     object dtpckDate: TDateTimePicker
-      Left = 64
+      Left = 68
       Top = 56
       Width = 97
-      Height = 21
+      Height = 25
       Date = 37453.000000000000000000
       Time = 37453.000000000000000000
       TabOrder = 3
@@ -103,15 +107,17 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 392
+    ExplicitWidth = 340
     object DelLabel: TLabel
-      Left = 16
+      Left = 11
       Top = 20
-      Width = 133
-      Height = 13
-      Caption = 'Delete the above details ?'
+      Width = 150
+      Height = 17
+      Caption = 'Delete the above details'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -274,12 +280,12 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
       'Select Operator, Name'
       'From Operator'
       'Order By Name')
-    Left = 208
-    Top = 12
+    Left = 180
+    Top = 191
   end
   object OperatorsSRC: TDataSource
     DataSet = qrySelOperators
-    Left = 248
-    Top = 12
+    Left = 94
+    Top = 223
   end
 end

@@ -7,7 +7,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -15,7 +15,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stBrDetails: TStatusBar
     Left = 0
     Top = 483
@@ -28,6 +28,8 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       item
         Width = 50
       end>
+    ExplicitTop = 474
+    ExplicitWidth = 768
   end
   object Panel3: TPanel
     Left = 0
@@ -38,18 +40,19 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 383
+    ExplicitWidth = 768
     object Panel1: TPanel
       Left = 0
       Top = 9
       Width = 353
       Height = 73
       BevelOuter = bvNone
-      Caption = 'Panel1'
       ParentBackground = False
       TabOrder = 0
       object CustomerGroupBox: TGroupBox
         Left = 8
-        Top = 13
+        Top = 0
         Width = 285
         Height = 60
         Caption = 'Type here to narrow the search'
@@ -57,16 +60,16 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
         TabOrder = 0
         object Label1: TLabel
           Left = 8
-          Top = 32
-          Width = 43
-          Height = 13
+          Top = 26
+          Width = 48
+          Height = 17
           Caption = 'Supplier'
         end
         object edtSupplierName: TEdit
-          Left = 60
-          Top = 24
+          Left = 62
+          Top = 22
           Width = 213
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnChange = edtSupplierNameChange
         end
@@ -81,9 +84,10 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 447
       object GroupBox2: TGroupBox
         Left = 212
-        Top = 6
+        Top = 4
         Width = 105
         Height = 76
         Caption = 'Function'
@@ -169,7 +173,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       end
       object GroupBox1: TGroupBox
         Left = 0
-        Top = 6
+        Top = 4
         Width = 209
         Height = 76
         Caption = 'Job Bag'
@@ -178,22 +182,22 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
         object Label2: TLabel
           Left = 34
           Top = 27
-          Width = 41
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Number'
         end
         object Label3: TLabel
           Left = 34
           Top = 51
-          Width = 21
-          Height = 13
+          Width = 23
+          Height = 17
           Caption = 'Line'
         end
         object edtJBNumber: TEdit
           Left = 88
           Top = 19
           Width = 105
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnKeyPress = edtJBNumberKeyPress
         end
@@ -201,7 +205,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
           Left = 88
           Top = 43
           Width = 105
-          Height = 21
+          Height = 25
           TabOrder = 1
           OnKeyPress = edtJBNumberKeyPress
         end
@@ -218,6 +222,8 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
     Caption = 'Panel4'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 768
+    ExplicitHeight = 383
     object dbgJB: TDBGrid
       Left = 0
       Top = 0
@@ -227,7 +233,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -235,7 +241,7 @@ object PBLUSupplierInvoiceJBFrm: TPBLUSupplierInvoiceJBFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnCellClick = dbgJBCellClick

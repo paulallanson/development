@@ -3,16 +3,16 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Product Returns to Stock'
-  ClientHeight = 210
+  ClientHeight = 214
   ClientWidth = 540
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -21,18 +21,19 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 534
     object Label1: TLabel
-      Left = 16
+      Left = 10
       Top = 16
-      Width = 40
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Product'
     end
     object lblProduct: TLabel
       Left = 72
       Top = 16
       Width = 177
-      Height = 13
+      Height = 19
       AutoSize = False
       Caption = 'lblProduct'
     end
@@ -40,48 +41,50 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
       Left = 256
       Top = 16
       Width = 281
-      Height = 13
+      Height = 19
       AutoSize = False
       Caption = 'lblProductDescription'
     end
     object Label4: TLabel
-      Left = 16
+      Left = 10
       Top = 64
-      Width = 40
-      Height = 13
+      Width = 47
+      Height = 17
       Caption = 'Job Bag'
     end
     object lblJobBag: TLabel
       Left = 72
       Top = 64
-      Width = 50
-      Height = 13
+      Width = 57
+      Height = 19
       Caption = 'lblJobBag'
     end
     object Label6: TLabel
-      Left = 16
+      Left = 10
       Top = 40
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object lblCustomer: TLabel
       Left = 72
       Top = 40
       Width = 465
-      Height = 13
+      Height = 19
       AutoSize = False
       Caption = 'lblCustomer'
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 170
+    Top = 174
     Width = 540
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 161
+    ExplicitWidth = 534
     object OKBitBtn: TBitBtn
       Left = 189
       Top = 7
@@ -237,29 +240,31 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
     Left = 0
     Top = 89
     Width = 540
-    Height = 81
+    Height = 85
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 534
+    ExplicitHeight = 72
     object Label2: TLabel
-      Left = 16
+      Left = 10
       Top = 14
-      Width = 29
-      Height = 13
+      Width = 34
+      Height = 17
       Caption = 'Overs'
     end
     object Label9: TLabel
       Left = 255
       Top = 14
-      Width = 80
-      Height = 13
+      Width = 89
+      Height = 17
       Caption = 'Return to Stock'
     end
     object Label10: TLabel
       Left = 255
       Top = 46
-      Width = 45
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Wastage'
     end
     object memReturns: TMemo

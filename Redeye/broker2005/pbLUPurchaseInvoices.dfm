@@ -2,12 +2,12 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   Left = 279
   Top = 102
   Caption = 'Purchase Invoices'
-  ClientHeight = 346
-  ClientWidth = 695
+  ClientHeight = 337
+  ClientWidth = 689
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -17,23 +17,23 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 695
+    Width = 689
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 689
+        Width = 683
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 680
+      Width = 674
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -41,10 +41,10 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 668
+        Width = 662
         Height = 41
-        ButtonHeight = 36
-        ButtonWidth = 59
+        ButtonHeight = 40
+        ButtonWidth = 67
         Caption = 'ToolBar1'
         Images = imglstFunctions
         ParentShowHint = False
@@ -62,7 +62,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnMouseDown = btnAddMouseDown
         end
         object btnChange: TToolButton
-          Left = 59
+          Left = 67
           Top = 0
           Hint = 'Change purchase invoice details'
           Caption = '  &Change  '
@@ -71,7 +71,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 118
+          Left = 134
           Top = 0
           Hint = 'Delete a purchase invoice'
           Caption = '&Delete'
@@ -80,7 +80,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnDeleteClick
         end
         object btnPass: TToolButton
-          Left = 177
+          Left = 201
           Top = 0
           Hint = 'Pass the selected invoice/invoices for posting to ledgers'
           Caption = '&Pass'
@@ -89,7 +89,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnPassClick
         end
         object btnQuery: TToolButton
-          Left = 236
+          Left = 268
           Top = 0
           Hint = 'Flag the invoice as a query'
           Caption = '&Query'
@@ -98,7 +98,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnQueryClick
         end
         object btnReset: TToolButton
-          Left = 295
+          Left = 335
           Top = 0
           Hint = 'Reset the invoice/invoices, do not allow posting to ledger'
           Caption = 'Re&set'
@@ -107,7 +107,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnResetClick
         end
         object ToolButton2: TToolButton
-          Left = 354
+          Left = 402
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -115,7 +115,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 362
+          Left = 410
           Top = 0
           Caption = '&Reports'
           ImageIndex = 4
@@ -126,8 +126,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 286
-    Width = 695
+    Top = 277
+    Width = 689
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -135,20 +135,20 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 80
-      Height = 13
-      Caption = 'Supplier Search'
+      Width = 48
+      Height = 17
+      Caption = 'Supplier'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 62
+      Top = 10
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 509
+      Left = 503
       Top = 1
       Width = 185
       Height = 39
@@ -161,7 +161,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
         39)
       object btnClose: TButton
         Left = 94
-        Top = 10
+        Top = 6
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -171,8 +171,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       end
     end
     object chkbxShowArchived: TCheckBox
-      Left = 304
-      Top = 16
+      Left = 262
+      Top = 14
       Width = 97
       Height = 17
       Caption = 'Show archived'
@@ -182,8 +182,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 327
-    Width = 695
+    Top = 318
+    Width = 689
     Height = 19
     Panels = <
       item
@@ -196,14 +196,14 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 695
-    Height = 212
+    Width = 689
+    Height = 203
     Align = alClient
     DataSource = dmSupplierInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -213,7 +213,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgDetailsCellClick
@@ -318,7 +318,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 695
+    Width = 689
     Height = 30
     Align = alTop
     BevelInner = bvLowered

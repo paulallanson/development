@@ -9,7 +9,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
   Constraints.MinWidth = 797
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,7 +18,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 533
@@ -31,6 +31,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 524
+    ExplicitWidth = 779
   end
   object pnlBody: TPanel
     Left = 0
@@ -41,10 +43,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 312
-    ExplicitTop = 272
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 779
+    ExplicitHeight = 524
     object pnlHeader: TPanel
       Left = 0
       Top = 0
@@ -53,125 +53,120 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Align = alTop
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 779
       DesignSize = (
         785
         169)
       object Label2: TLabel
         Left = 8
         Top = 38
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label3: TLabel
-        Left = 319
+        Left = 313
         Top = 12
-        Width = 74
-        Height = 13
+        Width = 84
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Date Required'
-        ExplicitLeft = 325
       end
       object Label4: TLabel
         Left = 176
         Top = 12
-        Width = 24
-        Height = 13
+        Width = 27
+        Height = 17
         Caption = 'Date'
       end
       object labJobBagInfo: TLabel
         Left = 9
         Top = 12
-        Width = 61
-        Height = 13
+        Width = 72
+        Height = 17
         Caption = 'Job Bag No.'
       end
       object Label5: TLabel
-        Left = 520
+        Left = 514
         Top = 12
-        Width = 91
-        Height = 13
+        Width = 103
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Account Manager'
-        ExplicitLeft = 526
       end
       object Label6: TLabel
         Left = 8
         Top = 64
-        Width = 40
-        Height = 13
+        Width = 44
+        Height = 17
         Caption = 'Contact'
       end
       object Label1: TLabel
         Left = 8
         Top = 116
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object Label7: TLabel
-        Left = 512
+        Left = 506
         Top = 66
-        Width = 102
-        Height = 13
+        Width = 118
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Customer Order Ref'
-        ExplicitLeft = 518
       end
       object Label8: TLabel
-        Left = 566
+        Left = 560
         Top = 92
-        Width = 44
-        Height = 13
+        Width = 48
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Quantity'
-        ExplicitLeft = 572
       end
       object Label9: TLabel
         Left = 8
         Top = 90
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Caption = 'Rep'
       end
       object Label10: TLabel
-        Left = 535
+        Left = 529
         Top = 38
-        Width = 71
-        Height = 13
+        Width = 81
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Account Team'
-        ExplicitLeft = 541
       end
       object Label11: TLabel
         Left = 8
         Top = 140
-        Width = 51
-        Height = 13
+        Width = 58
+        Height = 17
         Caption = 'Reference'
       end
       object Label12: TLabel
-        Left = 525
+        Left = 519
         Top = 140
-        Width = 92
-        Height = 13
+        Width = 100
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Works Instruction'
-        ExplicitLeft = 531
       end
       object edtDate: TEdit
         Left = 208
         Top = 8
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnExit = edtDateExit
       end
       object edtDateReq: TEdit
-        Left = 399
+        Left = 393
         Top = 8
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 3
         OnExit = edtDateReqExit
@@ -180,7 +175,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Left = 80
         Top = 34
         Width = 273
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 8
       end
@@ -200,7 +195,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         OnClick = BitBtn1Click
       end
       object BitBtn2: TBitBtn
-        Left = 487
+        Left = 481
         Top = 6
         Width = 25
         Height = 25
@@ -221,6 +216,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         NumGlyphs = 2
         TabOrder = 4
         OnClick = BitBtn2Click
+        ExplicitLeft = 475
       end
       object BitBtn3: TBitBtn
         Left = 296
@@ -263,7 +259,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Left = 80
         Top = 112
         Width = 425
-        Height = 21
+        Height = 25
         TabOrder = 14
         OnChange = CheckOK
       end
@@ -271,7 +267,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Left = 80
         Top = 8
         Width = 81
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -279,7 +275,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Left = 80
         Top = 60
         Width = 209
-        Height = 21
+        Height = 25
         KeyField = 'Contact_no'
         ListField = 'Name'
         ListSource = dmJobBag.srcCustContact
@@ -287,16 +283,16 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         OnClick = dblkpCustomerContactClick
       end
       object edtCustOrderNo: TEdit
-        Left = 615
+        Left = 609
         Top = 62
         Width = 132
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 16
         OnChange = CheckOK
       end
       object memQuantity: TMemo
-        Left = 615
+        Left = 609
         Top = 87
         Width = 81
         Height = 23
@@ -306,12 +302,13 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         OnEnter = memQuantityEnter
         OnExit = ValidateQty
         OnKeyPress = memQuantityKeyPress
+        ExplicitLeft = 603
       end
       object dblkpRep: TDBLookupComboBox
         Left = 80
         Top = 86
         Width = 160
-        Height = 21
+        Height = 25
         KeyField = 'Rep'
         ListField = 'Name'
         ListSource = dmJobBag.srcCustReps
@@ -334,17 +331,17 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         OnClick = BitBtn5Click
       end
       object edtAccountTeam: TEdit
-        Left = 615
+        Left = 609
         Top = 34
         Width = 115
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 7
       end
       object btnAccountManager: TBitBtn
-        Left = 738
+        Left = 732
         Top = 6
         Width = 25
         Height = 25
@@ -358,12 +355,13 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         ParentFont = False
         TabOrder = 6
         OnClick = btnAccountManagerClick
+        ExplicitLeft = 726
       end
       object edtAccountManager: TEdit
-        Left = 615
+        Left = 609
         Top = 8
         Width = 115
-        Height = 21
+        Height = 25
         TabStop = False
         Anchors = [akTop, akRight]
         Color = clBtnFace
@@ -374,12 +372,12 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Left = 80
         Top = 136
         Width = 193
-        Height = 21
+        Height = 25
         TabOrder = 15
         OnChange = CheckOK
       end
       object btnWorksOrders: TBitBtn
-        Left = 738
+        Left = 732
         Top = 134
         Width = 25
         Height = 25
@@ -392,9 +390,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 18
+        ExplicitLeft = 726
       end
       object btnShowWO: TBitBtn
-        Left = 706
+        Left = 700
         Top = 134
         Width = 25
         Height = 25
@@ -417,12 +416,13 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         NumGlyphs = 2
         TabOrder = 19
         OnClick = btnShowWOClick
+        ExplicitLeft = 694
       end
       object cmbJobBagWo: TComboBox
-        Left = 618
+        Left = 612
         Top = 136
         Width = 81
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         TabOrder = 20
@@ -436,20 +436,19 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       ActivePage = tsOrders
       Align = alClient
       TabOrder = 1
-      ExplicitTop = 0
-      ExplicitHeight = 494
       object tsOrders: TTabSheet
         Caption = 'Orders'
         object Panel1: TPanel
           Left = 677
           Top = 0
           Width = 100
-          Height = 226
+          Height = 222
           Align = alRight
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 395
+          ExplicitLeft = 671
+          ExplicitHeight = 217
           object FuncGrpBox: TGroupBox
             Left = 6
             Top = -5
@@ -643,23 +642,24 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
           Left = 0
           Top = 0
           Width = 677
-          Height = 226
+          Height = 222
           Align = alClient
           Caption = 'Panel5'
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 395
+          ExplicitWidth = 671
+          ExplicitHeight = 217
           object dbgLines: TDBGrid
             Left = 1
             Top = 1
             Width = 675
-            Height = 224
+            Height = 220
             Align = alClient
             DataSource = dmJobBag.dsJBAllLines
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -668,7 +668,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDblClick = dbgLinesDblClick
@@ -739,81 +739,82 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         end
         object Panel3: TPanel
           Left = 0
-          Top = 226
+          Top = 222
           Width = 777
           Height = 71
           Align = alBottom
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 2
-          ExplicitTop = 395
+          ExplicitTop = 217
+          ExplicitWidth = 771
           DesignSize = (
             777
             71)
           object labCosts: TLabel
             Left = 608
             Top = 3
-            Width = 56
-            Height = 13
+            Width = 64
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Total Costs'
           end
           object labSales: TLabel
             Left = 609
             Top = 21
-            Width = 54
-            Height = 13
+            Width = 62
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Total Sales'
           end
           object labMargin: TLabel
             Left = 600
             Top = 39
-            Width = 68
-            Height = 13
+            Width = 77
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Margin Value'
           end
           object LabMarginPerc: TLabel
             Left = 620
             Top = 55
-            Width = 49
-            Height = 13
+            Width = 57
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Margin %'
           end
           object labTotalCost: TLabel
-            Left = 690
+            Left = 680
             Top = 3
-            Width = 69
-            Height = 13
+            Width = 79
+            Height = 17
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             Caption = 'TotalsGoHere'
           end
           object labTotalSell: TLabel
-            Left = 690
+            Left = 680
             Top = 21
-            Width = 69
-            Height = 13
+            Width = 79
+            Height = 17
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             Caption = 'TotalsGoHere'
           end
           object LabTotalMargin: TLabel
-            Left = 690
+            Left = 680
             Top = 39
-            Width = 69
-            Height = 13
+            Width = 79
+            Height = 17
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             Caption = 'TotalsGoHere'
           end
           object labTotalMarginPerc: TLabel
-            Left = 690
+            Left = 680
             Top = 55
-            Width = 69
-            Height = 13
+            Width = 79
+            Height = 17
             Alignment = taRightJustify
             Anchors = [akRight, akBottom]
             Caption = 'TotalsGoHere'
@@ -889,6 +890,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 485
+      ExplicitWidth = 779
       object Panel4: TPanel
         Left = 393
         Top = 1
@@ -898,6 +901,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 387
         DesignSize = (
           391
           37)

@@ -3,33 +3,34 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Financial Year'
-  ClientHeight = 260
-  ClientWidth = 424
+  ClientHeight = 285
+  ClientWidth = 441
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    424
-    260)
-  TextHeight = 13
+    441
+    285)
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 120
-    Top = 237
-    Width = 119
-    Height = 15
+    Left = 118
+    Top = 246
+    Width = 132
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 284
   end
   object DetsGrpBox: TGroupBox
     Left = 16
@@ -39,7 +40,7 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -48,69 +49,69 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 22
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = 'Title'
     end
     object Label2: TLabel
       Left = 8
       Top = 84
-      Width = 20
-      Height = 13
+      Width = 25
+      Height = 17
       Caption = 'Year'
     end
     object Label3: TLabel
       Left = 8
       Top = 52
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Start Month'
     end
     object Label4: TLabel
       Left = 8
       Top = 117
-      Width = 74
-      Height = 13
+      Width = 86
+      Height = 17
       Caption = 'No. of periods'
     end
     object Label19: TLabel
       Left = 8
       Top = 176
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Budget type'
     end
     object Label5: TLabel
       Left = 8
       Top = 144
-      Width = 90
-      Height = 13
+      Width = 104
+      Height = 17
       Caption = 'Commission Basis'
     end
     object edtTitle: TEdit
-      Left = 102
+      Left = 125
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       OnChange = CheckOK
     end
     object edtYear: TEdit
-      Left = 102
+      Left = 125
       Top = 80
       Width = 75
-      Height = 21
+      Height = 25
       MaxLength = 15
       TabOrder = 2
       OnChange = CheckOK
       OnKeyPress = edtYearKeyPress
     end
     object cmbMonth: TComboBox
-      Left = 102
+      Left = 125
       Top = 48
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 1
       OnChange = CheckOK
@@ -129,20 +130,20 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
         'December')
     end
     object spnNoOfPeriods: TSpinEdit
-      Left = 102
+      Left = 125
       Top = 112
       Width = 51
-      Height = 22
+      Height = 27
       MaxValue = 24
       MinValue = 1
       TabOrder = 3
       Value = 12
     end
     object cmbBudgetType: TComboBox
-      Left = 102
+      Left = 125
       Top = 172
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 5
       OnChange = CheckOK
@@ -151,10 +152,10 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
         'by Category & Period')
     end
     object cmbCommission: TComboBox
-      Left = 102
+      Left = 125
       Top = 140
       Width = 201
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 4
       OnChange = CheckOK
@@ -164,8 +165,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 256
-    Top = 229
+    Left = 254
+    Top = 238
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -240,10 +241,11 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 276
   end
   object CancelBitBtn: TBitBtn
-    Left = 336
-    Top = 229
+    Left = 334
+    Top = 238
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -317,6 +319,7 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitTop = 276
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -324,8 +327,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       'Select Financial_Year'
       'From Financial_Year'
       'Where Title = :GUID')
-    Left = 192
-    Top = 24
+    Left = 176
+    Top = 46
     ParamData = <
       item
         Name = 'GUID'
@@ -350,8 +353,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       ''
       ''
       ' ')
-    Left = 276
-    Top = 32
+    Left = 281
+    Top = 56
     ParamData = <
       item
         Name = 'GUID'
@@ -372,8 +375,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       'Where'
       '(Financial_Year = :Financial_Year) '
       '')
-    Left = 144
-    Top = 16
+    Left = 116
+    Top = 36
     ParamData = <
       item
         Name = 'Title'
@@ -403,8 +406,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       'Delete From Financial_Year'
       'Where'
       '(Financial_Year = :Financial_Year)')
-    Left = 240
-    Top = 16
+    Left = 236
+    Top = 36
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -412,21 +415,21 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
   end
   object DetsSRC: TDataSource
     DataSet = AddSQL
-    Left = 320
-    Top = 16
+    Left = 336
+    Top = 36
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
-    Left = 360
-    Top = 52
+    Left = 386
+    Top = 81
   end
   object qryGetLastPeriod: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Period) as Last_Period'
       'from Period')
-    Left = 216
-    Top = 64
+    Left = 206
+    Top = 96
   end
   object qryChkPeriod: TFDQuery
     ConnectionName = 'PB'
@@ -435,8 +438,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       'from period'
       'where Period_Year = :Period_Year and'
       'Period_no = :Period_no')
-    Left = 288
-    Top = 64
+    Left = 296
+    Top = 96
     ParamData = <
       item
         Name = 'Period_Year'
@@ -465,8 +468,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       '        :Financial_Year)'
       ''
       ' ')
-    Left = 368
-    Top = 112
+    Left = 268
+    Top = 116
     ParamData = <
       item
         Name = 'Period'
@@ -495,8 +498,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     SQL.Strings = (
       'delete from Period'
       'where Financial_Year = :Financial_Year')
-    Left = 40
-    Top = 104
+    Left = 66
+    Top = 114
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -509,8 +512,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       'set Financial_year = :Financial_Year'
       'where Period_Year = :Period_Year and'
       'Period_no = :Period_no')
-    Left = 56
-    Top = 64
+    Left = 6
+    Top = 96
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -530,8 +533,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       
         'Period in (select Period from Period where Financial_Year = :Fin' +
         'ancial_Year)')
-    Left = 144
-    Top = 88
+    Left = 116
+    Top = 126
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -542,8 +545,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     SQL.Strings = (
       'Delete from Rep_Financial_Cat'
       'where Financial_Year = :Financial_Year')
-    Left = 80
-    Top = 24
+    Left = 36
+    Top = 46
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -554,8 +557,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
     SQL.Strings = (
       'Delete from Rep_Financial'
       'where Financial_Year = :Financial_Year')
-    Left = 80
-    Top = 128
+    Left = 116
+    Top = 144
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -571,8 +574,8 @@ object PBMaintFinanceYearFrm: TPBMaintFinanceYearFrm
       'Where'
       '(Financial_Year = :Financial_Year) '
       '')
-    Left = 272
-    Top = 120
+    Left = 148
+    Top = 126
     ParamData = <
       item
         Name = 'Title'

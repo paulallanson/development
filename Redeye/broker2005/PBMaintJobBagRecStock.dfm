@@ -7,13 +7,13 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel4: TPanel
     Left = 0
     Top = 0
@@ -23,46 +23,47 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 799
     object Label1: TLabel
       Left = 24
-      Top = 16
-      Width = 40
-      Height = 13
+      Top = 12
+      Width = 47
+      Height = 17
       Caption = 'Job Bag'
     end
     object lblJobBag: TLabel
       Left = 96
-      Top = 16
-      Width = 50
-      Height = 13
+      Top = 12
+      Width = 57
+      Height = 17
       Caption = 'lblJobBag'
     end
     object Label3: TLabel
       Left = 24
-      Top = 64
-      Width = 59
-      Height = 13
+      Top = 60
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object lblDescription: TLabel
       Left = 96
-      Top = 64
-      Width = 72
-      Height = 13
+      Top = 60
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
     object Label6: TLabel
       Left = 24
-      Top = 40
-      Width = 49
-      Height = 13
+      Top = 36
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object lblCustomerName: TLabel
       Left = 96
-      Top = 40
-      Width = 72
-      Height = 13
+      Top = 36
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
   end
@@ -74,6 +75,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Align = alRight
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 704
+    ExplicitHeight = 294
     object btnReconcile: TButton
       Left = 12
       Top = 15
@@ -91,6 +94,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 383
+    ExplicitWidth = 799
     DesignSize = (
       805
       41)
@@ -103,9 +108,10 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 525
     end
     object btnOK: TBitBtn
-      Left = 316
+      Left = 310
       Top = 6
       Width = 75
       Height = 25
@@ -133,9 +139,10 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
+      ExplicitLeft = 304
     end
     object btnCancel: TBitBtn
-      Left = 404
+      Left = 398
       Top = 6
       Width = 75
       Height = 25
@@ -143,6 +150,7 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 392
     end
   end
   object sgLines: TStringGrid
@@ -160,6 +168,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     OnKeyPress = sgLinesKeyPress
     OnKeyUp = sgLinesKeyUp
     OnSelectCell = sgLinesSelectCell
+    ExplicitWidth = 704
+    ExplicitHeight = 294
     ColWidths = (
       40
       182
@@ -239,8 +249,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       'from Job_Bag_Return'
       'where Job_bag = :Job_Bag and'
       'Part = :Part')
-    Left = 536
-    Top = 288
+    Left = 638
+    Top = 224
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -258,8 +268,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
         'd'
       'where sales_order = :sales_order and'
       'sales_order_line_no = :sales_order_line_no')
-    Left = 536
-    Top = 344
+    Left = 654
+    Top = 118
     ParamData = <
       item
         Name = 'Quantity_Delivered'
@@ -277,8 +287,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       'Update Job_Bag_Return'
       'set Quantity = Quantity - :Quantity'
       'where Job_Bag_Return = :Job_Bag_Return')
-    Left = 624
-    Top = 224
+    Left = 580
+    Top = 120
     ParamData = <
       item
         Name = 'Quantity'

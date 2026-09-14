@@ -3,31 +3,33 @@ object frmPBLUJobRpts: TfrmPBLUJobRpts
   Top = 107
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Job bag Reports'
-  ClientHeight = 257
-  ClientWidth = 363
+  ClientHeight = 287
+  ClientWidth = 485
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 363
-    Height = 216
+    Width = 485
+    Height = 246
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 357
+    ExplicitHeight = 207
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 363
-      Height = 216
+      Width = 485
+      Height = 246
       Align = alClient
       Columns = <
         item
@@ -40,7 +42,7 @@ object frmPBLUJobRpts: TfrmPBLUJobRpts
         end
         item
           Caption = 'Item No'
-          Width = 0
+          Width = 22
         end>
       Items.ItemData = {
         05140400000800000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000
@@ -81,19 +83,23 @@ object frmPBLUJobRpts: TfrmPBLUJobRpts
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 419
+      ExplicitHeight = 231
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 216
-    Width = 363
+    Top = 246
+    Width = 485
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 207
+    ExplicitWidth = 357
     DesignSize = (
-      363
+      485
       41)
     object btnRun: TButton
       Left = 16
@@ -105,7 +111,7 @@ object frmPBLUJobRpts: TfrmPBLUJobRpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 278
+      Left = 394
       Top = 8
       Width = 75
       Height = 25
@@ -113,6 +119,7 @@ object frmPBLUJobRpts: TfrmPBLUJobRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 266
     end
   end
 end

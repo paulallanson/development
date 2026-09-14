@@ -7,11 +7,11 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -22,15 +22,15 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Warehouse'
     end
     object dblkpWarehouse: TDBLookupComboBox
       Left = 88
       Top = 16
       Width = 153
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
   end
@@ -44,15 +44,15 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 63
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Bin Location'
     end
     object edtBin: TEdit
       Left = 96
       Top = 11
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
   end
@@ -72,14 +72,14 @@ object frmPBLUStockLocations: TfrmPBLUStockLocations
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
   end

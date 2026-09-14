@@ -3,38 +3,38 @@ object PBMaintDBAliasFrm: TPBMaintDBAliasFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Database Aliases'
-  ClientHeight = 200
-  ClientWidth = 423
+  ClientHeight = 230
+  ClientWidth = 432
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
-    Top = 176
-    Width = 109
-    Height = 13
+    Top = 179
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    Left = 16
+    Left = 18
     Top = 8
     Width = 393
     Height = 153
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,49 +43,49 @@ object PBMaintDBAliasFrm: TPBMaintDBAliasFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 56
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Alias Name'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 48
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Database'
     end
     object Label3: TLabel
       Left = 16
       Top = 92
-      Width = 63
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Server Name'
     end
     object edtAliasName: TEdit
-      Left = 94
+      Left = 101
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'edtAliasName'
       OnChange = CheckOK
     end
     object edtDatabaseName: TEdit
-      Left = 94
+      Left = 101
       Top = 56
       Width = 139
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'edtDatabaseName'
       OnChange = CheckOK
     end
     object edtServerName: TEdit
-      Left = 94
+      Left = 101
       Top = 88
       Width = 139
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
       Text = 'edtServerName'
@@ -94,7 +94,7 @@ object PBMaintDBAliasFrm: TPBMaintDBAliasFrm
   end
   object OKBitBtn: TBitBtn
     Left = 256
-    Top = 168
+    Top = 175
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -170,7 +170,7 @@ object PBMaintDBAliasFrm: TPBMaintDBAliasFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 336
-    Top = 168
+    Top = 175
     Width = 75
     Height = 25
     Cancel = True

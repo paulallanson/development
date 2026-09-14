@@ -10,7 +10,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
   Constraints.MinWidth = 970
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -20,7 +20,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
   OnDestroy = FormDestroy
   OnResize = FormResize
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 724
@@ -33,6 +33,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
+    ExplicitTop = 715
+    ExplicitWidth = 1170
   end
   object pnlBody: TPanel
     Left = 0
@@ -43,14 +45,18 @@ object PBMaintCustFrm: TPBMaintCustFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 1170
+    ExplicitHeight = 715
     object pgCustomer: TPageControl
       Left = 0
       Top = 41
       Width = 1176
       Height = 642
-      ActivePage = tbFinancials
+      ActivePage = tbDetails
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 1170
+      ExplicitHeight = 633
       object tbDetails: TTabSheet
         Caption = 'Details'
         object lblCreatedOn: TLabel
@@ -71,25 +77,25 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 0
           Width = 481
-          Height = 614
+          Height = 610
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
           DesignSize = (
             481
-            614)
+            610)
           object grpbxAnalysis: TGroupBox
             Left = 8
-            Top = 314
+            Top = 319
             Width = 465
-            Height = 290
+            Height = 286
             Anchors = [akLeft, akTop, akRight, akBottom]
             Caption = 'Analysis  '
             ParentBackground = False
             TabOrder = 2
             DesignSize = (
               465
-              290)
+              286)
             object Label1: TLabel
               Left = 9
               Top = 20
@@ -106,12 +112,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object lblRevenueCentre: TLabel
               Left = 8
               Top = 79
-              Width = 81
-              Height = 13
+              Width = 91
+              Height = 17
               Caption = 'Revenue Centre'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -119,12 +125,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object lblStatus: TLabel
               Left = 9
               Top = 223
-              Width = 32
-              Height = 13
+              Width = 38
+              Height = 17
               Caption = 'Status'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -146,32 +152,32 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object lblAnalysis1: TLabel
               Left = 8
               Top = 108
-              Width = 80
-              Height = 13
+              Width = 92
+              Height = 17
               Caption = 'Analysis Code 1'
               Visible = False
             end
             object lblAnalysis2: TLabel
               Left = 8
               Top = 137
-              Width = 80
-              Height = 13
+              Width = 92
+              Height = 17
               Caption = 'Analysis Code 2'
               Visible = False
             end
             object lblAnalysis3: TLabel
               Left = 8
               Top = 166
-              Width = 80
-              Height = 13
+              Width = 92
+              Height = 17
               Caption = 'Analysis Code 3'
               Visible = False
             end
             object lblAnalysis4: TLabel
               Left = 8
               Top = 194
-              Width = 80
-              Height = 13
+              Width = 92
+              Height = 17
               Caption = 'Analysis Code 4'
               Visible = False
             end
@@ -179,7 +185,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 16
               Width = 260
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Customer_Type'
               ListField = 'Description'
@@ -228,7 +234,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 75
               Width = 260
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Invoice_Location'
               ListField = 'Invoice_location_Descr'
@@ -238,7 +244,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 219
               Width = 300
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Customer_Status'
               ListField = 'Customer_Status_Descr'
@@ -250,7 +256,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 45
               Width = 260
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Level_of_Importance'
               ListField = 'Importance_Description'
@@ -259,7 +265,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object btnRevenueCentreClear: TBitBtn
               Left = 431
-              Top = 74
+              Top = 76
               Width = 25
               Height = 23
               Anchors = [akTop, akRight]
@@ -303,7 +309,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 104
               Width = 297
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               TabOrder = 7
               Text = 'edtAnalysis1'
@@ -313,7 +319,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 133
               Width = 297
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               TabOrder = 8
               Text = 'edtAnalysis2'
@@ -346,7 +352,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 162
               Width = 297
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               TabOrder = 9
               Text = 'edtAnalysis3'
@@ -356,7 +362,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 125
               Top = 190
               Width = 297
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               TabOrder = 10
               Text = 'edtAnalysis4'
@@ -364,7 +370,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object chkbxAcquiredCompany: TCheckBox
               Left = 8
-              Top = 238
+              Top = 247
               Width = 177
               Height = 17
               Anchors = [akLeft, akBottom]
@@ -373,7 +379,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object chkbxCTRLPCustomer: TCheckBox
               Left = 8
-              Top = 262
+              Top = 268
               Width = 249
               Height = 17
               Anchors = [akLeft, akBottom]
@@ -395,12 +401,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label20: TLabel
               Left = 7
               Top = 20
-              Width = 42
-              Height = 13
+              Width = 49
+              Height = 17
               Caption = 'Address'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -408,12 +414,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label21: TLabel
               Left = 7
               Top = 133
-              Width = 48
-              Height = 13
+              Width = 56
+              Height = 17
               Caption = 'Postcode'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -421,12 +427,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label22: TLabel
               Left = 7
               Top = 186
-              Width = 34
-              Height = 13
+              Width = 39
+              Height = 17
               Caption = 'Phone'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -434,12 +440,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label23: TLabel
               Left = 7
               Top = 214
-              Width = 17
-              Height = 13
+              Width = 19
+              Height = 17
               Caption = 'Fax'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -447,12 +453,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label24: TLabel
               Left = 7
               Top = 252
-              Width = 27
-              Height = 13
+              Width = 31
+              Height = 17
               Caption = 'Email'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -460,12 +466,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label14: TLabel
               Left = 7
               Top = 105
-              Width = 53
-              Height = 13
+              Width = 63
+              Height = 17
               Caption = 'Town/City'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -473,12 +479,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label18: TLabel
               Left = 223
               Top = 133
-              Width = 37
-              Height = 13
+              Width = 40
+              Height = 17
               Caption = 'County'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -486,12 +492,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label27: TLabel
               Left = 7
               Top = 160
-              Width = 41
-              Height = 13
+              Width = 45
+              Height = 17
               Caption = 'Country'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -500,7 +506,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 101
               Width = 141
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 40
               TabOrder = 3
@@ -511,7 +517,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 16
               Width = 348
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 40
               TabOrder = 0
@@ -522,7 +528,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 44
               Width = 348
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 40
               TabOrder = 1
@@ -532,7 +538,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 72
               Width = 348
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 40
               TabOrder = 2
@@ -542,7 +548,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 183
               Width = 253
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 20
               TabOrder = 9
@@ -553,7 +559,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 211
               Width = 253
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 20
               TabOrder = 10
@@ -563,7 +569,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 244
               Width = 348
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 40
               TabOrder = 11
@@ -573,7 +579,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 129
               Width = 101
-              Height = 21
+              Height = 25
               CharCase = ecUpperCase
               MaxLength = 10
               TabOrder = 4
@@ -584,7 +590,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 267
               Top = 129
               Width = 181
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 40
               TabOrder = 5
@@ -594,7 +600,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 100
               Top = 156
               Width = 253
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Country_Id'
               ListField = 'Country_Id_Descr'
@@ -602,7 +608,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object BitBtn2: TBitBtn
               Left = 366
-              Top = 155
+              Top = 157
               Width = 25
               Height = 23
               Hint = 'Customer Type maintenance'
@@ -621,7 +627,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object btnCountryClear: TBitBtn
               Left = 399
-              Top = 155
+              Top = 157
               Width = 25
               Height = 23
               Anchors = [akTop, akRight]
@@ -653,22 +659,22 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 1
             object Label11: TLabel
               Left = 7
-              Top = 14
-              Width = 72
-              Height = 13
+              Top = 8
+              Width = 81
+              Height = 17
               Caption = 'Account Code'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
             end
             object AccCodeEdit: TEdit
               Left = 101
-              Top = 10
+              Top = 4
               Width = 90
-              Height = 21
+              Height = 25
               CharCase = ecUpperCase
               MaxLength = 8
               TabOrder = 0
@@ -680,13 +686,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object chkbxInvUpFrnt: TCheckBox
               Tag = 200
               Left = 280
-              Top = 12
+              Top = 8
               Width = 169
               Height = 17
               Caption = 'All orders are invoiced upfront'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -695,8 +701,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object dbgAccountCodes: TDBGrid
             Tag = 200
-            Left = 7
-            Top = 306
+            Left = 9
+            Top = 308
             Width = 466
             Height = 88
             TabStop = False
@@ -704,14 +710,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 3
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             Visible = False
@@ -736,7 +742,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 481
           Top = 0
           Width = 687
-          Height = 614
+          Height = 610
           Align = alClient
           Caption = 'pnlHOContacts'
           ParentBackground = False
@@ -756,7 +762,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 677
             Top = 57
             Width = 9
-            Height = 556
+            Height = 552
             Align = alRight
             BevelOuter = bvNone
             ParentBackground = False
@@ -829,7 +835,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 501
             Top = 57
             Width = 176
-            Height = 556
+            Height = 552
             Align = alRight
             ParentBackground = False
             TabOrder = 3
@@ -851,7 +857,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Height = 232
               Align = alTop
               DataField = 'Description'
-              ItemHeight = 13
+              ItemHeight = 17
               TabOrder = 1
             end
           end
@@ -859,7 +865,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 480
             Top = 57
             Width = 21
-            Height = 556
+            Height = 552
             Align = alRight
             ParentBackground = False
             TabOrder = 4
@@ -868,7 +874,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 1
             Top = 57
             Width = 479
-            Height = 556
+            Height = 552
             Align = alClient
             Caption = 'Panel29'
             ParentBackground = False
@@ -877,12 +883,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 1
               Top = 1
               Width = 477
-              Height = 389
+              Height = 385
               Align = alClient
               DrawingStyle = gdsGradient
               Font.Charset = ANSI_CHARSET
               Font.Color = clWindowText
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -890,7 +896,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               TabOrder = 0
               TitleFont.Charset = ANSI_CHARSET
               TitleFont.Color = clWindowText
-              TitleFont.Height = -12
+              TitleFont.Height = -13
               TitleFont.Name = 'Segoe UI'
               TitleFont.Style = []
               OnDrawColumnCell = dbgContactDetailsDrawColumnCell
@@ -953,7 +959,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object Panel30: TPanel
               Left = 1
-              Top = 390
+              Top = 386
               Width = 477
               Height = 165
               Align = alBottom
@@ -963,27 +969,27 @@ object PBMaintCustFrm: TPBMaintCustFrm
               object LabelName: TLabel
                 Left = 4
                 Top = 10
-                Width = 32
-                Height = 13
+                Width = 38
+                Height = 17
                 Caption = 'Name:'
               end
               object LabelPhone: TLabel
                 Left = 4
                 Top = 30
-                Width = 36
-                Height = 13
+                Width = 39
+                Height = 17
                 Caption = 'Phone:'
               end
               object LabelFax: TLabel
                 Left = 4
                 Top = 51
-                Width = 39
-                Height = 13
+                Width = 44
+                Height = 17
                 Caption = 'Mobile:'
               end
               object DBContactText: TDBText
                 Left = 47
-                Top = 8
+                Top = 12
                 Width = 214
                 Height = 17
                 DataField = 'Name'
@@ -996,7 +1002,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               end
               object DBCPhoneText: TDBText
                 Left = 47
-                Top = 30
+                Top = 34
                 Width = 214
                 Height = 13
                 DataField = 'Phone'
@@ -1009,7 +1015,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               end
               object DBCMobileText: TDBText
                 Left = 47
-                Top = 50
+                Top = 54
                 Width = 214
                 Height = 15
                 DataField = 'Mobile_No'
@@ -1023,13 +1029,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
               object Label67: TLabel
                 Left = 4
                 Top = 96
-                Width = 35
-                Height = 13
+                Width = 38
+                Height = 17
                 Caption = 'Status:'
               end
               object DBCStatusText: TDBText
                 Left = 47
-                Top = 94
+                Top = 98
                 Width = 214
                 Height = 16
                 DataField = 'Contact_Status_Description'
@@ -1043,13 +1049,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
               object Label68: TLabel
                 Left = 4
                 Top = 74
-                Width = 30
-                Height = 13
+                Width = 34
+                Height = 17
                 Caption = 'Email:'
               end
               object DBCEmailText: TDBText
                 Left = 47
-                Top = 72
+                Top = 76
                 Width = 214
                 Height = 17
                 DataField = 'Email'
@@ -1071,37 +1077,39 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 0
           Width = 673
-          Height = 614
+          Height = 610
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 601
           DesignSize = (
             673
-            614)
+            610)
           object grpbxInvoicing: TGroupBox
             Left = 8
             Top = 2
             Width = 662
-            Height = 521
+            Height = 517
             Anchors = [akLeft, akTop, akRight, akBottom]
             Caption = 'Invoice To'
             Color = clBtnFace
             ParentColor = False
             TabOrder = 0
+            ExplicitHeight = 508
             DesignSize = (
               662
-              521)
+              517)
             object Label35: TLabel
               Tag = 200
               Left = 8
-              Top = 20
-              Width = 50
-              Height = 13
+              Top = 24
+              Width = 59
+              Height = 17
               Caption = 'Customer'
               Color = clBtnFace
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentColor = False
@@ -1110,14 +1118,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label36: TLabel
               Tag = 200
               Left = 8
-              Top = 52
-              Width = 36
-              Height = 13
+              Top = 56
+              Width = 42
+              Height = 17
               Caption = 'Branch'
               Color = clBtnFace
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentColor = False
@@ -1126,14 +1134,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label37: TLabel
               Tag = 200
               Left = 8
-              Top = 84
-              Width = 40
-              Height = 13
+              Top = 88
+              Width = 47
+              Height = 17
               Caption = 'Contact'
               Color = clBtnFace
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentColor = False
@@ -1143,12 +1151,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 7
               Top = 290
-              Width = 73
-              Height = 13
+              Width = 82
+              Height = 17
               Caption = 'Intrastat Code'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1157,12 +1165,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 7
               Top = 321
-              Width = 72
-              Height = 13
+              Width = 83
+              Height = 17
               Caption = 'VAT Reference'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1171,12 +1179,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 7
               Top = 190
-              Width = 86
-              Height = 13
+              Width = 96
+              Height = 17
               Caption = 'Default Currency'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1185,13 +1193,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 515
               Top = 280
-              Width = 59
-              Height = 26
+              Width = 64
+              Height = 34
               Anchors = [akTop, akRight]
               Caption = 'Accounting Status'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1202,12 +1210,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 8
               Top = 156
-              Width = 60
-              Height = 13
+              Width = 74
+              Height = 17
               Caption = 'Default VAT'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -1216,12 +1224,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 7
               Top = 220
-              Width = 66
-              Height = 13
+              Width = 80
+              Height = 17
               Caption = 'Settle Disc %'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -1230,13 +1238,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 501
               Top = 220
-              Width = 57
-              Height = 13
+              Width = 69
+              Height = 17
               Anchors = [akTop, akRight]
               Caption = 'Settle Days'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -1245,12 +1253,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 200
               Left = 7
               Top = 244
-              Width = 63
-              Height = 26
+              Width = 73
+              Height = 34
               Caption = 'Pre-Payment Balance'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1259,14 +1267,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label69: TLabel
               Tag = 200
               Left = 8
-              Top = 111
-              Width = 28
-              Height = 13
+              Top = 115
+              Width = 34
+              Height = 17
               Caption = 'Email'
               Color = clBtnFace
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentColor = False
@@ -1275,7 +1283,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object BitBtn5: TBitBtn
               Tag = 200
               Left = 629
-              Top = 79
+              Top = 84
               Width = 25
               Height = 23
               Hint = 'Customer Type maintenance'
@@ -1295,9 +1303,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object edtInvToContact: TEdit
               Tag = 200
               Left = 101
-              Top = 80
+              Top = 84
               Width = 519
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               Color = clBtnFace
               ReadOnly = True
@@ -1309,7 +1317,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 101
               Top = 286
               Width = 385
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Intrastat_Id'
               ListField = 'Intrastat_Id_Descr'
@@ -1321,7 +1329,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 101
               Top = 319
               Width = 523
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               MaxLength = 40
               TabOrder = 14
@@ -1332,7 +1340,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 101
               Top = 186
               Width = 482
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Currency_Code'
               ListField = 'Currency_Code_Descr'
@@ -1343,7 +1351,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 7
               Top = 352
               Width = 441
-              Height = 81
+              Height = 86
               Anchors = [akLeft, akTop, akRight]
               Caption = 'Cost Centre Level '
               ItemIndex = 0
@@ -1358,7 +1366,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 584
               Top = 283
               Width = 37
-              Height = 21
+              Height = 25
               Style = csDropDownList
               Anchors = [akTop, akRight]
               TabOrder = 17
@@ -1373,7 +1381,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 101
               Top = 152
               Width = 482
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               KeyField = 'Vat_Code'
               ListField = 'Description'
@@ -1427,13 +1435,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object chkbxDisplayDiscounts: TCheckBox
               Tag = 200
               Left = 8
-              Top = 443
+              Top = 450
               Width = 169
               Height = 17
               Caption = 'Display Discounts on Invoices'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1476,7 +1484,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Height = 21
               Alignment = taRightJustify
               Lines.Strings = (
-                'memPrepayB'
+                'memPrepa'
+                'yB'
                 'al'
                 'an'
                 'ce')
@@ -1487,7 +1496,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object BitBtn3: TBitBtn
               Tag = 200
               Left = 629
-              Top = 47
+              Top = 52
               Width = 25
               Height = 23
               Hint = 'Customer Type maintenance'
@@ -1507,7 +1516,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object BitBtn6: TBitBtn
               Tag = 200
               Left = 629
-              Top = 15
+              Top = 20
               Width = 25
               Height = 23
               Hint = 'Customer Type maintenance'
@@ -1527,9 +1536,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object edtInvToBranch: TEdit
               Tag = 200
               Left = 101
-              Top = 48
+              Top = 52
               Width = 519
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               Color = clBtnFace
               ReadOnly = True
@@ -1539,9 +1548,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object edtInvToCustomer: TEdit
               Tag = 200
               Left = 101
-              Top = 16
+              Top = 20
               Width = 519
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               Color = clBtnFace
               ReadOnly = True
@@ -1551,9 +1560,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object edtInvToContactEmail: TEdit
               Tag = 200
               Left = 101
-              Top = 107
+              Top = 111
               Width = 519
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               Color = clBtnFace
               ReadOnly = True
@@ -1565,27 +1574,28 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 8
             Top = 478
             Width = 662
-            Height = 126
+            Height = 122
             Anchors = [akLeft, akTop, akRight, akBottom]
             Caption = 'GDPR '
             Font.Charset = ANSI_CHARSET
             Font.Color = clRed
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentBackground = False
             ParentFont = False
             TabOrder = 1
             Visible = False
+            ExplicitHeight = 113
             object lblGDPRSignedOperatorName: TLabel
-              Left = 308
-              Top = 50
-              Width = 156
-              Height = 13
+              Left = 321
+              Top = 48
+              Width = 184
+              Height = 17
               Caption = 'lblGDPRSignedOperatorName'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -1601,23 +1611,23 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object chkbxGDPRSigned: TCheckBox
               Left = 16
               Top = 48
-              Width = 145
+              Width = 161
               Height = 17
               Caption = 'Signed and Returned'
               TabOrder = 1
               OnClick = chkbxGDPRSignedClick
             end
             object edtdateGDPRSigned: TEdit
-              Left = 171
-              Top = 46
+              Left = 184
+              Top = 44
               Width = 98
-              Height = 21
+              Height = 25
               TabOrder = 2
               OnChange = CheckOK
               OnExit = edtdateGDPRSignedExit
             end
             object btnDateGDPRSigned: TBitBtn
-              Left = 277
+              Left = 290
               Top = 44
               Width = 25
               Height = 25
@@ -1644,34 +1654,38 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 673
           Top = 0
           Width = 495
-          Height = 614
+          Height = 610
           Align = alClient
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 489
+          ExplicitHeight = 601
           DesignSize = (
             495
-            614)
+            610)
           object grpbxCredit: TGroupBox
             Left = 6
-            Top = 2
-            Width = 425
-            Height = 580
+            Top = 1
+            Width = 477
+            Height = 576
             Anchors = [akLeft, akTop, akRight, akBottom]
             Caption = 'Credit Details'
             TabOrder = 0
+            ExplicitWidth = 471
+            ExplicitHeight = 567
             DesignSize = (
-              425
-              580)
+              477
+              576)
             object Label5: TLabel
               Tag = 100
               Left = 7
               Top = 60
-              Width = 58
-              Height = 13
+              Width = 66
+              Height = 17
               Caption = 'Credit Limit'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1680,12 +1694,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 7
               Top = 91
-              Width = 80
-              Height = 13
+              Width = 91
+              Height = 17
               Caption = 'Available Credit'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1694,12 +1708,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 7
               Top = 124
-              Width = 62
-              Height = 13
+              Width = 72
+              Height = 17
               Caption = 'Credit Score'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1708,73 +1722,72 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 7
               Top = 394
-              Width = 74
-              Height = 13
+              Width = 86
+              Height = 17
               Caption = 'Company Type'
             end
             object Label39: TLabel
               Tag = 100
               Left = 7
               Top = 422
-              Width = 63
-              Height = 13
+              Width = 74
+              Height = 17
               Caption = 'UK SIC Code'
             end
             object Label40: TLabel
               Tag = 100
               Left = 7
               Top = 366
-              Width = 72
-              Height = 13
+              Width = 81
+              Height = 17
               Caption = 'Issued Capital'
             end
             object Label41: TLabel
               Tag = 100
               Left = 7
               Top = 239
-              Width = 108
-              Height = 13
+              Width = 119
+              Height = 17
               Caption = 'Latest Annual Return'
             end
             object Label42: TLabel
               Tag = 100
               Left = 7
               Top = 269
-              Width = 116
-              Height = 13
+              Width = 132
+              Height = 17
               Caption = 'Date Accounts Lodged'
             end
             object Label43: TLabel
               Tag = 100
               Left = 7
               Top = 300
-              Width = 135
-              Height = 13
+              Width = 152
+              Height = 17
               Caption = 'Latest Filed Accounts Date'
             end
             object Label44: TLabel
               Tag = 100
               Left = 7
               Top = 328
-              Width = 128
-              Height = 13
+              Width = 145
+              Height = 17
               Caption = 'Accounts Reference Date'
             end
             object Bevel1: TBevel
               Tag = 100
-              Left = 0
-              Top = 223
-              Width = 426
+              Left = 14
+              Top = 222
+              Width = 478
               Height = 7
               Anchors = [akLeft, akTop, akRight]
               Shape = bsTopLine
-              ExplicitWidth = 492
             end
             object Bevel2: TBevel
               Tag = 100
               Left = 0
               Top = 358
-              Width = 426
+              Width = 478
               Height = 7
               Anchors = [akLeft, akTop, akRight]
               Shape = bsTopLine
@@ -1784,20 +1797,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 7
               Top = 456
-              Width = 88
-              Height = 13
+              Width = 100
+              Height = 17
               Caption = 'Last Credit Check'
             end
             object Label25: TLabel
               Tag = 100
               Left = 7
               Top = 161
-              Width = 75
-              Height = 13
+              Width = 88
+              Height = 17
               Caption = 'Payment Terms'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1806,12 +1819,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 7
               Top = 192
-              Width = 91
-              Height = 13
+              Width = 104
+              Height = 17
               Caption = 'Direct Debit Code'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -1821,19 +1834,19 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 7
               Top = 28
-              Width = 66
-              Height = 13
+              Width = 79
+              Height = 17
               Caption = 'Credit Status'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
             end
             object CredAvailMemo: TMemo
               Tag = 100
-              Left = 101
+              Left = 113
               Top = 87
               Width = 182
               Height = 21
@@ -1847,10 +1860,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object spnCreditScore: TSpinEdit
               Tag = 100
-              Left = 101
+              Left = 113
               Top = 119
               Width = 152
-              Height = 22
+              Height = 27
               MaxValue = 100
               MinValue = 1
               TabOrder = 1
@@ -1874,18 +1887,18 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object edtLastReturnDate: TEdit
               Tag = 100
-              Left = 152
+              Left = 166
               Top = 235
               Width = 237
-              Height = 21
+              Height = 25
               TabOrder = 7
               OnChange = CheckOK
               OnExit = edtLastReturnDateExit
             end
             object btnLastReturnDate: TBitBtn
               Tag = 100
-              Left = 396
-              Top = 233
+              Left = 410
+              Top = 235
               Width = 25
               Height = 25
               Glyph.Data = {
@@ -1907,18 +1920,18 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object edtAccLodgedDate: TEdit
               Tag = 100
-              Left = 152
+              Left = 166
               Top = 265
               Width = 237
-              Height = 21
+              Height = 25
               TabOrder = 9
               OnChange = CheckOK
               OnExit = edtLastReturnDateExit
             end
             object btnAccLodgedDate: TBitBtn
               Tag = 100
-              Left = 396
-              Top = 263
+              Left = 410
+              Top = 265
               Width = 25
               Height = 25
               Glyph.Data = {
@@ -1940,18 +1953,18 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object edtAccountsFiledDate: TEdit
               Tag = 100
-              Left = 152
+              Left = 166
               Top = 296
               Width = 237
-              Height = 21
+              Height = 25
               TabOrder = 11
               OnChange = CheckOK
               OnExit = edtLastReturnDateExit
             end
             object btnAccountsFiledDate: TBitBtn
               Tag = 100
-              Left = 396
-              Top = 294
+              Left = 410
+              Top = 296
               Width = 25
               Height = 25
               Glyph.Data = {
@@ -1973,16 +1986,16 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object edtAccRefDate: TEdit
               Tag = 100
-              Left = 152
+              Left = 166
               Top = 324
               Width = 237
-              Height = 21
+              Height = 25
               TabOrder = 13
               OnChange = CheckOK
             end
             object memIssCapital: TMemo
               Tag = 100
-              Left = 93
+              Left = 99
               Top = 362
               Width = 176
               Height = 21
@@ -1994,27 +2007,27 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object dblkpCompanyType: TDBLookupComboBox
               Tag = 100
-              Left = 93
+              Left = 99
               Top = 391
               Width = 312
-              Height = 21
+              Height = 25
               KeyField = 'Company_Type'
               ListField = 'Company_Type_Description'
               TabOrder = 15
             end
             object edtSICCode: TEdit
               Tag = 100
-              Left = 93
+              Left = 99
               Top = 419
-              Width = 360
-              Height = 21
+              Width = 310
+              Height = 25
               ReadOnly = True
               TabOrder = 16
               OnChange = CheckOK
             end
             object BitBtn8: TBitBtn
-              Left = 460
-              Top = 418
+              Left = 428
+              Top = 422
               Width = 25
               Height = 23
               Hint = 'Vat Code Maintenance'
@@ -2032,10 +2045,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object dblkpPaymentTerms: TDBLookupComboBox
               Tag = 100
-              Left = 101
+              Left = 113
               Top = 157
-              Width = 308
-              Height = 21
+              Width = 292
+              Height = 25
               KeyField = 'Payment_terms'
               ListField = 'Payment_terms_description'
               TabOrder = 3
@@ -2043,8 +2056,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object btnTerms: TBitBtn
               Tag = 100
-              Left = 420
-              Top = 156
+              Left = 413
+              Top = 158
               Width = 25
               Height = 23
               Hint = 'Customer Type maintenance'
@@ -2062,8 +2075,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object BitBtn4: TBitBtn
               Tag = 100
-              Left = 451
-              Top = 156
+              Left = 444
+              Top = 158
               Width = 25
               Height = 23
               Glyph.Data = {
@@ -2085,10 +2098,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object DDCodeEdit: TEdit
               Tag = 100
-              Left = 101
+              Left = 113
               Top = 188
               Width = 182
-              Height = 21
+              Height = 25
               CharCase = ecUpperCase
               MaxLength = 10
               TabOrder = 6
@@ -2097,10 +2110,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object CredStatDBLCB: TDBLookupComboBox
               Tag = 100
-              Left = 101
+              Left = 113
               Top = 24
               Width = 244
-              Height = 21
+              Height = 25
               KeyField = 'Credit_Status'
               ListField = 'Credit_Status_Descr'
               TabOrder = 18
@@ -2108,7 +2121,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object CredLimMemo: TMemo
               Tag = 100
-              Left = 101
+              Left = 113
               Top = 56
               Width = 182
               Height = 21
@@ -2123,13 +2136,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object chkbxConverttoCustomer: TCheckBox
             Left = 8
-            Top = 587
+            Top = 583
             Width = 177
             Height = 17
             Anchors = [akLeft, akBottom]
             Caption = 'Convert Prospect to Customer'
             TabOrder = 1
             Visible = False
+            ExplicitTop = 574
           end
         end
       end
@@ -2147,42 +2161,42 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object lblFormRefPref: TLabel
             Left = 16
             Top = 54
-            Width = 101
-            Height = 13
+            Width = 116
+            Height = 17
             Caption = 'Product Code Prefix'
           end
           object Label12: TLabel
             Left = 16
             Top = 116
-            Width = 82
-            Height = 13
+            Width = 93
+            Height = 17
             Caption = 'Existing Prefixes'
           end
           object Label13: TLabel
             Left = 16
             Top = 28
-            Width = 136
-            Height = 13
+            Width = 157
+            Height = 17
             Caption = 'Call Off Delivery Note Type'
           end
           object edtProdPrefix: TEdit
             Left = 200
             Top = 50
             Width = 121
-            Height = 21
+            Height = 25
             CharCase = ecUpperCase
             TabOrder = 0
             OnChange = edtProdPrefixChange
           end
           object DBGrid1: TDBGrid
             Left = 16
-            Top = 132
+            Top = 137
             Width = 353
             Height = 301
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -2197,7 +2211,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 200
             Top = 24
             Width = 145
-            Height = 21
+            Height = 25
             Style = csDropDownList
             TabOrder = 2
             Items.Strings = (
@@ -2211,7 +2225,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Product Prefix not required'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -2224,7 +2238,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 0
           Width = 441
-          Height = 614
+          Height = 610
           Align = alLeft
           Caption = 'Ecommerce'
           TabOrder = 1
@@ -2237,40 +2251,40 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ParentBackground = False
             TabOrder = 0
             object Label6: TLabel
-              Left = 23
+              Left = 11
               Top = 84
-              Width = 78
-              Height = 13
+              Width = 89
+              Height = 17
               Caption = 'Despatch Email'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
             end
             object Label15: TLabel
-              Left = 23
+              Left = 11
               Top = 28
-              Width = 82
-              Height = 13
+              Width = 94
+              Height = 17
               Caption = 'Consumer Code'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
             end
             object Label16: TLabel
-              Left = 23
+              Left = 11
               Top = 56
-              Width = 67
-              Height = 13
+              Width = 75
+              Height = 17
               Caption = 'Contract Ref:'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -2279,7 +2293,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 108
               Top = 80
               Width = 252
-              Height = 21
+              Height = 25
               MaxLength = 40
               TabOrder = 0
             end
@@ -2287,7 +2301,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 108
               Top = 24
               Width = 252
-              Height = 21
+              Height = 25
               MaxLength = 40
               TabOrder = 1
             end
@@ -2295,7 +2309,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 108
               Top = 52
               Width = 252
-              Height = 21
+              Height = 25
               MaxLength = 40
               TabOrder = 2
             end
@@ -2311,12 +2325,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label17: TLabel
               Left = 7
               Top = 68
-              Width = 60
-              Height = 13
+              Width = 67
+              Height = 17
               Caption = 'Client Code'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -2324,12 +2338,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label26: TLabel
               Left = 8
               Top = 172
-              Width = 42
-              Height = 13
+              Width = 48
+              Height = 17
               Caption = 'Site URL'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -2337,12 +2351,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label28: TLabel
               Left = 8
               Top = 100
-              Width = 51
-              Height = 13
+              Width = 59
+              Height = 17
               Caption = 'Username'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -2350,12 +2364,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label32: TLabel
               Left = 8
               Top = 132
-              Width = 49
-              Height = 13
+              Width = 56
+              Height = 17
               Caption = 'Password'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -2363,15 +2377,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object lblSystem: TLabel
               Left = 8
               Top = 32
-              Width = 35
-              Height = 13
+              Width = 41
+              Height = 17
               Caption = 'System'
             end
             object edtClientCode: TEdit
               Left = 76
               Top = 64
               Width = 205
-              Height = 21
+              Height = 25
               MaxLength = 40
               TabOrder = 1
             end
@@ -2394,7 +2408,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 75
               Top = 168
               Width = 326
-              Height = 21
+              Height = 25
               MaxLength = 20
               TabOrder = 4
               Text = 'edtSiteURL'
@@ -2403,7 +2417,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 76
               Top = 96
               Width = 205
-              Height = 21
+              Height = 25
               MaxLength = 20
               TabOrder = 2
               Text = 'edtUsername'
@@ -2412,7 +2426,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 76
               Top = 128
               Width = 205
-              Height = 21
+              Height = 25
               MaxLength = 20
               TabOrder = 3
               Text = 'edtPassword'
@@ -2421,7 +2435,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 76
               Top = 28
               Width = 145
-              Height = 21
+              Height = 25
               KeyField = 'e_Invoicing_System'
               ListField = 'e_Invoicing_System_Name'
               TabOrder = 0
@@ -2455,7 +2469,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Use Print Evolved Online Ordering'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -2472,7 +2486,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Use Kingfield Opips Ordering'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -2498,7 +2512,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Caption = 'Can Create Branches Online'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -2515,7 +2529,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Caption = 'Show Available Stock'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
@@ -2527,13 +2541,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object ChkBxOnLnOrd: TCheckBox
             Left = 24
             Top = 22
-            Width = 127
+            Width = 161
             Height = 17
             Hint = 'Customer Orders on-line ?'
             Caption = 'Use On-Line Ordering'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -2554,8 +2568,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object Label70: TLabel
             Left = 16
             Top = 56
-            Width = 52
-            Height = 13
+            Width = 60
+            Height = 17
             Caption = 'Markup %'
           end
           object memQuoteCostMarkup: TMemo
@@ -2605,15 +2619,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label57: TLabel
               Left = 8
               Top = 13
-              Width = 34
-              Height = 13
+              Width = 39
+              Height = 17
               Caption = 'Search'
             end
             object edtBranchName: TEdit
               Left = 56
               Top = 9
               Width = 177
-              Height = 21
+              Height = 25
               TabOrder = 0
               OnChange = edtBranchNameChange
             end
@@ -2621,7 +2635,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 264
               Top = 12
               Width = 177
-              Height = 14
+              Height = 17
               Caption = 'Only show active branches'
               Checked = True
               State = cbChecked
@@ -2646,8 +2660,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Top = 0
               Width = 1151
               Height = 41
-              ButtonHeight = 36
-              ButtonWidth = 59
+              ButtonHeight = 40
+              ButtonWidth = 67
               Caption = 'ToolBar1'
               Images = imglstjobs
               ShowCaptions = True
@@ -2660,7 +2674,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnBranchAddClick
               end
               object btnBranchChange: TToolButton
-                Left = 59
+                Left = 67
                 Top = 0
                 Caption = '  &Change  '
                 Enabled = False
@@ -2668,7 +2682,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnBranchChangeClick
               end
               object btnBranchDelete: TToolButton
-                Left = 118
+                Left = 134
                 Top = 0
                 Caption = '&Delete'
                 Enabled = False
@@ -2686,7 +2700,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2694,7 +2708,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 2
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgBranchDetailsDrawColumnCell
@@ -2779,7 +2793,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 273
           Width = 1168
-          Height = 341
+          Height = 337
           Align = alClient
           Caption = 'pnlContacts'
           ParentBackground = False
@@ -2788,12 +2802,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 1
             Top = 25
             Width = 1073
-            Height = 275
+            Height = 271
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -2801,7 +2815,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 0
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgContactDetailsDrawColumnCell
@@ -2864,7 +2878,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object Panel14: TPanel
             Left = 1
-            Top = 300
+            Top = 296
             Width = 1166
             Height = 40
             Align = alBottom
@@ -2873,15 +2887,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label58: TLabel
               Left = 8
               Top = 13
-              Width = 34
-              Height = 13
+              Width = 39
+              Height = 17
               Caption = 'Search'
             end
             object edtContactName: TEdit
               Left = 56
               Top = 9
               Width = 177
-              Height = 21
+              Height = 25
               TabOrder = 0
               OnChange = edtContactNameChange
             end
@@ -2889,7 +2903,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 344
               Top = 12
               Width = 177
-              Height = 14
+              Height = 17
               Caption = 'Only show active Contacts'
               Checked = True
               State = cbChecked
@@ -2916,13 +2930,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 2
             object Label59: TLabel
               Left = 9
-              Top = 4
-              Width = 45
-              Height = 13
+              Top = 3
+              Width = 53
+              Height = 17
               Caption = 'Contacts'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -2932,13 +2946,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 1074
             Top = 25
             Width = 93
-            Height = 275
+            Height = 271
             Align = alRight
             ParentBackground = False
             TabOrder = 3
             DesignSize = (
               93
-              275)
+              271)
             object btnContactAdd: TBitBtn
               Left = 9
               Top = 8
@@ -3003,7 +3017,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnShow = tbQuotesShow
         object stsBrQuoteDetails: TStatusBar
           Left = 0
-          Top = 595
+          Top = 591
           Width = 1168
           Height = 19
           Panels = <
@@ -3034,8 +3048,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Top = 0
             Width = 1153
             Height = 41
-            ButtonHeight = 36
-            ButtonWidth = 59
+            ButtonHeight = 40
+            ButtonWidth = 67
             Caption = 'ToolBar1'
             HotImages = imglstButtons
             Images = imglstButtons
@@ -3049,7 +3063,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnQuoteAddClick
             end
             object btnQuoteChange: TToolButton
-              Left = 59
+              Left = 67
               Top = 0
               Caption = '  &Change  '
               Enabled = False
@@ -3057,7 +3071,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnQuoteChangeClick
             end
             object btnQuoteCopy: TToolButton
-              Left = 118
+              Left = 134
               Top = 0
               Caption = '&Copy'
               Enabled = False
@@ -3065,7 +3079,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnQuoteCopyClick
             end
             object btnQuoteReQuote: TToolButton
-              Left = 177
+              Left = 201
               Top = 0
               Caption = 'Re-Quote'
               Enabled = False
@@ -3073,7 +3087,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnQuoteReQuoteClick
             end
             object btnQuoteDelete: TToolButton
-              Left = 236
+              Left = 268
               Top = 0
               Caption = '&Delete'
               Enabled = False
@@ -3081,7 +3095,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnQuoteDeleteClick
             end
             object btnQuotePrint: TToolButton
-              Left = 295
+              Left = 335
               Top = 0
               Caption = '&Print'
               Enabled = False
@@ -3089,7 +3103,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnQuotePrintClick
             end
             object ToolButton5: TToolButton
-              Left = 354
+              Left = 402
               Top = 0
               Width = 8
               Caption = 'ToolButton1'
@@ -3097,7 +3111,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnQuoteConvert: TToolButton
-              Left = 362
+              Left = 410
               Top = 0
               Caption = 'Con&vert'
               Enabled = False
@@ -3110,12 +3124,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 45
           Width = 1168
-          Height = 509
+          Height = 505
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -3123,7 +3137,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDblClick = dbgQuoteDetailsDblClick
@@ -3212,50 +3226,51 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object Panel12: TPanel
           Left = 0
-          Top = 554
+          Top = 550
           Width = 1168
           Height = 41
           Align = alBottom
           ParentBackground = False
           TabOrder = 3
+          ExplicitTop = 544
           DesignSize = (
             1168
             41)
           object Label55: TLabel
             Left = 8
             Top = 16
-            Width = 96
-            Height = 13
+            Width = 109
+            Height = 17
             Caption = 'Description Search'
           end
           object Label56: TLabel
-            Left = 964
+            Left = 960
             Top = 16
-            Width = 76
-            Height = 13
+            Width = 88
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Quote Number'
           end
           object edtQuoteSearch: TEdit
-            Left = 107
+            Left = 124
             Top = 12
             Width = 180
-            Height = 21
+            Height = 25
             TabOrder = 0
             OnChange = edtQuoteSearchChange
           end
           object edtQuoteNumber: TEdit
-            Left = 1044
+            Left = 1052
             Top = 12
             Width = 90
-            Height = 21
+            Height = 25
             Anchors = [akRight, akBottom]
             TabOrder = 1
             OnKeyPress = edtQuoteNumberKeyPress
           end
           object BitBtn11: TBitBtn
-            Left = 296
-            Top = 10
+            Left = 313
+            Top = 12
             Width = 75
             Height = 25
             Caption = '&Search'
@@ -3271,7 +3286,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnShow = tbEnquiriesShow
         object stsBrEnqDetails: TStatusBar
           Left = 0
-          Top = 595
+          Top = 591
           Width = 1168
           Height = 19
           Panels = <
@@ -3428,12 +3443,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 45
           Width = 1168
-          Height = 509
+          Height = 505
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -3441,7 +3456,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDrawColumnCell = dbgEnquiryDetailsDrawColumnCell
@@ -3524,7 +3539,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object Panel2: TPanel
           Left = 0
-          Top = 554
+          Top = 550
           Width = 1168
           Height = 41
           Align = alBottom
@@ -3536,38 +3551,38 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object Label46: TLabel
             Left = 8
             Top = 16
-            Width = 96
-            Height = 13
+            Width = 109
+            Height = 17
             Caption = 'Description Search'
           end
           object Label47: TLabel
-            Left = 964
+            Left = 957
             Top = 16
-            Width = 83
-            Height = 13
+            Width = 95
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Enquiry Number'
           end
           object edtEnqSearch: TEdit
-            Left = 107
+            Left = 123
             Top = 12
             Width = 180
-            Height = 21
+            Height = 25
             TabOrder = 0
             OnChange = edtEnqSearchChange
           end
           object edtEnqNumber: TEdit
-            Left = 1044
+            Left = 1058
             Top = 12
             Width = 90
-            Height = 21
+            Height = 25
             Anchors = [akRight, akBottom]
             TabOrder = 1
             OnKeyPress = edtEnqNumberKeyPress
           end
           object btnSearch: TBitBtn
-            Left = 296
-            Top = 10
+            Left = 312
+            Top = 12
             Width = 75
             Height = 25
             Caption = '&Search'
@@ -3583,7 +3598,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnShow = tbOrdersShow
         object stsBrOrderDetails: TStatusBar
           Left = 0
-          Top = 595
+          Top = 591
           Width = 1168
           Height = 19
           Panels = <
@@ -3596,7 +3611,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object Panel3: TPanel
           Left = 0
-          Top = 554
+          Top = 550
           Width = 1168
           Height = 41
           Align = alBottom
@@ -3608,39 +3623,39 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object Label48: TLabel
             Left = 8
             Top = 16
-            Width = 96
-            Height = 13
+            Width = 109
+            Height = 17
             Caption = 'Description Search'
           end
           object Label49: TLabel
-            Left = 934
+            Left = 928
             Top = 16
-            Width = 73
-            Height = 13
+            Width = 84
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Order number'
-            ExplicitLeft = 952
+            ExplicitLeft = 934
           end
           object edtOrderSearch: TEdit
-            Left = 104
+            Left = 122
             Top = 12
             Width = 180
-            Height = 21
+            Height = 25
             TabOrder = 0
             OnChange = edtOrderSearchChange
           end
           object edtOrderNumber: TEdit
-            Left = 1012
+            Left = 1023
             Top = 12
             Width = 90
-            Height = 21
+            Height = 25
             Anchors = [akRight, akBottom]
             TabOrder = 1
             OnKeyPress = edtOrderNumberKeyPress
           end
           object chkbxShowUnauthorised: TCheckBox
-            Left = 376
-            Top = 14
+            Left = 394
+            Top = 16
             Width = 169
             Height = 17
             Caption = 'Only show unauthorised orders'
@@ -3648,8 +3663,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = chkbxShowUnauthorisedClick
           end
           object BitBtn9: TBitBtn
-            Left = 288
-            Top = 10
+            Left = 306
+            Top = 12
             Width = 75
             Height = 25
             Caption = '&Search'
@@ -3681,8 +3696,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Top = 0
               Width = 1141
               Height = 41
-              ButtonHeight = 44
-              ButtonWidth = 65
+              ButtonHeight = 48
+              ButtonWidth = 73
               Caption = 'ToolBar1'
               Images = imglstOrders
               ParentShowHint = False
@@ -3699,7 +3714,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnMouseDown = btnOrderAddMouseDown
               end
               object btnOrderChange: TToolButton
-                Left = 65
+                Left = 73
                 Top = 0
                 Hint = 'Change order details'
                 Caption = '  &Change  '
@@ -3708,7 +3723,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnOrderChangeClick
               end
               object btnOrderRepeat: TToolButton
-                Left = 130
+                Left = 146
                 Top = 0
                 Hint = 'Repeat Order'
                 Caption = '&Repeat'
@@ -3717,7 +3732,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnOrderRepeatClick
               end
               object btnOrderDelete: TToolButton
-                Left = 195
+                Left = 219
                 Top = 0
                 Caption = 'Delete'
                 Enabled = False
@@ -3725,7 +3740,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnOrderDeleteClick
               end
               object btnOrderPrint: TToolButton
-                Left = 260
+                Left = 292
                 Top = 0
                 Hint = 'Print'
                 Caption = '&Print'
@@ -3734,7 +3749,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnOrderPrintClick
               end
               object btnOrderRequote: TToolButton
-                Left = 325
+                Left = 365
                 Top = 0
                 Caption = 'Re-quote'
                 Enabled = False
@@ -3742,7 +3757,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnOrderRequoteClick
               end
               object btnOrderHistory: TToolButton
-                Left = 390
+                Left = 438
                 Top = 0
                 Hint = 'Show Order History'
                 Caption = '&History'
@@ -3751,7 +3766,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnOrderHistoryClick
               end
               object btnOrderSeparator1: TToolButton
-                Left = 455
+                Left = 511
                 Top = 0
                 Width = 8
                 Caption = 'btnOrderSeparator1'
@@ -3760,7 +3775,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Visible = False
               end
               object btnOrderAllocatefnc: TToolButton
-                Left = 463
+                Left = 519
                 Top = 0
                 Caption = 'Al&locate'
                 DropdownMenu = pmnOrderAllocate
@@ -3769,7 +3784,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Style = tbsDropDown
               end
               object btnOrderPicking: TToolButton
-                Left = 543
+                Left = 611
                 Top = 0
                 Caption = 'Pic&king'
                 DropdownMenu = pmnOrderPicking
@@ -3777,7 +3792,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 ImageIndex = 7
               end
               object ToolButton3: TToolButton
-                Left = 608
+                Left = 684
                 Top = 0
                 Width = 8
                 Caption = 'ToolButton3'
@@ -3785,7 +3800,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Style = tbsSeparator
               end
               object btnOrderProofs: TToolButton
-                Left = 616
+                Left = 692
                 Top = 0
                 Caption = 'Proo&fs'
                 DropdownMenu = pmnOrderProofs
@@ -3793,7 +3808,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 ImageIndex = 7
               end
               object btnOrderDeliveriesSpacer: TToolButton
-                Left = 681
+                Left = 765
                 Top = 0
                 Width = 8
                 Caption = 'btnOrderDeliveriesSpacer'
@@ -3801,7 +3816,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Style = tbsSeparator
               end
               object btnOrderDeliveries: TToolButton
-                Left = 689
+                Left = 773
                 Top = 0
                 Hint = 'Deliveries'
                 Caption = 'Deliver&y'
@@ -3810,7 +3825,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnOrderDeliveriesClick
               end
               object btnOrderHold: TToolButton
-                Left = 754
+                Left = 846
                 Top = 0
                 Hint = 'On Hold'
                 Caption = '&Hold'
@@ -3825,13 +3840,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 44
           Width = 1168
-          Height = 510
+          Height = 506
           Align = alClient
           DataSource = dtmdlOrders.dtsOrders
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -3839,7 +3854,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 3
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDrawColumnCell = dbgOrderDetailsDrawColumnCell
@@ -3964,14 +3979,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Expanded = False
               FieldName = 'Rep_Name'
               Title.Caption = 'Rep'
-              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Operator_Name'
               Title.Caption = 'Operator'
-              Width = 64
               Visible = True
             end>
         end
@@ -3983,7 +3996,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnShow = tbJobsShow
         object stsbrJobDetails: TStatusBar
           Left = 0
-          Top = 554
+          Top = 550
           Width = 1168
           Height = 19
           Panels = <
@@ -4014,8 +4027,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Top = 0
             Width = 1153
             Height = 41
-            ButtonHeight = 36
-            ButtonWidth = 59
+            ButtonHeight = 40
+            ButtonWidth = 67
             Caption = 'ToolBar1'
             Images = imglstjobs
             ShowCaptions = True
@@ -4028,7 +4041,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnJobAddClick
             end
             object btnJobChange: TToolButton
-              Left = 59
+              Left = 67
               Top = 0
               Caption = '  &Change  '
               Enabled = False
@@ -4036,7 +4049,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnJobChangeClick
             end
             object btnJobRepeat: TToolButton
-              Left = 118
+              Left = 134
               Top = 0
               Caption = '&Repeat'
               Enabled = False
@@ -4044,7 +4057,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnJobRepeatClick
             end
             object btnJobDelete: TToolButton
-              Left = 177
+              Left = 201
               Top = 0
               Caption = '&Delete'
               Enabled = False
@@ -4052,7 +4065,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnJobDeleteClick
             end
             object btnJobPrint: TToolButton
-              Left = 236
+              Left = 268
               Top = 0
               Caption = '&Print'
               Enabled = False
@@ -4060,7 +4073,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnJobPrintClick
             end
             object ToolButton2: TToolButton
-              Left = 295
+              Left = 335
               Top = 0
               Width = 8
               Caption = 'ToolButton2'
@@ -4068,7 +4081,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Style = tbsSeparator
             end
             object btnJobDraft: TToolButton
-              Left = 303
+              Left = 343
               Top = 0
               Caption = 'Dra&ft'
               Enabled = False
@@ -4081,12 +4094,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 45
           Width = 1168
-          Height = 509
+          Height = 505
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -4094,7 +4107,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDrawColumnCell = dbgJobDetailsDrawColumnCell
@@ -4182,7 +4195,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object Panel4: TPanel
           Left = 0
-          Top = 573
+          Top = 569
           Width = 1168
           Height = 41
           Align = alBottom
@@ -4190,16 +4203,16 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 3
           object Label50: TLabel
             Left = 8
-            Top = 16
-            Width = 96
-            Height = 13
+            Top = 12
+            Width = 109
+            Height = 17
             Caption = 'Description Search'
           end
           object edtJobSearch: TEdit
-            Left = 104
+            Left = 122
             Top = 8
             Width = 233
-            Height = 21
+            Height = 25
             TabOrder = 0
             OnChange = edtJobSearchChange
           end
@@ -4218,8 +4231,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label51: TLabel
               Left = 86
               Top = 16
-              Width = 62
-              Height = 13
+              Width = 73
+              Height = 17
               Anchors = [akRight, akBottom]
               Caption = 'Job Number'
             end
@@ -4227,15 +4240,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 167
               Top = 12
               Width = 90
-              Height = 21
+              Height = 25
               Anchors = [akRight, akBottom]
               TabOrder = 0
               OnKeyPress = edtJobNumberKeyPress
             end
           end
           object BitBtn10: TBitBtn
-            Left = 344
-            Top = 6
+            Left = 365
+            Top = 8
             Width = 75
             Height = 25
             Caption = '&Search'
@@ -4251,7 +4264,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnShow = tbStockShow
         object stsbrStockDetails: TStatusBar
           Left = 0
-          Top = 595
+          Top = 591
           Width = 1168
           Height = 19
           Panels = <
@@ -4269,7 +4282,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 0
           Width = 1168
-          Height = 595
+          Height = 591
           Align = alClient
           Caption = 'Panel7'
           ParentBackground = False
@@ -4298,8 +4311,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Top = 0
                 Width = 1139
                 Height = 41
-                ButtonHeight = 44
-                ButtonWidth = 68
+                ButtonHeight = 48
+                ButtonWidth = 80
                 Caption = 'ToolBar1'
                 HotImages = imglstMaint
                 Images = imglstMaint
@@ -4318,7 +4331,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                   OnClick = btnStockChangeClick
                 end
                 object btnStockLabels: TToolButton
-                  Left = 68
+                  Left = 80
                   Top = 0
                   Hint = 'Print labels'
                   Caption = 'Labels'
@@ -4329,7 +4342,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                   OnClick = btnStockLabelsClick
                 end
                 object ToolButton1: TToolButton
-                  Left = 136
+                  Left = 160
                   Top = 0
                   Width = 8
                   Caption = 'ToolButton1'
@@ -4337,7 +4350,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                   Style = tbsSeparator
                 end
                 object btnStockLevels: TToolButton
-                  Left = 144
+                  Left = 168
                   Top = 0
                   Hint = 'Maintain stock levels'
                   Caption = '&Levels'
@@ -4348,7 +4361,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                   OnClick = btnStockLevelsClick
                 end
                 object btnStockEnquiry: TToolButton
-                  Left = 212
+                  Left = 248
                   Top = 0
                   Caption = 'Enquiry'
                   DropdownMenu = pmnStockEnquiry
@@ -4363,12 +4376,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 1
             Top = 45
             Width = 1166
-            Height = 508
+            Height = 504
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -4376,7 +4389,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 1
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgStockDetailsDrawColumnCell
@@ -4495,7 +4508,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object Panel8: TPanel
             Left = 1
-            Top = 553
+            Top = 549
             Width = 1166
             Height = 41
             Align = alBottom
@@ -4506,9 +4519,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
               41)
             object Label52: TLabel
               Left = 8
-              Top = 16
-              Width = 77
-              Height = 13
+              Top = 12
+              Width = 88
+              Height = 17
               Anchors = [akLeft, akBottom]
               Caption = 'Product Search'
             end
@@ -4516,7 +4529,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 104
               Top = 8
               Width = 233
-              Height = 21
+              Height = 25
               Anchors = [akLeft, akBottom]
               CharCase = ecUpperCase
               TabOrder = 0
@@ -4534,7 +4547,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object chkbxShowNotinUse: TCheckBox
               Left = 360
-              Top = 8
+              Top = 12
               Width = 217
               Height = 17
               Caption = 'Show products not in use'
@@ -4551,7 +4564,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnShow = tbInvoicesShow
         object stsbrInvoiceDetails: TStatusBar
           Left = 0
-          Top = 557
+          Top = 553
           Width = 1168
           Height = 19
           Panels = <
@@ -4587,8 +4600,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Top = 0
               Width = 1141
               Height = 40
-              ButtonHeight = 36
-              ButtonWidth = 53
+              ButtonHeight = 40
+              ButtonWidth = 62
               Caption = 'ToolBar1'
               HotImages = imglstFunctions
               Images = imglstFunctions
@@ -4607,7 +4620,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnInvoiceChangeClick
               end
               object btnInvoiceReprint: TToolButton
-                Left = 53
+                Left = 62
                 Top = 0
                 Caption = '&Reprint'
                 Enabled = False
@@ -4621,12 +4634,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 44
           Width = 1168
-          Height = 513
+          Height = 509
           Align = alClient
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -4634,7 +4647,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 2
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDrawColumnCell = dbgInvoiceDetailsDrawColumnCell
@@ -4699,7 +4712,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object Panel10: TPanel
           Left = 0
-          Top = 576
+          Top = 572
           Width = 1168
           Height = 38
           Align = alBottom
@@ -4708,15 +4721,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object Label53: TLabel
             Left = 8
             Top = 13
-            Width = 59
-            Height = 13
+            Width = 66
+            Height = 17
             Caption = 'Description'
           end
           object edtInvoiceSearch: TEdit
             Left = 100
             Top = 9
             Width = 153
-            Height = 21
+            Height = 25
             TabOrder = 0
             OnChange = edtInvoiceSearchChange
           end
@@ -4730,24 +4743,24 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ParentBackground = False
             TabOrder = 1
             object Label54: TLabel
-              Left = 88
+              Left = 78
               Top = 13
-              Width = 80
-              Height = 13
+              Width = 92
+              Height = 17
               Caption = 'Invoice Number'
             end
             object edtInvoiceNumber: TEdit
               Left = 176
               Top = 9
               Width = 81
-              Height = 21
+              Height = 25
               TabOrder = 0
               OnKeyPress = edtInvoiceNumberKeyPress
             end
           end
           object chkbxShowInactive: TCheckBox
             Left = 264
-            Top = 11
+            Top = 13
             Width = 113
             Height = 17
             Caption = 'Show deleted'
@@ -4760,7 +4773,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ImageIndex = 4
         object Panel1: TPanel
           Left = 0
-          Top = 573
+          Top = 569
           Width = 1168
           Height = 41
           Align = alBottom
@@ -4768,20 +4781,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 0
           object Label33: TLabel
             Left = 8
-            Top = 16
-            Width = 45
-            Height = 13
+            Top = 14
+            Width = 51
+            Height = 17
             Caption = 'Logo file'
           end
           object edtLogoLocation: TEdit
-            Left = 56
-            Top = 12
+            Left = 66
+            Top = 10
             Width = 281
-            Height = 21
+            Height = 25
             TabOrder = 0
           end
           object Button4: TButton
-            Left = 342
+            Left = 352
             Top = 10
             Width = 75
             Height = 25
@@ -4794,10 +4807,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 1129
           Top = 0
           Width = 39
-          Height = 573
+          Height = 569
           Align = alRight
-          ButtonHeight = 36
-          ButtonWidth = 40
+          ButtonHeight = 40
+          ButtonWidth = 43
           Caption = 'ToolBar1'
           HotImages = imgIcons
           Images = imgIcons
@@ -4818,7 +4831,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object btnExcel: TToolButton
             Left = 0
-            Top = 36
+            Top = 40
             Hint = 'Excel'
             Caption = 'Excel'
             ImageIndex = 0
@@ -4829,7 +4842,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object btnAttach: TToolButton
             Left = 0
-            Top = 72
+            Top = 80
             Hint = 'Attach Documents'
             Caption = 'Attach'
             ImageIndex = 3
@@ -4840,7 +4853,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object btnEmail: TToolButton
             Left = 0
-            Top = 108
+            Top = 120
             Hint = 'Email'
             Caption = 'Email'
             ImageIndex = 2
@@ -4853,7 +4866,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 0
           Width = 1129
-          Height = 573
+          Height = 569
           Align = alClient
           Columns = <
             item
@@ -4888,7 +4901,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 321
           Width = 1168
-          Height = 293
+          Height = 289
           Align = alClient
           ParentBackground = False
           TabOrder = 0
@@ -4918,7 +4931,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 1
             Top = 25
             Width = 821
-            Height = 267
+            Height = 263
             Align = alLeft
             Caption = 'Panel18'
             ParentBackground = False
@@ -4927,13 +4940,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Left = 1
               Top = 1
               Width = 819
-              Height = 265
+              Height = 261
               Align = alClient
               Color = clBtnFace
               Enabled = False
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               Lines.Strings = (
@@ -4946,7 +4959,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 822
             Top = 25
             Width = 345
-            Height = 267
+            Height = 263
             Align = alClient
             ParentBackground = False
             TabOrder = 2
@@ -4978,8 +4991,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Top = 0
               Width = 1151
               Height = 41
-              ButtonHeight = 36
-              ButtonWidth = 59
+              ButtonHeight = 40
+              ButtonWidth = 67
               Caption = 'ToolBar1'
               Images = imglstjobs
               ShowCaptions = True
@@ -4992,7 +5005,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnActivityAddClick
               end
               object btnActivityChange: TToolButton
-                Left = 59
+                Left = 67
                 Top = 0
                 Caption = '  &Change  '
                 Enabled = False
@@ -5000,7 +5013,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 OnClick = btnActivityChangeClick
               end
               object btnActivityDelete: TToolButton
-                Left = 118
+                Left = 134
                 Top = 0
                 Caption = '&Delete'
                 Enabled = False
@@ -5020,15 +5033,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label60: TLabel
               Left = 8
               Top = 13
-              Width = 34
-              Height = 13
+              Width = 39
+              Height = 17
               Caption = 'Search'
             end
             object Edit1: TEdit
               Left = 56
               Top = 9
               Width = 177
-              Height = 21
+              Height = 25
               TabOrder = 0
             end
           end
@@ -5041,7 +5054,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             DrawingStyle = gdsGradient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick]
@@ -5049,7 +5062,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 2
             TitleFont.Charset = DEFAULT_CHARSET
             TitleFont.Color = clBlack
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgActivityDetailsDrawColumnCell
@@ -5139,13 +5152,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 0
           Top = 25
           Width = 585
-          Height = 589
+          Height = 585
           Align = alLeft
           ParentBackground = False
           TabOrder = 1
           object Panel21: TPanel
             Left = 1
-            Top = 396
+            Top = 392
             Width = 583
             Height = 192
             Align = alBottom
@@ -5161,7 +5174,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Enabled = False
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               Lines.Strings = (
@@ -5172,7 +5185,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object Panel25: TPanel
             Left = 1
-            Top = 372
+            Top = 368
             Width = 583
             Height = 24
             Align = alBottom
@@ -5181,12 +5194,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object Label64: TLabel
               Left = 8
               Top = 8
-              Width = 34
-              Height = 13
+              Width = 40
+              Height = 17
               Caption = 'Notes:'
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               ParentFont = False
@@ -5196,12 +5209,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 1
             Top = 1
             Width = 479
-            Height = 371
+            Height = 367
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -5209,7 +5222,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 2
             TitleFont.Charset = ANSI_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             OnDrawColumnCell = dbgCategoryDetailsDrawColumnCell
@@ -5227,7 +5240,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Left = 480
             Top = 1
             Width = 104
-            Height = 371
+            Height = 367
             Align = alRight
             ParentBackground = False
             TabOrder = 3
@@ -5296,20 +5309,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object Panel23: TPanel
           Left = 585
           Top = 25
-          Width = 192
-          Height = 589
+          Width = 232
+          Height = 585
           Align = alLeft
           ParentBackground = False
           TabOrder = 2
           object Label62: TLabel
             Left = 8
             Top = 22
-            Width = 57
-            Height = 13
+            Width = 67
+            Height = 17
             Caption = 'Colour Key'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -5317,35 +5330,35 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object Label63: TLabel
             Left = 8
             Top = 63
-            Width = 93
-            Height = 13
+            Width = 108
+            Height = 17
             Caption = 'Used by Customer'
           end
           object Label65: TLabel
             Left = 8
             Top = 95
-            Width = 114
-            Height = 13
+            Width = 132
+            Height = 17
             Caption = 'Not used by Customer'
           end
           object Label66: TLabel
             Left = 8
             Top = 127
-            Width = 55
-            Height = 13
+            Width = 61
+            Height = 17
             Caption = 'We Supply'
           end
           object Edit2: TEdit
-            Left = 120
+            Left = 147
             Top = 59
             Width = 65
-            Height = 21
+            Height = 25
             Color = clYellow
             TabOrder = 0
             Text = 'Direct Mail'
           end
           object Edit3: TEdit
-            Left = 120
+            Left = 147
             Top = 91
             Width = 65
             Height = 21
@@ -5359,7 +5372,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Text = 'Direct Mail'
           end
           object Edit4: TEdit
-            Left = 120
+            Left = 147
             Top = 123
             Width = 65
             Height = 21
@@ -5384,26 +5397,28 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 674
+      ExplicitWidth = 1170
       DesignSize = (
         1176
         41)
       object DelLabel: TLabel
-        Left = 801
-        Top = 16
-        Width = 109
-        Height = 13
+        Left = 789
+        Top = 13
+        Width = 132
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Delete these details ?'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 819
+        ExplicitLeft = 795
       end
       object OKBitBtn: TBitBtn
-        Left = 947
+        Left = 935
         Top = 10
         Width = 75
         Height = 25
@@ -5477,9 +5492,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
         NumGlyphs = 2
         TabOrder = 4
         OnClick = OKBitBtnClick
+        ExplicitLeft = 929
       end
       object CancelBitBtn: TBitBtn
-        Left = 1027
+        Left = 1015
         Top = 10
         Width = 75
         Height = 25
@@ -5554,6 +5570,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         NumGlyphs = 2
         TabOrder = 5
         OnClick = CancelBitBtnClick
+        ExplicitLeft = 1009
       end
       object PrintBitBtn: TBitBtn
         Left = 9
@@ -5566,15 +5583,15 @@ object PBMaintCustFrm: TPBMaintCustFrm
         OnClick = PrintBitBtnClick
       end
       object ActiveChkBox: TCheckBox
-        Left = 112
-        Top = 16
+        Left = 102
+        Top = 13
         Width = 127
         Height = 17
         Hint = 'Customers Account  Open  ?'
         Caption = 'Customer Is Active'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -5649,6 +5666,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Align = alTop
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 1170
       DesignSize = (
         1176
         41)
@@ -5668,8 +5686,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object NameEdit: TEdit
         Left = 108
         Top = 8
-        Width = 531
-        Height = 21
+        Width = 519
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         Color = clWhite
         MaxLength = 100
@@ -5677,25 +5695,26 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Text = 'NameEdit'
         OnChange = NameEditChange
         OnExit = NameEditExit
+        ExplicitWidth = 513
       end
     end
   end
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 312
-    Top = 216
+    Left = 366
+    Top = 182
   end
   object FlashDelivTimer: TTimer
     Enabled = False
     OnTimer = FlashDelivTimerTimer
-    Left = 464
-    Top = 120
+    Left = 352
+    Top = 152
   end
   object pmnuDocuments: TPopupMenu
     OnPopup = pmnuDocumentsPopup
-    Left = 734
-    Top = 118
+    Left = 566
+    Top = 214
     object CreateExcelDocument1: TMenuItem
       Caption = 'Create Excel Document'
       OnClick = btnWordClick
@@ -5736,12 +5755,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
     end
   end
   object svDlgOfficeDoc: TSaveDialog
-    Left = 401
-    Top = 294
+    Left = 425
+    Top = 246
   end
   object imgDocuments: TImageList
-    Left = 176
-    Top = 204
+    Left = 196
+    Top = 143
   end
   object imgIcons: TImageList
     Left = 296
@@ -7252,8 +7271,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       000000000000}
   end
   object imglstMaint: TImageList
-    Left = 296
-    Top = 496
+    Left = 282
+    Top = 420
     Bitmap = {
       494C01010D000E00040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
@@ -7791,8 +7810,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       000000000000}
   end
   object imglstFunctions: TImageList
-    Left = 296
-    Top = 544
+    Left = 448
+    Top = 464
     Bitmap = {
       494C010107000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
@@ -8066,8 +8085,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       000000000000}
   end
   object pmnStockEnquiry: TPopupMenu
-    Left = 792
-    Top = 152
+    Left = 528
+    Top = 278
     object StockMovements2: TMenuItem
       Caption = 'Stock Movements'
       OnClick = StockMovements2Click
@@ -8094,8 +8113,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
     end
   end
   object pmnOrderAdd: TPopupMenu
-    Left = 632
-    Top = 120
+    Left = 556
+    Top = 232
     object btnFromPO: TMenuItem
       Caption = '... production order'
       OnClick = btnFromPOClick
@@ -8106,8 +8125,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
     end
   end
   object pmnOrderPicking: TPopupMenu
-    Left = 640
-    Top = 264
+    Left = 508
+    Top = 488
     object btnPrintPickNote: TMenuItem
       Caption = 'Print picking note'
       OnClick = btnPrintPickNoteClick
@@ -8118,8 +8137,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
     end
   end
   object pmnOrderProofs: TPopupMenu
-    Left = 640
-    Top = 224
+    Left = 518
+    Top = 450
     object Approvalform1: TMenuItem
       Caption = 'Approval form'
       OnClick = Approvalform1Click
@@ -8131,8 +8150,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
   end
   object pmnOrderAllocate: TPopupMenu
     OnPopup = pmnOrderAllocatePopup
-    Left = 680
-    Top = 184
+    Left = 536
+    Top = 390
     object mnuAllocate: TMenuItem
       Caption = 'Allocate'
       OnClick = mnuAllocateClick
@@ -8143,8 +8162,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
     end
   end
   object imglstButtons: TImageList
-    Left = 80
-    Top = 216
+    Left = 108
+    Top = 134
     Bitmap = {
       494C01010B000E00040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
@@ -8554,6 +8573,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     OnDrop = DropComboTarget1Drop
     Target = pgCustomer
     Left = 534
-    Top = 234
+    Top = 98
   end
 end

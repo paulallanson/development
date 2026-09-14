@@ -2,28 +2,28 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
   Left = 225
   Top = 152
   Caption = 'Maintain Product Types'
-  ClientHeight = 368
-  ClientWidth = 436
+  ClientHeight = 417
+  ClientWidth = 447
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 133
-    Top = 336
-    Width = 109
-    Height = 13
+    Left = 134
+    Top = 376
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -31,13 +31,13 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
   object Label1: TLabel
     Left = 8
     Top = 12
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object OKBitBtn: TBitBtn
-    Left = 269
-    Top = 330
+    Left = 270
+    Top = 370
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -112,8 +112,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 349
-    Top = 330
+    Left = 350
+    Top = 370
     Width = 75
     Height = 25
     Cancel = True
@@ -191,7 +191,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
     Left = 8
     Top = 40
     Width = 417
-    Height = 281
+    Height = 313
     ActivePage = TabSheet1
     TabOrder = 2
     object TabSheet1: TTabSheet
@@ -200,10 +200,10 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         Left = 5
         Top = 1
         Width = 397
-        Height = 248
+        Height = 272
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
@@ -212,84 +212,58 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         object Label2: TLabel
           Left = 16
           Top = 18
-          Width = 46
-          Height = 13
+          Width = 53
+          Height = 17
           Caption = 'Category'
         end
         object Label5: TLabel
           Left = 16
-          Top = 48
-          Width = 59
-          Height = 26
+          Top = 59
+          Width = 121
+          Height = 22
           Caption = 'Short Description'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           WordWrap = True
         end
-        object Label11: TLabel
-          Left = 16
-          Top = 97
-          Width = 63
-          Height = 13
-          Caption = 'Nominal Acc'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label3: TLabel
-          Left = 16
-          Top = 130
-          Width = 63
-          Height = 13
-          Caption = 'Nominal Acc'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
         object Label4: TLabel
           Left = 16
-          Top = 116
-          Width = 46
-          Height = 13
-          Caption = 'Purchase'
+          Top = 124
+          Width = 155
+          Height = 18
+          Caption = 'Purchase Nominal Account'
         end
         object Label6: TLabel
           Left = 16
-          Top = 83
-          Width = 26
-          Height = 13
-          Caption = 'Sales'
+          Top = 91
+          Width = 133
+          Height = 18
+          Caption = 'Sales Nominal Account'
         end
         object Label7: TLabel
           Left = 16
           Top = 152
-          Width = 147
-          Height = 39
+          Width = 153
+          Height = 51
           Caption = 'Minimum no of Suppliers to send enquiries for this product type'
           WordWrap = True
         end
         object lblFSCProductType: TLabel
           Left = 16
-          Top = 196
-          Width = 88
-          Height = 13
+          Top = 217
+          Width = 101
+          Height = 17
           Caption = 'FSC Product Type'
         end
         object CatDBLUCB: TDBLookupComboBox
-          Left = 118
-          Top = 14
+          Left = 175
+          Top = 18
           Width = 129
-          Height = 21
+          Height = 25
           KeyField = 'Category'
           ListField = 'Description'
           ListSource = CatsSRC
@@ -298,7 +272,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         end
         object NotesBitBtn: TBitBtn
           Left = 296
-          Top = 212
+          Top = 236
           Width = 75
           Height = 25
           Hint = 'Invoice Notes'
@@ -327,10 +301,10 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
           OnClick = NotesBitBtnClick
         end
         object ShortDescrEdit: TEdit
-          Left = 118
-          Top = 51
+          Left = 175
+          Top = 55
           Width = 155
-          Height = 21
+          Height = 25
           TabStop = False
           MaxLength = 15
           TabOrder = 2
@@ -338,8 +312,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
           OnChange = ShortDescrEditChange
         end
         object ProdTypeMaintBitBtn: TBitBtn
-          Left = 256
-          Top = 13
+          Left = 313
+          Top = 17
           Width = 25
           Height = 23
           Hint = 'Product Type Maintenance'
@@ -357,17 +331,17 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         end
         object chkbxActive: TCheckBox
           Left = 16
-          Top = 220
+          Top = 244
           Width = 185
           Height = 17
           Caption = 'Product type is active'
           TabOrder = 7
         end
         object NomAccEdit: TMaskEdit
-          Left = 118
-          Top = 84
+          Left = 175
+          Top = 88
           Width = 155
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
@@ -375,10 +349,10 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
           Text = ''
         end
         object PurchNomAccEdt: TMaskEdit
-          Left = 118
-          Top = 117
+          Left = 175
+          Top = 121
           Width = 155
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
@@ -386,20 +360,20 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
           Text = ''
         end
         object spnSuppliers: TSpinEdit
-          Left = 184
-          Top = 155
+          Left = 175
+          Top = 163
           Width = 65
-          Height = 22
+          Height = 27
           MaxValue = 0
           MinValue = 0
           TabOrder = 5
           Value = 0
         end
         object edtFSCProductType: TEdit
-          Left = 118
-          Top = 192
+          Left = 175
+          Top = 213
           Width = 83
-          Height = 21
+          Height = 25
           TabStop = False
           MaxLength = 15
           TabOrder = 6
@@ -415,30 +389,30 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       object Label8: TLabel
         Left = 0
         Top = 8
-        Width = 96
-        Height = 13
+        Width = 108
+        Height = 17
         Caption = 'Current Price Units'
       end
       object Label9: TLabel
         Left = 256
         Top = 8
-        Width = 118
-        Height = 13
+        Width = 133
+        Height = 17
         Caption = 'Unassigned Price Units'
       end
       object Label10: TLabel
         Left = 0
         Top = 188
-        Width = 38
-        Height = 13
+        Width = 41
+        Height = 17
         Caption = 'Default'
       end
       object lstbxMembers: TListBox
         Left = 0
         Top = 28
-        Width = 145
+        Width = 153
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnClick = lstbxMembersClick
@@ -497,7 +471,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         Top = 28
         Width = 145
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 3
         OnClick = lstbxNonMembersClick
@@ -508,7 +482,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 4
         Visible = False
       end
@@ -517,15 +491,15 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 5
         Visible = False
       end
       object cmbDefaults: TComboBox
-        Left = 40
+        Left = 47
         Top = 184
         Width = 105
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 6
       end
@@ -535,7 +509,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
     Left = 86
     Top = 8
     Width = 252
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 3
     Text = 'DescrEdit'
@@ -546,13 +520,13 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
     SQL.Strings = (
       'Select Category, Description From Category'
       'Order By Description')
-    Left = 376
+    Left = 320
     Top = 16
   end
   object CatsSRC: TDataSource
     DataSet = GetCatsSQL
-    Left = 288
-    Top = 16
+    Left = 296
+    Top = 24
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -560,8 +534,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       'Select Product_Type'
       'From Product_Type'
       'Where Description = :GUID')
-    Left = 160
-    Top = 8
+    Left = 304
+    Top = 24
     ParamData = <
       item
         Name = 'GUID'
@@ -582,7 +556,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       'Select Max(Product_Type)+1, :GUID, '#39' '#39', '#39' '#39', '#39' '#39',:Category'
       'From Product_Type'
       ' ')
-    Left = 368
+    Left = 312
     Top = 128
     ParamData = <
       item
@@ -614,7 +588,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       '(Product_Type = :Product_Type) '
       ''
       ' ')
-    Left = 368
+    Left = 312
     Top = 48
     ParamData = <
       item
@@ -658,8 +632,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       'Delete From Product_Type'
       'Where'
       '(Product_Type = :Product_Type)')
-    Left = 240
-    Top = 16
+    Left = 248
+    Top = 24
     ParamData = <
       item
         Name = 'Product_Type'
@@ -668,7 +642,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 328
+    Left = 272
     Top = 72
   end
   object qryZero: TFDQuery
@@ -684,7 +658,7 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       'Where'
       '(Product_Type = :Product_Type) '
       '')
-    Left = 336
+    Left = 280
     Top = 88
     ParamData = <
       item
@@ -717,8 +691,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       ' '
       ' '
       ' ')
-    Left = 368
-    Top = 192
+    Left = 376
+    Top = 200
     ParamData = <
       item
         Name = 'Narrative'
@@ -741,8 +715,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       '  1,'
       '  :description,'
       '  '#39'Y'#39');')
-    Left = 376
-    Top = 80
+    Left = 384
+    Top = 88
     ParamData = <
       item
         Name = 'product_type'
@@ -761,8 +735,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       'where Product_Type = :Product_Type and'
       'Product_TypePrice_Unit.Price_Unit = Price_Unit.Price_Unit'
       'order by Price_Unit.Description')
-    Left = 24
-    Top = 40
+    Left = 374
+    Top = 18
     ParamData = <
       item
         Name = 'Product_Type'
@@ -775,13 +749,13 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         'select Price_Unit.Price_Unit, Price_Unit.Description as Price_Un' +
         'it_Description'
       'from Price_Unit')
-    Left = 128
-    Top = 152
+    Left = 264
+    Top = 96
   end
   object dtsPriceUnit: TDataSource
     DataSet = qryPriceUnit
-    Left = 200
-    Top = 184
+    Left = 336
+    Top = 128
   end
   object qryDummy: TFDQuery
     ConnectionName = 'pb'
@@ -791,16 +765,16 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
         'it_Description'
       'from Price_Unit'
       'WHERE 1=1')
-    Left = 192
-    Top = 136
+    Left = 328
+    Top = 80
   end
   object qryDelete: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Product_TypePrice_Unit'
       'where Product_Type = :Product_Type')
-    Left = 32
-    Top = 152
+    Left = 360
+    Top = 182
     ParamData = <
       item
         Name = 'Product_Type'
@@ -820,8 +794,8 @@ object PBMaintPrdTypFrm: TPBMaintPrdTypFrm
       ':Inactive'
       ')'
       '')
-    Left = 40
-    Top = 152
+    Left = 362
+    Top = 110
     ParamData = <
       item
         Name = 'Product_Type'

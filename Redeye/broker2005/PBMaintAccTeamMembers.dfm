@@ -4,31 +4,33 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
   BorderStyle = bsDialog
   Caption = 'Maintain Account Manager Teams'
   ClientHeight = 431
-  ClientWidth = 468
+  ClientWidth = 497
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 328
     Top = 80
-    Width = 98
-    Height = 13
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object Panel2: TPanel
     Left = 0
     Top = 390
-    Width = 468
+    Width = 497
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 381
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 153
       Top = 8
@@ -52,33 +54,34 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 468
+    Width = 497
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 462
     object Label3: TLabel
       Left = 8
-      Top = 16
-      Width = 126
-      Height = 13
+      Top = 11
+      Width = 149
+      Height = 17
       Caption = 'Account Manager Team:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblDetails: TLabel
       Left = 156
-      Top = 16
-      Width = 48
-      Height = 13
+      Top = 11
+      Width = 59
+      Height = 17
       Caption = 'lblDetails'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -87,23 +90,24 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 468
+    Width = 497
     Height = 176
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 462
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 138
-      Height = 13
+      Width = 156
+      Height = 17
       Caption = 'Current Account Managers'
     end
     object Label4: TLabel
       Left = 288
       Top = 8
-      Width = 164
-      Height = 13
+      Width = 186
+      Height = 17
       Caption = 'Un-assigned Account Managers'
     end
     object lstbxMembers: TListBox
@@ -111,7 +115,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 28
       Width = 169
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
       OnClick = lstbxMembersClick
@@ -121,7 +125,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 28
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 1
       Visible = False
     end
@@ -178,7 +182,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 28
       Width = 169
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 4
       OnClick = lstbxNonMembersClick
@@ -188,7 +192,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 28
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 5
       Visible = False
     end
@@ -196,23 +200,25 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
   object Panel4: TPanel
     Left = 0
     Top = 217
-    Width = 468
+    Width = 497
     Height = 173
     Align = alClient
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 462
+    ExplicitHeight = 164
     object Label5: TLabel
       Left = 8
       Top = 8
-      Width = 67
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Current Reps'
     end
     object Label6: TLabel
       Left = 288
       Top = 8
-      Width = 93
-      Height = 13
+      Width = 106
+      Height = 17
       Caption = 'Un-assigned Reps'
     end
     object lstbxReps: TListBox
@@ -220,7 +226,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 25
       Width = 169
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
       OnClick = lstbxRepsClick
@@ -230,7 +236,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 25
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 1
       Visible = False
     end
@@ -239,7 +245,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 25
       Width = 169
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 2
       OnClick = lstbxNonRepsClick
@@ -249,7 +255,7 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       Top = 25
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 3
       Visible = False
     end

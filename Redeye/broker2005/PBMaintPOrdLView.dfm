@@ -7,11 +7,11 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object pnlLines: TPanel
     Left = 0
     Top = 0
@@ -21,6 +21,8 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
     Caption = 'pnlLines'
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 588
+    ExplicitHeight = 341
     object LineDetsStringGrid: TStringGrid
       Left = 1
       Top = 1
@@ -34,6 +36,8 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
       TabOrder = 0
       OnDblClick = LineDetsStringGridDblClick
       OnDrawCell = LineDetsStringGridDrawCell
+      ExplicitWidth = 586
+      ExplicitHeight = 339
       ColWidths = (
         41
         203
@@ -51,6 +55,8 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 341
+    ExplicitWidth = 588
     object BitBtn1: TBitBtn
       Left = 217
       Top = 5

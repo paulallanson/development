@@ -3,21 +3,21 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
   Top = 155
   BorderStyle = bsSingle
   Caption = 'Maintain Interfaces'
-  ClientHeight = 291
+  ClientHeight = 308
   ClientWidth = 569
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CancelBitBtn: TBitBtn
     Left = 291
-    Top = 256
+    Top = 267
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -26,7 +26,7 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
   end
   object OKBitBtn: TBitBtn
     Left = 203
-    Top = 256
+    Top = 267
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -102,7 +102,7 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
   end
   object PageControl1: TPageControl
     Left = 8
-    Top = 8
+    Top = 15
     Width = 553
     Height = 233
     ActivePage = TabSheet1
@@ -118,51 +118,51 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         TabOrder = 0
         object Label5: TLabel
           Left = 8
-          Top = 28
-          Width = 42
-          Height = 13
+          Top = 17
+          Width = 48
+          Height = 17
           Caption = 'Package'
         end
         object Label1: TLabel
           Left = 7
-          Top = 60
-          Width = 83
-          Height = 13
+          Top = 49
+          Width = 96
+          Height = 17
           Caption = 'Import Directory'
         end
         object Label2: TLabel
           Left = 8
-          Top = 92
-          Width = 82
-          Height = 13
+          Top = 81
+          Width = 95
+          Height = 17
           Caption = 'Export Directory'
         end
         object Label3: TLabel
           Left = 8
-          Top = 125
-          Width = 109
-          Height = 13
+          Top = 114
+          Width = 126
+          Height = 17
           Caption = 'Last File No (invoices)'
         end
         object Label4: TLabel
           Left = 8
-          Top = 157
-          Width = 114
-          Height = 13
+          Top = 146
+          Width = 131
+          Height = 17
           Caption = 'Last File No (accounts)'
         end
         object Label8: TLabel
           Left = 280
-          Top = 125
-          Width = 129
-          Height = 13
+          Top = 114
+          Width = 149
+          Height = 17
           Caption = 'Last File No (Direct Debit)'
         end
         object AccPkgDBLookupComboBox: TDBLookupComboBox
           Left = 112
-          Top = 24
+          Top = 13
           Width = 193
-          Height = 21
+          Height = 25
           KeyField = 'Accounts_Package'
           ListField = 'Accounts_Package_Description'
           ListSource = AccPkgSRC
@@ -171,9 +171,9 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object ImportEdit: TEdit
           Left = 112
-          Top = 56
+          Top = 45
           Width = 305
-          Height = 21
+          Height = 25
           MaxLength = 50
           ReadOnly = True
           TabOrder = 1
@@ -181,9 +181,9 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object ExportEdit: TEdit
           Left = 112
-          Top = 88
+          Top = 77
           Width = 305
-          Height = 21
+          Height = 25
           MaxLength = 50
           ReadOnly = True
           TabOrder = 2
@@ -191,13 +191,13 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object BrowseBitBtn: TBitBtn
           Left = 422
-          Top = 55
+          Top = 44
           Width = 75
           Height = 25
           Caption = 'Browse'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -206,13 +206,13 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object browse2BitBtn: TBitBtn
           Left = 422
-          Top = 87
+          Top = 76
           Width = 75
           Height = 25
           Caption = 'Browse'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -221,9 +221,9 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object LastFileInvSpinEdit: TSpinEdit
           Left = 152
-          Top = 120
+          Top = 109
           Width = 73
-          Height = 22
+          Height = 27
           MaxValue = 0
           MinValue = 0
           TabOrder = 5
@@ -231,9 +231,9 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object LastFileAccSpinEdit: TSpinEdit
           Left = 152
-          Top = 152
+          Top = 141
           Width = 73
-          Height = 22
+          Height = 27
           MaxValue = 0
           MinValue = 0
           TabOrder = 6
@@ -241,9 +241,9 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object LastFileDDSpinEdit: TSpinEdit
           Left = 424
-          Top = 120
+          Top = 109
           Width = 73
-          Height = 22
+          Height = 27
           MaxValue = 0
           MinValue = 0
           TabOrder = 7
@@ -266,16 +266,16 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
           57)
         object Label7: TLabel
           Left = 8
-          Top = 28
-          Width = 42
-          Height = 13
+          Top = 19
+          Width = 48
+          Height = 17
           Caption = 'Package'
         end
         object dblkpSchedule: TDBLookupComboBox
           Left = 112
-          Top = 24
+          Top = 15
           Width = 193
-          Height = 21
+          Height = 25
           KeyField = 'Schedule_Package'
           ListField = 'Schedule_Package_Name'
           ListSource = dtsSchedPackage
@@ -284,7 +284,7 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         end
         object BitBtn3: TBitBtn
           Left = 314
-          Top = 22
+          Top = 15
           Width = 23
           Height = 24
           Hint = 'Clear Schedule Package'
@@ -328,24 +328,24 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         TabOrder = 0
         object Label6: TLabel
           Left = 7
-          Top = 28
-          Width = 90
-          Height = 13
+          Top = 20
+          Width = 104
+          Height = 17
           Caption = 'Transfer Directory'
         end
         object edtDataTransfer: TEdit
-          Left = 112
-          Top = 24
+          Left = 119
+          Top = 16
           Width = 305
-          Height = 21
+          Height = 25
           MaxLength = 50
           ReadOnly = True
           TabOrder = 0
           OnChange = EnableOK
         end
         object btnBrowse: TBitBtn
-          Left = 422
-          Top = 23
+          Left = 429
+          Top = 16
           Width = 75
           Height = 25
           Caption = 'Browse'
@@ -370,8 +370,8 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
         'a_Transfer_Directory, Schedule_Package,'
       '       Last_File_No_Direct_Debit'
       'From Company')
-    Left = 352
-    Top = 120
+    Left = 400
+    Top = 126
   end
   object UpdDetsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -387,8 +387,8 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
       'Schedule_Package = :Schedule_Package,'
       'Last_File_No_Direct_Debit = :Last_File_No_Direct_Debit'
       '')
-    Left = 264
-    Top = 120
+    Left = 482
+    Top = 126
     ParamData = <
       item
         Name = 'Data_Import_Directory'
@@ -420,13 +420,13 @@ object PBMaintInterfFrm: TPBMaintInterfFrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Accounts_Package')
-    Left = 360
-    Top = 16
+    Left = 442
+    Top = 108
   end
   object AccPkgSRC: TDataSource
     DataSet = AccPkgSQL
-    Left = 392
-    Top = 16
+    Left = 514
+    Top = 124
   end
   object qrySchedPackage: TFDQuery
     ConnectionName = 'PB'

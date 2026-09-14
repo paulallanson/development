@@ -3,22 +3,22 @@ object PBLUProdFrm: TPBLUProdFrm
   Top = 121
   Caption = 'Look Up Product'
   ClientHeight = 432
-  ClientWidth = 665
+  ClientWidth = 699
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stBrDetails: TStatusBar
     Left = 0
     Top = 415
-    Width = 665
+    Width = 699
     Height = 17
     Panels = <
       item
@@ -27,18 +27,20 @@ object PBLUProdFrm: TPBLUProdFrm
       item
         Width = 50
       end>
+    ExplicitTop = 406
+    ExplicitWidth = 659
   end
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 0
-    Width = 665
+    Width = 699
     Height = 363
     Align = alClient
     DataSource = dtsrcParts
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -46,7 +48,7 @@ object PBLUProdFrm: TPBLUProdFrm
     TabOrder = 1
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = DetsDBGridDblClick
@@ -69,30 +71,32 @@ object PBLUProdFrm: TPBLUProdFrm
   object Panel1: TPanel
     Left = 0
     Top = 363
-    Width = 665
+    Width = 699
     Height = 52
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 354
+    ExplicitWidth = 659
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 40
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Product'
     end
     object edtProduct: TEdit
       Left = 64
       Top = 16
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtProductChange
     end
     object pnlCloseBtn: TPanel
-      Left = 465
+      Left = 499
       Top = 0
       Width = 200
       Height = 52
@@ -100,9 +104,10 @@ object PBLUProdFrm: TPBLUProdFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 459
       object btnSelect: TBitBtn
         Left = 28
-        Top = 11
+        Top = 14
         Width = 75
         Height = 25
         Caption = 'Select'
@@ -177,7 +182,7 @@ object PBLUProdFrm: TPBLUProdFrm
       end
       object CloseBitBtn: TBitBtn
         Left = 116
-        Top = 11
+        Top = 14
         Width = 75
         Height = 25
         Kind = bkClose
@@ -188,8 +193,8 @@ object PBLUProdFrm: TPBLUProdFrm
     end
     object ChkBxExcProd: TCheckBox
       Left = 312
-      Top = 18
-      Width = 161
+      Top = 20
+      Width = 181
       Height = 17
       Caption = 'Exclude Products not in use'
       TabOrder = 2

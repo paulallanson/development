@@ -2,12 +2,12 @@ object frmPBLUJobs: TfrmPBLUJobs
   Left = 33
   Top = 115
   Caption = 'Job Bags'
-  ClientHeight = 356
-  ClientWidth = 1176
+  ClientHeight = 347
+  ClientWidth = 1170
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,26 +19,26 @@ object frmPBLUJobs: TfrmPBLUJobs
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1176
+    Width = 1170
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1174
+        Width = 1164
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1161
+      Width = 1155
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 59
+      ButtonHeight = 40
+      ButtonWidth = 67
       Caption = 'ToolBar1'
       Images = imglstjobs
       ShowCaptions = True
@@ -51,7 +51,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 59
+        Left = 67
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -59,7 +59,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnChangeClick
       end
       object btnRepeat: TToolButton
-        Left = 118
+        Left = 134
         Top = 0
         Caption = '&Repeat'
         Enabled = False
@@ -67,7 +67,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnRepeatClick
       end
       object btnDelete: TToolButton
-        Left = 177
+        Left = 201
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -75,7 +75,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnDeleteClick
       end
       object btnConvert: TToolButton
-        Left = 236
+        Left = 268
         Top = 0
         Caption = 'Requote'
         Enabled = False
@@ -83,7 +83,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnConvertClick
       end
       object btnPrint: TToolButton
-        Left = 295
+        Left = 335
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -91,7 +91,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnPrintClick
       end
       object ToolButton3: TToolButton
-        Left = 354
+        Left = 402
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -99,7 +99,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Style = tbsSeparator
       end
       object btnDraft: TToolButton
-        Left = 362
+        Left = 410
         Top = 0
         Hint = 'Print a draft invoice'
         Caption = 'Dra&ft'
@@ -110,7 +110,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnDraftClick
       end
       object btnInvoiceThisWeek: TToolButton
-        Left = 421
+        Left = 477
         Top = 0
         Caption = 'Inv Now'
         Enabled = False
@@ -118,7 +118,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         OnClick = btnInvoiceThisWeekClick
       end
       object ToolButton1: TToolButton
-        Left = 480
+        Left = 544
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -126,7 +126,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 488
+        Left = 552
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -137,14 +137,14 @@ object frmPBLUJobs: TfrmPBLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 1176
-    Height = 210
+    Width = 1170
+    Height = 189
     Align = alClient
     DataSource = dtmdlJobs.dtsJobs
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -153,7 +153,7 @@ object frmPBLUJobs: TfrmPBLUJobs
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -170,6 +170,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Date_Point'
         Title.Caption = 'Date'
+        Width = 64
         Visible = True
       end
       item
@@ -257,12 +258,14 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Production_Status'
         Title.Caption = 'Production Status'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Account_Code'
         Title.Caption = 'Account Code'
+        Width = 64
         Visible = True
       end
       item
@@ -275,12 +278,14 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'File_Copies_Received_Date'
         Title.Caption = 'File Copies Received'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'File_Copies_Received_By_Name'
         Title.Caption = 'File Copies Received By'
+        Width = 64
         Visible = True
       end
       item
@@ -314,50 +319,51 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 285
-    Width = 1176
-    Height = 52
+    Top = 264
+    Width = 1170
+    Height = 64
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
       Top = 26
-      Width = 86
-      Height = 13
-      Caption = 'Customer Search'
+      Width = 56
+      Height = 17
+      Caption = 'Customer'
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 79
       Top = 22
       Width = 233
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 902
+      Left = 896
       Top = 1
       Width = 273
-      Height = 50
+      Height = 62
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitHeight = 50
       DesignSize = (
         273
-        50)
+        62)
       object Label2: TLabel
-        Left = 22
+        Left = 15
         Top = 25
-        Width = 62
-        Height = 13
+        Width = 73
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Job Number'
       end
       object btnClose: TButton
         Left = 192
-        Top = 18
+        Top = 21
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -369,15 +375,15 @@ object frmPBLUJobs: TfrmPBLUJobs
         Left = 95
         Top = 21
         Width = 90
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 1
         OnKeyPress = edtNumberKeyPress
       end
     end
     object btnSearch: TBitBtn
-      Left = 352
-      Top = 20
+      Left = 327
+      Top = 22
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -387,33 +393,33 @@ object frmPBLUJobs: TfrmPBLUJobs
     object rdgrpShowComplete: TGroupBox
       Left = 440
       Top = 4
-      Width = 369
-      Height = 41
+      Width = 450
+      Height = 54
       Caption = 'Only Show'
       ParentBackground = False
       TabOrder = 3
       object RadioButton1: TRadioButton
         Left = 16
-        Top = 16
-        Width = 145
+        Top = 23
+        Width = 177
         Height = 17
         Caption = 'Jobs to Invoice This Week'
         TabOrder = 0
         OnClick = RadioButton1Click
       end
       object RadioButton2: TRadioButton
-        Left = 176
-        Top = 16
-        Width = 113
+        Left = 200
+        Top = 23
+        Width = 121
         Height = 17
         Caption = 'Completed Jobs'
         TabOrder = 1
         OnClick = RadioButton2Click
       end
       object RadioButton3: TRadioButton
-        Left = 296
-        Top = 16
-        Width = 63
+        Left = 347
+        Top = 23
+        Width = 73
         Height = 17
         Caption = 'Show All'
         Checked = True
@@ -425,8 +431,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 337
-    Width = 1176
+    Top = 328
+    Width = 1170
     Height = 19
     Panels = <
       item
@@ -442,7 +448,7 @@ object frmPBLUJobs: TfrmPBLUJobs
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1176
+    Width = 1170
     Height = 30
     Align = alTop
     BevelInner = bvLowered

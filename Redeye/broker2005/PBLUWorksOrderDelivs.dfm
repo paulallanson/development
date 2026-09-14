@@ -7,12 +7,12 @@ object frmPBLUWorksOrderDelivs: TfrmPBLUWorksOrderDelivs
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object sgDelivs: TStringGrid
     Left = 0
     Top = 0
@@ -25,6 +25,8 @@ object frmPBLUWorksOrderDelivs: TfrmPBLUWorksOrderDelivs
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
     TabOrder = 0
     OnDblClick = sgDelivsDblClick
+    ExplicitWidth = 722
+    ExplicitHeight = 277
     ColWidths = (
       40
       158
@@ -42,6 +44,8 @@ object frmPBLUWorksOrderDelivs: TfrmPBLUWorksOrderDelivs
     Align = alRight
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 722
+    ExplicitHeight = 277
     object btnConfirm: TBitBtn
       Left = 8
       Top = 16

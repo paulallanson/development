@@ -2,14 +2,14 @@ object frmpbLUOrders: TfrmpbLUOrders
   Left = 11
   Top = 154
   Caption = 'Purchase Print'
-  ClientHeight = 390
-  ClientWidth = 911
+  ClientHeight = 381
+  ClientWidth = 905
   Color = clBtnFace
   Constraints.MinHeight = 360
   Constraints.MinWidth = 745
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -21,37 +21,38 @@ object frmpbLUOrders: TfrmpbLUOrders
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 911
+    Width = 905
     Height = 45
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 905
+        Width = 899
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 896
+      Width = 890
       Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 884
+        Width = 890
         Height = 41
-        ButtonHeight = 36
-        ButtonWidth = 59
+        ButtonHeight = 40
+        ButtonWidth = 67
         Caption = 'ToolBar1'
         Images = imglstOrders
         ShowCaptions = True
         TabOrder = 0
+        ExplicitWidth = 878
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -61,7 +62,7 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 59
+          Left = 67
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -70,7 +71,7 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnChangeClick
         end
         object btnCopy: TToolButton
-          Left = 118
+          Left = 134
           Top = 0
           Caption = 'Copy'
           Enabled = False
@@ -78,7 +79,7 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnCopyClick
         end
         object btnRepeat: TToolButton
-          Left = 177
+          Left = 201
           Top = 0
           Hint = 'Repeat Order'
           Caption = '&Repeat'
@@ -87,7 +88,7 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnRepeatClick
         end
         object btnDelete: TToolButton
-          Left = 236
+          Left = 268
           Top = 0
           Caption = '&Delete'
           Enabled = False
@@ -95,7 +96,7 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnDeleteClick
         end
         object btnPrint: TToolButton
-          Left = 295
+          Left = 335
           Top = 0
           Hint = 'Print'
           Caption = '&Print'
@@ -104,16 +105,17 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnPrintClick
         end
         object btnRequote: TToolButton
-          Left = 354
+          Left = 402
           Top = 0
           Caption = 'Re-quote'
           Enabled = False
           ImageIndex = 10
+          Wrap = True
           OnClick = btnRequoteClick
         end
         object btnHistory: TToolButton
-          Left = 413
-          Top = 0
+          Left = 0
+          Top = 40
           Hint = 'Order History'
           Caption = '&History'
           Enabled = False
@@ -121,32 +123,32 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnHistoryClick
         end
         object btnProofsSeparator: TToolButton
-          Left = 472
-          Top = 0
+          Left = 67
+          Top = 40
           Width = 8
           Caption = 'btnProofsSeparator'
           ImageIndex = 7
           Style = tbsSeparator
         end
         object btnProofs: TToolButton
-          Left = 480
-          Top = 0
+          Left = 75
+          Top = 40
           Caption = 'Proo&fs'
           DropdownMenu = pmnProofs
           Enabled = False
           ImageIndex = 7
         end
         object btnDeliveriesSeparator: TToolButton
-          Left = 539
-          Top = 0
+          Left = 142
+          Top = 40
           Width = 8
           Caption = 'btnDeliveriesSeparator'
           ImageIndex = 7
           Style = tbsSeparator
         end
         object btnDeliveries: TToolButton
-          Left = 547
-          Top = 0
+          Left = 150
+          Top = 40
           Hint = 'Deliveries'
           Caption = 'Deliver&y'
           Enabled = False
@@ -154,8 +156,8 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnDeliveriesClick
         end
         object btnHold: TToolButton
-          Left = 606
-          Top = 0
+          Left = 217
+          Top = 40
           Hint = 'On Hold'
           Caption = '&Hold'
           Enabled = False
@@ -163,33 +165,32 @@ object frmpbLUOrders: TfrmpbLUOrders
           OnClick = btnHoldClick
         end
         object btnReportsSeparator: TToolButton
-          Left = 665
-          Top = 0
+          Left = 284
+          Top = 40
           Width = 8
           Caption = 'btnReportsSeparator'
           ImageIndex = 5
           Style = tbsSeparator
         end
         object btnreports: TToolButton
-          Left = 673
-          Top = 0
+          Left = 292
+          Top = 40
           Caption = 'Reports'
           ImageIndex = 4
           OnClick = btnreportsClick
         end
         object btnRefresh: TToolButton
-          Left = 732
-          Top = 0
+          Left = 359
+          Top = 40
           Caption = 'Refresh'
           ImageIndex = 14
           OnClick = btnRefreshClick
         end
         object btnAddSeparator: TToolButton
-          Left = 0
-          Top = 0
+          Left = 426
+          Top = 40
           Width = 8
           ImageIndex = 7
-          Wrap = True
           Style = tbsSeparator
         end
       end
@@ -198,14 +199,14 @@ object frmpbLUOrders: TfrmpbLUOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 911
-    Height = 255
+    Width = 905
+    Height = 246
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -214,7 +215,7 @@ object frmpbLUOrders: TfrmpbLUOrders
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -339,6 +340,7 @@ object frmpbLUOrders: TfrmpbLUOrders
         Expanded = False
         FieldName = 'Description_Reference'
         Title.Caption = 'Descriptive Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -379,8 +381,8 @@ object frmpbLUOrders: TfrmpbLUOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 371
-    Width = 911
+    Top = 362
+    Width = 905
     Height = 19
     Panels = <
       item
@@ -396,33 +398,32 @@ object frmpbLUOrders: TfrmpbLUOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 330
-    Width = 911
+    Top = 321
+    Width = 905
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     DesignSize = (
-      911
+      905
       41)
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 86
-      Height = 13
-      Caption = 'Customer Search'
+      Top = 14
+      Width = 56
+      Height = 17
+      Caption = 'Customer'
     end
     object Label2: TLabel
-      Left = 626
-      Top = 16
-      Width = 73
-      Height = 13
+      Left = 614
+      Top = 14
+      Width = 84
+      Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'Order number'
-      ExplicitLeft = 656
     end
     object btnClose: TButton
-      Left = 802
+      Left = 809
       Top = 10
       Width = 75
       Height = 25
@@ -432,25 +433,25 @@ object frmpbLUOrders: TfrmpbLUOrders
       OnClick = btnCloseClick
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 71
+      Top = 10
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 696
-      Top = 12
+      Left = 703
+      Top = 10
       Width = 90
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       CharCase = ecUpperCase
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
     end
     object chkbxShowUnauthorised: TCheckBox
-      Left = 376
+      Left = 360
       Top = 14
       Width = 217
       Height = 17
@@ -459,7 +460,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       OnClick = chkbxShowUnauthorisedClick
     end
     object btnSearch: TBitBtn
-      Left = 288
+      Left = 255
       Top = 10
       Width = 75
       Height = 25
@@ -471,7 +472,7 @@ object frmpbLUOrders: TfrmpbLUOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 911
+    Width = 905
     Height = 30
     Align = alTop
     BevelInner = bvLowered

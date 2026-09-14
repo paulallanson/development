@@ -8,12 +8,12 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel2: TPanel
     Left = 0
     Top = 147
@@ -22,6 +22,8 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 138
+    ExplicitWidth = 549
     object btnOK: TBitBtn
       Left = 202
       Top = 14
@@ -51,46 +53,47 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 549
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 43
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Job Bag:'
     end
     object lblJobBag: TLabel
-      Left = 72
+      Left = 79
       Top = 16
-      Width = 50
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'lblJobBag'
     end
     object lblDescription: TLabel
-      Left = 200
+      Left = 207
       Top = 16
-      Width = 72
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
     object Label2: TLabel
       Left = 16
       Top = 40
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object lblCustomer: TLabel
-      Left = 72
+      Left = 79
       Top = 40
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'lblCustomer'
     end
     object lblTitle: TLabel
-      Left = 160
+      Left = 167
       Top = 16
-      Width = 25
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Title:'
     end
   end
@@ -102,32 +105,34 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 549
+    ExplicitHeight = 73
     object Label3: TLabel
       Left = 16
       Top = 12
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Reason'
     end
     object lblDate: TLabel
       Left = 360
       Top = 12
-      Width = 80
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'Date Cancelled:'
     end
     object lblOperator: TLabel
       Left = 360
       Top = 44
-      Width = 67
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Cancelled By:'
     end
     object dblkpReason: TDBLookupComboBox
       Left = 72
       Top = 8
       Width = 217
-      Height = 21
+      Height = 25
       KeyField = 'InActive_Reason'
       ListField = 'Description'
       ListSource = srcReason
@@ -165,12 +170,12 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
       'select *'
       'from Inactive_reason')
     Left = 104
-    Top = 41
+    Top = 65
   end
   object srcReason: TDataSource
     DataSet = qryReason
-    Left = 168
-    Top = 41
+    Left = 176
+    Top = 89
   end
   object qryGetDetails: TFDQuery
     ConnectionName = 'PB'

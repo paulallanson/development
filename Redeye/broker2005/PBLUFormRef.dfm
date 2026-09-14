@@ -2,64 +2,64 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
   Left = 168
   Top = 143
   Caption = 'Look-Up Form Reference'
-  ClientHeight = 417
+  ClientHeight = 437
   ClientWidth = 507
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CustLabel: TLabel
     Left = 80
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 342
-    Top = 272
-    Width = 59
-    Height = 13
+    Left = 336
+    Top = 277
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object BranchLabel: TLabel
     Left = 80
     Top = 22
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 38
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 52
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer:'
   end
   object RefDBGrid: TDBGrid
     Left = 8
-    Top = 40
+    Top = 45
     Width = 393
     Height = 225
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -90,24 +90,24 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 288
+    Top = 300
     Width = 321
-    Height = 49
+    Height = 61
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 23
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 412
-    Top = 332
+    Left = 411
+    Top = 364
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -117,8 +117,8 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 412
-    Top = 360
+    Left = 411
+    Top = 392
     Width = 75
     Height = 25
     Kind = bkClose
@@ -126,16 +126,16 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 408
-    Top = 160
+    Left = 407
+    Top = 153
     Width = 87
-    Height = 105
+    Height = 113
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 4
-      Top = 16
+      Top = 23
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -158,7 +158,7 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 4
-      Top = 44
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -181,7 +181,7 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
     end
     object DelBitBtn: TBitBtn
       Left = 4
-      Top = 72
+      Top = 79
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -204,8 +204,8 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
     end
   end
   object DispPanel: TPanel
-    Left = 8
-    Top = 342
+    Left = 12
+    Top = 374
     Width = 321
     Height = 43
     BevelOuter = bvLowered
@@ -230,13 +230,13 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
   end
   object btbtnImages: TBitBtn
-    Left = 416
+    Left = 411
     Top = 272
     Width = 75
     Height = 25
@@ -280,8 +280,8 @@ object PBLUFormRefFrm: TPBLUFormRefFrm
         '      (Form_Reference.Branch_No = :Branch_No) OR (Part.Global_Pr' +
         'oduct = '#39'Y'#39'))'
       'order by Form_reference_id')
-    Left = 368
-    Top = 72
+    Left = 324
+    Top = 82
     ParamData = <
       item
         Name = 'Code_From'

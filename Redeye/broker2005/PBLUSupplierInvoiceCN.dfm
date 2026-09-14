@@ -7,14 +7,14 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -13
   Font.Name = 'Arial'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 15
+  TextHeight = 16
   object Panel1: TPanel
     Left = 0
     Top = 432
@@ -24,12 +24,14 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     BevelOuter = bvNone
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 423
+    ExplicitWidth = 775
     DesignSize = (
       781
       84)
@@ -45,13 +47,13 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
         Left = 10
         Top = 21
         Width = 271
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = edtSupplierNameChange
       end
     end
     object GroupBox2: TGroupBox
-      Left = 662
+      Left = 656
       Top = 3
       Width = 105
       Height = 76
@@ -59,6 +61,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 650
       object btnSelect: TBitBtn
         Left = 14
         Top = 16
@@ -150,6 +153,8 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       item
         Width = 50
       end>
+    ExplicitTop = 507
+    ExplicitWidth = 775
   end
   object dbgSupplierInvoice: TDBGrid
     Left = 0
@@ -161,7 +166,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -169,7 +174,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgSupplierInvoiceCellClick
@@ -220,6 +225,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
         Expanded = False
         FieldName = 'Status_Desc'
         Title.Caption = 'Status'
+        Width = 64
         Visible = True
       end>
   end

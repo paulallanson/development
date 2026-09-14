@@ -8,12 +8,12 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -89,7 +89,7 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 322
+      Left = 316
       Top = 8
       Width = 75
       Height = 25
@@ -97,7 +97,7 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitLeft = 316
+      ExplicitLeft = 310
     end
   end
 end

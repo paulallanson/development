@@ -9,11 +9,11 @@ object PBLUPrdTypQuListfrm: TPBLUPrdTypQuListfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Bevel1: TBevel
     Left = 8
     Top = 8
