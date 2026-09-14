@@ -8,14 +8,14 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 313
@@ -29,23 +29,22 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
       41)
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 96
-      Height = 13
+      Top = 11
+      Width = 109
+      Height = 17
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 448
-      Top = 16
-      Width = 84
-      Height = 13
+      Left = 430
+      Top = 11
+      Width = 99
+      Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'Job Bag Number'
-      ExplicitLeft = 454
     end
     object btnClose: TButton
-      Left = 728
-      Top = 10
+      Left = 722
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -54,25 +53,25 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
       OnClick = btnCloseClick
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 122
+      Top = 7
       Width = 169
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object edtJobBag: TEdit
-      Left = 542
-      Top = 12
+      Left = 536
+      Top = 7
       Width = 90
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtJobBagKeyPress
     end
     object btnSelect: TButton
-      Left = 640
-      Top = 10
+      Left = 634
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -103,7 +102,7 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -111,7 +110,7 @@ object PBLUCustomerJobsFrm: TPBLUCustomerJobsFrm
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick

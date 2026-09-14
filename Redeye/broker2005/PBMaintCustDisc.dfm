@@ -3,17 +3,17 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   Top = 110
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Discounts'
-  ClientHeight = 329
-  ClientWidth = 321
+  ClientHeight = 367
+  ClientWidth = 353
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 6
     Top = 302
@@ -30,19 +30,19 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object ByLabel: TLabel
     Left = 8
-    Top = 28
-    Width = 40
-    Height = 13
+    Top = 32
+    Width = 45
+    Height = 17
     Caption = 'Product'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -219,7 +219,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     Caption = 'Discount details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -228,32 +228,32 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     object CstCntrLabel: TLabel
       Left = 11
       Top = 68
-      Width = 72
-      Height = 13
+      Width = 81
+      Height = 17
       Caption = 'Discount Type'
     end
     object DescLabel: TLabel
       Left = 11
       Top = 100
-      Width = 77
-      Height = 13
+      Width = 85
+      Height = 17
       Caption = 'Discount Value'
     end
     object Label1: TLabel
       Left = 16
       Top = 120
-      Width = 3
-      Height = 13
+      Width = 4
+      Height = 17
     end
     object Label3: TLabel
       Left = 11
       Top = 150
-      Width = 70
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'Date Effective'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -261,12 +261,12 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     object Label4: TLabel
       Left = 11
       Top = 182
-      Width = 80
-      Height = 13
+      Width = 89
+      Height = 17
       Caption = 'Date Ineffective'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -274,18 +274,18 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
     object Label2: TLabel
       Left = 11
       Top = 28
-      Width = 73
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Purchase Price'
     end
     object DateFromEdit: TEdit
       Left = 112
       Top = 146
       Width = 81
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -299,7 +299,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       Glyph.Data = {
@@ -324,10 +324,10 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Left = 112
       Top = 178
       Width = 81
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -360,10 +360,10 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Left = 112
       Top = 64
       Width = 169
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       KeyField = 'Discount_type'
@@ -381,7 +381,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Alignment = taRightJustify
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -397,7 +397,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
       Alignment = taRightJustify
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -408,13 +408,13 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   end
   object PartEdit: TEdit
     Left = 60
-    Top = 24
+    Top = 28
     Width = 221
-    Height = 21
+    Height = 25
     TabStop = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -423,7 +423,7 @@ object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   end
   object PartBitBtn: TBitBtn
     Left = 288
-    Top = 22
+    Top = 28
     Width = 25
     Height = 25
     Caption = '...'

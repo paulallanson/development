@@ -7,13 +7,13 @@ object PBLUStkLocsFrm: TPBLUStkLocsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -32,7 +32,7 @@ object PBLUStkLocsFrm: TPBLUStkLocsFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +40,7 @@ object PBLUStkLocsFrm: TPBLUStkLocsFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <

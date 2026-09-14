@@ -2,12 +2,12 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   Left = 47
   Top = 102
   Caption = 'Purchase Credit Notes'
-  ClientHeight = 354
-  ClientWidth = 851
+  ClientHeight = 345
+  ClientWidth = 845
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -17,23 +17,23 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 851
+    Width = 845
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 845
+        Width = 839
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 836
+      Width = 830
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -41,10 +41,10 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 824
+        Width = 818
         Height = 41
-        ButtonHeight = 36
-        ButtonWidth = 59
+        ButtonHeight = 40
+        ButtonWidth = 67
         Caption = 'ToolBar1'
         Images = imglstFunctions
         ParentShowHint = False
@@ -61,7 +61,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 59
+          Left = 67
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -70,7 +70,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 118
+          Left = 134
           Top = 0
           Hint = 'Copy Order'
           Caption = '&Delete'
@@ -79,7 +79,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnDeleteClick
         end
         object btnPass: TToolButton
-          Left = 177
+          Left = 201
           Top = 0
           Hint = 'Repeat Order'
           Caption = '&Pass'
@@ -88,7 +88,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnPassClick
         end
         object btnQuery: TToolButton
-          Left = 236
+          Left = 268
           Top = 0
           Hint = 'Flag the credit note as a query'
           Caption = '&Query'
@@ -97,7 +97,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnQueryClick
         end
         object btnReset: TToolButton
-          Left = 295
+          Left = 335
           Top = 0
           Caption = 'Re&set'
           Enabled = False
@@ -105,7 +105,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
           OnClick = btnResetClick
         end
         object btnReports: TToolButton
-          Left = 354
+          Left = 402
           Top = 0
           Caption = 'Reports'
           ImageIndex = 4
@@ -116,29 +116,29 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 294
-    Width = 851
+    Top = 285
+    Width = 845
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 80
-      Height = 13
-      Caption = 'Supplier Search'
+      Top = 11
+      Width = 48
+      Height = 17
+      Caption = 'Supplier'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 62
+      Top = 8
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 665
+      Left = 659
       Top = 1
       Width = 185
       Height = 39
@@ -151,7 +151,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         39)
       object btnClose: TButton
         Left = 94
-        Top = 10
+        Top = 8
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -161,8 +161,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       end
     end
     object chkbxShowArchived: TCheckBox
-      Left = 304
-      Top = 16
+      Left = 262
+      Top = 12
       Width = 97
       Height = 17
       Caption = 'Show archived'
@@ -172,8 +172,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 335
-    Width = 851
+    Top = 326
+    Width = 845
     Height = 19
     Panels = <
       item
@@ -186,14 +186,14 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 851
-    Height = 220
+    Width = 845
+    Height = 211
     Align = alClient
     DataSource = dmSupplierInvoice.dsPCHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -203,7 +203,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
@@ -229,7 +229,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Font.Name = 'Segoe UI'
         Font.Style = []
         Title.Caption = 'Credit Note No.'
-        Width = 82
+        Width = 96
         Visible = True
       end
       item
@@ -322,14 +322,13 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Expanded = False
         FieldName = 'New_Date'
         Title.Caption = 'Date Created'
-        Width = 64
         Visible = True
       end>
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 851
+    Width = 845
     Height = 30
     Align = alTop
     BevelInner = bvLowered

@@ -3,15 +3,15 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Add Delivery Bin location'
-  ClientHeight = 157
+  ClientHeight = 167
   ClientWidth = 366
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  TextHeight = 17
   object grpBxBins: TGroupBox
     Left = 2
     Top = 0
@@ -22,29 +22,29 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     object Label1: TLabel
       Left = 16
       Top = 19
-      Width = 63
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Bin Location'
     end
     object Label2: TLabel
       Left = 16
       Top = 51
-      Width = 48
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Delivered'
     end
     object Label3: TLabel
       Left = 192
       Top = 51
-      Width = 48
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Allocated'
     end
     object edtBinLocation: TEdit
       Left = 96
       Top = 16
       Width = 257
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = CheckOK
     end
@@ -81,14 +81,14 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 128
+    Top = 131
     Width = 366
-    Height = 29
+    Height = 36
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 130
+    ExplicitTop = 144
     object btnOK: TBitBtn
       Left = 102
       Top = 1
@@ -134,7 +134,6 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     Width = 366
     Height = 45
     BevelOuter = bvNone
-    Caption = 'pnlAdjustment'
     ParentBackground = False
     TabOrder = 2
     object GroupBox1: TGroupBox
@@ -147,15 +146,15 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
       object Label4: TLabel
         Left = 16
         Top = 15
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Adjustment'
       end
       object edtAdjust: TEdit
         Left = 96
         Top = 12
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 0
       end
     end

@@ -2,23 +2,23 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
   Left = 215
   Top = 128
   Caption = 'Look-Up A Product Type'
-  ClientHeight = 318
-  ClientWidth = 450
+  ClientHeight = 349
+  ClientWidth = 459
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
-    Top = 224
-    Width = 59
-    Height = 13
+    Left = 256
+    Top = 244
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -26,12 +26,12 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     Left = 8
     Top = 8
     Width = 320
-    Height = 209
+    Height = 230
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -39,7 +39,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -56,7 +56,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 240
+    Top = 267
     Width = 321
     Height = 65
     Caption = 'Type here to narrow the search'
@@ -66,7 +66,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -83,8 +83,8 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 344
-    Top = 244
+    Left = 343
+    Top = 275
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -158,8 +158,8 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 344
-    Top = 272
+    Left = 343
+    Top = 306
     Width = 75
     Height = 25
     Kind = bkClose
@@ -170,13 +170,13 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     Left = 336
     Top = 8
     Width = 105
-    Height = 105
+    Height = 114
     Caption = 'Go To'
     ParentBackground = False
     TabOrder = 4
     object CapabilitiesBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 21
       Width = 91
       Height = 25
       Caption = 'Capabilities'
@@ -199,7 +199,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     end
     object QuestBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 49
       Width = 91
       Height = 25
       Caption = 'Questions'
@@ -222,7 +222,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     end
     object BitBtn1: TBitBtn
       Left = 6
-      Top = 73
+      Top = 78
       Width = 91
       Height = 25
       Caption = 'Options'
@@ -248,13 +248,13 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     Left = 336
     Top = 128
     Width = 87
-    Height = 105
+    Height = 113
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 5
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 23
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -277,7 +277,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -300,7 +300,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 79
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -375,7 +375,7 @@ object PBLUPrdTypFrm: TPBLUPrdTypFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 234
+    Top = 94
   end
 end

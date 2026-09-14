@@ -7,7 +7,7 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -15,7 +15,7 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -24,18 +24,19 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1120
     object Label1: TLabel
       Left = 8
       Top = 17
-      Width = 69
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'Financial Year'
     end
     object edtFY: TEdit
       Left = 112
       Top = 13
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -47,6 +48,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Width = 1126
     Height = 19
     Panels = <>
+    ExplicitTop = 559
+    ExplicitWidth = 1120
   end
   object sgDetails: TStringGrid
     Left = 0
@@ -65,6 +68,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     TabOrder = 2
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
+    ExplicitWidth = 1120
+    ExplicitHeight = 469
     ColWidths = (
       250
       110
@@ -88,6 +93,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 518
+    ExplicitWidth = 1120
     object OKBitBtn: TBitBtn
       Left = 454
       Top = 7

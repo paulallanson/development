@@ -2,14 +2,14 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   Left = 29
   Top = 178
   Caption = 'Sales Invoices'
-  ClientHeight = 387
-  ClientWidth = 1166
+  ClientHeight = 388
+  ClientWidth = 1256
   Color = clBtnFace
   Constraints.MinHeight = 426
   Constraints.MinWidth = 1182
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -21,23 +21,24 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1166
+    Width = 1256
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1164
+        Width = 1250
       end>
+    ExplicitWidth = 1164
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1151
+      Width = 1241
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -45,10 +46,10 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1151
+        Width = 1229
         Height = 40
-        ButtonHeight = 36
-        ButtonWidth = 68
+        ButtonHeight = 40
+        ButtonWidth = 76
         Caption = 'ToolBar1'
         Images = imglstFunctions
         ParentShowHint = False
@@ -56,6 +57,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
         ShowHint = True
         TabOrder = 0
         Wrapable = False
+        ExplicitWidth = 1137
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -66,7 +68,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnMouseDown = btnAddMouseDown
         end
         object btnChange: TToolButton
-          Left = 68
+          Left = 76
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -75,7 +77,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 136
+          Left = 152
           Top = 0
           Caption = '&Delete'
           Enabled = False
@@ -83,7 +85,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnDeleteClick
         end
         object btnSeparator1: TToolButton
-          Left = 204
+          Left = 228
           Top = 0
           Width = 8
           Caption = 'btnSeparator1'
@@ -91,7 +93,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           Style = tbsSeparator
         end
         object btnPreview: TToolButton
-          Left = 212
+          Left = 236
           Top = 0
           Caption = 'Pre&view'
           Enabled = False
@@ -99,7 +101,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnPreviewClick
         end
         object btnPrint: TToolButton
-          Left = 280
+          Left = 312
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -107,7 +109,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 348
+          Left = 388
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -115,7 +117,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnReprintClick
         end
         object btnOrder: TToolButton
-          Left = 416
+          Left = 464
           Top = 0
           Caption = 'Order'
           Enabled = False
@@ -123,14 +125,14 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnOrderClick
         end
         object btnEInvoice: TToolButton
-          Left = 484
+          Left = 540
           Top = 0
           Caption = 'e-Invoice'
           ImageIndex = 8
           OnClick = btnEInvoiceClick
         end
         object ToolButton6: TToolButton
-          Left = 552
+          Left = 616
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -138,7 +140,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           Style = tbsSeparator
         end
         object btnPayments: TToolButton
-          Left = 560
+          Left = 624
           Top = 0
           Caption = 'Payments'
           Enabled = False
@@ -146,7 +148,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnPaymentsClick
         end
         object btnPaymentsRpt: TToolButton
-          Left = 628
+          Left = 700
           Top = 0
           Caption = 'Pay Report'
           Enabled = False
@@ -154,7 +156,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           OnClick = btnPaymentsRptClick
         end
         object btnSeparator2: TToolButton
-          Left = 696
+          Left = 776
           Top = 0
           Width = 8
           Caption = 'btnSeparator2'
@@ -162,28 +164,28 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
           Style = tbsSeparator
         end
         object ToolButton1: TToolButton
-          Left = 704
+          Left = 784
           Top = 0
           Caption = 'Direct Debit'
           ImageIndex = 2
           OnClick = ToolButton1Click
         end
         object btnStatements: TToolButton
-          Left = 772
+          Left = 860
           Top = 0
           Caption = 'Statements'
           ImageIndex = 6
           OnClick = btnStatementsClick
         end
         object btnReports: TToolButton
-          Left = 840
+          Left = 936
           Top = 0
           Caption = 'Reports'
           ImageIndex = 3
           OnClick = btnReportsClick
         end
         object ToolButton2: TToolButton
-          Left = 908
+          Left = 1012
           Top = 0
           Caption = 'Refresh'
           ImageIndex = 9
@@ -195,14 +197,14 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1166
-    Height = 238
+    Width = 1256
+    Height = 239
     Align = alClient
     DataSource = dmSalesInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -210,7 +212,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -296,7 +298,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
         Expanded = False
         FieldName = 'Paid_status_Description'
         Title.Caption = 'Paid Status'
-        Width = 64
         Visible = True
       end
       item
@@ -365,55 +366,57 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 312
-    Width = 1166
+    Top = 313
+    Width = 1256
     Height = 56
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 304
+    ExplicitWidth = 1164
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 86
-      Height = 13
-      Caption = 'Customer Search'
+      Top = 20
+      Width = 56
+      Height = 17
+      Caption = 'Customer'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
-      Width = 180
-      Height = 21
+      Left = 74
+      Top = 16
+      Width = 157
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 882
+      Left = 944
       Top = 1
-      Width = 283
+      Width = 311
       Height = 54
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
-        283
+        311
         54)
       object Label2: TLabel
         Left = 23
-        Top = 11
-        Width = 80
-        Height = 13
+        Top = 5
+        Width = 92
+        Height = 17
         Caption = 'Invoice Number'
       end
       object Label3: TLabel
         Left = 0
-        Top = 36
-        Width = 104
-        Height = 13
+        Top = 30
+        Width = 116
+        Height = 17
         Caption = 'Default Invoice Date'
       end
       object btnClose: TButton
-        Left = 200
+        Left = 228
         Top = 12
         Width = 75
         Height = 25
@@ -421,27 +424,28 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
         Caption = '&Close'
         TabOrder = 0
         OnClick = btnCloseClick
+        ExplicitLeft = 200
       end
       object edtNumber: TEdit
-        Left = 104
-        Top = 7
+        Left = 122
+        Top = 2
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnKeyPress = edtNumberKeyPress
       end
       object edtInvoiceDate: TEdit
-        Left = 104
-        Top = 32
+        Left = 122
+        Top = 27
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 2
         OnExit = edtInvoiceDateExit
       end
     end
     object btnSweep: TBitBtn
-      Left = 376
-      Top = 10
+      Left = 335
+      Top = 16
       Width = 75
       Height = 25
       Caption = 'S&weep'
@@ -449,18 +453,18 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       OnClick = btnSweepClick
     end
     object btnSearch: TBitBtn
-      Left = 288
-      Top = 10
-      Width = 75
+      Left = 242
+      Top = 16
+      Width = 76
       Height = 25
       Caption = '&Search'
       TabOrder = 3
       OnClick = btnSearchClick
     end
     object GroupBox1: TGroupBox
-      Left = 460
+      Left = 426
       Top = 5
-      Width = 253
+      Width = 277
       Height = 44
       Caption = 'Show Paid'
       ParentBackground = False
@@ -479,25 +483,25 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object rdbtnPaid: TRadioButton
         Left = 64
         Top = 19
-        Width = 41
+        Width = 53
         Height = 17
         Caption = 'Paid'
         TabOrder = 1
         OnClick = rdbtnPaidClick
       end
       object rdbtnUnPaid: TRadioButton
-        Left = 192
+        Left = 198
         Top = 19
-        Width = 57
+        Width = 69
         Height = 17
         Caption = 'Unpaid'
         TabOrder = 3
         OnClick = rdbtnUnPaidClick
       end
       object rdbtnPartPaid: TRadioButton
-        Left = 116
+        Left = 115
         Top = 19
-        Width = 69
+        Width = 80
         Height = 17
         Caption = 'Part Paid'
         TabOrder = 2
@@ -505,9 +509,9 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       end
     end
     object chkbxShowUnfactored: TCheckBox
-      Left = 728
+      Left = 712
       Top = 24
-      Width = 153
+      Width = 173
       Height = 17
       Caption = 'Only unfactored invoices'
       TabOrder = 5
@@ -516,8 +520,8 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 368
-    Width = 1166
+    Top = 369
+    Width = 1256
     Height = 19
     Panels = <
       item
@@ -526,11 +530,13 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       item
         Width = 50
       end>
+    ExplicitTop = 360
+    ExplicitWidth = 1164
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1166
+    Width = 1256
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -538,6 +544,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
     Color = 16642529
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1164
     object Label4: TLabel
       Left = 8
       Top = 3

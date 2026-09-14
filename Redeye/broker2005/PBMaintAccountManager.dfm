@@ -3,34 +3,34 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
   Top = 135
   BorderStyle = bsDialog
   Caption = 'Maintain Account Manager'
-  ClientHeight = 113
-  ClientWidth = 363
+  ClientHeight = 131
+  ClientWidth = 396
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 10
-    Top = 20
-    Width = 91
-    Height = 13
+    Top = 18
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
   end
   object Label2: TLabel
     Left = 10
-    Top = 56
-    Width = 71
-    Height = 13
+    Top = 52
+    Width = 81
+    Height = 17
     Caption = 'Account Team'
   end
   object btnOK: TBitBtn
-    Left = 198
-    Top = 80
+    Left = 205
+    Top = 85
     Width = 75
     Height = 25
     Enabled = False
@@ -40,8 +40,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     OnClick = btnOKClick
   end
   object btnCancel: TBitBtn
-    Left = 278
-    Top = 80
+    Left = 285
+    Top = 85
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -49,10 +49,10 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     TabOrder = 1
   end
   object dblkpOperators: TDBLookupComboBox
-    Left = 112
-    Top = 16
+    Left = 119
+    Top = 14
     Width = 200
-    Height = 21
+    Height = 25
     KeyField = 'Operator'
     ListField = 'Name'
     ListSource = dtsOperators
@@ -60,7 +60,7 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     OnClick = CheckOK
   end
   object btnOperators: TBitBtn
-    Left = 328
+    Left = 335
     Top = 14
     Width = 25
     Height = 25
@@ -76,18 +76,18 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     OnClick = btnOperatorsClick
   end
   object dblkpTeam: TDBLookupComboBox
-    Left = 112
+    Left = 119
     Top = 48
     Width = 200
-    Height = 21
+    Height = 25
     KeyField = 'Account_Team'
     ListField = 'Account_Team_Name'
     ListSource = dtsTeam
     TabOrder = 4
   end
   object btnTeam: TBitBtn
-    Left = 328
-    Top = 46
+    Left = 335
+    Top = 48
     Width = 25
     Height = 25
     Hint = 'Maintain Operators'
@@ -110,7 +110,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
         'where Operator not in (select Operator from User_Group_Operator ' +
         'where User_Group = 4 and Operator <> :Operator)'
       'order by name')
-    Left = 200
+    Left = 210
+    Top = 3
     ParamData = <
       item
         Name = 'Operator'
@@ -118,8 +119,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
   end
   object dtsOperators: TDataSource
     DataSet = qryOperators
-    Left = 240
-    Top = 8
+    Left = 276
+    Top = 50
   end
   object AddSQL: TFDQuery
     ConnectionName = 'PB'
@@ -133,7 +134,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
       '            :Operator)'
       ' '
       ' ')
-    Left = 88
+    Left = 182
+    Top = 48
     ParamData = <
       item
         Name = 'User_Group_Operator'
@@ -150,16 +152,16 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     SQL.Strings = (
       'Select Max(User_Group_Operator) as Last_Number'
       'from User_Group_Operator')
-    Left = 120
-    Top = 65528
+    Left = 54
+    Top = 14
   end
   object qryDelete: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
       'delete from user_group_operator'
       'where user_group_operator = :User_Group_operator')
-    Left = 152
-    Top = 65528
+    Left = 6
+    Top = 14
     ParamData = <
       item
         Name = 'User_Group_operator'
@@ -170,13 +172,13 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     SQL.Strings = (
       'select * from Account_Team'
       'order by Account_Team_Name')
-    Left = 64
-    Top = 40
+    Left = 40
+    Top = 72
   end
   object dtsTeam: TDataSource
     DataSet = qryTeam
-    Left = 112
-    Top = 64
+    Left = 136
+    Top = 48
   end
   object qryGetAccountTeam: TFDQuery
     ConnectionName = 'pb'
@@ -184,8 +186,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
       'select *'
       'from Account_Team_Member'
       'where Operator = :Operator')
-    Left = 160
-    Top = 64
+    Left = 152
+    Top = 19
     ParamData = <
       item
         Name = 'Operator'
@@ -196,8 +198,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     SQL.Strings = (
       'delete from Account_Team_Member'
       'where Operator = :Operator')
-    Left = 8
-    Top = 8
+    Left = 58
+    Top = 66
     ParamData = <
       item
         Name = 'Operator'
@@ -208,8 +210,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     SQL.Strings = (
       'insert into Account_team_member'
       'values (:account_Team, :Member_no, :Operator)')
-    Left = 16
-    Top = 56
+    Left = 88
+    Top = 24
     ParamData = <
       item
         Name = 'account_Team'
@@ -227,8 +229,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
       'select max(Member_no) as Member_no'
       'from Account_Team_Member'
       'where Account_Team = :Account_Team')
-    Left = 288
-    Top = 32
+    Left = 296
+    Top = 3
     ParamData = <
       item
         Name = 'Account_Team'

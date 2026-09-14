@@ -3,21 +3,21 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
   Top = 156
   BorderStyle = bsDialog
   Caption = 'Maintain Sequence Number'
-  ClientHeight = 335
-  ClientWidth = 481
+  ClientHeight = 367
+  ClientWidth = 495
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CancelBitBtn: TBitBtn
     Left = 392
-    Top = 288
+    Top = 305
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -26,7 +26,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
   end
   object OKBitBtn: TBitBtn
     Left = 304
-    Top = 288
+    Top = 305
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -103,7 +103,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
     Left = 8
     Top = 8
     Width = 465
-    Height = 265
+    Height = 281
     ActivePage = TabSheet1
     TabOrder = 2
     object TabSheet1: TTabSheet
@@ -111,57 +111,57 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
       object Label1: TLabel
         Left = 8
         Top = 21
-        Width = 106
-        Height = 13
+        Width = 122
+        Height = 17
         Caption = 'Last Enquiry Number'
       end
       object Label2: TLabel
         Left = 8
         Top = 84
-        Width = 82
-        Height = 13
+        Width = 96
+        Height = 17
         Caption = 'Last PO Number'
       end
       object Label5: TLabel
         Left = 8
         Top = 116
-        Width = 107
-        Height = 13
+        Width = 126
+        Height = 17
         Caption = 'Last Job Bag Number'
       end
       object Label6: TLabel
         Left = 8
         Top = 148
-        Width = 133
-        Height = 13
+        Width = 154
+        Height = 17
         Caption = 'Last Works Order Number'
       end
       object Label7: TLabel
         Left = 8
         Top = 52
-        Width = 99
-        Height = 13
+        Width = 115
+        Height = 17
         Caption = 'Last Quote Number'
       end
       object Label8: TLabel
         Left = 8
         Top = 180
-        Width = 161
-        Height = 13
+        Width = 186
+        Height = 17
         Caption = 'Last Non Conformance Number'
       end
       object Label9: TLabel
         Left = 8
         Top = 212
-        Width = 111
-        Height = 13
+        Width = 128
+        Height = 17
         Caption = 'Last Contract Number'
       end
       object LastEnqNoSpinEdit: TSpinEdit
         Left = 168
         Top = 16
         Width = 73
-        Height = 22
+        Height = 27
         MaxValue = 0
         MinValue = 0
         TabOrder = 0
@@ -171,7 +171,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Left = 168
         Top = 79
         Width = 73
-        Height = 22
+        Height = 27
         MaxValue = 0
         MinValue = 0
         TabOrder = 2
@@ -181,7 +181,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Left = 168
         Top = 111
         Width = 73
-        Height = 22
+        Height = 27
         MaxLength = 10
         MaxValue = 0
         MinValue = 0
@@ -192,7 +192,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Left = 168
         Top = 143
         Width = 73
-        Height = 22
+        Height = 27
         MaxLength = 10
         MaxValue = 0
         MinValue = 0
@@ -203,7 +203,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Left = 168
         Top = 47
         Width = 73
-        Height = 22
+        Height = 27
         MaxValue = 0
         MinValue = 0
         TabOrder = 1
@@ -213,7 +213,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Left = 168
         Top = 175
         Width = 73
-        Height = 22
+        Height = 27
         MaxLength = 10
         MaxValue = 0
         MinValue = 0
@@ -224,7 +224,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Left = 168
         Top = 207
         Width = 73
-        Height = 22
+        Height = 27
         MaxLength = 10
         MaxValue = 0
         MinValue = 0
@@ -238,15 +238,15 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
       object Label3: TLabel
         Left = 8
         Top = 21
-        Width = 103
-        Height = 13
+        Width = 119
+        Height = 17
         Caption = 'Last Invoice Number'
       end
       object Label4: TLabel
         Left = 8
         Top = 52
-        Width = 126
-        Height = 13
+        Width = 147
+        Height = 17
         Caption = 'Last Credit Note Number'
       end
       object grdDetails: TStringGrid
@@ -276,7 +276,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Left = 192
         Top = 184
         Width = 145
-        Height = 21
+        Height = 25
         ItemIndex = 0
         TabOrder = 1
         Text = 'Suffix'
@@ -287,10 +287,10 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
           'Prefix')
       end
       object lastInvNoSpinEdit: TSpinEdit
-        Left = 152
+        Left = 164
         Top = 16
         Width = 73
-        Height = 22
+        Height = 27
         MaxLength = 10
         MaxValue = 0
         MinValue = 0
@@ -298,10 +298,10 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Value = 0
       end
       object LastCreditNoteSpinEdit: TSpinEdit
-        Left = 152
+        Left = 164
         Top = 47
         Width = 73
-        Height = 22
+        Height = 27
         MaxLength = 10
         MaxValue = 0
         MinValue = 0

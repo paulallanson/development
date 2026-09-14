@@ -9,13 +9,13 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
   Constraints.MinWidth = 723
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgJB: TDBGrid
     Left = 0
     Top = 0
@@ -26,7 +26,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -34,7 +34,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgJBCellClick
@@ -87,6 +87,8 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       item
         Width = 50
       end>
+    ExplicitTop = 407
+    ExplicitWidth = 709
   end
   object Panel1: TPanel
     Left = 0
@@ -97,6 +99,8 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 311
+    ExplicitWidth = 709
     DesignSize = (
       715
       96)
@@ -110,22 +114,22 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       TabOrder = 0
       object Label1: TLabel
         Left = 8
-        Top = 24
-        Width = 49
-        Height = 13
+        Top = 23
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object edtCustomerName: TEdit
         Left = 72
-        Top = 16
+        Top = 19
         Width = 209
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = edtCustomerNameChange
       end
       object btnSweep: TBitBtn
         Left = 302
-        Top = 16
+        Top = 19
         Width = 75
         Height = 25
         Caption = 'S&weep'
@@ -135,7 +139,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       end
     end
     object GroupBox1: TGroupBox
-      Left = 426
+      Left = 420
       Top = 39
       Width = 161
       Height = 49
@@ -143,17 +147,18 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       Caption = 'Selected Job Bag'
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 414
       object edtJBNumber: TEdit
         Left = 8
-        Top = 16
+        Top = 18
         Width = 137
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnKeyPress = edtJBNumberKeyPress
       end
     end
     object GroupBox2: TGroupBox
-      Left = 594
+      Left = 588
       Top = 7
       Width = 105
       Height = 81
@@ -161,6 +166,7 @@ object PBLUSalesInvoiceJBfrm: TPBLUSalesInvoiceJBfrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 2
+      ExplicitLeft = 582
       object btnSelect: TBitBtn
         Left = 16
         Top = 20

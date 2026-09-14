@@ -3,26 +3,26 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
   Top = 159
   BorderStyle = bsDialog
   Caption = 'Maintain Account Team'
-  ClientHeight = 129
+  ClientHeight = 145
   ClientWidth = 412
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 110
-    Top = 104
-    Width = 109
-    Height = 13
+    Top = 107
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,7 +34,7 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
     Height = 81
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,15 +43,15 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
     end
     object DescrEdit: TEdit
       Left = 54
       Top = 24
       Width = 323
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -68,7 +68,7 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
   end
   object OKBitBtn: TBitBtn
     Left = 246
-    Top = 96
+    Top = 101
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -144,7 +144,7 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 326
-    Top = 96
+    Top = 101
     Width = 75
     Height = 25
     Cancel = True
@@ -225,8 +225,8 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
       'From Account_Team'
       'Where Account_Team_Name = :GUID'
       ' ')
-    Left = 192
-    Top = 24
+    Left = 120
+    Top = 14
     ParamData = <
       item
         Name = 'GUID'
@@ -246,8 +246,8 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
       ''
       ' '
       ' ')
-    Left = 8
-    Top = 68
+    Left = 26
+    Top = 21
     ParamData = <
       item
         Name = 'GUID'
@@ -266,8 +266,8 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
       '(Account_Team = :Account_Team) '
       ''
       ' ')
-    Left = 144
-    Top = 80
+    Left = 188
+    Top = 44
     ParamData = <
       item
         Name = 'Account_Team_Name'
@@ -295,8 +295,8 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
   end
   object DetsSRC: TDataSource
     DataSet = AddSQL
-    Left = 320
-    Top = 16
+    Left = 192
+    Top = 12
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -320,8 +320,8 @@ object PBMaintAccountTeamFrm: TPBMaintAccountTeamFrm
       'Select Account_Team'
       'from Account_Team'
       'Where Account_Team_Name = :Account_Team_Name ')
-    Left = 16
-    Top = 16
+    Left = 124
+    Top = 20
     ParamData = <
       item
         Name = 'Account_Team_Name'

@@ -9,18 +9,18 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 272
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -33,7 +33,7 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -41,7 +41,7 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = DetsDBGridDblClick
@@ -59,7 +59,7 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
     Left = 320
     Top = 88
     Width = 89
-    Height = 105
+    Height = 110
     Caption = 'Function'
     Enabled = False
     ParentBackground = False
@@ -292,8 +292,8 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
       'From Contact_Type'
       'Order By Description'
       '')
-    Left = 320
-    Top = 24
+    Left = 80
+    Top = 14
   end
   object GetContLevelsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -301,7 +301,7 @@ object PBMaintGroupsFrm: TPBMaintGroupsFrm
       'SELECT *'
       'FROM Contact_Level'
       'ORDER BY Description')
-    Left = 320
-    Top = 56
+    Left = 80
+    Top = 54
   end
 end

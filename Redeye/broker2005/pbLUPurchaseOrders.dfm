@@ -2,12 +2,12 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   Left = 52
   Top = 102
   Caption = 'Purchase Orders'
-  ClientHeight = 269
-  ClientWidth = 743
+  ClientHeight = 337
+  ClientWidth = 806
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,23 +19,24 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 743
+    Width = 806
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 737
+        Width = 800
       end>
+    ExplicitWidth = 737
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 728
+      Width = 791
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -43,10 +44,10 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 716
+        Width = 779
         Height = 40
-        ButtonHeight = 36
-        ButtonWidth = 62
+        ButtonHeight = 40
+        ButtonWidth = 71
         Caption = 'ToolBar1'
         Images = imglstOrders
         ParentShowHint = False
@@ -54,6 +55,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
         ShowHint = True
         TabOrder = 0
         Wrapable = False
+        ExplicitWidth = 710
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -63,7 +65,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 62
+          Left = 71
           Top = 0
           Hint = 'Change order details'
           Caption = '   &Change  '
@@ -72,7 +74,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnChangeClick
         end
         object btnCopy: TToolButton
-          Left = 124
+          Left = 142
           Top = 0
           Hint = 'Copy Order'
           Caption = 'C&opy'
@@ -80,7 +82,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           ImageIndex = 2
         end
         object btnDelete: TToolButton
-          Left = 186
+          Left = 213
           Top = 0
           Caption = 'Delete'
           Enabled = False
@@ -88,7 +90,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnDeleteClick
         end
         object btnPrint: TToolButton
-          Left = 248
+          Left = 284
           Top = 0
           Hint = 'Print'
           Caption = '&Print'
@@ -97,7 +99,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnPrintClick
         end
         object btnEDI: TToolButton
-          Left = 310
+          Left = 355
           Top = 0
           Caption = 'Export PO'
           Enabled = False
@@ -105,7 +107,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnEDIClick
         end
         object btnDeliveryNote: TToolButton
-          Left = 372
+          Left = 426
           Top = 0
           Caption = 'Del Notes'
           Enabled = False
@@ -113,7 +115,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnDeliveryNoteClick
         end
         object btnAcknowledge: TToolButton
-          Left = 434
+          Left = 497
           Top = 0
           Caption = 'Print Ac&k'
           Enabled = False
@@ -121,7 +123,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnAcknowledgeClick
         end
         object ToolButton1: TToolButton
-          Left = 496
+          Left = 568
           Top = 0
           Width = 8
           Caption = 'ToolButton1'
@@ -129,7 +131,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           Style = tbsSeparator
         end
         object btnReceipts: TToolButton
-          Left = 504
+          Left = 576
           Top = 0
           Caption = 'GRN'#39's'
           Enabled = False
@@ -137,7 +139,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnReceiptsClick
         end
         object btnDirect: TToolButton
-          Left = 566
+          Left = 647
           Top = 0
           Caption = 'Delivery'
           Enabled = False
@@ -145,7 +147,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
           OnClick = btnDirectClick
         end
         object btnReports: TToolButton
-          Left = 628
+          Left = 718
           Top = 0
           Caption = '&Reports'
           ImageIndex = 4
@@ -157,14 +159,14 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 743
-    Height = 135
+    Width = 806
+    Height = 203
     Align = alClient
     DataSource = dtmdlPOrders.dtsPOHeaderGrid
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -172,7 +174,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
@@ -239,8 +241,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 250
-    Width = 743
+    Top = 318
+    Width = 806
     Height = 19
     Panels = <
       item
@@ -249,32 +251,36 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       item
         Width = 50
       end>
+    ExplicitTop = 216
+    ExplicitWidth = 737
   end
   object Panel1: TPanel
     Left = 0
-    Top = 209
-    Width = 743
+    Top = 277
+    Width = 806
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 175
+    ExplicitWidth = 737
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 80
-      Height = 13
-      Caption = 'Supplier Search'
+      Top = 13
+      Width = 48
+      Height = 17
+      Caption = 'Supplier'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 62
+      Top = 9
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 455
+      Left = 518
       Top = 1
       Width = 287
       Height = 39
@@ -283,29 +289,30 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       Caption = 'Panel2'
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 449
       DesignSize = (
         287
         39)
       object Label2: TLabel
-        Left = 15
-        Top = 16
-        Width = 73
-        Height = 13
+        Left = 4
+        Top = 12
+        Width = 84
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Order number'
       end
       object edtOrder: TEdit
         Left = 93
-        Top = 12
+        Top = 8
         Width = 90
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 0
         OnKeyPress = edtOrderKeyPress
       end
       object btnClose: TButton
         Left = 204
-        Top = 10
+        Top = 8
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
@@ -315,8 +322,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       end
     end
     object btnSearch: TBitBtn
-      Left = 296
-      Top = 10
+      Left = 254
+      Top = 9
       Width = 75
       Height = 25
       Caption = 'S&weep'
@@ -327,7 +334,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 743
+    Width = 806
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -341,6 +348,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
     ParentBackground = False
     ParentFont = False
     TabOrder = 4
+    ExplicitWidth = 737
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -903,8 +911,8 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
   end
   object mnMenu: TMainMenu
     AutoMerge = True
-    Left = 344
-    Top = 200
+    Left = 438
+    Top = 122
     object File1: TMenuItem
       Caption = '&File'
       object Add1: TMenuItem

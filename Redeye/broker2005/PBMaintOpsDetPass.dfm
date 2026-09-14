@@ -3,43 +3,43 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
   Top = 232
   BorderStyle = bsDialog
   Caption = 'Change Password'
-  ClientHeight = 149
+  ClientHeight = 165
   ClientWidth = 318
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 10
-    Width = 71
-    Height = 13
+    Width = 81
+    Height = 17
     Caption = 'Old Password'
   end
   object Label2: TLabel
     Left = 8
     Top = 50
-    Width = 75
-    Height = 13
+    Width = 86
+    Height = 17
     Caption = 'New Password'
   end
   object Label3: TLabel
     Left = 8
     Top = 82
-    Width = 67
-    Height = 13
+    Width = 76
+    Height = 17
     Caption = 'Confirm New'
   end
   object OldPassEdit: TEdit
     Left = 104
     Top = 8
     Width = 201
-    Height = 21
+    Height = 25
     PasswordChar = '*'
     TabOrder = 0
     OnChange = OldPassEditChange
@@ -48,14 +48,14 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
     Left = 104
     Top = 48
     Width = 201
-    Height = 21
+    Height = 25
     PasswordChar = '*'
     TabOrder = 1
     OnChange = NewPassEditChange
   end
   object OKBitBtn: TBitBtn
-    Left = 152
-    Top = 112
+    Left = 149
+    Top = 122
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -82,8 +82,8 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 232
-    Top = 112
+    Left = 229
+    Top = 122
     Width = 75
     Height = 25
     Cancel = True
@@ -113,7 +113,7 @@ object PBMaintOpsDetPassFrm: TPBMaintOpsDetPassFrm
     Left = 104
     Top = 80
     Width = 201
-    Height = 21
+    Height = 25
     PasswordChar = '*'
     TabOrder = 2
     OnChange = NewPassEditChange

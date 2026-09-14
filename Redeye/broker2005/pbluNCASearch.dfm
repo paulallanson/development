@@ -3,120 +3,120 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Non Conformance Search'
-  ClientHeight = 328
-  ClientWidth = 282
+  ClientHeight = 372
+  ClientWidth = 322
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
-    282
-    328)
-  TextHeight = 13
+    322
+    372)
+  TextHeight = 17
   object Label9: TLabel
     Left = 11
-    Top = 2
-    Width = 54
-    Height = 13
+    Top = 5
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 120
-    Top = 2
-    Width = 159
-    Height = 13
+    Left = 133
+    Top = 5
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label6: TLabel
     Left = 11
-    Top = 27
-    Width = 49
-    Height = 13
+    Top = 34
+    Width = 57
+    Height = 17
     Caption = 'Raised by'
   end
   object lblDescription: TLabel
     Left = 11
-    Top = 146
-    Width = 59
-    Height = 13
+    Top = 162
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 11
-    Top = 74
-    Width = 32
-    Height = 13
+    Top = 85
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label1: TLabel
     Left = 11
-    Top = 219
-    Width = 63
-    Height = 13
+    Top = 240
+    Width = 72
+    Height = 17
     Caption = 'Raised since'
   end
   object Label4: TLabel
     Left = 11
-    Top = 170
-    Width = 20
-    Height = 13
+    Top = 188
+    Width = 23
+    Height = 17
     Caption = 'Rep'
   end
   object Label5: TLabel
     Left = 11
-    Top = 194
-    Width = 91
-    Height = 13
+    Top = 214
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
   end
   object Label8: TLabel
     Left = 11
-    Top = 99
-    Width = 102
-    Height = 13
+    Top = 112
+    Width = 115
+    Height = 17
     Caption = 'Raising Department'
   end
   object Label10: TLabel
     Left = 11
-    Top = 123
-    Width = 99
-    Height = 13
+    Top = 138
+    Width = 113
+    Height = 17
     Caption = 'Source Department'
   end
   object Label3: TLabel
     Left = 11
-    Top = 51
-    Width = 63
-    Height = 13
+    Top = 60
+    Width = 72
+    Height = 17
     Caption = 'Reason type'
   end
   object edtRaisedBy: TEdit
-    Left = 120
-    Top = 22
+    Left = 133
+    Top = 29
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
-    Left = 12
-    Top = 262
+    Left = 11
+    Top = 306
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -124,41 +124,41 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     TabOrder = 11
   end
   object SearchButton: TButton
-    Left = 12
-    Top = 294
+    Left = 11
+    Top = 338
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Start Search'
+    Caption = 'Search'
     Default = True
     TabOrder = 12
     OnClick = SearchButtonClick
   end
   object edtDescription: TEdit
-    Left = 120
-    Top = 142
+    Left = 133
+    Top = 158
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtStatus: TEdit
-    Left = 120
-    Top = 70
+    Left = 133
+    Top = 81
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtDate: TEdit
-    Left = 120
-    Top = 215
+    Left = 133
+    Top = 236
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 8
     OnExit = edtDateExit
   end
   object btnDate: TBitBtn
-    Left = 216
-    Top = 213
+    Left = 229
+    Top = 236
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -179,33 +179,33 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     OnClick = btnDateClick
   end
   object edtRep: TEdit
-    Left = 120
-    Top = 166
+    Left = 133
+    Top = 184
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtAccountMgr: TEdit
-    Left = 120
-    Top = 190
+    Left = 133
+    Top = 210
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 7
   end
   object ClearButton: TButton
-    Left = 198
-    Top = 295
+    Left = 211
+    Top = 339
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Clear Search'
+    Caption = 'Clear'
     TabOrder = 13
     OnClick = ClearButtonClick
   end
   object chkbxShowLiveNCA: TCheckBox
     Tag = 12
-    Left = 12
-    Top = 239
+    Left = 11
+    Top = 283
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -213,24 +213,24 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     TabOrder = 10
   end
   object edtRaisingDept: TEdit
-    Left = 120
-    Top = 94
+    Left = 133
+    Top = 107
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtSourceDept: TEdit
-    Left = 120
-    Top = 118
+    Left = 133
+    Top = 133
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object edtReasonType: TEdit
-    Left = 120
-    Top = 46
+    Left = 133
+    Top = 55
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
 end

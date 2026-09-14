@@ -7,29 +7,29 @@ object PBLURepNomFrm: TPBLURepNomFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 232
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object RepLabel: TLabel
     Left = 8
     Top = 8
-    Width = 47
-    Height = 13
+    Width = 54
+    Height = 17
     Caption = 'RepLabel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -43,7 +43,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -51,7 +51,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -89,9 +89,9 @@ object PBLURepNomFrm: TPBLURepNomFrm
   end
   object FuncGrpBox: TGroupBox
     Left = 336
-    Top = 62
+    Top = 32
     Width = 87
-    Height = 105
+    Height = 120
     Caption = 'Function'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -103,7 +103,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     TabOrder = 2
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 22
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -126,7 +126,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 50
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -149,7 +149,7 @@ object PBLURepNomFrm: TPBLURepNomFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 78
       Width = 75
       Height = 25
       Caption = 'Delete'

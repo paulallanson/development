@@ -2,17 +2,17 @@ object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
   Left = 177
   Top = 129
   Caption = 'Job Bag Revenue / Cost'
-  ClientHeight = 275
-  ClientWidth = 421
+  ClientHeight = 287
+  ClientWidth = 445
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 53
     Top = 253
@@ -37,57 +37,57 @@ object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
     object lblDescription: TLabel
       Left = 8
       Top = 24
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object lblSupplier: TLabel
       Left = 8
       Top = 87
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object lblBranch: TLabel
       Left = 8
       Top = 113
-      Width = 35
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Branch'
     end
     object lblCost: TLabel
       Left = 8
       Top = 143
-      Width = 54
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Cost Value'
     end
     object lblSell: TLabel
       Left = 8
       Top = 172
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Sell Value'
     end
     object lblVatRate: TLabel
       Left = 8
       Top = 203
-      Width = 44
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'VAT Rate'
     end
     object Label1: TLabel
       Left = 8
       Top = 54
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object DescrEdit: TEdit
       Left = 96
       Top = 20
       Width = 281
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       OnChange = DescrEditChange
@@ -96,7 +96,7 @@ object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
       Left = 96
       Top = 83
       Width = 235
-      Height = 21
+      Height = 25
       TabStop = False
       MaxLength = 40
       ReadOnly = True
@@ -106,7 +106,7 @@ object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
       Left = 96
       Top = 109
       Width = 235
-      Height = 21
+      Height = 25
       TabStop = False
       MaxLength = 40
       ReadOnly = True
@@ -153,7 +153,7 @@ object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
       Left = 96
       Top = 199
       Width = 161
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = VATSRC
@@ -164,7 +164,7 @@ object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
       Left = 96
       Top = 50
       Width = 235
-      Height = 21
+      Height = 25
       TabStop = False
       MaxLength = 40
       ReadOnly = True
@@ -280,7 +280,7 @@ object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
   end
   object VATSRC: TDataSource
     DataSet = GetVATSQL
-    Left = 320
-    Top = 164
+    Left = 336
+    Top = 157
   end
 end

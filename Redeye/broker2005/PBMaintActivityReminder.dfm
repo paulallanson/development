@@ -9,14 +9,14 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   Constraints.MinWidth = 770
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlHeader: TPanel
     Left = 0
     Top = 0
@@ -26,27 +26,27 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     ParentBackground = False
     TabOrder = 0
     object dbtxtSubject: TDBText
-      Left = 72
+      Left = 76
       Top = 8
       Width = 673
       Height = 17
       DataField = 'Activity_Subject'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object dbtxtDueDate: TDBText
-      Left = 72
+      Left = 76
       Top = 41
       Width = 673
       Height = 14
       DataField = 'Due_Date_Time'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -54,12 +54,12 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     object Label1: TLabel
       Left = 8
       Top = 41
-      Width = 51
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Due Date:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -161,7 +161,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -169,7 +169,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -257,14 +257,14 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
     object btnCompleteAll: TButton
       Left = 11
       Top = 16
-      Width = 75
+      Width = 86
       Height = 25
       Caption = 'Complete All'
       TabOrder = 2
       OnClick = btnCompleteAllClick
     end
     object Button1: TButton
-      Left = 658
+      Left = 652
       Top = 16
       Width = 75
       Height = 25
@@ -274,7 +274,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 570
+      Left = 564
       Top = 16
       Width = 75
       Height = 25

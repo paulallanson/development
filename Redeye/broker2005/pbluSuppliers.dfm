@@ -2,12 +2,12 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   Left = 51
   Top = 117
   Caption = 'Supplier details'
-  ClientHeight = 370
-  ClientWidth = 1012
+  ClientHeight = 361
+  ClientWidth = 1006
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -18,11 +18,11 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 351
-    Width = 1012
+    Top = 342
+    Width = 1006
     Height = 19
     Panels = <
       item
@@ -34,32 +34,32 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 310
-    Width = 1012
+    Top = 301
+    Width = 1006
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1012
+      1006
       41)
     object lblSearch: TLabel
       Left = 16
-      Top = 16
-      Width = 80
-      Height = 13
-      Caption = 'Supplier Search'
+      Top = 12
+      Width = 48
+      Height = 17
+      Caption = 'Supplier'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 67
+      Top = 8
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object btnClose: TButton
-      Left = 915
+      Left = 903
       Top = 8
       Width = 75
       Height = 25
@@ -69,8 +69,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       OnClick = btnCloseClick
     end
     object btnSearch: TBitBtn
-      Left = 288
-      Top = 10
+      Left = 251
+      Top = 8
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -81,22 +81,22 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1012
+    Width = 1006
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1006
+        Width = 1000
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 997
+      Width = 991
       Height = 40
-      ButtonHeight = 36
-      ButtonWidth = 59
+      ButtonHeight = 40
+      ButtonWidth = 67
       Caption = 'ToolBar1'
       Images = imglstMaint
       ParentShowHint = False
@@ -112,7 +112,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 59
+        Left = 67
         Top = 0
         Hint = 'Change record'
         Caption = '  &Change  '
@@ -121,7 +121,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 118
+        Left = 134
         Top = 0
         Hint = 'Delete record'
         Caption = '&Delete'
@@ -130,7 +130,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnDeleteClick
       end
       object btnLabels: TToolButton
-        Left = 177
+        Left = 201
         Top = 0
         Hint = 'Print address labels'
         Caption = 'Labels'
@@ -139,7 +139,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnLabelsClick
       end
       object ToolButton1: TToolButton
-        Left = 236
+        Left = 268
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -147,7 +147,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         Style = tbsSeparator
       end
       object btnBranches: TToolButton
-        Left = 244
+        Left = 276
         Top = 0
         Hint = 'Branches'
         Caption = '&Branch'
@@ -156,7 +156,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnBranchesClick
       end
       object btnContacts: TToolButton
-        Left = 303
+        Left = 343
         Top = 0
         Hint = 'Contacts'
         Caption = 'Contac&ts'
@@ -165,7 +165,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnContactsClick
       end
       object btnFileTypes: TToolButton
-        Left = 362
+        Left = 410
         Top = 0
         Caption = 'File Types'
         Enabled = False
@@ -173,7 +173,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         OnClick = btnFileTypesClick
       end
       object ToolButton2: TToolButton
-        Left = 421
+        Left = 477
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -181,7 +181,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 429
+        Left = 485
         Top = 0
         Hint = 'Report selection'
         Caption = '&Reports'
@@ -193,14 +193,14 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1012
-    Height = 236
+    Width = 1006
+    Height = 227
     Align = alClient
     DataSource = dtmdlSuppliers.dtsSuppliers
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -209,7 +209,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -279,7 +279,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1012
+    Width = 1006
     Height = 30
     Align = alTop
     BevelInner = bvLowered

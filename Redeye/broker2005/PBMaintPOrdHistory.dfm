@@ -8,13 +8,13 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel2: TPanel
     Left = 0
     Top = 373
@@ -24,11 +24,13 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 364
+    ExplicitWidth = 728
     DesignSize = (
       734
       41)
     object btnClose: TButton
-      Left = 649
+      Left = 643
       Top = 8
       Width = 75
       Height = 25
@@ -36,6 +38,7 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
       Caption = '&Close'
       ModalResult = 2
       TabOrder = 0
+      ExplicitLeft = 637
     end
   end
   object DBGrid1: TDBGrid
@@ -48,7 +51,7 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -141,5 +144,7 @@ object PBMaintPOrdHistoryFrm: TPBMaintPOrdHistoryFrm
     Width = 734
     Height = 19
     Panels = <>
+    ExplicitTop = 405
+    ExplicitWidth = 728
   end
 end

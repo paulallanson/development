@@ -3,25 +3,27 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Production Process Details'
-  ClientHeight = 343
-  ClientWidth = 506
+  ClientHeight = 348
+  ClientWidth = 443
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlFoot: TPanel
     Left = 0
-    Top = 292
-    Width = 506
+    Top = 297
+    Width = 443
     Height = 51
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 283
+    ExplicitWidth = 500
     object DelLabel: TLabel
       Left = 163
       Top = 25
@@ -124,29 +126,30 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
   object pnlProcess: TPanel
     Left = 0
     Top = 0
-    Width = 506
+    Width = 443
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 500
     object Process: TLabel
       Left = 24
-      Top = 24
-      Width = 98
-      Height = 13
+      Top = 19
+      Width = 112
+      Height = 17
       Caption = 'Production Process'
     end
     object edtProcess: TEdit
-      Left = 128
-      Top = 20
+      Left = 142
+      Top = 15
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
     object BitBtn4: TBitBtn
-      Left = 360
-      Top = 18
+      Left = 374
+      Top = 15
       Width = 25
       Height = 25
       Caption = '...'
@@ -163,38 +166,39 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
   object pnlProductSize: TPanel
     Left = 0
     Top = 57
-    Width = 506
+    Width = 443
     Height = 88
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 500
     object Label1: TLabel
       Left = 24
       Top = 16
-      Width = 63
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Product Size'
     end
     object Label8: TLabel
       Left = 24
       Top = 52
-      Width = 101
-      Height = 13
+      Width = 113
+      Height = 17
       Caption = 'Work Centre Group'
     end
     object edtProductSize: TEdit
-      Left = 128
+      Left = 142
       Top = 12
       Width = 177
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
     object dblkpWorkCentreGroup: TDBLookupComboBox
-      Left = 128
+      Left = 142
       Top = 48
       Width = 177
-      Height = 21
+      Height = 25
       KeyField = 'Work_Centre_Group'
       ListField = 'Work_Centre_Group_Name'
       ListSource = dtsWCGroups
@@ -202,7 +206,7 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
       OnClick = CheckOK
     end
     object BitBtn1: TBitBtn
-      Left = 320
+      Left = 334
       Top = 10
       Width = 25
       Height = 25
@@ -217,7 +221,7 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
       OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
-      Left = 320
+      Left = 334
       Top = 46
       Width = 25
       Height = 25
@@ -235,44 +239,46 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
   object pnlDetails: TPanel
     Left = 0
     Top = 145
-    Width = 506
-    Height = 147
+    Width = 443
+    Height = 152
     Align = alClient
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 500
+    ExplicitHeight = 138
     object Label4: TLabel
       Left = 24
       Top = 20
-      Width = 79
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'Simplex/Duplex'
     end
     object Label5: TLabel
       Left = 24
       Top = 53
-      Width = 81
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'No. of elements'
     end
     object Label6: TLabel
       Left = 24
       Top = 86
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label7: TLabel
       Left = 24
       Top = 120
-      Width = 65
-      Height = 13
+      Width = 74
+      Height = 17
       Caption = 'No. of hours'
     end
     object cmbSimplexDuplex: TComboBox
-      Left = 128
+      Left = 142
       Top = 16
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 0
       OnClick = CheckOK
@@ -282,10 +288,10 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
         'Duplex')
     end
     object spnElements: TSpinEdit
-      Left = 128
+      Left = 142
       Top = 49
       Width = 57
-      Height = 22
+      Height = 27
       MaxValue = 100
       MinValue = 1
       TabOrder = 1
@@ -293,7 +299,7 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
       OnClick = CheckOK
     end
     object memQuantity: TMemo
-      Left = 128
+      Left = 142
       Top = 82
       Width = 97
       Height = 21
@@ -306,7 +312,7 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
       OnKeyPress = memQuantityKeyPress
     end
     object memHours: TMemo
-      Left = 128
+      Left = 142
       Top = 116
       Width = 97
       Height = 21

@@ -7,14 +7,14 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   PopupMenu = pMnuGeneral
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel2: TPanel
     Left = 0
     Top = 365
@@ -27,30 +27,30 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       84)
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 86
-      Height = 13
+      Top = 14
+      Width = 99
+      Height = 17
       Caption = 'Customer Search'
     end
     object CustomerLbl: TLabel
-      Left = 55
-      Top = 30
-      Width = 29
-      Height = 13
+      Left = 71
+      Top = 32
+      Width = 35
+      Height = 17
       Caption = 'Name'
     end
     object Label2: TLabel
       Left = 8
-      Top = 62
-      Width = 91
-      Height = 13
+      Top = 56
+      Width = 103
+      Height = 17
       Caption = 'Statement History'
     end
     object edtCustomer: TEdit
       Left = 112
       Top = 8
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
       OnChange = edtCustomerChange
@@ -71,7 +71,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       OnClick = btnCustomerClick
     end
     object grpInvDate: TGroupBox
-      Left = 565
+      Left = 559
       Top = 5
       Width = 233
       Height = 73
@@ -83,17 +83,17 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         73)
       object Label4: TLabel
         Left = 20
-        Top = 21
-        Width = 56
-        Height = 13
+        Top = 16
+        Width = 64
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Date From:'
       end
       object Label5: TLabel
         Left = 19
-        Top = 49
-        Width = 42
-        Height = 13
+        Top = 44
+        Width = 48
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Date To:'
       end
@@ -145,7 +145,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         Left = 87
         Top = 13
         Width = 98
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         MaxLength = 10
         TabOrder = 0
@@ -155,7 +155,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         Left = 87
         Top = 41
         Width = 98
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         MaxLength = 10
         TabOrder = 1
@@ -166,7 +166,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       Left = 112
       Top = 54
       Width = 233
-      Height = 21
+      Height = 25
       Style = csDropDownList
       Enabled = False
       TabOrder = 3
@@ -226,7 +226,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -234,7 +234,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -326,8 +326,8 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       Top = 0
       Width = 797
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 53
+      ButtonHeight = 40
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       HotImages = ImgHot
       Images = ImgCool
@@ -342,7 +342,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         OnClick = btnPrintClick
       end
       object btnSelect: TToolButton
-        Left = 53
+        Left = 59
         Top = 0
         Caption = 'Select All'
         Enabled = False
@@ -350,7 +350,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         OnClick = btnSelectClick
       end
       object btnRemove: TToolButton
-        Left = 106
+        Left = 118
         Top = 0
         Caption = 'Remove'
         Enabled = False
@@ -358,7 +358,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         OnClick = btnRemoveClick
       end
       object ToolButton2: TToolButton
-        Left = 159
+        Left = 177
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -366,7 +366,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
         Style = tbsSeparator
       end
       object btnClose: TToolButton
-        Left = 167
+        Left = 185
         Top = 0
         Caption = 'Close'
         ImageIndex = 4

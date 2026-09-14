@@ -4,29 +4,29 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Enquiries'
   ClientHeight = 361
-  ClientWidth = 697
+  ClientWidth = 743
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 697
+    Width = 743
     Height = 301
     Align = alClient
     DataSource = dtmdlEnqs.dtsEnqsJB
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -34,7 +34,7 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
@@ -82,32 +82,33 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
   object Panel1: TPanel
     Left = 0
     Top = 301
-    Width = 697
+    Width = 743
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 292
+    ExplicitWidth = 691
     DesignSize = (
-      697
+      743
       41)
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 96
-      Height = 13
+      Top = 14
+      Width = 109
+      Height = 17
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 352
-      Top = 16
-      Width = 82
-      Height = 13
+      Left = 374
+      Top = 14
+      Width = 92
+      Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'Enquiry number'
-      ExplicitLeft = 358
     end
     object btnClose: TButton
-      Left = 616
+      Left = 656
       Top = 10
       Width = 75
       Height = 25
@@ -115,26 +116,27 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 604
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 126
+      Top = 10
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 430
-      Top = 12
+      Left = 470
+      Top = 10
       Width = 90
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
     end
     object btnSelect: TButton
-      Left = 528
+      Left = 568
       Top = 10
       Width = 75
       Height = 25
@@ -142,12 +144,13 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
+      ExplicitLeft = 516
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 342
-    Width = 697
+    Width = 743
     Height = 19
     Panels = <
       item
@@ -156,6 +159,8 @@ object frmpbluCustEnqsJB: TfrmpbluCustEnqsJB
       item
         Width = 50
       end>
+    ExplicitTop = 333
+    ExplicitWidth = 691
   end
   object tmrSearch: TTimer
     Enabled = False

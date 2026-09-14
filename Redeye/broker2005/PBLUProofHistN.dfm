@@ -9,13 +9,13 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
   Constraints.MinWidth = 595
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 517
     Top = 73
@@ -25,29 +25,31 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = 511
+    ExplicitHeight = 242
     DesignSize = (
       108
       251)
     object CountLabel: TLabel
-      Left = 14
-      Top = 64
-      Width = 59
-      Height = 13
+      Left = 6
+      Top = 24
+      Width = 65
+      Height = 17
       Alignment = taRightJustify
       Caption = 'CountLabel'
     end
     object FuncGrpBox: TGroupBox
-      Left = 8
-      Top = 88
+      Left = 6
+      Top = 64
       Width = 89
-      Height = 105
+      Height = 113
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
-        Left = 6
-        Top = 16
+        Left = 8
+        Top = 21
         Width = 75
         Height = 25
         Caption = 'Add'
@@ -69,8 +71,8 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
         OnClick = AddBitBtnClick
       end
       object ChgBitBtn: TBitBtn
-        Left = 6
-        Top = 44
+        Left = 8
+        Top = 49
         Width = 75
         Height = 25
         Caption = 'Change'
@@ -92,8 +94,8 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
         OnClick = ChgBitBtnClick
       end
       object DelBitBtn: TBitBtn
-        Left = 6
-        Top = 72
+        Left = 8
+        Top = 77
         Width = 75
         Height = 25
         Caption = 'Delete'
@@ -142,6 +144,7 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CloseBitBtnClick
+      ExplicitTop = 199
     end
   end
   object Panel2: TPanel
@@ -153,6 +156,7 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 619
     object GroupBox1: TGroupBox
       Left = 0
       Top = 4
@@ -161,16 +165,17 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 619
       object Label1: TLabel
         Left = 10
-        Top = 16
-        Width = 79
-        Height = 13
+        Top = 15
+        Width = 91
+        Height = 17
         Caption = 'Purchase Order'
       end
       object DescLabel: TLabel
         Left = 232
-        Top = 43
+        Top = 39
         Width = 345
         Height = 15
         AutoSize = False
@@ -186,7 +191,7 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       end
       object SuppLabel: TLabel
         Left = 10
-        Top = 40
+        Top = 39
         Width = 215
         Height = 15
         AutoSize = False
@@ -211,6 +216,8 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 511
+    ExplicitHeight = 242
     object DetsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -221,7 +228,7 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -229,7 +236,7 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDblClick = DetsDBGridDblClick
@@ -309,8 +316,8 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
         'D ((Purchase_OrderLine.Line)= :line))'
       ' '
       ' ')
-    Left = 376
-    Top = 16
+    Left = 526
+    Top = 12
     ParamData = <
       item
         Name = 'Purchase_Order'

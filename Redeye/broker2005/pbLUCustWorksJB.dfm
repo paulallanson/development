@@ -8,14 +8,14 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
@@ -25,7 +25,7 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -33,7 +33,7 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
@@ -42,20 +42,20 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
         Expanded = False
         FieldName = 'Works_order_Number'
         Title.Caption = 'WI Number'
-        Width = 56
+        Width = 73
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Date_Point'
         Title.Caption = 'Order Date'
-        Width = 77
+        Width = 89
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Description'
-        Width = 204
+        Width = 215
         Visible = True
       end
       item
@@ -88,27 +88,28 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 292
+    ExplicitWidth = 691
     DesignSize = (
       697
       41)
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 96
-      Height = 13
-      Caption = 'Description Search'
+      Top = 14
+      Width = 66
+      Height = 17
+      Caption = 'Description'
     end
     object Label2: TLabel
-      Left = 360
-      Top = 16
-      Width = 58
-      Height = 13
+      Left = 350
+      Top = 14
+      Width = 67
+      Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'WI Number'
-      ExplicitLeft = 366
     end
     object btnClose: TButton
-      Left = 616
+      Left = 610
       Top = 10
       Width = 75
       Height = 25
@@ -116,26 +117,27 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 604
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 80
+      Top = 10
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object edtOrder: TEdit
-      Left = 430
-      Top = 12
+      Left = 424
+      Top = 10
       Width = 90
-      Height = 21
+      Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtOrderKeyPress
     end
     object btnSelect: TButton
-      Left = 528
+      Left = 522
       Top = 10
       Width = 75
       Height = 25
@@ -143,6 +145,7 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
       Caption = '&Select'
       TabOrder = 3
       OnClick = btnSelectClick
+      ExplicitLeft = 516
     end
   end
   object stsbrDetails: TStatusBar
@@ -157,6 +160,8 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
       item
         Width = 50
       end>
+    ExplicitTop = 333
+    ExplicitWidth = 691
   end
   object tmrSearch: TTimer
     Enabled = False

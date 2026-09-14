@@ -8,17 +8,17 @@ object PBMaintCompanyDocNameFrm: TPBMaintCompanyDocNameFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 20
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object btnOK: TBitBtn
@@ -46,7 +46,7 @@ object PBMaintCompanyDocNameFrm: TPBMaintCompanyDocNameFrm
     Left = 72
     Top = 16
     Width = 289
-    Height = 21
+    Height = 25
     TabOrder = 2
     Text = 'edtName'
     OnChange = EnableOK

@@ -3,141 +3,141 @@ object frmpbluQuotesSearch: TfrmpbluQuotesSearch
   Top = 138
   BorderStyle = bsDialog
   Caption = 'Quote Search'
-  ClientHeight = 405
-  ClientWidth = 288
+  ClientHeight = 435
+  ClientWidth = 337
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
-    288
-    405)
-  TextHeight = 13
+    337
+    435)
+  TextHeight = 17
   object Label9: TLabel
     Left = 11
-    Top = 2
-    Width = 54
-    Height = 13
+    Top = 8
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 120
-    Top = 2
-    Width = 159
-    Height = 13
+    Left = 136
+    Top = 8
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label6: TLabel
     Left = 11
-    Top = 51
-    Width = 103
-    Height = 13
+    Top = 69
+    Width = 118
+    Height = 17
     Caption = 'Customer Reference'
   end
   object Label13: TLabel
     Left = 11
-    Top = 74
-    Width = 44
-    Height = 13
+    Top = 94
+    Width = 48
+    Height = 17
     Caption = 'Quantity'
   end
   object lblDescription: TLabel
     Left = 11
-    Top = 122
-    Width = 59
-    Height = 13
+    Top = 146
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 11
-    Top = 98
-    Width = 32
-    Height = 13
+    Top = 120
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label3: TLabel
     Left = 11
-    Top = 27
-    Width = 35
-    Height = 13
+    Top = 43
+    Width = 39
+    Height = 17
     Caption = 'Branch'
   end
   object Label1: TLabel
     Left = 11
-    Top = 275
-    Width = 72
-    Height = 13
+    Top = 308
+    Width = 83
+    Height = 17
     Caption = 'Ordered since'
   end
   object Label4: TLabel
     Left = 11
-    Top = 146
-    Width = 20
-    Height = 13
+    Top = 172
+    Width = 23
+    Height = 17
     Caption = 'Rep'
   end
   object Label5: TLabel
     Left = 11
-    Top = 194
-    Width = 91
-    Height = 13
+    Top = 224
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
   end
   object Label7: TLabel
     Left = 11
-    Top = 218
-    Width = 47
-    Height = 13
+    Top = 250
+    Width = 54
+    Height = 17
     Caption = 'Operator'
   end
   object Label8: TLabel
     Left = 11
-    Top = 170
-    Width = 76
-    Height = 13
+    Top = 198
+    Width = 88
+    Height = 17
     Caption = 'Secondary Rep'
   end
   object Label10: TLabel
     Left = 11
-    Top = 243
-    Width = 46
-    Height = 13
+    Top = 276
+    Width = 53
+    Height = 17
     Caption = 'End User'
   end
   object edtQuantity: TEdit
-    Left = 120
-    Top = 70
+    Left = 136
+    Top = 90
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
   object edtCustOrderNo: TEdit
-    Left = 120
-    Top = 46
+    Left = 136
+    Top = 64
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 333
+    Top = 363
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -145,50 +145,52 @@ object frmpbluQuotesSearch: TfrmpbluQuotesSearch
     Checked = True
     State = cbChecked
     TabOrder = 13
+    ExplicitTop = 324
   end
   object SearchButton: TButton
     Left = 12
-    Top = 365
+    Top = 395
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Start Search'
+    Caption = 'Search'
     Default = True
     TabOrder = 14
     OnClick = SearchButtonClick
+    ExplicitTop = 356
   end
   object edtDescription: TEdit
-    Left = 120
-    Top = 118
+    Left = 136
+    Top = 142
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object edtStatus: TEdit
-    Left = 120
-    Top = 94
+    Left = 136
+    Top = 116
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtBranch: TEdit
-    Left = 120
-    Top = 22
+    Left = 136
+    Top = 38
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtDate: TEdit
-    Left = 120
-    Top = 271
+    Left = 136
+    Top = 304
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 10
     OnExit = edtDateExit
   end
   object btnDate: TBitBtn
-    Left = 216
-    Top = 269
+    Left = 232
+    Top = 304
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -209,58 +211,60 @@ object frmpbluQuotesSearch: TfrmpbluQuotesSearch
     OnClick = btnDateClick
   end
   object edtRep: TEdit
-    Left = 120
-    Top = 142
+    Left = 136
+    Top = 168
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object edtAccountMgr: TEdit
-    Left = 120
-    Top = 190
+    Left = 136
+    Top = 220
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 7
   end
   object edtOperator: TEdit
-    Left = 120
-    Top = 214
+    Left = 136
+    Top = 246
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 8
   end
   object ClearButton: TButton
-    Left = 198
-    Top = 366
+    Left = 214
+    Top = 396
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Clear Search'
+    Caption = 'Clear'
     TabOrder = 15
     OnClick = ClearButtonClick
+    ExplicitTop = 399
   end
   object chkbxShowLive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 310
+    Top = 340
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY live quotes'
     TabOrder = 12
+    ExplicitTop = 301
   end
   object edtSubRep: TEdit
-    Left = 120
-    Top = 166
+    Left = 136
+    Top = 194
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 6
   end
   object edtEndUser: TEdit
-    Left = 120
-    Top = 239
+    Left = 136
+    Top = 272
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 9
   end
 end

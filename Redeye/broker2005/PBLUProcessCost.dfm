@@ -8,13 +8,13 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 369
@@ -25,7 +25,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     ParentBackground = False
     TabOrder = 0
     ExplicitTop = 360
-    ExplicitWidth = 748
+    ExplicitWidth = 771
     DesignSize = (
       777
       41)
@@ -51,7 +51,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       TabOrder = 1
     end
     object btnClose: TBitBtn
-      Left = 662
+      Left = 656
       Top = 8
       Width = 75
       Height = 25
@@ -59,7 +59,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitLeft = 633
+      ExplicitLeft = 650
     end
   end
   object StatusBar1: TStatusBar
@@ -69,7 +69,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Height = 19
     Panels = <>
     ExplicitTop = 401
-    ExplicitWidth = 748
+    ExplicitWidth = 771
   end
   object Panel2: TPanel
     Left = 0
@@ -79,16 +79,16 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 748
+    ExplicitWidth = 771
     object Label2: TLabel
       Left = 8
       Top = 14
-      Width = 42
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Process:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -96,8 +96,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     object lblProcessDescription: TLabel
       Left = 520
       Top = 14
-      Width = 110
-      Height = 13
+      Width = 125
+      Height = 17
       Caption = 'lblProcessDescription'
       Visible = False
     end
@@ -125,16 +125,16 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Visible = False
       object lblCustBran: TLabel
         Left = 8
-        Top = 9
-        Width = 49
-        Height = 13
+        Top = 7
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object edtCustomer: TEdit
         Left = 8
         Top = 25
         Width = 225
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -158,7 +158,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Left = 80
       Top = 10
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'Process'
       ListField = 'Process_Description'
       ListSource = dtsProcess
@@ -175,15 +175,15 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       TabOrder = 3
       object edtCopyCustomer: TEdit
         Left = 8
-        Top = 24
+        Top = 25
         Width = 196
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
       object btnRep: TButton
         Left = 208
-        Top = 22
+        Top = 25
         Width = 25
         Height = 25
         Caption = '...'
@@ -198,7 +198,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       end
       object btnCopy: TButton
         Left = 240
-        Top = 22
+        Top = 25
         Width = 75
         Height = 25
         Caption = 'Copy'
@@ -216,55 +216,55 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 748
+    ExplicitWidth = 771
     ExplicitHeight = 247
     object Label1: TLabel
       Left = 8
-      Top = 8
-      Width = 53
-      Height = 13
+      Top = 4
+      Width = 59
+      Height = 17
       Caption = 'Operation'
     end
     object lblCategory: TLabel
       Left = 464
-      Top = 8
-      Width = 46
-      Height = 13
+      Top = 4
+      Width = 53
+      Height = 17
       Caption = 'Category'
     end
     object Label3: TLabel
       Left = 608
-      Top = 8
-      Width = 69
-      Height = 13
+      Top = 4
+      Width = 79
+      Height = 17
       Caption = 'Sub Category'
     end
     object Label4: TLabel
       Left = 8
       Top = 228
-      Width = 48
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Unit Cost'
     end
     object Label5: TLabel
       Left = 168
       Top = 228
-      Width = 70
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'Unit Sell Price'
     end
     object lblTask: TLabel
       Left = 8
       Top = 200
-      Width = 46
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Selected:'
     end
     object dbPriceUnit: TDBText
       Left = 344
       Top = 228
       Width = 65
-      Height = 12
+      Height = 21
       DataField = 'Price_Unit_Description'
       DataSource = dtsProcessCosts
     end
@@ -280,15 +280,15 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     object lblDescription: TLabel
       Left = 64
       Top = 200
-      Width = 72
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
     object dblstProcessCosts: TDBLookupListBox
       Left = 8
       Top = 24
       Width = 441
-      Height = 160
+      Height = 157
       KeyField = 'Cost_Number'
       ListField = 'Cost_Description'
       ListSource = dtsProcessCosts
@@ -298,19 +298,19 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       OnDblClick = dblstProcessCostsDblClick
     end
     object dbedtUnitCost: TDBEdit
-      Left = 64
-      Top = 224
+      Left = 67
+      Top = 223
       Width = 81
-      Height = 21
+      Height = 25
       DataField = 'Unit_Cost'
       DataSource = dtsProcessCosts
       TabOrder = 1
     end
     object dbedtUnitSell: TDBEdit
-      Left = 240
+      Left = 250
       Top = 224
       Width = 81
-      Height = 21
+      Height = 25
       DataField = 'Unit_Sell'
       DataSource = dtsProcessCosts
       TabOrder = 2
@@ -319,7 +319,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Left = 464
       Top = 24
       Width = 129
-      Height = 160
+      Height = 157
       KeyField = 'Category_Number'
       ListField = 'Cost_Description'
       ListSource = dtsProcessCostCat
@@ -332,7 +332,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       Left = 608
       Top = 24
       Width = 129
-      Height = 160
+      Height = 157
       KeyField = 'Sub_Category'
       ListField = 'Cost_Description'
       ListSource = dtsProcessCostSub
@@ -382,8 +382,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   end
   object pmnSubCategory: TPopupMenu
     OnPopup = pmnSubCategoryPopup
-    Left = 90
-    Top = 43
+    Left = 105
+    Top = 110
     object MenuItem4: TMenuItem
       Caption = 'Add'
       OnClick = MenuItem4Click
@@ -425,8 +425,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   end
   object dtsProcessCosts: TDataSource
     DataSet = qryProcessCosts
-    Left = 168
-    Top = 225
+    Left = 258
+    Top = 177
   end
   object qryProcessCostCat: TFDQuery
     ConnectionName = 'PB'
@@ -497,8 +497,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   end
   object dtsProcessCostCat: TDataSource
     DataSet = qryProcessCostCat
-    Left = 496
-    Top = 257
+    Left = 556
+    Top = 201
   end
   object dtsProcessCostSub: TDataSource
     DataSet = qryProcessCostSub
@@ -629,8 +629,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       
         'Where Process = :Process and Customer = :Customer and Cost_Numbe' +
         'r = :Cost_Number')
-    Left = 552
-    Top = 240
+    Left = 658
+    Top = 172
     ParamData = <
       item
         Name = 'Process'
@@ -664,8 +664,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         'ocess = :Process and Cost_Number = :Cost_Number and Category_Num' +
         'ber = :Category_Number'
       '')
-    Left = 100
-    Top = 272
+    Left = 29
+    Top = 180
     ParamData = <
       item
         Name = 'Customer'
@@ -716,8 +716,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
   end
   object dtsProcess: TDataSource
     DataSet = qryProcess
-    Left = 344
-    Top = 8
+    Left = 350
+    Top = 10
   end
   object qryGetPTProcess: TFDQuery
     SQL.Strings = (
@@ -725,8 +725,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       'from Process'
       'where Product_Type = :Product_Type'
       'Order By Process_Description')
-    Left = 424
-    Top = 72
+    Left = 402
+    Top = 178
     ParamData = <
       item
         Name = 'Product_Type'
@@ -738,7 +738,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       'select *'
       'from Process'
       'order By Process_Description')
-    Left = 480
-    Top = 72
+    Left = 496
+    Top = 154
   end
 end

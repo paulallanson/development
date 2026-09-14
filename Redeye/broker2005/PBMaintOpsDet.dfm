@@ -3,12 +3,12 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   Top = 60
   BorderStyle = bsDialog
   Caption = 'Operator Details'
-  ClientHeight = 560
+  ClientHeight = 577
   ClientWidth = 525
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,46 +17,45 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   OnCreate = FormCreate
   DesignSize = (
     525
-    560)
-  TextHeight = 13
+    577)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 12
-    Width = 61
-    Height = 13
+    Width = 71
+    Height = 17
     Caption = 'Login Name'
   end
   object Label2: TLabel
     Left = 8
     Top = 37
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object DelLabel: TLabel
-    Left = 179
-    Top = 529
-    Width = 125
-    Height = 13
+    Left = 196
+    Top = 541
+    Width = 152
+    Height = 17
     Anchors = [akRight, akBottom]
     Caption = 'Really Delete This User ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitLeft = 185
   end
   object Label4: TLabel
     Left = 8
     Top = 186
-    Width = 78
-    Height = 13
+    Width = 90
+    Height = 17
     Caption = 'Associated Rep'
   end
   object RepNASpeedButton: TSpeedButton
-    Left = 272
+    Left = 282
     Top = 181
     Width = 23
     Height = 23
@@ -80,66 +79,66 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   object Label6: TLabel
     Left = 8
     Top = 134
-    Width = 71
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Email Address'
   end
   object Label7: TLabel
     Left = 368
     Top = 37
-    Width = 34
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Initials'
   end
   object Label8: TLabel
     Left = 8
     Top = 86
-    Width = 33
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Phone'
   end
   object Label9: TLabel
     Left = 8
     Top = 109
-    Width = 57
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Mobile No.'
   end
   object Label10: TLabel
     Left = 8
     Top = 158
-    Width = 54
-    Height = 13
+    Width = 61
+    Height = 17
     Caption = 'Web Email'
   end
   object Label13: TLabel
     Left = 8
     Top = 62
-    Width = 42
-    Height = 13
+    Width = 49
+    Height = 17
     Caption = 'Job Title'
   end
   object NameEdit: TEdit
-    Left = 94
+    Left = 104
     Top = 33
     Width = 233
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 2
     OnChange = NameEditChange
   end
   object LoginEdit: TEdit
-    Left = 94
+    Left = 104
     Top = 8
     Width = 233
-    Height = 21
+    Height = 25
     MaxLength = 30
     TabOrder = 0
     OnChange = LoginEditChange
   end
   object OKBitBtn: TBitBtn
-    Left = 339
-    Top = 523
+    Left = 354
+    Top = 538
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -212,26 +211,22 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 12
     OnClick = OKBitBtnClick
-    ExplicitLeft = 333
-    ExplicitTop = 514
   end
   object CancelBitBtn: TBitBtn
-    Left = 427
-    Top = 523
+    Left = 442
+    Top = 538
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 13
-    ExplicitLeft = 421
-    ExplicitTop = 514
   end
   object RepComboBox: TDBLookupComboBox
-    Left = 94
+    Left = 104
     Top = 182
     Width = 161
-    Height = 21
+    Height = 25
     KeyField = 'Rep'
     ListField = 'Name'
     ListSource = RepsDS
@@ -239,10 +234,10 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     OnClick = RepComboBoxClick
   end
   object EmailEdit: TEdit
-    Left = 94
+    Left = 104
     Top = 130
     Width = 259
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 7
     OnChange = NameEditChange
@@ -252,22 +247,22 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Top = 215
     Width = 513
     Height = 306
-    ActivePage = tbshtEnqs
+    ActivePage = tbshtAccess
     TabOrder = 10
     object tbshtAccess: TTabSheet
       Caption = 'Access Control'
       object Label3: TLabel
         Left = 8
         Top = 156
-        Width = 72
-        Height = 13
+        Width = 83
+        Height = 17
         Caption = 'Access Profile:'
       end
       object SelectScrollBox: TScrollBox
         Left = 0
         Top = 0
         Width = 505
-        Height = 278
+        Height = 274
         VertScrollBar.Tracking = True
         Align = alClient
         TabOrder = 0
@@ -275,15 +270,15 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         object AllLabel: TLabel
           Left = 128
           Top = 10
-          Width = 13
-          Height = 13
+          Width = 14
+          Height = 17
           Caption = 'All'
         end
         object AllComboBox: TComboBox
           Left = 8
           Top = 8
           Width = 113
-          Height = 21
+          Height = 25
           Style = csDropDownList
           TabOrder = 0
           OnChange = AllComboBoxChange
@@ -337,7 +332,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       object chkbxCannotViewPrices: TCheckBox
         Left = 24
         Top = 17
-        Width = 209
+        Width = 269
         Height = 17
         Caption = 'Cannot view Job Pricing sales prices'
         TabOrder = 0
@@ -345,7 +340,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       object chkbxCanConvert: TCheckBox
         Left = 24
         Top = 41
-        Width = 249
+        Width = 289
         Height = 17
         Caption = 'Can convert Enquiries to Purchase Orders'
         TabOrder = 1
@@ -357,28 +352,28 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       object Label5: TLabel
         Left = 8
         Top = 8
-        Width = 89
-        Height = 39
+        Width = 101
+        Height = 51
         Caption = 'Max Unauthorised PO Cost Value'
         WordWrap = True
       end
       object Label11: TLabel
         Left = 224
-        Top = 202
-        Width = 208
-        Height = 13
+        Top = 195
+        Width = 273
+        Height = 17
         Caption = 'Restrict Access to these Revenue Centres'
       end
       object Label12: TLabel
-        Left = 8
-        Top = 48
-        Width = 60
-        Height = 39
+        Left = 10
+        Top = 65
+        Width = 97
+        Height = 51
         Caption = 'Authorised Cost Value Limit'
         WordWrap = True
       end
       object memCreditLimit: TMemo
-        Left = 102
+        Left = 115
         Top = 11
         Width = 90
         Height = 21
@@ -389,10 +384,10 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         OnExit = memCreditLimitExit
       end
       object rdgrpMinPO: TRadioGroup
-        Left = 8
-        Top = 141
-        Width = 185
-        Height = 57
+        Left = 10
+        Top = 118
+        Width = 195
+        Height = 65
         Caption = 'Minimum PO Sales Value'
         ItemIndex = 0
         Items.Strings = (
@@ -406,20 +401,20 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         Left = 224
         Top = 142
         Width = 185
-        Height = 55
+        Height = 43
         ParentBackground = False
         TabOrder = 3
         object lblValue: TLabel
-          Left = 21
-          Top = 24
-          Width = 28
-          Height = 13
+          Left = 18
+          Top = 15
+          Width = 31
+          Height = 17
           Alignment = taRightJustify
           Caption = 'Value'
         end
         object memMinValue: TMemo
           Left = 55
-          Top = 20
+          Top = 11
           Width = 90
           Height = 21
           Alignment = taRightJustify
@@ -431,33 +426,33 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       end
       object chkbxCanDeleteFromJB: TCheckBox
         Left = 224
-        Top = 49
-        Width = 249
+        Top = 39
+        Width = 278
         Height = 17
         Caption = 'Can delete Purchase Orders from Job Bags'
         TabOrder = 4
       end
       object chkbxCanMaintainPO: TCheckBox
         Left = 224
-        Top = 30
-        Width = 249
+        Top = 20
+        Width = 281
         Height = 17
         Caption = 'Can maintain Purchase Orders in Job Bags'
         TabOrder = 5
       end
       object chkbxCanOverride: TCheckBox
         Left = 224
-        Top = 68
-        Width = 249
+        Top = 58
+        Width = 278
         Height = 17
         Caption = 'Can override Paid Stock in Purchase Orders'
         TabOrder = 6
       end
       object rdgrpAuthorise: TRadioGroup
-        Left = 8
-        Top = 202
-        Width = 185
-        Height = 73
+        Left = 3
+        Top = 186
+        Width = 202
+        Height = 85
         Caption = 'Authorise POs'
         ItemIndex = 0
         Items.Strings = (
@@ -469,26 +464,26 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       end
       object chkbxCanDeleteJobBags: TCheckBox
         Left = 224
-        Top = 87
-        Width = 249
+        Top = 77
+        Width = 278
         Height = 17
         Caption = 'Can delete/cancel job bags'
         TabOrder = 8
       end
       object chkbxCanConfirmProduction: TCheckBox
         Left = 224
-        Top = 106
-        Width = 249
+        Top = 96
+        Width = 278
         Height = 17
         Caption = 'Can confirm Production complete'
         TabOrder = 9
       end
       object lstbxRevenue: TListBox
         Left = 224
-        Top = 218
+        Top = 214
         Width = 185
         Height = 57
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 10
       end
       object btnRevenueCentre: TBitBtn
@@ -530,13 +525,13 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         Top = 218
         Width = 25
         Height = 57
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 13
         Visible = False
       end
       object memAuthLimit: TMemo
-        Left = 102
-        Top = 50
+        Left = 115
+        Top = 65
         Width = 90
         Height = 21
         Alignment = taRightJustify
@@ -547,16 +542,16 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       end
       object chkbxCanChangeInvOrders: TCheckBox
         Left = 224
-        Top = 124
-        Width = 249
+        Top = 114
+        Width = 278
         Height = 17
         Caption = 'Can change invoiced orders/job bags'
         TabOrder = 14
       end
       object chkbxCanDeletePOs: TCheckBox
         Left = 224
-        Top = 11
-        Width = 249
+        Top = 1
+        Width = 278
         Height = 17
         Caption = 'Can delete/cancel Purchase Orders'
         TabOrder = 15
@@ -588,7 +583,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       object chkbxCanPass: TCheckBox
         Left = 16
         Top = 41
-        Width = 161
+        Width = 217
         Height = 17
         Caption = 'Can Pass Purchase Invoices'
         TabOrder = 1
@@ -608,7 +603,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       object GroupBox2: TGroupBox
         Left = 16
         Top = 40
-        Width = 185
+        Width = 201
         Height = 185
         Caption = 'Set Activity Reminders'
         ParentBackground = False
@@ -648,7 +643,7 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
         object chkbxOrderAckReminder: TCheckBox
           Left = 16
           Top = 132
-          Width = 150
+          Width = 193
           Height = 17
           Caption = 'Order Acknowledgement '
           TabOrder = 4
@@ -668,15 +663,15 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Left = 409
     Top = 33
     Width = 85
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     MaxLength = 40
     TabOrder = 3
     OnChange = NameEditChange
   end
   object ChgPassBitBtn: TBitBtn
-    Left = -10
-    Top = 522
+    Left = 8
+    Top = 540
     Width = 137
     Height = 25
     Anchors = [akRight, akBottom]
@@ -697,23 +692,21 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 11
     OnClick = ChgPassBitBtnClick
-    ExplicitLeft = -16
-    ExplicitTop = 513
   end
   object PhoneEdit: TEdit
-    Left = 94
+    Left = 104
     Top = 82
     Width = 161
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 5
     OnChange = NameEditChange
   end
   object MobileEdit: TEdit
-    Left = 94
+    Left = 104
     Top = 105
     Width = 161
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 6
     OnChange = NameEditChange
@@ -729,19 +722,19 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     TabOrder = 1
   end
   object WebEmailEdit: TEdit
-    Left = 94
+    Left = 104
     Top = 154
     Width = 259
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 8
     OnChange = NameEditChange
   end
   object JobTitleEdit: TEdit
-    Left = 94
+    Left = 104
     Top = 58
     Width = 161
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 4
     OnChange = NameEditChange
@@ -752,8 +745,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       'Select Button_Name, Button_Status'
       'From Operator_Button'
       'Where (Operator = :Operator)')
-    Left = 410
-    Top = 150
+    Left = 441
+    Top = 124
     ParamData = <
       item
         Name = 'Operator'
@@ -766,8 +759,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       'From Operator'
       'Where (Login_Name = :Login_Name) and'
       '      (Operator <> :Operator)')
-    Left = 474
-    Top = 262
+    Left = 210
+    Top = 102
     ParamData = <
       item
         Name = 'Login_Name'
@@ -780,8 +773,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Operator FROM Operator WHERE Name = :GUID')
-    Left = 170
-    Top = 302
+    Left = 245
+    Top = 42
     ParamData = <
       item
         Name = 'GUID'
@@ -794,8 +787,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     SQL.Strings = (
       'INSERT INTO Operator (Operator, Name, Operator_Can_Login)'
       'SELECT Max(Operator)+1, :GUID, '#39'N'#39' FROM Operator')
-    Left = 474
-    Top = 214
+    Left = 282
+    Top = 110
     ParamData = <
       item
         Name = 'GUID'
@@ -847,8 +840,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       'Can_Delete_Quote_Costs = :Can_Delete_Quote_Costs'
       'WHERE Operator = :Operator'
       '')
-    Left = 194
-    Top = 262
+    Left = 283
+    Top = 48
     ParamData = <
       item
         Name = 'Name'
@@ -972,8 +965,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       'Delete From Operator_Button'
       'Where (Operator = :Operator) AND'
       'Button_Name LIKE '#39'mnu%'#39)
-    Left = 410
-    Top = 182
+    Left = 226
+    Top = 62
     ParamData = <
       item
         Name = 'Operator'
@@ -984,8 +977,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     SQL.Strings = (
       'Delete From Operator'
       'Where (Operator = :Operator)')
-    Left = 478
-    Top = 310
+    Left = 286
+    Top = 78
     ParamData = <
       item
         Name = 'Operator'
@@ -1000,8 +993,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       '(:Operator, :Button_Name, :Button_Status)'
       ''
       ' ')
-    Left = 446
-    Top = 182
+    Left = 302
+    Top = 94
     ParamData = <
       item
         Name = 'Operator'
@@ -1031,8 +1024,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'sp_helplogins :User_Code')
-    Left = 182
-    Top = 34
+    Left = 404
+    Top = 75
     ParamData = <
       item
         Name = 'User_Code'
@@ -1045,8 +1038,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       ''
       ' '
       ' ')
-    Left = 310
-    Top = 6
+    Left = 252
+    Top = 72
     ParamData = <
       item
         Name = 'Old_Pass'
@@ -1065,13 +1058,13 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       'From Rep'
       'Order By Name'
       ' ')
-    Left = 182
-    Top = 126
+    Left = 300
+    Top = 78
   end
   object RepsDS: TDataSource
     DataSet = GetRepsSQL
-    Left = 214
-    Top = 126
+    Left = 252
+    Top = 30
   end
   object CheckShortNameExistsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1080,8 +1073,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
       'From Operator'
       'Where (Short_Name = :Short_Name) and'
       '      (Operator <> :Operator)')
-    Left = 306
-    Top = 278
+    Left = 359
+    Top = 100
     ParamData = <
       item
         Name = 'Short_Name'

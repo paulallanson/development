@@ -8,32 +8,32 @@ object PBMaintCustStockPrefixFrm: TPBMaintCustStockPrefixFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
-    Left = 23
-    Top = 20
-    Width = 71
-    Height = 13
+    Left = 16
+    Top = 19
+    Width = 81
+    Height = 17
     Caption = 'Product Prefix'
   end
   object Label12: TLabel
     Left = 16
     Top = 44
-    Width = 82
-    Height = 13
+    Width = 93
+    Height = 17
     Caption = 'Existing Prefixes'
   end
   object edtProdPrefix: TEdit
     Left = 104
     Top = 16
     Width = 209
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 0
     OnChange = edtProdPrefixChange
@@ -191,13 +191,13 @@ object PBMaintCustStockPrefixFrm: TPBMaintCustStockPrefixFrm
   end
   object DBGrid1: TDBGrid
     Left = 16
-    Top = 60
+    Top = 65
     Width = 353
     Height = 349
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False

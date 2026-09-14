@@ -7,21 +7,21 @@ object PBMaintPrdTypOChgFrm: TPBMaintPrdTypOChgFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 104
-    Top = 112
-    Width = 109
-    Height = 13
-    Caption = 'Delete these details ?'
+    Top = 109
+    Width = 122
+    Height = 17
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,7 +34,7 @@ object PBMaintPrdTypOChgFrm: TPBMaintPrdTypOChgFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -42,33 +42,33 @@ object PBMaintPrdTypOChgFrm: TPBMaintPrdTypOChgFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 16
-      Top = 52
-      Width = 37
-      Height = 13
+      Top = 57
+      Width = 42
+      Height = 17
       Caption = 'Charge'
     end
     object Label2: TLabel
       Left = 16
-      Top = 20
-      Width = 66
-      Height = 13
+      Top = 25
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object DescrEdit: TEdit
-      Left = 94
-      Top = 48
+      Left = 98
+      Top = 53
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = DescrEditChange
     end
     object PrdTypDescrEdit: TEdit
-      Left = 94
-      Top = 16
+      Left = 98
+      Top = 21
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 1
@@ -233,8 +233,8 @@ object PBMaintPrdTypOChgFrm: TPBMaintPrdTypOChgFrm
       'Select Optional_Charge'
       'From Product_TypeOChg'
       'Where Description = :GUID')
-    Left = 32
-    Top = 16
+    Left = 16
+    Top = 76
     ParamData = <
       item
         Name = 'GUID'

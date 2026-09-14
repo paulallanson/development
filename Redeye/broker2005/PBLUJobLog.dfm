@@ -3,22 +3,22 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
   Top = 112
   Caption = 'Shop Floor Data Capture Raw Data'
   ClientHeight = 441
-  ClientWidth = 854
+  ClientWidth = 889
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 422
-    Width = 854
+    Width = 889
     Height = 19
     Panels = <
       item
@@ -27,30 +27,30 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       item
         Width = 200
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 848
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 854
+    Width = 889
     Height = 422
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 344
-    ExplicitTop = 224
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 848
+    ExplicitHeight = 413
     object dbgDetails: TDBGrid
       Left = 0
       Top = 0
-      Width = 854
+      Width = 889
       Height = 345
       Align = alClient
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -58,7 +58,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -188,23 +188,25 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     object pnlControls: TPanel
       Left = 0
       Top = 381
-      Width = 854
+      Width = 889
       Height = 41
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 372
+      ExplicitWidth = 848
       object lblSearch: TLabel
         Left = 16
-        Top = 16
-        Width = 49
-        Height = 13
+        Top = 14
+        Width = 57
+        Height = 17
         Caption = 'Employee'
       end
       object edtSearch: TEdit
-        Left = 72
-        Top = 12
+        Left = 83
+        Top = 10
         Width = 161
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = edtSearchChange
       end
@@ -218,7 +220,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         OnClick = btnSearchClick
       end
       object Panel2: TPanel
-        Left = 576
+        Left = 611
         Top = 1
         Width = 277
         Height = 39
@@ -226,6 +228,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
+        ExplicitTop = 3
         DesignSize = (
           277
           39)
@@ -296,51 +299,49 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     object pnlFilters: TPanel
       Left = 0
       Top = 345
-      Width = 854
+      Width = 889
       Height = 36
       Align = alBottom
       ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 386
+      ExplicitTop = 336
+      ExplicitWidth = 848
       DesignSize = (
-        854
+        889
         36)
       object Label1: TLabel
-        Left = 690
-        Top = 12
-        Width = 78
-        Height = 13
+        Left = 714
+        Top = 10
+        Width = 88
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Machine Hours'
-        ExplicitLeft = 696
       end
       object Label4: TLabel
-        Left = 530
-        Top = 12
-        Width = 80
-        Height = 13
+        Left = 538
+        Top = 10
+        Width = 92
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Overtime Hours'
-        ExplicitLeft = 536
       end
       object Label5: TLabel
-        Left = 362
-        Top = 12
-        Width = 81
-        Height = 13
+        Left = 365
+        Top = 10
+        Width = 92
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Standard Hours'
-        ExplicitLeft = 368
       end
       object lblDateFrom: TLabel
         Left = 16
-        Top = 12
-        Width = 24
-        Height = 13
+        Top = 10
+        Width = 27
+        Height = 17
         Caption = 'Date'
       end
       object memMachine: TMemo
-        Left = 770
+        Left = 805
         Top = 8
         Width = 65
         Height = 21
@@ -351,9 +352,10 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         TabOrder = 0
         WantReturns = False
         WordWrap = False
+        ExplicitLeft = 764
       end
       object memOvertime: TMemo
-        Left = 610
+        Left = 634
         Top = 8
         Width = 65
         Height = 21
@@ -366,7 +368,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         WordWrap = False
       end
       object memLabour: TMemo
-        Left = 450
+        Left = 463
         Top = 8
         Width = 65
         Height = 21
@@ -379,10 +381,10 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         WordWrap = False
       end
       object dtmDateFrom: TDateTimePicker
-        Left = 72
-        Top = 8
+        Left = 56
+        Top = 6
         Width = 89
-        Height = 21
+        Height = 25
         Date = 39825.000000000000000000
         Time = 0.441564409717102500
         TabOrder = 3

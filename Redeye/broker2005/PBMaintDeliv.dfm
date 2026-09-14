@@ -2,49 +2,51 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   Left = 129
   Top = 4
   Caption = 'Maintain Purchase Order Line Deliveries'
-  ClientHeight = 609
-  ClientWidth = 620
+  ClientHeight = 660
+  ClientWidth = 688
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 610
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object BottomPanel: TPanel
     Left = 0
-    Top = 549
-    Width = 620
+    Top = 600
+    Width = 688
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 540
+    ExplicitWidth = 614
     DesignSize = (
-      620
+      688
       41)
     object DelLabel: TLabel
-      Left = 261
+      Left = 323
       Top = 11
-      Width = 145
-      Height = 15
+      Width = 166
+      Height = 16
       Anchors = [akRight, akBottom]
       Caption = 'Delete the above details ?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 277
+      ExplicitLeft = 867
     end
     object OKBitBtn: TBitBtn
-      Left = 421
+      Left = 483
       Top = 6
       Width = 75
       Height = 25
@@ -118,9 +120,10 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 409
     end
     object CancelBitBtn: TBitBtn
-      Left = 509
+      Left = 571
       Top = 6
       Width = 75
       Height = 25
@@ -195,63 +198,65 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 497
     end
   end
   object pnlFormRef: TPanel
     Left = 0
     Top = 0
-    Width = 620
+    Width = 688
     Height = 81
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 614
     object POrderLbl: TLabel
       Left = 8
       Top = 4
-      Width = 51
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'POrderLbl'
     end
     object CustomerLbl: TLabel
       Left = 208
       Top = 4
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label12: TLabel
       Left = 8
       Top = 55
-      Width = 80
-      Height = 13
+      Width = 92
+      Height = 17
       Caption = 'Form Reference'
     end
     object Label17: TLabel
       Left = 8
       Top = 30
-      Width = 82
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'Stock Reference'
     end
     object lblOrderPrice: TLabel
-      Left = 384
-      Top = 22
-      Width = 58
-      Height = 13
+      Left = 392
+      Top = 27
+      Width = 68
+      Height = 17
       Caption = 'Order price'
     end
     object lblOrderQty: TLabel
-      Left = 384
-      Top = 47
-      Width = 50
-      Height = 13
+      Left = 392
+      Top = 52
+      Width = 59
+      Height = 17
       Caption = 'Order Qty'
     end
     object edtFormRef: TEdit
-      Left = 96
+      Left = 107
       Top = 51
       Width = 233
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -272,19 +277,19 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       OnClick = btnFormRefClick
     end
     object edtStockRef: TEdit
-      Left = 96
+      Left = 109
       Top = 26
       Width = 233
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
     end
     object dblkpVersions: TDBLookupComboBox
-      Left = 96
+      Left = 107
       Top = 26
       Width = 265
-      Height = 21
+      Height = 25
       KeyField = 'Stock_Code_No'
       ListField = 'Stock_Description'
       ListSource = dtsVersions
@@ -296,26 +301,27 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   object pgDeliveryDetails: TPageControl
     Left = 0
     Top = 81
-    Width = 620
-    Height = 468
+    Width = 688
+    Height = 519
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 620
+    ExplicitHeight = 468
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
         Left = 0
-        Top = 352
-        Width = 612
-        Height = 88
-        Align = alClient
+        Top = 387
+        Width = 1224
+        Height = 97
         ParentBackground = False
         TabOrder = 0
         object Label10: TLabel
           Left = 16
           Top = 10
-          Width = 104
-          Height = 13
+          Width = 116
+          Height = 17
           Caption = 'Delivery Instructions'
         end
         object DelInstructMemo: TMemo
@@ -329,38 +335,39 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 612
-        Height = 316
+        Width = 680
+        Height = 343
         Align = alTop
-        Caption = 'Panel1'
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 1
+        ExplicitWidth = 1224
         object Label9: TLabel
-          Left = 160
-          Top = 258
-          Width = 83
-          Height = 13
+          Left = 187
+          Top = 288
+          Width = 95
+          Height = 17
           Caption = 'Supp req'#39'd date'
         end
         object Label11: TLabel
-          Left = 376
-          Top = 284
-          Width = 75
-          Height = 13
+          Left = 440
+          Top = 309
+          Width = 86
+          Height = 17
           Caption = 'Date Delivered'
         end
         object Label18: TLabel
-          Left = 160
-          Top = 284
-          Width = 79
-          Height = 13
+          Left = 187
+          Top = 312
+          Width = 90
+          Height = 17
           Caption = 'Cust req'#39'd date'
         end
         object AddrTypeRadGrp: TRadioGroup
           Left = 8
-          Top = 24
+          Top = 27
           Width = 105
-          Height = 113
+          Height = 136
           Caption = 'Address Type'
           Items.Strings = (
             'Ad Hoc'
@@ -373,152 +380,152 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           OnClick = AddrTypeRadGrpClick
         end
         object AddrGrpBox: TGroupBox
-          Left = 160
+          Left = 187
           Top = 24
-          Width = 377
-          Height = 225
+          Width = 418
+          Height = 252
           Caption = 'Address Details'
           ParentBackground = False
           TabOrder = 1
           object AddrTypeLabel: TLabel
             Left = 8
-            Top = 19
-            Width = 51
-            Height = 13
+            Top = 25
+            Width = 60
+            Height = 17
             Caption = 'Addr Type'
           end
           object BranchNameLabel: TLabel
             Left = 8
-            Top = 66
-            Width = 35
-            Height = 13
+            Top = 72
+            Width = 39
+            Height = 17
             Caption = 'Branch'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object Label4: TLabel
             Left = 8
-            Top = 89
-            Width = 41
-            Height = 13
+            Top = 95
+            Width = 48
+            Height = 17
             Caption = 'Address'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object Label7: TLabel
             Left = 8
-            Top = 184
-            Width = 47
-            Height = 13
+            Top = 190
+            Width = 54
+            Height = 17
             Caption = 'Postcode'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object lblFAO: TLabel
             Left = 8
-            Top = 42
-            Width = 21
-            Height = 13
+            Top = 48
+            Width = 23
+            Height = 17
             Caption = 'FAO'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object Label19: TLabel
             Left = 184
-            Top = 182
-            Width = 37
-            Height = 13
+            Top = 188
+            Width = 40
+            Height = 17
             Caption = 'County'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object NameEdit: TEdit
             Left = 85
-            Top = 15
-            Width = 252
-            Height = 21
+            Top = 21
+            Width = 262
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 0
           end
           object BranchNameEdit: TEdit
             Left = 85
-            Top = 62
-            Width = 252
-            Height = 21
+            Top = 68
+            Width = 262
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 1
           end
           object BuildingEdit: TEdit
             Left = 85
-            Top = 85
-            Width = 252
-            Height = 21
+            Top = 91
+            Width = 262
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 2
           end
           object StreetEdit: TEdit
             Left = 85
-            Top = 109
-            Width = 252
-            Height = 21
+            Top = 115
+            Width = 262
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 3
           end
           object LocaleEdit: TEdit
             Left = 85
-            Top = 133
-            Width = 252
-            Height = 21
+            Top = 139
+            Width = 262
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 4
           end
           object TownEdit: TEdit
             Left = 85
-            Top = 156
-            Width = 252
-            Height = 21
+            Top = 162
+            Width = 262
+            Height = 25
             MaxLength = 40
             ReadOnly = True
             TabOrder = 5
           end
           object PostCodeEdit: TEdit
             Left = 85
-            Top = 180
+            Top = 186
             Width = 84
-            Height = 21
+            Height = 25
             CharCase = ecUpperCase
             MaxLength = 10
             ReadOnly = True
             TabOrder = 6
           end
           object DelivNotesBitBtn: TBitBtn
-            Left = 344
-            Top = 177
+            Left = 353
+            Top = 185
             Width = 25
             Height = 25
             Font.Charset = DEFAULT_CHARSET
@@ -546,7 +553,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           end
           object chkbxInvoice: TCheckBox
             Left = 221
-            Top = 204
+            Top = 225
             Width = 121
             Height = 17
             Caption = 'Invoice upfront'
@@ -554,15 +561,15 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           end
           object edtFAO: TEdit
             Left = 85
-            Top = 38
-            Width = 252
-            Height = 21
+            Top = 44
+            Width = 262
+            Height = 25
             MaxLength = 40
             TabOrder = 9
           end
           object btnLUContact: TButton
-            Left = 344
-            Top = 36
+            Left = 354
+            Top = 44
             Width = 25
             Height = 25
             Caption = '...'
@@ -576,20 +583,66 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             OnClick = btnLUContactClick
           end
           object CountyEdit: TEdit
-            Left = 221
-            Top = 178
+            Left = 231
+            Top = 184
             Width = 116
-            Height = 21
+            Height = 25
             CharCase = ecUpperCase
             MaxLength = 10
             ReadOnly = True
             TabOrder = 11
           end
+          object DeliveryToStockChk: TCheckBox
+            Left = 8
+            Top = 225
+            Width = 168
+            Height = 17
+            Caption = 'Delivery in to Stock'
+            TabOrder = 12
+            OnClick = DeliveryToStockChkClick
+          end
+          object SearchBtn: TButton
+            Left = 353
+            Top = 17
+            Width = 25
+            Height = 25
+            Caption = '...'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -12
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 13
+            OnClick = SearchBtnClick
+          end
+          object btnClear: TBitBtn
+            Left = 385
+            Top = 17
+            Width = 27
+            Height = 25
+            Glyph.Data = {
+              76010000424D7601000000000000760000002800000020000000100000000100
+              04000000000000010000120B0000120B00001000000000000000000000000000
+              800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00500005000555
+              555557777F777555F55500000000555055557777777755F75555005500055055
+              555577F5777F57555555005550055555555577FF577F5FF55555500550050055
+              5555577FF77577FF555555005050110555555577F757777FF555555505099910
+              555555FF75777777FF555005550999910555577F5F77777775F5500505509990
+              3055577F75F77777575F55005055090B030555775755777575755555555550B0
+              B03055555F555757575755550555550B0B335555755555757555555555555550
+              BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
+              50BB555555555555575F555555555555550B5555555555555575}
+            NumGlyphs = 2
+            TabOrder = 14
+            OnClick = btnClearClick
+          end
         end
         object QtysGrpBox: TGroupBox
           Left = 8
-          Top = 138
-          Width = 145
+          Top = 166
+          Width = 160
           Height = 171
           Caption = 'Quantities'
           ParentBackground = False
@@ -597,12 +650,12 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label5: TLabel
             Left = 8
             Top = 20
-            Width = 50
-            Height = 13
+            Width = 58
+            Height = 17
             Caption = 'To Deliver'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -610,12 +663,12 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label6: TLabel
             Left = 8
             Top = 46
-            Width = 48
-            Height = 13
+            Width = 55
+            Height = 17
             Caption = 'Delivered'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -623,12 +676,12 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label8: TLabel
             Left = 8
             Top = 72
-            Width = 43
-            Height = 13
+            Width = 48
+            Height = 17
             Caption = 'Invoiced'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -636,12 +689,12 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label1: TLabel
             Left = 8
             Top = 123
-            Width = 62
-            Height = 13
+            Width = 73
+            Height = 17
             Caption = 'No of boxes'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
@@ -649,25 +702,25 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           object Label14: TLabel
             Left = 8
             Top = 98
-            Width = 38
-            Height = 13
+            Width = 45
+            Height = 17
             Caption = 'Box Qty'
           end
           object Label2: TLabel
             Left = 8
             Top = 148
-            Width = 68
-            Height = 13
+            Width = 77
+            Height = 17
             Caption = 'Weight (gms)'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
           end
           object QtyToDeliverMemo: TMemo
-            Left = 72
+            Left = 89
             Top = 16
             Width = 65
             Height = 21
@@ -682,7 +735,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             OnKeyUp = QtyToDeliverMemoKeyUp
           end
           object QtyDeliveredMemo: TMemo
-            Left = 72
+            Left = 89
             Top = 42
             Width = 65
             Height = 21
@@ -696,7 +749,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             OnExit = ValidateQty
           end
           object QtyInvoicedMemo: TMemo
-            Left = 72
+            Left = 89
             Top = 68
             Width = 65
             Height = 21
@@ -710,7 +763,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             OnExit = ValidateQty
           end
           object NoOfBoxesMemo: TMemo
-            Left = 72
+            Left = 89
             Top = 119
             Width = 65
             Height = 21
@@ -723,7 +776,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             OnExit = ValidateQty
           end
           object BoxQtyMemo: TMemo
-            Left = 72
+            Left = 89
             Top = 94
             Width = 65
             Height = 21
@@ -736,7 +789,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             OnExit = ValidateQty
           end
           object WeightMemo: TMemo
-            Left = 72
+            Left = 89
             Top = 144
             Width = 65
             Height = 21
@@ -750,34 +803,19 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           end
         end
         object DatePointEdit: TEdit
-          Left = 250
-          Top = 254
+          Left = 288
+          Top = 282
           Width = 81
-          Height = 21
+          Height = 25
           TabOrder = 3
           OnExit = DatePointEditExit
         end
-        object SearchBtn: TButton
-          Left = 504
-          Top = 34
-          Width = 25
-          Height = 25
-          Caption = '...'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentFont = False
-          TabOrder = 4
-          OnClick = SearchBtnClick
-        end
         object DeliveryDateEdit: TEdit
-          Left = 461
-          Top = 280
+          Left = 532
+          Top = 305
           Width = 81
-          Height = 21
-          TabOrder = 5
+          Height = 25
+          TabOrder = 4
           OnExit = DeliveryDateEditExit
         end
         object DeliverViachk: TCheckBox
@@ -786,11 +824,33 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           Width = 385
           Height = 17
           Caption = 'DeliverViachk'
-          TabOrder = 6
+          TabOrder = 5
         end
         object DatePointBtn: TBitBtn
-          Left = 336
-          Top = 252
+          Left = 388
+          Top = 282
+          Width = 25
+          Height = 25
+          Glyph.Data = {
+            76010000424D7601000000000000760000002800000020000000100000000100
+            04000000000000010000130B0000130B00001000000000000000000000000000
+            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+            F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+            F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+            F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+            F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+            F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+            F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+            333337FFFFFFFF77333330000000000333333777777777733333}
+          NumGlyphs = 2
+          TabOrder = 6
+          OnClick = DatePointBtnClick
+        end
+        object DeliveryDateBtn: TBitBtn
+          Left = 619
+          Top = 304
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -808,41 +868,19 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             333337FFFFFFFF77333330000000000333333777777777733333}
           NumGlyphs = 2
           TabOrder = 7
-          OnClick = DatePointBtnClick
-        end
-        object DeliveryDateBtn: TBitBtn
-          Left = 548
-          Top = 279
-          Width = 25
-          Height = 25
-          Glyph.Data = {
-            76010000424D7601000000000000760000002800000020000000100000000100
-            04000000000000010000130B0000130B00001000000000000000000000000000
-            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-            003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
-            F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
-            F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
-            F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
-            F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
-            F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
-            F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
-            333337FFFFFFFF77333330000000000333333777777777733333}
-          NumGlyphs = 2
-          TabOrder = 8
           OnClick = DeliveryDateBtnClick
         end
         object CustReqDateEdit: TEdit
-          Left = 250
-          Top = 280
+          Left = 288
+          Top = 313
           Width = 81
-          Height = 21
-          TabOrder = 9
+          Height = 25
+          TabOrder = 8
           OnExit = CustReqDateEditExit
         end
         object CustReqDatebtn: TBitBtn
-          Left = 336
-          Top = 279
+          Left = 388
+          Top = 313
           Width = 25
           Height = 25
           Glyph.Data = {
@@ -859,76 +897,47 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
             F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
             333337FFFFFFFF77333330000000000333333777777777733333}
           NumGlyphs = 2
-          TabOrder = 10
+          TabOrder = 9
           OnClick = CustReqDatebtnClick
-        end
-        object btnClear: TBitBtn
-          Left = 544
-          Top = 35
-          Width = 27
-          Height = 25
-          Glyph.Data = {
-            76010000424D7601000000000000760000002800000020000000100000000100
-            04000000000000010000120B0000120B00001000000000000000000000000000
-            800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00500005000555
-            555557777F777555F55500000000555055557777777755F75555005500055055
-            555577F5777F57555555005550055555555577FF577F5FF55555500550050055
-            5555577FF77577FF555555005050110555555577F757777FF555555505099910
-            555555FF75777777FF555005550999910555577F5F77777775F5500505509990
-            3055577F75F77777575F55005055090B030555775755777575755555555550B0
-            B03055555F555757575755550555550B0B335555755555757555555555555550
-            BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
-            50BB555555555555575F555555555555550B5555555555555575}
-          NumGlyphs = 2
-          TabOrder = 11
-          OnClick = btnClearClick
-        end
-        object DeliveryToStockChk: TCheckBox
-          Left = 168
-          Top = 228
-          Width = 121
-          Height = 17
-          Caption = 'Delivery in to Stock'
-          TabOrder = 12
-          OnClick = DeliveryToStockChkClick
         end
       end
       object pnlCourierService: TPanel
         Left = 0
-        Top = 316
-        Width = 612
+        Top = 343
+        Width = 680
         Height = 36
         Align = alTop
         ParentBackground = False
         TabOrder = 2
+        ExplicitTop = 316
+        ExplicitWidth = 606
         object lblCourier: TLabel
           Left = 16
-          Top = 12
+          Top = 10
           Width = 137
-          Height = 13
+          Height = 17
           AutoSize = False
           Caption = 'Courier Details'
         end
         object Label20: TLabel
           Left = 160
           Top = 12
-          Width = 35
-          Height = 13
+          Width = 41
+          Height = 17
           Caption = 'Service'
         end
         object Label21: TLabel
           Left = 377
           Top = 12
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Caption = 'Package Type'
         end
         object dblkpCourierService: TDBLookupComboBox
           Left = 208
           Top = 8
           Width = 153
-          Height = 21
+          Height = 25
           KeyField = 'Service_no'
           ListField = 'Service_Description'
           ListSource = PBPODM.dtsCourierService
@@ -938,7 +947,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
           Left = 464
           Top = 8
           Width = 115
-          Height = 21
+          Height = 25
           KeyField = 'Package_Type'
           ListField = 'Package_Type_Descr'
           ListSource = PBPODM.dtsPackageType
@@ -984,7 +993,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       end
       object memQtyDelivIn: TMemo
         Left = 104
-        Top = 256
+        Top = 261
         Width = 65
         Height = 25
         Alignment = taRightJustify
@@ -1018,8 +1027,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object Label15: TLabel
         Left = 16
         Top = 298
-        Width = 81
-        Height = 13
+        Width = 90
+        Height = 17
         Caption = 'Quantity to Pick'
       end
       object sgPick: TStringGrid
@@ -1094,8 +1103,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       object FromStoreLabel: TLabel
         Left = 32
         Top = 24
-        Width = 27
-        Height = 13
+        Width = 31
+        Height = 17
         Caption = 'Store'
       end
       object MemQtyToStock: TMemo
@@ -1141,7 +1150,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         Left = 72
         Top = 16
         Width = 193
-        Height = 21
+        Height = 25
         KeyField = 'Part_Store'
         ListField = 'Part_Store_Name'
         ListSource = dtmdlStockMove.StoresDataSource
@@ -1151,8 +1160,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 590
-    Width = 620
+    Top = 641
+    Width = 688
     Height = 19
     Panels = <
       item
@@ -1161,11 +1170,13 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       item
         Width = 50
       end>
+    ExplicitTop = 581
+    ExplicitWidth = 614
   end
   object pMnBins: TPopupMenu
     OnPopup = pMnBinsPopup
-    Left = 124
-    Top = 227
+    Left = 316
+    Top = 91
     object popAdd: TMenuItem
       Caption = 'Add'
       OnClick = popAddClick
@@ -1184,8 +1195,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   end
   object pMenuStock: TPopupMenu
     OnPopup = pMenuStockPopup
-    Left = 188
-    Top = 235
+    Left = 380
+    Top = 91
     object StockAdd: TMenuItem
       Caption = '&Add'
       OnClick = StockAddClick
@@ -1219,8 +1230,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       'where'
       '(Purchase_orderline.purchase_order = :OrderNo) and'
       '(Purchase_orderline.Line = :OrderLine)')
-    Left = 100
-    Top = 163
+    Left = 260
+    Top = 91
     ParamData = <
       item
         Name = 'OrderNo'
@@ -1244,8 +1255,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       '   (Part_Movement.Part_Movement_Store = :Store)'
       ' '
       ' ')
-    Left = 324
-    Top = 243
+    Left = 212
+    Top = 291
     ParamData = <
       item
         Name = 'MoveRef'
@@ -1270,8 +1281,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       ' '
       ' '
       ' ')
-    Left = 336
-    Top = 184
+    Left = 288
+    Top = 256
     ParamData = <
       item
         Name = 'Part'
@@ -1296,7 +1307,7 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       'where (Purchase_or_Store = '#39'P'#39') and (Part_store_Type ='#39'1'#39')  and'
       '  (part = :Part)')
     Left = 392
-    Top = 176
+    Top = 232
     ParamData = <
       item
         Name = 'Part'
@@ -1305,8 +1316,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   object FlashDelivTimer: TTimer
     Enabled = False
     OnTimer = FlashDelivTimerTimer
-    Left = 416
-    Top = 260
+    Left = 112
+    Top = 316
   end
   object ChkOneDelivSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1318,8 +1329,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       'WHERE (((Delivery_Detail.Purchase_Order)=:Purch_Ord))'
       ' '
       ' ')
-    Left = 148
-    Top = 267
+    Left = 372
+    Top = 163
     ParamData = <
       item
         Name = 'Purch_Ord'
@@ -1338,8 +1349,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       ' '
       ' '
       ' ')
-    Left = 148
-    Top = 323
+    Left = 204
+    Top = 203
     ParamData = <
       item
         Name = 'deliv_Qty'
@@ -1376,8 +1387,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
         'e.Form_Reference and'
       '      (Quantity_Ordered - Quantity_Delivered) > 0'
       'Order By Form_Reference.Stock_Reference')
-    Left = 464
-    Top = 18
+    Left = 312
+    Top = 154
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1385,8 +1396,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
   end
   object dtsVersions: TDataSource
     DataSet = qryVersions
-    Left = 513
-    Top = 22
+    Left = 153
+    Top = 214
   end
   object qryUpPOVersions: TFDQuery
     ConnectionName = 'PB'
@@ -1398,8 +1409,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       'WHERE Purchase_Order = :Purchase_Order AND'
       'Line = :Line AND'
       'Stock_Code_No = :Stock_Code_No')
-    Left = 466
-    Top = 79
+    Left = 242
+    Top = 151
     ParamData = <
       item
         Name = 'Quantity_Delivered'
@@ -1422,8 +1433,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line'
       'Order By Delivery_no Desc')
-    Left = 34
-    Top = 455
+    Left = 186
+    Top = 359
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1457,8 +1468,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       ':Delivery_to_Stock,'
       ':Company_Branch'
       ')')
-    Left = 121
-    Top = 454
+    Left = 249
+    Top = 366
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -1494,8 +1505,8 @@ object PBMaintDelivFrm: TPBMaintDelivFrm
       'select max(Delivery_no) as Last_Delivery'
       'from delivery_detail'
       'where purchase_order = :purchase_order and Line = :Line')
-    Left = 210
-    Top = 455
+    Left = 322
+    Top = 359
     ParamData = <
       item
         Name = 'purchase_order'

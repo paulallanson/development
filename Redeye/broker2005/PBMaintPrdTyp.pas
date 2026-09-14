@@ -30,8 +30,6 @@ type
     DetsGrpBox: TGroupBox;
     Label2: TLabel;
     Label5: TLabel;
-    Label11: TLabel;
-    Label3: TLabel;
     Label4: TLabel;
     Label6: TLabel;
     Label7: TLabel;

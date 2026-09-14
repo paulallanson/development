@@ -3,33 +3,34 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Maintain Activity Type'
-  ClientHeight = 157
-  ClientWidth = 423
+  ClientHeight = 170
+  ClientWidth = 439
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    423
-    157)
-  TextHeight = 13
+    439
+    170)
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
-    Top = 123
-    Width = 109
-    Height = 13
+    Top = 139
+    Width = 132
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 132
   end
   object DetsGrpBox: TGroupBox
     Left = 16
@@ -39,7 +40,7 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -48,15 +49,15 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 23
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Type'
     end
     object DescrEdit: TEdit
       Left = 94
       Top = 24
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -73,7 +74,7 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
   end
   object OKBitBtn: TBitBtn
     Left = 256
-    Top = 115
+    Top = 135
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -147,10 +148,11 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 128
   end
   object CancelBitBtn: TBitBtn
     Left = 336
-    Top = 115
+    Top = 135
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -224,6 +226,7 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitTop = 128
   end
   object chkbxActive: TCheckBox
     Left = 33
@@ -239,8 +242,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'Select Activity_Type'
       'From Activity_Type'
       'Where Activity_Type_Description = :GUID')
-    Left = 56
-    Top = 96
+    Left = 318
+    Top = 24
     ParamData = <
       item
         Name = 'GUID'
@@ -259,8 +262,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       ''
       ''
       ' ')
-    Left = 212
-    Top = 72
+    Left = 249
+    Top = 18
     ParamData = <
       item
         Name = 'GUID'
@@ -279,8 +282,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'Where'
       '(Activity_Type = :Activity_Type)'
       '')
-    Left = 8
-    Top = 96
+    Left = 250
+    Top = 32
     ParamData = <
       item
         Name = 'Activity_Type_Description'
@@ -301,8 +304,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'Delete From Activity_Type'
       'Where'
       '(Activity_Type = :Activity_Type)')
-    Left = 152
-    Top = 72
+    Left = 246
+    Top = 26
     ParamData = <
       item
         Name = 'Activity_Type'
@@ -310,8 +313,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
   end
   object DetsSRC: TDataSource
     DataSet = AddSQL
-    Left = 344
-    Top = 72
+    Left = 270
+    Top = 18
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -320,8 +323,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'From Activity_Type'
       'Where Activity_Type_Description = :GUID'
       '')
-    Left = 272
-    Top = 76
+    Left = 236
+    Top = 23
     ParamData = <
       item
         Name = 'GUID'

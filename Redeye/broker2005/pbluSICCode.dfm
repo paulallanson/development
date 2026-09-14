@@ -3,23 +3,23 @@ object PBLUSICCodeFrm: TPBLUSICCodeFrm
   Top = 190
   BorderStyle = bsDialog
   Caption = 'Look-Up A SIC Code'
-  ClientHeight = 402
-  ClientWidth = 485
+  ClientHeight = 441
+  ClientWidth = 495
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 318
+    Left = 312
     Top = 312
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -32,7 +32,7 @@ object PBLUSICCodeFrm: TPBLUSICCodeFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +40,7 @@ object PBLUSICCodeFrm: TPBLUSICCodeFrm
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -63,8 +63,8 @@ object PBLUSICCodeFrm: TPBLUSICCodeFrm
       end>
   end
   object SelectBitBtn: TBitBtn
-    Left = 392
-    Top = 332
+    Left = 398
+    Top = 364
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -138,8 +138,8 @@ object PBLUSICCodeFrm: TPBLUSICCodeFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 392
-    Top = 360
+    Left = 398
+    Top = 392
     Width = 75
     Height = 25
     Kind = bkClose
@@ -226,23 +226,23 @@ object PBLUSICCodeFrm: TPBLUSICCodeFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 328
+    Top = 340
     Width = 369
-    Height = 65
+    Height = 77
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 4
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 21
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 40
+      Top = 53
       Width = 217
       Height = 17
       Caption = 'Only show active SIC Codes'

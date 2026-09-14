@@ -2,25 +2,25 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
   Left = 152
   Top = 121
   Caption = 'Maintain Artwork Types'
-  ClientHeight = 108
+  ClientHeight = 126
   ClientWidth = 535
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 112
     Top = 80
-    Width = 109
-    Height = 13
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -33,7 +33,7 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -42,15 +42,15 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 61
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Instructions'
     end
     object DescrEdit: TEdit
       Left = 78
       Top = 24
       Width = 403
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -59,7 +59,7 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
   end
   object OKBitBtn: TBitBtn
     Left = 248
-    Top = 72
+    Top = 77
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -135,7 +135,7 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 328
-    Top = 72
+    Top = 77
     Width = 75
     Height = 25
     Cancel = True
@@ -217,7 +217,7 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
       'Where Artwork_Instructions = :GUID'
       ' ')
     Left = 192
-    Top = 24
+    Top = 14
     ParamData = <
       item
         Name = 'GUID'
@@ -255,8 +255,8 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
       '(Artwork_Type = :Artwork_Type) '
       ''
       ' ')
-    Left = 144
-    Top = 16
+    Left = 116
+    Top = 4
     ParamData = <
       item
         Name = 'Artwork_Instructions'
@@ -293,8 +293,8 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
       'From Form_Reference'
       'Where Form_Reference_Descr = :GUID'
       '')
-    Left = 360
-    Top = 52
+    Left = 466
+    Top = 25
     ParamData = <
       item
         Name = 'GUID'
@@ -308,8 +308,8 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
       'Select Artwork_Type'
       'from Artwork_Type'
       'Where Artwork_Instructions = :Artwork_Instructions ')
-    Left = 96
-    Top = 56
+    Left = 120
+    Top = 30
     ParamData = <
       item
         Name = 'Artwork_Instructions'

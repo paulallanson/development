@@ -3,23 +3,23 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Look-Up A Question'
-  ClientHeight = 317
-  ClientWidth = 492
+  ClientHeight = 340
+  ClientWidth = 485
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
-    Top = 232
-    Width = 59
-    Height = 13
+    Left = 304
+    Top = 231
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -32,7 +32,7 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +40,7 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -62,24 +62,24 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 248
+    Top = 263
     Width = 361
-    Height = 49
+    Height = 58
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 22
       Width = 337
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 392
-    Top = 244
+    Left = 386
+    Top = 263
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -153,8 +153,8 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 392
-    Top = 272
+    Left = 386
+    Top = 291
     Width = 75
     Height = 25
     Kind = bkClose
@@ -162,8 +162,8 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 384
-    Top = 128
+    Left = 380
+    Top = 96
     Width = 87
     Height = 105
     Caption = 'Function'
@@ -225,7 +225,7 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 242
+    Top = 102
   end
 end

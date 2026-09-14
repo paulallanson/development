@@ -8,12 +8,12 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object grpbxContact: TGroupBox
     Left = 8
     Top = 8
@@ -25,22 +25,22 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 60
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Email'
     end
     object edtEmail: TEdit
       Left = 64
       Top = 56
       Width = 425
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = EnableOK
     end
@@ -48,7 +48,7 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
       Left = 64
       Top = 24
       Width = 233
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = dtsContacts
@@ -65,15 +65,15 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
     object Label3: TLabel
       Left = 8
       Top = 20
-      Width = 38
-      Height = 13
+      Width = 42
+      Height = 17
       Caption = 'Subject'
     end
     object edtSubject: TEdit
       Left = 64
       Top = 16
       Width = 425
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EnableOK
     end
@@ -120,8 +120,8 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
       'from customer_Contact'
       'where customer = :Customer'
       'Order By Name')
-    Left = 384
-    Top = 24
+    Left = 400
+    Top = 14
     ParamData = <
       item
         Name = 'Customer'
@@ -131,7 +131,7 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
   object dtsContacts: TDataSource
     DataSet = qrySContacts
     OnDataChange = dtsContactsDataChange
-    Left = 336
-    Top = 24
+    Left = 332
+    Top = 22
   end
 end

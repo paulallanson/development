@@ -3,34 +3,34 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
   Top = 155
   BorderStyle = bsDialog
   Caption = 'Maintain company branches'
-  ClientHeight = 256
+  ClientHeight = 308
   ClientWidth = 430
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 112
-    Top = 230
-    Width = 133
-    Height = 13
-    Caption = 'Delete the above details ?'
+    Left = 109
+    Top = 257
+    Width = 150
+    Height = 17
+    Caption = 'Delete the above details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
     Left = 263
-    Top = 223
+    Top = 254
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -106,7 +106,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 342
-    Top = 223
+    Top = 254
     Width = 75
     Height = 25
     Cancel = True
@@ -182,13 +182,13 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
   end
   object DetsGrpBox: TGroupBox
     Left = 8
-    Top = 12
+    Top = 8
     Width = 409
-    Height = 205
+    Height = 221
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -197,12 +197,12 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     object Label2: TLabel
       Left = 16
       Top = 22
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -210,12 +210,12 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     object Label3: TLabel
       Left = 16
       Top = 46
-      Width = 41
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Address'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -223,12 +223,12 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     object Label7: TLabel
       Left = 16
       Top = 145
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -237,7 +237,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       Left = 92
       Top = 18
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'NameEdit'
@@ -247,7 +247,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       Left = 92
       Top = 42
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'BuildingEdit'
@@ -256,7 +256,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       Left = 92
       Top = 67
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
       Text = '0123456789012345678901234567890123456789'
@@ -265,7 +265,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       Left = 92
       Top = 92
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 3
       Text = 'LocaleEdit'
@@ -274,7 +274,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       Left = 92
       Top = 117
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 4
       Text = 'TownEdit'
@@ -283,7 +283,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       Left = 92
       Top = 142
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 10
       TabOrder = 5
@@ -291,7 +291,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     end
     object NotesBitBtn: TBitBtn
       Left = 292
-      Top = 142
+      Top = 152
       Width = 100
       Height = 25
       Caption = 'Notes        '
@@ -320,7 +320,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
     end
     object DelivNotesBitBtn: TBitBtn
       Left = 292
-      Top = 169
+      Top = 179
       Width = 100
       Height = 25
       Caption = 'Deliv Narr'
@@ -358,7 +358,7 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 8
-    Top = 223
+    Top = 254
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -465,8 +465,8 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       'Delete From Company_Branch'
       'Where'
       '(Branch_no = :Branch_no) and (Company = 1)')
-    Left = 48
-    Top = 104
+    Left = 40
+    Top = 56
     ParamData = <
       item
         Name = 'Branch_no'
@@ -475,8 +475,8 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 136
-    Top = 116
+    Left = 160
+    Top = 60
   end
   object FlashDelivTimer: TTimer
     Enabled = False
@@ -504,8 +504,8 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       ''
       ''
       ' ')
-    Left = 48
-    Top = 168
+    Left = 64
+    Top = 64
     ParamData = <
       item
         Name = 'GUID'
@@ -522,8 +522,8 @@ object PBMaintCompBranchFrm: TPBMaintCompBranchFrm
       '(Branch_no = :Branch_no) and (Company = 1) '
       ' '
       ' ')
-    Left = 200
-    Top = 128
+    Left = 224
+    Top = 48
     ParamData = <
       item
         Name = 'Narrative'

@@ -8,7 +8,7 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,17 +16,17 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
   DesignSize = (
     423
     218)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
-    Top = 189
-    Width = 122
-    Height = 15
+    Top = 185
+    Width = 125
+    Height = 16
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete these details ?'
+    Caption = 'Delete these details'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -38,7 +38,7 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
     Height = 161
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -46,32 +46,32 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
     object Label1: TLabel
       Left = 72
       Top = 132
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Terms'
     end
     object Label2: TLabel
       Left = 25
-      Top = 24
-      Width = 82
-      Height = 13
+      Top = 16
+      Width = 96
+      Height = 17
       Caption = 'Number of Days'
     end
     object DescrEdit: TEdit
       Left = 118
       Top = 128
       Width = 259
-      Height = 21
+      Height = 25
       MaxLength = 60
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = CheckOK
     end
     object spnDays: TSpinEdit
-      Left = 118
-      Top = 23
+      Left = 131
+      Top = 13
       Width = 51
-      Height = 22
+      Height = 27
       MaxValue = 0
       MinValue = 0
       TabOrder = 1
@@ -80,9 +80,9 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
     end
     object rdgrpPaymentType: TRadioGroup
       Left = 192
-      Top = 16
+      Top = 8
       Width = 185
-      Height = 105
+      Height = 114
       Caption = 'Payment Type'
       Items.Strings = (
         'On Account'
@@ -170,6 +170,7 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 172
   end
   object CancelBitBtn: TBitBtn
     Left = 336
@@ -247,6 +248,7 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitTop = 172
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'
@@ -258,8 +260,8 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
       'Where'
       '(Payment_Terms = :Payment_Terms) '
       '')
-    Left = 16
-    Top = 112
+    Left = 52
+    Top = 28
     ParamData = <
       item
         Name = 'Payment_Terms_Description'
@@ -280,8 +282,8 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
       'Select Payment_Terms'
       'From Payment_Terms'
       'Where Payment_Terms_Description = :GUID')
-    Left = 80
-    Top = 104
+    Left = 84
+    Top = 10
     ParamData = <
       item
         Name = 'GUID'
@@ -295,8 +297,8 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
       'Delete From Payment_Terms'
       'Where'
       '(Payment_Terms = :Payment_Terms)')
-    Left = 16
-    Top = 24
+    Left = 204
+    Top = 38
     ParamData = <
       item
         Name = 'Payment_Terms'
@@ -313,8 +315,8 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
       ''
       ''
       ' ')
-    Left = 20
-    Top = 64
+    Left = 169
+    Top = 24
     ParamData = <
       item
         Name = 'GUID'
@@ -324,8 +326,8 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
   end
   object DetsSRC: TDataSource
     DataSet = AddSQL
-    Left = 64
-    Top = 56
+    Left = 136
+    Top = 30
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -334,8 +336,8 @@ object PBMaintPaymentTermsFrm: TPBMaintPaymentTermsFrm
       'From Payment_Terms'
       'Where Payment_Terms_Description = :GUID'
       '')
-    Left = 48
-    Top = 28
+    Left = 212
+    Top = 11
     ParamData = <
       item
         Name = 'GUID'

@@ -4,64 +4,66 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
   BorderStyle = bsDialog
   Caption = 'Maintain Job Bag Document'
   ClientHeight = 117
-  ClientWidth = 493
+  ClientWidth = 525
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 493
+    Width = 525
     Height = 76
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 487
+    ExplicitHeight = 67
     object Label1: TLabel
       Left = 12
       Top = 16
-      Width = 22
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = 'Title'
     end
     object Label2: TLabel
       Left = 12
       Top = 48
-      Width = 44
-      Height = 13
+      Width = 49
+      Height = 17
       Caption = 'Location'
     end
     object Label3: TLabel
       Left = 332
       Top = 16
-      Width = 67
-      Height = 13
+      Width = 77
+      Height = 17
       Caption = 'Date Created'
     end
     object lblDateCreated: TLabel
       Left = 418
       Top = 16
-      Width = 77
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'lblDateCreated'
     end
     object edtTitle: TEdit
-      Left = 64
+      Left = 69
       Top = 12
       Width = 241
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object edtLocation: TEdit
-      Left = 64
+      Left = 69
       Top = 44
       Width = 337
-      Height = 21
+      Height = 25
       TabOrder = 1
     end
     object btnBrowse: TButton
@@ -77,20 +79,22 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
   object Panel2: TPanel
     Left = 0
     Top = 76
-    Width = 493
+    Width = 525
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 67
+    ExplicitWidth = 487
     object lblDelete: TLabel
-      Left = 148
+      Left = 139
       Top = 13
-      Width = 165
-      Height = 15
+      Width = 186
+      Height = 16
       Caption = 'Delete the document details?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -107,7 +111,7 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
       OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
-      Left = 406
+      Left = 412
       Top = 8
       Width = 75
       Height = 25
@@ -117,7 +121,7 @@ object PBMaintDocumentFrm: TPBMaintDocumentFrm
     end
   end
   object DocOpenDialog: TOpenDialog
-    Left = 280
-    Top = 8
+    Left = 190
+    Top = 10
   end
 end

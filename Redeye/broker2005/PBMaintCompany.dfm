@@ -2,14 +2,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   Left = 307
   Top = 7
   Caption = 'Company Details'
-  ClientHeight = 602
-  ClientWidth = 644
+  ClientHeight = 618
+  ClientWidth = 768
   Color = clBtnFace
   Constraints.MinHeight = 626
   Constraints.MinWidth = 642
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,28 +18,28 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object tbSettings: TPageControl
     Left = 0
     Top = 39
-    Width = 644
-    Height = 503
-    ActivePage = TabSheet2
+    Width = 768
+    Height = 519
+    ActivePage = tbsAddress
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 638
-    ExplicitHeight = 494
+    ExplicitWidth = 644
+    ExplicitHeight = 503
     object tbsAddress: TTabSheet
       Caption = 'Address'
       object Label5: TLabel
         Left = 8
         Top = 20
-        Width = 30
-        Height = 13
+        Width = 34
+        Height = 17
         Caption = 'Street'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -47,12 +47,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label7: TLabel
         Left = 8
         Top = 140
-        Width = 47
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Postcode'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -60,12 +60,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label8: TLabel
         Left = 8
         Top = 198
-        Width = 33
-        Height = 13
+        Width = 36
+        Height = 17
         Caption = 'Phone'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -73,12 +73,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label9: TLabel
         Left = 8
         Top = 228
-        Width = 17
-        Height = 13
+        Width = 19
+        Height = 17
         Caption = 'Fax'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -86,12 +86,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label10: TLabel
         Left = 8
         Top = 266
-        Width = 27
-        Height = 13
+        Width = 31
+        Height = 17
         Caption = 'Email'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -99,12 +99,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label26: TLabel
         Left = 8
         Top = 358
-        Width = 62
-        Height = 13
+        Width = 73
+        Height = 17
         Caption = 'VAT Reg No.'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -112,12 +112,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label38: TLabel
         Left = 8
         Top = 332
-        Width = 92
-        Height = 13
+        Width = 107
+        Height = 17
         Caption = 'Company Reg No.'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -125,12 +125,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label39: TLabel
         Left = 8
         Top = 291
-        Width = 24
-        Height = 13
+        Width = 26
+        Height = 17
         Caption = 'Web'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -138,91 +138,91 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label69: TLabel
         Left = 8
         Top = 388
-        Width = 92
-        Height = 13
+        Width = 104
+        Height = 17
         Caption = 'Registered Office.'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object BuildingEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 16
         Width = 251
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 0
         Text = 'BuildingEdit'
       end
       object StreetEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 46
         Width = 251
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 1
         Text = 'StreetEdit'
       end
       object LocaleEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 76
         Width = 251
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 2
         Text = 'LocaleEdit'
       end
       object TownEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 106
         Width = 251
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 3
         Text = 'TownEdit'
       end
       object PostCodeEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 136
         Width = 105
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         MaxLength = 10
         TabOrder = 4
         Text = 'POSTCODEEDIT'
       end
       object PhoneEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 190
         Width = 139
-        Height = 21
+        Height = 25
         MaxLength = 20
         TabOrder = 5
         Text = 'PhoneEdit'
       end
       object FaxEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 220
         Width = 139
-        Height = 21
+        Height = 25
         MaxLength = 20
         TabOrder = 6
         Text = 'FaxEdit'
       end
       object EMailEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 262
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 7
         Text = 'EMailEdit'
       end
       object GroupBox2: TGroupBox
-        Left = 248
+        Left = 268
         Top = 168
         Width = 185
         Height = 81
@@ -232,16 +232,16 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label13: TLabel
           Left = 13
           Top = 26
-          Width = 33
-          Height = 13
+          Width = 36
+          Height = 17
           Caption = 'Phone'
           WordWrap = True
         end
         object Label14: TLabel
           Left = 14
           Top = 58
-          Width = 17
-          Height = 13
+          Width = 19
+          Height = 17
           Caption = 'Fax'
           WordWrap = True
         end
@@ -249,7 +249,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           Left = 56
           Top = 54
           Width = 121
-          Height = 21
+          Height = 25
           TabOrder = 0
           Text = 'SuppFaxEdit'
         end
@@ -257,13 +257,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           Left = 56
           Top = 22
           Width = 121
-          Height = 21
+          Height = 25
           TabOrder = 1
           Text = 'SuppPhoneEdit'
         end
       end
       object DelivNotesBitBtn: TBitBtn
-        Left = 264
+        Left = 284
         Top = 136
         Width = 89
         Height = 25
@@ -292,37 +292,37 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = DelivNotesBitBtnClick
       end
       object VATRegEdit: TEdit
-        Left = 102
+        Left = 122
         Top = 354
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 10
         Text = 'VATRegEdit'
       end
       object edtCompanyRegNo: TEdit
-        Left = 102
+        Left = 122
         Top = 328
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 9
         Text = 'edtCompanyRegNo'
       end
       object edtWebAddress: TEdit
-        Left = 102
+        Left = 122
         Top = 287
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 8
         Text = 'edtWebAddress'
       end
       object edtRegOfficeAddress: TEdit
-        Left = 102
+        Left = 122
         Top = 384
         Width = 515
-        Height = 21
+        Height = 25
         TabOrder = 13
         Text = 'edtRegOfficeAddress'
       end
@@ -333,12 +333,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label2: TLabel
         Left = 8
         Top = 12
-        Width = 86
-        Height = 13
+        Width = 96
+        Height = 17
         Caption = 'Default Currency'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -346,40 +346,40 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label6: TLabel
         Left = 8
         Top = 42
-        Width = 123
-        Height = 13
+        Width = 138
+        Height = 17
         Caption = 'Nominal Accounting by:'
       end
       object Label3: TLabel
         Left = 8
         Top = 67
-        Width = 133
-        Height = 13
+        Width = 150
+        Height = 17
         Caption = 'Purchase Nominal Default'
       end
       object Label4: TLabel
         Left = 8
         Top = 94
-        Width = 113
-        Height = 13
+        Width = 128
+        Height = 17
         Caption = 'Sales Nominal Default'
       end
       object Label15: TLabel
         Left = 8
         Top = 146
-        Width = 88
-        Height = 13
+        Width = 102
+        Height = 17
         Caption = 'Commission Type'
       end
       object Label16: TLabel
         Left = 8
         Top = 200
-        Width = 87
-        Height = 13
+        Width = 98
+        Height = 17
         Caption = 'Default Vat Code'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -387,39 +387,39 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label19: TLabel
         Left = 8
         Top = 171
-        Width = 62
-        Height = 13
+        Width = 70
+        Height = 17
         Caption = 'Budget type'
       end
       object lblCashSaleAccount: TLabel
         Left = 8
         Top = 120
-        Width = 129
-        Height = 13
+        Width = 147
+        Height = 17
         Caption = 'Cash Sales Account Code'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object Label48: TLabel
-        Left = 248
-        Top = 325
-        Width = 119
-        Height = 13
+        Left = 310
+        Top = 337
+        Width = 136
+        Height = 17
         Caption = 'Default Payment Terms:'
       end
       object Label67: TLabel
-        Left = 368
+        Left = 404
         Top = 12
-        Width = 120
-        Height = 13
+        Width = 135
+        Height = 17
         Caption = 'Direct Debit Account ID'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -427,41 +427,41 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label70: TLabel
         Left = 8
         Top = 444
-        Width = 147
-        Height = 13
+        Width = 169
+        Height = 17
         Caption = 'Global Invoice Email Address'
       end
       object DefCurrDBLookupComboBox: TDBLookupComboBox
-        Left = 138
+        Left = 174
         Top = 8
         Width = 203
-        Height = 21
+        Height = 25
         KeyField = 'Currency_Code'
         ListField = 'Currency_Code_Descr'
         ListSource = GetCurrSRC
         TabOrder = 0
       end
       object AccCustCheckBox: TCheckBox
-        Left = 3
-        Top = 282
+        Left = 7
+        Top = 294
         Width = 193
         Height = 17
         Caption = 'Customer Account Codes Unique'
         TabOrder = 10
       end
       object AccSuppCheckBox: TCheckBox
-        Left = 247
-        Top = 282
+        Left = 309
+        Top = 294
         Width = 181
         Height = 17
         Caption = 'Supplier Account Codes Unique'
         TabOrder = 13
       end
       object NominalDBLookupComboBox: TDBLookupComboBox
-        Left = 138
+        Left = 174
         Top = 38
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Nominal_level'
         ListField = 'Nominal_Level_Description'
         ListFieldIndex = 1
@@ -469,10 +469,10 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 1
       end
       object dblucmbbxCommission: TDBLookupComboBox
-        Left = 138
+        Left = 174
         Top = 142
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Commission_type'
         ListField = 'Commission_Description'
         ListFieldIndex = 1
@@ -480,28 +480,28 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 2
       end
       object chkbxAssignPIN: TCheckBox
-        Left = 3
-        Top = 240
+        Left = 7
+        Top = 252
         Width = 232
         Height = 17
         Caption = 'Assign PIN Reference to Purchase Invoices'
         TabOrder = 7
       end
       object DBLuCmbBxDefVat: TDBLookupComboBox
-        Left = 138
+        Left = 174
         Top = 195
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Vat_Code'
         ListField = 'Description'
         ListSource = DsVat
         TabOrder = 3
       end
       object cmbBudgetType: TComboBox
-        Left = 138
+        Left = 174
         Top = 166
         Width = 201
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 4
         Items.Strings = (
@@ -509,26 +509,26 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           'Rep & Category')
       end
       object chkbxOnstop: TCheckBox
-        Left = 3
-        Top = 220
-        Width = 246
+        Left = 7
+        Top = 232
+        Width = 291
         Height = 17
         Caption = 'Don'#39't raise sales orders if customer ON STOP'
         TabOrder = 5
       end
       object edtCashSalesAcc: TEdit
-        Left = 138
+        Left = 174
         Top = 115
         Width = 121
-        Height = 21
+        Height = 25
         MaxLength = 8
         TabOrder = 6
       end
       object grpbxAuthorisePO: TGroupBox
-        Left = 3
-        Top = 359
-        Width = 265
-        Height = 47
+        Left = 7
+        Top = 371
+        Width = 291
+        Height = 52
         Color = clBtnFace
         ParentBackground = False
         ParentColor = False
@@ -536,12 +536,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label20: TLabel
           Left = 8
           Top = 24
-          Width = 154
-          Height = 13
+          Width = 174
+          Height = 17
           Caption = 'Maximum Unauthorised Value'
         end
         object memCreditLimit: TMemo
-          Left = 159
+          Left = 189
           Top = 19
           Width = 90
           Height = 23
@@ -553,26 +553,26 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         end
       end
       object chkbxCustMandatory: TCheckBox
-        Left = 3
-        Top = 261
+        Left = 7
+        Top = 273
         Width = 193
         Height = 17
         Caption = 'Customer Account Codes Mandatory'
         TabOrder = 9
       end
       object chkbxSuppMandatory: TCheckBox
-        Left = 247
-        Top = 261
+        Left = 309
+        Top = 273
         Width = 193
         Height = 17
         Caption = 'Supplier Account Codes Mandatory'
         TabOrder = 11
       end
       object PNDefEdit: TMaskEdit
-        Left = 138
+        Left = 174
         Top = 65
         Width = 135
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         EditMask = '!90009999/900/000;0;_'
         MaxLength = 16
@@ -580,10 +580,10 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Text = ''
       end
       object SNDefEdit: TMaskEdit
-        Left = 138
+        Left = 174
         Top = 89
         Width = 135
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         EditMask = '!90009999/900/000;0;_'
         MaxLength = 16
@@ -591,16 +591,16 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Text = ''
       end
       object chkbxCanChangeInvoice: TCheckBox
-        Left = 247
-        Top = 220
+        Left = 309
+        Top = 232
         Width = 230
         Height = 17
         Caption = 'Can Change Sales Invoice after printing'
         TabOrder = 8
       end
       object btnPaymentNotes: TBitBtn
-        Left = 275
-        Top = 360
+        Left = 312
+        Top = 372
         Width = 97
         Height = 25
         Caption = 'Payment'
@@ -628,48 +628,48 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = btnPaymentNotesClick
       end
       object chkbxUseConInvoicing: TCheckBox
-        Left = 247
-        Top = 240
+        Left = 309
+        Top = 252
         Width = 230
         Height = 17
         Caption = 'Consolidated Invoicing'
         TabOrder = 17
       end
       object chkbxPaymentTerms: TCheckBox
-        Left = 274
-        Top = 387
+        Left = 311
+        Top = 399
         Width = 181
-        Height = 17
+        Height = 26
         Caption = 'Use Invoice Notes for Terms'
         TabOrder = 18
       end
       object chkbxDefaultCustomerAccCode: TCheckBox
-        Left = 3
-        Top = 303
+        Left = 7
+        Top = 315
         Width = 193
         Height = 17
         Caption = 'Default Customer Account Code'
         TabOrder = 19
       end
       object chkbxDefaultSupplierAccCode: TCheckBox
-        Left = 247
-        Top = 303
+        Left = 309
+        Top = 315
         Width = 181
         Height = 17
         Caption = 'Default Supplier Account Codes'
         TabOrder = 20
       end
       object chkbxUseCreditCheck: TCheckBox
-        Left = 3
-        Top = 323
+        Left = 7
+        Top = 335
         Width = 193
         Height = 17
         Caption = 'Use Credit Checking'
         TabOrder = 21
       end
       object btnSupplierTerms: TBitBtn
-        Left = 379
-        Top = 360
+        Left = 416
+        Top = 372
         Width = 97
         Height = 25
         Caption = 'Supplier Terms'
@@ -697,10 +697,10 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = btnSupplierTermsClick
       end
       object PayTermsDBLookupComboBox: TDBLookupComboBox
-        Left = 378
-        Top = 321
+        Left = 453
+        Top = 334
         Width = 167
-        Height = 21
+        Height = 25
         KeyField = 'Payment_Terms'
         ListField = 'Payment_Terms_Description'
         ListFieldIndex = 1
@@ -708,8 +708,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 23
       end
       object BitBtn5: TBitBtn
-        Left = 551
-        Top = 320
+        Left = 626
+        Top = 333
         Width = 25
         Height = 23
         Glyph.Data = {
@@ -730,8 +730,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = BitBtn5Click
       end
       object btnCreditTermsNotes: TBitBtn
-        Left = 483
-        Top = 360
+        Left = 520
+        Top = 372
         Width = 97
         Height = 25
         Caption = 'Credit Terms'
@@ -759,24 +759,24 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = btnCreditTermsNotesClick
       end
       object edtDirectDebitID: TEdit
-        Left = 498
+        Left = 551
         Top = 8
         Width = 121
-        Height = 21
+        Height = 25
         MaxLength = 8
         TabOrder = 26
       end
       object edtGlobalInvoiceEmail: TEdit
-        Left = 160
+        Left = 182
         Top = 440
         Width = 345
-        Height = 21
+        Height = 25
         TabOrder = 27
       end
       object chkbxAuthorisePO: TCheckBox
-        Left = 3
-        Top = 351
-        Width = 147
+        Left = 7
+        Top = 363
+        Width = 193
         Height = 17
         Caption = 'Authorise Purchase Orders'
         TabOrder = 28
@@ -787,15 +787,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'System'
       ImageIndex = 3
       object Label17: TLabel
-        Left = 12
-        Top = 20
-        Width = 113
+        Left = 16
+        Top = 10
+        Width = 129
         Height = 33
         AutoSize = False
         Caption = 'Default Job Bag Sundry Product Type'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -810,7 +810,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Caption = 'Replicate to database:'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -825,18 +825,18 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 0
       end
       object DBLuCmbBxDefPrdTyp: TDBLookupComboBox
-        Left = 134
-        Top = 24
+        Left = 151
+        Top = 18
         Width = 195
-        Height = 21
+        Height = 25
         KeyField = 'product_type'
         ListField = 'description'
         ListSource = DSPrdTyp
         TabOrder = 1
       end
       object btbtnClearProdType: TBitBtn
-        Left = 344
-        Top = 23
+        Left = 361
+        Top = 18
         Width = 25
         Height = 25
         Hint = 'Clear Supplier details'
@@ -883,7 +883,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object JobBagsCheckBox: TCheckBox
         Left = 14
         Top = 53
-        Width = 89
+        Width = 139
         Height = 17
         Caption = 'Use Job Bags'
         TabOrder = 4
@@ -972,16 +972,16 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 16
       end
       object cmbAliasList: TComboBox
-        Left = 352
-        Top = 405
+        Left = 361
+        Top = 408
         Width = 161
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 17
       end
       object BitBtn4: TBitBtn
-        Left = 520
-        Top = 403
+        Left = 529
+        Top = 406
         Width = 25
         Height = 26
         Hint = 'Clear Supplier details'
@@ -1038,37 +1038,37 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Left = 272
         Top = 80
         Width = 281
-        Height = 73
+        Height = 89
         Color = clBtnFace
         ParentBackground = False
         ParentColor = False
         TabOrder = 22
         object Label49: TLabel
           Left = 198
-          Top = 23
-          Width = 40
-          Height = 13
+          Top = 27
+          Width = 44
+          Height = 17
           Caption = 'Months'
         end
         object Label50: TLabel
           Left = 30
-          Top = 23
-          Width = 52
-          Height = 13
+          Top = 27
+          Width = 58
+          Height = 17
           Caption = 'Remind in'
         end
         object Label51: TLabel
           Left = 30
-          Top = 47
-          Width = 108
-          Height = 13
+          Top = 51
+          Width = 123
+          Height = 17
           Caption = 'Minimum Sales Value'
         end
         object spnReorderReminderInterval: TSpinEdit
           Left = 136
-          Top = 18
+          Top = 22
           Width = 49
-          Height = 22
+          Height = 27
           MaxValue = 120
           MinValue = 1
           TabOrder = 0
@@ -1076,7 +1076,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         end
         object memReOrderValue: TMemo
           Left = 135
-          Top = 43
+          Top = 47
           Width = 90
           Height = 23
           Alignment = taRightJustify
@@ -1166,76 +1166,76 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label18: TLabel
         Left = 12
         Top = 107
-        Width = 84
-        Height = 13
+        Width = 97
+        Height = 17
         Caption = 'Purchase Orders'
       end
       object Label21: TLabel
         Left = 12
         Top = 18
-        Width = 48
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Enquiries'
       end
       object Label22: TLabel
         Left = 12
         Top = 152
-        Width = 45
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Job Bags'
       end
       object Label23: TLabel
         Left = 12
         Top = 62
-        Width = 37
-        Height = 13
+        Width = 42
+        Height = 17
         Caption = 'Quotes'
       end
       object Label27: TLabel
         Left = 12
         Top = 195
-        Width = 54
-        Height = 13
+        Width = 62
+        Height = 17
         Caption = 'Customers'
       end
       object Label28: TLabel
         Left = 12
         Top = 239
-        Width = 48
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Suppliers'
       end
       object Label60: TLabel
         Left = 12
         Top = 281
-        Width = 45
-        Height = 13
+        Width = 50
+        Height = 17
         Caption = 'Activities'
       end
       object Label61: TLabel
         Left = 12
         Top = 368
-        Width = 70
-        Height = 13
+        Width = 81
+        Height = 17
         Caption = 'Email Storage'
       end
       object Label68: TLabel
         Left = 12
         Top = 323
-        Width = 49
-        Height = 13
+        Width = 55
+        Height = 17
         Caption = 'Contracts'
       end
       object edtPOLocation: TEdit
         Left = 12
-        Top = 123
+        Top = 125
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 6
       end
       object btnBrowse: TButton
         Left = 342
-        Top = 121
+        Top = 125
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1244,14 +1244,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtEnquiryLocation: TEdit
         Left = 12
-        Top = 34
+        Top = 36
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 0
       end
       object Button1: TButton
         Left = 342
-        Top = 32
+        Top = 36
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1260,14 +1260,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtJobBagLocation: TEdit
         Left = 12
-        Top = 166
+        Top = 170
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 9
       end
       object Button2: TButton
         Left = 342
-        Top = 164
+        Top = 170
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1276,14 +1276,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtQuoteLocation: TEdit
         Left = 12
-        Top = 78
+        Top = 80
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 3
       end
       object Button3: TButton
         Left = 342
-        Top = 76
+        Top = 80
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1292,14 +1292,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtCustLocation: TEdit
         Left = 12
-        Top = 209
+        Top = 211
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 12
       end
       object Button4: TButton
         Left = 342
-        Top = 207
+        Top = 211
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1308,14 +1308,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtSuppLocation: TEdit
         Left = 12
-        Top = 253
+        Top = 256
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 15
       end
       object Button5: TButton
         Left = 342
-        Top = 251
+        Top = 256
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1324,14 +1324,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtActivityLocation: TEdit
         Left = 12
-        Top = 295
+        Top = 298
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 18
       end
       object Button8: TButton
         Left = 342
-        Top = 293
+        Top = 298
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1341,7 +1341,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object btnEnquiryStructure: TButton
         Tag = 20
         Left = 462
-        Top = 32
+        Top = 36
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1351,7 +1351,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Button9: TButton
         Tag = 25
         Left = 462
-        Top = 76
+        Top = 80
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1361,7 +1361,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Button10: TButton
         Tag = 30
         Left = 462
-        Top = 121
+        Top = 125
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1371,7 +1371,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Button11: TButton
         Tag = 40
         Left = 462
-        Top = 164
+        Top = 170
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1381,7 +1381,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Button12: TButton
         Tag = 10
         Left = 462
-        Top = 207
+        Top = 211
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1391,7 +1391,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Button13: TButton
         Tag = 15
         Left = 462
-        Top = 251
+        Top = 256
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1401,7 +1401,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Button14: TButton
         Tag = 60
         Left = 462
-        Top = 293
+        Top = 298
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1410,14 +1410,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtEmailStorage: TEdit
         Left = 12
-        Top = 382
+        Top = 386
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 24
       end
       object Button15: TButton
         Left = 342
-        Top = 380
+        Top = 386
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1426,14 +1426,14 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtContractLocation: TEdit
         Left = 12
-        Top = 337
+        Top = 341
         Width = 317
-        Height = 21
+        Height = 25
         TabOrder = 21
       end
       object Button18: TButton
         Left = 342
-        Top = 335
+        Top = 341
         Width = 75
         Height = 25
         Caption = 'Browse'
@@ -1443,7 +1443,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Button19: TButton
         Tag = 60
         Left = 462
-        Top = 335
+        Top = 341
         Width = 75
         Height = 25
         Caption = 'Structure'
@@ -1465,22 +1465,22 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label11: TLabel
           Left = 16
           Top = 32
-          Width = 29
-          Height = 13
+          Width = 35
+          Height = 17
           Caption = 'Name'
         end
         object Label12: TLabel
           Left = 16
           Top = 59
-          Width = 35
-          Height = 13
+          Width = 39
+          Height = 17
           Caption = 'Branch'
         end
         object SupplierEdit: TEdit
           Left = 64
           Top = 24
           Width = 233
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
@@ -1488,7 +1488,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           Left = 64
           Top = 51
           Width = 233
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 1
         end
@@ -1558,7 +1558,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxStockCodeMandatory: TCheckBox
         Left = 8
         Top = 162
-        Width = 217
+        Width = 281
         Height = 17
         Caption = 'Stock Code Mandatory for Stock Orders'
         TabOrder = 3
@@ -1578,29 +1578,29 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label24: TLabel
         Left = 12
         Top = 242
-        Width = 210
-        Height = 13
+        Width = 235
+        Height = 17
         Caption = 'Default Works Instruction Email Address:'
       end
       object Label25: TLabel
         Left = 12
         Top = 284
-        Width = 110
-        Height = 13
+        Width = 127
+        Height = 17
         Caption = 'Corresponding Name'
       end
       object edtWIEmailAddress: TEdit
         Left = 12
-        Top = 258
+        Top = 260
         Width = 437
-        Height = 21
+        Height = 25
         TabOrder = 0
       end
       object edtWIEmailName: TEdit
         Left = 12
-        Top = 300
+        Top = 302
         Width = 197
-        Height = 21
+        Height = 25
         TabOrder = 1
       end
       object chkbxShowWIPurchaseOrders: TCheckBox
@@ -1622,29 +1622,29 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label62: TLabel
           Left = 25
           Top = 30
-          Width = 61
-          Height = 13
+          Width = 69
+          Height = 17
           Caption = 'Department'
         end
         object Label63: TLabel
           Left = 24
           Top = 60
-          Width = 38
-          Height = 13
+          Width = 45
+          Height = 17
           Caption = 'Process'
         end
         object Label64: TLabel
           Left = 24
           Top = 88
-          Width = 59
-          Height = 13
+          Width = 66
+          Height = 17
           Caption = 'Description'
         end
         object Label65: TLabel
           Left = 24
           Top = 176
-          Width = 52
-          Height = 13
+          Width = 60
+          Height = 17
           Caption = 'Markup %'
         end
         object edtQuoteDescription: TMemo
@@ -1671,7 +1671,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           Left = 112
           Top = 26
           Width = 185
-          Height = 21
+          Height = 25
           KeyField = 'Process_Group'
           ListField = 'Process_Group_Description'
           ListSource = dtsProcessGroup
@@ -1681,7 +1681,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           Left = 112
           Top = 56
           Width = 185
-          Height = 21
+          Height = 25
           KeyField = 'Process'
           ListField = 'Process_Description'
           ListSource = dtsProcess
@@ -1852,32 +1852,34 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object PageControl1: TPageControl
         Left = 0
         Top = 0
-        Width = 636
-        Height = 475
-        ActivePage = TabSheet1
+        Width = 760
+        Height = 487
+        ActivePage = TabSheet10
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 636
+        ExplicitHeight = 471
         object TabSheet1: TTabSheet
           Caption = 'Enquiries'
           object Label29: TLabel
             Left = 16
             Top = 16
-            Width = 89
-            Height = 13
+            Width = 102
+            Height = 17
             Caption = 'Enquiry Preamble'
           end
           object Label32: TLabel
             Left = 16
             Top = 152
-            Width = 82
-            Height = 13
+            Width = 95
+            Height = 17
             Caption = 'Quote Preamble'
           end
           object memEmailEnquiry: TMemo
             Left = 16
-            Top = 32
+            Top = 34
             Width = 585
-            Height = 100
+            Height = 102
             Lines.Strings = (
               'Memo2')
             ScrollBars = ssVertical
@@ -1885,7 +1887,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           end
           object memEmailQuote: TMemo
             Left = 16
-            Top = 168
+            Top = 171
             Width = 585
             Height = 100
             Lines.Strings = (
@@ -1900,27 +1902,27 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           object Label30: TLabel
             Left = 16
             Top = 16
-            Width = 129
-            Height = 13
+            Width = 150
+            Height = 17
             Caption = 'Purchase Order Preamble'
           end
           object Label31: TLabel
             Left = 16
             Top = 152
-            Width = 146
-            Height = 13
+            Width = 165
+            Height = 17
             Caption = 'Acknowledgement Preamble'
           end
           object Label71: TLabel
             Left = 16
             Top = 288
-            Width = 54
-            Height = 13
+            Width = 62
+            Height = 17
             Caption = 'Order Due'
           end
           object memEmailPO: TMemo
             Left = 16
-            Top = 32
+            Top = 35
             Width = 585
             Height = 100
             Lines.Strings = (
@@ -1930,7 +1932,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           end
           object memEmailAck: TMemo
             Left = 16
-            Top = 168
+            Top = 171
             Width = 585
             Height = 100
             Lines.Strings = (
@@ -1940,7 +1942,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           end
           object memEmailOrdersDue: TMemo
             Left = 16
-            Top = 304
+            Top = 307
             Width = 585
             Height = 100
             Lines.Strings = (
@@ -1955,13 +1957,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           object Label72: TLabel
             Left = 16
             Top = 16
-            Width = 86
-            Height = 13
+            Width = 99
+            Height = 17
             Caption = 'Proforma Invoice'
           end
           object memEmailProformaInvoice: TMemo
             Left = 16
-            Top = 32
+            Top = 35
             Width = 585
             Height = 100
             Lines.Strings = (
@@ -1976,13 +1978,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           object Label33: TLabel
             Left = 16
             Top = 16
-            Width = 97
-            Height = 13
+            Width = 110
+            Height = 17
             Caption = 'Invoicing Preamble'
           end
           object memEmailInvoice: TMemo
             Left = 16
-            Top = 32
+            Top = 37
             Width = 585
             Height = 125
             Lines.Strings = (
@@ -1999,55 +2001,55 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object GroupBox3: TGroupBox
         Left = 8
         Top = 8
-        Width = 369
-        Height = 161
+        Width = 392
+        Height = 170
         Caption = 'Delivery Charge'
         ParentBackground = False
         TabOrder = 0
         object Label34: TLabel
           Left = 16
           Top = 32
-          Width = 59
-          Height = 13
+          Width = 66
+          Height = 17
           Caption = 'Description'
         end
         object Label35: TLabel
           Left = 16
           Top = 112
-          Width = 23
-          Height = 13
+          Width = 26
+          Height = 17
           Caption = 'Cost'
         end
         object Label36: TLabel
           Left = 16
           Top = 88
-          Width = 37
-          Height = 13
+          Width = 42
+          Height = 17
           Caption = 'Charge'
         end
         object Label37: TLabel
           Left = 16
           Top = 136
-          Width = 18
-          Height = 13
+          Width = 21
+          Height = 17
           Caption = 'VAT'
         end
         object Label40: TLabel
           Left = 16
           Top = 64
-          Width = 92
-          Height = 13
+          Width = 104
+          Height = 17
           Caption = 'Charge Threshold'
         end
         object edtDeliveryDescription: TEdit
-          Left = 108
+          Left = 133
           Top = 28
           Width = 213
-          Height = 21
+          Height = 25
           TabOrder = 0
         end
         object memDeliveryCharge: TMemo
-          Left = 108
+          Left = 133
           Top = 84
           Width = 75
           Height = 21
@@ -2059,7 +2061,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           OnExit = ValidateMoney
         end
         object memDeliveryCost: TMemo
-          Left = 108
+          Left = 133
           Top = 108
           Width = 75
           Height = 21
@@ -2071,17 +2073,17 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           OnExit = ValidateMoney
         end
         object dblkpDeliveryVat: TDBLookupComboBox
-          Left = 108
+          Left = 133
           Top = 132
           Width = 141
-          Height = 21
+          Height = 25
           KeyField = 'Vat_Code'
           ListField = 'Description'
           ListSource = dtsOnlineVAT
           TabOrder = 3
         end
         object memDeliveryThreshold: TMemo
-          Left = 108
+          Left = 133
           Top = 60
           Width = 75
           Height = 21
@@ -2096,7 +2098,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object GroupBox4: TGroupBox
         Left = 8
         Top = 184
-        Width = 369
+        Width = 392
         Height = 89
         Caption = 'Web2Print Ordering'
         ParentBackground = False
@@ -2104,12 +2106,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label45: TLabel
           Left = 16
           Top = 28
-          Width = 107
-          Height = 13
+          Width = 122
+          Height = 17
           Caption = 'Unpaid Product Type'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -2117,28 +2119,28 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         object Label46: TLabel
           Left = 16
           Top = 60
-          Width = 91
-          Height = 13
+          Width = 105
+          Height = 17
           Caption = 'Paid Product Type'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object dblkpWebProductType: TDBLookupComboBox
-          Left = 126
+          Left = 147
           Top = 24
           Width = 187
-          Height = 21
+          Height = 25
           KeyField = 'product_type'
           ListField = 'description'
           ListSource = DSPrdTyp
           TabOrder = 0
         end
         object BitBtn2: TBitBtn
-          Left = 328
+          Left = 349
           Top = 22
           Width = 25
           Height = 25
@@ -2169,17 +2171,17 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           OnClick = BitBtn2Click
         end
         object dblkpWebPaidProductType: TDBLookupComboBox
-          Left = 126
+          Left = 147
           Top = 56
           Width = 187
-          Height = 21
+          Height = 25
           KeyField = 'product_type'
           ListField = 'description'
           ListSource = DSPrdTyp
           TabOrder = 2
         end
         object BitBtn3: TBitBtn
-          Left = 328
+          Left = 349
           Top = 54
           Width = 25
           Height = 25
@@ -2217,60 +2219,60 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label43: TLabel
         Left = 8
         Top = 16
-        Width = 124
-        Height = 13
+        Width = 141
+        Height = 17
         Caption = 'Analysis Code 1 Caption'
       end
       object Label44: TLabel
         Left = 8
         Top = 48
-        Width = 124
-        Height = 13
+        Width = 141
+        Height = 17
         Caption = 'Analysis Code 2 Caption'
       end
       object Label53: TLabel
         Left = 8
         Top = 80
-        Width = 124
-        Height = 13
+        Width = 141
+        Height = 17
         Caption = 'Analysis Code 3 Caption'
       end
       object Label54: TLabel
         Left = 8
         Top = 112
-        Width = 124
-        Height = 13
+        Width = 141
+        Height = 17
         Caption = 'Analysis Code 4 Caption'
       end
       object edtAnalysis1Caption: TEdit
-        Left = 128
+        Left = 161
         Top = 12
         Width = 361
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'edtAnalysis1Caption'
       end
       object edtAnalysis2Caption: TEdit
-        Left = 128
+        Left = 161
         Top = 44
         Width = 361
-        Height = 21
+        Height = 25
         TabOrder = 1
         Text = 'edtAnalysis2Caption'
       end
       object edtAnalysis3Caption: TEdit
-        Left = 128
+        Left = 161
         Top = 76
         Width = 361
-        Height = 21
+        Height = 25
         TabOrder = 2
         Text = 'edtAnalysis1Caption'
       end
       object edtAnalysis4Caption: TEdit
-        Left = 128
+        Left = 161
         Top = 108
         Width = 361
-        Height = 21
+        Height = 25
         TabOrder = 3
         Text = 'edtAnalysis2Caption'
       end
@@ -2281,42 +2283,42 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object Label41: TLabel
         Left = 8
         Top = 16
-        Width = 81
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Sales document'
       end
       object Label42: TLabel
         Left = 8
         Top = 48
-        Width = 101
-        Height = 13
+        Width = 114
+        Height = 17
         Caption = 'Purchase document'
       end
       object Label66: TLabel
         Left = 8
         Top = 80
-        Width = 81
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Studio Price List'
       end
       object edtSalesTermsDoc: TEdit
-        Left = 112
+        Left = 134
         Top = 12
         Width = 361
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'edtSalesTermsDoc'
       end
       object edtPurchaseTermsDoc: TEdit
-        Left = 112
+        Left = 134
         Top = 44
         Width = 361
-        Height = 21
+        Height = 25
         TabOrder = 1
         Text = 'edtPurchaseTermsDoc'
       end
       object Button6: TButton
-        Left = 486
+        Left = 508
         Top = 12
         Width = 75
         Height = 25
@@ -2325,7 +2327,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = Button6Click
       end
       object Button7: TButton
-        Left = 486
+        Left = 508
         Top = 44
         Width = 75
         Height = 25
@@ -2334,15 +2336,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = Button7Click
       end
       object edtStudioPriceListDoc: TEdit
-        Left = 112
+        Left = 134
         Top = 76
         Width = 361
-        Height = 21
+        Height = 25
         TabOrder = 4
         Text = 'edtStudioPriceListDoc'
       end
       object Button17: TButton
-        Left = 486
+        Left = 508
         Top = 76
         Width = 75
         Height = 25
@@ -2355,55 +2357,55 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'CRM'
       ImageIndex = 10
       DesignSize = (
-        636
-        475)
+        760
+        487)
       object Label52: TLabel
         Left = 16
         Top = 56
-        Width = 185
-        Height = 13
+        Width = 207
+        Height = 17
         Caption = 'Quotation Reminder Default Activity'
       end
       object Label55: TLabel
         Left = 16
         Top = 24
-        Width = 171
-        Height = 13
+        Width = 192
+        Height = 17
         Caption = 'Enquiry Reminder Default Activity'
       end
       object Label56: TLabel
         Left = 16
         Top = 96
-        Width = 102
-        Height = 13
+        Width = 115
+        Height = 17
         Caption = 'Proof Status Activity'
       end
       object Label57: TLabel
         Left = 16
         Top = 128
-        Width = 80
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Reorder Activity'
       end
       object Label58: TLabel
         Left = 16
         Top = 160
-        Width = 168
-        Height = 13
+        Width = 189
+        Height = 17
         Caption = 'Order Acknowlegdement Activity'
       end
       object Label59: TLabel
         Left = 16
         Top = 192
-        Width = 112
-        Height = 13
+        Width = 129
+        Height = 17
         Caption = 'Order Delivery Activity'
       end
       object dblkpQActivityType: TDBLookupComboBox
-        Left = 210
+        Left = 235
         Top = 52
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
@@ -2411,7 +2413,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 0
       end
       object btnActivityType: TButton
-        Left = 418
+        Left = 536
         Top = 19
         Width = 22
         Height = 22
@@ -2425,12 +2427,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnActivityTypeClick
+        ExplicitLeft = 412
       end
       object dblkpEActivityType: TDBLookupComboBox
-        Left = 210
+        Left = 235
         Top = 20
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
@@ -2438,10 +2441,10 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 2
       end
       object dblkpProofActivity: TDBLookupComboBox
-        Left = 210
+        Left = 235
         Top = 92
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
@@ -2449,10 +2452,10 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 3
       end
       object dblkpReorderActivity: TDBLookupComboBox
-        Left = 210
+        Left = 235
         Top = 124
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
@@ -2460,10 +2463,10 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 4
       end
       object dblkpOrderAckActivity: TDBLookupComboBox
-        Left = 210
+        Left = 235
         Top = 156
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
@@ -2471,10 +2474,10 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 5
       end
       object dblkpOrderDelActivity: TDBLookupComboBox
-        Left = 210
+        Left = 235
         Top = 188
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Activity_Type'
         ListField = 'Activity_Type_Description'
         ListFieldIndex = 1
@@ -2485,8 +2488,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 542
-    Width = 644
+    Top = 558
+    Width = 768
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -2495,11 +2498,11 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     ExplicitTop = 533
     ExplicitWidth = 638
     DesignSize = (
-      644
+      768
       41)
     object BitBtn1: TBitBtn
-      Left = 231
-      Top = 5
+      Left = 279
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -2509,8 +2512,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       OnClick = BitBtn1Click
     end
     object CancelBitBtn: TBitBtn
-      Left = 329
-      Top = 5
+      Left = 377
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -2523,7 +2526,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 644
+    Width = 768
     Height = 39
     Align = alTop
     BevelOuter = bvNone
@@ -2531,17 +2534,17 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     TabOrder = 2
     ExplicitWidth = 638
     DesignSize = (
-      644
+      768
       39)
     object Label1: TLabel
       Left = 11
       Top = 12
-      Width = 102
-      Height = 14
+      Width = 129
+      Height = 16
       Caption = 'Company Name         '
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
@@ -2549,25 +2552,24 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     object NameEdit: TEdit
       Left = 121
       Top = 8
-      Width = 392
-      Height = 21
+      Width = 510
+      Height = 25
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       MaxLength = 40
       ParentFont = False
       TabOrder = 0
       Text = 'NameEdit'
-      ExplicitWidth = 386
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 583
-    Width = 644
+    Top = 599
+    Width = 768
     Height = 19
     Panels = <
       item
@@ -2583,8 +2585,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company')
-    Left = 472
-    Top = 500
+    Left = 400
+    Top = 444
   end
   object UpCompanySQL: TFDQuery
     ConnectionName = 'PB'
@@ -2759,8 +2761,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ' '
       ' '
       ' ')
-    Left = 368
-    Top = 484
+    Left = 536
+    Top = 420
     ParamData = <
       item
         Name = 'Name'
@@ -3172,26 +3174,26 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select Currency_Code, Currency_Code_Descr'
       'From Currency_Code'
       'Order By Currency_Code_Descr')
-    Left = 616
-    Top = 344
+    Left = 360
+    Top = 328
   end
   object GetCurrSRC: TDataSource
     DataSet = GetCurrSQL
-    Left = 592
-    Top = 216
+    Left = 464
+    Top = 160
   end
   object GetNominalSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Nominal_Level')
-    Left = 340
-    Top = 290
+    Left = 364
+    Top = 314
   end
   object GetNominalSRC: TDataSource
     DataSet = GetNominalSQL
-    Left = 420
-    Top = 218
+    Left = 340
+    Top = 274
   end
   object GetSupplierSQL: TFDQuery
     ConnectionName = 'PB'
@@ -3203,8 +3205,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       '           Supplier_Branch.Branch_no = :Branch_no and'
       '           Supplier.Supplier = Supplier_Branch.Supplier'
       '          ')
-    Left = 332
-    Top = 114
+    Left = 460
+    Top = 154
     ParamData = <
       item
         Name = 'Supplier'
@@ -3215,22 +3217,22 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object dtdrcCommission: TDataSource
     DataSet = qryCommission
-    Left = 252
-    Top = 274
+    Left = 324
+    Top = 330
   end
   object qryCommission: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from commission_type')
-    Left = 548
-    Top = 250
+    Left = 428
+    Top = 170
   end
   object FlashDelivTimer: TTimer
     Enabled = False
     OnTimer = FlashDelivTimerTimer
-    Left = 576
-    Top = 440
+    Left = 496
+    Top = 344
   end
   object UpdDelivNotesOnlySQL: TFDQuery
     ConnectionName = 'PB'
@@ -3242,8 +3244,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ' '
       ' '
       ' ')
-    Left = 568
-    Top = 324
+    Left = 448
+    Top = 212
     ParamData = <
       item
         Name = 'Delivery_Narrative'
@@ -3255,13 +3257,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from vat_code'
       'Order By Description')
-    Left = 480
-    Top = 248
+    Left = 440
+    Top = 296
   end
   object DsVat: TDataSource
     DataSet = QryVat
-    Left = 224
-    Top = 464
+    Left = 448
+    Top = 440
   end
   object QryPrdTyp: TFDQuery
     ConnectionName = 'PB'
@@ -3270,19 +3272,19 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'description'
       'From Product_Type'
       'Order By Description')
-    Left = 332
-    Top = 196
+    Left = 396
+    Top = 212
   end
   object DSPrdTyp: TDataSource
     DataSet = QryPrdTyp
-    Left = 388
-    Top = 124
+    Left = 364
+    Top = 252
   end
   object FlashPayTimer: TTimer
     Enabled = False
     OnTimer = FlashPayTimerTimer
-    Left = 136
-    Top = 392
+    Left = 400
+    Top = 432
   end
   object qryOnlineVAT: TFDQuery
     ConnectionName = 'PB'
@@ -3290,23 +3292,23 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from vat_code'
       'Order By Description')
-    Left = 504
-    Top = 304
+    Left = 424
+    Top = 208
   end
   object dtsOnlineVAT: TDataSource
     DataSet = qryOnlineVAT
-    Left = 164
-    Top = 344
+    Left = 492
+    Top = 416
   end
   object opndlgTerms: TOpenDialog
-    Left = 460
-    Top = 136
+    Left = 388
+    Top = 256
   end
   object FlashTermsTimer: TTimer
     Enabled = False
     OnTimer = FlashTermsTimerTimer
-    Left = 528
-    Top = 80
+    Left = 464
+    Top = 88
   end
   object qryPayTerms: TFDQuery
     ConnectionName = 'PB'
@@ -3314,19 +3316,19 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'SELECT *'
       'FROM Payment_Terms'
       'ORDER BY Payment_Terms_Description')
-    Left = 544
-    Top = 392
+    Left = 376
+    Top = 344
   end
   object dtsPayTerms: TDataSource
     DataSet = qryPayTerms
-    Left = 172
-    Top = 464
+    Left = 348
+    Top = 432
   end
   object FlashCreditTimer: TTimer
     Enabled = False
     OnTimer = FlashCreditTimerTimer
-    Left = 416
-    Top = 248
+    Left = 472
+    Top = 272
   end
   object qryActivityType: TFDQuery
     ConnectionName = 'PB'
@@ -3334,13 +3336,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 136
-    Top = 56
+    Left = 408
+    Top = 80
   end
   object dtsActivityType: TDataSource
     DataSet = qryActivityType
-    Left = 172
-    Top = 56
+    Left = 468
+    Top = 88
   end
   object qryProcessGroup: TFDQuery
     ConnectionName = 'pb'
@@ -3348,13 +3350,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'select *'
       'from Process_Group'
       'order by Process_Group_Description')
-    Left = 344
-    Top = 65528
+    Left = 360
+    Top = 152
   end
   object dtsProcessGroup: TDataSource
     DataSet = qryProcessGroup
-    Left = 432
-    Top = 65528
+    Left = 400
+    Top = 152
   end
   object qryProcess: TFDQuery
     MasterSource = dtsProcessGroup
@@ -3364,8 +3366,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'from Process'
       'where process_group = :process_group AND (inactive = '#39'N'#39')'
       'order by Process_Description')
-    Left = 456
-    Top = 80
+    Left = 424
+    Top = 96
     ParamData = <
       item
         Name = 'process_group'
@@ -3373,13 +3375,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object dtsProcess: TDataSource
     DataSet = qryProcess
-    Left = 496
-    Top = 80
+    Left = 384
+    Top = 104
   end
   object dtsActivityTypeQuotRem: TDataSource
     DataSet = qryActivityTypeQuotRem
-    Left = 172
-    Top = 88
+    Left = 476
+    Top = 72
   end
   object qryActivityTypeQuotRem: TFDQuery
     ConnectionName = 'PB'
@@ -3387,8 +3389,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 136
-    Top = 88
+    Left = 368
+    Top = 96
   end
   object qryActivityTypeProofStActiv: TFDQuery
     ConnectionName = 'PB'
@@ -3396,18 +3398,18 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 136
-    Top = 128
+    Left = 368
+    Top = 168
   end
   object dtsActivityTypeProofStActiv: TDataSource
     DataSet = qryActivityTypeProofStActiv
-    Left = 172
-    Top = 128
+    Left = 404
+    Top = 176
   end
   object dtsActivityTypeReorderAct: TDataSource
     DataSet = qryActivityTypeReorderAct
-    Left = 172
-    Top = 160
+    Left = 364
+    Top = 248
   end
   object qryActivityTypeReorderAct: TFDQuery
     ConnectionName = 'PB'
@@ -3415,13 +3417,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 136
-    Top = 160
+    Left = 344
+    Top = 240
   end
   object dtsActivityTypeOrdAct: TDataSource
     DataSet = qryActivityTypeOrdAct
-    Left = 172
-    Top = 192
+    Left = 300
+    Top = 368
   end
   object qryActivityTypeOrdAct: TFDQuery
     ConnectionName = 'PB'
@@ -3429,8 +3431,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 136
-    Top = 192
+    Left = 432
+    Top = 328
   end
   object qryActivityTypeDelivAct: TFDQuery
     ConnectionName = 'PB'
@@ -3438,12 +3440,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 136
-    Top = 224
+    Left = 344
+    Top = 352
   end
   object dtsActivityTypeDelivAct: TDataSource
     DataSet = qryActivityTypeDelivAct
-    Left = 172
-    Top = 224
+    Left = 468
+    Top = 360
   end
 end

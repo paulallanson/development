@@ -3,42 +3,45 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
   Top = 118
   BorderStyle = bsDialog
   Caption = 'Job Types'
-  ClientHeight = 306
+  ClientHeight = 307
   ClientWidth = 414
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 309
     Top = 0
     Width = 105
-    Height = 306
+    Height = 307
     Align = alRight
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = 303
+    ExplicitHeight = 297
     DesignSize = (
       105
-      306)
+      307)
     object FuncGrpBox: TGroupBox
-      Left = 10
-      Top = 132
-      Width = 87
-      Height = 105
+      Left = 6
+      Top = 117
+      Width = 91
+      Height = 109
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 116
       object AddBitBtn: TBitBtn
-        Left = 6
-        Top = 16
+        Left = 10
+        Top = 20
         Width = 75
         Height = 25
         Caption = 'Add'
@@ -60,8 +63,8 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
         OnClick = AddBitBtnClick
       end
       object ChgBitBtn: TBitBtn
-        Left = 6
-        Top = 44
+        Left = 10
+        Top = 48
         Width = 75
         Height = 25
         Caption = 'Change'
@@ -83,8 +86,8 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
         OnClick = ChgBitBtnClick
       end
       object DelBitBtn: TBitBtn
-        Left = 6
-        Top = 72
+        Left = 10
+        Top = 76
         Width = 75
         Height = 25
         Caption = 'Delete'
@@ -108,7 +111,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
     end
     object SelectBitBtn: TBitBtn
       Left = 16
-      Top = 248
+      Top = 249
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -181,47 +184,53 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = SelectBitBtnClick
+      ExplicitTop = 239
     end
     object CloseBitBtn: TBitBtn
       Left = 16
-      Top = 276
+      Top = 277
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitTop = 267
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
     Width = 309
-    Height = 306
+    Height = 307
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 303
+    ExplicitHeight = 297
     object Panel3: TPanel
       Left = 0
       Top = 0
       Width = 309
-      Height = 265
+      Height = 249
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 303
+      ExplicitHeight = 256
       object dbgrdDets: TDBGrid
         Left = 0
         Top = 0
         Width = 309
-        Height = 265
+        Height = 249
         Align = alClient
         DataSource = DetsSRC
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -229,7 +238,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
         TabOrder = 0
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -13
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnCellClick = dbgrdDetsCellClick
@@ -267,21 +276,21 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
     end
     object Panel4: TPanel
       Left = 0
-      Top = 265
+      Top = 249
       Width = 309
-      Height = 41
+      Height = 58
       Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
         309
-        41)
+        58)
       object CountLabel: TLabel
-        Left = 233
-        Top = 18
-        Width = 59
-        Height = 13
+        Left = 238
+        Top = 6
+        Width = 65
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akRight, akBottom]
         Caption = 'CountLabel'

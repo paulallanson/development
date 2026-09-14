@@ -3,26 +3,26 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Credit Note Reasons'
-  ClientHeight = 101
+  ClientHeight = 121
   ClientWidth = 535
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 112
-    Top = 80
-    Width = 109
-    Height = 13
+    Top = 83
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -35,7 +35,7 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -44,15 +44,15 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Reason'
     end
     object DescrEdit: TEdit
       Left = 78
       Top = 24
       Width = 403
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -61,7 +61,7 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
   end
   object OKBitBtn: TBitBtn
     Left = 248
-    Top = 72
+    Top = 79
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -137,7 +137,7 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 328
-    Top = 72
+    Top = 79
     Width = 75
     Height = 25
     Cancel = True
@@ -239,8 +239,8 @@ object PBMaintCreditReasonFrm: TPBMaintCreditReasonFrm
       ''
       ' '
       ' ')
-    Left = 16
-    Top = 16
+    Left = 92
+    Top = 12
     ParamData = <
       item
         Name = 'GUID'

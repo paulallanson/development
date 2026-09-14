@@ -7,21 +7,21 @@ object PBMaintPOAddNotesFrm: TPBMaintPOAddNotesFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 90
     Top = 189
-    Width = 133
-    Height = 13
-    Caption = 'Delete the above details ?'
+    Width = 150
+    Height = 17
+    Caption = 'Delete the above details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False

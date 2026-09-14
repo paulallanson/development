@@ -3,26 +3,26 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Job bag extras'
-  ClientHeight = 348
-  ClientWidth = 488
+  ClientHeight = 351
+  ClientWidth = 513
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 109
     Top = 317
-    Width = 184
-    Height = 15
+    Width = 211
+    Height = 16
     Caption = 'Really Delete This Job Bag Item?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -115,64 +115,64 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
   object grpbxDetails: TGroupBox
     Left = 8
     Top = 8
-    Width = 473
+    Width = 497
     Height = 289
     ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 8
       Top = 22
-      Width = 89
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Product Category'
     end
     object Label8: TLabel
       Left = 8
       Top = 52
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 188
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label3: TLabel
       Left = 8
       Top = 212
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Selling Price'
     end
     object Label4: TLabel
       Left = 8
       Top = 236
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Price Unit'
     end
     object Label5: TLabel
       Left = 8
       Top = 260
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Vat Rate'
     end
     object edtProductType: TEdit
-      Left = 104
+      Left = 114
       Top = 48
       Width = 185
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 1
       Text = 'edtProductType'
@@ -193,7 +193,7 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
       OnClick = btnProdTypeClick
     end
     object memQuantity: TMemo
-      Left = 104
+      Left = 114
       Top = 184
       Width = 105
       Height = 21
@@ -206,7 +206,7 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
       OnKeyPress = CheckKeyIsNumber
     end
     object memSellPrice: TMemo
-      Left = 104
+      Left = 114
       Top = 208
       Width = 105
       Height = 21
@@ -219,10 +219,10 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object dblkpPriceUnit: TDBLookupComboBox
-      Left = 104
+      Left = 114
       Top = 232
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
@@ -230,10 +230,10 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
       OnClick = CheckOK
     end
     object dblkpVat: TDBLookupComboBox
-      Left = 104
+      Left = 114
       Top = 256
       Width = 105
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'VAT_Rate'
       ListSource = dtsVat
@@ -241,13 +241,13 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
       OnClick = CheckOK
     end
     object edtDescription: TRichEdit
-      Left = 104
+      Left = 114
       Top = 80
       Width = 361
       Height = 97
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Lines.Strings = (
@@ -258,10 +258,10 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
       OnChange = CheckOK
     end
     object dblkpProductCat: TDBLookupComboBox
-      Left = 104
+      Left = 114
       Top = 18
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'Category'
       ListField = 'Description'
       ListSource = dtsProductCat

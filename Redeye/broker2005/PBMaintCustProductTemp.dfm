@@ -3,39 +3,39 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Product Templates'
-  ClientHeight = 155
-  ClientWidth = 652
+  ClientHeight = 171
+  ClientWidth = 697
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 72
     Top = 128
-    Width = 109
-    Height = 13
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object CustLabel: TLabel
     Left = 16
-    Top = 10
-    Width = 50
-    Height = 13
+    Top = 7
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -48,7 +48,7 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -57,22 +57,22 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     object Label1: TLabel
       Left = 8
       Top = 56
-      Width = 46
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Template'
     end
     object Label2: TLabel
       Left = 8
       Top = 28
-      Width = 28
-      Height = 13
+      Width = 32
+      Height = 17
       Caption = 'Prefix'
     end
     object DescrEdit: TEdit
       Left = 78
       Top = 52
       Width = 339
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'DESCREDIT'
@@ -82,7 +82,7 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
       Left = 78
       Top = 24
       Width = 99
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 40
       TabOrder = 0
@@ -92,7 +92,7 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
   end
   object OKBitBtn: TBitBtn
     Left = 208
-    Top = 120
+    Top = 125
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -168,7 +168,7 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 288
-    Top = 120
+    Top = 125
     Width = 75
     Height = 25
     Cancel = True
@@ -243,10 +243,10 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     OnClick = CancelBitBtnClick
   end
   object Panel1: TPanel
-    Left = 448
+    Left = 456
     Top = 0
-    Width = 204
-    Height = 155
+    Width = 241
+    Height = 171
     Align = alRight
     BevelOuter = bvNone
     ParentBackground = False
@@ -254,47 +254,47 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     object Label3: TLabel
       Left = 0
       Top = 32
-      Width = 139
-      Height = 13
+      Width = 163
+      Height = 17
       Caption = '\ - Next character is a literal'
     end
     object Label4: TLabel
       Left = 0
       Top = 48
-      Width = 208
-      Height = 13
+      Width = 240
+      Height = 17
       Caption = 'L - alphabetic character only (mandatory)'
     end
     object Label5: TLabel
       Left = 0
       Top = 80
-      Width = 201
-      Height = 13
+      Width = 232
+      Height = 17
       Caption = 'A - alphanumeric character (mandatory)'
     end
     object Label6: TLabel
       Left = 0
       Top = 112
-      Width = 132
-      Height = 13
+      Width = 152
+      Height = 17
       Caption = '0 - numeric character only'
     end
     object Label7: TLabel
       Left = 0
       Top = 128
-      Width = 141
-      Height = 13
+      Width = 159
+      Height = 17
       Caption = 'S - auto sequential numeric'
     end
     object Label8: TLabel
       Left = 0
       Top = 8
-      Width = 89
-      Height = 13
+      Width = 106
+      Height = 17
       Caption = 'Template Legend'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -302,15 +302,15 @@ object PBMaintCustProductTempFrm: TPBMaintCustProductTempFrm
     object Label9: TLabel
       Left = 0
       Top = 64
-      Width = 133
-      Height = 13
+      Width = 152
+      Height = 17
       Caption = 'l - alphanumeric character'
     end
     object Label10: TLabel
       Left = 0
       Top = 96
-      Width = 136
-      Height = 13
+      Width = 156
+      Height = 17
       Caption = 'a - alphanumeric character'
     end
   end

@@ -7,12 +7,12 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel2: TPanel
     Left = 0
     Top = 0
@@ -21,11 +21,12 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 620
     object lblCustomer: TLabel
       Left = 8
       Top = 8
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
   end
@@ -37,11 +38,13 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 296
+    ExplicitWidth = 620
     DesignSize = (
       626
       44)
     object btnSelect: TBitBtn
-      Left = 448
+      Left = 442
       Top = 8
       Width = 75
       Height = 25
@@ -52,9 +55,10 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 436
     end
     object btnCancel: TBitBtn
-      Left = 536
+      Left = 530
       Top = 8
       Width = 75
       Height = 25
@@ -62,6 +66,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 524
     end
   end
   object dbgJB: TDBGrid
@@ -73,7 +78,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -81,7 +86,7 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgJBCellClick

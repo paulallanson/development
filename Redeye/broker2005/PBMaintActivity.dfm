@@ -9,14 +9,14 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
   Constraints.MinWidth = 900
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 543
@@ -29,6 +29,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       item
         Width = 250
       end>
+    ExplicitTop = 534
+    ExplicitWidth = 882
   end
   object pnlBody: TPanel
     Left = 0
@@ -39,10 +41,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 360
-    ExplicitTop = 280
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 882
+    ExplicitHeight = 534
     object Panel1: TPanel
       Left = 0
       Top = 502
@@ -52,26 +52,27 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 493
+      ExplicitWidth = 882
       DesignSize = (
         888
         41)
       object lblDeletePrompt: TLabel
-        Left = 510
-        Top = 14
-        Width = 133
-        Height = 13
+        Left = 504
+        Top = 12
+        Width = 160
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Delete the above details ?'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 512
       end
       object btnOK: TBitBtn
-        Left = 686
+        Left = 680
         Top = 8
         Width = 75
         Height = 25
@@ -146,9 +147,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         NumGlyphs = 2
         TabOrder = 0
         OnClick = btnOKClick
+        ExplicitLeft = 674
       end
       object btnCancel: TBitBtn
-        Left = 774
+        Left = 768
         Top = 8
         Width = 75
         Height = 25
@@ -222,6 +224,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ModalResult = 2
         NumGlyphs = 2
         TabOrder = 1
+        ExplicitLeft = 762
       end
     end
     object Panel2: TPanel
@@ -232,7 +235,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       Align = alClient
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 543
+      ExplicitWidth = 882
+      ExplicitHeight = 493
       object pgActivities: TPageControl
         Left = 1
         Top = 161
@@ -241,66 +245,65 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ActivePage = tbCurrent
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 381
         object tbCurrent: TTabSheet
           Caption = 'Current Activity'
           DesignSize = (
             878
-            312)
+            308)
           object Label7: TLabel
             Left = 8
             Top = 10
-            Width = 23
-            Height = 13
+            Width = 27
+            Height = 17
             Caption = 'Type'
           end
           object Label8: TLabel
             Left = 8
             Top = 43
-            Width = 38
-            Height = 13
+            Width = 42
+            Height = 17
             Caption = 'Subject'
           end
           object Label4: TLabel
             Left = 8
             Top = 76
-            Width = 35
-            Height = 13
+            Width = 39
+            Height = 17
             Caption = 'Details'
           end
           object Label10: TLabel
-            Left = 597
-            Top = 236
-            Width = 36
-            Height = 13
+            Left = 586
+            Top = 232
+            Width = 41
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Priority'
-            ExplicitLeft = 599
           end
           object Label11: TLabel
             Left = 8
-            Top = 236
-            Width = 32
-            Height = 13
+            Top = 232
+            Width = 35
+            Height = 17
             Anchors = [akLeft, akBottom]
             Caption = 'Status'
           end
           object memDetails: TMemo
             Left = 80
             Top = 73
-            Width = 761
-            Height = 143
+            Width = 755
+            Height = 139
             Anchors = [akLeft, akTop, akRight, akBottom]
             ScrollBars = ssVertical
             TabOrder = 0
             OnChange = memDetailsChange
-            ExplicitHeight = 184
+            ExplicitWidth = 749
+            ExplicitHeight = 134
           end
           object dblkpType: TDBLookupComboBox
             Left = 80
             Top = 6
-            Width = 225
-            Height = 21
+            Width = 219
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             KeyField = 'Activity_Type'
             ListField = 'Activity_Type_Description'
@@ -308,8 +311,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             OnClick = dblkpTypeClick
           end
           object btnActivityType: TButton
-            Left = 315
-            Top = 5
+            Left = 309
+            Top = 7
             Width = 22
             Height = 22
             Anchors = [akTop, akRight]
@@ -326,78 +329,76 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           object edtSubject: TEdit
             Left = 80
             Top = 39
-            Width = 761
-            Height = 21
+            Width = 755
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 3
             Text = 'edtSubject'
             OnChange = edtSubjectChange
           end
           object dblkpPriority: TDBLookupComboBox
-            Left = 637
-            Top = 232
+            Left = 631
+            Top = 228
             Width = 167
-            Height = 21
+            Height = 25
             Anchors = [akRight, akBottom]
             KeyField = 'Activity_Priority'
             ListField = 'Activity_Priority_Description'
             TabOrder = 4
             OnClick = dblkpPriorityClick
-            ExplicitTop = 273
           end
           object dblkpStatus: TDBLookupComboBox
             Left = 80
-            Top = 232
+            Top = 228
             Width = 225
-            Height = 21
+            Height = 25
             Anchors = [akLeft, akBottom]
             KeyField = 'Activity_Status'
             ListField = 'Activity_Status_Description'
             TabOrder = 5
             OnClick = dblkpStatusClick
-            ExplicitTop = 273
           end
           object pnlReminder: TPanel
             Left = 0
-            Top = 276
+            Top = 272
             Width = 878
             Height = 36
             Align = alBottom
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 6
-            ExplicitTop = 317
+            ExplicitTop = 267
+            ExplicitWidth = 872
             DesignSize = (
               878
               36)
             object Label3: TLabel
               Left = 207
               Top = 8
-              Width = 24
-              Height = 13
+              Width = 28
+              Height = 17
               Caption = 'Time'
             end
             object Label9: TLabel
-              Left = 509
+              Left = 497
               Top = 8
-              Width = 65
-              Height = 13
+              Width = 74
+              Height = 17
               Anchors = [akRight, akBottom]
               Caption = 'Assigned To:'
-              ExplicitLeft = 511
             end
             object Label2: TLabel
               Left = 8
               Top = 8
-              Width = 48
-              Height = 13
+              Width = 54
+              Height = 17
               Caption = 'Due Date'
             end
             object dtPickerDueDate: TDateTimePicker
               Left = 79
               Top = 4
               Width = 97
-              Height = 21
+              Height = 25
               Date = 37453.000000000000000000
               Time = 37453.000000000000000000
               TabOrder = 0
@@ -406,7 +407,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               Left = 240
               Top = 4
               Width = 105
-              Height = 21
+              Height = 25
               ItemIndex = 0
               TabOrder = 1
               Text = '00:00'
@@ -461,10 +462,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
                 '23:30')
             end
             object dblkpAssignedTo: TDBLookupComboBox
-              Left = 581
+              Left = 575
               Top = 4
               Width = 224
-              Height = 21
+              Height = 25
               Anchors = [akRight, akBottom]
               KeyField = 'Operator'
               ListField = 'Name'
@@ -472,7 +473,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               OnClick = dblkpAssignedToClick
             end
             object Button4: TButton
-              Left = 820
+              Left = 814
               Top = 3
               Width = 22
               Height = 22
@@ -485,6 +486,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               Font.Style = [fsBold]
               ParentFont = False
               TabOrder = 3
+              ExplicitLeft = 808
             end
           end
         end
@@ -493,7 +495,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ImageIndex = 1
           object Panel3: TPanel
             Left = 0
-            Top = 149
+            Top = 145
             Width = 878
             Height = 163
             Align = alBottom
@@ -531,7 +533,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               Enabled = False
               Font.Charset = ANSI_CHARSET
               Font.Color = clBlack
-              Font.Height = -11
+              Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
               Lines.Strings = (
@@ -544,12 +546,12 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Left = 0
             Top = 0
             Width = 878
-            Height = 149
+            Height = 145
             Align = alClient
             DrawingStyle = gdsGradient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -557,7 +559,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             TabOrder = 1
             TitleFont.Charset = DEFAULT_CHARSET
             TitleFont.Color = clWindowText
-            TitleFont.Height = -12
+            TitleFont.Height = -13
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
             Columns = <
@@ -626,13 +628,13 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Left = 0
             Top = 0
             Width = 878
-            Height = 312
+            Height = 308
             Align = alClient
             ParentBackground = False
             TabOrder = 0
             object Panel7: TPanel
               Left = 1
-              Top = 287
+              Top = 283
               Width = 876
               Height = 24
               Align = alBottom
@@ -641,13 +643,13 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               TabOrder = 0
               object lblDocumentDir: TLabel
                 Left = 8
-                Top = 6
-                Width = 150
-                Height = 13
+                Top = 3
+                Width = 183
+                Height = 17
                 Caption = 'Primary Document Directory:'
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clWindowText
-                Font.Height = -11
+                Font.Height = -13
                 Font.Name = 'Segoe UI'
                 Font.Style = [fsBold]
                 ParentFont = False
@@ -657,7 +659,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               Left = 1
               Top = 1
               Width = 876
-              Height = 286
+              Height = 282
               Align = alClient
               Columns = <
                 item
@@ -693,105 +695,101 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 880
         DesignSize = (
           886
           160)
         object Label1: TLabel
           Left = 8
           Top = 76
-          Width = 40
-          Height = 13
+          Width = 44
+          Height = 17
           Caption = 'Contact'
         end
         object Label5: TLabel
           Left = 8
           Top = 16
-          Width = 49
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Customer'
         end
         object Label6: TLabel
           Left = 8
           Top = 46
-          Width = 35
-          Height = 13
+          Width = 39
+          Height = 17
           Caption = 'Branch'
         end
         object Label12: TLabel
           Left = 8
           Top = 131
-          Width = 40
-          Height = 13
+          Width = 45
+          Height = 17
           Caption = 'Module'
         end
         object LabelPhone: TLabel
-          Left = 377
-          Top = 78
-          Width = 36
-          Height = 13
+          Left = 371
+          Top = 76
+          Width = 39
+          Height = 18
           Anchors = [akTop, akRight]
           Caption = 'Phone:'
-          ExplicitLeft = 379
         end
         object LabelFax: TLabel
-          Left = 595
-          Top = 78
-          Width = 39
-          Height = 13
+          Left = 589
+          Top = 76
+          Width = 44
+          Height = 18
           Anchors = [akTop, akRight]
           Caption = 'Mobile:'
-          ExplicitLeft = 597
         end
         object DBCPhoneText: TDBText
-          Left = 422
-          Top = 78
+          Left = 416
+          Top = 76
           Width = 170
-          Height = 13
+          Height = 18
           Anchors = [akTop, akRight]
           DataField = 'Phone'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          ExplicitLeft = 446
         end
         object DBCEmailText: TDBText
-          Left = 422
-          Top = 102
+          Left = 416
+          Top = 99
           Width = 214
-          Height = 13
+          Height = 18
           Anchors = [akTop, akRight]
           DataField = 'Email'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          ExplicitLeft = 446
         end
         object DBCMobileText: TDBText
           Left = 638
-          Top = 78
+          Top = 76
           Width = 202
-          Height = 13
+          Height = 18
           Anchors = [akTop, akRight]
           DataField = 'Mobile_No'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          ExplicitLeft = 662
         end
         object edtCustomer: TEdit
           Left = 80
           Top = 12
-          Width = 433
-          Height = 21
+          Width = 427
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           Color = clWhite
           ReadOnly = True
@@ -801,8 +799,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object dblkpBranch: TDBLookupComboBox
           Left = 80
           Top = 42
-          Width = 433
-          Height = 21
+          Width = 427
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Branch_no'
           ListField = 'Name'
@@ -810,7 +808,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           OnClick = dblkpBranchClick
         end
         object btnBranch: TButton
-          Left = 523
+          Left = 517
           Top = 41
           Width = 22
           Height = 22
@@ -824,48 +822,50 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ParentFont = False
           TabOrder = 2
           OnClick = btnBranchClick
+          ExplicitLeft = 511
         end
         object pnlModule: TPanel
           Left = 272
           Top = 120
-          Width = 597
+          Width = 591
           Height = 33
           Anchors = [akLeft, akTop, akRight]
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 3
+          ExplicitWidth = 585
           DesignSize = (
-            597
+            591
             33)
           object Label13: TLabel
             Left = 24
             Top = 11
-            Width = 51
-            Height = 13
+            Width = 58
+            Height = 17
             Caption = 'Reference'
           end
           object edtReference: TEdit
-            Left = 80
+            Left = 88
             Top = 7
             Width = 81
-            Height = 21
+            Height = 25
             ReadOnly = True
             TabOrder = 0
             Text = 'edtReference'
           end
           object edtDescription: TEdit
-            Left = 202
+            Left = 210
             Top = 7
-            Width = 382
-            Height = 21
+            Width = 376
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             ReadOnly = True
             TabOrder = 2
             Text = 'edtDescription'
           end
           object btnModuleLU: TButton
-            Left = 172
-            Top = 6
+            Left = 180
+            Top = 8
             Width = 22
             Height = 22
             Caption = '...'
@@ -880,7 +880,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           end
         end
         object Button1: TButton
-          Left = 315
+          Left = 309
           Top = 73
           Width = 22
           Height = 22
@@ -894,12 +894,13 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ParentFont = False
           TabOrder = 4
           OnClick = Button1Click
+          ExplicitLeft = 303
         end
         object dblkpContact: TDBLookupComboBox
           Left = 80
           Top = 72
-          Width = 225
-          Height = 21
+          Width = 219
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Contact_no'
           ListField = 'Name'
@@ -910,14 +911,14 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           Left = 80
           Top = 127
           Width = 193
-          Height = 21
+          Height = 25
           KeyField = 'Activity_Module'
           ListField = 'Activity_Module_description'
           TabOrder = 6
           OnClick = dblkpModuleClick
         end
         object btnCustomer: TButton
-          Left = 523
+          Left = 517
           Top = 11
           Width = 22
           Height = 22
@@ -931,9 +932,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ParentFont = False
           TabOrder = 7
           OnClick = btnCustomerClick
+          ExplicitLeft = 511
         end
         object Button2: TButton
-          Left = 365
+          Left = 359
           Top = 98
           Width = 50
           Height = 20
@@ -941,6 +943,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           Caption = 'Email:'
           TabOrder = 8
           OnClick = Button2Click
+          ExplicitLeft = 353
         end
       end
     end
@@ -1221,8 +1224,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       000000000000}
   end
   object svDlgOfficeDoc: TSaveDialog
-    Left = 705
-    Top = 22
+    Left = 745
+    Top = 12
   end
   object imgDocuments: TImageList
     Left = 104

@@ -2,31 +2,31 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
   Left = 19
   Top = 38
   Caption = 'Purchase Order Selection'
-  ClientHeight = 479
+  ClientHeight = 498
   ClientWidth = 779
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
-    Top = 343
+    Top = 344
     Width = 779
-    Height = 117
+    Height = 135
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
       779
-      117)
+      135)
     object Label2: TLabel
       Left = 16
       Top = 8
@@ -42,7 +42,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     end
     object chkSuppInvoiced: TCheckBox
       Left = 16
-      Top = 48
+      Top = 55
       Width = 345
       Height = 17
       Anchors = [akLeft, akBottom]
@@ -52,25 +52,26 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     end
     object CustomerGroupBox: TGroupBox
       Left = 16
-      Top = 67
+      Top = 85
       Width = 385
       Height = 49
       Anchors = [akLeft, akBottom]
       Caption = 'Type here to narrow the search'
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 67
       object Label1: TLabel
         Left = 8
         Top = 24
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object edtCustomerName: TEdit
         Left = 72
         Top = 16
         Width = 209
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = edtCustomerNameChange
       end
@@ -86,32 +87,36 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       end
     end
     object GroupBox1: TGroupBox
-      Left = 472
-      Top = 67
+      Left = 466
+      Top = 85
       Width = 161
       Height = 49
       Anchors = [akRight, akBottom]
       Caption = 'Selected Purchase Order'
       ParentBackground = False
       TabOrder = 2
+      ExplicitLeft = 460
+      ExplicitTop = 67
       object edtPONumber: TEdit
         Left = 8
         Top = 16
         Width = 137
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnKeyPress = edtPONumberKeyPress
       end
     end
     object GroupBox2: TGroupBox
-      Left = 648
-      Top = 32
+      Left = 642
+      Top = 50
       Width = 105
       Height = 81
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 636
+      ExplicitTop = 32
       object btnSelect: TBitBtn
         Left = 16
         Top = 20
@@ -191,7 +196,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     end
     object chkAllOrders: TCheckBox
       Left = 16
-      Top = 26
+      Top = 30
       Width = 313
       Height = 17
       Caption = 'Display all orders not invoiced'
@@ -203,22 +208,24 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     Left = 0
     Top = 0
     Width = 779
-    Height = 343
+    Height = 344
     Align = alClient
     Caption = 'Panel2'
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 773
+    ExplicitHeight = 334
     object dbgPO: TDBGrid
       Left = 1
       Top = 1
       Width = 777
-      Height = 341
+      Height = 342
       Align = alClient
       DataSource = dmSalesInvoice.dsPOLine
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -226,7 +233,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnCellClick = dbgPOCellClick
@@ -310,7 +317,7 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 460
+    Top = 479
     Width = 779
     Height = 19
     Panels = <
@@ -320,6 +327,8 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       item
         Width = 50
       end>
+    ExplicitTop = 451
+    ExplicitWidth = 773
   end
   object SearchTimer: TTimer
     Enabled = False

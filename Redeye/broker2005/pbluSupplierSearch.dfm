@@ -3,116 +3,118 @@ object frmpbluSupplierSearch: TfrmpbluSupplierSearch
   Top = 185
   BorderStyle = bsDialog
   Caption = 'Supplier Search'
-  ClientHeight = 242
-  ClientWidth = 288
+  ClientHeight = 257
+  ClientWidth = 327
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    288
-    242)
-  TextHeight = 13
+    327
+    257)
+  TextHeight = 17
   object Label9: TLabel
     Left = 11
-    Top = 2
-    Width = 54
-    Height = 13
+    Top = 6
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
     Left = 120
-    Top = 2
-    Width = 159
-    Height = 13
+    Top = 6
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label6: TLabel
     Left = 11
-    Top = 51
-    Width = 47
-    Height = 13
+    Top = 59
+    Width = 54
+    Height = 17
     Caption = 'Postcode'
   end
   object Label13: TLabel
     Left = 11
-    Top = 98
-    Width = 54
-    Height = 13
+    Top = 110
+    Width = 60
+    Height = 17
     Caption = 'Telephone'
   end
   object Label3: TLabel
     Left = 11
-    Top = 27
-    Width = 51
-    Height = 13
+    Top = 33
+    Width = 56
+    Height = 17
     Caption = 'Town/City'
   end
   object Label1: TLabel
     Left = 11
-    Top = 148
-    Width = 69
-    Height = 13
+    Top = 163
+    Width = 79
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
     Visible = False
+    ExplicitTop = 148
   end
   object Label2: TLabel
     Left = 11
-    Top = 122
-    Width = 17
-    Height = 13
+    Top = 136
+    Width = 19
+    Height = 17
     Caption = 'Fax'
   end
   object Label5: TLabel
     Left = 11
-    Top = 75
-    Width = 37
-    Height = 13
+    Top = 85
+    Width = 40
+    Height = 17
     Caption = 'County'
   end
   object edtTelephone: TEdit
     Left = 120
-    Top = 94
+    Top = 106
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object edtPostcode: TEdit
     Left = 120
-    Top = 46
+    Top = 54
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object chkbxShowInactive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 175
+    Top = 190
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive suppliers'
     TabOrder = 7
+    ExplicitTop = 166
   end
   object SearchButton: TButton
     Left = 12
-    Top = 207
+    Top = 222
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -120,27 +122,29 @@ object frmpbluSupplierSearch: TfrmpbluSupplierSearch
     Default = True
     TabOrder = 8
     OnClick = SearchButtonClick
+    ExplicitTop = 198
   end
   object edtTown: TEdit
     Left = 120
-    Top = 22
+    Top = 28
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtDate: TEdit
     Left = 120
-    Top = 144
+    Top = 159
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akLeft, akBottom]
     TabOrder = 5
     Visible = False
     OnExit = edtDateExit
+    ExplicitTop = 144
   end
   object btnDate: TBitBtn
     Left = 216
-    Top = 142
+    Top = 157
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -161,29 +165,31 @@ object frmpbluSupplierSearch: TfrmpbluSupplierSearch
     TabOrder = 6
     Visible = False
     OnClick = btnDateClick
+    ExplicitTop = 133
   end
   object edtFax: TEdit
     Left = 120
-    Top = 118
+    Top = 132
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object ClearButton: TButton
     Left = 196
-    Top = 208
+    Top = 223
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 9
     OnClick = ClearButtonClick
+    ExplicitTop = 199
   end
   object edtCounty: TEdit
     Left = 120
-    Top = 70
+    Top = 80
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
 end

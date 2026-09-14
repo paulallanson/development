@@ -9,7 +9,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
   Constraints.MinWidth = 580
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,7 +17,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetail: TPanel
     Left = 0
     Top = 44
@@ -36,7 +36,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -45,7 +45,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clBlack
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnColEnter = DetsDBGridColEnter
@@ -194,8 +194,8 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
         Width = 760
         Height = 40
         Align = alNone
-        ButtonHeight = 36
-        ButtonWidth = 47
+        ButtonHeight = 40
+        ButtonWidth = 53
         Caption = 'EditBar'
         EdgeInner = esNone
         EdgeOuter = esNone
@@ -214,7 +214,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           OnClick = AddBitBtnClick
         end
         object ChgBitBtn: TToolButton
-          Left = 47
+          Left = 53
           Top = 0
           Hint = 'Change Order'
           Caption = '&Change'
@@ -224,14 +224,14 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           OnClick = ChgBitBtnClick
         end
         object RepeatBitBtn: TToolButton
-          Left = 94
+          Left = 106
           Top = 0
           Caption = '&Repeat'
           ImageIndex = 6
           OnClick = RepeatBitBtnClick
         end
         object CopyBitBtn: TToolButton
-          Left = 141
+          Left = 159
           Top = 0
           Hint = 'Copy Order'
           Caption = 'C&opy'
@@ -241,7 +241,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           OnClick = CopyBitBtnClick
         end
         object PrintBitBtn: TToolButton
-          Left = 188
+          Left = 212
           Top = 0
           Hint = 'Print Order'
           Caption = '&Print'
@@ -251,7 +251,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           OnClick = PrintBitBtnClick
         end
         object ToolButton3: TToolButton
-          Left = 235
+          Left = 265
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -259,7 +259,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           Style = tbsSeparator
         end
         object ProofBtn: TToolButton
-          Left = 243
+          Left = 273
           Top = 0
           Hint = 'Print Proof Approval Form'
           Caption = 'Proo&fs'
@@ -269,7 +269,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           ShowHint = True
         end
         object ToolButton7: TToolButton
-          Left = 290
+          Left = 326
           Top = 0
           Width = 8
           Caption = 'ToolButton7'
@@ -277,14 +277,14 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           Style = tbsSeparator
         end
         object ToolButtonDeliv: TToolButton
-          Left = 298
+          Left = 334
           Top = 0
           Caption = '&Delivery'
           ImageIndex = 9
           OnClick = ToolButtonDelivClick
         end
         object ToolButton4: TToolButton
-          Left = 345
+          Left = 387
           Top = 0
           Width = 8
           Caption = 'ToolButton4'
@@ -292,14 +292,14 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           Style = tbsSeparator
         end
         object HoldBitBtn: TToolButton
-          Left = 353
+          Left = 395
           Top = 0
           Caption = 'Hold'
           ImageIndex = 8
           OnClick = HoldBitBtnClick
         end
         object ToolButton2: TToolButton
-          Left = 400
+          Left = 448
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -307,21 +307,21 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           Style = tbsSeparator
         end
         object EventBitbtn: TToolButton
-          Left = 408
+          Left = 456
           Top = 0
           Caption = 'Events'
           ImageIndex = 6
           OnClick = EventBitbtnClick
         end
         object tlbtnHistory: TToolButton
-          Left = 455
+          Left = 509
           Top = 0
           Caption = 'History'
           ImageIndex = 10
           OnClick = tlbtnHistoryClick
         end
         object searchbtn: TToolButton
-          Left = 502
+          Left = 562
           Top = 0
           Hint = 'Search'
           Caption = '&Search'
@@ -331,7 +331,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           OnClick = searchbtnClick
         end
         object CloseBitBtn: TToolButton
-          Left = 549
+          Left = 615
           Top = 0
           Caption = 'C&lose'
           ImageIndex = 5
@@ -345,8 +345,8 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
         Top = 42
         Width = 760
         Height = 42
-        ButtonHeight = 36
-        ButtonWidth = 47
+        ButtonHeight = 40
+        ButtonWidth = 55
         Caption = ' DeleteBar'
         HotImages = DelHotImageList
         Images = DelImageList
@@ -360,28 +360,28 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           OnClick = DelBitBtnClick
         end
         object ViewBitBtn: TToolButton
-          Left = 47
+          Left = 55
           Top = 0
           Caption = ' View '
           ImageIndex = 1
           OnClick = EventBitbtnClick
         end
         object CancelToolButton: TToolButton
-          Left = 94
+          Left = 110
           Top = 0
           Caption = 'Cancel'
           ImageIndex = 4
           OnClick = CancelToolButtonClick
         end
         object SearchToolButton: TToolButton
-          Left = 141
+          Left = 165
           Top = 0
           Caption = 'Search'
           ImageIndex = 2
           OnClick = searchbtnClick
         end
         object ToolButton1: TToolButton
-          Left = 188
+          Left = 220
           Top = 0
           Width = 8
           Caption = 'ToolButton1'
@@ -389,7 +389,7 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           Style = tbsSeparator
         end
         object ToolButton12: TToolButton
-          Left = 196
+          Left = 228
           Top = 0
           Caption = '  Close  '
           ImageIndex = 3
@@ -401,8 +401,8 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
         Top = 86
         Width = 760
         Height = 42
-        ButtonHeight = 36
-        ButtonWidth = 47
+        ButtonHeight = 40
+        ButtonWidth = 54
         Caption = 'SelectBar'
         HotImages = SearchHotImageList
         Images = SearchImageList
@@ -416,14 +416,14 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
           OnClick = SelectBitBtnClick
         end
         object ToolButton10: TToolButton
-          Left = 47
+          Left = 54
           Top = 0
           Caption = ' Search '
           ImageIndex = 1
           OnClick = SearchBitBtnClick
         end
         object ToolButton13: TToolButton
-          Left = 94
+          Left = 108
           Top = 0
           Caption = 'Close'
           ImageIndex = 2
@@ -462,25 +462,25 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
       BevelOuter = bvNone
       TabOrder = 0
       object pnlSelectPO: TPanel
-        Left = 523
+        Left = 504
         Top = 0
-        Width = 252
+        Width = 271
         Height = 32
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 0
         object Label6: TLabel
-          Left = 2
-          Top = 11
-          Width = 125
-          Height = 13
+          Left = 9
+          Top = 7
+          Width = 144
+          Height = 17
           Caption = 'Selected Purchase Order'
         end
         object PONumEdit: TEdit
-          Left = 147
+          Left = 161
           Top = 3
           Width = 97
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnChange = PONumEditChange
           OnKeyPress = PONumEditKeyPress
@@ -488,8 +488,8 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
       end
       object AllRecordsChk: TCheckBox
         Left = 264
-        Top = 11
-        Width = 137
+        Top = 8
+        Width = 161
         Height = 17
         Caption = 'Display all records'
         TabOrder = 1
@@ -499,8 +499,8 @@ object PBLUPOrdFrm: TPBLUPOrdFrm
       object JustMyChkBox: TCheckBox
         Tag = 11
         Left = 8
-        Top = 11
-        Width = 201
+        Top = 8
+        Width = 225
         Height = 17
         Caption = 'Just display MY purchase orders'
         TabOrder = 2

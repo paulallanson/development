@@ -3,129 +3,129 @@ object frmpbluSalesInvoiceSearch: TfrmpbluSalesInvoiceSearch
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Invoice Search'
-  ClientHeight = 281
-  ClientWidth = 288
+  ClientHeight = 286
+  ClientWidth = 334
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    288
-    281)
-  PixelsPerInch = 96
-  TextHeight = 13
+    334
+    286)
+  TextHeight = 17
   object Label9: TLabel
-    Left = 11
-    Top = 2
-    Width = 51
-    Height = 13
+    Left = 8
+    Top = 9
+    Width = 64
+    Height = 17
     Caption = 'Item Name'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 120
-    Top = 2
-    Width = 148
-    Height = 13
+    Left = 132
+    Top = 9
+    Width = 182
+    Height = 17
     Caption = 'Type here to narrow the search'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object Label2: TLabel
     Left = 11
-    Top = 163
-    Width = 61
-    Height = 13
+    Top = 168
+    Width = 71
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Invoice Date'
+    ExplicitTop = 163
   end
   object lblDescription: TLabel
     Left = 11
     Top = 37
-    Width = 53
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object lblJobNumber: TLabel
     Left = 11
-    Top = 131
-    Width = 88
-    Height = 13
+    Top = 139
+    Width = 113
+    Height = 17
     Caption = 'Order/Job Number'
   end
   object lblStatus: TLabel
     Left = 11
-    Top = 107
-    Width = 30
-    Height = 13
+    Top = 113
+    Width = 35
+    Height = 17
     Caption = 'Status'
   end
   object Label1: TLabel
     Left = 11
-    Top = 61
-    Width = 20
-    Height = 13
+    Top = 63
+    Width = 23
+    Height = 17
     Caption = 'Rep'
   end
   object Label3: TLabel
     Left = 11
-    Top = 85
-    Width = 74
-    Height = 13
+    Top = 89
+    Width = 88
+    Height = 17
     Caption = 'Secondary Rep'
   end
   object chkbxShowDeleted: TCheckBox
     Tag = 12
     Left = 12
-    Top = 214
+    Top = 219
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show deleted invoices'
     TabOrder = 8
+    ExplicitTop = 214
   end
   object SearchButton: TButton
     Left = 12
-    Top = 246
+    Top = 251
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Start Search'
+    Caption = 'Search'
     Default = True
     TabOrder = 9
     OnClick = SearchButtonClick
+    ExplicitTop = 246
   end
   object edtDate: TEdit
-    Left = 120
-    Top = 159
+    Left = 132
+    Top = 164
     Width = 89
-    Height = 21
+    Height = 25
     Anchors = [akLeft, akBottom]
     TabOrder = 5
     OnExit = edtDateExit
+    ExplicitTop = 166
   end
   object btnDate: TBitBtn
-    Left = 216
-    Top = 157
+    Left = 228
+    Top = 164
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 6
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -140,60 +140,65 @@ object frmpbluSalesInvoiceSearch: TfrmpbluSalesInvoiceSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = btnDateClick
+    ExplicitTop = 166
   end
   object edtDescription: TEdit
-    Left = 120
+    Left = 132
     Top = 33
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 0
   end
   object edtJobNumber: TEdit
-    Left = 120
-    Top = 127
+    Left = 132
+    Top = 135
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 4
   end
   object edtStatus: TEdit
-    Left = 120
-    Top = 103
+    Left = 132
+    Top = 109
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 3
   end
   object ClearButton: TButton
     Left = 196
-    Top = 246
+    Top = 251
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    Caption = 'Clear Search'
+    Caption = 'Clear'
     TabOrder = 10
     OnClick = ClearButtonClick
+    ExplicitTop = 246
   end
   object chkbxShowArchived: TCheckBox
     Tag = 12
     Left = 12
-    Top = 190
+    Top = 195
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show archived invoices'
     TabOrder = 7
+    ExplicitTop = 190
   end
   object edtRep: TEdit
-    Left = 120
-    Top = 57
+    Left = 132
+    Top = 59
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 1
   end
   object edtSubRep: TEdit
-    Left = 120
-    Top = 81
+    Left = 132
+    Top = 85
     Width = 153
-    Height = 21
+    Height = 25
     TabOrder = 2
   end
 end

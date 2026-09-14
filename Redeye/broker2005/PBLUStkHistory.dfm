@@ -9,34 +9,36 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
   Constraints.MinWidth = 750
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
-    Top = 89
+    Top = 97
     Width = 735
-    Height = 295
+    Height = 287
     Align = alClient
     Caption = 'Panel1'
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 89
+    ExplicitHeight = 295
     object detsDBGrid: TDBGrid
       Left = 1
       Top = 1
       Width = 733
-      Height = 293
+      Height = 285
       Align = alClient
       DataSource = dtmdlForms.dtsHistory
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -45,7 +47,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDrawColumnCell = detsDBGridDrawColumnCell
@@ -129,12 +131,12 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Left = 0
     Top = 0
     Width = 735
-    Height = 89
+    Height = 97
     Align = alTop
     Anchors = [akTop, akRight]
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -142,49 +144,49 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     TabOrder = 1
     DesignSize = (
       735
-      89)
+      97)
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 82
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'Stock Reference'
     end
     object Label2: TLabel
       Left = 8
       Top = 70
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label3: TLabel
-      Left = 528
+      Left = 522
       Top = 44
-      Width = 69
-      Height = 13
+      Width = 81
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Reorder Level'
     end
     object Label4: TLabel
-      Left = 528
+      Left = 522
       Top = 19
-      Width = 69
-      Height = 13
+      Width = 77
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Total In Stock'
     end
     object Label5: TLabel
       Left = 8
       Top = 19
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtStockRef: TEdit
       Left = 104
       Top = 36
       Width = 185
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -193,7 +195,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Left = 104
       Top = 62
       Width = 369
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 1
@@ -202,13 +204,13 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Left = 104
       Top = 11
       Width = 369
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
     end
     object memoReorder: TMemo
-      Left = 616
+      Left = 610
       Top = 36
       Width = 97
       Height = 23
@@ -219,7 +221,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       WantReturns = False
     end
     object memoStock: TMemo
-      Left = 616
+      Left = 610
       Top = 11
       Width = 97
       Height = 23
@@ -239,7 +241,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     BevelOuter = bvNone
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -249,7 +251,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       735
       41)
     object CancelBitBtn: TBitBtn
-      Left = 632
+      Left = 626
       Top = 9
       Width = 75
       Height = 25

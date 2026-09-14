@@ -3,41 +3,42 @@ object PBLUOpsFrm: TPBLUOpsFrm
   Top = 167
   BorderStyle = bsDialog
   Caption = 'Look-Up An Operator'
-  ClientHeight = 346
-  ClientWidth = 429
+  ClientHeight = 400
+  ClientWidth = 478
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    429
-    346)
-  TextHeight = 13
+    478
+    400)
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 262
-    Top = 268
-    Width = 59
-    Height = 13
+    Left = 265
+    Top = 274
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Anchors = []
     Caption = 'CountLabel'
+    ExplicitLeft = 264
   end
   object DetsDBGrid: TDBGrid
     Left = 8
     Top = 8
-    Width = 308
+    Width = 322
     Height = 260
     Anchors = [akLeft, akTop, akRight]
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -45,7 +46,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -67,8 +68,8 @@ object PBLUOpsFrm: TPBLUOpsFrm
       end>
   end
   object SelectBitBtn: TBitBtn
-    Left = 337
-    Top = 291
+    Left = 372
+    Top = 337
     Width = 75
     Height = 25
     Anchors = [akBottom]
@@ -143,8 +144,8 @@ object PBLUOpsFrm: TPBLUOpsFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 337
-    Top = 319
+    Left = 372
+    Top = 365
     Width = 75
     Height = 25
     Anchors = [akBottom]
@@ -153,17 +154,18 @@ object PBLUOpsFrm: TPBLUOpsFrm
     TabOrder = 2
   end
   object FuncGrpBox: TGroupBox
-    Left = 325
-    Top = 144
+    Left = 364
+    Top = 132
     Width = 90
-    Height = 121
+    Height = 132
     Anchors = [akTop, akRight]
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 3
+    ExplicitLeft = 368
     object AddBitBtn: TBitBtn
       Left = 6
-      Top = 16
+      Top = 24
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -186,7 +188,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 50
+      Top = 58
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -209,7 +211,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 84
+      Top = 92
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -232,14 +234,15 @@ object PBLUOpsFrm: TPBLUOpsFrm
     end
   end
   object grpbxReport: TGroupBox
-    Left = 325
-    Top = 12
+    Left = 364
+    Top = 8
     Width = 90
     Height = 89
     Anchors = [akTop, akRight]
     Caption = 'Report'
     ParentBackground = False
     TabOrder = 4
+    ExplicitLeft = 368
     object btbtnPreview: TBitBtn
       Left = 8
       Top = 20
@@ -289,23 +292,23 @@ object PBLUOpsFrm: TPBLUOpsFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 288
+    Top = 297
     Width = 321
-    Height = 65
+    Height = 95
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 5
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 28
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 42
+      Top = 62
       Width = 217
       Height = 17
       Caption = 'only show enabled operators'

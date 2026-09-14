@@ -3,19 +3,19 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Supplier'#39's Additional Charges'
-  ClientHeight = 255
-  ClientWidth = 478
+  ClientHeight = 273
+  ClientWidth = 502
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object AddChargesGrid: TStringGrid
     Left = 8
     Top = 8
@@ -39,7 +39,7 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
   end
   object OKBitBtn: TBitBtn
     Left = 319
-    Top = 216
+    Top = 224
     Width = 75
     Height = 25
     Kind = bkOK
@@ -49,7 +49,7 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 399
-    Top = 216
+    Top = 224
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -60,13 +60,13 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
     Left = 8
     Top = 200
     Width = 289
-    Height = 49
+    Height = 65
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 3
     object AddBitBtn: TBitBtn
-      Left = 46
-      Top = 16
+      Left = 47
+      Top = 24
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -88,8 +88,8 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
       OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
-      Left = 126
-      Top = 16
+      Left = 127
+      Top = 24
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -112,8 +112,8 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
       OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
-      Left = 206
-      Top = 16
+      Left = 207
+      Top = 24
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -136,8 +136,8 @@ object PBLUEnqAddChgFrm: TPBLUEnqAddChgFrm
       OnClick = DelBitBtnClick
     end
     object Button1: TButton
-      Left = 16
-      Top = 16
+      Left = 17
+      Top = 24
       Width = 25
       Height = 25
       Caption = '...'

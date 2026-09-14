@@ -13,12 +13,6 @@ type
   TPBMaintCompanyFYfrm = class(TForm)
     OKBitBtn: TBitBtn;
     BitBtn2: TBitBtn;
-    qryYear: TFDQuery;
-    dtsYear: TDataSource;
-    qryPeriod: TFDQuery;
-    dtsPeriod: TDataSource;
-    GetDetsSQL: TFDQuery;
-    UpdDetsSQL: TFDQuery;
     grpbxDetails: TGroupBox;
     Label1: TLabel;
     Label2: TLabel;
@@ -26,6 +20,12 @@ type
     dblkpPeriod: TDBLookupComboBox;
     Label3: TLabel;
     qryCheckSalesProfit: TFDQuery;
+    UpdDetsSQL: TFDQuery;
+    GetDetsSQL: TFDQuery;
+    qryYear: TFDQuery;
+    dtsYear: TDataSource;
+    qryPeriod: TFDQuery;
+    dtsPeriod: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

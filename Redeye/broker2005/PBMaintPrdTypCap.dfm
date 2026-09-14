@@ -7,7 +7,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,17 +15,17 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
   DesignSize = (
     418
     174)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 104
-    Top = 142
-    Width = 109
-    Height = 13
+    Left = 98
+    Top = 140
+    Width = 122
+    Height = 17
     Anchors = [akRight, akBottom]
-    Caption = 'Delete these details ?'
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -38,7 +38,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -47,32 +47,32 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object DescrEdit: TEdit
-      Left = 94
+      Left = 99
       Top = 48
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = DescrEditChange
     end
     object PrdTypDescrEdit: TEdit
-      Left = 94
+      Left = 99
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 1
@@ -88,7 +88,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 245
+    Left = 239
     Top = 136
     Width = 75
     Height = 25
@@ -162,9 +162,11 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitLeft = 233
+    ExplicitTop = 127
   end
   object CancelBitBtn: TBitBtn
-    Left = 325
+    Left = 319
     Top = 136
     Width = 75
     Height = 25
@@ -239,6 +241,8 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitLeft = 313
+    ExplicitTop = 127
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'

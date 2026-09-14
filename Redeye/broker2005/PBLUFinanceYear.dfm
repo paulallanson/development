@@ -3,23 +3,23 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
   Top = 113
   BorderStyle = bsDialog
   Caption = 'Look-Up Financial Years'
-  ClientHeight = 303
-  ClientWidth = 320
+  ClientHeight = 314
+  ClientWidth = 340
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 158
+    Left = 152
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -32,7 +32,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +40,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -57,16 +57,16 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
   object SearchGrpBox: TGroupBox
     Left = 8
     Top = 248
-    Width = 209
-    Height = 49
+    Width = 216
+    Height = 59
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
-      Left = 8
-      Top = 16
+      Left = 13
+      Top = 24
       Width = 193
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -148,7 +148,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
   end
   object CloseBitBtn: TBitBtn
     Left = 240
-    Top = 272
+    Top = 282
     Width = 75
     Height = 25
     Kind = bkClose
@@ -156,16 +156,16 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 232
-    Top = 128
-    Width = 87
-    Height = 105
+    Left = 234
+    Top = 100
+    Width = 85
+    Height = 117
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
-      Left = 6
-      Top = 16
+      Left = 7
+      Top = 24
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -188,7 +188,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 6
-      Top = 44
+      Top = 55
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -211,7 +211,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     end
     object DelBitBtn: TBitBtn
       Left = 6
-      Top = 72
+      Top = 83
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -235,7 +235,7 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
   end
   object btnRepBudget: TBitBtn
     Left = 238
-    Top = 40
+    Top = 42
     Width = 75
     Height = 25
     Caption = 'Reps'
@@ -287,8 +287,8 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 122
+    Top = 86
   end
   object qryCheckSalesProfit: TFDQuery
     ConnectionName = 'PB'
@@ -319,8 +319,8 @@ object PBLUFinanceYearFrm: TPBLUFinanceYearFrm
       'from Rep_Cat_Budget, Period'
       'where Period.Financial_Year = :Financial_Year and'
       'Rep_Cat_Budget.Period = Period.Period')
-    Left = 40
-    Top = 184
+    Left = 98
+    Top = 118
     ParamData = <
       item
         Name = 'Financial_Year'

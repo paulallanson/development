@@ -3,38 +3,38 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Job bag extras'
-  ClientHeight = 454
-  ClientWidth = 508
+  ClientHeight = 460
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    508
-    454)
-  TextHeight = 13
+    534
+    460)
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 117
-    Top = 422
-    Width = 184
-    Height = 15
+    Left = 142
+    Top = 428
+    Width = 211
+    Height = 16
     Anchors = [akLeft, akBottom]
     Caption = 'Really Delete This Job Bag Item?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
-    Left = 333
-    Top = 417
+    Left = 358
+    Top = 423
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -108,84 +108,82 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = OKBitBtnClick
-    ExplicitTop = 408
   end
   object CancelBitBtn: TBitBtn
-    Left = 413
-    Top = 417
+    Left = 438
+    Top = 423
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 5
-    ExplicitTop = 408
   end
   object grpbxDetails: TGroupBox
     Left = 8
     Top = 191
-    Width = 481
+    Width = 505
     Height = 167
     ParentBackground = False
     TabOrder = 1
     object Label2: TLabel
       Left = 8
       Top = 16
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label3: TLabel
       Left = 8
       Top = 65
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Selling Price'
     end
     object Label4: TLabel
       Left = 8
       Top = 113
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Price Unit'
     end
     object Label5: TLabel
       Left = 8
       Top = 139
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Vat Rate'
     end
     object lblCostPrice: TLabel
       Left = 8
       Top = 41
-      Width = 56
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Direct Cost'
     end
     object lblResellerPrice: TLabel
       Left = 8
       Top = 89
-      Width = 67
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'Reseller Price'
     end
     object Label9: TLabel
-      Left = 256
+      Left = 263
       Top = 16
-      Width = 122
-      Height = 13
+      Width = 137
+      Height = 17
       Caption = 'Cascade Quantity down'
     end
     object Label10: TLabel
-      Left = 431
+      Left = 455
       Top = 16
-      Width = 24
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'lines'
     end
     object memQuantity: TMemo
-      Left = 104
+      Left = 114
       Top = 12
       Width = 105
       Height = 21
@@ -198,7 +196,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnKeyPress = CheckKeyIsNumber
     end
     object memSellPrice: TMemo
-      Left = 104
+      Left = 114
       Top = 61
       Width = 105
       Height = 21
@@ -211,10 +209,10 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object dblkpPriceUnit: TDBLookupComboBox
-      Left = 104
+      Left = 114
       Top = 109
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
@@ -222,10 +220,10 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnClick = CheckOK
     end
     object dblkpVat: TDBLookupComboBox
-      Left = 104
+      Left = 114
       Top = 135
       Width = 105
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'VAT_Rate'
       ListSource = dtsVat
@@ -233,7 +231,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnClick = CheckOK
     end
     object memCostPrice: TMemo
-      Left = 104
+      Left = 114
       Top = 37
       Width = 105
       Height = 21
@@ -246,7 +244,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object chkbxInactive: TCheckBox
-      Left = 352
+      Left = 380
       Top = 137
       Width = 97
       Height = 17
@@ -254,7 +252,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       TabOrder = 7
     end
     object memResellerPrice: TMemo
-      Left = 104
+      Left = 114
       Top = 85
       Width = 105
       Height = 21
@@ -267,10 +265,10 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object spnQuantity: TSpinEdit
-      Left = 385
+      Left = 409
       Top = 12
       Width = 40
-      Height = 22
+      Height = 27
       MaxValue = 1000
       MinValue = 0
       TabOrder = 1
@@ -280,19 +278,19 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   object grpbxInternalCost: TGroupBox
     Left = 8
     Top = 360
-    Width = 481
+    Width = 505
     Height = 41
     ParentBackground = False
     TabOrder = 2
     object Label6: TLabel
       Left = 8
       Top = 16
-      Width = 52
-      Height = 13
+      Width = 60
+      Height = 17
       Caption = 'Markup %'
     end
     object memMarkupPerc: TMemo
-      Left = 104
+      Left = 114
       Top = 12
       Width = 105
       Height = 21
@@ -307,7 +305,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   end
   object chkbxInternalCost: TCheckBox
     Left = 8
-    Top = 421
+    Top = 427
     Width = 97
     Height = 17
     Caption = 'Internal Cost'
@@ -317,36 +315,36 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   object grpbxHeader: TGroupBox
     Left = 8
     Top = 8
-    Width = 481
+    Width = 505
     Height = 185
     ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 8
       Top = 22
-      Width = 89
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Product Category'
     end
     object Label8: TLabel
       Left = 8
       Top = 52
-      Width = 65
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object dblkpProductCat: TDBLookupComboBox
-      Left = 104
+      Left = 114
       Top = 18
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'Category'
       ListField = 'Description'
       ListSource = dtsProductCat
@@ -354,16 +352,16 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnClick = dblkpProductCatClick
     end
     object edtProductType: TEdit
-      Left = 104
+      Left = 114
       Top = 48
       Width = 185
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 1
       Text = 'edtProductType'
     end
     object edtDescription: TRichEdit
-      Left = 104
+      Left = 114
       Top = 80
       Width = 337
       Height = 97
@@ -380,7 +378,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnChange = CheckOK
     end
     object btnProducts: TButton
-      Left = 448
+      Left = 458
       Top = 80
       Width = 25
       Height = 25
@@ -396,7 +394,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       OnClick = btnProductsClick
     end
     object btnProdType: TButton
-      Left = 300
+      Left = 310
       Top = 46
       Width = 25
       Height = 25
@@ -417,8 +415,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       'select * '
       'from Vat_Code'
       'order by Vat_Rate')
-    Left = 280
-    Top = 296
+    Left = 310
+    Top = 282
   end
   object qryPriceUnit: TFDQuery
     ConnectionName = 'pb'
@@ -426,8 +424,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       'select *'
       'from Price_unit'
       'order by Description')
-    Left = 280
-    Top = 256
+    Left = 310
+    Top = 248
   end
   object qryProductCat: TFDQuery
     ConnectionName = 'pb'
@@ -445,13 +443,13 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   end
   object dtsPriceUnit: TDataSource
     DataSet = qryPriceUnit
-    Left = 320
-    Top = 256
+    Left = 368
+    Top = 248
   end
   object dtsVat: TDataSource
     DataSet = qryVat
-    Left = 320
-    Top = 296
+    Left = 360
+    Top = 266
   end
   object qryGetPUnit: TFDQuery
     ConnectionName = 'pb'
@@ -503,8 +501,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   end
   object dtsWOProcess: TDataSource
     DataSet = qryWOProcess
-    Left = 392
-    Top = 48
+    Left = 458
+    Top = 28
   end
   object qryGetProcess: TFDQuery
     ConnectionName = 'pb'

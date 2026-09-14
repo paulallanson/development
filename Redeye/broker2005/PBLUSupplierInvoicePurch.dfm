@@ -7,7 +7,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -15,7 +15,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stBrDetails: TStatusBar
     Left = 0
     Top = 483
@@ -28,6 +28,8 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       item
         Width = 50
       end>
+    ExplicitTop = 474
+    ExplicitWidth = 768
   end
   object Panel3: TPanel
     Left = 0
@@ -38,13 +40,14 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 383
+    ExplicitWidth = 768
     object Panel1: TPanel
       Left = 0
       Top = 9
-      Width = 353
+      Width = 393
       Height = 73
       BevelOuter = bvNone
-      Caption = 'Panel1'
       ParentBackground = False
       TabOrder = 0
       object CustomerGroupBox: TGroupBox
@@ -58,15 +61,15 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
         object Label1: TLabel
           Left = 8
           Top = 32
-          Width = 43
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Supplier'
         end
         object edtSupplierName: TEdit
           Left = 60
           Top = 24
           Width = 213
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnChange = edtSupplierNameChange
         end
@@ -81,6 +84,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 447
       object GroupBox2: TGroupBox
         Left = 212
         Top = 6
@@ -179,7 +183,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
           Left = 8
           Top = 16
           Width = 137
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnKeyPress = edtPONumberKeyPress
         end
@@ -208,6 +212,8 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
     Caption = 'Panel4'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 768
+    ExplicitHeight = 383
     object dbgPurch: TDBGrid
       Left = 0
       Top = 0
@@ -217,7 +223,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -225,7 +231,7 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnCellClick = dbgPurchCellClick

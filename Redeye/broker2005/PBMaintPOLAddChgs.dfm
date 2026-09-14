@@ -3,40 +3,40 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
   Top = 171
   BorderStyle = bsDialog
   Caption = 'Current period charges'
-  ClientHeight = 124
-  ClientWidth = 412
+  ClientHeight = 132
+  ClientWidth = 405
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 24
-    Width = 35
-    Height = 13
+    Top = 19
+    Width = 39
+    Height = 17
     Caption = 'Details'
   end
   object Label2: TLabel
     Left = 8
-    Top = 56
-    Width = 23
-    Height = 13
+    Top = 51
+    Width = 26
+    Height = 17
     Caption = 'Cost'
   end
   object delLabel: TLabel
-    Left = 64
-    Top = 96
-    Width = 103
-    Height = 15
+    Left = 56
+    Top = 93
+    Width = 115
+    Height = 16
     Caption = 'Delete this charge'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -65,7 +65,7 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     Left = 64
     Top = 16
     Width = 321
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = CheckOK
   end
@@ -201,8 +201,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     SQL.Strings = (
       'select max(Sales_Profit) as Last_Profit'
       'from Sales_Profit')
-    Left = 40
-    Top = 48
+    Left = 282
+    Top = 68
   end
   object addSalesProfitSQL: TFDQuery
     ConnectionName = 'PB'

@@ -3,36 +3,36 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
   Top = 155
   BorderStyle = bsDialog
   Caption = 'Maintain Ad-Hoc Addresses'
-  ClientHeight = 255
-  ClientWidth = 442
+  ClientHeight = 302
+  ClientWidth = 451
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 112
-    Top = 230
-    Width = 133
-    Height = 13
+    Left = 110
+    Top = 255
+    Width = 160
+    Height = 18
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
     Left = 263
-    Top = 223
+    Top = 252
     Width = 75
-    Height = 25
+    Height = 26
     Caption = 'OK'
     Default = True
     Glyph.Data = {
@@ -106,9 +106,9 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 342
-    Top = 223
+    Top = 252
     Width = 75
-    Height = 25
+    Height = 26
     Cancel = True
     Caption = 'Cancel'
     Glyph.Data = {
@@ -184,11 +184,11 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     Left = 8
     Top = 12
     Width = 409
-    Height = 205
+    Height = 221
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -197,12 +197,12 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     object Label2: TLabel
       Left = 16
       Top = 22
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -210,12 +210,12 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     object Label3: TLabel
       Left = 16
       Top = 46
-      Width = 41
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Address'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -223,12 +223,12 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     object Label7: TLabel
       Left = 16
       Top = 145
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -237,7 +237,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Left = 92
       Top = 18
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'NameEdit'
@@ -247,7 +247,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Left = 92
       Top = 42
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'BuildingEdit'
@@ -256,7 +256,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Left = 92
       Top = 67
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
       Text = '0123456789012345678901234567890123456789'
@@ -265,7 +265,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Left = 92
       Top = 92
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 3
       Text = 'LocaleEdit'
@@ -274,7 +274,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Left = 92
       Top = 117
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 4
       Text = 'TownEdit'
@@ -283,7 +283,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       Left = 92
       Top = 142
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 10
       TabOrder = 5
@@ -291,7 +291,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     end
     object NotesBitBtn: TBitBtn
       Left = 292
-      Top = 142
+      Top = 155
       Width = 100
       Height = 25
       Caption = 'Notes        '
@@ -320,7 +320,7 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     end
     object DelivNotesBitBtn: TBitBtn
       Left = 292
-      Top = 169
+      Top = 182
       Width = 100
       Height = 25
       Caption = 'Deliv Narr'
@@ -350,9 +350,9 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 8
-    Top = 223
+    Top = 252
     Width = 75
-    Height = 25
+    Height = 26
     Caption = 'Print'
     TabOrder = 3
     OnClick = PrintBitBtnClick
@@ -457,8 +457,8 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       'Delete From Ad_Hoc_Address'
       'Where'
       '(Ad_Hoc_Address = :Ad_Hoc_Address)')
-    Left = 48
-    Top = 104
+    Left = 76
+    Top = 90
     ParamData = <
       item
         Name = 'Ad_Hoc_Address'
@@ -473,8 +473,8 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
   object FlashDelivTimer: TTimer
     Enabled = False
     OnTimer = FlashDelivTimerTimer
-    Left = 288
-    Top = 76
+    Left = 360
+    Top = 23
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -495,8 +495,8 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       ''
       ''
       ' ')
-    Left = 48
-    Top = 168
+    Left = 60
+    Top = 239
     ParamData = <
       item
         Name = 'GUID'
@@ -528,8 +528,8 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
       '(Ad_Hoc_Address = :Ad_Hoc_Address) '
       ' '
       ' ')
-    Left = 200
-    Top = 128
+    Left = 298
+    Top = 56
     ParamData = <
       item
         Name = 'Narrative'
@@ -565,8 +565,8 @@ object PBMaintAdHocFrm: TPBMaintAdHocFrm
     SQL.Strings = (
       'select * from Ad_HoC_Address'
       'where Ad_Hoc_Address = :Ad_Hoc_Address')
-    Left = 376
-    Top = 28
+    Left = 310
+    Top = 35
     ParamData = <
       item
         Name = 'Ad_Hoc_Address'

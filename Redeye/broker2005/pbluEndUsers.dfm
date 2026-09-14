@@ -2,12 +2,12 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   Left = 291
   Top = 117
   Caption = 'End Users'
-  ClientHeight = 335
-  ClientWidth = 1125
+  ClientHeight = 326
+  ClientWidth = 1119
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 316
-    Width = 1125
+    Top = 307
+    Width = 1119
     Height = 19
     Panels = <
       item
@@ -35,29 +35,31 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 275
-    Width = 1125
+    Top = 266
+    Width = 1119
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = -1
+    ExplicitTop = 260
     object lblSearch: TLabel
       Left = 16
-      Top = 16
-      Width = 83
-      Height = 13
+      Top = 14
+      Width = 96
+      Height = 17
       Caption = 'End User Search'
     end
     object edtSearch: TEdit
-      Left = 104
-      Top = 12
+      Left = 117
+      Top = 10
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object btnSearch: TBitBtn
-      Left = 288
+      Left = 284
       Top = 10
       Width = 75
       Height = 25
@@ -66,7 +68,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 939
+      Left = 933
       Top = 1
       Width = 185
       Height = 39
@@ -85,7 +87,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end
     end
     object btnSweep: TBitBtn
-      Left = 376
+      Left = 389
       Top = 10
       Width = 75
       Height = 25
@@ -97,7 +99,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1125
+    Width = 1119
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -144,9 +146,9 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end
     end
     object Panel5: TPanel
-      Left = 874
+      Left = 856
       Top = 1
-      Width = 250
+      Width = 262
       Height = 28
       Align = alRight
       BevelInner = bvLowered
@@ -154,27 +156,27 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
-        250
+        262
         28)
       object Label2: TLabel
-        Left = 13
-        Top = 7
-        Width = 83
-        Height = 13
+        Left = 12
+        Top = 5
+        Width = 95
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Colour Code by:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object cmbColourCoding: TComboBox
-        Left = 102
+        Left = 114
         Top = 3
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         Anchors = [akTop, akRight]
         ItemIndex = 0
@@ -186,35 +188,38 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
           'Customer Type'
           'Level of Importance'
           'Revenue Centre')
+        ExplicitLeft = 102
       end
     end
     object PageScroller1: TPageScroller
       Left = 401
       Top = 1
-      Width = 473
+      Width = 455
       Height = 28
       Align = alClient
       Control = CoolBar2
       TabOrder = 2
+      ExplicitWidth = 467
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 461
+        Width = 455
         Height = 28
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 455
+            Width = 449
           end>
         Visible = False
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 446
+          Width = 440
           Height = 25
           Align = alClient
-          ButtonWidth = 66
+          ButtonHeight = 23
+          ButtonWidth = 74
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -238,23 +243,23 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1125
+    Width = 1119
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1119
+        Width = 1113
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1110
+      Width = 1104
       Height = 40
       Align = alLeft
-      ButtonHeight = 36
-      ButtonWidth = 72
+      ButtonHeight = 40
+      ButtonWidth = 80
       Caption = 'ToolBar1'
       Images = imglstMaint
       ParentShowHint = False
@@ -270,7 +275,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 72
+        Left = 80
         Top = 0
         Hint = 'Change record'
         Caption = '  &Change  '
@@ -279,7 +284,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 144
+        Left = 160
         Top = 0
         Hint = 'Delete record'
         Caption = '&Delete'
@@ -288,7 +293,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnDeleteClick
       end
       object btnLabels: TToolButton
-        Left = 216
+        Left = 240
         Top = 0
         Hint = 'Print address labels'
         Caption = 'Labels'
@@ -297,7 +302,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnLabelsClick
       end
       object ToolButton1: TToolButton
-        Left = 288
+        Left = 320
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -305,7 +310,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         Style = tbsSeparator
       end
       object btnBranches: TToolButton
-        Left = 296
+        Left = 328
         Top = 0
         Hint = 'Branches'
         Caption = '&Branch'
@@ -314,7 +319,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnBranchesClick
       end
       object btnContacts: TToolButton
-        Left = 368
+        Left = 408
         Top = 0
         Hint = 'Contacts'
         Caption = 'Contac&ts'
@@ -323,7 +328,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnContactsClick
       end
       object btnAccMgrs: TToolButton
-        Left = 440
+        Left = 488
         Top = 0
         Caption = 'Acc Mgrs'
         Enabled = False
@@ -332,7 +337,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnAccMgrsClick
       end
       object btnCustReps: TToolButton
-        Left = 512
+        Left = 568
         Top = 0
         Caption = '&Reps'
         Enabled = False
@@ -341,7 +346,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         OnClick = btnCustRepsClick
       end
       object ToolButton4: TToolButton
-        Left = 584
+        Left = 648
         Top = 0
         Width = 8
         Caption = 'ToolButton4'
@@ -349,7 +354,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         Style = tbsSeparator
       end
       object btnConvert: TToolButton
-        Left = 592
+        Left = 656
         Top = 0
         Caption = 'Credit Check'
         Enabled = False
@@ -357,7 +362,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         Visible = False
       end
       object ToolButton2: TToolButton
-        Left = 664
+        Left = 736
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -365,7 +370,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 672
+        Left = 744
         Top = 0
         Hint = 'Report selection'
         Caption = '&Reports'
@@ -376,14 +381,14 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1125
-    Height = 201
+    Width = 1119
+    Height = 192
     Align = alClient
     DataSource = dtmdlCustomers.dtsEndUsers
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick]
@@ -392,7 +397,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -550,8 +555,8 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end>
   end
   object imglstMaint: TImageList
-    Left = 232
-    Top = 192
+    Left = 362
+    Top = 136
     Bitmap = {
       494C01010F001300040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040

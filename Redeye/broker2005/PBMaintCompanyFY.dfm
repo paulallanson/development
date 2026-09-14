@@ -3,20 +3,20 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
   Top = 152
   BorderStyle = bsDialog
   Caption = 'Current Financial Year details'
-  ClientHeight = 177
-  ClientWidth = 325
+  ClientHeight = 222
+  ClientWidth = 332
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object OKBitBtn: TBitBtn
-    Left = 72
-    Top = 144
+    Left = 64
+    Top = 176
     Width = 75
     Height = 25
     Enabled = False
@@ -26,8 +26,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     OnClick = OKBitBtnClick
   end
   object BitBtn2: TBitBtn
-    Left = 160
-    Top = 144
+    Left = 150
+    Top = 176
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -38,28 +38,28 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Left = 8
     Top = 8
     Width = 313
-    Height = 129
+    Height = 145
     ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 56
-      Top = 64
-      Width = 20
-      Height = 13
+      Top = 81
+      Width = 25
+      Height = 17
       Caption = 'Year'
     end
     object Label2: TLabel
       Left = 56
-      Top = 96
-      Width = 33
-      Height = 13
+      Top = 112
+      Width = 38
+      Height = 17
       Caption = 'Period'
     end
     object Label3: TLabel
       Left = 7
       Top = 16
-      Width = 288
-      Height = 26
+      Width = 272
+      Height = 51
       Caption = 
         'Enter the date in which the financial year will start. This date' +
         ' is fixed once transactions have been posted.'
@@ -67,26 +67,64 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     end
     object dblkpYear: TDBLookupComboBox
       Left = 112
-      Top = 56
+      Top = 73
       Width = 105
-      Height = 21
+      Height = 25
       KeyField = 'Financial_Year'
       ListField = 'Title'
-      ListSource = dtsYear
       TabOrder = 0
       OnClick = dblkpYearClick
     end
     object dblkpPeriod: TDBLookupComboBox
       Left = 112
-      Top = 88
+      Top = 104
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Period'
       ListField = 'Description'
-      ListSource = dtsPeriod
       TabOrder = 1
       OnClick = EnableOK
     end
+  end
+  object qryCheckSalesProfit: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'select sales_profit '
+      'from sales_profit, period'
+      'where sales_profit.period = period.period and'
+      'period.financial_year = :Financial_year')
+    Left = 72
+    Top = 8
+    ParamData = <
+      item
+        Name = 'Financial_year'
+      end>
+  end
+  object UpdDetsSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Update Company'
+      'Set'
+      'Financial_Year = :Financial_Year,'
+      'Period = :Period'
+      '')
+    Left = 24
+    Top = 72
+    ParamData = <
+      item
+        Name = 'Financial_Year'
+      end
+      item
+        Name = 'Period'
+      end>
+  end
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
+    SQL.Strings = (
+      'Select Financial_Year, Period'
+      'From Company')
+    Left = 64
+    Top = 64
   end
   object qryYear: TFDQuery
     ConnectionName = 'PB'
@@ -123,45 +161,5 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     DataSet = qryPeriod
     Left = 240
     Top = 72
-  end
-  object GetDetsSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'Select Financial_Year, Period'
-      'From Company')
-    Left = 64
-    Top = 64
-  end
-  object UpdDetsSQL: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'Update Company'
-      'Set'
-      'Financial_Year = :Financial_Year,'
-      'Period = :Period'
-      '')
-    Left = 24
-    Top = 72
-    ParamData = <
-      item
-        Name = 'Financial_Year'
-      end
-      item
-        Name = 'Period'
-      end>
-  end
-  object qryCheckSalesProfit: TFDQuery
-    ConnectionName = 'PB'
-    SQL.Strings = (
-      'select sales_profit '
-      'from sales_profit, period'
-      'where sales_profit.period = period.period and'
-      'period.financial_year = :Financial_year')
-    Left = 72
-    Top = 8
-    ParamData = <
-      item
-        Name = 'Financial_year'
-      end>
   end
 end

@@ -4,29 +4,29 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
   BorderStyle = bsDialog
   Caption = 'Document Logos'
   ClientHeight = 251
-  ClientWidth = 402
+  ClientWidth = 431
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 402
+    Width = 431
     Height = 167
     Align = alClient
     DataSource = srcDocumentLogo
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -34,7 +34,7 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -56,7 +56,7 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 232
-    Width = 402
+    Width = 431
     Height = 19
     Panels = <
       item
@@ -65,17 +65,19 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
       item
         Width = 50
       end>
+    ExplicitWidth = 402
   end
   object Panel1: TPanel
     Left = 0
     Top = 167
-    Width = 402
+    Width = 431
     Height = 65
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 402
     DesignSize = (
-      402
+      431
       65)
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -140,8 +142,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
   end
   object srcDocumentLogo: TDataSource
     DataSet = qryDocumentLogo
-    Left = 160
-    Top = 120
+    Left = 176
+    Top = 30
   end
   object qryDocumentLogo: TFDQuery
     ConnectionName = 'PB'
@@ -153,8 +155,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
         ' = '#39'N'#39'))'
       'ORDER BY Logo_Name'
       '')
-    Left = 72
-    Top = 120
+    Left = 90
+    Top = 30
     ParamData = <
       item
         Name = 'inactive'
@@ -162,7 +164,7 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
   end
   object qryDelete: TFDQuery
     ConnectionName = 'PB'
-    Left = 232
-    Top = 120
+    Left = 282
+    Top = 30
   end
 end

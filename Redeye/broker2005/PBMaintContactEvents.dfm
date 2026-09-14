@@ -5,11 +5,11 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
   BorderStyle = bsSingle
   Caption = 'Maintain Customer Contact Events'
   ClientHeight = 412
-  ClientWidth = 331
+  ClientWidth = 356
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,16 +17,16 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 16
-    Top = 387
-    Width = 133
-    Height = 13
-    Caption = 'Delete the above details ?'
+    Left = 13
+    Top = 385
+    Width = 150
+    Height = 17
+    Caption = 'Delete the above details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -186,11 +186,11 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
   object DetsGrpBox: TGroupBox
     Left = 9
     Top = 8
-    Width = 312
+    Width = 328
     Height = 369
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -199,37 +199,37 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
     object Label1: TLabel
       Left = 8
       Top = 68
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
     end
     object Label2: TLabel
       Left = 8
       Top = 100
-      Width = 24
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Date'
     end
     object Label3: TLabel
-      Left = 192
+      Left = 187
       Top = 100
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Time'
       Visible = False
     end
     object Label4: TLabel
       Left = 8
-      Top = 40
-      Width = 35
-      Height = 13
+      Top = 42
+      Width = 39
+      Height = 17
       Caption = 'Branch'
     end
     object Label5: TLabel
       Left = 8
-      Top = 16
-      Width = 49
-      Height = 13
+      Top = 14
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object DispMemo: TMemo
@@ -242,10 +242,10 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       OnChange = DispMemoChange
     end
     object dblkpContact: TDBLookupComboBox
-      Left = 64
+      Left = 68
       Top = 64
       Width = 200
-      Height = 21
+      Height = 25
       KeyField = 'Contact_no'
       ListField = 'Name'
       ListSource = dtsContacts
@@ -253,10 +253,10 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       OnClick = dblkpContactClick
     end
     object TimeDateTimePicker: TDateTimePicker
-      Left = 224
+      Left = 221
       Top = 96
       Width = 81
-      Height = 21
+      Height = 25
       Date = 45197.000000000000000000
       Time = 0.434360891202231900
       ShowCheckbox = True
@@ -265,19 +265,19 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       Visible = False
     end
     object DateDateTimePicker: TDateTimePicker
-      Left = 64
+      Left = 68
       Top = 96
       Width = 97
-      Height = 21
+      Height = 25
       Date = 37453.000000000000000000
       Time = 37453.000000000000000000
       TabOrder = 3
     end
     object dblkpBranch: TDBLookupComboBox
-      Left = 64
-      Top = 36
+      Left = 68
+      Top = 38
       Width = 200
-      Height = 21
+      Height = 25
       KeyField = 'Branch_no'
       ListField = 'Name'
       ListSource = dtsBranch
@@ -285,8 +285,8 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       OnClick = dblkpBranchClick
     end
     object Button1: TButton
-      Left = 272
-      Top = 63
+      Left = 276
+      Top = 65
       Width = 22
       Height = 22
       Caption = '...'
@@ -300,8 +300,8 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 272
-      Top = 35
+      Left = 276
+      Top = 39
       Width = 22
       Height = 22
       Caption = '...'
@@ -315,10 +315,10 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       OnClick = Button2Click
     end
     object edtCustomer: TEdit
-      Left = 64
-      Top = 12
+      Left = 68
+      Top = 10
       Width = 229
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 7
@@ -343,8 +343,8 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       '      (Contact_No = :Contact_No)'
       ' '
       ' ')
-    Left = 72
-    Top = 272
+    Left = 82
+    Top = 228
     ParamData = <
       item
         Name = 'Customer'
@@ -393,8 +393,8 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       ''
       ' '
       ' ')
-    Left = 152
-    Top = 272
+    Left = 174
+    Top = 236
     ParamData = <
       item
         Name = 'Date_Time_Entered'
@@ -429,8 +429,8 @@ object frmPBMaintContactEvents: TfrmPBMaintContactEvents
       '(Contact_No = :Contact_No) and'
       '(Customer_Cont_Event_No = :Customer_Cont_Event_No)'
       ' ')
-    Left = 48
-    Top = 264
+    Left = 44
+    Top = 242
     ParamData = <
       item
         Name = 'Customer'

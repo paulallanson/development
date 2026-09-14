@@ -4,12 +4,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Maintain Customer/Branch Contact'
-  ClientHeight = 584
-  ClientWidth = 436
+  ClientHeight = 619
+  ClientWidth = 458
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,32 +18,33 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    436
-    584)
-  TextHeight = 13
+    458
+    619)
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 60
-    Top = 559
-    Width = 133
-    Height = 13
+    Top = 594
+    Width = 160
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 585
   end
   object Label1: TLabel
     Left = 9
     Top = 12
-    Width = 50
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -51,12 +52,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   object Label2: TLabel
     Left = 9
     Top = 36
-    Width = 39
-    Height = 13
+    Width = 46
+    Height = 17
     Caption = 'Branch '
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -64,19 +65,19 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   object Label3: TLabel
     Left = 9
     Top = 60
-    Width = 31
-    Height = 13
+    Width = 36
+    Height = 17
     Caption = 'Name'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
-    Left = 220
-    Top = 553
+    Left = 229
+    Top = 588
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -151,8 +152,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 300
-    Top = 553
+    Left = 309
+    Top = 588
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -230,8 +231,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
   object pgDetails: TPageControl
     Left = 8
     Top = 84
-    Width = 417
-    Height = 461
+    Width = 433
+    Height = 489
     ActivePage = tsDetails
     TabOrder = 3
     object tsDetails: TTabSheet
@@ -240,10 +241,10 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Left = 5
         Top = -4
         Width = 404
-        Height = 437
+        Height = 453
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
@@ -252,12 +253,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label5: TLabel
           Left = 9
           Top = 20
-          Width = 53
-          Height = 13
+          Width = 63
+          Height = 17
           Caption = 'Salutation'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -265,12 +266,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label4: TLabel
           Left = 9
           Top = 116
-          Width = 68
-          Height = 13
+          Width = 80
+          Height = 17
           Caption = 'Contact Type'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -278,12 +279,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label6: TLabel
           Left = 9
           Top = 44
-          Width = 33
-          Height = 13
+          Width = 36
+          Height = 17
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -291,12 +292,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label7: TLabel
           Left = 9
           Top = 216
-          Width = 78
-          Height = 13
+          Width = 92
+          Height = 17
           Caption = 'E-Mail Address'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -304,34 +305,34 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object MobileLabel: TLabel
           Left = 9
           Top = 92
-          Width = 57
-          Height = 13
+          Width = 66
+          Height = 17
           Caption = 'Mobile No.'
         end
         object lblcontactLevel: TLabel
           Left = 9
           Top = 140
-          Width = 68
-          Height = 13
+          Width = 77
+          Height = 17
           Caption = 'Contact Level'
         end
         object lblFaxNo: TLabel
           Left = 9
           Top = 68
-          Width = 17
-          Height = 13
+          Width = 19
+          Height = 17
           Caption = 'Fax'
         end
         object Label9: TLabel
           Left = 6
           Top = 239
-          Width = 75
-          Height = 26
+          Width = 73
+          Height = 34
           Alignment = taCenter
           Caption = 'Accept Files of type '
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -340,30 +341,30 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         object Label10: TLabel
           Left = 9
           Top = 164
-          Width = 32
-          Height = 13
+          Width = 35
+          Height = 17
           Caption = 'Status'
         end
         object Label11: TLabel
           Left = 9
           Top = 189
-          Width = 90
-          Height = 13
+          Width = 102
+          Height = 17
           Caption = 'Default Margin %'
         end
         object SalutationEdit: TEdit
-          Left = 110
+          Left = 117
           Top = 16
-          Width = 251
-          Height = 21
+          Width = 268
+          Height = 25
           TabOrder = 0
           Text = 'SalutationEdit'
         end
         object TypeDBLCB: TDBLookupComboBox
-          Left = 110
+          Left = 117
           Top = 112
           Width = 161
-          Height = 21
+          Height = 25
           KeyField = 'Contact_Type'
           ListField = 'Description'
           ListSource = ContTypesSRC
@@ -371,10 +372,10 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           OnClick = TypeDBLCBClick
         end
         object PhoneEdit: TEdit
-          Left = 110
+          Left = 117
           Top = 40
           Width = 161
-          Height = 21
+          Height = 25
           MaxLength = 20
           ParentShowHint = False
           ShowHint = True
@@ -382,10 +383,10 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           OnChange = NameEditChange
         end
         object EMailEdit: TEdit
-          Left = 110
+          Left = 117
           Top = 212
-          Width = 251
-          Height = 21
+          Width = 268
+          Height = 25
           MaxLength = 120
           ParentShowHint = False
           ShowHint = True
@@ -393,15 +394,15 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           OnChange = NameEditChange
         end
         object MobileEdt: TEdit
-          Left = 110
+          Left = 117
           Top = 88
           Width = 161
-          Height = 21
+          Height = 25
           TabOrder = 3
         end
         object ContTypeMaintBitBtn: TBitBtn
           Left = 280
-          Top = 111
+          Top = 113
           Width = 25
           Height = 23
           Hint = 'Contact Type Maintenance'
@@ -418,10 +419,10 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           OnClick = ContTypeMaintBitBtnClick
         end
         object LevelDBLCB: TDBLookupComboBox
-          Left = 110
+          Left = 117
           Top = 136
           Width = 161
-          Height = 21
+          Height = 25
           KeyField = 'Contact_Level'
           ListField = 'Description'
           ListSource = ContLevelsSRC
@@ -429,22 +430,22 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         end
         object RecvCorresCB: TCheckBox
           Left = 9
-          Top = 272
+          Top = 279
           Width = 185
           Height = 17
           Caption = 'Receive Correspondence'
           TabOrder = 12
         end
         object FaxEdit: TEdit
-          Left = 110
+          Left = 117
           Top = 64
           Width = 161
-          Height = 21
+          Height = 25
           TabOrder = 2
         end
         object ContLevelMaintBitBtn: TBitBtn
           Left = 280
-          Top = 135
+          Top = 137
           Width = 25
           Height = 23
           Hint = 'Contact Level Maintenance'
@@ -461,10 +462,10 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           OnClick = ContLevelMaintBitBtnClick
         end
         object FileTypDBLCB: TDBLookupComboBox
-          Left = 110
+          Left = 117
           Top = 242
           Width = 209
-          Height = 21
+          Height = 25
           KeyField = 'ExportFilter'
           ListField = 'Description'
           ListSource = FileTypSRC
@@ -473,7 +474,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         end
         object NotesBitBtn: TBitBtn
           Left = 244
-          Top = 273
+          Top = 280
           Width = 73
           Height = 25
           Caption = 'Notes'
@@ -501,23 +502,24 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           OnClick = NotesBitBtnClick
         end
         object StatusDBLCB: TDBLookupComboBox
-          Left = 110
+          Left = 117
           Top = 160
           Width = 161
-          Height = 21
+          Height = 25
           KeyField = 'Contact_Status'
           ListField = 'Contact_Status_Descr'
           ListSource = srcStatus
           TabOrder = 8
         end
         object memMarkup: TMemo
-          Left = 110
+          Left = 117
           Top = 184
           Width = 83
           Height = 23
           Alignment = taRightJustify
           Lines.Strings = (
-            'memMarkup')
+            'memMarku'
+            'p')
           TabOrder = 9
           WantReturns = False
           WordWrap = False
@@ -527,7 +529,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         end
         object chkbxActive: TCheckBox
           Left = 9
-          Top = 293
+          Top = 300
           Width = 185
           Height = 17
           Caption = 'Contact is active'
@@ -535,8 +537,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         end
         object grpbxContactInfo: TGroupBox
           Left = 9
-          Top = 316
-          Width = 353
+          Top = 323
+          Width = 376
           Height = 117
           Caption = 'Payment Details'
           ParentBackground = False
@@ -544,12 +546,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           object lblContName: TLabel
             Left = 12
             Top = 20
-            Width = 77
-            Height = 13
+            Width = 90
+            Height = 17
             Caption = 'Account Name'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -557,12 +559,12 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           object Label8: TLabel
             Left = 12
             Top = 44
-            Width = 89
-            Height = 13
+            Width = 104
+            Height = 17
             Caption = 'Account Number'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -570,43 +572,43 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           object lblAccExp: TLabel
             Left = 12
             Top = 68
-            Width = 59
-            Height = 13
+            Width = 72
+            Height = 17
             Caption = 'Expiry Date'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object Label12: TLabel
-            Left = 164
+            Left = 175
             Top = 68
-            Width = 4
-            Height = 13
+            Width = 5
+            Height = 17
             Caption = '/'
           end
           object edtContName: TEdit
-            Left = 112
+            Left = 123
             Top = 16
             Width = 197
-            Height = 21
+            Height = 25
             TabOrder = 0
           end
           object edtAccNumber: TEdit
-            Left = 112
+            Left = 123
             Top = 40
             Width = 197
-            Height = 21
+            Height = 25
             TabOrder = 2
             OnChange = edtAccNumberChange
           end
           object cmbbxMonth: TComboBox
-            Left = 112
+            Left = 123
             Top = 64
             Width = 49
-            Height = 21
+            Height = 25
             TabOrder = 3
             OnCloseUp = cmbbxMonthCloseUp
             Items.Strings = (
@@ -624,10 +626,10 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
               '12')
           end
           object cmbbxYear: TComboBox
-            Left = 176
+            Left = 187
             Top = 64
             Width = 69
-            Height = 21
+            Height = 25
             TabOrder = 4
             OnCloseUp = cmbbxYearCloseUp
             Items.Strings = (
@@ -644,7 +646,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
               '2015')
           end
           object btbtnClearAccInfo: TBitBtn
-            Left = 316
+            Left = 327
             Top = 16
             Width = 25
             Height = 25
@@ -667,7 +669,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
           end
           object chkbxPaysOnline: TCheckBox
             Left = 12
-            Top = 92
+            Top = 97
             Width = 185
             Height = 17
             Caption = 'Pays using credit card Online'
@@ -682,15 +684,15 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       object Label15: TLabel
         Left = 0
         Top = 8
-        Width = 97
-        Height = 13
+        Width = 110
+        Height = 17
         Caption = 'Current Categories'
       end
       object Label16: TLabel
         Left = 256
         Top = 8
-        Width = 119
-        Height = 13
+        Width = 135
+        Height = 17
         Caption = 'Unassigned Categories'
       end
       object lstbxUseCategory: TListBox
@@ -698,7 +700,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 145
         Height = 221
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnClick = lstbxUseCategoryClick
@@ -709,7 +711,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 1
         Visible = False
       end
@@ -718,7 +720,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 145
         Height = 221
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 2
         OnClick = lstbxNonCategoryClick
@@ -729,7 +731,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 3
         Visible = False
       end
@@ -788,15 +790,15 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       object Label13: TLabel
         Left = 0
         Top = 8
-        Width = 107
-        Height = 13
+        Width = 121
+        Height = 17
         Caption = 'Current Cost Centres'
       end
       object Label14: TLabel
         Left = 256
         Top = 8
-        Width = 129
-        Height = 13
+        Width = 146
+        Height = 17
         Caption = 'Unassigned Cost Centres'
       end
       object lstbxMembers: TListBox
@@ -804,7 +806,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 145
         Height = 221
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnClick = lstbxMembersClick
@@ -815,7 +817,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 1
         Visible = False
       end
@@ -872,7 +874,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 145
         Height = 221
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 4
         OnClick = lstbxNonMembersClick
@@ -883,7 +885,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 5
         Visible = False
       end
@@ -893,7 +895,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
     Left = 110
     Top = 8
     Width = 252
-    Height = 21
+    Height = 25
     Color = clBtnFace
     MaxLength = 40
     ParentShowHint = False
@@ -906,7 +908,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
     Left = 110
     Top = 56
     Width = 252
-    Height = 21
+    Height = 25
     MaxLength = 40
     ParentShowHint = False
     ShowHint = True
@@ -918,7 +920,7 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
     Left = 110
     Top = 32
     Width = 251
-    Height = 21
+    Height = 25
     KeyField = 'Branch_no'
     ListField = 'Name'
     ListSource = dtsBranch
@@ -931,8 +933,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'From Customer_Contact'
       'Where Name = :GUID'
       ' ')
-    Left = 312
-    Top = 112
+    Left = 278
+    Top = 60
     ParamData = <
       item
         Name = 'GUID'
@@ -959,8 +961,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         ' :Branch_No'
       ' '
       ' ')
-    Left = 340
-    Top = 488
+    Left = 161
+    Top = 250
     ParamData = <
       item
         Name = 'Customer'
@@ -1030,8 +1032,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       ' '
       ' '
       ' ')
-    Left = 312
-    Top = 488
+    Left = 126
+    Top = 250
     ParamData = <
       item
         Name = 'Name'
@@ -1102,8 +1104,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       '(Customer = :Customer) and'
       '(Branch_No = :Branch_No) and'
       '(Contact_No = :Contact_No)')
-    Left = 284
-    Top = 488
+    Left = 91
+    Top = 250
     ParamData = <
       item
         Name = 'Customer'
@@ -1137,13 +1139,13 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'Select Contact_Type, Description'
       'From Contact_Type'
       'Order By Description')
-    Left = 196
-    Top = 180
+    Left = 269
+    Top = 97
   end
   object ContTypesSRC: TDataSource
     DataSet = GetContTypesSQL
-    Left = 224
-    Top = 180
+    Left = 304
+    Top = 97
   end
   object QryZero: TFDQuery
     ConnectionName = 'PB'
@@ -1163,8 +1165,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       ''
       ''
       ' ')
-    Left = 280
-    Top = 112
+    Left = 238
+    Top = 60
     ParamData = <
       item
         Name = 'Customer'
@@ -1192,13 +1194,13 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'FROM Contact_Level'
       'ORDER BY Description'
       ' ')
-    Left = 196
-    Top = 204
+    Left = 269
+    Top = 127
   end
   object ContLevelsSRC: TDataSource
     DataSet = GetContLevelsSQL
-    Left = 224
-    Top = 204
+    Left = 304
+    Top = 127
   end
   object GetFileTypeSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1206,13 +1208,13 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'SELECT ExportFilter, Description'
       'FROM ExportFilter'
       'ORDER BY Description')
-    Left = 245
-    Top = 300
+    Left = 330
+    Top = 247
   end
   object FileTypSRC: TDataSource
     DataSet = GetFileTypeSQL
-    Left = 273
-    Top = 300
+    Left = 365
+    Top = 247
   end
   object FlashTimer: TTimer
     Enabled = False
@@ -1230,8 +1232,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       '(Contact_No = :Contact_No)'
       ' '
       ' ')
-    Left = 324
-    Top = 332
+    Left = 341
+    Top = 311
     ParamData = <
       item
         Name = 'Narrative'
@@ -1252,13 +1254,13 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
     SQL.Strings = (
       'select *'
       'from Contact_Status')
-    Left = 197
-    Top = 228
+    Left = 270
+    Top = 157
   end
   object srcStatus: TDataSource
     DataSet = qryStatus
-    Left = 225
-    Top = 228
+    Left = 305
+    Top = 157
   end
   object qryGetContact: TFDQuery
     ConnectionName = 'PB'
@@ -1314,8 +1316,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'select * '
       'from contact_info '
       'where contact_info = :contact_info')
-    Left = 220
-    Top = 384
+    Left = 299
+    Top = 352
     ParamData = <
       item
         Name = 'contact_info'
@@ -1331,8 +1333,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'account_number = :account_number,'
       'Pays_Online = :Pays_Online'
       'where contact_info = :contact_info')
-    Left = 256
-    Top = 384
+    Left = 344
+    Top = 352
     ParamData = <
       item
         Name = 'contact_name'
@@ -1365,8 +1367,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         '(:contact_info, :contact_name, :account_month, :account_year, :a' +
         'ccount_number, :Pays_Online)'
       '')
-    Left = 220
-    Top = 416
+    Left = 299
+    Top = 392
     ParamData = <
       item
         Name = 'contact_info'
@@ -1392,8 +1394,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
     SQL.Strings = (
       'delete from contact_info'
       'where contact_info = :contact_info')
-    Left = 256
-    Top = 416
+    Left = 344
+    Top = 392
     ParamData = <
       item
         Name = 'contact_info'
@@ -1404,8 +1406,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
     SQL.Strings = (
       'select ISNULL(max(contact_info),0) +1 as '#39'contact_info'#39' '
       'from contact_info')
-    Left = 184
-    Top = 384
+    Left = 254
+    Top = 352
   end
   object qrySelOperator: TFDQuery
     ConnectionName = 'PB'
@@ -1413,8 +1415,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'select Security_user'
       'from operator '
       'where operator = :operator;')
-    Left = 184
-    Top = 416
+    Left = 254
+    Top = 392
     ParamData = <
       item
         Name = 'operator'
@@ -1444,8 +1446,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         'entre.Cost_Centre)'
       ')'
       'ORDER BY Customer_Branch_CostCentre.Description')
-    Left = 128
-    Top = 152
+    Left = 184
+    Top = 62
     ParamData = <
       item
         Name = 'Contact_no'
@@ -1465,8 +1467,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         'ostCentre.Description as Cost_Centre_Description'
       'from Customer_Branch_CostCentre'
       'WHERE (1=1)')
-    Left = 128
-    Top = 200
+    Left = 184
+    Top = 122
   end
   object qryCostCentre: TFDQuery
     ConnectionName = 'pb'
@@ -1475,8 +1477,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         'select Customer_Branch_CostCentre.Cost_Centre, Customer_Branch_C' +
         'ostCentre.Description as Cost_Centre_Description'
       'from Customer_Branch_CostCentre')
-    Left = 128
-    Top = 248
+    Left = 184
+    Top = 182
   end
   object qryAdd: TFDQuery
     ConnectionName = 'PB'
@@ -1496,8 +1498,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       ':Cost_Centre'
       ')'
       '')
-    Left = 88
-    Top = 152
+    Left = 134
+    Top = 62
     ParamData = <
       item
         Name = 'Customer'
@@ -1520,8 +1522,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'Customer = :Customer AND'
       'Branch_no = :Branch_no AND'
       'Contact_no = :Contact_no')
-    Left = 88
-    Top = 200
+    Left = 134
+    Top = 122
     ParamData = <
       item
         Name = 'Customer'
@@ -1540,8 +1542,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
         'select Customer_Branch_Category.Cost_Centre, Customer_Branch_Cat' +
         'egory.Description as Cost_Centre_Description'
       'from Customer_Branch_Category')
-    Left = 128
-    Top = 368
+    Left = 184
+    Top = 332
   end
   object qryCategoryDummy: TFDQuery
     ConnectionName = 'pb'
@@ -1549,8 +1551,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'select Category.Category, Category.Description'
       'from Category'
       'WHERE (1=1)')
-    Left = 128
-    Top = 416
+    Left = 184
+    Top = 392
   end
   object qryUseCategoryMembers: TFDQuery
     ConnectionName = 'pb'
@@ -1567,8 +1569,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       '(Customer_Contact_Category.Branch_no = :Branch_no)'
       ')'
       'ORDER BY Category.Description')
-    Left = 128
-    Top = 320
+    Left = 184
+    Top = 272
     ParamData = <
       item
         Name = 'Contact_no'
@@ -1588,8 +1590,8 @@ object PBMaintCContaFrm: TPBMaintCContaFrm
       'Customer = :Customer AND'
       'Branch_no = :Branch_no AND'
       'Contact_no = :Contact_no')
-    Left = 128
-    Top = 464
+    Left = 136
+    Top = 340
     ParamData = <
       item
         Name = 'Customer'

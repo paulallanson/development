@@ -2,22 +2,22 @@ object PBMaintJobBagLineDetailsFrm: TPBMaintJobBagLineDetailsFrm
   Left = 266
   Top = 114
   Caption = 'Maintain line details'
-  ClientHeight = 164
-  ClientWidth = 440
+  ClientHeight = 171
+  ClientWidth = 456
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 16
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object OKBitBtn: TBitBtn
@@ -105,9 +105,9 @@ object PBMaintJobBagLineDetailsFrm: TPBMaintJobBagLineDetailsFrm
     TabOrder = 1
   end
   object memDescription: TMemo
-    Left = 72
-    Top = 16
-    Width = 361
+    Left = 95
+    Top = 13
+    Width = 337
     Height = 89
     TabOrder = 2
   end

@@ -7,7 +7,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -16,7 +16,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stBrDetails: TStatusBar
     Left = 0
     Top = 471
@@ -29,6 +29,8 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       item
         Width = 50
       end>
+    ExplicitTop = 462
+    ExplicitWidth = 1088
   end
   object Panel3: TPanel
     Left = 0
@@ -39,6 +41,8 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 334
+    ExplicitWidth = 1088
     object Panel1: TPanel
       Left = 0
       Top = 0
@@ -48,10 +52,11 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 726
       object CustomerGroupBox: TGroupBox
         Left = 8
         Top = 66
-        Width = 422
+        Width = 440
         Height = 56
         Caption = 'Type here to narrow the search'
         ParentBackground = False
@@ -59,21 +64,21 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
         object Label1: TLabel
           Left = 8
           Top = 27
-          Width = 43
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Supplier'
         end
         object edtSupplierName: TEdit
-          Left = 51
+          Left = 63
           Top = 23
           Width = 216
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnChange = edtSupplierNameChange
           OnKeyUp = edtSupplierNameKeyUp
         end
         object btnSupplier: TBitBtn
-          Left = 273
+          Left = 285
           Top = 21
           Width = 25
           Height = 25
@@ -91,7 +96,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
           OnClick = btnSupplierClick
         end
         object bitbtnPriceUnitClear: TBitBtn
-          Left = 305
+          Left = 317
           Top = 21
           Width = 25
           Height = 25
@@ -116,7 +121,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
           OnClick = bitbtnPriceUnitClearClick
         end
         object btnSweep: TBitBtn
-          Left = 336
+          Left = 348
           Top = 21
           Width = 75
           Height = 25
@@ -127,10 +132,10 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
         end
       end
       object rdgrpOrders: TRadioGroup
-        Left = 437
-        Top = 42
-        Width = 145
-        Height = 79
+        Left = 456
+        Top = 32
+        Width = 163
+        Height = 89
         Caption = 'Display Orders where'
         ItemIndex = 0
         Items.Strings = (
@@ -151,7 +156,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
         OnClick = chkbxIncZeroValueClick
       end
       object btnExcel: TBitBtn
-        Left = 590
+        Left = 627
         Top = 88
         Width = 75
         Height = 25
@@ -195,6 +200,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 726
       object GroupBox2: TGroupBox
         Left = 252
         Top = 40
@@ -293,7 +299,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
           Left = 8
           Top = 16
           Width = 89
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnKeyPress = edtPONumberKeyPress
         end
@@ -310,7 +316,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
           Left = 8
           Top = 16
           Width = 89
-          Height = 21
+          Height = 25
           TabOrder = 0
           OnKeyPress = edtJBNumberKeyPress
         end
@@ -327,6 +333,8 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
     Caption = 'Panel4'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 1088
+    ExplicitHeight = 334
     object dbgdetails: TDBGrid
       Left = 0
       Top = 0
@@ -337,7 +345,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -345,7 +353,7 @@ object PBLUSupplierInvoicePOFrm: TPBLUSupplierInvoicePOFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnCellClick = dbgdetailsCellClick

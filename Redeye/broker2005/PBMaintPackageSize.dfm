@@ -3,26 +3,26 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Package Size'
-  ClientHeight = 242
-  ClientWidth = 423
+  ClientHeight = 258
+  ClientWidth = 434
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
-    Top = 216
-    Width = 109
-    Height = 13
+    Top = 217
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -35,7 +35,7 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -44,71 +44,71 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 76
-      Width = 32
-      Height = 13
+      Width = 34
+      Height = 17
       Caption = 'Width'
     end
     object Label4: TLabel
-      Left = 195
+      Left = 212
       Top = 76
-      Width = 18
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'mm'
     end
     object Label5: TLabel
-      Left = 195
+      Left = 212
       Top = 52
-      Width = 18
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'mm'
     end
     object Label3: TLabel
       Left = 16
       Top = 52
-      Width = 32
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Depth'
     end
     object Label6: TLabel
       Left = 16
       Top = 101
-      Width = 35
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Height'
     end
     object Label7: TLabel
-      Left = 195
+      Left = 212
       Top = 101
-      Width = 18
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'mm'
     end
     object Label8: TLabel
       Left = 16
       Top = 136
-      Width = 87
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'Volume per Cage'
     end
     object DescrEdit: TEdit
-      Left = 107
+      Left = 124
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = CheckOK
     end
     object memWidth: TMemo
-      Left = 107
+      Left = 124
       Top = 72
       Width = 80
       Height = 21
@@ -119,7 +119,7 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
       OnKeyPress = memDepthKeyPress
     end
     object memDepth: TMemo
-      Left = 107
+      Left = 124
       Top = 48
       Width = 80
       Height = 21
@@ -130,7 +130,7 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
       OnKeyPress = memDepthKeyPress
     end
     object memHeight: TMemo
-      Left = 107
+      Left = 124
       Top = 97
       Width = 80
       Height = 21
@@ -141,7 +141,7 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
       OnKeyPress = memDepthKeyPress
     end
     object memVolume: TMemo
-      Left = 107
+      Left = 124
       Top = 132
       Width = 80
       Height = 21
@@ -162,7 +162,7 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
   end
   object OKBitBtn: TBitBtn
     Left = 256
-    Top = 208
+    Top = 214
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -238,7 +238,7 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 336
-    Top = 208
+    Top = 214
     Width = 75
     Height = 25
     Cancel = True
@@ -318,8 +318,8 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
       'Select Package_Size'
       'From Package_Size'
       'Where Package_Size_Description = :GUID')
-    Left = 192
-    Top = 24
+    Left = 352
+    Top = 86
     ParamData = <
       item
         Name = 'GUID'
@@ -359,8 +359,8 @@ object PBMaintPackageSizeFrm: TPBMaintPackageSizeFrm
       'Where'
       '(Package_Size = :Package_Size) '
       '')
-    Left = 144
-    Top = 16
+    Left = 364
+    Top = 132
     ParamData = <
       item
         Name = 'Package_Size_Description'

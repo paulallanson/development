@@ -3,26 +3,26 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
   Top = 152
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Reps'
-  ClientHeight = 215
-  ClientWidth = 395
+  ClientHeight = 217
+  ClientWidth = 421
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 64
-    Top = 176
-    Width = 145
-    Height = 15
+    Top = 172
+    Width = 166
+    Height = 16
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,12 +30,12 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 4
-    Width = 369
+    Width = 393
     Height = 149
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -44,14 +44,14 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 8
       Top = 55
-      Width = 38
+      Width = 39
       Height = 13
       Caption = 'Branch '
       Font.Charset = ANSI_CHARSET
@@ -77,21 +77,21 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     object Label4: TLabel
       Left = 8
       Top = 115
-      Width = 81
-      Height = 13
+      Width = 92
+      Height = 17
       Caption = '% Responsibilty'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object CustNameEdit: TEdit
-      Left = 102
+      Left = 107
       Top = 24
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       ParentShowHint = False
       ReadOnly = True
@@ -100,10 +100,10 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       Text = 'CustNameEdit'
     end
     object RepsDBLCB: TDBLookupComboBox
-      Left = 102
+      Left = 107
       Top = 81
-      Width = 249
-      Height = 21
+      Width = 252
+      Height = 25
       KeyField = 'Rep'
       ListField = 'Name'
       ListSource = RepsSRC
@@ -111,20 +111,20 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       OnClick = RepsDBLCBClick
     end
     object spnPercentage: TSpinEdit
-      Left = 102
+      Left = 107
       Top = 110
       Width = 59
-      Height = 22
+      Height = 27
       MaxValue = 100
       MinValue = 0
       TabOrder = 3
       Value = 100
     end
     object dblkpBranches: TDBLookupComboBox
-      Left = 102
+      Left = 107
       Top = 51
-      Width = 249
-      Height = 21
+      Width = 252
+      Height = 25
       KeyField = 'Branch_no'
       ListField = 'Name'
       ListSource = dtsBranches
@@ -132,9 +132,9 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       OnClick = dblkpBranchesClick
     end
     object chkbxIsMainRep: TCheckBox
-      Left = 234
-      Top = 113
-      Width = 121
+      Left = 211
+      Top = 114
+      Width = 143
       Height = 17
       Caption = 'This is the Main Rep'
       TabOrder = 4
@@ -302,8 +302,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         '((Rep.Inactive = '#39'N'#39') or (Rep.Inactive = :Inactive) or (Rep.Inac' +
         'tive is NULL))'
       'Order By Name')
-    Left = 40
-    Top = 4
+    Left = 18
+    Top = 29
     ParamData = <
       item
         Name = 'Rep'
@@ -317,8 +317,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
   end
   object RepsSRC: TDataSource
     DataSet = GetRepsSQL
-    Left = 88
-    Top = 4
+    Left = 78
+    Top = 29
   end
   object DelSQL: TFDQuery
     ConnectionName = 'PB'
@@ -328,8 +328,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       '(Customer = :Customer) and'
       '(Branch_No = :Branch_No) and'
       '(Rep = :Rep)')
-    Left = 200
-    Top = 96
+    Left = 218
+    Top = 144
     ParamData = <
       item
         Name = 'Customer'
@@ -353,7 +353,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       '(Branch_No = :Branch_No) and'
       '(Rep = :Rep)'
       '')
-    Left = 304
+    Left = 348
+    Top = 24
     ParamData = <
       item
         Name = 'Percentage'
@@ -388,7 +389,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       '        :Percentage,'
       '        :Is_Main_Rep)'
       '')
-    Left = 240
+    Left = 268
+    Top = 24
     ParamData = <
       item
         Name = 'Customer'
@@ -413,8 +415,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       'select *'
       'from Rep'
       'where Rep = :Rep')
-    Left = 40
-    Top = 68
+    Left = 18
+    Top = 109
     ParamData = <
       item
         Name = 'Rep'
@@ -430,8 +432,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         '((Customer_branch.Inactive = '#39'N'#39') or (Customer_branch.Inactive =' +
         ' :Inactive) or (Customer_branch.Inactive is NULL))'
       'order by Name')
-    Left = 168
-    Top = 4
+    Left = 178
+    Top = 29
     ParamData = <
       item
         Name = 'Customer'
@@ -442,8 +444,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
   end
   object dtsBranches: TDataSource
     DataSet = qryGetBranches
-    Left = 296
-    Top = 52
+    Left = 338
+    Top = 89
   end
   object qryAllBranches: TFDQuery
     ConnectionName = 'pb'
@@ -455,8 +457,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         '((Customer_branch.Inactive = '#39'N'#39') or (Customer_branch.Inactive =' +
         ' :Inactive) or (Customer_branch.Inactive is NULL))'
       'order by Name')
-    Left = 168
-    Top = 52
+    Left = 178
+    Top = 89
     ParamData = <
       item
         Name = 'Customer'
@@ -469,8 +471,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     ConnectionName = 'pb'
     SQL.Strings = (
       '')
-    Left = 240
-    Top = 52
+    Left = 268
+    Top = 89
   end
   object qryGetRepBranches: TFDQuery
     ConnectionName = 'PB'
@@ -479,8 +481,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       'FROM Reps_Branches'
       'WHERE Customer = :Customer and'
       'Branch_no = :Branch_no')
-    Left = 40
-    Top = 148
+    Left = 82
+    Top = 113
     ParamData = <
       item
         Name = 'Customer'

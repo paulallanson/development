@@ -2,23 +2,23 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
   Left = 215
   Top = 128
   Caption = 'Non Conformance Categories'
-  ClientHeight = 308
-  ClientWidth = 423
+  ClientHeight = 331
+  ClientWidth = 446
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 254
+    Left = 248
     Top = 224
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -31,7 +31,7 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -39,7 +39,7 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -58,21 +58,21 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     Left = 8
     Top = 248
     Width = 321
-    Height = 65
+    Height = 75
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
-      Top = 16
+      Top = 23
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 40
+      Top = 53
       Width = 217
       Height = 17
       Caption = 'Only show active categories'
@@ -167,16 +167,16 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 336
-    Top = 136
-    Width = 87
-    Height = 105
+    Left = 334
+    Top = 104
+    Width = 91
+    Height = 113
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
-      Left = 6
-      Top = 16
+      Left = 10
+      Top = 22
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -198,8 +198,8 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
       OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
-      Left = 6
-      Top = 44
+      Left = 10
+      Top = 50
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -221,8 +221,8 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
       OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
-      Left = 6
-      Top = 72
+      Left = 10
+      Top = 78
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -273,7 +273,7 @@ object PBLUNonConformCatFrm: TPBLUNonConformCatFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 234
+    Top = 78
   end
 end

@@ -2,64 +2,64 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
   Left = 288
   Top = 130
   Caption = 'Lookup Product Reference'
-  ClientHeight = 449
-  ClientWidth = 489
+  ClientHeight = 497
+  ClientWidth = 531
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CustLabel: TLabel
     Left = 80
     Top = 6
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 342
-    Top = 352
-    Width = 59
-    Height = 13
+    Left = 336
+    Top = 364
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object BranchLabel: TLabel
     Left = 80
-    Top = 22
-    Width = 50
-    Height = 13
+    Top = 27
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label1: TLabel
     Left = 8
-    Top = 22
-    Width = 38
-    Height = 13
+    Top = 27
+    Width = 42
+    Height = 17
     Caption = 'Branch:'
   end
   object Label2: TLabel
     Left = 8
     Top = 6
-    Width = 52
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer:'
   end
   object RefDBGrid: TDBGrid
     Left = 8
-    Top = 40
+    Top = 56
     Width = 393
     Height = 305
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -67,7 +67,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = RefDBGridColEnter
@@ -90,7 +90,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 352
+    Top = 385
     Width = 321
     Height = 49
     Caption = 'Type here to narrow the search'
@@ -100,14 +100,14 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 412
-    Top = 396
+    Left = 421
+    Top = 431
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -117,8 +117,8 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 412
-    Top = 424
+    Left = 421
+    Top = 459
     Width = 75
     Height = 25
     Kind = bkClose
@@ -126,16 +126,16 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 408
-    Top = 232
+    Left = 417
+    Top = 248
     Width = 87
-    Height = 105
+    Height = 113
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 4
-      Top = 16
+      Top = 23
       Width = 75
       Height = 25
       Caption = 'Add'
@@ -158,7 +158,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     end
     object ChgBitBtn: TBitBtn
       Left = 4
-      Top = 44
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Change'
@@ -181,7 +181,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     end
     object DelBitBtn: TBitBtn
       Left = 4
-      Top = 72
+      Top = 79
       Width = 75
       Height = 25
       Caption = 'Delete'
@@ -205,7 +205,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
   end
   object DispPanel: TPanel
     Left = 8
-    Top = 406
+    Top = 442
     Width = 393
     Height = 43
     BevelOuter = bvLowered
@@ -230,14 +230,14 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
   end
   object btbtnImages: TBitBtn
-    Left = 413
-    Top = 344
+    Left = 421
+    Top = 388
     Width = 75
     Height = 25
     Caption = 'Images'
@@ -260,8 +260,8 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
-    Left = 344
-    Top = 8
+    Left = 430
+    Top = 26
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -271,8 +271,8 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
       '      (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)'
       'order by Form_reference_id')
-    Left = 368
-    Top = 72
+    Left = 460
+    Top = 106
     ParamData = <
       item
         Name = 'Code_From'
@@ -291,7 +291,7 @@ object PBLUProductRefFrm: TPBLUProductRefFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 200
-    Top = 152
+    Left = 250
+    Top = 206
   end
 end

@@ -8,14 +8,14 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 339
@@ -24,11 +24,13 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 330
+    ExplicitWidth = 588
     DesignSize = (
       594
       44)
     object btnSelect: TBitBtn
-      Left = 416
+      Left = 410
       Top = 8
       Width = 75
       Height = 25
@@ -39,9 +41,10 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 404
     end
     object btnCancel: TBitBtn
-      Left = 504
+      Left = 498
       Top = 8
       Width = 75
       Height = 25
@@ -49,6 +52,7 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 492
     end
   end
   object Panel2: TPanel
@@ -59,25 +63,26 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 588
     object lblCustomer: TLabel
       Left = 8
-      Top = 8
-      Width = 49
-      Height = 13
+      Top = 5
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object lblJobBag: TLabel
       Left = 8
-      Top = 32
-      Width = 84
-      Height = 13
+      Top = 28
+      Width = 99
+      Height = 17
       Caption = 'Job Bag Number'
     end
     object lblDescription: TLabel
       Left = 136
-      Top = 32
-      Width = 72
-      Height = 13
+      Top = 28
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
   end
@@ -91,7 +96,7 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -99,7 +104,7 @@ object PBLUSalesInvoiceJBLfrm: TPBLUSalesInvoiceJBLfrm
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
