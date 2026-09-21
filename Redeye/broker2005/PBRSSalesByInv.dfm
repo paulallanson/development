@@ -9,21 +9,24 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   Constraints.MinWidth = 790
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDisplay: TPanel
     Left = 0
-    Top = 225
+    Top = 233
     Width = 877
-    Height = 187
+    Height = 179
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 225
+    ExplicitWidth = 871
+    ExplicitHeight = 178
     object OleContainer1: TOleContainer
       Left = 416
       Top = 200
@@ -38,13 +41,13 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Left = 1
       Top = 1
       Width = 875
-      Height = 185
+      Height = 177
       Align = alClient
       DataSource = dtsrcSalesByInv
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -52,7 +55,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       TabOrder = 1
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -149,27 +152,27 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Left = 0
     Top = 0
     Width = 877
-    Height = 225
+    Height = 233
     Align = alTop
     ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
-      Top = 183
-      Width = 59
-      Height = 13
+      Top = 175
+      Width = 68
+      Height = 17
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
-      Top = 183
-      Width = 62
-      Height = 13
+      Top = 175
+      Width = 70
+      Height = 17
       Caption = 'then sort by'
     end
     object DateToButton: TSpeedButton
-      Left = 543
-      Top = 96
+      Left = 570
+      Top = 104
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -189,29 +192,29 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnClick = DateToButtonClick
     end
     object Label1: TLabel
-      Left = 440
+      Left = 467
       Top = 15
-      Width = 95
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'From Invoice Date:'
     end
     object Label2: TLabel
-      Left = 440
+      Left = 467
       Top = 84
-      Width = 81
-      Height = 13
+      Width = 92
+      Height = 17
       Caption = 'To Invoice Date:'
     end
     object Label5: TLabel
       Left = 328
-      Top = 183
-      Width = 96
-      Height = 13
+      Top = 175
+      Width = 107
+      Height = 17
       Caption = 'Invoices to include'
     end
     object DateFromButton: TSpeedButton
-      Left = 543
-      Top = 29
+      Left = 570
+      Top = 34
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -233,8 +236,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object rgCustomer: TRadioGroup
       Left = 8
       Top = 80
-      Width = 100
-      Height = 60
+      Width = 121
+      Height = 65
       Caption = 'By Customer'
       ItemIndex = 0
       Items.Strings = (
@@ -245,7 +248,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
-      Left = 120
+      Left = 147
       Top = 83
       Width = 305
       Height = 57
@@ -255,15 +258,15 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 1
-        Width = 94
-        Height = 13
+        Width = 108
+        Height = 17
         Caption = 'Customer / Branch'
       end
       object edtCustomer: TEdit
         Left = 8
         Top = 17
         Width = 257
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -298,7 +301,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Left = 8
       Top = 197
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 2
       OnChange = cbSortChange
@@ -312,7 +315,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Left = 160
       Top = 197
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 3
       OnChange = cbSortChange
@@ -323,17 +326,17 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         'Order Number')
     end
     object DateFromEdit: TEdit
-      Left = 439
-      Top = 31
+      Left = 466
+      Top = 36
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 4
       OnChange = DateFromEditChange
       OnExit = DateFromEditExit
     end
     object TotByRadioGroup: TRadioGroup
-      Left = 584
+      Left = 604
       Top = 8
       Width = 145
       Height = 113
@@ -353,7 +356,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Left = 328
       Top = 197
       Width = 217
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 6
       OnChange = cbValuesChange
@@ -364,28 +367,28 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         'All invoices/credits')
     end
     object chkbxPageBreak: TCheckBox
-      Left = 584
+      Left = 604
       Top = 127
-      Width = 155
+      Width = 221
       Height = 17
       Caption = 'Page break by total'
       Enabled = False
       TabOrder = 7
     end
     object chkbxCustomer: TCheckBox
-      Left = 584
+      Left = 604
       Top = 166
-      Width = 155
+      Width = 221
       Height = 17
       Caption = 'Report on Ordering Customer'
       TabOrder = 8
       OnClick = chkbxCustomerClick
     end
     object DateToEdit: TEdit
-      Left = 439
-      Top = 97
+      Left = 466
+      Top = 105
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 9
       OnChange = DateToEditChange
@@ -394,8 +397,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object rgRep: TRadioGroup
       Left = 8
       Top = 8
-      Width = 100
-      Height = 60
+      Width = 121
+      Height = 65
       Caption = ' By Rep'
       ItemIndex = 0
       Items.Strings = (
@@ -406,7 +409,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnClick = rgRepClick
     end
     object RepPanel: TPanel
-      Left = 121
+      Left = 148
       Top = 14
       Width = 304
       Height = 50
@@ -416,15 +419,15 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       object lblRep: TLabel
         Left = 8
         Top = 4
-        Width = 52
-        Height = 13
+        Width = 62
+        Height = 17
         Caption = 'Rep Name'
       end
       object edtRep: TEdit
         Left = 8
         Top = 20
         Width = 257
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -447,8 +450,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object RdGrpRepTyp: TRadioGroup
       Left = 760
       Top = 8
-      Width = 75
-      Height = 55
+      Width = 105
+      Height = 65
       Caption = 'Report Type'
       ItemIndex = 1
       Items.Strings = (
@@ -458,25 +461,25 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       TabOrder = 12
     end
     object chkbxExcludePaid: TCheckBox
-      Left = 584
+      Left = 604
       Top = 183
-      Width = 155
+      Width = 213
       Height = 17
       Caption = 'Exclude Paid Invoices'
       TabOrder = 13
       OnClick = chkbxExcludePaidClick
     end
     object chkbxSubReps: TCheckBox
-      Left = 584
+      Left = 604
       Top = 146
-      Width = 155
+      Width = 205
       Height = 17
       Caption = 'Report on Sub Reps'
       TabOrder = 14
       OnClick = chkbxSubRepsClick
     end
     object chkbxExcludeJBCosts: TCheckBox
-      Left = 584
+      Left = 604
       Top = 202
       Width = 233
       Height = 17
@@ -493,6 +496,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 403
+    ExplicitWidth = 871
     DesignSize = (
       877
       41)
@@ -505,6 +510,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 638
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
@@ -563,7 +569,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 559
+      Left = 553
       Top = 8
       Width = 75
       Height = 25
@@ -614,6 +620,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
+      ExplicitLeft = 547
     end
   end
   object pnlExportPrgrss: TPanel
@@ -627,8 +634,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -655,6 +662,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       item
         Width = 50
       end>
+    ExplicitTop = 444
+    ExplicitWidth = 871
   end
   object qrySalesByInv: TFDQuery
     OnCalcFields = qrySalesByInvCalcFields

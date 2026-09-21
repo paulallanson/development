@@ -8,7 +8,7 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object CancelBitBtn: TBitBtn
     Left = 16
     Top = 181
@@ -102,12 +102,12 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object Label1: TLabel
       Left = 16
       Top = 108
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -115,19 +115,19 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object CustomerLbl: TLabel
       Left = 120
       Top = 108
-      Width = 64
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
     object Label2: TLabel
       Left = 16
       Top = 47
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -135,19 +135,19 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object DescrLbl: TLabel
       Left = 120
       Top = 47
-      Width = 43
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'DescrLbl'
     end
     object Label3: TLabel
       Left = 16
       Top = 20
-      Width = 73
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Product Code:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -155,19 +155,19 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object productlbl: TLabel
       Left = 120
       Top = 20
-      Width = 55
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'ProductLbl'
     end
     object Label4: TLabel
       Left = 16
       Top = 76
-      Width = 83
-      Height = 13
+      Width = 95
+      Height = 17
       Caption = 'Form Reference:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -175,8 +175,8 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     object FromReferencelbl: TLabel
       Left = 120
       Top = 76
-      Width = 90
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'FromReferencelbl'
     end
   end

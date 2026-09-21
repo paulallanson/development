@@ -7,12 +7,12 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -25,15 +25,15 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     object Label2: TLabel
       Left = 16
       Top = 13
-      Width = 38
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Process'
     end
     object lblProcessDescription: TLabel
       Left = 80
       Top = 13
-      Width = 110
-      Height = 13
+      Width = 125
+      Height = 17
       Caption = 'lblProcessDescription'
     end
   end
@@ -49,13 +49,13 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     ExplicitWidth = 528
     object DelLabel: TLabel
       Left = 93
-      Top = 14
-      Width = 109
-      Height = 13
+      Top = 11
+      Width = 132
+      Height = 17
       Caption = 'Delete these details ?'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -226,40 +226,40 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     object Label1: TLabel
       Left = 16
       Top = 8
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object lblCostPrice: TLabel
       Left = 16
       Top = 116
-      Width = 50
-      Height = 13
+      Width = 58
+      Height = 17
       Caption = 'Cost Price'
     end
     object Label6: TLabel
       Left = 16
       Top = 148
-      Width = 45
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Sell Price'
     end
     object Label4: TLabel
       Left = 16
       Top = 174
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Price Unit'
     end
     object Label3: TLabel
       Left = 312
       Top = 174
-      Width = 78
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'Price Reference'
     end
     object memDescription: TMemo
-      Left = 81
+      Left = 89
       Top = 6
       Width = 425
       Height = 89
@@ -269,7 +269,7 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       OnChange = CheckOK
     end
     object memCostPrice: TMemo
-      Left = 80
+      Left = 88
       Top = 112
       Width = 89
       Height = 21
@@ -282,7 +282,7 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object memSellPrice: TMemo
-      Left = 80
+      Left = 88
       Top = 144
       Width = 89
       Height = 21
@@ -295,10 +295,10 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object dblkpPriceUnit: TDBLookupComboBox
-      Left = 80
+      Left = 88
       Top = 170
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
@@ -306,10 +306,10 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       OnCloseUp = dblkpPriceUnitCloseUp
     end
     object edtReference: TEdit
-      Left = 403
+      Left = 412
       Top = 170
       Width = 102
-      Height = 21
+      Height = 25
       TabOrder = 4
       Text = 'edtReference'
     end
@@ -441,8 +441,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       'Where'
       '(Customer = :Customer) and'
       '(Process = :Process) and (Cost_Number = :Cost_Number)')
-    Left = 376
-    Top = 8
+    Left = 334
+    Top = 18
     ParamData = <
       item
         Name = 'Customer'
@@ -467,8 +467,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       'Where'
       '(Product_Type = :Product_Type) '
       '')
-    Left = 376
-    Top = 72
+    Left = 414
+    Top = 74
     ParamData = <
       item
         Name = 'Description'
@@ -497,8 +497,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       
         'where Customer = :Customer and Process = :Process and Cost_Numbe' +
         'r = :Cost_Number')
-    Left = 376
-    Top = 128
+    Left = 438
+    Top = 104
     ParamData = <
       item
         Name = 'Customer'

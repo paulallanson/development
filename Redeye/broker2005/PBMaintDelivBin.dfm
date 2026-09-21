@@ -88,7 +88,8 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 144
+    ExplicitTop = 122
+    ExplicitWidth = 360
     object btnOK: TBitBtn
       Left = 102
       Top = 1

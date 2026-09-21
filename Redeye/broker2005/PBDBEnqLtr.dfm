@@ -1,6 +1,7 @@
 inherited dbEnqLtr: TdbEnqLtr
   Height = 479
   Width = 741
+  PixelsPerInch = 120
   inherited qryLayout: TFDQuery
     Left = 248
     Top = 224

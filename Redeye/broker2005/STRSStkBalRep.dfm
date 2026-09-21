@@ -3,21 +3,18 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Stock Balance Report'
-  ClientHeight = 343
-  ClientWidth = 414
+  ClientHeight = 365
+  ClientWidth = 443
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
-  DesignSize = (
-    414
-    343)
-  TextHeight = 13
+  TextHeight = 17
   object pnlExportPrgrss: TPanel
     Left = 64
     Top = 136
@@ -29,8 +26,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -43,13 +40,13 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     end
   end
   object CloseBitBtn: TBitBtn
-    Left = 6
-    Top = 311
+    Left = 8
+    Top = 319
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -58,8 +55,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     TabOrder = 0
   end
   object PreviewBitBtn: TBitBtn
-    Left = 88
-    Top = 279
+    Left = 89
+    Top = 288
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -81,8 +78,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 171
-    Top = 279
+    Left = 173
+    Top = 287
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -111,7 +108,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Caption = 'Product Range'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -120,22 +117,22 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object Label1: TLabel
       Left = 14
       Top = 32
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 14
       Top = 60
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtPartFrom: TEdit
       Left = 66
       Top = 24
       Width = 183
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtPartFromChange
@@ -144,7 +141,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       Left = 66
       Top = 52
       Width = 185
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
     end
@@ -182,12 +179,12 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
   object rdgrpSort: TRadioGroup
     Left = 320
     Top = 132
-    Width = 89
+    Width = 94
     Height = 81
     Caption = 'Show Stores'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -234,7 +231,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -253,7 +250,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -263,8 +260,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Selected Rep'
     end
     object RepLUSpeedButton: TSpeedButton
@@ -288,7 +285,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       Left = 8
       Top = 32
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -300,7 +297,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -319,7 +316,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -329,8 +326,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     object Label4: TLabel
       Left = 8
       Top = 16
-      Width = 95
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = 'Selected Customer'
     end
     object CustLuSpeedButton: TSpeedButton
@@ -354,14 +351,14 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       Left = 8
       Top = 32
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
   end
   object FaxBitBtn: TBitBtn
-    Left = 253
-    Top = 279
+    Left = 255
+    Top = 287
     Width = 75
     Height = 25
     Caption = '&Fax'
@@ -383,14 +380,14 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     OnClick = FaxBitBtnClick
   end
   object EmailBitBtn: TBitBtn
-    Left = 335
-    Top = 279
+    Left = 337
+    Top = 287
     Width = 75
     Height = 25
     Caption = '&Email'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -422,11 +419,10 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Visible = False
   end
   object btbtnExcel: TBitBtn
-    Left = -1
-    Top = 280
+    Left = 10
+    Top = 287
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -528,8 +524,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       ' '
       ' '
       ' ')
-    Left = 368
-    Top = 184
+    Left = 284
+    Top = 54
     ParamData = <
       item
         Name = 'PartFrom'

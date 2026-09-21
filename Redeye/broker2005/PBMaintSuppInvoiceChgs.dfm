@@ -9,12 +9,12 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 144
     Top = 152
@@ -75,51 +75,52 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 469
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 35
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Details'
     end
     object Label2: TLabel
       Left = 8
       Top = 45
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Price'
     end
     object Label3: TLabel
       Left = 8
       Top = 76
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'VAT'
     end
     object Nominal: TLabel
       Left = 272
       Top = 76
-      Width = 43
-      Height = 13
+      Width = 49
+      Height = 17
       Caption = 'Nominal'
     end
     object Label4: TLabel
       Left = 8
       Top = 108
-      Width = 79
-      Height = 13
+      Width = 91
+      Height = 17
       Caption = 'Purchase Order'
     end
     object edtdetails: TEdit
-      Left = 96
+      Left = 108
       Top = 8
       Width = 369
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = CheckOK
     end
     object memPrice: TMemo
-      Left = 96
+      Left = 108
       Top = 40
       Width = 89
       Height = 23
@@ -132,10 +133,10 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
       OnExit = memPriceExit
     end
     object dblkpVat: TDBLookupComboBox
-      Left = 96
+      Left = 108
       Top = 72
       Width = 153
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = dsVAT
@@ -146,7 +147,7 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
       Left = 320
       Top = 72
       Width = 145
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
@@ -155,10 +156,10 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
       OnChange = CheckOK
     end
     object cmbPurchaseOrders: TComboBox
-      Left = 96
+      Left = 108
       Top = 104
       Width = 145
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = CheckOK
     end

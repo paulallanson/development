@@ -3,8 +3,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   Top = 187
   BorderIcons = [biSystemMenu]
   Caption = 'Enquiry Print'
-  ClientHeight = 225
-  ClientWidth = 417
+  ClientHeight = 242
+  ClientWidth = 407
   Color = clBtnFace
   Constraints.MaxHeight = 400
   Constraints.MaxWidth = 610
@@ -12,7 +12,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   Constraints.MinWidth = 419
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -20,16 +20,18 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
-    Top = 109
-    Width = 417
+    Top = 126
+    Width = 407
     Height = 97
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 100
+    ExplicitWidth = 411
     object CancelBitBtn: TBitBtn
       Left = 9
       Top = 55
@@ -48,7 +50,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       OnClick = CancelBitBtnClick
     end
     object PreviewBitBtn: TBitBtn
-      Left = 153
+      Left = 121
       Top = 55
       Width = 75
       Height = 25
@@ -77,7 +79,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       OnClick = PreviewBitBtnClick
     end
     object PrintBitBtn: TBitBtn
-      Left = 241
+      Left = 209
       Top = 55
       Width = 75
       Height = 25
@@ -107,7 +109,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       OnClick = PrintBitBtnClick
     end
     object EmailBitBtn: TBitBtn
-      Left = 328
+      Left = 296
       Top = 55
       Width = 75
       Height = 25
@@ -132,25 +134,25 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     object GroupBox1: TGroupBox
       Left = 8
       Top = -3
-      Width = 225
+      Width = 235
       Height = 41
       ParentBackground = False
       TabOrder = 4
       object EstNumLabel: TLabel
         Left = 8
         Top = 17
-        Width = 83
-        Height = 13
+        Width = 95
+        Height = 17
         Caption = 'Enquiry Number'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object EnquiryMemo: TMemo
-        Left = 88
+        Left = 106
         Top = 11
         Width = 129
         Height = 25
@@ -170,8 +172,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       end
     end
     object CBFileCpy: TCheckBox
-      Left = 253
-      Top = 11
+      Left = 273
+      Top = 9
       Width = 130
       Height = 16
       Caption = 'Print File Copy'
@@ -183,47 +185,48 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 417
+    Width = 407
     Height = 81
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 411
     object gbLayouts: TGroupBox
       Left = 8
       Top = 4
-      Width = 265
+      Width = 289
       Height = 72
       ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8
         Top = 15
-        Width = 66
-        Height = 13
+        Width = 76
+        Height = 17
         Caption = 'Paper Layout'
       end
       object Label2: TLabel
         Left = 8
         Top = 42
-        Width = 66
-        Height = 13
+        Width = 75
+        Height = 17
         Caption = 'Letter Layout'
       end
       object cmbPageLayout: TComboBox
-        Left = 88
+        Left = 92
         Top = 11
         Width = 169
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 0
         OnChange = CanPrint
       end
       object cmbLetterLayout: TComboBox
-        Left = 88
+        Left = 92
         Top = 38
         Width = 169
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 1
         OnChange = CanPrint
@@ -233,31 +236,33 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   object pnlReminder: TPanel
     Left = 0
     Top = 81
-    Width = 417
-    Height = 28
+    Width = 407
+    Height = 45
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 411
+    ExplicitHeight = 19
     object GroupBox2: TGroupBox
       Left = 8
       Top = -5
-      Width = 266
-      Height = 40
+      Width = 289
+      Height = 48
       ParentBackground = False
       TabOrder = 0
       object Label3: TLabel
         Left = 8
         Top = 18
-        Width = 76
-        Height = 13
+        Width = 87
+        Height = 17
         Caption = 'Reminder Date'
       end
       object dtReminderDate: TDateTimePicker
-        Left = 88
+        Left = 106
         Top = 14
         Width = 129
-        Height = 21
+        Height = 25
         Date = 42548.000000000000000000
         Time = 0.588667349540628500
         TabOrder = 0
@@ -266,8 +271,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 206
-    Width = 417
+    Top = 223
+    Width = 407
     Height = 19
     Panels = <
       item
@@ -276,6 +281,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       item
         Width = 50
       end>
+    ExplicitTop = 197
+    ExplicitWidth = 411
   end
   object GetEnqSQL: TFDQuery
     ConnectionName = 'PB'
@@ -315,8 +322,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       'Order By EnquiryLine.Enquiry'
       ''
       ' ')
-    Left = 336
-    Top = 16
+    Left = 180
+    Top = 12
     ParamData = <
       item
         Name = 'Enquiry'
@@ -405,8 +412,8 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       ''
       ' '
       ' ')
-    Left = 336
-    Top = 72
+    Left = 260
+    Top = 18
     ParamData = <
       item
         Name = 'Enquiry'

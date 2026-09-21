@@ -1,16 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Maintain Branches form.
-
-VSS Info:
-$Header: /PBL D5/PBMaintSupBrch.pas 14    20/06/03 9:53 Andrewh $
-$History: PBMaintSupBrch.pas $
- * 
-*******************************************************************************)
 unit PBMaintSupBrch;
 
 interface

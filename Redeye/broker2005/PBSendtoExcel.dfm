@@ -31,21 +31,33 @@ object frmPBSendtoExcel: TfrmPBSendtoExcel
     Width = 292
     Height = 69
     BevelInner = bvLowered
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 1
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
     end
     object prgbrExport: TProgressBar
       Left = 16
       Top = 32
       Width = 257
-      Height = 16
+      Height = 25
       Step = 1
       TabOrder = 0
     end

@@ -7,14 +7,14 @@ object STPODirectConfFrm: TSTPODirectConfFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlFunctions: TPanel
     Left = 0
     Top = 396
@@ -23,11 +23,13 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 387
+    ExplicitWidth = 718
     DesignSize = (
       724
       41)
     object btnOK: TBitBtn
-      Left = 544
+      Left = 538
       Top = 8
       Width = 75
       Height = 25
@@ -54,9 +56,10 @@ object STPODirectConfFrm: TSTPODirectConfFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 532
     end
     object btnCancel: TBitBtn
-      Left = 632
+      Left = 626
       Top = 8
       Width = 75
       Height = 25
@@ -65,9 +68,10 @@ object STPODirectConfFrm: TSTPODirectConfFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnCancelClick
+      ExplicitLeft = 620
     end
     object BitBtnAdd: TBitBtn
-      Left = 448
+      Left = 442
       Top = 8
       Width = 75
       Height = 25
@@ -94,6 +98,7 @@ object STPODirectConfFrm: TSTPODirectConfFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = BitBtnAddClick
+      ExplicitLeft = 436
     end
   end
   object Panel1: TPanel
@@ -104,88 +109,89 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 718
     object Label1: TLabel
       Left = 16
       Top = 16
-      Width = 82
-      Height = 13
+      Width = 94
+      Height = 17
       Caption = 'Purchase Order:'
     end
     object Label2: TLabel
       Left = 224
       Top = 64
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label3: TLabel
       Left = 43
       Top = 40
-      Width = 60
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Order Date:'
     end
     object Label4: TLabel
       Left = 556
       Top = 16
-      Width = 77
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'Required Date:'
     end
     object lblCustomer: TLabel
       Left = 296
       Top = 64
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'lblCustomer'
     end
     object lblPODate: TLabel
       Left = 120
       Top = 40
-      Width = 52
-      Height = 13
+      Width = 58
+      Height = 17
       Caption = 'lblPODate'
     end
     object lblReqDate: TLabel
       Left = 648
       Top = 16
-      Width = 57
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'lblReqDate'
     end
     object lblPONumber: TLabel
       Left = 120
       Top = 16
-      Width = 69
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'lblPONumber'
     end
     object Label5: TLabel
       Left = 233
       Top = 16
-      Width = 46
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Supplier:'
     end
     object lblSupplier: TLabel
       Left = 296
       Top = 16
-      Width = 56
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'lblSupplier'
     end
     object Label6: TLabel
       Left = 37
       Top = 64
-      Width = 62
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Sales Order:'
     end
     object lblSalesOrder: TLabel
       Left = 120
       Top = 64
-      Width = 69
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'lblSalesOrder'
     end
   end
@@ -204,6 +210,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     OnDrawCell = grdDetailsDrawCell
     OnKeyPress = CheckKeyIsNumber
     OnSelectCell = grdDetailsSelectCell
+    ExplicitWidth = 718
+    ExplicitHeight = 298
     ColWidths = (
       40
       124

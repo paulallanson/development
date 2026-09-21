@@ -1,39 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Notes/Memo form.
-
-VSS Info:
-$Header: /PBL D5/PBDBMemo.pas 4     12/07/02 15:58 Andrewh $
-$History: PBDBMemo.pas $
- * 
- * *****************  Version 4  *****************
- * User: Andrewh      Date: 12/07/02   Time: 15:58
- * Updated in $/PBL D5
- * Add new NOTES and ENQUIRY mode to program.
- * 
- * *****************  Version 3  *****************
- * User: Paul         Date: 2/05/:1    Time: 12:49
- * Updated in $/PBL D5
- * Changed to convert the property of the Purchase Order to float rather
- * than integer, this then allows the creation of Call Off Orders
- * 
- * *****************  Version 2  *****************
- * User: Roddym       Date: 31/01/:0   Time: 13:04
- * Updated in $/PBL D5
- * New TNarrative object to centralise all accesses to the Narrative_Line
- * table.  Also improved SQL to allocate next key value.
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:41
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBDBMemo;
 
 interface

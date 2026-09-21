@@ -25,7 +25,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 657
+    ExplicitWidth = 676
     object EnqLabel: TLabel
       Left = 8
       Top = 7
@@ -80,8 +80,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 40
-    ExplicitWidth = 651
+    ExplicitWidth = 676
     object Label4: TLabel
       Left = 8
       Top = 13
@@ -115,8 +114,8 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 518
-    ExplicitWidth = 651
+    ExplicitTop = 559
+    ExplicitWidth = 676
     object OKBitBtn: TBitBtn
       Left = 479
       Top = 9
@@ -145,8 +144,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 80
-    ExplicitWidth = 651
+    ExplicitWidth = 676
     object Label3: TLabel
       Left = 8
       Top = 10
@@ -206,9 +204,8 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 4
-    ExplicitTop = 233
-    ExplicitWidth = 651
-    ExplicitHeight = 149
+    ExplicitWidth = 676
+    ExplicitHeight = 164
     object Label1: TLabel
       Left = 6
       Top = 69
@@ -233,7 +230,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
       Left = 463
       Top = 12
       Width = 85
-      Height = 37
+      Height = 34
       Caption = 'Date required from Supplier'
       WordWrap = True
     end
@@ -254,8 +251,8 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     object Label14: TLabel
       Left = 239
       Top = 12
-      Width = 83
-      Height = 39
+      Width = 81
+      Height = 34
       Caption = 'Date required by Customer'
       WordWrap = True
     end
@@ -466,7 +463,8 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 424
+    ExplicitTop = 414
+    ExplicitWidth = 676
     object AddrTypeRadGrp: TRadioGroup
       Left = 7
       Top = 6
@@ -555,8 +553,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 6
-    ExplicitTop = 120
-    ExplicitWidth = 651
+    ExplicitWidth = 676
     object SuppLabel: TLabel
       Left = 8
       Top = 6
@@ -619,8 +616,7 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 7
-    ExplicitTop = 177
-    ExplicitWidth = 651
+    ExplicitWidth = 676
     object Label6: TLabel
       Left = 8
       Top = 12

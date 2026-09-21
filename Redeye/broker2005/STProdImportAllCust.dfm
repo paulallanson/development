@@ -9,14 +9,14 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object mmErrorRecords: TMemo
     Left = 0
     Top = 297
@@ -26,6 +26,8 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 5
+    ExplicitWidth = 373
+    ExplicitHeight = 96
   end
   object pnlImportFile: TPanel
     Left = 0
@@ -36,18 +38,19 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Enabled = False
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 373
     object lblStep3: TLabel
       Left = 8
       Top = 8
-      Width = 164
-      Height = 13
+      Width = 187
+      Height = 17
       Caption = '3. Select the file to be imported.'
     end
     object edtImportFileName: TEdit
       Left = 8
       Top = 24
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtImportFileNameChange
     end
@@ -69,41 +72,42 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 373
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 50
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Progress: '
     end
     object lblProgress: TLabel
       Left = 257
       Top = 8
-      Width = 5
-      Height = 13
+      Width = 6
+      Height = 17
       Caption = 'x'
       Visible = False
     end
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'records read.'
       Visible = False
     end
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 108
-      Height = 13
+      Width = 121
+      Height = 17
       Caption = 'Reading Product file.'
     end
     object prgrsbrImport: TProgressBar
       Left = 8
-      Top = 24
+      Top = 30
       Width = 353
-      Height = 17
+      Height = 22
       TabOrder = 0
     end
   end
@@ -115,15 +119,16 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 373
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 129
-      Height = 13
+      Width = 156
+      Height = 17
       Caption = '1. Select the Import type.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -131,14 +136,14 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     object LblCustName: TLabel
       Left = 32
       Top = 32
-      Width = 18
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = '      '
     end
     object chkbxImportStock: TCheckBox
       Left = 32
       Top = 32
-      Width = 137
+      Width = 231
       Height = 17
       Caption = 'Import stock balances'
       TabOrder = 0
@@ -153,11 +158,12 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 373
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 90
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = '4. Run the Import'
     end
     object ImportBtn: TButton
@@ -179,6 +185,8 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 6
+    ExplicitTop = 393
+    ExplicitWidth = 373
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8
@@ -198,15 +206,16 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 373
     object lblStep2: TLabel
       Left = 8
       Top = 8
-      Width = 192
-      Height = 13
+      Width = 215
+      Height = 17
       Caption = '2. Select the Warehouse and location'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -214,22 +223,22 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     object Label2: TLabel
       Left = 32
       Top = 36
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Warehouse'
     end
     object Label4: TLabel
       Left = 32
       Top = 60
-      Width = 16
-      Height = 13
+      Width = 17
+      Height = 17
       Caption = 'Bin'
     end
     object dblkpPartStore: TDBLookupComboBox
       Left = 112
       Top = 32
       Width = 201
-      Height = 21
+      Height = 25
       Enabled = False
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
@@ -241,7 +250,7 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
       Left = 112
       Top = 56
       Width = 97
-      Height = 21
+      Height = 25
       Enabled = False
       ReadOnly = True
       TabOrder = 1
@@ -275,8 +284,8 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     DefaultExt = 'txt'
     Filter = 'Text files (*.txt;*.csv)|*.txt; *.csv'
     InitialDir = 'C:\My Documents'
-    Left = 72
-    Top = 136
+    Left = 98
+    Top = 114
   end
   object qryPartStore: TFDQuery
     ConnectionName = 'PB'

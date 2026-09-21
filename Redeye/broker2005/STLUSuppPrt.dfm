@@ -8,13 +8,13 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DetsDBGrid: TDBGrid
     Left = 8
     Top = 8
@@ -24,7 +24,7 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -32,7 +32,7 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -65,7 +65,7 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -244,6 +244,8 @@ object STLUSuppPrtFrm: TSTLUSuppPrtFrm
       item
         Width = 50
       end>
+    ExplicitTop = 278
+    ExplicitWidth = 550
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL

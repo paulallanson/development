@@ -24,7 +24,8 @@ object PBLUAddChrgFrm: TPBLUAddChrgFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 315
+    ExplicitLeft = 303
+    ExplicitHeight = 297
     DesignSize = (
       105
       306)

@@ -8,21 +8,21 @@ object PBMaintPreProductionFrm: TPBMaintPreProductionFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 134
-    Top = 80
-    Width = 109
-    Height = 13
+    Top = 75
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,7 +34,7 @@ object PBMaintPreProductionFrm: TPBMaintPreProductionFrm
     Height = 57
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,15 +43,15 @@ object PBMaintPreProductionFrm: TPBMaintPreProductionFrm
     object Label1: TLabel
       Left = 8
       Top = 24
-      Width = 38
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Process'
     end
     object DescrEdit: TEdit
       Left = 70
       Top = 20
       Width = 331
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'

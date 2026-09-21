@@ -3,22 +3,22 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   Top = 125
   BorderStyle = bsDialog
   Caption = 'Pre-Production Schedule Reports'
-  ClientHeight = 303
-  ClientWidth = 665
+  ClientHeight = 329
+  ClientWidth = 704
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object lblFrom: TLabel
     Left = 463
     Top = 108
-    Width = 107
-    Height = 13
+    Width = 124
+    Height = 17
     Caption = 'Live Proof Date from:'
   end
   object DateFromButton: TSpeedButton
@@ -66,8 +66,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   object lblTo: TLabel
     Left = 463
     Top = 156
-    Width = 94
-    Height = 13
+    Width = 108
+    Height = 17
     Caption = 'Live Proof Date to:'
   end
   object pnlExportPrgrss: TPanel
@@ -81,8 +81,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -107,7 +107,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   object rdgrpAccMgr: TRadioGroup
     Left = 8
     Top = 9
-    Width = 145
+    Width = 163
     Height = 64
     Caption = 'By Account Manager'
     ItemIndex = 0
@@ -119,8 +119,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = rdgrpAccMgrClick
   end
   object AccMgrPanel: TPanel
-    Left = 169
-    Top = 14
+    Left = 178
+    Top = 16
     Width = 281
     Height = 52
     ParentBackground = False
@@ -129,15 +129,15 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     object lblSupplier: TLabel
       Left = 8
       Top = 4
-      Width = 91
-      Height = 13
+      Width = 103
+      Height = 17
       Caption = 'Account Manager'
     end
     object edtAccMgr: TEdit
       Left = 8
       Top = 20
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -173,7 +173,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   end
   object CustomerPanel: TPanel
     Left = 169
-    Top = 92
+    Top = 95
     Width = 281
     Height = 52
     ParentBackground = False
@@ -182,15 +182,15 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     object lblCustomer: TLabel
       Left = 8
       Top = 4
-      Width = 88
-      Height = 13
+      Width = 100
+      Height = 17
       Caption = 'Customer/Branch'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 20
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -211,8 +211,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 584
-    Top = 272
+    Left = 596
+    Top = 288
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -234,8 +234,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 496
-    Top = 272
+    Left = 508
+    Top = 288
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -257,8 +257,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = PreviewBitBtnClick
   end
   object ExcelBitBtn: TBitBtn
-    Left = 405
-    Top = 272
+    Left = 417
+    Top = 288
     Width = 75
     Height = 25
     Caption = 'Excel'
@@ -309,8 +309,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = ExcelBitBtnClick
   end
   object BitBtn1: TBitBtn
-    Left = 7
-    Top = 272
+    Left = 19
+    Top = 288
     Width = 75
     Height = 25
     Kind = bkClose
@@ -321,7 +321,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Left = 463
     Top = 124
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 8
     OnExit = DateFromEditExit
@@ -330,7 +330,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Left = 463
     Top = 172
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 9
     OnExit = DateToEditExit
@@ -339,7 +339,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     Left = 8
     Top = 160
     Width = 193
-    Height = 97
+    Height = 113
     Caption = 'Sort by'
     ItemIndex = 0
     Items.Strings = (
@@ -353,7 +353,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   object rdgrpReportType: TRadioGroup
     Left = 464
     Top = 8
-    Width = 193
+    Width = 232
     Height = 81
     Caption = 'Report Type'
     ItemIndex = 0
@@ -367,8 +367,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   end
   object chkbxPageBreak: TCheckBox
     Left = 216
-    Top = 240
-    Width = 153
+    Top = 256
+    Width = 182
     Height = 17
     Caption = 'Page break on sort type'
     Checked = True

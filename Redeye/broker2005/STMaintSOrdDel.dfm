@@ -3,111 +3,111 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   Top = 57
   BorderStyle = bsDialog
   Caption = 'Maintain Sales Order delivery details'
-  ClientHeight = 352
-  ClientWidth = 488
+  ClientHeight = 387
+  ClientWidth = 509
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 14
-    Width = 62
-    Height = 13
+    Width = 72
+    Height = 17
     Caption = 'Sales Order:'
   end
   object lblSalesOrder: TLabel
     Left = 112
     Top = 14
-    Width = 69
-    Height = 13
+    Width = 79
+    Height = 17
     Caption = 'lblSalesOrder'
   end
   object Label3: TLabel
     Left = 8
-    Top = 67
-    Width = 38
-    Height = 13
+    Top = 77
+    Width = 43
+    Height = 17
     Caption = 'Courier'
   end
   object Label4: TLabel
     Left = 8
-    Top = 39
-    Width = 67
-    Height = 13
+    Top = 44
+    Width = 77
+    Height = 17
     Caption = 'Delivery Date'
   end
   object Label5: TLabel
     Left = 8
-    Top = 133
-    Width = 90
-    Height = 13
+    Top = 143
+    Width = 101
+    Height = 17
     Caption = 'Consignment No.'
   end
   object Label6: TLabel
     Left = 288
     Top = 14
-    Width = 95
-    Height = 13
+    Width = 109
+    Height = 17
     Caption = 'Despatch Number:'
   end
   object lblDespatchNo: TLabel
     Left = 400
     Top = 14
-    Width = 76
-    Height = 13
+    Width = 86
+    Height = 17
     Caption = 'lblDespatchNo'
   end
   object Label8: TLabel
     Left = 8
-    Top = 166
-    Width = 79
-    Height = 13
+    Top = 176
+    Width = 88
+    Height = 17
     Caption = 'Delivery weight'
   end
   object Label9: TLabel
     Left = 296
-    Top = 166
-    Width = 88
-    Height = 13
+    Top = 176
+    Width = 103
+    Height = 17
     Caption = 'Number of boxes'
   end
   object Label10: TLabel
     Left = 224
-    Top = 166
-    Width = 24
-    Height = 13
+    Top = 176
+    Width = 28
+    Height = 17
     Caption = 'Kilos'
   end
   object Label11: TLabel
     Left = 8
-    Top = 192
-    Width = 104
-    Height = 13
+    Top = 202
+    Width = 116
+    Height = 17
     Caption = 'Delivery Instructions'
   end
   object Label12: TLabel
     Left = 288
-    Top = 39
-    Width = 60
-    Height = 13
+    Top = 44
+    Width = 68
+    Height = 17
     Caption = 'Date Picked'
   end
   object Label13: TLabel
     Left = 8
-    Top = 99
-    Width = 79
-    Height = 13
+    Top = 109
+    Width = 93
+    Height = 17
     Caption = 'Service Number'
   end
   object btnOK: TBitBtn
-    Left = 162
-    Top = 320
+    Left = 170
+    Top = 338
     Width = 75
     Height = 25
     Enabled = False
@@ -117,8 +117,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     OnClick = btnOKClick
   end
   object btnCancel: TBitBtn
-    Left = 250
-    Top = 320
+    Left = 258
+    Top = 338
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -128,9 +128,9 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object dblkpCourier: TDBLookupComboBox
     Left = 112
-    Top = 63
+    Top = 73
     Width = 209
-    Height = 21
+    Height = 25
     KeyField = 'Courier'
     ListField = 'Courier_Name'
     ListSource = dtsCourier
@@ -139,15 +139,15 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object edtDateDelivered: TEdit
     Left = 112
-    Top = 35
+    Top = 40
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 0
     OnChange = Enableok
   end
   object BitBtn1: TBitBtn
     Left = 224
-    Top = 34
+    Top = 39
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -169,17 +169,17 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object edtConsignment: TEdit
     Left = 112
-    Top = 129
+    Top = 139
     Width = 185
-    Height = 21
+    Height = 25
     TabOrder = 6
     OnChange = Enableok
   end
   object spnEdtBoxes: TSpinEdit
-    Left = 400
-    Top = 161
+    Left = 405
+    Top = 171
     Width = 73
-    Height = 22
+    Height = 27
     MaxValue = 0
     MinValue = 0
     TabOrder = 8
@@ -187,16 +187,16 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object memInstructions: TMemo
     Left = 8
-    Top = 208
+    Top = 218
     Width = 473
     Height = 97
     TabOrder = 9
   end
   object edtDatePicked: TEdit
     Left = 368
-    Top = 35
+    Top = 40
     Width = 105
-    Height = 21
+    Height = 25
     TabStop = False
     Color = clBtnFace
     ReadOnly = True
@@ -204,9 +204,9 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object dblkpCourierService: TDBLookupComboBox
     Left = 112
-    Top = 95
+    Top = 105
     Width = 209
-    Height = 21
+    Height = 25
     KeyField = 'Service_no'
     ListField = 'Service_Description'
     ListSource = dtsCourierService
@@ -215,15 +215,15 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object edtWeight: TEdit
     Left = 112
-    Top = 161
+    Top = 171
     Width = 105
-    Height = 21
+    Height = 25
     TabOrder = 7
     OnChange = Enableok
   end
   object btnCourier: TBitBtn
     Left = 328
-    Top = 62
+    Top = 72
     Width = 25
     Height = 25
     Caption = '...'
@@ -238,7 +238,7 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object btnClear: TBitBtn
     Left = 360
-    Top = 62
+    Top = 72
     Width = 25
     Height = 25
     Font.Charset = ANSI_CHARSET
@@ -274,8 +274,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object dtsCourier: TDataSource
     DataSet = qryCourier
-    Left = 416
-    Top = 59
+    Left = 440
+    Top = 39
   end
   object qryCourierService: TFDQuery
     ConnectionName = 'PB'
@@ -292,8 +292,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   end
   object dtsCourierService: TDataSource
     DataSet = qryCourierService
-    Left = 416
-    Top = 107
+    Left = 440
+    Top = 70
   end
   object qryGetSODelivery: TFDQuery
     ConnectionName = 'PB'
@@ -302,8 +302,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
       'from Sales_order_Delivery'
       'where sales_order = :Sales_Order and'
       'Sales_order_Delivery_no = :Sales_order_Delivery_no')
-    Left = 328
-    Top = 155
+    Left = 410
+    Top = 199
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -325,8 +325,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
       'Service_no = :Service_no'
       'where sales_order = :sales_order and'
       'sales_order_delivery_no = :sales_order_delivery_no')
-    Left = 328
-    Top = 200
+    Left = 410
+    Top = 255
     ParamData = <
       item
         Name = 'Delivery_date'
@@ -362,7 +362,7 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
       'select *'
       'from company'
       'where company = 1')
-    Left = 328
-    Top = 107
+    Left = 346
+    Top = 3
   end
 end

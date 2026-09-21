@@ -3,58 +3,59 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
   Top = 183
   BorderStyle = bsDialog
   Caption = 'Maintain Works Order Status'
-  ClientHeight = 200
-  ClientWidth = 500
+  ClientHeight = 210
+  ClientWidth = 430
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    500
-    200)
-  TextHeight = 13
+    430
+    210)
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 37
-    Top = 176
-    Width = 109
-    Height = 13
+    Top = 177
+    Width = 122
+    Height = 17
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete these details ?'
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 189
   end
   object Label1: TLabel
     Left = 7
     Top = 52
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 7
-    Top = 100
-    Width = 35
-    Height = 13
+    Top = 94
+    Width = 39
+    Height = 17
     Caption = 'Colour'
   end
   object Label3: TLabel
     Left = 7
     Top = 20
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Status Code'
   end
   object OKBitBtn: TBitBtn
-    Left = 173
-    Top = 168
+    Left = 180
+    Top = 173
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -127,10 +128,11 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = OKBitBtnClick
+    ExplicitTop = 185
   end
   object CancelBitBtn: TBitBtn
     Left = 261
-    Top = 168
+    Top = 173
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -204,12 +206,13 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = CancelBitBtnClick
+    ExplicitTop = 185
   end
   object edtDescription: TEdit
-    Left = 78
+    Left = 86
     Top = 48
     Width = 252
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 2
     Text = 'edtDescription'
@@ -217,17 +220,17 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
   end
   object chkbxActive: TCheckBox
     Left = 7
-    Top = 142
+    Top = 131
     Width = 185
     Height = 17
     Caption = 'Status is active'
     TabOrder = 3
   end
   object edtColor: TEdit
-    Left = 78
-    Top = 96
+    Left = 86
+    Top = 90
     Width = 131
-    Height = 21
+    Height = 25
     MaxLength = 40
     ReadOnly = True
     TabOrder = 4
@@ -235,7 +238,7 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
   end
   object Button1: TButton
     Left = 232
-    Top = 94
+    Top = 90
     Width = 75
     Height = 25
     Caption = 'Colour'
@@ -244,7 +247,7 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
   end
   object Button2: TButton
     Left = 314
-    Top = 94
+    Top = 90
     Width = 75
     Height = 25
     Caption = 'Font'
@@ -252,10 +255,10 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
     OnClick = Button2Click
   end
   object edtStatusCode: TEdit
-    Left = 78
+    Left = 86
     Top = 16
     Width = 59
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 7
     Text = 'edtCode'
@@ -284,8 +287,8 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
       '        (Works_Order_Status,'
       '        Works_Order_Status_Descr)'
       'Values (:Works_Order_Status, :Works_Order_Status_Descr)')
-    Left = 352
-    Top = 152
+    Left = 448
+    Top = 6
     ParamData = <
       item
         Name = 'Works_Order_Status'
@@ -330,8 +333,8 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
       'Delete From Works_Order_Status'
       'Where'
       '(Works_Order_Status = :Works_Order_Status)')
-    Left = 24
-    Top = 40
+    Left = 390
+    Top = 2
     ParamData = <
       item
         Name = 'Works_Order_Status'
@@ -356,7 +359,7 @@ object PBMaintWorksOrderStatusFrm: TPBMaintWorksOrderStatusFrm
       end>
   end
   object ColorDialog1: TColorDialog
-    Left = 416
-    Top = 91
+    Left = 392
+    Top = 130
   end
 end

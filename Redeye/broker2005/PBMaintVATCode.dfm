@@ -3,26 +3,26 @@ object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
   Top = 190
   BorderStyle = bsDialog
   Caption = 'Maintain VAT Codes'
-  ClientHeight = 285
+  ClientHeight = 322
   ClientWidth = 433
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 120
-    Top = 238
-    Width = 109
-    Height = 13
-    Caption = 'Delete these details ?'
+    Left = 118
+    Top = 278
+    Width = 122
+    Height = 17
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -31,11 +31,11 @@ object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
     Left = 16
     Top = 8
     Width = 393
-    Height = 201
+    Height = 233
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -44,63 +44,63 @@ object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 52
-      Width = 38
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'VAT Ref'
     end
     object Label3: TLabel
       Left = 8
       Top = 84
-      Width = 44
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'VAT Rate'
     end
     object Label4: TLabel
       Left = 8
       Top = 124
-      Width = 73
-      Height = 29
+      Width = 102
+      Height = 45
       AutoSize = False
       Caption = 'Sales Ledger Description'
       WordWrap = True
     end
     object Label5: TLabel
       Left = 8
-      Top = 164
-      Width = 81
-      Height = 29
+      Top = 175
+      Width = 102
+      Height = 42
       AutoSize = False
       Caption = 'Purchase Ledger Description'
       WordWrap = True
     end
     object DescrEdit: TEdit
-      Left = 102
+      Left = 116
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
     end
     object RefEdit: TEdit
-      Left = 102
+      Left = 116
       Top = 48
       Width = 35
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 1
       TabOrder = 1
       OnChange = RefEditChange
     end
     object VATRateMemo: TMemo
-      Left = 102
+      Left = 116
       Top = 80
       Width = 73
       Height = 25
@@ -115,27 +115,27 @@ object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
       OnExit = VATRateMemoExit
     end
     object edtSalesLedgerDescr: TEdit
-      Left = 102
+      Left = 116
       Top = 128
       Width = 251
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 3
       Text = 'DescrEdit'
     end
     object edtPurchLedgerDescr: TEdit
-      Left = 102
-      Top = 168
+      Left = 116
+      Top = 179
       Width = 251
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 4
       Text = 'DescrEdit'
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 256
-    Top = 232
+    Left = 254
+    Top = 272
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -209,8 +209,8 @@ object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 336
-    Top = 232
+    Left = 334
+    Top = 272
     Width = 75
     Height = 25
     Cancel = True

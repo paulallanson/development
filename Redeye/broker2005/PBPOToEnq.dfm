@@ -2,44 +2,44 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
   Left = 130
   Top = 144
   Caption = 'Copy Purchase Orders To Enquiries'
-  ClientHeight = 193
-  ClientWidth = 487
+  ClientHeight = 229
+  ClientWidth = 530
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object SelPOLabel: TLabel
-    Left = 110
+    Left = 124
     Top = 16
-    Width = 82
-    Height = 13
+    Width = 94
+    Height = 17
     Caption = 'Purchase Order:'
   end
   object CustDetsLabel: TLabel
-    Left = 110
-    Top = 40
+    Left = 124
+    Top = 47
     Width = 275
-    Height = 13
+    Height = 20
     AutoSize = False
     Caption = 'Customer Details:'
   end
   object Label7: TLabel
-    Left = 36
-    Top = 100
-    Width = 66
-    Height = 13
+    Left = 44
+    Top = 112
+    Width = 74
+    Height = 17
     Caption = 'Enquiry Date'
   end
   object EnqDateBtn: TSpeedButton
-    Left = 194
-    Top = 96
+    Left = 208
+    Top = 109
     Width = 23
     Height = 23
     Glyph.Data = {
@@ -59,15 +59,15 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
     OnClick = EnqDateBtnClick
   end
   object Label3: TLabel
-    Left = 26
-    Top = 132
-    Width = 74
-    Height = 13
+    Left = 34
+    Top = 144
+    Width = 84
+    Height = 17
     Caption = 'Date Required'
   end
   object DateBtn: TSpeedButton
-    Left = 194
-    Top = 128
+    Left = 208
+    Top = 141
     Width = 23
     Height = 23
     Hint = 'Select the date the enquiry is reqiored'
@@ -88,49 +88,49 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
     OnClick = DateBtnClick
   end
   object DescriptionLbl: TLabel
-    Left = 110
-    Top = 64
+    Left = 124
+    Top = 74
     Width = 275
-    Height = 13
+    Height = 17
     AutoSize = False
     Caption = 'Description:'
   end
   object Label1: TLabel
-    Left = 21
+    Left = 24
     Top = 16
-    Width = 82
-    Height = 13
+    Width = 94
+    Height = 17
     Caption = 'Purchase Order:'
   end
   object Label2: TLabel
     Left = 16
-    Top = 40
-    Width = 90
-    Height = 13
+    Top = 47
+    Width = 102
+    Height = 17
     Caption = 'Customer Details:'
   end
   object Label4: TLabel
-    Left = 42
-    Top = 64
-    Width = 62
-    Height = 13
+    Left = 49
+    Top = 74
+    Width = 69
+    Height = 17
     Caption = 'Description:'
   end
   object EnqDateEdit: TEdit
-    Left = 110
-    Top = 96
+    Left = 124
+    Top = 108
     Width = 75
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 0
     Text = 'EnqDateEdit'
     OnExit = EnqDateEditExit
   end
   object ReqByDateEdit: TEdit
-    Left = 110
-    Top = 128
+    Left = 124
+    Top = 140
     Width = 75
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 1
     Text = 'ReqByDateEdit'
@@ -138,7 +138,7 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
   end
   object OKBitBtn: TBitBtn
     Left = 170
-    Top = 171
+    Top = 187
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -166,7 +166,7 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 250
-    Top = 171
+    Top = 187
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -174,7 +174,7 @@ object PBPOToEnqFrm: TPBPOToEnqFrm
     TabOrder = 3
   end
   object QtyGrid: TStringGrid
-    Left = 392
+    Left = 421
     Top = 8
     Width = 89
     Height = 145

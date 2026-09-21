@@ -3,23 +3,23 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
   Top = 93
   BorderStyle = bsDialog
   Caption = 'Product Bins'
-  ClientHeight = 395
-  ClientWidth = 541
+  ClientHeight = 405
+  ClientWidth = 555
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object StoreLabel: TLabel
     Left = 8
     Top = 8
-    Width = 54
-    Height = 13
+    Width = 62
+    Height = 17
     Caption = 'StoreLabel'
   end
   object BinsListView: TListView
@@ -30,7 +30,7 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     Columns = <>
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     IconOptions.AutoArrange = True
@@ -103,8 +103,8 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     object Label1: TLabel
       Left = 32
       Top = 25
-      Width = 91
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Can'#39't pick, empty.'
     end
     object Image2: TImage
@@ -116,8 +116,8 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     object Label2: TLabel
       Left = 32
       Top = 46
-      Width = 84
-      Height = 13
+      Width = 95
+      Height = 17
       Caption = 'Can pick, empty.'
     end
     object Image3: TImage
@@ -129,8 +129,8 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     object Label3: TLabel
       Left = 32
       Top = 66
-      Width = 108
-      Height = 13
+      Width = 120
+      Height = 17
       Caption = 'Can'#39't pick, has stock.'
     end
     object Image4: TImage
@@ -142,8 +142,8 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     object Label4: TLabel
       Left = 32
       Top = 86
-      Width = 98
-      Height = 13
+      Width = 110
+      Height = 17
       Caption = 'Can pick, has stock'
     end
   end

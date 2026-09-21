@@ -7,7 +7,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pgcntrlSupplier: TPageControl
     Left = 0
     Top = 0
@@ -34,7 +34,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         Height = 503
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
@@ -43,12 +43,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label1: TLabel
           Left = 16
           Top = 17
-          Width = 31
-          Height = 13
+          Width = 36
+          Height = 17
           Caption = 'Name'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -56,12 +56,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label5: TLabel
           Left = 16
           Top = 44
-          Width = 41
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -69,12 +69,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label7: TLabel
           Left = 16
           Top = 141
-          Width = 47
-          Height = 13
+          Width = 54
+          Height = 17
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -82,12 +82,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label8: TLabel
           Left = 16
           Top = 165
-          Width = 34
-          Height = 13
+          Width = 39
+          Height = 17
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -95,12 +95,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label9: TLabel
           Left = 16
           Top = 189
-          Width = 17
-          Height = 13
+          Width = 19
+          Height = 17
           Caption = 'Fax'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -108,12 +108,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label10: TLabel
           Left = 16
           Top = 212
-          Width = 27
-          Height = 13
+          Width = 31
+          Height = 17
           Caption = 'Email'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -121,12 +121,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label11: TLabel
           Left = 16
           Top = 265
-          Width = 72
-          Height = 13
+          Width = 81
+          Height = 17
           Caption = 'Account Code'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -134,12 +134,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label15: TLabel
           Left = 16
           Top = 239
-          Width = 46
-          Height = 13
+          Width = 55
+          Height = 17
           Caption = 'Discount'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -147,12 +147,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label2: TLabel
           Left = 280
           Top = 239
-          Width = 43
-          Height = 13
+          Width = 52
+          Height = 17
           Caption = 'Intrastat'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -161,27 +161,27 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label3: TLabel
           Left = 16
           Top = 326
-          Width = 38
-          Height = 13
+          Width = 44
+          Height = 17
           Caption = 'VAT Ref'
         end
         object Label4: TLabel
           Left = 280
           Top = 265
-          Width = 45
-          Height = 13
+          Width = 51
+          Height = 17
           Caption = 'Currency'
           Visible = False
         end
         object Label6: TLabel
           Left = 16
           Top = 356
-          Width = 66
-          Height = 13
+          Width = 81
+          Height = 17
           Caption = 'Def VAT Rate'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -189,12 +189,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label12: TLabel
           Left = 16
           Top = 116
-          Width = 51
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Town/City'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -202,27 +202,27 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label18: TLabel
           Left = 248
           Top = 208
-          Width = 39
-          Height = 13
+          Width = 45
+          Height = 17
           Caption = 'Label18'
         end
         object Label19: TLabel
           Left = 16
           Top = 292
-          Width = 38
-          Height = 13
+          Width = 43
+          Height = 17
           Caption = 'Courier'
         end
         object Label25: TLabel
           Tag = 100
           Left = 15
           Top = 397
-          Width = 75
-          Height = 13
+          Width = 88
+          Height = 17
           Caption = 'Payment Terms'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -231,7 +231,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 112
           Width = 350
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 4
           Text = 'TownEdit'
@@ -241,7 +241,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 15
           Width = 350
-          Height = 21
+          Height = 25
           MaxLength = 100
           TabOrder = 0
           Text = 'NameEdit'
@@ -258,7 +258,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Caption = 'Supplier is Active'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -299,7 +299,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 40
           Width = 350
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 1
           Text = 'BuildingEdit'
@@ -309,7 +309,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 64
           Width = 350
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 2
           Text = 'StreetEdit'
@@ -319,7 +319,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 88
           Width = 350
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 3
           Text = 'LocaleEdit'
@@ -329,7 +329,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 160
           Width = 139
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 6
           Text = 'PhoneEdit'
@@ -339,7 +339,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 184
           Width = 139
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 7
           Text = 'FaxEdit'
@@ -348,7 +348,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 208
           Width = 350
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 8
           Text = 'EMailEdit'
@@ -357,7 +357,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 136
           Width = 115
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 10
           TabOrder = 5
@@ -368,7 +368,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 261
           Width = 115
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 8
           TabOrder = 10
@@ -391,7 +391,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 320
           Width = 219
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 16
           Text = 'VATRefEdit'
@@ -400,7 +400,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 360
           Top = 235
           Width = 115
-          Height = 21
+          Height = 25
           KeyField = 'Intrastat_Id'
           ListField = 'Intrastat_Id_Descr'
           TabOrder = 11
@@ -411,7 +411,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 360
           Top = 261
           Width = 113
-          Height = 21
+          Height = 25
           KeyField = 'Currency_Code'
           ListField = 'Currency_Code_Descr'
           TabOrder = 12
@@ -421,7 +421,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 352
           Width = 195
-          Height = 21
+          Height = 25
           KeyField = 'Vat_Code'
           ListField = 'Description'
           TabOrder = 17
@@ -429,14 +429,14 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         end
         object VatMaintBitBtn: TBitBtn
           Left = 316
-          Top = 351
+          Top = 353
           Width = 25
           Height = 23
           Hint = 'Vat Code Maintenance'
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -449,7 +449,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 288
           Width = 193
-          Height = 21
+          Height = 25
           KeyField = 'Courier'
           ListField = 'Courier_Name'
           TabOrder = 13
@@ -457,7 +457,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         end
         object btnCourierClear: TBitBtn
           Left = 352
-          Top = 287
+          Top = 289
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -480,7 +480,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         end
         object VatBitBtn: TBitBtn
           Left = 352
-          Top = 351
+          Top = 353
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -503,13 +503,13 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         end
         object btnLUCouriers: TBitBtn
           Left = 316
-          Top = 287
+          Top = 289
           Width = 25
           Height = 23
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -523,21 +523,21 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 112
           Top = 393
           Width = 195
-          Height = 21
+          Height = 25
           KeyField = 'Payment_terms'
           ListField = 'Payment_terms_description'
           TabOrder = 20
         end
         object btnTerms: TBitBtn
           Left = 316
-          Top = 392
+          Top = 394
           Width = 25
           Height = 23
           Hint = 'Vat Code Maintenance'
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -548,7 +548,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         end
         object BitBtn2: TBitBtn
           Left = 352
-          Top = 392
+          Top = 394
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -582,13 +582,13 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         Left = 0
         Top = 0
         Width = 519
-        Height = 460
+        Height = 517
         Align = alClient
         DataSource = dtmdlCustomers.dtsDocuments
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -631,12 +631,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label13: TLabel
           Left = 16
           Top = 36
-          Width = 21
-          Height = 13
+          Width = 25
+          Height = 17
           Caption = 'EAN'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -644,12 +644,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label14: TLabel
           Left = 16
           Top = 68
-          Width = 65
-          Height = 13
+          Width = 72
+          Height = 17
           Caption = 'Our Account'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -657,12 +657,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label16: TLabel
           Left = 16
           Top = 100
-          Width = 49
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Password'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -670,12 +670,12 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         object Label17: TLabel
           Left = 16
           Top = 164
-          Width = 42
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Site URL'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -684,7 +684,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 96
           Top = 32
           Width = 193
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 0
           Text = 'edtEan'
@@ -693,7 +693,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 96
           Top = 64
           Width = 193
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 1
           Text = 'edtOurAccount'
@@ -702,7 +702,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 96
           Top = 96
           Width = 193
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 2
           Text = 'edtPassword'
@@ -711,7 +711,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 328
           Top = 24
           Width = 121
-          Height = 97
+          Height = 105
           Caption = 'Transfer Protocol'
           ItemIndex = 3
           Items.Strings = (
@@ -726,7 +726,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
           Left = 96
           Top = 160
           Width = 345
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 4
           Text = 'edtSiteURL'
@@ -745,7 +745,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         DrawingStyle = gdsGradient
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -753,7 +753,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
         TabOrder = 0
         TitleFont.Charset = ANSI_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -13
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = dbgChargesDblClick
@@ -860,15 +860,17 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 540
+    ExplicitWidth = 521
     object DelLabel: TLabel
       Left = 216
-      Top = 20
-      Width = 109
-      Height = 13
-      Caption = 'Delete these details ?'
+      Top = 17
+      Width = 122
+      Height = 17
+      Caption = 'Delete these details'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -1040,6 +1042,8 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     Width = 527
     Height = 19
     Panels = <>
+    ExplicitTop = 595
+    ExplicitWidth = 521
   end
   object FlashTimer: TTimer
     Enabled = False
@@ -1053,8 +1057,8 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     Top = 176
   end
   object pmnuDocuments: TPopupMenu
-    Left = 206
-    Top = 150
+    Left = 214
+    Top = 110
     object Add1: TMenuItem
       Caption = 'Add'
       OnClick = Add1Click
@@ -1089,7 +1093,7 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     end
   end
   object svDlgOfficeDoc: TSaveDialog
-    Left = 345
-    Top = 238
+    Left = 281
+    Top = 70
   end
 end

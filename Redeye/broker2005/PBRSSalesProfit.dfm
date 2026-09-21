@@ -8,14 +8,14 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlCust: TPanel
     Left = 288
     Top = 0
@@ -26,15 +26,15 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     object Label3: TLabel
       Left = 16
       Top = 56
-      Width = 81
-      Height = 13
+      Width = 95
+      Height = 17
       Caption = 'Customer Name'
     end
     object edtCust: TEdit
       Left = 16
       Top = 72
       Width = 201
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -85,16 +85,16 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Visible = False
       object lblCustBran: TLabel
         Left = 8
-        Top = 8
-        Width = 52
-        Height = 13
+        Top = 4
+        Width = 62
+        Height = 17
         Caption = 'Rep Name'
       end
       object edtRep: TEdit
         Left = 8
         Top = 24
         Width = 209
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -123,6 +123,8 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 184
+    ExplicitWidth = 554
     object btnPreview: TBitBtn
       Left = 110
       Top = 8
@@ -191,21 +193,21 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     object Label1: TLabel
       Left = 16
       Top = 124
-      Width = 20
-      Height = 13
+      Width = 25
+      Height = 17
       Caption = 'Year'
     end
     object Label2: TLabel
       Left = 16
       Top = 156
-      Width = 33
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Period'
     end
     object rdgrpReportType: TRadioGroup
       Left = 16
       Top = 8
-      Width = 225
+      Width = 241
       Height = 105
       Caption = 'Report type'
       ItemIndex = 0
@@ -222,7 +224,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Left = 64
       Top = 120
       Width = 97
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'cmbYear'
       OnChange = EnableOK
@@ -232,7 +234,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Left = 64
       Top = 152
       Width = 177
-      Height = 21
+      Height = 25
       KeyField = 'Period'
       ListField = 'Description'
       ListSource = dtsPeriods
@@ -242,8 +244,8 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   end
   object qrySalesProfit: TFDQuery
     ConnectionName = 'PB'
-    Left = 312
-    Top = 104
+    Left = 182
+    Top = 18
   end
   object qryPeriods: TFDQuery
     ConnectionName = 'PB'
@@ -252,8 +254,8 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       'from Period'
       'where Period_Year = :Period_Year'
       'order by period DESC')
-    Left = 272
-    Top = 104
+    Left = 132
+    Top = 18
     ParamData = <
       item
         Name = 'Period_Year'
@@ -262,7 +264,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   end
   object dtsPeriods: TDataSource
     DataSet = qryPeriods
-    Left = 360
-    Top = 104
+    Left = 242
+    Top = 18
   end
 end

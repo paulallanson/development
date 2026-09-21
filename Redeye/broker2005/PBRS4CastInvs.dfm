@@ -3,21 +3,21 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
   Top = 137
   BorderStyle = bsDialog
   Caption = 'Anticipated Invoicing Report'
-  ClientHeight = 272
-  ClientWidth = 597
+  ClientHeight = 291
+  ClientWidth = 621
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
     Left = 304
-    Top = 240
+    Top = 258
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -40,7 +40,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 216
-    Top = 240
+    Top = 258
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -72,15 +72,15 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -102,7 +102,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 240
+    Top = 258
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -120,22 +120,22 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'To: '
     end
     object edtDateFrom: TEdit
       Left = 48
       Top = 24
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtDateFromExit
     end
@@ -165,7 +165,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
       Left = 48
       Top = 56
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtDateToExit
     end
@@ -217,15 +217,15 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -286,7 +286,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
   object TotByRadioGroup: TRadioGroup
     Left = 480
     Top = 8
-    Width = 105
+    Width = 121
     Height = 65
     Caption = 'Report Totals'
     ItemIndex = 0

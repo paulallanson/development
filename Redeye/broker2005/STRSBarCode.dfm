@@ -3,24 +3,24 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Print Barcode Labels'
-  ClientHeight = 182
-  ClientWidth = 433
+  ClientHeight = 200
+  ClientWidth = 439
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Label7: TLabel
     Left = 16
     Top = 16
-    Width = 62
-    Height = 13
+    Width = 68
+    Height = 17
     Caption = 'Warehouse:'
   end
   object rdgrpLabelType: TRadioGroup
@@ -31,7 +31,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Caption = 'Label Type'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -45,10 +45,10 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     OnClick = rdgrpLabelTypeClick
   end
   object dblkpWarehouse: TDBLookupComboBox
-    Left = 88
+    Left = 92
     Top = 12
     Width = 161
-    Height = 21
+    Height = 25
     KeyField = 'Part_Store'
     ListField = 'Part_Store_Name'
     ListSource = dtsWH
@@ -61,7 +61,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -78,7 +78,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -108,7 +108,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -140,22 +140,22 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 24
       Top = 56
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtPalletFrom: TEdit
       Left = 72
       Top = 20
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EnablePrint
       OnKeyPress = edtPalletFromKeyPress
@@ -164,14 +164,14 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       Left = 72
       Top = 52
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = EnablePrint
       OnKeyPress = edtPalletToKeyPress
     end
   end
   object grpbxBinRange: TGroupBox
-    Left = 216
+    Left = 200
     Top = 48
     Width = 217
     Height = 85
@@ -181,15 +181,15 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     object Label3: TLabel
       Left = 24
       Top = 24
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label4: TLabel
       Left = 24
       Top = 56
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object btnBinFrom: TSpeedButton
@@ -230,7 +230,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       Left = 72
       Top = 20
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = EnablePrint
@@ -239,15 +239,15 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       Left = 72
       Top = 52
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
       OnChange = EnablePrint
     end
   end
   object grpbxNewPallets: TGroupBox
-    Left = 198
-    Top = 88
+    Left = 200
+    Top = 48
     Width = 217
     Height = 85
     Caption = 'New Pallets labels'
@@ -256,22 +256,22 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     object Label5: TLabel
       Left = 24
       Top = 24
-      Width = 75
-      Height = 13
+      Width = 87
+      Height = 17
       Caption = 'Next Pallet No.'
     end
     object Label6: TLabel
       Left = 24
       Top = 53
-      Width = 88
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Number of labels'
     end
     object edtPalletID: TEdit
       Left = 112
       Top = 20
       Width = 89
-      Height = 21
+      Height = 25
       Enabled = False
       ReadOnly = True
       TabOrder = 0
@@ -281,7 +281,7 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       Left = 112
       Top = 48
       Width = 60
-      Height = 22
+      Height = 27
       MaxValue = 0
       MinValue = 0
       TabOrder = 1
@@ -294,8 +294,8 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       'select * '
       'from Part_Store'
       'order by Part_Store_Name')
-    Left = 352
-    Top = 8
+    Left = 280
+    Top = 10
   end
   object dtsWH: TDataSource
     DataSet = qryWarehouse

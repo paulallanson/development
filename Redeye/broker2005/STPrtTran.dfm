@@ -2,14 +2,14 @@ object STPrtTranFrm: TSTPrtTranFrm
   Left = 16
   Top = 126
   Caption = 'Product Transfers'
-  ClientHeight = 379
-  ClientWidth = 734
+  ClientHeight = 380
+  ClientWidth = 804
   Color = clBtnFace
   Constraints.MinHeight = 418
   Constraints.MinWidth = 750
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,7 +18,7 @@ object STPrtTranFrm: TSTPrtTranFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object ToDataTreeView: TTreeView
     Left = 424
     Top = 280
@@ -31,30 +31,31 @@ object STPrtTranFrm: TSTPrtTranFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 734
+    Width = 804
     Height = 89
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 1
     object Label3: TLabel
       Left = 16
       Top = 62
-      Width = 81
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'Movement Date'
     end
     object QtyLabel: TLabel
       Left = 256
       Top = 62
-      Width = 148
-      Height = 13
+      Width = 169
+      Height = 17
       Caption = 'Quantity To Move (in singles)'
     end
     object MovedLabel: TLabel
-      Left = 520
+      Left = 535
       Top = 62
-      Width = 140
-      Height = 13
+      Width = 159
+      Height = 17
       Caption = 'Quantity Moved (in singles)'
     end
     object GRNGroupBox: TGroupBox
@@ -67,29 +68,29 @@ object STPrtTranFrm: TSTPrtTranFrm
       object Label1: TLabel
         Left = 8
         Top = 16
-        Width = 48
-        Height = 13
+        Width = 57
+        Height = 17
         Caption = 'Order No'
       end
       object Label4: TLabel
         Left = 184
         Top = 16
-        Width = 26
-        Height = 13
+        Width = 30
+        Height = 17
         Caption = 'From'
       end
       object Label5: TLabel
         Left = 528
         Top = 16
-        Width = 23
-        Height = 13
+        Width = 27
+        Height = 17
         Caption = 'GRN'
       end
       object PORefEdit: TEdit
         Left = 88
         Top = 16
         Width = 81
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -97,7 +98,7 @@ object STPrtTranFrm: TSTPrtTranFrm
         Left = 240
         Top = 16
         Width = 273
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 1
       end
@@ -105,43 +106,43 @@ object STPrtTranFrm: TSTPrtTranFrm
         Left = 560
         Top = 16
         Width = 145
-        Height = 21
+        Height = 25
         MaxLength = 20
         TabOrder = 2
       end
     end
     object PartGroupBox: TGroupBox
-      Left = 8
-      Top = 4
-      Width = 725
+      Left = 9
+      Top = 3
+      Width = 783
       Height = 49
       ParentBackground = False
       TabOrder = 1
       object Label2: TLabel
         Left = 8
         Top = 20
-        Width = 70
-        Height = 13
+        Width = 80
+        Height = 17
         Caption = 'Product Code'
       end
       object Label8: TLabel
-        Left = 344
+        Left = 365
         Top = 20
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object PartEdit: TEdit
-        Left = 88
+        Left = 95
         Top = 16
         Width = 201
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
       object PartBitBtn: TBitBtn
-        Left = 300
-        Top = 14
+        Left = 307
+        Top = 16
         Width = 25
         Height = 25
         Caption = '...'
@@ -149,24 +150,24 @@ object STPrtTranFrm: TSTPrtTranFrm
         OnClick = PartBitBtnClick
       end
       object PartDescrEdit: TEdit
-        Left = 408
+        Left = 440
         Top = 16
         Width = 301
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 2
       end
     end
     object DateEdit: TEdit
-      Left = 108
+      Left = 118
       Top = 58
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 2
     end
     object DateBitBtn: TBitBtn
       Left = 204
-      Top = 56
+      Top = 58
       Width = 25
       Height = 25
       Caption = '...'
@@ -174,8 +175,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       OnClick = DateBitBtnClick
     end
     object QtyMemo: TMemo
-      Left = 400
-      Top = 56
+      Left = 429
+      Top = 58
       Width = 81
       Height = 25
       Alignment = taRightJustify
@@ -186,8 +187,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       OnKeyPress = QtyMemoKeyPress
     end
     object MovedMemo: TMemo
-      Left = 652
-      Top = 56
+      Left = 703
+      Top = 58
       Width = 81
       Height = 25
       Alignment = taRightJustify
@@ -202,14 +203,16 @@ object STPrtTranFrm: TSTPrtTranFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 338
-    Width = 734
+    Top = 339
+    Width = 804
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 330
+    ExplicitWidth = 732
     DesignSize = (
-      734
+      804
       41)
     object ToPart2Label: TLabel
       Left = 20
@@ -226,7 +229,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       AutoSize = False
     end
     object OKBitBtn: TBitBtn
-      Left = 484
+      Left = 548
       Top = 8
       Width = 75
       Height = 25
@@ -253,9 +256,10 @@ object STPrtTranFrm: TSTPrtTranFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 476
     end
     object CancelBitBtn: TBitBtn
-      Left = 564
+      Left = 628
       Top = 8
       Width = 75
       Height = 25
@@ -282,9 +286,10 @@ object STPrtTranFrm: TSTPrtTranFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 556
     end
     object CloseBitBtn: TBitBtn
-      Left = 644
+      Left = 708
       Top = 8
       Width = 75
       Height = 25
@@ -293,28 +298,32 @@ object STPrtTranFrm: TSTPrtTranFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = OKBitBtnClick
+      ExplicitLeft = 636
     end
   end
   object pnlCentre: TPanel
     Left = 0
     Top = 89
-    Width = 734
-    Height = 249
+    Width = 804
+    Height = 250
     Align = alClient
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 732
+    ExplicitHeight = 241
     object pnlCentreLeft: TPanel
       Left = 1
       Top = 1
       Width = 370
-      Height = 247
+      Height = 248
       Align = alLeft
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 239
       DesignSize = (
         370
-        247)
+        248)
       object FromGroupBox: TGroupBox
         Left = 8
         Top = 8
@@ -324,31 +333,31 @@ object STPrtTranFrm: TSTPrtTranFrm
         Caption = 'Move From'
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 237
         DesignSize = (
           358
           246)
         object FromStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 27
-          Height = 13
+          Width = 31
+          Height = 17
           Caption = 'Store'
         end
         object FromDetsLabel: TLabel
           Left = 12
           Top = 56
-          Width = 52
-          Height = 13
+          Width = 60
+          Height = 17
           Caption = 'From Dets'
         end
         object FromStoreDBLookupComboBox: TDBLookupComboBox
           Left = 48
           Top = 24
           Width = 193
-          Height = 21
+          Height = 25
           KeyField = 'Part_Store'
           ListField = 'Part_Store_Name'
-          ListSource = STStockDataMod.StoresDataSource
           TabOrder = 0
           OnClick = FromStoreDBLookupComboBoxClick
         end
@@ -362,7 +371,7 @@ object STPrtTranFrm: TSTPrtTranFrm
           DragMode = dmAutomatic
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = []
           Indent = 19
@@ -371,67 +380,71 @@ object STPrtTranFrm: TSTPrtTranFrm
           OnChange = FromTreeViewChange
           OnDblClick = FromTreeViewDblClick
           OnStartDrag = FromTreeViewStartDrag
+          ExplicitHeight = 145
         end
       end
     end
     object pnlCentreRight: TPanel
       Left = 371
       Top = 1
-      Width = 362
-      Height = 247
+      Width = 432
+      Height = 248
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 360
+      ExplicitHeight = 239
       DesignSize = (
-        362
-        247)
+        432
+        248)
       object ToGroupBox: TGroupBox
         Left = 4
         Top = 8
-        Width = 352
+        Width = 416
         Height = 246
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move To'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 344
+        ExplicitHeight = 237
         DesignSize = (
-          352
+          416
           246)
         object ToStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 27
-          Height = 13
+          Width = 31
+          Height = 17
           Caption = 'Store'
         end
         object ToDetsLabel: TLabel
           Left = 12
           Top = 56
-          Width = 38
-          Height = 13
+          Width = 44
+          Height = 17
           Caption = 'To Dets'
         end
         object ToStoreDBLookupComboBox: TDBLookupComboBox
           Left = 48
           Top = 24
           Width = 193
-          Height = 21
+          Height = 25
           KeyField = 'Part_Store'
           ListField = 'Part_Store_Name'
-          ListSource = STStockDataMod.StoresDataSource
           TabOrder = 0
           OnClick = ToStoreDBLookupComboBoxClick
         end
         object ToTreeView: TTreeView
           Left = 8
           Top = 74
-          Width = 333
+          Width = 397
           Height = 154
           Anchors = [akLeft, akTop, akRight, akBottom]
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = []
           Indent = 19
@@ -441,6 +454,8 @@ object STPrtTranFrm: TSTPrtTranFrm
           OnDragDrop = ToTreeViewDragDrop
           OnDragOver = ToTreeViewDragOver
           OnStartDrag = ToTreeViewStartDrag
+          ExplicitWidth = 325
+          ExplicitHeight = 145
         end
       end
     end
@@ -888,8 +903,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       ' '
       ' '
       ' ')
-    Left = 180
-    Top = 244
+    Left = 225
+    Top = 241
     ParamData = <
       item
         Name = 'Purch_Ord'
@@ -1002,8 +1017,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       ' '
       ' '
       ' ')
-    Left = 216
-    Top = 260
+    Left = 270
+    Top = 245
     ParamData = <
       item
         Name = 'Part'
@@ -1028,8 +1043,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       ' '
       ' '
       ' ')
-    Left = 104
-    Top = 252
+    Left = 106
+    Top = 243
     ParamData = <
       item
         Name = 'Purch_Ord'
@@ -1050,8 +1065,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       ' '
       ' '
       ' ')
-    Left = 256
-    Top = 228
+    Left = 304
+    Top = 189
     ParamData = <
       item
         Name = 'Part_Status'
@@ -1075,8 +1090,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       ' '
       ' '
       ' ')
-    Left = 152
-    Top = 252
+    Left = 166
+    Top = 235
     ParamData = <
       item
         Name = 'Purch_Ord'

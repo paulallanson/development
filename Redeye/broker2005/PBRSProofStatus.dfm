@@ -9,39 +9,42 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -13
   Font.Name = 'Arial'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 15
+  TextHeight = 16
   object pnlDisplay: TPanel
     Left = 0
-    Top = 169
+    Top = 201
     Width = 712
-    Height = 286
+    Height = 254
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 169
+    ExplicitWidth = 706
+    ExplicitHeight = 277
     object dbgrdProofStatus: TDBGrid
       Left = 1
       Top = 1
       Width = 710
-      Height = 284
+      Height = 252
       Align = alClient
       DataSource = dtsrcCurrentProofStatus
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
     end
@@ -50,61 +53,61 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     Left = 0
     Top = 0
     Width = 712
-    Height = 169
+    Height = 201
     Align = alTop
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
       712
-      169)
+      201)
     object Label3: TLabel
       Left = 8
-      Top = 126
-      Width = 57
-      Height = 14
+      Top = 144
+      Width = 67
+      Height = 16
       Caption = 'Sort first by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
     end
     object Label4: TLabel
       Left = 160
-      Top = 126
-      Width = 58
-      Height = 14
+      Top = 144
+      Width = 69
+      Height = 16
       Caption = 'then sort by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
     end
     object Label5: TLabel
       Left = 312
-      Top = 126
-      Width = 86
-      Height = 14
+      Top = 144
+      Width = 102
+      Height = 16
       Caption = 'and finally sort by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
     end
     object rgCustomer: TRadioGroup
       Left = 6
-      Top = 65
-      Width = 113
-      Height = 58
+      Top = 72
+      Width = 135
+      Height = 65
       Caption = 'By Customer'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ItemIndex = 0
@@ -117,8 +120,8 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
-      Left = 126
-      Top = 66
+      Left = 147
+      Top = 80
       Width = 329
       Height = 57
       ParentBackground = False
@@ -127,12 +130,12 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 90
-        Height = 14
+        Width = 109
+        Height = 16
         Caption = 'Customer / Branch'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -141,7 +144,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Left = 8
         Top = 24
         Width = 257
-        Height = 23
+        Height = 24
         Enabled = False
         TabOrder = 0
       end
@@ -153,7 +156,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Caption = '...'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -162,8 +165,8 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       end
     end
     object pnlStatusSelect: TPanel
-      Left = 542
-      Top = 4
+      Left = 536
+      Top = 12
       Width = 161
       Height = 57
       Anchors = [akTop, akRight]
@@ -172,12 +175,12 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       object Label1: TLabel
         Left = 8
         Top = 8
-        Width = 31
-        Height = 14
+        Width = 38
+        Height = 16
         Caption = 'Status'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -186,7 +189,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Left = 8
         Top = 24
         Width = 145
-        Height = 23
+        Height = 24
         TabOrder = 0
         Text = 'In Studio'
         OnChange = cmbbxProofStatusChange
@@ -194,9 +197,9 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     end
     object cbSort1: TComboBox
       Left = 8
-      Top = 140
+      Top = 163
       Width = 145
-      Height = 23
+      Height = 24
       Style = csDropDownList
       TabOrder = 3
       OnChange = cbSortChange
@@ -211,9 +214,9 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     end
     object cbSort2: TComboBox
       Left = 160
-      Top = 140
+      Top = 163
       Width = 145
-      Height = 23
+      Height = 24
       Style = csDropDownList
       TabOrder = 4
       OnChange = cbSortChange
@@ -228,9 +231,9 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     end
     object cbSort3: TComboBox
       Left = 312
-      Top = 140
+      Top = 163
       Width = 145
-      Height = 23
+      Height = 24
       Style = csDropDownList
       TabOrder = 5
       OnChange = cbSortChange
@@ -246,12 +249,12 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     object rgSupplier: TRadioGroup
       Left = 6
       Top = 4
-      Width = 113
-      Height = 58
+      Width = 135
+      Height = 65
       Caption = 'By Supplier'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ItemIndex = 0
@@ -264,8 +267,8 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       OnClick = rgSupplierClick
     end
     object pnlSuppSearch: TPanel
-      Left = 126
-      Top = 4
+      Left = 147
+      Top = 12
       Width = 329
       Height = 57
       ParentBackground = False
@@ -274,12 +277,12 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       object Label2: TLabel
         Left = 8
         Top = 8
-        Width = 83
-        Height = 14
+        Width = 100
+        Height = 16
         Caption = 'Supplier / Branch'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -288,7 +291,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Left = 8
         Top = 24
         Width = 257
-        Height = 23
+        Height = 24
         Enabled = False
         TabOrder = 0
       end
@@ -300,7 +303,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Caption = '...'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -317,24 +320,32 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     Align = alBottom
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 446
+    ExplicitWidth = 706
     object lblRecordCount: TLabel
       Left = 104
       Top = 16
-      Width = 3
-      Height = 13
+      Width = 4
+      Height = 17
     end
     object Label6: TLabel
       Left = 24
-      Top = 16
-      Width = 74
-      Height = 13
+      Top = 12
+      Width = 83
+      Height = 17
       Caption = 'Record Count:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
     end
     object Panel1: TPanel
       Left = 479
@@ -345,12 +356,18 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 473
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
         Width = 75
         Height = 25
         Caption = 'Preview'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -365,6 +382,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        ParentFont = False
         TabOrder = 0
         OnClick = PreviewReportBitBtnClick
       end
@@ -374,6 +392,11 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Width = 75
         Height = 25
         Caption = 'Print'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -388,6 +411,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        ParentFont = False
         TabOrder = 1
         OnClick = PrintReportBitBtnClick
       end
@@ -397,8 +421,14 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Top = 8
       Width = 75
       Height = 25
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
+      ParentFont = False
       TabOrder = 1
     end
   end

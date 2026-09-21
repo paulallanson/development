@@ -2,34 +2,34 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
   Left = 206
   Top = 155
   Caption = 'Maintain Production Location'
-  ClientHeight = 307
-  ClientWidth = 418
+  ClientHeight = 324
+  ClientWidth = 454
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 112
-    Top = 286
-    Width = 133
-    Height = 13
+    Left = 110
+    Top = 289
+    Width = 160
+    Height = 17
     Caption = 'Delete the above details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
     Left = 263
-    Top = 279
+    Top = 286
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -105,7 +105,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 342
-    Top = 279
+    Top = 286
     Width = 75
     Height = 25
     Cancel = True
@@ -187,7 +187,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -196,12 +196,12 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     object Label2: TLabel
       Left = 16
       Top = 22
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -209,12 +209,12 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     object Label3: TLabel
       Left = 16
       Top = 46
-      Width = 41
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Address'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -222,12 +222,12 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     object Label7: TLabel
       Left = 16
       Top = 145
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -235,22 +235,22 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
     object Label1: TLabel
       Left = 16
       Top = 208
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Warehouse'
     end
     object Label4: TLabel
       Left = 16
       Top = 235
-      Width = 16
-      Height = 13
+      Width = 17
+      Height = 17
       Caption = 'Bin'
     end
     object NameEdit: TEdit
       Left = 92
       Top = 18
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'NameEdit'
@@ -260,7 +260,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Left = 92
       Top = 42
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'BuildingEdit'
@@ -269,7 +269,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Left = 92
       Top = 67
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
       Text = '0123456789012345678901234567890123456789'
@@ -278,7 +278,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Left = 92
       Top = 92
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 3
       Text = 'LocaleEdit'
@@ -287,7 +287,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Left = 92
       Top = 117
       Width = 301
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 4
       Text = 'TownEdit'
@@ -296,7 +296,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Left = 92
       Top = 142
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 10
       TabOrder = 5
@@ -310,7 +310,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Caption = 'Notes        '
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -339,7 +339,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Caption = 'Deliv Narr'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -364,7 +364,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Left = 88
       Top = 204
       Width = 193
-      Height = 21
+      Height = 25
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
       ListSource = dtsWarehouse
@@ -374,7 +374,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       Left = 88
       Top = 231
       Width = 129
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 10
       ReadOnly = True
@@ -406,7 +406,7 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 8
-    Top = 279
+    Top = 286
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -509,8 +509,8 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       'Delete From Production_Location'
       'Where'
       '(Production_Location = :Production_location)')
-    Left = 48
-    Top = 104
+    Left = 244
+    Top = 122
     ParamData = <
       item
         Name = 'Production_location'
@@ -545,8 +545,8 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       ''
       ''
       ' ')
-    Left = 24
-    Top = 72
+    Left = 190
+    Top = 74
     ParamData = <
       item
         Name = 'GUID'
@@ -616,8 +616,8 @@ object PBMaintProductionLocFrm: TPBMaintProductionLocFrm
       'select *'
       'from Part_Store'
       'order by Part_Store_name')
-    Left = 312
-    Top = 212
+    Left = 400
+    Top = 36
   end
   object dtsWarehouse: TDataSource
     DataSet = qryWarehouse

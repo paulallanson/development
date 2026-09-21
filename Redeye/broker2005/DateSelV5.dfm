@@ -21,8 +21,8 @@ object DateSelV5Form: TDateSelV5Form
     Align = alClient
     Date = 36458.000000000000000000
     TabOrder = 0
-    ExplicitWidth = 219
-    ExplicitHeight = 151
+    ExplicitWidth = 272
+    ExplicitHeight = 231
   end
   object Panel1: TPanel
     Left = 0
@@ -32,13 +32,13 @@ object DateSelV5Form: TDateSelV5Form
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 151
-    ExplicitWidth = 219
+    ExplicitTop = 231
+    ExplicitWidth = 272
     DesignSize = (
       278
       33)
     object OKBitBtn: TBitBtn
-      Left = 192
+      Left = 186
       Top = 4
       Width = 75
       Height = 25
@@ -46,7 +46,7 @@ object DateSelV5Form: TDateSelV5Form
       Kind = bkOK
       NumGlyphs = 2
       TabOrder = 0
-      ExplicitLeft = 133
+      ExplicitLeft = 180
     end
     object CancelBitBtn: TBitBtn
       Left = 6

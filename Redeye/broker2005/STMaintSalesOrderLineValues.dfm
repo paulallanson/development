@@ -8,12 +8,12 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
@@ -22,34 +22,35 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 568
     object Label7: TLabel
       Left = 15
       Top = 12
-      Width = 73
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Product Code:'
     end
     object Label8: TLabel
       Left = 15
       Top = 40
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object edtProductCode: TEdit
-      Left = 112
-      Top = 8
+      Left = 128
+      Top = 9
       Width = 281
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
     end
     object edtDescription: TEdit
-      Left = 112
-      Top = 35
+      Left = 128
+      Top = 36
       Width = 361
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 1
@@ -63,36 +64,38 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 568
+    ExplicitHeight = 73
     object Label4: TLabel
       Left = 15
       Top = 20
-      Width = 50
-      Height = 13
+      Width = 58
+      Height = 17
       Caption = 'Cost Price'
     end
     object Label6: TLabel
       Left = 250
       Top = 20
-      Width = 72
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Cost Pack Size'
     end
     object Label5: TLabel
       Left = 250
       Top = 52
-      Width = 67
-      Height = 13
+      Width = 77
+      Height = 17
       Caption = 'Sell Pack Size'
     end
     object Label9: TLabel
       Left = 15
       Top = 52
-      Width = 45
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Sell Price'
     end
     object memPrice: TMemo
-      Left = 113
+      Left = 128
       Top = 47
       Width = 97
       Height = 21
@@ -106,7 +109,7 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       OnKeyPress = memPriceKeyPress
     end
     object memPackSize: TMemo
-      Left = 329
+      Left = 339
       Top = 47
       Width = 97
       Height = 21
@@ -119,7 +122,7 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       OnKeyPress = memPackSizeKeyPress
     end
     object memCostPackSize: TMemo
-      Left = 329
+      Left = 339
       Top = 16
       Width = 97
       Height = 21
@@ -132,7 +135,7 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       OnKeyPress = memCostPackSizeKeyPress
     end
     object memCost: TMemo
-      Left = 113
+      Left = 128
       Top = 16
       Width = 97
       Height = 21
@@ -154,11 +157,13 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 250
+    ExplicitWidth = 568
     DesignSize = (
       574
       41)
     object btnOK: TBitBtn
-      Left = 388
+      Left = 382
       Top = 8
       Width = 75
       Height = 25
@@ -186,9 +191,10 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 376
     end
     object BitBtn2: TBitBtn
-      Left = 476
+      Left = 470
       Top = 8
       Width = 75
       Height = 25
@@ -196,6 +202,7 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 464
     end
   end
   object Panel2: TPanel
@@ -206,30 +213,31 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 568
     object Label2: TLabel
       Left = 15
       Top = 80
-      Width = 90
-      Height = 13
+      Width = 100
+      Height = 17
       Caption = 'Quantity Invoiced'
     end
     object Label1: TLabel
       Left = 15
       Top = 16
-      Width = 90
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Quantity Ordered'
     end
     object Label3: TLabel
       Left = 15
       Top = 47
-      Width = 95
-      Height = 13
+      Width = 107
+      Height = 17
       Caption = 'Quantity Delivered'
     end
     object memInvoiced: TMemo
-      Left = 113
-      Top = 76
+      Left = 128
+      Top = 77
       Width = 97
       Height = 21
       TabOrder = 0
@@ -239,8 +247,8 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       OnKeyPress = memProducedKeyPress
     end
     object memQuantity: TMemo
-      Left = 113
-      Top = 12
+      Left = 128
+      Top = 13
       Width = 97
       Height = 21
       Color = clBtnFace
@@ -250,8 +258,8 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       WordWrap = False
     end
     object memProduced: TMemo
-      Left = 113
-      Top = 43
+      Left = 128
+      Top = 44
       Width = 97
       Height = 21
       TabOrder = 2

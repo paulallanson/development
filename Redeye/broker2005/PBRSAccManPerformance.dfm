@@ -7,14 +7,14 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlFooter: TPanel
     Left = 0
     Top = 384
@@ -23,11 +23,13 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 375
+    ExplicitWidth = 908
     DesignSize = (
       914
       41)
     object btnClose: TButton
-      Left = 814
+      Left = 808
       Top = 8
       Width = 75
       Height = 25
@@ -35,9 +37,10 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
       Caption = 'Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 802
     end
     object btnExcel: TBitBtn
-      Left = 710
+      Left = 704
       Top = 8
       Width = 75
       Height = 25
@@ -89,6 +92,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
+      ExplicitLeft = 698
     end
   end
   object pnlHeader: TPanel
@@ -99,10 +103,11 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 908
     object rgAccMan: TRadioGroup
       Left = 8
       Top = 8
-      Width = 145
+      Width = 171
       Height = 65
       Caption = 'Selection'
       ItemIndex = 0
@@ -114,7 +119,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
       OnClick = rgAccManClick
     end
     object pnlAccMan: TPanel
-      Left = 158
+      Left = 182
       Top = 16
       Width = 329
       Height = 57
@@ -124,15 +129,15 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 123
-        Height = 13
+        Width = 142
+        Height = 17
         Caption = 'Account Manager Name'
       end
       object edtAccMan: TEdit
         Left = 8
         Top = 24
         Width = 257
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -163,7 +168,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -171,7 +176,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -287,6 +292,8 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Width = 914
     Height = 19
     Panels = <>
+    ExplicitTop = 416
+    ExplicitWidth = 908
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

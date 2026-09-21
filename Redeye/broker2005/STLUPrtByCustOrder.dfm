@@ -7,12 +7,12 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -22,6 +22,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 676
     object CoolBar1: TCoolBar
       Left = 0
       Top = 0
@@ -34,14 +35,15 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
           MinHeight = 43
           Width = 676
         end>
+      ExplicitWidth = 676
       object ToolBar2: TToolBar
         Left = 11
         Top = 0
         Width = 667
         Height = 43
         Align = alClient
-        ButtonHeight = 36
-        ButtonWidth = 49
+        ButtonHeight = 40
+        ButtonWidth = 57
         Caption = 'ToolBar2'
         HotImages = HotImageList2
         Images = CoolImageList2
@@ -55,7 +57,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
           OnClick = tlbtnSelectClick
         end
         object ToolButton1: TToolButton
-          Left = 49
+          Left = 57
           Top = 0
           Width = 8
           Caption = 'ToolButton1'
@@ -63,7 +65,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
           Style = tbsSeparator
         end
         object tlbtnClose: TToolButton
-          Left = 57
+          Left = 65
           Top = 0
           Caption = 'Close'
           ImageIndex = 2
@@ -80,25 +82,27 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 358
+    ExplicitWidth = 676
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 70
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object CodeEdit: TEdit
-      Left = 88
-      Top = 6
+      Left = 94
+      Top = 9
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = CodeEditChange
@@ -116,12 +120,13 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
         item
           Width = 50
         end>
+      ExplicitWidth = 674
     end
     object EdtDesc: TEdit
-      Left = 88
-      Top = 38
+      Left = 94
+      Top = 41
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 2
       OnChange = EdtDescChange
@@ -137,6 +142,8 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 676
+    ExplicitHeight = 312
     object PartsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -147,7 +154,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -155,7 +162,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDblClick = PartsDBGridDblClick

@@ -3,12 +3,12 @@ object StMovSlfrm: TStMovSlfrm
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Stock Movements selection screen'
-  ClientHeight = 290
-  ClientWidth = 519
+  ClientHeight = 325
+  ClientWidth = 531
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,9 +16,9 @@ object StMovSlfrm: TStMovSlfrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    519
-    290)
-  TextHeight = 13
+    531
+    325)
+  TextHeight = 17
   object OleContainer1: TOleContainer
     Left = 316
     Top = 204
@@ -40,8 +40,8 @@ object StMovSlfrm: TStMovSlfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -60,60 +60,60 @@ object StMovSlfrm: TStMovSlfrm
     Height = 153
     TabOrder = 4
     object Label1: TLabel
-      Left = 43
+      Left = 39
       Top = 21
-      Width = 49
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'From Part'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 33
+      Left = 31
       Top = 86
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Warehouse'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 53
+      Left = 55
       Top = 53
-      Width = 35
-      Height = 13
+      Width = 41
+      Height = 17
       Caption = 'To Part'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 16
+      Left = 3
       Top = 118
-      Width = 80
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'Movement Type'
     end
     object PartFromEdit: TEdit
       Left = 100
       Top = 17
       Width = 201
-      Height = 21
+      Height = 25
       TabStop = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -143,7 +143,7 @@ object StMovSlfrm: TStMovSlfrm
       Caption = 'Seq. By:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
@@ -158,15 +158,14 @@ object StMovSlfrm: TStMovSlfrm
       Left = 100
       Top = 82
       Width = 201
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
-      ListSource = STStockDataMod.StoresDataSource
       ParentFont = False
       TabOrder = 3
       OnClick = StoreDBLookupComboBoxClick
@@ -175,11 +174,11 @@ object StMovSlfrm: TStMovSlfrm
       Left = 100
       Top = 49
       Width = 201
-      Height = 21
+      Height = 25
       TabStop = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -205,10 +204,10 @@ object StMovSlfrm: TStMovSlfrm
       Left = 100
       Top = 114
       Width = 201
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       KeyField = 'Part_Movement_Type'
@@ -277,7 +276,7 @@ object StMovSlfrm: TStMovSlfrm
   end
   object PrintBitBtn: TBitBtn
     Left = 440
-    Top = 264
+    Top = 277
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -307,7 +306,7 @@ object StMovSlfrm: TStMovSlfrm
   end
   object BitBtn2: TBitBtn
     Left = 352
-    Top = 264
+    Top = 277
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -323,7 +322,7 @@ object StMovSlfrm: TStMovSlfrm
   end
   object BitBtn3: TBitBtn
     Left = 8
-    Top = 264
+    Top = 277
     Width = 75
     Height = 25
     Font.Charset = DEFAULT_CHARSET
@@ -344,7 +343,7 @@ object StMovSlfrm: TStMovSlfrm
     Caption = 'Date Range Selection'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -353,12 +352,12 @@ object StMovSlfrm: TStMovSlfrm
     object Label3: TLabel
       Left = 16
       Top = 29
-      Width = 53
-      Height = 13
+      Width = 61
+      Height = 17
       Caption = 'Date From'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -366,12 +365,12 @@ object StMovSlfrm: TStMovSlfrm
     object Label4: TLabel
       Left = 31
       Top = 61
-      Width = 39
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Date To'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -380,10 +379,10 @@ object StMovSlfrm: TStMovSlfrm
       Left = 96
       Top = 25
       Width = 105
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -397,7 +396,7 @@ object StMovSlfrm: TStMovSlfrm
       Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -425,7 +424,7 @@ object StMovSlfrm: TStMovSlfrm
       Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -450,10 +449,10 @@ object StMovSlfrm: TStMovSlfrm
       Left = 96
       Top = 57
       Width = 105
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -464,9 +463,9 @@ object StMovSlfrm: TStMovSlfrm
   end
   object GroupBox2: TGroupBox
     Left = 312
-    Top = 168
+    Top = 174
     Width = 201
-    Height = 88
+    Height = 82
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -477,13 +476,13 @@ object StMovSlfrm: TStMovSlfrm
     TabOrder = 5
     object ChkBxExcProd: TCheckBox
       Left = 9
-      Top = 56
+      Top = 44
       Width = 180
       Height = 25
       Caption = 'Exclude Products not in use'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -491,16 +490,22 @@ object StMovSlfrm: TStMovSlfrm
     end
     object chkbxExcludeCosts: TCheckBox
       Left = 8
-      Top = 32
+      Top = 20
       Width = 97
       Height = 17
       Caption = 'Exclude Costs'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
     end
   end
   object btnExcel: TBitBtn
-    Left = 254
-    Top = 264
+    Left = 260
+    Top = 277
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]

@@ -9,7 +9,7 @@ object STMaintPickFrm: TSTMaintPickFrm
   Constraints.MinWidth = 782
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -19,7 +19,7 @@ object STMaintPickFrm: TSTMaintPickFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -28,46 +28,47 @@ object STMaintPickFrm: TSTMaintPickFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 764
     object Label1: TLabel
       Left = 24
       Top = 41
-      Width = 60
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Picking List:'
     end
     object Label2: TLabel
       Left = 376
       Top = 8
-      Width = 30
-      Height = 13
+      Width = 34
+      Height = 17
       Caption = 'Store:'
     end
     object StoreNameLbl: TLabel
       Left = 416
       Top = 8
-      Width = 71
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'StoreNameLbl'
     end
     object Label3: TLabel
       Left = 24
       Top = 8
-      Width = 80
-      Height = 13
+      Width = 94
+      Height = 17
       Caption = 'Order Number: '
     end
     object LblOrderNo: TLabel
-      Left = 107
+      Left = 118
       Top = 8
-      Width = 60
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'LblOrderNo'
     end
     object cmbPickingNote: TComboBox
       Left = 104
       Top = 37
       Width = 169
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 0
       OnClick = cmbPickingNoteClick
@@ -81,12 +82,14 @@ object STMaintPickFrm: TSTMaintPickFrm
     Align = alRight
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 667
+    ExplicitHeight = 367
     DesignSize = (
       97
       376)
     object ConfirmBtn: TBitBtn
       Left = 14
-      Top = 309
+      Top = 290
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -114,7 +117,7 @@ object STMaintPickFrm: TSTMaintPickFrm
     end
     object BitBtn2: TBitBtn
       Left = 14
-      Top = 349
+      Top = 330
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -177,6 +180,8 @@ object STMaintPickFrm: TSTMaintPickFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 667
+    ExplicitHeight = 367
     object sgDetails: TStringGrid
       Left = 1
       Top = 1
@@ -197,6 +202,8 @@ object STMaintPickFrm: TSTMaintPickFrm
       OnDblClick = sgDetailsDblClick
       OnDrawCell = sgDetailsDrawCell
       OnSelectCell = sgDetailsSelectCell
+      ExplicitWidth = 665
+      ExplicitHeight = 365
       ColWidths = (
         123
         183

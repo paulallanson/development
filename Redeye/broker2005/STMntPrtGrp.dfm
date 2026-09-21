@@ -2,33 +2,33 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
   Left = 91
   Top = 141
   Caption = 'Maintain Product Groups'
-  ClientHeight = 150
+  ClientHeight = 166
   ClientWidth = 412
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 70
-    Top = 118
-    Width = 145
-    Height = 15
+    Top = 132
+    Width = 166
+    Height = 16
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
     Left = 246
-    Top = 118
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -104,7 +104,7 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 326
-    Top = 118
+    Top = 128
     Width = 75
     Height = 25
     Cancel = True
@@ -186,7 +186,7 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -195,12 +195,12 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
     object Label2: TLabel
       Left = 18
       Top = 64
-      Width = 60
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Short Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -208,30 +208,30 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
     object Label5: TLabel
       Left = 18
       Top = 27
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object ShortNameEdit: TEdit
-      Left = 115
+      Left = 98
       Top = 60
       Width = 140
-      Height = 21
+      Height = 25
       MaxLength = 12
       TabOrder = 1
       OnChange = ShortNameEditChange
     end
     object NameEdit: TEdit
-      Left = 115
-      Top = 33
+      Left = 98
+      Top = 24
       Width = 275
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       OnChange = NameEditChange
@@ -247,8 +247,8 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
       'Where'
       '(Part_Group = :Part_Group)'
       ' ')
-    Left = 232
-    Top = 56
+    Left = 234
+    Top = 38
     ParamData = <
       item
         Name = 'Part_Group_Descr_Short'
@@ -269,8 +269,8 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
       '(:Part_Group, :Part_Group_Descr_Short, :Part_Group_Descr)'
       ''
       ' ')
-    Left = 152
-    Top = 56
+    Left = 182
+    Top = 38
     ParamData = <
       item
         Name = 'Part_Group'
@@ -304,7 +304,7 @@ object STMntPrtGrpFrm: TSTMntPrtGrpFrm
       'From Part_Group'
       ' '
       ' ')
-    Left = 280
-    Top = 56
+    Left = 294
+    Top = 38
   end
 end

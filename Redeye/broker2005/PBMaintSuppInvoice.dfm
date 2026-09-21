@@ -10,14 +10,14 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   Constraints.MinWidth = 795
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object stbrDetails: TStatusBar
     Left = 0
     Top = 515
@@ -30,6 +30,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       item
         Width = 50
       end>
+    ExplicitTop = 506
+    ExplicitWidth = 777
   end
   object pnlBody: TPanel
     Left = 0
@@ -40,6 +42,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 777
+    ExplicitHeight = 506
     object pnlHeader: TPanel
       Left = 0
       Top = 0
@@ -48,46 +52,47 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Align = alTop
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 777
       object Label6: TLabel
         Left = 8
         Top = 8
-        Width = 68
-        Height = 13
+        Width = 77
+        Height = 17
         Caption = 'Invoice From:'
       end
       object Label7: TLabel
         Left = 8
         Top = 140
-        Width = 72
-        Height = 13
+        Width = 81
+        Height = 17
         Caption = 'Account Code'
       end
       object Label2: TLabel
         Left = 456
         Top = 78
-        Width = 63
-        Height = 13
+        Width = 71
+        Height = 17
         Caption = 'Invoice Date'
       end
       object Label3: TLabel
         Left = 456
         Top = 47
-        Width = 80
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Invoice Number'
       end
       object Label1: TLabel
         Left = 456
         Top = 109
-        Width = 71
-        Height = 13
+        Width = 82
+        Height = 17
         Caption = 'PIN Reference'
       end
       object Label9: TLabel
         Left = 456
         Top = 16
-        Width = 47
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Operator'
       end
       object memSupplier: TMemo
@@ -102,7 +107,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Left = 112
         Top = 132
         Width = 89
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 1
       end
@@ -128,7 +133,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Left = 571
         Top = 70
         Width = 97
-        Height = 21
+        Height = 25
         TabOrder = 3
         OnChange = CheckOK
         OnExit = edtInvoiceDateExit
@@ -137,7 +142,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Left = 571
         Top = 39
         Width = 201
-        Height = 21
+        Height = 25
         TabOrder = 4
         OnChange = edtInvNumberChange
       end
@@ -145,7 +150,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Left = 571
         Top = 101
         Width = 129
-        Height = 21
+        Height = 25
         TabOrder = 5
         OnChange = edtPINRefChange
       end
@@ -175,7 +180,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Left = 571
         Top = 8
         Width = 145
-        Height = 21
+        Height = 25
         KeyField = 'Operator'
         ListField = 'Name'
         ListSource = dmSupplierInvoice.dsOperator
@@ -185,7 +190,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Left = 571
         Top = 130
         Width = 129
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 8
@@ -194,8 +199,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       object lblOrigInvoice: TStaticText
         Left = 456
         Top = 136
-        Width = 85
-        Height = 17
+        Width = 94
+        Height = 21
         Caption = 'Original Invoice'
         TabOrder = 9
       end
@@ -215,6 +220,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       TabOrder = 1
       OnDblClick = sgLinesDblClick
       OnSelectCell = sgLinesSelectCell
+      ExplicitWidth = 777
+      ExplicitHeight = 170
       ColWidths = (
         40
         83
@@ -235,11 +242,13 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 331
+      ExplicitWidth = 777
       object Label10: TLabel
         Left = 4
-        Top = 8
-        Width = 81
-        Height = 13
+        Top = 3
+        Width = 92
+        Height = 17
         Caption = 'Sundry Charges'
       end
       object sgCharges: TStringGrid
@@ -271,22 +280,23 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 1
+        ExplicitLeft = 591
         DesignSize = (
           185
           121)
         object Label4: TLabel
           Left = 14
           Top = 34
-          Width = 34
-          Height = 13
+          Width = 39
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Goods'
         end
         object Label5: TLabel
-          Left = 17
+          Left = 14
           Top = 61
-          Width = 18
-          Height = 13
+          Width = 21
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'VAT'
@@ -294,8 +304,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         object Label8: TLabel
           Left = 14
           Top = 90
-          Width = 25
-          Height = 13
+          Width = 28
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total'
         end
@@ -351,11 +361,13 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 454
+      ExplicitWidth = 777
       DesignSize = (
         783
         52)
       object lblDeleteprompt: TLabel
-        Left = 440
+        Left = 459
         Top = 20
         Width = 117
         Height = 16
@@ -367,10 +379,9 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 456
       end
       object btnOK: TBitBtn
-        Left = 592
+        Left = 586
         Top = 16
         Width = 75
         Height = 25
@@ -397,9 +408,10 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         NumGlyphs = 2
         TabOrder = 0
         OnClick = btnOKClick
+        ExplicitLeft = 580
       end
       object BitBtn2: TBitBtn
-        Left = 680
+        Left = 674
         Top = 16
         Width = 75
         Height = 25
@@ -407,6 +419,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         Kind = bkCancel
         NumGlyphs = 2
         TabOrder = 1
+        ExplicitLeft = 668
       end
       object pnlValues: TPanel
         Left = 1
@@ -460,8 +473,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   end
   object pmnCharges: TPopupMenu
     OnPopup = pmnChargesPopup
-    Left = 329
-    Top = 385
+    Left = 347
+    Top = 465
     object mnAddChg: TMenuItem
       Caption = '&Add'
       OnClick = mnAddChgClick

@@ -9,14 +9,14 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDisplay: TPanel
     Left = 0
     Top = 121
@@ -25,6 +25,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 905
+    ExplicitHeight = 266
     object dbgrdCustStatus: TDBGrid
       Left = 1
       Top = 1
@@ -35,14 +37,14 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
     end
@@ -54,11 +56,13 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 224
+      ExplicitWidth = 903
       object lblRecordCount: TLabel
         Left = 104
         Top = 16
-        Width = 3
-        Height = 13
+        Width = 4
+        Height = 17
       end
       object Panel1: TPanel
         Left = 644
@@ -69,6 +73,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 638
         DesignSize = (
           264
           39)
@@ -193,15 +198,16 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 905
     object Label3: TLabel
       Left = 8
       Top = 78
-      Width = 57
-      Height = 14
+      Width = 67
+      Height = 16
       Caption = 'Sort first by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
@@ -209,12 +215,12 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     object Label4: TLabel
       Left = 184
       Top = 78
-      Width = 58
-      Height = 14
+      Width = 69
+      Height = 16
       Caption = 'then sort by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
@@ -243,7 +249,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Left = 8
         Top = 24
         Width = 137
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
         Text = 'Show All'
@@ -258,7 +264,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Left = 8
       Top = 92
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 1
       OnChange = cbSortChange
@@ -273,7 +279,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Left = 184
       Top = 92
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 2
       OnChange = cbSortChange
@@ -308,7 +314,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Left = 8
         Top = 24
         Width = 145
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxCustStatusChange
@@ -338,15 +344,15 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Left = 8
         Top = 24
         Width = 145
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = RepComboBoxChange
       end
     end
     object RadioGroup1: TRadioGroup
-      Left = 808
-      Top = 8
+      Left = 792
+      Top = 4
       Width = 97
       Height = 65
       Caption = 'Report Type'
@@ -359,7 +365,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       OnClick = RadioGroup1Click
     end
     object chkbxCustomers: TCheckBox
-      Left = 744
+      Left = 734
       Top = 96
       Width = 161
       Height = 17
@@ -391,7 +397,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Left = 8
         Top = 24
         Width = 137
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxCustStatusChange
@@ -409,8 +415,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -444,6 +450,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       item
         Width = 50
       end>
+    ExplicitTop = 387
+    ExplicitWidth = 905
   end
   object qryCurrentCustStatus: TFDQuery
     Connection = dmBroker.PBLDatabase

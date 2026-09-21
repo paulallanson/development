@@ -1,32 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Delivery Notes Form
-
-VSS Info:
-$Header: /PBL D5/PBDelivNotes.pas 3     12/07/02 15:58 Andrewh $
-$History: PBDelivNotes.pas $
- * 
- * *****************  Version 3  *****************
- * User: Andrewh      Date: 12/07/02   Time: 15:58
- * Updated in $/PBL D5
- * Add new NOTES and ENQUIRY mode to program.
- * 
- * *****************  Version 2  *****************
- * User: Paul         Date: 31/10/:0   Time: 15:37
- * Updated in $/PBL D5
- * Changed to update the Narrative_line file correctly
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:41
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBDelivNotes;
 
 interface

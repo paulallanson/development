@@ -2,12 +2,12 @@ object STPordRSlFrm: TSTPordRSlFrm
   Left = 243
   Top = 172
   Caption = 'Print Purchase Orders'
-  ClientHeight = 296
-  ClientWidth = 418
+  ClientHeight = 351
+  ClientWidth = 445
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,10 +15,10 @@ object STPordRSlFrm: TSTPordRSlFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
-  TextHeight = 13
+  TextHeight = 17
   object PreviewBitBtn: TBitBtn
-    Left = 96
-    Top = 264
+    Left = 93
+    Top = 288
     Width = 72
     Height = 25
     Caption = 'Pre&view'
@@ -46,8 +46,8 @@ object STPordRSlFrm: TSTPordRSlFrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 176
-    Top = 264
+    Left = 173
+    Top = 288
     Width = 72
     Height = 25
     Caption = '&Print'
@@ -75,8 +75,8 @@ object STPordRSlFrm: TSTPordRSlFrm
     OnClick = PrintBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 16
-    Top = 264
+    Left = 13
+    Top = 288
     Width = 72
     Height = 25
     Caption = '&Cancel'
@@ -93,8 +93,8 @@ object STPordRSlFrm: TSTPordRSlFrm
   object SelectRadioGroup: TRadioGroup
     Left = 16
     Top = 16
-    Width = 145
-    Height = 97
+    Width = 170
+    Height = 89
     Caption = 'Selection'
     ItemIndex = 0
     Items.Strings = (
@@ -106,8 +106,8 @@ object STPordRSlFrm: TSTPordRSlFrm
     OnClick = SelectRadioGroupClick
   end
   object FaxBitBtn: TBitBtn
-    Left = 254
-    Top = 264
+    Left = 251
+    Top = 288
     Width = 75
     Height = 25
     Caption = '&Fax'
@@ -138,11 +138,11 @@ object STPordRSlFrm: TSTPordRSlFrm
     Left = 16
     Top = 128
     Width = 393
-    Height = 121
+    Height = 137
     Caption = 'Purchase Order Number Selection'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -151,14 +151,14 @@ object STPordRSlFrm: TSTPordRSlFrm
     object Label1: TLabel
       Left = 8
       Top = 71
-      Width = 220
-      Height = 39
+      Width = 273
+      Height = 51
       Caption = 
         'Enter Order numbers and/or Order ranges separated by commas. For' +
         ' example, 1234, 1236, 1240-1245'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -193,11 +193,11 @@ object STPordRSlFrm: TSTPordRSlFrm
       OnChange = CheckOK
     end
     object SelectLst: TListBox
-      Left = 272
-      Top = 8
+      Left = 368
+      Top = -16
       Width = 25
       Height = 105
-      ItemHeight = 13
+      ItemHeight = 17
       Sorted = True
       TabOrder = 1
       Visible = False
@@ -212,8 +212,8 @@ object STPordRSlFrm: TSTPordRSlFrm
     TabOrder = 6
   end
   object EmailBitBtn: TBitBtn
-    Left = 337
-    Top = 264
+    Left = 334
+    Top = 288
     Width = 75
     Height = 25
     Caption = '&Email'
@@ -240,8 +240,8 @@ object STPordRSlFrm: TSTPordRSlFrm
       'Delete From Report_Select'
       'Where Workstation = :Workstation'
       '')
-    Left = 240
-    Top = 24
+    Left = 340
+    Top = 14
     ParamData = <
       item
         Name = 'Workstation'
@@ -290,8 +290,8 @@ object STPordRSlFrm: TSTPordRSlFrm
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
       ' ')
-    Left = 160
-    Top = 132
+    Left = 184
+    Top = 53
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -307,8 +307,8 @@ object STPordRSlFrm: TSTPordRSlFrm
       ''
       ' '
       ' ')
-    Left = 216
-    Top = 132
+    Left = 262
+    Top = 5
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -340,8 +340,8 @@ object STPordRSlFrm: TSTPordRSlFrm
       ' '
       ' '
       ' ')
-    Left = 136
-    Top = 8
+    Left = 90
+    Top = 10
     ParamData = <
       item
         Name = 'From_PONum'
@@ -395,8 +395,8 @@ object STPordRSlFrm: TSTPordRSlFrm
       ' '
       ' '
       ' ')
-    Left = 174
-    Top = 64
+    Left = 266
+    Top = 40
     ParamData = <
       item
         Name = 'Int_Sel_Code'

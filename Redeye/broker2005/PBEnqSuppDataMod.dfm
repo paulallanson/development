@@ -1,8 +1,9 @@
 object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
   OnCreate = PBEnqSuppDataModFrmCreate
   OnDestroy = PBEnqSuppDataModFrmDestroy
-  Height = 479
-  Width = 741
+  Height = 599
+  Width = 926
+  PixelsPerInch = 120
   object EnqHeadSQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
@@ -27,8 +28,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
       '(Enquiry.contact_no = Customer_Contact.Contact_no)'
       ')'
       '')
-    Left = 32
-    Top = 16
+    Left = 40
+    Top = 20
     ParamData = <
       item
         Name = 'enquiry'
@@ -37,8 +38,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
   end
   object EnqHeadSRC: TDataSource
     DataSet = EnqHeadSQL
-    Left = 112
-    Top = 16
+    Left = 140
+    Top = 20
   end
   object EnqLineSQL: TFDQuery
     MasterSource = EnqHeadSRC
@@ -53,8 +54,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
       '(EnquiryLine.NCR_OTC_Mix = NCR_OTC_Mix.NCR_OTC_Mix) AND'
       '(EnquiryLine.Product_Type = Product_Type.Product_Type)'
       'order by line')
-    Left = 32
-    Top = 64
+    Left = 40
+    Top = 80
     ParamData = <
       item
         Name = 'Enquiry'
@@ -63,8 +64,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
   end
   object EnqLineSRC: TDataSource
     DataSet = EnqLineSQL
-    Left = 112
-    Top = 64
+    Left = 140
+    Top = 80
   end
   object EnqSuppSQL: TFDQuery
     MasterSource = EnqLineSRC
@@ -100,8 +101,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
       '( Supplier_Enquiry.Supplier = Supplier_Branch.Supplier ) AND'
       '( Supplier_Enquiry.Branch_no = Supplier_Branch.Branch_No ) '
       ')')
-    Left = 32
-    Top = 120
+    Left = 40
+    Top = 150
     ParamData = <
       item
         Name = 'Enquiry'
@@ -114,8 +115,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
   end
   object EnqSuppSRC: TDataSource
     DataSet = EnqSuppSQL
-    Left = 112
-    Top = 120
+    Left = 140
+    Top = 150
   end
   object EnqSuppQtySQL: TFDQuery
     MasterSource = EnqSuppSRC
@@ -147,8 +148,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
       '(Branch_no = :Branch_no)'
       ')'
       'order by Quantity')
-    Left = 32
-    Top = 176
+    Left = 40
+    Top = 220
     ParamData = <
       item
         Name = 'Enquiry'
@@ -169,8 +170,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
   end
   object EnqSuppQtySRC: TDataSource
     DataSet = EnqSuppQtySQL
-    Left = 112
-    Top = 176
+    Left = 140
+    Top = 220
   end
   object EnqSuppChgsSQL: TFDQuery
     MasterSource = EnqSuppSRC
@@ -195,8 +196,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
       ')'
       'order by Additional_Charge'
       ' ')
-    Left = 32
-    Top = 232
+    Left = 40
+    Top = 290
     ParamData = <
       item
         Name = 'Enquiry'
@@ -219,8 +220,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
       'Branch_no = :Branch_no and'
       'Enquiry = :Enquiry and'
       'Line = :Line')
-    Left = 216
-    Top = 16
+    Left = 270
+    Top = 20
     ParamData = <
       item
         Name = 'Supplier'
@@ -259,8 +260,8 @@ object PBEnqSuppDataModFrm: TPBEnqSuppDataModFrm
       '        :Quotation_Price,'
       '        :Charge_type)'
       ' ')
-    Left = 216
-    Top = 56
+    Left = 270
+    Top = 70
     ParamData = <
       item
         Name = 'Supplier'

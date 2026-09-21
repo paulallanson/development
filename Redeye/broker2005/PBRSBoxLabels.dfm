@@ -3,12 +3,12 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
   Top = 100
   BorderStyle = bsDialog
   Caption = 'Print Box Labels'
-  ClientHeight = 407
-  ClientWidth = 416
+  ClientHeight = 423
+  ClientWidth = 422
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,9 +18,9 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    416
-    407)
-  TextHeight = 13
+    422
+    423)
+  TextHeight = 17
   object POGroupBox: TGroupBox
     Left = 8
     Top = 0
@@ -32,43 +32,43 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     object Label1: TLabel
       Left = 16
       Top = 24
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object CustomerLbl: TLabel
       Left = 80
       Top = 24
-      Width = 64
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
     object DescrLbl: TLabel
       Left = 80
       Top = 46
-      Width = 43
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'DescrLbl'
     end
     object Label2: TLabel
       Left = 7
       Top = 46
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object Label7: TLabel
       Left = 21
       Top = 68
-      Width = 47
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Quantity:'
     end
     object QtyLbl: TLabel
       Left = 80
       Top = 68
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'QtyLbl'
     end
   end
@@ -81,81 +81,81 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
-      Left = 49
+      Left = 47
       Top = 21
-      Width = 65
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Box Quantity'
     end
     object Label4: TLabel
-      Left = 17
+      Left = 3
       Top = 108
-      Width = 102
-      Height = 13
+      Width = 117
+      Height = 17
       Caption = 'Start at box number'
     end
     object Label5: TLabel
-      Left = 49
+      Left = 44
       Top = 79
-      Width = 65
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'No. of boxes'
     end
     object Label10: TLabel
-      Left = 18
+      Left = 12
       Top = 50
-      Width = 93
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Sets per Book/Pad'
     end
     object Label11: TLabel
-      Left = 77
+      Left = 79
       Top = 132
-      Width = 36
-      Height = 13
+      Width = 41
+      Height = 17
       Caption = 'Format'
     end
     object BoxQuantityEdit: TEdit
-      Left = 120
+      Left = 122
       Top = 13
       Width = 73
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnKeyPress = BoxQuantityEditKeyPress
       OnKeyUp = BoxQuantityEditKeyUp
     end
     object StartBoxSpinEdit: TSpinEdit
-      Left = 120
+      Left = 122
       Top = 100
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 9999
       MinValue = 1
       TabOrder = 2
       Value = 1
     end
     object NoofBoxesSpinEdit: TSpinEdit
-      Left = 120
+      Left = 122
       Top = 71
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 999
       MinValue = 1
       TabOrder = 1
       Value = 1
     end
     object SetsEdit: TEdit
-      Left = 120
+      Left = 122
       Top = 42
       Width = 73
-      Height = 21
+      Height = 25
       TabOrder = 3
     end
     object cmbFormat: TComboBox
-      Left = 120
+      Left = 122
       Top = 128
       Width = 82
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 4
       OnChange = cmbFormatChange
@@ -175,42 +175,42 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     object Label6: TLabel
       Left = 24
       Top = 24
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'from'
     end
     object Label8: TLabel
       Left = 19
       Top = 56
-      Width = 28
-      Height = 13
+      Width = 32
+      Height = 17
       Caption = 'Prefix'
     end
     object FromEdit: TEdit
       Left = 56
       Top = 16
       Width = 97
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object PrefixEdit: TEdit
       Left = 56
       Top = 48
       Width = 57
-      Height = 21
+      Height = 25
       TabOrder = 1
     end
   end
   object CancelBitBtn: TBitBtn
-    Left = 8
-    Top = 368
+    Left = 55
+    Top = 376
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Cancel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -219,8 +219,8 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     TabOrder = 3
   end
   object PreviewBitBtn: TBitBtn
-    Left = 144
-    Top = 368
+    Left = 191
+    Top = 376
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -228,7 +228,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -259,15 +259,15 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     object Label9: TLabel
       Left = 8
       Top = 20
-      Width = 67
-      Height = 13
+      Width = 77
+      Height = 17
       Caption = 'Delivery Date'
     end
     object DeliveryDateEdit: TEdit
       Left = 120
       Top = 16
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'DeliveryDateEdit'
       OnChange = DeliveryDateEditChange
@@ -297,8 +297,8 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 232
-    Top = 368
+    Left = 279
+    Top = 376
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -307,7 +307,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -371,25 +371,25 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     ParentBackground = False
     TabOrder = 8
     object Label12: TLabel
-      Left = 56
-      Top = 20
-      Width = 56
-      Height = 13
+      Left = 55
+      Top = 16
+      Width = 65
+      Height = 17
       Caption = 'Label Logo'
     end
     object dblkpLogos: TDBLookupComboBox
-      Left = 120
-      Top = 16
+      Left = 122
+      Top = 12
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'ID'
       ListField = 'Logo_Name'
       ListSource = dtsLogos
       TabOrder = 0
     end
     object FormRefClrBitBtn: TBitBtn
-      Left = 322
-      Top = 14
+      Left = 319
+      Top = 13
       Width = 23
       Height = 23
       Hint = 'Clear'
@@ -455,12 +455,12 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
       'WHERE Document_Type = '#39'L'#39' AND'
       '((inactive = '#39'N'#39') or (inactive is NULL))'
       'ORDER BY Logo_Name')
-    Left = 16
-    Top = 282
+    Left = 192
+    Top = 34
   end
   object dtsLogos: TDataSource
     DataSet = qryLogos
-    Left = 72
-    Top = 286
+    Left = 280
+    Top = 30
   end
 end

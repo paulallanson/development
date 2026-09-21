@@ -8,20 +8,22 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
     Top = 276
     Width = 856
     Height = 19
     Panels = <>
+    ExplicitTop = 267
+    ExplicitWidth = 850
   end
   object Panel3: TPanel
     Left = 762
@@ -31,6 +33,8 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Align = alRight
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 756
+    ExplicitHeight = 267
     DesignSize = (
       94
       276)
@@ -63,6 +67,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitTop = 186
     end
     object BitBtn2: TBitBtn
       Left = 11
@@ -73,6 +78,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitTop = 226
     end
   end
   object Panel4: TPanel
@@ -84,6 +90,8 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Caption = 'Panel4'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 756
+    ExplicitHeight = 267
     object Panel5: TPanel
       Left = 1
       Top = 115
@@ -94,6 +102,8 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       Caption = 'Panel3'
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 106
+      ExplicitWidth = 754
       object pnlFTP: TPanel
         Left = 0
         Top = 0
@@ -105,48 +115,48 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
         object Label2: TLabel
           Left = 5
           Top = 12
-          Width = 65
-          Height = 13
+          Width = 75
+          Height = 17
           Caption = 'FTP Address:'
         end
         object Label3: TLabel
           Left = 5
           Top = 44
-          Width = 54
-          Height = 13
+          Width = 62
+          Height = 17
           Caption = 'Username:'
         end
         object Label4: TLabel
           Left = 5
           Top = 76
-          Width = 52
-          Height = 13
+          Width = 59
+          Height = 17
           Caption = 'Password:'
         end
         object edtUserName: TEdit
-          Left = 73
+          Left = 87
           Top = 40
           Width = 121
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
           OnChange = EnableOK
         end
         object edtPassword: TEdit
-          Left = 73
+          Left = 87
           Top = 72
           Width = 121
-          Height = 21
+          Height = 25
           PasswordChar = '*'
           ReadOnly = True
           TabOrder = 1
           OnChange = EnableOK
         end
         object edtFTP: TEdit
-          Left = 73
+          Left = 87
           Top = 8
-          Width = 168
-          Height = 21
+          Width = 144
+          Height = 25
           TabOrder = 2
           OnChange = EnableOK
         end
@@ -155,7 +165,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
           Top = 103
           Width = 121
           Height = 46
-          ItemHeight = 13
+          ItemHeight = 17
           TabOrder = 3
           Visible = False
         end
@@ -164,7 +174,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
           Top = 103
           Width = 103
           Height = 46
-          ItemHeight = 13
+          ItemHeight = 17
           TabOrder = 4
           Visible = False
         end
@@ -178,6 +188,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
         Style = lbOwnerDrawFixed
         Align = alClient
         TabOrder = 1
+        ExplicitWidth = 505
       end
     end
     object Panel1: TPanel
@@ -188,136 +199,138 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       Align = alClient
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 754
+      ExplicitHeight = 105
       object Label1: TLabel
         Left = 24
-        Top = 24
-        Width = 59
-        Height = 13
+        Top = 16
+        Width = 70
+        Height = 17
         Caption = 'Invoice No:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label5: TLabel
         Left = 264
-        Top = 24
-        Width = 67
-        Height = 13
+        Top = 16
+        Width = 81
+        Height = 17
         Caption = 'Invoice Date:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label6: TLabel
         Left = 24
-        Top = 56
-        Width = 53
-        Height = 13
+        Top = 48
+        Width = 64
+        Height = 17
         Caption = 'Customer:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label7: TLabel
         Left = 24
-        Top = 88
-        Width = 62
-        Height = 13
+        Top = 80
+        Width = 75
+        Height = 17
         Caption = 'Description:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label8: TLabel
         Left = 504
-        Top = 24
-        Width = 68
-        Height = 13
+        Top = 16
+        Width = 81
+        Height = 17
         Caption = 'Goods Value:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label9: TLabel
         Left = 504
-        Top = 56
-        Width = 53
-        Height = 13
+        Top = 48
+        Width = 66
+        Height = 17
         Caption = 'VAT Value:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label10: TLabel
         Left = 504
-        Top = 88
-        Width = 59
-        Height = 13
+        Top = 80
+        Width = 73
+        Height = 17
         Caption = 'Total Value:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object edtInvoiceNo: TEdit
         Left = 104
-        Top = 20
+        Top = 12
         Width = 97
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 0
       end
       object edtInvoiceDate: TEdit
         Left = 352
-        Top = 20
+        Top = 12
         Width = 105
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 1
       end
       object edtCustomer: TEdit
         Left = 104
-        Top = 52
+        Top = 44
         Width = 353
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 2
       end
       object edtDescription: TEdit
         Left = 104
-        Top = 84
+        Top = 76
         Width = 353
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 3
       end
       object memTotalValue: TMemo
         Left = 600
-        Top = 84
+        Top = 76
         Width = 95
         Height = 21
         Alignment = taRightJustify
@@ -329,7 +342,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       end
       object memVATValue: TMemo
         Left = 600
-        Top = 52
+        Top = 44
         Width = 95
         Height = 21
         Alignment = taRightJustify
@@ -341,7 +354,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       end
       object memGoodsValue: TMemo
         Left = 600
-        Top = 20
+        Top = 12
         Width = 95
         Height = 21
         Alignment = taRightJustify

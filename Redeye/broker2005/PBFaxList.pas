@@ -1,28 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Fax list Form
-
-VSS Info:
-$Header: /PBL D5/PBFaxList.pas 2     2/05/:1 12:51 Paul $
-$History: PBFaxList.pas $
- * 
- * *****************  Version 2  *****************
- * User: Paul         Date: 2/05/:1    Time: 12:51
- * Updated in $/PBL D5
- * Changed to convert the property of the Purchase Order to float rather
- * than integer, this then allows the creation of Call Off Orders
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:41
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBFaxList;
 
 interface

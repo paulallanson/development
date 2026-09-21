@@ -1,14 +1,15 @@
 object dmIntSel: TdmIntSel
-  Height = 540
-  Width = 783
+  Height = 675
+  Width = 979
+  PixelsPerInch = 120
   object GetLastTempIDSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Int_Sel_Code'
       'From Int_Sel'
       'Where Text100=:GUID')
-    Left = 56
-    Top = 16
+    Left = 70
+    Top = 20
     ParamData = <
       item
         Name = 'GUID'
@@ -24,8 +25,8 @@ object dmIntSel: TdmIntSel
       'Select Max(Int_Sel_Code)+1, 0, 0, 0, 0, :GUID From Int_Sel'
       ''
       ' ')
-    Left = 56
-    Top = 80
+    Left = 70
+    Top = 100
     ParamData = <
       item
         Name = 'GUID'
@@ -40,8 +41,8 @@ object dmIntSel: TdmIntSel
       'From Int_Sel'
       'Where Int_Sel_Code = :Int_Sel_Code'
       '')
-    Left = 56
-    Top = 200
+    Left = 70
+    Top = 250
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -58,8 +59,8 @@ object dmIntSel: TdmIntSel
       'Where Int_Sel_Code=:Int_Sel_Code'
       ''
       ' ')
-    Left = 56
-    Top = 136
+    Left = 70
+    Top = 170
     ParamData = <
       item
         Name = 'Sel1'
@@ -105,8 +106,8 @@ object dmIntSel: TdmIntSel
       'Select Max(Int_Sel_Code)+1, 0, 0, 0, 0, :GUID From Int_Sel'
       ''
       ' ')
-    Left = 56
-    Top = 264
+    Left = 70
+    Top = 330
     ParamData = <
       item
         Name = 'GUID'
@@ -124,8 +125,8 @@ object dmIntSel: TdmIntSel
       ''
       ' '
       ' ')
-    Left = 56
-    Top = 328
+    Left = 70
+    Top = 410
     ParamData = <
       item
         Name = 'Key'
@@ -173,8 +174,8 @@ object dmIntSel: TdmIntSel
       ''
       ' '
       ' ')
-    Left = 56
-    Top = 384
+    Left = 70
+    Top = 480
     ParamData = <
       item
         Name = 'Key'

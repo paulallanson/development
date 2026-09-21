@@ -8,57 +8,57 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 40
-    Width = 148
-    Height = 13
+    Top = 37
+    Width = 166
+    Height = 17
     Caption = 'Current Work Centre Groups'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 98
-    Height = 13
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object Label3: TLabel
     Left = 8
-    Top = 16
-    Width = 42
-    Height = 13
+    Top = 12
+    Width = 50
+    Height = 17
     Caption = 'Process:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblDetails: TLabel
     Left = 72
-    Top = 16
-    Width = 48
-    Height = 13
+    Top = 12
+    Width = 59
+    Height = 17
     Caption = 'lblDetails'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object Label4: TLabel
     Left = 288
-    Top = 40
-    Width = 174
-    Height = 13
+    Top = 36
+    Width = 196
+    Height = 17
     Caption = 'Un-assigned Work Centre Groups'
   end
   object lstbxMembers: TListBox
@@ -66,7 +66,7 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 0
     OnClick = lstbxMembersClick
@@ -124,7 +124,7 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 3
     OnClick = lstbxNonMembersClick
@@ -137,6 +137,8 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 275
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 153
       Top = 8
@@ -162,7 +164,7 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 5
     Visible = False
   end
@@ -171,7 +173,7 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 6
     Visible = False
   end

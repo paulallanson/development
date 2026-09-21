@@ -4,12 +4,12 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Overdue Enquiry Print'
-  ClientHeight = 228
-  ClientWidth = 464
+  ClientHeight = 262
+  ClientWidth = 483
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,28 +17,28 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DateLabel: TLabel
     Left = 16
-    Top = 156
-    Width = 119
-    Height = 13
+    Top = 168
+    Width = 134
+    Height = 17
     Caption = 'Include any due before'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object DateSpeedButton: TSpeedButton
-    Left = 248
-    Top = 152
+    Left = 262
+    Top = 165
     Width = 25
     Height = 25
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     Glyph.Data = {
@@ -61,12 +61,12 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   object AllOrOneRadioGroup: TRadioGroup
     Left = 16
     Top = 79
-    Width = 105
+    Width = 112
     Height = 65
     Caption = 'By Supplier'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -80,7 +80,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 290
-    Top = 184
+    Top = 208
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -109,7 +109,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 200
-    Top = 184
+    Top = 208
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -138,7 +138,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 16
-    Top = 184
+    Top = 208
     Width = 75
     Height = 25
     Caption = '&Cancel'
@@ -153,13 +153,13 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     TabOrder = 3
   end
   object DateEdit: TEdit
-    Left = 144
-    Top = 152
+    Left = 158
+    Top = 165
     Width = 97
-    Height = 21
+    Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     MaxLength = 10
@@ -169,13 +169,13 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     OnKeyUp = DateEditKeyUp
   end
   object SuppGrpBox: TGroupBox
-    Left = 128
-    Top = 79
+    Left = 134
+    Top = 86
     Width = 329
-    Height = 65
+    Height = 58
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     ParentBackground = False
@@ -184,20 +184,20 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     Visible = False
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 88
-      Height = 13
+      Top = 8
+      Width = 100
+      Height = 17
       Caption = 'Supplier / Branch'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object SuppLUSpeedButton: TSpeedButton
       Left = 280
-      Top = 30
+      Top = 23
       Width = 25
       Height = 25
       Caption = '...'
@@ -211,7 +211,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     end
     object SuppEdit: TEdit
       Left = 8
-      Top = 32
+      Top = 24
       Width = 265
       Height = 21
       Font.Charset = ANSI_CHARSET
@@ -226,7 +226,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   end
   object EmailBitBtn: TBitBtn
     Left = 381
-    Top = 184
+    Top = 208
     Width = 75
     Height = 25
     Caption = '&Email'
@@ -250,7 +250,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
   object rgRep: TRadioGroup
     Left = 16
     Top = 10
-    Width = 105
+    Width = 112
     Height = 65
     Caption = 'By Rep'
     ItemIndex = 0
@@ -262,25 +262,25 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     OnClick = rgRepClick
   end
   object pnlRepSearch: TPanel
-    Left = 128
-    Top = 16
+    Left = 134
+    Top = 17
     Width = 329
-    Height = 60
+    Height = 58
     ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 52
-      Height = 13
+      Top = 5
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 265
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end

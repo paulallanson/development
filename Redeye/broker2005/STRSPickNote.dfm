@@ -8,13 +8,13 @@ object STRSPickNotefrm: TSTRSPickNotefrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object OrderGroupBox: TGroupBox
     Left = 7
     Top = 8
@@ -26,29 +26,29 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label2: TLabel
       Left = 19
       Top = 48
-      Width = 60
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Order Date:'
     end
     object OrderDatelbl: TLabel
-      Left = 88
+      Left = 93
       Top = 48
-      Width = 67
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'OrderDatelbl'
     end
     object CustomerLbl: TLabel
-      Left = 88
+      Left = 93
       Top = 24
-      Width = 64
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
   end
@@ -60,23 +60,23 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     ParentBackground = False
     TabOrder = 1
     object Label4: TLabel
-      Left = 9
-      Top = 26
-      Width = 67
-      Height = 13
+      Left = 15
+      Top = 19
+      Width = 77
+      Height = 17
       Caption = 'Delivery Date'
     end
     object DeliveryDateEdit: TEdit
-      Left = 88
-      Top = 18
+      Left = 101
+      Top = 16
       Width = 105
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = DeliveryDateEditChange
       OnExit = DeliveryDateEditExit
     end
     object BitBtn2: TBitBtn
-      Left = 200
+      Left = 213
       Top = 16
       Width = 25
       Height = 25

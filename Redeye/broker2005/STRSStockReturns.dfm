@@ -3,16 +3,16 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
   Top = 113
   BorderStyle = bsDialog
   Caption = 'Forward Stock Returns Report'
-  ClientHeight = 156
-  ClientWidth = 447
+  ClientHeight = 176
+  ClientWidth = 457
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object OleContainer1: TOleContainer
     Left = 150
     Top = 16
@@ -25,7 +25,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
   end
   object btnExcel: TBitBtn
     Left = 187
-    Top = 119
+    Top = 127
     Width = 75
     Height = 25
     Caption = 'Excel'
@@ -77,7 +77,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 274
-    Top = 119
+    Top = 127
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -100,7 +100,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 362
-    Top = 119
+    Top = 127
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -123,7 +123,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 16
-    Top = 120
+    Top = 128
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -155,15 +155,15 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 104
-      Height = 13
+      Width = 116
+      Height = 17
       Caption = 'Production Location'
     end
     object edtLoc: TEdit
       Left = 8
       Top = 24
       Width = 233
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -184,8 +184,8 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
     end
   end
   object pnlExportPrgrss: TPanel
-    Left = 86
-    Top = 52
+    Left = 103
+    Top = 8
     Width = 289
     Height = 61
     ParentBackground = False
@@ -194,8 +194,8 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -210,7 +210,7 @@ object STRSStockReturnsFrm: TSTRSStockReturnsFrm
   object chkbxPageBreak: TCheckBox
     Left = 16
     Top = 88
-    Width = 209
+    Width = 289
     Height = 17
     Caption = 'Page break on Production Location'
     Checked = True

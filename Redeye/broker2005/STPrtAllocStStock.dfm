@@ -2,69 +2,72 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
   Left = 60
   Top = 94
   Caption = 'Allocate specific stock'
-  ClientHeight = 337
-  ClientWidth = 652
+  ClientHeight = 338
+  ClientWidth = 656
   Color = clBtnFace
   Constraints.MinHeight = 376
   Constraints.MinWidth = 668
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 652
+    Width = 656
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 650
     object lblProduct: TLabel
       Left = 16
       Top = 8
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Product:'
     end
     object lblPartStore: TLabel
       Left = 16
       Top = 32
-      Width = 62
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Warehouse:'
     end
     object Label1: TLabel
       Left = 376
       Top = 8
-      Width = 90
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Quantity Ordered'
     end
     object lblQtyOrdered: TLabel
-      Left = 472
+      Left = 487
       Top = 8
-      Width = 73
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'lblQtyOrdered'
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 296
-    Width = 652
+    Top = 297
+    Width = 656
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 288
+    ExplicitWidth = 650
     DesignSize = (
-      652
+      656
       41)
     object BitBtn2: TBitBtn
-      Left = 560
+      Left = 558
       Top = 8
       Width = 75
       Height = 25
@@ -73,9 +76,10 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 0
+      ExplicitLeft = 552
     end
     object BitBtn1: TBitBtn
-      Left = 472
+      Left = 470
       Top = 8
       Width = 75
       Height = 25
@@ -102,19 +106,20 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn1Click
+      ExplicitLeft = 464
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 57
-    Width = 652
-    Height = 239
+    Width = 656
+    Height = 240
     Align = alClient
     DataSource = srcStoreStock
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -122,7 +127,7 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <

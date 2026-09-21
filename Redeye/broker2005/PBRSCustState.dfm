@@ -4,12 +4,12 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Print Customer Statement'
-  ClientHeight = 129
-  ClientWidth = 424
+  ClientHeight = 157
+  ClientWidth = 443
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,7 +17,7 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
     Left = 5
     Top = 112
@@ -78,59 +78,60 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 424
+    Width = 443
     Height = 105
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 418
     object Label3: TLabel
       Left = 8
       Top = 19
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 73
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Statement No:'
     end
     object Label2: TLabel
       Left = 240
       Top = 80
-      Width = 27
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'Date:'
     end
     object lblDateRange: TLabel
       Left = 8
       Top = 48
-      Width = 60
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Date Range'
     end
     object Label4: TLabel
       Left = 288
       Top = 48
-      Width = 14
-      Height = 13
+      Width = 15
+      Height = 17
       Caption = 'to:'
     end
     object Label5: TLabel
       Left = 112
       Top = 48
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'from:'
     end
     object edtCustomerName: TEdit
       Left = 112
       Top = 12
       Width = 289
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -139,7 +140,7 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
       Left = 112
       Top = 72
       Width = 97
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = EnableOK
     end
@@ -147,7 +148,7 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
       Left = 272
       Top = 72
       Width = 97
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = EnableOK
       OnExit = edtDateExit
@@ -184,7 +185,7 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
       Left = 160
       Top = 42
       Width = 97
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 4
@@ -193,7 +194,7 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
       Left = 304
       Top = 42
       Width = 97
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 5
@@ -285,8 +286,8 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

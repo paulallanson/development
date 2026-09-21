@@ -3,28 +3,30 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
   Top = 114
   Caption = 'Orders due for delivery to stock'
   ClientHeight = 453
-  ClientWidth = 749
+  ClientWidth = 768
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  TextHeight = 17
   object pnlControl: TPanel
     Left = 0
     Top = 412
-    Width = 749
+    Width = 768
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 403
+    ExplicitWidth = 743
     DesignSize = (
-      749
+      768
       41)
     object pnlRightControl: TPanel
-      Left = 418
+      Left = 437
       Top = 0
       Width = 331
       Height = 41
@@ -32,6 +34,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 412
       object PreviewBitBtn: TBitBtn
         Left = 144
         Top = 8
@@ -92,43 +95,44 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 749
-    Height = 177
+    Width = 768
+    Height = 217
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 749
     object Label3: TLabel
       Left = 8
-      Top = 128
-      Width = 59
-      Height = 13
+      Top = 160
+      Width = 68
+      Height = 17
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
-      Top = 128
-      Width = 62
-      Height = 13
+      Top = 160
+      Width = 70
+      Height = 17
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
-      Top = 128
-      Width = 92
-      Height = 13
+      Top = 160
+      Width = 104
+      Height = 17
       Caption = 'and finally sort by'
     end
     object Label1: TLabel
       Left = 439
       Top = 3
-      Width = 93
-      Height = 13
+      Width = 106
+      Height = 17
       Caption = 'Delivery due after:'
     end
     object DateFromButton: TSpeedButton
       Left = 552
-      Top = 14
+      Top = 24
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -148,14 +152,14 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     end
     object Label2: TLabel
       Left = 439
-      Top = 48
-      Width = 103
-      Height = 13
+      Top = 56
+      Width = 118
+      Height = 17
       Caption = 'Delivery due before:'
     end
     object DateToButton: TSpeedButton
       Left = 552
-      Top = 59
+      Top = 75
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -176,8 +180,8 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     object rgSupplier: TRadioGroup
       Left = 8
       Top = 1
-      Width = 100
-      Height = 58
+      Width = 123
+      Height = 65
       Caption = ' By supplier '
       ItemIndex = 0
       Items.Strings = (
@@ -188,9 +192,9 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     end
     object rgCustomer: TRadioGroup
       Left = 8
-      Top = 63
-      Width = 100
-      Height = 60
+      Top = 71
+      Width = 125
+      Height = 65
       Caption = ' By customer '
       ItemIndex = 0
       Items.Strings = (
@@ -200,8 +204,8 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       TabOrder = 1
     end
     object SupplierPanel: TPanel
-      Left = 113
-      Top = 6
+      Left = 137
+      Top = 10
       Width = 281
       Height = 49
       ParentBackground = False
@@ -209,15 +213,15 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       object lblSupplier: TLabel
         Left = 8
         Top = 4
-        Width = 82
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Supplier/Branch'
       end
       object edtSupplier: TEdit
         Left = 8
         Top = 20
         Width = 233
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -237,24 +241,24 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       end
     end
     object CustomerPanel: TPanel
-      Left = 115
-      Top = 68
+      Left = 139
+      Top = 79
       Width = 281
-      Height = 57
+      Height = 66
       ParentBackground = False
       TabOrder = 3
       object lblCustomer: TLabel
         Left = 8
         Top = 1
-        Width = 88
-        Height = 13
+        Width = 100
+        Height = 17
         Caption = 'Customer/Branch'
       end
       object edtCustomer: TEdit
         Left = 8
         Top = 17
         Width = 233
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -274,9 +278,9 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       end
       object chkbxBranches: TCheckBox
         Left = 8
-        Top = 38
+        Top = 45
         Width = 193
-        Height = 17
+        Height = 20
         Caption = 'Report on all branches'
         Checked = True
         State = cbChecked
@@ -285,9 +289,9 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     end
     object cbSort1: TComboBox
       Left = 8
-      Top = 144
+      Top = 176
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 4
       Items.Strings = (
@@ -299,9 +303,9 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     end
     object cbSort2: TComboBox
       Left = 160
-      Top = 144
+      Top = 176
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 5
       Items.Strings = (
@@ -313,9 +317,9 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     end
     object cbSort3: TComboBox
       Left = 312
-      Top = 144
+      Top = 176
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 6
       Items.Strings = (
@@ -326,17 +330,19 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
         'Delivery Date')
     end
     object pnlDates: TPanel
-      Left = 571
+      Left = 590
       Top = 0
       Width = 178
-      Height = 177
+      Height = 217
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 7
+      ExplicitLeft = 565
+      ExplicitHeight = 177
       object chkbxPageBreak: TCheckBox
-        Left = 33
-        Top = 120
+        Left = 5
+        Top = 144
         Width = 145
         Height = 17
         Caption = 'Page break on total'
@@ -344,18 +350,18 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
         TabOrder = 0
       end
       object ExcOnHoldCheckBox: TCheckBox
-        Left = 33
-        Top = 140
-        Width = 145
+        Left = 5
+        Top = 164
+        Width = 156
         Height = 17
         Caption = 'Exclude on hold items'
         TabOrder = 1
       end
       object TotByRadioGroup: TRadioGroup
-        Left = 33
+        Left = 13
         Top = 8
-        Width = 105
-        Height = 105
+        Width = 128
+        Height = 115
         Caption = 'Report Totals'
         ItemIndex = 3
         Items.Strings = (
@@ -367,8 +373,8 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
         TabOrder = 2
       end
       object chkbxShowSales: TCheckBox
-        Left = 33
-        Top = 159
+        Left = 5
+        Top = 183
         Width = 145
         Height = 17
         Caption = 'Hide sales value'
@@ -377,31 +383,31 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     end
     object DateFromEdit: TEdit
       Left = 439
-      Top = 16
+      Top = 24
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 8
     end
     object DateToEdit: TEdit
       Left = 439
-      Top = 61
+      Top = 75
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 9
     end
   end
   object DBGrid: TDBGrid
     Left = 0
-    Top = 177
-    Width = 749
-    Height = 235
+    Top = 217
+    Width = 768
+    Height = 195
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -409,7 +415,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <

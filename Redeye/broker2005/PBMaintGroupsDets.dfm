@@ -44,7 +44,7 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = OKBitBtnClick
-    ExplicitTop = 122
+    ExplicitTop = 127
   end
   object CancelBitBtn: TBitBtn
     Left = 334
@@ -55,7 +55,7 @@ object PBMaintGroupsDetsFrm: TPBMaintGroupsDetsFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 1
-    ExplicitTop = 122
+    ExplicitTop = 127
   end
   object DetsGroupBox: TGroupBox
     Left = 8

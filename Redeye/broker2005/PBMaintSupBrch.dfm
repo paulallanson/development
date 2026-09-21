@@ -7,22 +7,22 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 176
-    Top = 429
-    Width = 133
-    Height = 13
-    Caption = 'Delete the above details ?'
+    Top = 427
+    Width = 150
+    Height = 17
+    Caption = 'Delete the above details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -196,7 +196,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         Caption = 'Details'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
@@ -205,19 +205,19 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label1: TLabel
           Left = 16
           Top = 28
-          Width = 43
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Supplier'
         end
         object Label2: TLabel
           Left = 16
           Top = 60
-          Width = 70
-          Height = 13
+          Width = 82
+          Height = 17
           Caption = 'Branch Name '
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -225,12 +225,12 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label3: TLabel
           Left = 16
           Top = 99
-          Width = 41
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Address'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -238,12 +238,12 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label7: TLabel
           Left = 16
           Top = 195
-          Width = 47
-          Height = 13
+          Width = 54
+          Height = 17
           Caption = 'Postcode'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -251,12 +251,12 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label8: TLabel
           Left = 16
           Top = 227
-          Width = 33
-          Height = 13
+          Width = 36
+          Height = 17
           Caption = 'Phone'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -264,12 +264,12 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label9: TLabel
           Left = 16
           Top = 251
-          Width = 17
-          Height = 13
+          Width = 19
+          Height = 17
           Caption = 'Fax'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -277,12 +277,12 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label10: TLabel
           Left = 16
           Top = 274
-          Width = 27
-          Height = 13
+          Width = 31
+          Height = 17
           Caption = 'Email'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -290,12 +290,12 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label11: TLabel
           Left = 16
           Top = 309
-          Width = 72
-          Height = 13
+          Width = 81
+          Height = 17
           Caption = 'Account Code'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -303,21 +303,21 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
         object Label4: TLabel
           Left = 16
           Top = 171
-          Width = 51
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Town/City'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
         end
         object SuppNameEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 24
           Width = 299
-          Height = 21
+          Height = 25
           MaxLength = 40
           ReadOnly = True
           TabOrder = 0
@@ -331,7 +331,7 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
           Caption = 'Notes'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Glyph.Data = {
@@ -353,94 +353,94 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
           OnClick = NotesBitBtnClick
         end
         object NameEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 56
           Width = 299
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 1
           Text = 'NameEdit'
           OnChange = NameEditChange
         end
         object BuildingEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 96
           Width = 299
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 2
           Text = 'BuildingEdit'
         end
         object StreetEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 120
           Width = 299
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 3
           Text = 'StreetEdit'
         end
         object LocaleEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 144
           Width = 299
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 4
           Text = 'LocaleEdit'
         end
         object TownEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 168
           Width = 299
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 5
           Text = 'TownEdit'
         end
         object PhoneEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 224
           Width = 139
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 7
           Text = 'PhoneEdit'
           OnChange = PhoneEditChange
         end
         object FaxEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 248
           Width = 139
-          Height = 21
+          Height = 25
           MaxLength = 20
           TabOrder = 8
           Text = 'FaxEdit'
         end
         object EMailEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 272
           Width = 299
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 9
           Text = 'EMailEdit'
         end
         object PostCodeEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 192
           Width = 105
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 10
           TabOrder = 6
           Text = 'POSTCODEEDIT'
         end
         object AccCodeEdit: TEdit
-          Left = 94
+          Left = 104
           Top = 307
           Width = 90
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 8
           TabOrder = 10
@@ -671,8 +671,8 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
       'Where (Supplier.Supplier <> :Supplier) and'
       '      (Supplier_Branch.Supplier = Supplier.Supplier) and'
       '      (Supplier_Branch.Account_Code = :Acc_Code)')
-    Left = 192
-    Top = 276
+    Left = 256
+    Top = 249
     ParamData = <
       item
         Name = 'Supplier'
@@ -727,8 +727,8 @@ object PBMaintSupBrchFrm: TPBMaintSupBrchFrm
       '(Supplier_Branch.Supplier = :Supplier) and'
       '(Supplier_Branch.Branch_no = :Branch_no) and'
       '(Supplier.Supplier = Supplier_Branch.Supplier)')
-    Left = 72
-    Top = 263
+    Left = 402
+    Top = 153
     ParamData = <
       item
         Name = 'Supplier'

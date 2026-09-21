@@ -8,25 +8,25 @@ object STLUCourierServFrm: TSTLUCourierServFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object lblCourier: TLabel
     Left = 8
     Top = 6
-    Width = 51
-    Height = 13
+    Width = 57
+    Height = 17
     Caption = 'lblCourier'
   end
   object CountLabel: TLabel
-    Left = 190
+    Left = 184
     Top = 230
-    Width = 59
-    Height = 13
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
@@ -39,7 +39,7 @@ object STLUCourierServFrm: TSTLUCourierServFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -47,7 +47,7 @@ object STLUCourierServFrm: TSTLUCourierServFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = DetsDBGridDrawColumnCell
@@ -160,7 +160,7 @@ object STLUCourierServFrm: TSTLUCourierServFrm
       Left = 8
       Top = 16
       Width = 217
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end

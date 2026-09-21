@@ -3,26 +3,28 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
   Top = 164
   BorderStyle = bsDialog
   Caption = 'Sales Profit Report'
-  ClientHeight = 185
-  ClientWidth = 390
+  ClientHeight = 219
+  ClientWidth = 411
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
-    Top = 144
-    Width = 390
+    Top = 178
+    Width = 411
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 135
+    ExplicitWidth = 384
     object btnPreview: TBitBtn
       Left = 94
       Top = 8
@@ -138,28 +140,30 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
   object pnlReportSelect: TPanel
     Left = 0
     Top = 0
-    Width = 390
-    Height = 144
+    Width = 411
+    Height = 178
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 384
+    ExplicitHeight = 135
     object Label2: TLabel
       Left = 16
       Top = 52
-      Width = 33
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Period'
     end
     object Label3: TLabel
       Left = 16
       Top = 20
-      Width = 20
-      Height = 13
+      Width = 25
+      Height = 17
       Caption = 'Year'
     end
     object OleContainer1: TOleContainer
-      Left = 218
-      Top = -4
+      Left = 129
+      Top = 30
       Width = 129
       Height = 89
       Caption = 'OleContainer1'
@@ -171,7 +175,7 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       Left = 60
       Top = 48
       Width = 177
-      Height = 21
+      Height = 25
       KeyField = 'Period'
       ListField = 'Description'
       ListSource = dtsPeriods
@@ -182,7 +186,7 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       Left = 60
       Top = 16
       Width = 141
-      Height = 21
+      Height = 25
       KeyField = 'Financial_Year'
       ListField = 'Title'
       ListSource = dtsFY
@@ -190,8 +194,8 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       OnClick = dblkpFYClick
     end
     object pnlExportPrgrss: TPanel
-      Left = 58
-      Top = 24
+      Left = 68
+      Top = 58
       Width = 289
       Height = 61
       ParentBackground = False
@@ -200,8 +204,8 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Exporting...'
       end
       object prgbrExport: TProgressBar
@@ -216,8 +220,8 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
     object rdgrpSortBy: TRadioGroup
       Left = 264
       Top = 12
-      Width = 113
-      Height = 58
+      Width = 129
+      Height = 65
       Caption = 'Report by'
       ItemIndex = 0
       Items.Strings = (
@@ -229,9 +233,9 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
     end
     object rdgrpReportType: TRadioGroup
       Left = 264
-      Top = 76
-      Width = 113
-      Height = 58
+      Top = 85
+      Width = 129
+      Height = 65
       Caption = 'Report type'
       ItemIndex = 0
       Items.Strings = (

@@ -28,13 +28,14 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 270
+    Left = 264
     Top = 260
     Width = 65
     Height = 17
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'CountLabel'
+    ExplicitLeft = 270
     ExplicitTop = 258
   end
   object BranchLabel: TLabel
@@ -61,7 +62,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
   object DetsDBGrid: TDBGrid
     Left = 13
     Top = 49
-    Width = 321
+    Width = 315
     Height = 210
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsSRC
@@ -94,25 +95,26 @@ object PBLUCContaFrm: TPBLUCContaFrm
   object SearchGrpBox: TGroupBox
     Left = 8
     Top = 279
-    Width = 330
+    Width = 324
     Height = 71
     Anchors = [akLeft, akRight, akBottom]
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 277
+    ExplicitTop = 270
+    ExplicitWidth = 318
     DesignSize = (
-      330
+      324
       71)
     object NameEdit: TEdit
       Left = 8
       Top = 22
-      Width = 314
+      Width = 308
       Height = 25
       Anchors = [akLeft, akRight, akBottom]
       TabOrder = 0
       OnChange = NameEditChange
-      ExplicitTop = 16
+      ExplicitWidth = 302
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
@@ -127,7 +129,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 352
+    Left = 346
     Top = 357
     Width = 75
     Height = 26
@@ -137,11 +139,11 @@ object PBLUCContaFrm: TPBLUCContaFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    ExplicitLeft = 346
-    ExplicitTop = 314
+    ExplicitLeft = 340
+    ExplicitTop = 348
   end
   object CloseBitBtn: TBitBtn
-    Left = 352
+    Left = 346
     Top = 390
     Width = 75
     Height = 25
@@ -149,11 +151,11 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 3
-    ExplicitLeft = 346
-    ExplicitTop = 347
+    ExplicitLeft = 340
+    ExplicitTop = 381
   end
   object FuncGrpBox: TGroupBox
-    Left = 346
+    Left = 340
     Top = 112
     Width = 87
     Height = 113
@@ -161,6 +163,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
+    ExplicitLeft = 334
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 23
@@ -234,7 +237,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
   object DispPanel: TPanel
     Left = 8
     Top = 361
-    Width = 331
+    Width = 325
     Height = 59
     Anchors = [akLeft, akRight, akBottom]
     BevelOuter = bvLowered
@@ -242,7 +245,8 @@ object PBLUCContaFrm: TPBLUCContaFrm
     BorderStyle = bsSingle
     ParentBackground = False
     TabOrder = 5
-    ExplicitTop = 359
+    ExplicitTop = 352
+    ExplicitWidth = 319
     object DBContactText: TDBText
       Left = 67
       Top = 3
@@ -308,7 +312,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     end
   end
   object GoToGrpBox: TGroupBox
-    Left = 341
+    Left = 335
     Top = 8
     Width = 97
     Height = 54
@@ -316,6 +320,7 @@ object PBLUCContaFrm: TPBLUCContaFrm
     Caption = 'Go To'
     ParentBackground = False
     TabOrder = 6
+    ExplicitLeft = 329
     object EventsBitBtn: TBitBtn
       Left = 7
       Top = 21

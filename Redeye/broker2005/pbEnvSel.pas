@@ -1,16 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Environment Selection
-
-VSS Info:
-$Header: /PBL D5/PBEnvSel.pas 2     18/09/:0 10:51a Andrewh $
-$History: PBEnvSel.pas $
- * 
-*******************************************************************************)
 unit PBEnvSel;
 
 interface

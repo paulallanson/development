@@ -3,27 +3,24 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
   Top = 202
   BorderStyle = bsDialog
   Caption = 'Customer Turnover selection'
-  ClientHeight = 301
-  ClientWidth = 484
+  ClientHeight = 340
+  ClientWidth = 499
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  DesignSize = (
-    484
-    301)
-  TextHeight = 13
+  TextHeight = 17
   object Label3: TLabel
     Left = 24
     Top = 235
-    Width = 36
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Sort by'
   end
   object GroupBox1: TGroupBox
@@ -46,8 +43,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object Label2: TLabel
       Left = 16
       Top = 66
-      Width = 81
-      Height = 13
+      Width = 92
+      Height = 17
       Caption = 'To Invoice Date:'
     end
     object DateToButton: TSpeedButton
@@ -74,8 +71,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object Label1: TLabel
       Left = 16
       Top = 23
-      Width = 95
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'From Invoice Date:'
     end
     object DateFromButton: TSpeedButton
@@ -103,7 +100,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       Left = 15
       Top = 82
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 1
       OnExit = DateToEditExit
@@ -112,15 +109,15 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       Left = 15
       Top = 39
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = DateFromEditExit
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 408
-    Top = 280
+    Left = 412
+    Top = 296
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -162,9 +159,9 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
   end
   object cbSort1: TComboBox
     Left = 24
-    Top = 249
+    Top = 254
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 3
     Items.Strings = (
@@ -175,8 +172,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'Name')
   end
   object PreviewReportBitBtn: TBitBtn
-    Left = 326
-    Top = 280
+    Left = 330
+    Top = 296
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -198,8 +195,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     OnClick = PreviewReportBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 22
-    Top = 280
+    Left = 26
+    Top = 296
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -211,7 +208,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Left = 278
     Top = 192
     Width = 50
-    Height = 22
+    Height = 27
     MaxValue = 99999
     MinValue = 0
     TabOrder = 6
@@ -219,8 +216,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
   end
   object chkbxExcludeCosts: TCheckBox
     Left = 200
-    Top = 256
-    Width = 185
+    Top = 261
+    Width = 241
     Height = 17
     Caption = 'exclude printing costs && profit'
     TabOrder = 8
@@ -249,16 +246,16 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 52
-      Height = 13
+      Top = 4
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -279,11 +276,10 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     end
   end
   object btnExcel: TBitBtn
-    Left = 228
-    Top = 280
+    Left = 236
+    Top = 295
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -342,8 +338,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 84
-    Top = 132
+    Left = 100
+    Top = 125
     Width = 289
     Height = 61
     ParentBackground = False
@@ -352,8 +348,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -430,8 +426,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 224
-    Top = 104
+    Left = 264
+    Top = 42
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -472,8 +468,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 136
-    Top = 8
+    Left = 338
+    Top = 50
     object qrySalesByInvCustomer: TIntegerField
       FieldName = 'Customer'
     end
@@ -529,8 +525,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ''
       ' '
       ' ')
-    Left = 48
-    Top = 120
+    Left = 372
+    Top = 110
     ParamData = <
       item
         Name = 'invoice_no'
@@ -550,8 +546,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 80
-    Top = 118
+    Left = 404
+    Top = 172
     ParamData = <
       item
         Name = 'PurchOrder'
@@ -610,8 +606,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 144
-    Top = 96
+    Left = 268
+    Top = 80
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -634,8 +630,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       ' '
       ' '
       ' ')
-    Left = 176
-    Top = 118
+    Left = 180
+    Top = 52
     ParamData = <
       item
         Name = 'Purch_Ord'
@@ -682,8 +678,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'WHERE Sales_Invoice = :Sales_Invoice'
       ' '
       ' ')
-    Left = 208
-    Top = 120
+    Left = 172
+    Top = 46
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -890,8 +886,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       'from Rep'
       'where Rep = :Rep'
       ' ')
-    Left = 312
-    Top = 9
+    Left = 318
+    Top = 11
     ParamData = <
       item
         Name = 'Rep'

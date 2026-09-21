@@ -17,7 +17,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     174)
   TextHeight = 17
   object DelLabel: TLabel
-    Left = 98
+    Left = 92
     Top = 140
     Width = 122
     Height = 17
@@ -29,6 +29,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitLeft = 98
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -88,7 +89,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 239
+    Left = 233
     Top = 136
     Width = 75
     Height = 25
@@ -162,11 +163,11 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
-    ExplicitLeft = 233
+    ExplicitLeft = 227
     ExplicitTop = 127
   end
   object CancelBitBtn: TBitBtn
-    Left = 319
+    Left = 313
     Top = 136
     Width = 75
     Height = 25
@@ -241,7 +242,7 @@ object PBMaintPrdTypCapFrm: TPBMaintPrdTypCapFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    ExplicitLeft = 313
+    ExplicitLeft = 307
     ExplicitTop = 127
   end
   object GetLastSQL: TFDQuery

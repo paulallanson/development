@@ -1,6 +1,7 @@
 object PBAutoPODM: TPBAutoPODM
-  Height = 479
-  Width = 741
+  Height = 599
+  Width = 926
+  PixelsPerInch = 120
   object GetLinesNotPOedSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
@@ -8,8 +9,8 @@ object PBAutoPODM: TPBAutoPODM
       'From EnquiryLine'
       'Where (Enquiry = :Enquiry) and'
       '      (Enquiry_Status < 90)')
-    Left = 48
-    Top = 8
+    Left = 60
+    Top = 10
     ParamData = <
       item
         Name = 'Enquiry'
@@ -21,8 +22,8 @@ object PBAutoPODM: TPBAutoPODM
       'Update Enquiry'
       'Set Enquiry_Status = :Enquiry_Status'
       'Where (Enquiry = :Enquiry)')
-    Left = 48
-    Top = 56
+    Left = 60
+    Top = 70
     ParamData = <
       item
         Name = 'Enquiry_Status'
@@ -46,8 +47,8 @@ object PBAutoPODM: TPBAutoPODM
       'From Narrative_Line'
       'Where (Narrative = :Narrative)'
       '')
-    Left = 48
-    Top = 104
+    Left = 60
+    Top = 130
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -68,8 +69,8 @@ object PBAutoPODM: TPBAutoPODM
       '    SelectedBranch_No = :SelectedBranch_No'
       'Where (Enquiry = :Enquiry) and'
       '      (Line = :Line)')
-    Left = 48
-    Top = 152
+    Left = 60
+    Top = 190
     ParamData = <
       item
         Name = 'SelectedSupplier'
@@ -95,8 +96,8 @@ object PBAutoPODM: TPBAutoPODM
       '      (Branch_No = :Branch_No)'
       'Order By Additional_Charge'
       '')
-    Left = 48
-    Top = 202
+    Left = 60
+    Top = 253
     ParamData = <
       item
         Name = 'Enquiry'
@@ -193,8 +194,8 @@ object PBAutoPODM: TPBAutoPODM
       ' '
       ' '
       ' ')
-    Left = 132
-    Top = 26
+    Left = 165
+    Top = 33
     ParamData = <
       item
         Name = 'Enquiry'
@@ -207,8 +208,8 @@ object PBAutoPODM: TPBAutoPODM
   end
   object QtysSRC: TDataSource
     DataSet = GetQtysSQL
-    Left = 132
-    Top = 82
+    Left = 165
+    Top = 103
   end
   object GetProofStatSQL: TFDQuery
     ConnectionName = 'PB'
@@ -216,13 +217,13 @@ object PBAutoPODM: TPBAutoPODM
       'Select Proof_Status, Description'
       'From Proof_Status'
       'Order By Proof_Status')
-    Left = 132
-    Top = 134
+    Left = 165
+    Top = 168
   end
   object ProofStatSRC: TDataSource
     DataSet = GetProofStatSQL
-    Left = 132
-    Top = 182
+    Left = 165
+    Top = 228
   end
   object GetContactSQL: TFDQuery
     ConnectionName = 'PB'
@@ -232,8 +233,8 @@ object PBAutoPODM: TPBAutoPODM
       'Branch_no = :Branch_no and'
       '((inactive = NULL) or (inactive = '#39'N'#39'))'
       'Order by Name')
-    Left = 198
-    Top = 11
+    Left = 248
+    Top = 14
     ParamData = <
       item
         Name = 'Supplier'
@@ -246,26 +247,26 @@ object PBAutoPODM: TPBAutoPODM
   end
   object ContactSRC: TDataSource
     DataSet = GetContactSQL
-    Left = 198
-    Top = 59
+    Left = 248
+    Top = 74
   end
   object GetVATSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From Vat_Code'
       'Order By Vat_Code')
-    Left = 200
-    Top = 172
+    Left = 250
+    Top = 215
   end
   object VATSRC: TDataSource
     DataSet = GetVATSQL
-    Left = 200
-    Top = 116
+    Left = 250
+    Top = 145
   end
   object InvMethSRC: TDataSource
     DataSet = GetInvMethSQL
-    Left = 136
-    Top = 284
+    Left = 170
+    Top = 355
   end
   object GetInvMethSQL: TFDQuery
     ConnectionName = 'PB'
@@ -273,8 +274,8 @@ object PBAutoPODM: TPBAutoPODM
       'Select *'
       'From Purch_Ord_Inv_Method'
       'Order By Description')
-    Left = 136
-    Top = 232
+    Left = 170
+    Top = 290
   end
   object GetEnqSQL: TFDQuery
     ConnectionName = 'PB'
@@ -315,8 +316,8 @@ object PBAutoPODM: TPBAutoPODM
       ' '
       ' '
       ' ')
-    Left = 48
-    Top = 248
+    Left = 60
+    Top = 310
     ParamData = <
       item
         Name = 'Enquiry'
@@ -354,8 +355,8 @@ object PBAutoPODM: TPBAutoPODM
         '      (Purch_Ord_Head_Status.Purch_Ord_Head_Status = Purchase_Or' +
         'der.Purch_Ord_Head_Status)'
       'Order By Purchase_Order.Purchase_Order desc')
-    Left = 48
-    Top = 304
+    Left = 60
+    Top = 380
     ParamData = <
       item
         Name = 'Supplier'
@@ -370,8 +371,8 @@ object PBAutoPODM: TPBAutoPODM
       'SELECT * FROM EnquiryLinePart_Detail'
       'WHERE Enquiry = :Enquiry AND Line = :Line'
       'ORDER BY Part_No')
-    Left = 212
-    Top = 226
+    Left = 265
+    Top = 283
     ParamData = <
       item
         Name = 'Enquiry'
@@ -388,8 +389,8 @@ object PBAutoPODM: TPBAutoPODM
       'SELECT * FROM EnquiryLineAdditionl_Dtls'
       'WHERE Enquiry = :Enquiry AND Line = :Line'
       'ORDER BY Additional_Details')
-    Left = 220
-    Top = 282
+    Left = 275
+    Top = 353
     ParamData = <
       item
         Name = 'Enquiry'
@@ -462,8 +463,8 @@ object PBAutoPODM: TPBAutoPODM
         'ntity) and'
       '        (Supplier.VAT_Code_Def *= VAT_Code.VAT_Code)'
       'Order By Supplier_EnquiryQty.Quantity')
-    Left = 272
-    Top = 32
+    Left = 340
+    Top = 40
     ParamData = <
       item
         Name = 'Enquiry'
@@ -479,8 +480,8 @@ object PBAutoPODM: TPBAutoPODM
       'From Product_TypeQuestion'
       'Where Product_Type = :Product_Type'
       'Order By Sequence_Reference')
-    Left = 296
-    Top = 96
+    Left = 370
+    Top = 120
     ParamData = <
       item
         Name = 'Product_Type'
@@ -499,8 +500,8 @@ object PBAutoPODM: TPBAutoPODM
       ' '
       ' '
       ' ')
-    Left = 296
-    Top = 152
+    Left = 370
+    Top = 190
     ParamData = <
       item
         Name = 'Enquiry'
@@ -523,8 +524,8 @@ object PBAutoPODM: TPBAutoPODM
     SQL.Strings = (
       'select * from Price_unit'
       'where Price_unit = :Price_Unit')
-    Left = 296
-    Top = 224
+    Left = 370
+    Top = 280
     ParamData = <
       item
         Name = 'Price_Unit'
@@ -534,8 +535,8 @@ object PBAutoPODM: TPBAutoPODM
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from rep where rep = :rep;')
-    Left = 296
-    Top = 280
+    Left = 370
+    Top = 350
     ParamData = <
       item
         Name = 'rep'
@@ -555,8 +556,8 @@ object PBAutoPODM: TPBAutoPODM
       '  customer.customer = customer_branch.customer'
       'where customer_branch.customer = :customer and'
       ' customer_branch.branch_no = :branch')
-    Left = 280
-    Top = 328
+    Left = 350
+    Top = 410
     ParamData = <
       item
         Name = 'customer'
@@ -569,15 +570,15 @@ object PBAutoPODM: TPBAutoPODM
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company')
-    Left = 384
-    Top = 16
+    Left = 480
+    Top = 20
   end
   object qryJobTypes: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from job_type where job_type = :job_type;')
-    Left = 384
-    Top = 68
+    Left = 480
+    Top = 85
     ParamData = <
       item
         Name = 'job_type'

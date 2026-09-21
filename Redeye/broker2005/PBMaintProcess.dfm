@@ -7,7 +7,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,17 +15,17 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
   DesignSize = (
     442
     377)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 117
-    Top = 343
-    Width = 109
-    Height = 13
+    Top = 338
+    Width = 132
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -33,8 +33,8 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
   object Label1: TLabel
     Left = 15
     Top = 12
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object OKBitBtn: TBitBtn
@@ -113,6 +113,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = OKBitBtnClick
+    ExplicitTop = 326
   end
   object CancelBitBtn: TBitBtn
     Left = 333
@@ -190,6 +191,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = CancelBitBtnClick
+    ExplicitTop = 326
   end
   object PageControl1: TPageControl
     Left = 8
@@ -216,83 +218,137 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         object Label2: TLabel
           Left = 15
           Top = 160
-          Width = 90
-          Height = 13
+          Width = 100
+          Height = 17
           Caption = 'Default Price Unit'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object Label3: TLabel
           Left = 15
           Top = 129
-          Width = 66
-          Height = 13
+          Width = 76
+          Height = 17
           Caption = 'Product Type'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object Label4: TLabel
           Left = 15
           Top = 101
-          Width = 89
-          Height = 13
+          Width = 102
+          Height = 17
           Caption = 'Product Category'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object Label6: TLabel
           Left = 15
           Top = 70
-          Width = 68
-          Height = 13
+          Width = 80
+          Height = 17
           Caption = 'Process Code'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object Label8: TLabel
           Left = 15
           Top = 16
-          Width = 74
-          Height = 13
+          Width = 86
+          Height = 17
           Caption = 'Process Group'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object Label11: TLabel
           Left = 15
           Top = 43
-          Width = 90
-          Height = 13
+          Width = 101
+          Height = 17
           Caption = 'Short Description'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object dblkpPriceUnit: TDBLookupComboBox
-          Left = 110
+          Left = 123
           Top = 156
           Width = 107
-          Height = 21
+          Height = 25
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           KeyField = 'price_unit'
           ListField = 'description'
           ListSource = dtsPriceUnit
+          ParentFont = False
           TabOrder = 6
           OnClick = CheckOK
         end
         object dblkpProductCat: TDBLookupComboBox
-          Left = 110
+          Left = 123
           Top = 97
           Width = 150
-          Height = 21
+          Height = 25
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           KeyField = 'category'
           ListField = 'description'
           ListSource = dtsCategory
+          ParentFont = False
           TabOrder = 3
         end
         object edtProductType: TEdit
-          Left = 110
+          Left = 123
           Top = 126
           Width = 211
-          Height = 21
+          Height = 25
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           ReadOnly = True
           TabOrder = 4
         end
         object btnProdType: TButton
-          Left = 332
+          Left = 345
           Top = 124
           Width = 25
           Height = 25
           Caption = '...'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
@@ -300,24 +356,36 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
           OnClick = btnProdTypeClick
         end
         object ShortEdit: TEdit
-          Left = 110
+          Left = 123
           Top = 66
           Width = 83
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           MaxLength = 15
+          ParentFont = False
           TabOrder = 2
           Text = 'SHORTEDIT'
           OnChange = CheckOK
         end
         object dblkpProcessGroup: TDBLookupComboBox
-          Left = 110
+          Left = 123
           Top = 12
           Width = 150
-          Height = 21
+          Height = 25
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           KeyField = 'Process_Group'
           ListField = 'Process_Group_description'
           ListSource = dtsprocessGroup
+          ParentFont = False
           TabOrder = 0
           OnClick = CheckOK
         end
@@ -327,6 +395,12 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
           Width = 226
           Height = 17
           Caption = 'Default this process to use'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 7
         end
         object chkbxInactive: TCheckBox
@@ -335,14 +409,26 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
           Width = 218
           Height = 17
           Caption = 'Process is inactive'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 8
         end
         object edtShortDescription: TEdit
-          Left = 110
+          Left = 123
           Top = 39
           Width = 155
-          Height = 21
+          Height = 25
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
           MaxLength = 20
+          ParentFont = False
           TabOrder = 1
           OnChange = CheckOK
         end
@@ -354,15 +440,15 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       object Label7: TLabel
         Left = 8
         Top = 116
-        Width = 67
-        Height = 13
+        Width = 79
+        Height = 17
         Caption = 'Number Type'
       end
       object Label10: TLabel
         Left = 8
         Top = 84
-        Width = 118
-        Height = 13
+        Width = 139
+        Height = 17
         Caption = 'Paper Prompt Narrative'
       end
       object chkbxSimplexDuplex: TCheckBox
@@ -374,10 +460,10 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         TabOrder = 0
       end
       object dblkpNumberType: TDBLookupComboBox
-        Left = 136
+        Left = 151
         Top = 112
         Width = 145
-        Height = 21
+        Height = 25
         KeyField = 'Number_Type'
         ListField = 'Number_Type_Description'
         ListSource = dtsNumberType
@@ -392,10 +478,10 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         TabOrder = 2
       end
       object edtPaperPrompt: TEdit
-        Left = 136
+        Left = 151
         Top = 80
         Width = 201
-        Height = 21
+        Height = 25
         MaxLength = 20
         TabOrder = 3
         Text = 'edtPaperPrompt'
@@ -407,15 +493,15 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       object Label5: TLabel
         Left = 0
         Top = 8
-        Width = 99
-        Height = 13
+        Width = 114
+        Height = 17
         Caption = 'Current Paper Sizes'
       end
       object Label9: TLabel
         Left = 256
         Top = 8
-        Width = 121
-        Height = 13
+        Width = 139
+        Height = 17
         Caption = 'Unassigned Paper Sizes'
       end
       object lstbxMembers: TListBox
@@ -423,7 +509,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         Top = 28
         Width = 145
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 0
         OnClick = lstbxMembersClick
@@ -434,7 +520,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 1
         Visible = False
       end
@@ -491,7 +577,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         Top = 28
         Width = 145
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         MultiSelect = True
         TabOrder = 4
         OnClick = lstbxNonMembersClick
@@ -502,7 +588,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
         Top = 28
         Width = 41
         Height = 150
-        ItemHeight = 13
+        ItemHeight = 17
         TabOrder = 5
         Visible = False
       end
@@ -540,7 +626,7 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
     Left = 86
     Top = 8
     Width = 252
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 3
     Text = 'DescrEdit'
@@ -570,8 +656,8 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       'Select Max(Process)+1, :GUID'
       'From Process'
       ' ')
-    Left = 344
-    Top = 16
+    Left = 80
+    Top = 160
     ParamData = <
       item
         Name = 'GUID'
@@ -601,8 +687,8 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       'Where (Process = :Process) '
       ''
       ' ')
-    Left = 288
-    Top = 16
+    Left = 256
+    Top = 160
     ParamData = <
       item
         Name = 'Process_Description'
@@ -681,8 +767,8 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       'Where'
       '(Product_Type = :Product_Type) '
       '')
-    Left = 240
-    Top = 16
+    Left = 176
+    Top = 168
     ParamData = <
       item
         Name = 'Description'
@@ -709,26 +795,26 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
     SQL.Strings = (
       'select * from price_unit'
       'order by description')
-    Left = 280
-    Top = 64
+    Left = 136
+    Top = 200
   end
   object qryCategory: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
       'select * from category'
       'order by description')
-    Left = 280
-    Top = 112
+    Left = 288
+    Top = 192
   end
   object dtsPriceUnit: TDataSource
     DataSet = qryPriceUnit
-    Left = 328
-    Top = 64
+    Left = 336
+    Top = 192
   end
   object dtsCategory: TDataSource
     DataSet = qryCategory
-    Left = 320
-    Top = 112
+    Left = 248
+    Top = 192
   end
   object qryProcessGroup: TFDQuery
     ConnectionName = 'PB'
@@ -741,8 +827,8 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
   end
   object dtsprocessGroup: TDataSource
     DataSet = qryProcessGroup
-    Left = 192
-    Top = 24
+    Left = 80
+    Top = 248
   end
   object qryMembers: TFDQuery
     ConnectionName = 'pb'
@@ -754,8 +840,8 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       'where Process = :Process and'
       'Process_Paper_Size.Paper_Size = Paper_Size.Paper_Size'
       'order by Paper_Size.Description')
-    Left = 280
-    Top = 176
+    Left = 216
+    Top = 216
     ParamData = <
       item
         Name = 'Process'
@@ -782,8 +868,8 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
     SQL.Strings = (
       'delete from Process_Paper_Size'
       'where Process = :Process')
-    Left = 400
-    Top = 120
+    Left = 392
+    Top = 176
     ParamData = <
       item
         Name = 'Process'
@@ -822,12 +908,12 @@ object PBMaintProcessFrm: TPBMaintProcessFrm
       'select * '
       'from Process_Number_Type'
       'Order By Number_Type_Description')
-    Left = 396
-    Top = 16
+    Left = 116
+    Top = 168
   end
   object dtsNumberType: TDataSource
     DataSet = qryNumberType
-    Left = 396
-    Top = 64
+    Left = 324
+    Top = 160
   end
 end

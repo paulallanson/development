@@ -3,26 +3,26 @@ object PBMaintSuppChargesFrm: TPBMaintSuppChargesFrm
   Top = 189
   BorderStyle = bsDialog
   Caption = 'Maintain Supplier Charges'
-  ClientHeight = 146
-  ClientWidth = 400
+  ClientHeight = 159
+  ClientWidth = 415
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 72
     Top = 117
-    Width = 145
-    Height = 15
+    Width = 166
+    Height = 16
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -186,7 +186,7 @@ object PBMaintSuppChargesFrm: TPBMaintSuppChargesFrm
     Height = 99
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -195,29 +195,29 @@ object PBMaintSuppChargesFrm: TPBMaintSuppChargesFrm
     object Label9: TLabel
       Left = 8
       Top = 20
-      Width = 30
-      Height = 13
+      Width = 33
+      Height = 17
       Caption = 'Detail'
     end
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 23
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'Cost'
     end
     object Label2: TLabel
       Left = 216
       Top = 44
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Price'
     end
     object Label4: TLabel
       Left = 8
       Top = 72
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Vat Rate'
     end
     object CostMemo: TMemo
@@ -247,7 +247,7 @@ object PBMaintSuppChargesFrm: TPBMaintSuppChargesFrm
       Left = 88
       Top = 16
       Width = 265
-      Height = 21
+      Height = 25
       MaxLength = 50
       TabOrder = 0
       OnChange = CheckOK
@@ -256,7 +256,7 @@ object PBMaintSuppChargesFrm: TPBMaintSuppChargesFrm
       Left = 88
       Top = 69
       Width = 89
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Vat_Rate'
       ListSource = dtsVatCode
@@ -269,8 +269,8 @@ object PBMaintSuppChargesFrm: TPBMaintSuppChargesFrm
       'select max(Charge_no) as Last_Charge'
       'from Supplier_Charge'
       'where Supplier = :Supplier')
-    Left = 40
-    Top = 20
+    Left = 250
+    Top = 49
     ParamData = <
       item
         Name = 'Supplier'

@@ -4,28 +4,28 @@ object PBMaintWOrderStatusFrm: TPBMaintWOrderStatusFrm
   BorderStyle = bsDialog
   Caption = 'Set Works Instruction Status'
   ClientHeight = 121
-  ClientWidth = 469
+  ClientWidth = 367
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 24
-    Width = 58
-    Height = 13
+    Width = 65
+    Height = 17
     Caption = 'New Status'
   end
   object dblkpWOStatus: TDBLookupComboBox
     Left = 104
     Top = 20
     Width = 185
-    Height = 21
+    Height = 25
     KeyField = 'Works_Order_Status'
     ListField = 'Works_Order_Status_Descr'
     ListSource = dtsWOStatus
@@ -59,12 +59,12 @@ object PBMaintWOrderStatusFrm: TPBMaintWOrderStatusFrm
       'FROM Works_Order_Status'
       'WHERE ((inactive = '#39'N'#39') or (inactive is NULL))'
       'ORDER BY Works_Order_Status')
-    Left = 328
-    Top = 16
+    Left = 18
+    Top = 52
   end
   object dtsWOStatus: TDataSource
     DataSet = qryWOStatus
-    Left = 384
-    Top = 16
+    Left = 96
+    Top = 52
   end
 end

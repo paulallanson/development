@@ -8,7 +8,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -19,7 +19,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
   DesignSize = (
     410
     316)
-  TextHeight = 13
+  TextHeight = 17
   object POGroupBox: TGroupBox
     Left = 8
     Top = 0
@@ -30,71 +30,71 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     object Label1: TLabel
       Left = 8
       Top = 44
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object lblCustomer: TLabel
       Left = 96
       Top = 44
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'lblCustomer'
     end
     object lblDeliveryto: TLabel
       Left = 96
       Top = 65
-      Width = 64
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'lblDeliveryto'
     end
     object Label2: TLabel
       Left = 8
       Top = 65
-      Width = 57
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Delivery to:'
     end
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 62
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Sales Order:'
     end
     object lblSalesOrder: TLabel
       Left = 96
       Top = 16
-      Width = 69
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'lblSalesOrder'
     end
     object lblOrderDate: TLabel
       Left = 304
       Top = 16
-      Width = 67
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'lblOrderDate'
     end
     object Label7: TLabel
       Left = 232
       Top = 16
-      Width = 60
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Order Date:'
     end
     object Label8: TLabel
       Left = 8
       Top = 96
-      Width = 72
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'Customer Ref:'
     end
     object lblCustomerRef: TLabel
       Left = 96
       Top = 96
-      Width = 79
-      Height = 13
+      Width = 89
+      Height = 17
       Caption = 'lblCustomerRef'
     end
   end
@@ -108,29 +108,29 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     object Label9: TLabel
       Left = 8
       Top = 24
-      Width = 70
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'Delivery Date:'
     end
     object Label5: TLabel
       Left = 9
       Top = 52
-      Width = 65
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'No. of boxes'
     end
     object Label4: TLabel
-      Left = 218
+      Left = 210
       Top = 52
-      Width = 102
-      Height = 13
+      Width = 117
+      Height = 17
       Caption = 'Start at box number'
     end
     object DeliveryDateEdit: TEdit
       Left = 96
       Top = 16
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'DeliveryDateEdit'
       OnChange = DeliveryDateEditChange
@@ -162,7 +162,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
       Left = 96
       Top = 47
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 999
       MinValue = 1
       TabOrder = 2
@@ -172,7 +172,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
       Left = 331
       Top = 47
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 9999
       MinValue = 1
       TabOrder = 3
@@ -195,6 +195,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 262
   end
   object PreviewBitBtn: TBitBtn
     Left = 144
@@ -226,6 +227,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     ParentFont = False
     TabOrder = 3
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 262
   end
   object PrintBitBtn: TBitBtn
     Left = 232
@@ -258,6 +260,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     ParentFont = False
     TabOrder = 4
     OnClick = PrintBitBtnClick
+    ExplicitTop = 262
   end
   object GroupBox5: TGroupBox
     Left = 8
@@ -267,17 +270,17 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     ParentBackground = False
     TabOrder = 5
     object Label12: TLabel
-      Left = 56
+      Left = 47
       Top = 20
-      Width = 56
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Label Logo'
     end
     object dblkpLogos: TDBLookupComboBox
       Left = 120
       Top = 16
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'ID'
       ListField = 'Logo_Name'
       ListSource = dtsLogos

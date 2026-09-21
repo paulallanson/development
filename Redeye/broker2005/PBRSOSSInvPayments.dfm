@@ -3,46 +3,47 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   Top = 40
   Caption = 'Sales Invoice Outstanding Payments'
   ClientHeight = 412
-  ClientWidth = 698
+  ClientWidth = 736
   Color = clBtnFace
   Constraints.MinHeight = 450
   Constraints.MinWidth = 710
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 698
+    Width = 736
     Height = 121
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 692
     object Label3: TLabel
       Left = 8
       Top = 72
-      Width = 59
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 176
       Top = 72
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'then sort by'
     end
     object rgCustomer: TRadioGroup
       Left = 8
       Top = 5
       Width = 145
-      Height = 60
+      Height = 65
       Caption = 'By Customer'
       ItemIndex = 0
       Items.Strings = (
@@ -54,7 +55,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
     end
     object pnlCustSearch: TPanel
       Left = 160
-      Top = 8
+      Top = 13
       Width = 305
       Height = 57
       ParentBackground = False
@@ -63,15 +64,15 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 1
-        Width = 94
-        Height = 13
+        Width = 108
+        Height = 17
         Caption = 'Customer / Branch'
       end
       object edtCustomer: TEdit
         Left = 8
         Top = 17
         Width = 257
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -92,16 +93,16 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       end
     end
     object chkbxPaid: TCheckBox
-      Left = 480
+      Left = 510
       Top = 8
-      Width = 153
+      Width = 178
       Height = 17
       Caption = 'Show fully paid invoices'
       TabOrder = 2
       OnClick = chkbxPaidClick
     end
     object grpbxPayments: TGroupBox
-      Left = 480
+      Left = 504
       Top = 32
       Width = 217
       Height = 81
@@ -112,15 +113,15 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       object Label1: TLabel
         Left = 12
         Top = 24
-        Width = 56
-        Height = 13
+        Width = 64
+        Height = 17
         Caption = 'Date From:'
       end
       object Label2: TLabel
         Left = 12
         Top = 52
-        Width = 42
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Date To:'
       end
       object DateFromButton: TSpeedButton
@@ -169,7 +170,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
         Left = 79
         Top = 16
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 0
         OnExit = DateFromEditExit
@@ -178,7 +179,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
         Left = 79
         Top = 48
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 1
         OnExit = DateToEditExit
@@ -188,7 +189,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Left = 8
       Top = 90
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 4
       OnChange = cbSort1Change
@@ -202,7 +203,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Left = 176
       Top = 90
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 5
       OnChange = cbSort1Change
@@ -215,7 +216,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
     object chkbxAllUnpaid: TCheckBox
       Left = 328
       Top = 92
-      Width = 145
+      Width = 170
       Height = 17
       Caption = 'Show all unpaid invoices'
       TabOrder = 6
@@ -225,11 +226,13 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   object Panel2: TPanel
     Left = 0
     Top = 356
-    Width = 698
+    Width = 736
     Height = 37
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 347
+    ExplicitWidth = 692
     object Panel3: TPanel
       Left = 1
       Top = 1
@@ -292,7 +295,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       end
     end
     object Panel4: TPanel
-      Left = 412
+      Left = 450
       Top = 1
       Width = 285
       Height = 35
@@ -300,6 +303,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 406
       DesignSize = (
         285
         35)
@@ -342,7 +346,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 121
-    Width = 698
+    Width = 736
     Height = 235
     Align = alClient
     DataSource = dtsReport
@@ -430,7 +434,7 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 393
-    Width = 698
+    Width = 736
     Height = 19
     Panels = <
       item
@@ -442,6 +446,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 384
+    ExplicitWidth = 692
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

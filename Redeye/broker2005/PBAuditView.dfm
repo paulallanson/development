@@ -17,7 +17,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     660)
   TextHeight = 17
   object CountLabel: TLabel
-    Left = 638
+    Left = 632
     Top = 520
     Width = 78
     Height = 17
@@ -28,7 +28,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     ExplicitTop = 407
   end
   object SequenceLabel: TLabel
-    Left = 638
+    Left = 632
     Top = 543
     Width = 78
     Height = 17
@@ -41,7 +41,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
   object DetsDBGrid: TDBGrid
     Left = 15
     Top = 8
-    Width = 714
+    Width = 708
     Height = 497
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsDS
@@ -92,17 +92,16 @@ object PBAuditViewFrm: TPBAuditViewFrm
   object GroupBox1: TGroupBox
     Left = 8
     Top = 520
-    Width = 129
+    Width = 154
     Height = 118
     Anchors = [akLeft, akBottom]
     Caption = 'Include'
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 407
     object ProgMoveCheckBox: TCheckBox
       Left = 13
       Top = 24
-      Width = 113
+      Width = 138
       Height = 17
       Caption = 'Program Movement'
       Checked = True
@@ -139,14 +138,13 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object GroupBox2: TGroupBox
-    Left = 143
+    Left = 168
     Top = 520
-    Width = 258
+    Width = 242
     Height = 118
     Anchors = [akLeft, akBottom]
     Caption = 'Users'
     TabOrder = 2
-    ExplicitTop = 407
     object UsersRadioGroup: TRadioGroup
       Left = 8
       Top = 16
@@ -184,7 +182,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Caption = 'Date From'
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 407
+    ExplicitTop = 511
     object DateFromDateTimePicker: TDateTimePicker
       Left = 8
       Top = 22
@@ -214,7 +212,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Caption = 'Date To'
     ParentBackground = False
     TabOrder = 4
-    ExplicitTop = 468
+    ExplicitTop = 572
     object DateToDateTimePicker: TDateTimePicker
       Left = 8
       Top = 20
@@ -236,7 +234,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object CloseBitBtn: TBitBtn
-    Left = 638
+    Left = 632
     Top = 580
     Width = 75
     Height = 25
@@ -244,11 +242,11 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 5
-    ExplicitLeft = 627
-    ExplicitTop = 467
+    ExplicitLeft = 626
+    ExplicitTop = 571
   end
   object btnExcel: TBitBtn
-    Left = 638
+    Left = 632
     Top = 611
     Width = 75
     Height = 25
@@ -300,8 +298,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 6
     OnClick = btnExcelClick
-    ExplicitLeft = 627
-    ExplicitTop = 498
+    ExplicitLeft = 626
+    ExplicitTop = 602
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'

@@ -165,7 +165,7 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       OnKeyPress = edtSalesInvNoKeyPress
     end
     object GroupBox2: TGroupBox
-      Left = 628
+      Left = 622
       Top = 1
       Width = 105
       Height = 76
@@ -173,7 +173,7 @@ object PBLUSalesInvoiceCNfrm: TPBLUSalesInvoiceCNfrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 622
+      ExplicitLeft = 616
       object btnSelect: TBitBtn
         Left = 14
         Top = 16

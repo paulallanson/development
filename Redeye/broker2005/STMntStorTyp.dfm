@@ -7,21 +7,21 @@ object STMntStorTypFrm: TSTMntStorTypFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 70
-    Top = 166
-    Width = 145
-    Height = 15
+    Top = 170
+    Width = 166
+    Height = 16
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -186,7 +186,7 @@ object STMntStorTypFrm: TSTMntStorTypFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -194,12 +194,12 @@ object STMntStorTypFrm: TSTMntStorTypFrm
     object Label5: TLabel
       Left = 43
       Top = 28
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -207,15 +207,15 @@ object STMntStorTypFrm: TSTMntStorTypFrm
     object ReplenLabel: TLabel
       Left = 128
       Top = 108
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Store'
     end
     object NameEdit: TEdit
       Left = 93
       Top = 25
       Width = 275
-      Height = 21
+      Height = 25
       MaxLength = 20
       TabOrder = 0
       OnChange = NameEditChange
@@ -237,7 +237,7 @@ object STMntStorTypFrm: TSTMntStorTypFrm
       Left = 168
       Top = 104
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
       ListSource = StoresDataSource
@@ -356,12 +356,12 @@ object STMntStorTypFrm: TSTMntStorTypFrm
       'Select Part_Store, Part_Store_Name'
       'From Part_Store'
       'Order By Part_Store_Name')
-    Left = 200
-    Top = 108
+    Left = 274
+    Top = 31
   end
   object StoresDataSource: TDataSource
     DataSet = GetStoreSQL
-    Left = 280
-    Top = 108
+    Left = 334
+    Top = 39
   end
 end

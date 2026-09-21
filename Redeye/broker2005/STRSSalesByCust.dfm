@@ -2,32 +2,32 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
   Left = 73
   Top = 127
   Caption = 'Sales By Customer Report '
-  ClientHeight = 453
-  ClientWidth = 691
+  ClientHeight = 483
+  ClientWidth = 750
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 650
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DetsDBGrid: TDBGrid
     Left = 0
-    Top = 245
-    Width = 691
-    Height = 168
+    Top = 273
+    Width = 750
+    Height = 170
     Align = alClient
     DataSource = DmLookupSOrd.dtsDetails
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -35,7 +35,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -113,17 +113,19 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
   end
   object pnlCustProd: TPanel
     Left = 0
-    Top = 413
-    Width = 691
+    Top = 443
+    Width = 750
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 404
+    ExplicitWidth = 685
     DesignSize = (
-      691
+      750
       40)
     object CancelBitBtn: TBitBtn
-      Left = 601
+      Left = 654
       Top = 8
       Width = 72
       Height = 25
@@ -131,16 +133,17 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
+      ExplicitLeft = 589
     end
     object PreviewBitBtn: TBitBtn
-      Left = 427
+      Left = 480
       Top = 8
       Width = 76
       Height = 25
@@ -148,7 +151,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = 'Pre&view'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -168,9 +171,10 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 415
     end
     object PrintBitBtn: TBitBtn
-      Left = 518
+      Left = 571
       Top = 8
       Width = 72
       Height = 25
@@ -178,7 +182,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = '&Print'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -198,6 +202,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 506
     end
     object btbtnFax: TBitBtn
       Left = 9
@@ -207,7 +212,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = '&Fax'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -236,7 +241,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = '&Email'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -258,7 +263,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       OnClick = btbtnEmailClick
     end
     object btnExcel: TBitBtn
-      Left = 335
+      Left = 388
       Top = 8
       Width = 75
       Height = 25
@@ -309,48 +314,49 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 5
       OnClick = btnExcelClick
+      ExplicitLeft = 323
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 691
-    Height = 245
+    Width = 750
+    Height = 273
     Align = alTop
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      691
-      245)
+      750
+      273)
     object Label2: TLabel
-      Left = 497
+      Left = 544
       Top = 26
-      Width = 56
-      Height = 13
+      Width = 64
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Date From:'
     end
     object Label1: TLabel
-      Left = 497
+      Left = 544
       Top = 58
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Date To:'
-      ExplicitLeft = 513
     end
     object DateFromEdit: TEdit
-      Left = 561
+      Left = 614
       Top = 22
       Width = 81
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       MaxLength = 30
       TabOrder = 0
       OnExit = DateFromEditExit
+      ExplicitLeft = 555
     end
     object DateFromBitBtn: TBitBtn
-      Left = 649
+      Left = 702
       Top = 20
       Width = 25
       Height = 25
@@ -371,19 +377,20 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = DateFromBitBtnClick
+      ExplicitLeft = 637
     end
     object grpbxCust: TGroupBox
       Left = 8
-      Top = 83
+      Top = 90
       Width = 441
-      Height = 77
+      Height = 87
       Caption = 'Customer'
       TabOrder = 2
       object rdgrpCustAllorOne: TRadioGroup
-        Left = 8
-        Top = 14
-        Width = 113
-        Height = 58
+        Left = 3
+        Top = 16
+        Width = 125
+        Height = 65
         ItemIndex = 0
         Items.Strings = (
           'All Customers'
@@ -396,7 +403,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
         Left = 134
         Top = 20
         Width = 257
-        Height = 21
+        Height = 25
         TabStop = False
         Color = clBtnFace
         MaxLength = 30
@@ -433,16 +440,16 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
     end
     object grpbxProduct: TGroupBox
       Left = 8
-      Top = 161
+      Top = 179
       Width = 441
-      Height = 77
+      Height = 87
       Caption = 'Product'
       TabOrder = 3
       object rdgrpPartsAllorOne: TRadioGroup
         Left = 8
         Top = 14
-        Width = 113
-        Height = 58
+        Width = 120
+        Height = 65
         ItemIndex = 0
         Items.Strings = (
           'All Products'
@@ -455,7 +462,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
         Left = 134
         Top = 32
         Width = 257
-        Height = 21
+        Height = 25
         TabStop = False
         Color = clBtnFace
         MaxLength = 30
@@ -481,17 +488,18 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       end
     end
     object DateToEdit: TEdit
-      Left = 561
+      Left = 614
       Top = 54
       Width = 81
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       MaxLength = 30
       TabOrder = 4
       OnExit = DateToEditExit
+      ExplicitLeft = 555
     end
     object DateTobtbtn: TBitBtn
-      Left = 649
+      Left = 702
       Top = 52
       Width = 25
       Height = 25
@@ -512,9 +520,10 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = DateTobtbtnClick
+      ExplicitLeft = 637
     end
     object chkbxShowGoodsValue: TCheckBox
-      Left = 504
+      Left = 543
       Top = 118
       Width = 169
       Height = 17
@@ -524,7 +533,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       TabOrder = 6
     end
     object chkbxPageBreak: TCheckBox
-      Left = 504
+      Left = 543
       Top = 96
       Width = 169
       Height = 17
@@ -535,14 +544,14 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Left = 8
       Top = 4
       Width = 441
-      Height = 77
+      Height = 87
       Caption = 'Rep'
       TabOrder = 8
       object rdgrpRepAllorOne: TRadioGroup
-        Left = 8
-        Top = 14
-        Width = 113
-        Height = 58
+        Left = 3
+        Top = 15
+        Width = 125
+        Height = 65
         ItemIndex = 0
         Items.Strings = (
           'All Reps'
@@ -555,7 +564,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
         Left = 134
         Top = 32
         Width = 257
-        Height = 21
+        Height = 25
         TabStop = False
         Color = clBtnFace
         MaxLength = 30
@@ -581,8 +590,8 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       end
     end
     object pnlExportPrgrss: TPanel
-      Left = 200
-      Top = 171
+      Left = 208
+      Top = 139
       Width = 289
       Height = 61
       ParentBackground = False
@@ -591,8 +600,8 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Exporting...'
       end
       object prgbrExport: TProgressBar
@@ -615,7 +624,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Visible = False
     end
     object chkbxShowListPrices: TCheckBox
-      Left = 504
+      Left = 543
       Top = 140
       Width = 169
       Height = 17
@@ -624,9 +633,9 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
     end
   end
   object chkbxShowClientCodes: TCheckBox
-    Left = 504
+    Left = 544
     Top = 160
-    Width = 169
+    Width = 198
     Height = 17
     Caption = 'Show Customer Codes/Details'
     TabOrder = 3

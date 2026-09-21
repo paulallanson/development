@@ -3,50 +3,50 @@ object STPrtTransRecvFrm: TSTPrtTransRecvFrm
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Received Stock Details'
-  ClientHeight = 183
+  ClientHeight = 204
   ClientWidth = 305
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object BinLabel: TLabel
     Left = 8
     Top = 108
-    Width = 16
-    Height = 13
+    Width = 17
+    Height = 17
     Caption = 'Bin'
   end
   object QtyLabel: TLabel
     Left = 8
     Top = 12
-    Width = 60
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'No of Packs'
   end
   object Label2: TLabel
     Left = 8
     Top = 44
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Pack Cost'
   end
   object Label1: TLabel
     Left = 176
     Top = 12
-    Width = 20
-    Height = 13
+    Width = 23
+    Height = 17
     Caption = 'Size'
   end
   object BinEdit: TEdit
     Left = 64
     Top = 104
     Width = 129
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 0
   end

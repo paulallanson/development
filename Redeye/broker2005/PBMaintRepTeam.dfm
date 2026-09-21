@@ -3,26 +3,26 @@ object PBMaintRepTeamFrm: TPBMaintRepTeamFrm
   Top = 159
   BorderStyle = bsDialog
   Caption = 'Maintain Rep Team'
-  ClientHeight = 101
-  ClientWidth = 412
+  ClientHeight = 116
+  ClientWidth = 425
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 104
-    Top = 80
-    Width = 109
-    Height = 13
+    Top = 75
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,7 +30,7 @@ object PBMaintRepTeamFrm: TPBMaintRepTeamFrm
   object detsgrpbox: TGroupBox
     Left = 16
     Top = 8
-    Width = 385
+    Width = 401
     Height = 57
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -43,16 +43,28 @@ object PBMaintRepTeamFrm: TPBMaintRepTeamFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 58
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Team Name'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
     end
     object DescrEdit: TEdit
-      Left = 74
-      Top = 24
+      Left = 85
+      Top = 25
       Width = 303
-      Height = 21
+      Height = 25
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       MaxLength = 40
+      ParentFont = False
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = CheckOK
@@ -307,8 +319,8 @@ object PBMaintRepTeamFrm: TPBMaintRepTeamFrm
       'Select Rep_Team'
       'from Rep_Team'
       'Where Rep_Team_Name = :Rep_Team_Name ')
-    Left = 88
-    Top = 32
+    Left = 296
+    Top = 8
     ParamData = <
       item
         Name = 'Rep_Team_Name'

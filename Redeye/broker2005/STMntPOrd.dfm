@@ -9,24 +9,24 @@ object STMntPOrdFrm: TSTMntPOrdFrm
   Constraints.MinWidth = 810
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object TotLabel: TLabel
-    Left = 664
+    Left = 649
     Top = 429
-    Width = 97
-    Height = 15
+    Width = 112
+    Height = 16
     Alignment = taRightJustify
     Caption = 'Total Value:   0.00'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,27 +34,27 @@ object STMntPOrdFrm: TSTMntPOrdFrm
   object lblSuppOrderType: TLabel
     Left = 384
     Top = 448
-    Width = 3
-    Height = 13
+    Width = 4
+    Height = 17
     Visible = False
   end
   object Label7: TLabel
     Left = 8
-    Top = 376
-    Width = 76
-    Height = 13
+    Top = 375
+    Width = 88
+    Height = 17
     Caption = 'Extra Charges: '
   end
   object TotRecLabel: TLabel
-    Left = 664
+    Left = 649
     Top = 453
-    Width = 97
-    Height = 15
+    Width = 112
+    Height = 16
     Alignment = taRightJustify
     Caption = 'Total Value:   0.00'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -66,44 +66,44 @@ object STMntPOrdFrm: TSTMntPOrdFrm
     Height = 365
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
     object Label2: TLabel
-      Left = 32
+      Left = 38
       Top = 52
-      Width = 24
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Date'
     end
     object NoLabel: TLabel
       Left = 8
       Top = 20
-      Width = 48
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'Order No'
     end
     object Label5: TLabel
       Left = 400
       Top = 68
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label8: TLabel
       Left = 400
       Top = 95
-      Width = 69
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'Requested By'
     end
     object Label9: TLabel
       Left = 176
       Top = 20
-      Width = 74
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Date Required'
     end
     object pgDetails: TPageControl
@@ -119,7 +119,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
           Left = 0
           Top = 0
           Width = 753
-          Height = 211
+          Height = 207
           Align = alClient
           Columns = <
             item
@@ -161,6 +161,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
           ViewStyle = vsReport
           OnClick = LinesListViewClick
           OnDblClick = ChangePOLineClick
+          ExplicitHeight = 211
         end
       end
       object tsInvoices: TTabSheet
@@ -170,13 +171,13 @@ object STMntPOrdFrm: TSTMntPOrdFrm
           Left = 0
           Top = 0
           Width = 753
-          Height = 211
+          Height = 207
           Align = alClient
           DataSource = dtsGetSInvoice
           DrawingStyle = gdsGradient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -242,17 +243,17 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       end
     end
     object DateEdit: TEdit
-      Left = 64
+      Left = 71
       Top = 48
       Width = 81
-      Height = 21
+      Height = 25
       MaxLength = 30
       ReadOnly = True
       TabOrder = 1
       OnChange = SuppNameEditChange
     end
     object DateBitBtn: TBitBtn
-      Left = 152
+      Left = 159
       Top = 47
       Width = 25
       Height = 25
@@ -267,10 +268,10 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       OnClick = DateBitBtnClick
     end
     object OrdNoEdit: TEdit
-      Left = 64
+      Left = 71
       Top = 16
       Width = 81
-      Height = 21
+      Height = 25
       MaxLength = 30
       ReadOnly = True
       TabOrder = 0
@@ -286,15 +287,15 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       object Label4: TLabel
         Left = 8
         Top = 14
-        Width = 56
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Store From'
       end
       object StoreFromDBLookupComboBox: TDBLookupComboBox
         Left = 88
         Top = 14
         Width = 217
-        Height = 21
+        Height = 25
         KeyField = 'Part_Store'
         ListField = 'Part_Store_Name'
         ListSource = StoresFromDataSource
@@ -306,7 +307,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       Left = 504
       Top = 64
       Width = 241
-      Height = 21
+      Height = 25
       TabOrder = 7
       OnChange = DescrEditChange
     end
@@ -319,16 +320,16 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       TabOrder = 8
       object Label3: TLabel
         Left = 12
-        Top = 14
-        Width = 81
-        Height = 13
+        Top = 13
+        Width = 91
+        Height = 17
         Caption = 'Replenish Store'
       end
       object StoreDBLookupComboBox: TDBLookupComboBox
         Left = 112
-        Top = 10
+        Top = 9
         Width = 217
-        Height = 21
+        Height = 25
         KeyField = 'Part_Store'
         ListField = 'Part_Store_Name'
         ListSource = StoresDataSource
@@ -347,15 +348,15 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       object Label6: TLabel
         Left = 16
         Top = 8
-        Width = 109
-        Height = 13
+        Width = 126
+        Height = 17
         Caption = 'Direct Delivery Order:'
       end
       object lblSalesOrder: TLabel
         Left = 160
         Top = 8
-        Width = 69
-        Height = 13
+        Width = 79
+        Height = 17
         Caption = 'lblSalesOrder'
       end
     end
@@ -369,15 +370,15 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       object Label1: TLabel
         Left = 8
         Top = 17
-        Width = 43
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Supplier'
       end
       object SuppNameEdit: TEdit
         Left = 72
         Top = 13
         Width = 241
-        Height = 21
+        Height = 25
         MaxLength = 30
         ReadOnly = True
         TabOrder = 0
@@ -403,22 +404,22 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       Left = 504
       Top = 91
       Width = 241
-      Height = 21
+      Height = 25
       TabOrder = 10
       OnChange = DescrEditChange
     end
     object DateReqEdit: TEdit
-      Left = 256
-      Top = 16
+      Left = 268
+      Top = 14
       Width = 81
-      Height = 21
+      Height = 25
       MaxLength = 30
       ReadOnly = True
       TabOrder = 3
       OnChange = SuppNameEditChange
     end
     object BitBtn1: TBitBtn
-      Left = 344
+      Left = 355
       Top = 15
       Width = 25
       Height = 25
@@ -459,15 +460,17 @@ object STMntPOrdFrm: TSTMntPOrdFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 468
+    ExplicitWidth = 792
     object DelLabel: TLabel
       Left = 486
-      Top = 10
-      Width = 98
-      Height = 15
+      Top = 9
+      Width = 111
+      Height = 16
       Caption = 'Delete the order?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -663,6 +666,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       item
         Width = 50
       end>
+    ExplicitTop = 501
+    ExplicitWidth = 792
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1154,13 +1159,13 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       'From Part_Store'
       'Order By Part_Store_Name'
       ' ')
-    Left = 224
-    Top = 92
+    Left = 368
+    Top = 131
   end
   object StoresFromDataSource: TDataSource
     DataSet = GetStoresFromSQL
-    Left = 176
-    Top = 92
+    Left = 348
+    Top = 227
   end
   object GetReqdPOSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1366,8 +1371,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       ' '
       ' '
       ' ')
-    Left = 64
-    Top = 288
+    Left = 312
+    Top = 296
     ParamData = <
       item
         Name = 'Purch_Ord'
@@ -1426,7 +1431,7 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       ' '
       ' '
       ' ')
-    Left = 48
+    Left = 60
     Top = 256
     ParamData = <
       item
@@ -1477,8 +1482,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       end>
   end
   object ppmnPOLines: TPopupMenu
-    Left = 84
-    Top = 108
+    Left = 337
+    Top = 127
     object AddPOLine: TMenuItem
       Caption = '&Add'
       ShortCut = 16449
@@ -1683,8 +1688,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       'delete from narrative_line'
       'where narrative = :narrative'
       ' ')
-    Left = 496
-    Top = 312
+    Left = 564
+    Top = 310
     ParamData = <
       item
         Name = 'narrative'
@@ -1735,8 +1740,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       'select Operator, Name as Operator_Name'
       'from Operator'
       'where Operator = :Operator')
-    Left = 608
-    Top = 340
+    Left = 656
+    Top = 281
     ParamData = <
       item
         Name = 'Operator'
@@ -1802,8 +1807,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       'Group BY purch_ord_line.Purch_ord, purch_ord.purch_ord_status'
       'Having purch_ord_line.Purch_Ord = :Purch_Ord'
       '')
-    Left = 128
-    Top = 352
+    Left = 160
+    Top = 368
     ParamData = <
       item
         Name = 'Purch_Ord'
@@ -1815,8 +1820,8 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       'Update Purch_ord'
       'set Purch_ord_Status = :Purch_Ord_Status'
       'where Purch_ord = :Purch_Ord')
-    Left = 232
-    Top = 352
+    Left = 290
+    Top = 368
     ParamData = <
       item
         Name = 'Purch_Ord_Status'

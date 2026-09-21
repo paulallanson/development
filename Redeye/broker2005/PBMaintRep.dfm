@@ -3,27 +3,27 @@ object PBMaintRepFrm: TPBMaintRepFrm
   Top = 64
   BorderStyle = bsDialog
   Caption = 'Maintain Reps'
-  ClientHeight = 514
-  ClientWidth = 426
+  ClientHeight = 535
+  ClientWidth = 495
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 110
-    Top = 494
-    Width = 145
-    Height = 15
+    Left = 101
+    Top = 490
+    Width = 166
+    Height = 16
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -183,12 +183,12 @@ object PBMaintRepFrm: TPBMaintRepFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 409
+    Width = 465
     Height = 465
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -196,12 +196,12 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label2: TLabel
       Left = 12
       Top = 20
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -209,12 +209,12 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label3: TLabel
       Left = 11
       Top = 67
-      Width = 41
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Address'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -222,12 +222,12 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label7: TLabel
       Left = 11
       Top = 163
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -235,25 +235,25 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label8: TLabel
       Left = 11
       Top = 189
-      Width = 33
-      Height = 13
+      Width = 36
+      Height = 17
       Caption = 'Phone'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label9: TLabel
-      Left = 228
+      Left = 254
       Top = 189
-      Width = 17
-      Height = 13
+      Width = 19
+      Height = 17
       Caption = 'Fax'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -261,12 +261,12 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label10: TLabel
       Left = 11
       Top = 213
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Email'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -274,32 +274,32 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object Label4: TLabel
       Left = 11
       Top = 237
-      Width = 36
-      Height = 13
+      Width = 41
+      Height = 17
       Caption = 'Mobile'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label1: TLabel
-      Left = 283
-      Top = 21
-      Width = 61
-      Height = 13
+      Left = 296
+      Top = 20
+      Width = 68
+      Height = 17
       Caption = 'Prefix/Suffix'
     end
     object Label5: TLabel
       Left = 11
       Top = 43
-      Width = 42
-      Height = 13
+      Width = 46
+      Height = 17
       Caption = 'Position'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -307,40 +307,40 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object ProdNomlbl: TLabel
       Left = 11
       Top = 345
-      Width = 86
-      Height = 13
+      Width = 98
+      Height = 17
       Caption = 'Product Nominal'
     end
     object AdditDestslbl: TLabel
       Left = 11
       Top = 368
-      Width = 92
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Additional Details'
     end
     object Label6: TLabel
       Left = 11
       Top = 381
-      Width = 43
-      Height = 13
+      Width = 49
+      Height = 17
       Caption = 'Nominal'
     end
     object Label11: TLabel
       Left = 11
       Top = 317
-      Width = 74
-      Height = 13
+      Width = 86
+      Height = 17
       Caption = 'Commission %'
     end
     object Label12: TLabel
       Left = 11
       Top = 290
-      Width = 55
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Sales Team'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -375,131 +375,131 @@ object PBMaintRepFrm: TPBMaintRepFrm
       OnClick = NotesBitBtnClick
     end
     object NameEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 16
       Width = 171
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'NameEdit'
       OnChange = NameEditChange
     end
     object BuildingEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 65
       Width = 295
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 3
       Text = 'BuildingEdit'
     end
     object StreetEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 89
       Width = 295
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 4
       Text = 'StreetEdit'
     end
     object LocaleEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 114
       Width = 295
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 5
       Text = 'LocaleEdit'
     end
     object TownEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 138
       Width = 171
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 6
       Text = 'TownEdit'
     end
     object PhoneEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 186
       Width = 123
-      Height = 21
+      Height = 25
       MaxLength = 20
       TabOrder = 8
       Text = 'PhoneEdit'
       OnChange = PhoneEditChange
     end
     object FaxEdit: TEdit
-      Left = 261
+      Left = 278
       Top = 186
       Width = 135
-      Height = 21
+      Height = 25
       MaxLength = 20
       TabOrder = 9
       Text = 'FaxEdit'
     end
     object EMailEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 210
       Width = 295
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 10
       Text = 'EMailEdit'
     end
     object PostCodeEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 162
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 10
       TabOrder = 7
       Text = 'POSTCODEEDIT'
     end
     object MobileEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 234
       Width = 124
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 11
       Text = 'MobileEdit'
     end
     object PrefixEdit: TEdit
-      Left = 349
+      Left = 368
       Top = 16
       Width = 45
-      Height = 21
+      Height = 25
       MaxLength = 3
       TabOrder = 1
       Text = 'PrefixEdit'
     end
     object PosEdit: TEdit
-      Left = 101
+      Left = 118
       Top = 41
       Width = 295
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
       Text = 'NameEdit'
     end
     object ProdNomDBLookupComboBox: TDBLookupComboBox
-      Left = 101
+      Left = 118
       Top = 341
       Width = 124
-      Height = 21
+      Height = 25
       KeyField = 'Nominal'
       ListField = 'Nominal'
       ListSource = RepNomSRC
       TabOrder = 15
     end
     object AddNomDBLookupComboBox: TDBLookupComboBox
-      Left = 101
+      Left = 118
       Top = 373
       Width = 124
-      Height = 21
+      Height = 25
       KeyField = 'Nominal'
       ListField = 'Nominal'
       ListSource = RepNomSRC
@@ -529,28 +529,28 @@ object PBMaintRepFrm: TPBMaintRepFrm
       OnClick = NominalBitBtnClick
     end
     object spnCommission: TSpinEdit
-      Left = 101
+      Left = 118
       Top = 313
       Width = 68
-      Height = 22
+      Height = 27
       MaxValue = 100
       MinValue = 0
       TabOrder = 14
       Value = 0
     end
     object dblkpRepTeam: TDBLookupComboBox
-      Left = 101
+      Left = 118
       Top = 288
       Width = 220
-      Height = 21
+      Height = 25
       KeyField = 'Rep_Team'
       ListField = 'Rep_Team_Name'
       ListSource = dtsRepTeam
       TabOrder = 13
     end
     object btnRepTeam: TBitBtn
-      Left = 336
-      Top = 287
+      Left = 345
+      Top = 288
       Width = 25
       Height = 24
       Hint = 'Lookup sales teams'
@@ -567,8 +567,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
       OnClick = btnRepTeamClick
     end
     object GroupClearBitBtn: TBitBtn
-      Left = 368
-      Top = 287
+      Left = 377
+      Top = 288
       Width = 25
       Height = 24
       Glyph.Data = {
@@ -600,7 +600,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
     object pnlSubReps: TPanel
       Left = 2
       Top = 256
-      Width = 404
+      Width = 447
       Height = 26
       BevelOuter = bvNone
       ParentBackground = False
@@ -608,43 +608,43 @@ object PBMaintRepFrm: TPBMaintRepFrm
       object Label13: TLabel
         Left = 9
         Top = 8
-        Width = 48
-        Height = 13
+        Width = 55
+        Height = 17
         Caption = 'Company'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object Label14: TLabel
-        Left = 263
+        Left = 280
         Top = 8
-        Width = 23
-        Height = 13
+        Width = 27
+        Height = 17
         Caption = 'Area'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object CompanyEdit: TEdit
-        Left = 99
+        Left = 116
         Top = 4
         Width = 152
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 0
         Text = 'CompanyEdit'
       end
       object AreaEdit: TEdit
-        Left = 289
+        Left = 324
         Top = 4
         Width = 104
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 1
         Text = 'AreaEdit'
@@ -665,8 +665,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
       'Select Rep'
       'From Rep Where Name = :GUID'
       '')
-    Left = 320
-    Top = 128
+    Left = 392
+    Top = 48
     ParamData = <
       item
         Name = 'GUID'
@@ -689,8 +689,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
       ''
       ''
       ' ')
-    Left = 224
-    Top = 120
+    Left = 328
+    Top = 62
     ParamData = <
       item
         Name = 'GUID'
@@ -728,8 +728,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
       '        Rep_Is_Sub_Rep = :Rep_Is_Sub_Rep'
       'Where'
       '(Rep = :Rep)')
-    Left = 344
-    Top = 56
+    Left = 414
+    Top = 174
     ParamData = <
       item
         Name = 'Name'
@@ -808,8 +808,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
       'Delete From Rep'
       'Where'
       '(Rep = :Rep)')
-    Left = 184
-    Top = 80
+    Left = 222
+    Top = 36
     ParamData = <
       item
         Name = 'Rep'
@@ -818,8 +818,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 280
-    Top = 120
+    Left = 350
+    Top = 46
   end
   object RepNomSQL: TFDQuery
     ConnectionName = 'PB'
@@ -836,8 +836,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
   end
   object RepNomSRC: TDataSource
     DataSet = RepNomSQL
-    Left = 80
-    Top = 116
+    Left = 404
+    Top = 361
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -847,8 +847,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
       ''
       ''
       ' ')
-    Left = 192
-    Top = 8
+    Left = 280
+    Top = 50
     ParamData = <
       item
         Name = 'GUID'
@@ -864,8 +864,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
       'Where'
       '(Rep = :Rep) '
       ' ')
-    Left = 176
-    Top = 128
+    Left = 332
+    Top = 16
     ParamData = <
       item
         Name = 'Narrative'
@@ -880,8 +880,8 @@ object PBMaintRepFrm: TPBMaintRepFrm
     SQL.Strings = (
       'select * from Rep_Team'
       'order by Rep_Team_Name')
-    Left = 272
-    Top = 196
+    Left = 220
+    Top = 37
   end
   object dtsRepTeam: TDataSource
     DataSet = qryRepTeam
@@ -894,7 +894,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
       'SELECT Rep_Team'
       'FROM Rep_Team_Member'
       'WHERE Rep = :Rep')
-    Left = 144
+    Left = 140
     Top = 416
     ParamData = <
       item
@@ -914,7 +914,7 @@ object PBMaintRepFrm: TPBMaintRepFrm
       ':Rep_Team,'
       ':Rep'
       ')')
-    Left = 248
+    Left = 270
     Top = 416
     ParamData = <
       item

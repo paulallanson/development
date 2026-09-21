@@ -3,24 +3,24 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
   Top = 104
   BorderStyle = bsDialog
   Caption = 'Period End'
-  ClientHeight = 226
-  ClientWidth = 299
+  ClientHeight = 247
+  ClientWidth = 325
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object GroupBox1: TGroupBox
     Left = 8
     Top = 16
-    Width = 281
-    Height = 169
+    Width = 309
+    Height = 186
     Caption = 'Period End'
     ParentBackground = False
     TabOrder = 0
@@ -40,36 +40,36 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
     object Label4: TLabel
       Left = 8
       Top = 92
-      Width = 112
-      Height = 13
+      Width = 129
+      Height = 17
       Caption = 'Next Period End Date:'
     end
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 109
-      Height = 13
+      Width = 125
+      Height = 17
       Caption = 'Last Period End Date:'
     end
     object lblLastEndDate: TLabel
       Left = 152
       Top = 28
-      Width = 77
-      Height = 13
+      Width = 86
+      Height = 17
       Caption = 'lblLastEndDate'
     end
     object lblProcessing: TLabel
       Left = 8
       Top = 120
-      Width = 55
-      Height = 13
+      Width = 63
+      Height = 17
       Caption = 'Processing'
     end
     object edtNextEndDate: TEdit
       Left = 152
       Top = 88
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtNextEndDateExit
     end
@@ -99,7 +99,7 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
       Left = 152
       Top = 57
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtCurrEndDateExit
     end
@@ -129,13 +129,13 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
       Left = 8
       Top = 136
       Width = 265
-      Height = 18
+      Height = 25
       TabOrder = 4
     end
   end
   object btnOK: TBitBtn
     Left = 72
-    Top = 192
+    Top = 213
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -163,7 +163,7 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
   end
   object btnCancel: TBitBtn
     Left = 160
-    Top = 192
+    Top = 213
     Width = 75
     Height = 25
     Kind = bkCancel

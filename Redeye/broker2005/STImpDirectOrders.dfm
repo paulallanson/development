@@ -4,35 +4,36 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   BorderStyle = bsDialog
   Caption = 'Import Direct Supplied Order'
   ClientHeight = 358
-  ClientWidth = 360
+  ClientWidth = 399
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlSupplier: TPanel
     Left = 0
     Top = 65
-    Width = 360
+    Width = 399
     Height = 64
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 354
     object lblStep1: TLabel
       Left = 8
-      Top = 8
-      Width = 110
-      Height = 13
+      Top = 6
+      Width = 133
+      Height = 17
       Caption = '2. Select the Supplier.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -40,8 +41,8 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
     object LblSuppName: TLabel
       Left = 32
       Top = 32
-      Width = 18
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = '      '
     end
     object btnSelectSupplier: TButton
@@ -57,21 +58,22 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object Panel1: TPanel
     Left = 0
     Top = 129
-    Width = 360
+    Width = 399
     Height = 181
     Align = alClient
     Caption = 'Panel1'
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 123
     object Label2: TLabel
       Left = 8
       Top = 8
-      Width = 100
-      Height = 13
+      Width = 121
+      Height = 17
       Caption = '3.  Select Filenames'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -81,7 +83,7 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
       Top = 25
       Width = 209
       Height = 155
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
     end
@@ -118,29 +120,30 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 360
+    Width = 399
     Height = 65
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 354
     object Label1: TLabel
       Left = 8
       Top = 4
-      Width = 97
-      Height = 13
+      Width = 119
+      Height = 17
       Caption = '1. Import Directory'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object edtImportDir: TEdit
       Left = 24
-      Top = 20
+      Top = 26
       Width = 337
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -149,11 +152,13 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object Panel3: TPanel
     Left = 0
     Top = 310
-    Width = 360
+    Width = 399
     Height = 48
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 301
+    ExplicitWidth = 354
     object btnClose: TBitBtn
       Left = 272
       Top = 15

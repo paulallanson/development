@@ -12,26 +12,26 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   Constraints.MinWidth = 415
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
-    Top = 106
+    Top = 122
     Width = 441
-    Height = 172
+    Height = 156
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     object cbPrintLogo: TCheckBox
-      Left = 10
-      Top = 44
+      Left = 8
+      Top = 35
       Width = 169
       Height = 17
       Caption = 'Print Company Logo'
@@ -47,7 +47,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
@@ -63,7 +63,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       Caption = 'Pre&view'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -93,7 +93,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       Default = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -116,12 +116,12 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     end
     object TypeRadioGroup: TRadioGroup
       Left = 245
-      Top = 42
+      Top = 40
       Width = 164
       Height = 65
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
@@ -159,27 +159,27 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     object GroupBox1: TGroupBox
       Left = 8
       Top = 64
-      Width = 217
+      Width = 231
       Height = 41
       ParentBackground = False
       TabOrder = 6
       object EstNumLabel: TLabel
         Left = 4
-        Top = 22
-        Width = 89
-        Height = 14
+        Top = 14
+        Width = 133
+        Height = 26
         AutoSize = False
         Caption = 'Enquiry Number'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         WordWrap = True
       end
       object EnquiryMemo: TMemo
-        Left = 98
+        Left = 107
         Top = 11
         Width = 111
         Height = 25
@@ -198,15 +198,15 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       end
     end
     object chkbxAttachPriceList: TCheckBox
-      Left = 10
-      Top = 20
+      Left = 8
+      Top = 12
       Width = 217
       Height = 17
       Caption = 'Attach Studio Price List'
       Checked = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -218,11 +218,12 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     Left = 0
     Top = 71
     Width = 441
-    Height = 35
+    Height = 51
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 72
     object GroupBox2: TGroupBox
       Left = 8
       Top = 0
@@ -233,15 +234,15 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       object Label3: TLabel
         Left = 8
         Top = 18
-        Width = 76
-        Height = 13
+        Width = 87
+        Height = 17
         Caption = 'Reminder Date'
       end
       object dtReminderDate: TDateTimePicker
-        Left = 88
+        Left = 103
         Top = 14
         Width = 129
-        Height = 21
+        Height = 25
         Date = 42548.000000000000000000
         Time = 0.588667349540628500
         TabOrder = 0
@@ -257,41 +258,42 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 435
     object gbLayouts: TGroupBox
       Left = 8
-      Top = -1
-      Width = 272
+      Top = 0
+      Width = 314
       Height = 68
       ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8
         Top = 15
-        Width = 66
-        Height = 13
+        Width = 76
+        Height = 17
         Caption = 'Paper Layout'
       end
       object Label2: TLabel
         Left = 8
         Top = 42
-        Width = 66
-        Height = 13
+        Width = 75
+        Height = 17
         Caption = 'Letter Layout'
       end
       object cmbPageLayout: TComboBox
-        Left = 88
+        Left = 103
         Top = 11
         Width = 177
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 0
         OnChange = CanPrint
       end
       object cmbLetterLayout: TComboBox
-        Left = 88
+        Left = 103
         Top = 38
         Width = 177
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 1
         OnChange = CanPrint
@@ -310,6 +312,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       item
         Width = 50
       end>
+    ExplicitTop = 269
+    ExplicitWidth = 435
   end
   object GetEnqSQL: TFDQuery
     ConnectionName = 'PB'
@@ -362,8 +366,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       ' '
       ' '
       ' ')
-    Left = 296
-    Top = 72
+    Left = 362
+    Top = 18
     ParamData = <
       item
         Name = 'Enquiry'

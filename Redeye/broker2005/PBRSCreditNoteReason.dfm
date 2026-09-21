@@ -3,24 +3,21 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
   Top = 137
   BorderStyle = bsDialog
   Caption = 'Credit Note Reason Report'
-  ClientHeight = 276
-  ClientWidth = 595
+  ClientHeight = 310
+  ClientWidth = 652
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  DesignSize = (
-    595
-    276)
-  TextHeight = 13
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
     Left = 509
-    Top = 246
+    Top = 263
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -43,7 +40,7 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 420
-    Top = 246
+    Top = 263
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -74,16 +71,16 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 52
-      Height = 13
+      Top = 6
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -105,7 +102,7 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 246
+    Top = 263
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -123,22 +120,22 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'To: '
     end
     object edtDateFrom: TEdit
       Left = 48
       Top = 24
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtDateFromExit
     end
@@ -168,7 +165,7 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
       Left = 48
       Top = 56
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtDateToExit
     end
@@ -219,16 +216,16 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
     Visible = False
     object Label3: TLabel
       Left = 8
-      Top = 8
-      Width = 94
-      Height = 13
+      Top = 6
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -265,7 +262,7 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
   object TotByRadioGroup: TRadioGroup
     Left = 480
     Top = 8
-    Width = 113
+    Width = 145
     Height = 105
     Caption = 'Report Totals'
     ItemIndex = 3
@@ -281,7 +278,7 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
   object chkbxPageBreak: TCheckBox
     Left = 480
     Top = 131
-    Width = 118
+    Width = 164
     Height = 17
     Caption = 'Page break by total'
     Enabled = False
@@ -298,8 +295,8 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -322,11 +319,10 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
     Visible = False
   end
   object btnExcel: TBitBtn
-    Left = 316
-    Top = 246
+    Left = 320
+    Top = 263
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -378,7 +374,7 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
     Left = 480
     Top = 164
     Width = 113
-    Height = 61
+    Height = 76
     Caption = 'Report type'
     ItemIndex = 0
     Items.Strings = (

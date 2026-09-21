@@ -7,18 +7,18 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object NoOfItemsLabel: TLabel
-    Left = 609
-    Top = 288
-    Width = 40
-    Height = 13
+    Left = 602
+    Top = 296
+    Width = 47
+    Height = 17
     Alignment = taRightJustify
     Caption = '?? Items'
   end
@@ -31,7 +31,7 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -39,7 +39,7 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = PartsDBGridCellClick
@@ -78,7 +78,7 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
   end
   object SearchGroupBox: TGroupBox
     Left = 16
-    Top = 312
+    Top = 328
     Width = 345
     Height = 81
     Caption = 'Type here to narrow the search'
@@ -87,22 +87,22 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
     object Label1: TLabel
       Left = 8
       Top = 24
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Code'
     end
     object Label2: TLabel
       Left = 8
       Top = 48
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object CodeEdit: TEdit
       Left = 96
       Top = 22
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = CodeEditChange
@@ -111,14 +111,14 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
       Left = 96
       Top = 46
       Width = 241
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = DescrEditChange
     end
   end
   object CloseBitBtn: TBitBtn
     Left = 576
-    Top = 416
+    Top = 423
     Width = 75
     Height = 25
     Kind = bkClose
@@ -127,7 +127,7 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
   end
   object SelectBitBtn: TBitBtn
     Left = 496
-    Top = 416
+    Top = 423
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -155,7 +155,7 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
   end
   object SuppRadioGroup: TRadioGroup
     Left = 368
-    Top = 312
+    Top = 328
     Width = 281
     Height = 81
     Caption = 'Source'
@@ -169,7 +169,7 @@ object STMntPOrdAddFrm: TSTMntPOrdAddFrm
   end
   object StoreCheckBox: TCheckBox
     Left = 16
-    Top = 288
+    Top = 297
     Width = 361
     Height = 17
     Caption = 'Just show the products usually stocked at this store'

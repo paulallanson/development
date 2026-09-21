@@ -4,29 +4,29 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
   BorderStyle = bsDialog
   Caption = 'Maintain SIC Codes'
   ClientHeight = 166
-  ClientWidth = 433
+  ClientWidth = 457
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    433
+    457
     166)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
-    Top = 132
-    Width = 109
-    Height = 13
+    Top = 135
+    Width = 122
+    Height = 17
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete these details ?'
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,12 +34,12 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 417
+    Width = 433
     Height = 113
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -48,32 +48,32 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
     object Label1: TLabel
       Left = 8
       Top = 60
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 8
       Top = 28
-      Width = 60
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'SIC Code ID'
     end
     object DescrEdit: TEdit
-      Left = 78
+      Left = 85
       Top = 56
       Width = 331
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'DescrEdit'
       OnChange = CheckOK
     end
     object RefEdit: TEdit
-      Left = 78
+      Left = 85
       Top = 24
       Width = 51
-      Height = 21
+      Height = 25
       MaxLength = 5
       TabOrder = 0
       OnChange = CheckOK
@@ -89,7 +89,7 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
   end
   object OKBitBtn: TBitBtn
     Left = 256
-    Top = 132
+    Top = 131
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -239,6 +239,7 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitTop = 123
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -256,8 +257,8 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
       'Values'
       '(:SIC_Code, :SIC_Code_ID, :SIC_Code_Description)'
       '')
-    Left = 128
-    Top = 16
+    Left = 256
+    Top = 8
     ParamData = <
       item
         Name = 'SIC_Code'
@@ -278,8 +279,8 @@ object PBMaintSICCodeFrm: TPBMaintSICCodeFrm
       'SIC_Code_ID = :SIC_Code_ID,'
       'Inactive = :Inactive'
       'Where SIC_Code = :SIC_Code')
-    Left = 376
-    Top = 24
+    Left = 368
+    Top = 72
     ParamData = <
       item
         Name = 'SIC_Code_Description'

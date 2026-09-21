@@ -7,21 +7,21 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 14
-    Top = 334
-    Width = 145
-    Height = 15
+    Top = 338
+    Width = 166
+    Height = 16
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -186,7 +186,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     Caption = 'Product Store Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -195,12 +195,12 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object Label5: TLabel
       Left = 11
       Top = 23
-      Width = 31
-      Height = 13
+      Width = 36
+      Height = 17
       Caption = 'Name'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -208,12 +208,12 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object Label1: TLabel
       Left = 11
       Top = 56
-      Width = 55
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Store Type'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -222,7 +222,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       Left = 94
       Top = 17
       Width = 212
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       OnChange = NameEditChange
@@ -256,7 +256,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     Left = 102
     Top = 64
     Width = 209
-    Height = 21
+    Height = 25
     KeyField = 'Part_Store_Type'
     ListField = 'Part_Store_Type_Name'
     ListSource = StorTypsDataSource
@@ -274,12 +274,12 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object StreetLabel: TLabel
       Left = 8
       Top = 16
-      Width = 30
-      Height = 13
+      Width = 36
+      Height = 17
       Caption = 'Street'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -287,26 +287,26 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object DistrictLabel: TLabel
       Left = 8
       Top = 40
-      Width = 36
-      Height = 13
+      Width = 40
+      Height = 17
       Caption = 'District'
     end
     object TownLabel: TLabel
       Left = 8
       Top = 64
-      Width = 28
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'Town'
     end
     object PostLabel: TLabel
       Left = 8
       Top = 88
-      Width = 48
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Postcode'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -314,12 +314,12 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object TelLabel: TLabel
       Left = 8
       Top = 112
-      Width = 54
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Telephone'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -327,15 +327,15 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     object FaxLabel: TLabel
       Left = 8
       Top = 136
-      Width = 61
-      Height = 13
+      Width = 71
+      Height = 17
       Caption = 'Fax Number'
     end
     object StreetEdit: TEdit
       Left = 136
       Top = 16
       Width = 300
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = StreetEditChange
     end
@@ -343,7 +343,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       Left = 136
       Top = 40
       Width = 300
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = DistrictEditChange
     end
@@ -351,7 +351,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       Left = 136
       Top = 64
       Width = 300
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = TownEditChange
     end
@@ -359,7 +359,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       Left = 136
       Top = 88
       Width = 120
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnChange = PostEditChange
     end
@@ -367,7 +367,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       Left = 136
       Top = 112
       Width = 150
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnChange = PhoneEditChange
     end
@@ -384,7 +384,7 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
     Left = 144
     Top = 272
     Width = 150
-    Height = 21
+    Height = 25
     TabOrder = 5
     OnChange = FaxEditChange
   end
@@ -414,8 +414,8 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       ' '
       ' '
       ' ')
-    Left = 232
-    Top = 56
+    Left = 330
+    Top = 190
     ParamData = <
       item
         Name = 'Part_Store'
@@ -489,8 +489,8 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       ' '
       ' '
       ' ')
-    Left = 152
-    Top = 56
+    Left = 326
+    Top = 230
     ParamData = <
       item
         Name = 'Part_Store'
@@ -538,8 +538,8 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       ' '
       ' '
       ' ')
-    Left = 344
-    Top = 56
+    Left = 446
+    Top = 286
     ParamData = <
       item
         Name = 'Part_Store'
@@ -553,8 +553,8 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 56
+    Left = 334
+    Top = 142
   end
   object GetStorTypsQuery: TFDQuery
     ConnectionName = 'PB'
@@ -562,12 +562,12 @@ object STMntPrtStorFrm: TSTMntPrtStorFrm
       'Select Part_Store_Type, Part_Store_Type_Name'
       'From Part_Store_Type'
       'Order by Part_Store_Type_Name')
-    Left = 48
-    Top = 76
+    Left = 452
+    Top = 215
   end
   object StorTypsDataSource: TDataSource
     DataSet = GetStorTypsQuery
-    Left = 64
-    Top = 44
+    Left = 448
+    Top = 143
   end
 end

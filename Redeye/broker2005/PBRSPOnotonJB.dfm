@@ -7,12 +7,12 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object stsDetails: TStatusBar
     Left = 0
     Top = 424
@@ -25,6 +25,8 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       item
         Width = 50
       end>
+    ExplicitTop = 415
+    ExplicitWidth = 762
   end
   object Panel1: TPanel
     Left = 0
@@ -34,11 +36,13 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 374
+    ExplicitWidth = 762
     DesignSize = (
       768
       41)
     object PreviewReportBitBtn: TBitBtn
-      Left = 499
+      Left = 493
       Top = 8
       Width = 75
       Height = 25
@@ -60,9 +64,10 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = PreviewReportBitBtnClick
+      ExplicitLeft = 487
     end
     object PrintReportBitBtn: TBitBtn
-      Left = 587
+      Left = 581
       Top = 8
       Width = 75
       Height = 25
@@ -84,9 +89,10 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = PrintReportBitBtnClick
+      ExplicitLeft = 575
     end
     object CancelBitBtn: TBitBtn
-      Left = 677
+      Left = 671
       Top = 8
       Width = 75
       Height = 25
@@ -94,6 +100,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 665
     end
     object chkbxIncCallOffs: TCheckBox
       Left = 16
@@ -115,14 +122,14 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -177,10 +184,11 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 762
     object rgCustomer: TRadioGroup
       Left = 8
       Top = 8
-      Width = 113
+      Width = 121
       Height = 65
       Caption = 'By Customer'
       ItemIndex = 0
@@ -192,7 +200,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
-      Left = 128
+      Left = 143
       Top = 8
       Width = 329
       Height = 65
@@ -202,15 +210,15 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 94
-        Height = 13
+        Width = 108
+        Height = 17
         Caption = 'Customer / Branch'
       end
       object edtCustomer: TEdit
         Left = 8
         Top = 24
         Width = 257
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end

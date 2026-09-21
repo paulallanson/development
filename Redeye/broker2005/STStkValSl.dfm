@@ -3,18 +3,18 @@ object STStkValSlfrm: TSTStkValSlfrm
   Top = 154
   BorderStyle = bsDialog
   Caption = 'Stock Valuation Selection Screen'
-  ClientHeight = 171
-  ClientWidth = 470
+  ClientHeight = 240
+  ClientWidth = 505
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object OleContainer1: TOleContainer
     Left = 316
     Top = 54
@@ -36,8 +36,8 @@ object STStkValSlfrm: TSTStkValSlfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -50,14 +50,14 @@ object STStkValSlfrm: TSTStkValSlfrm
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 272
-    Top = 136
+    Left = 406
+    Top = 192
     Width = 75
     Height = 25
     Caption = '&Print'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -79,14 +79,14 @@ object STStkValSlfrm: TSTStkValSlfrm
     OnClick = PrintBitBtnClick
   end
   object BitBtn2: TBitBtn
-    Left = 181
-    Top = 136
+    Left = 315
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'Pre&view'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -109,13 +109,13 @@ object STStkValSlfrm: TSTStkValSlfrm
   end
   object BitBtn3: TBitBtn
     Left = 8
-    Top = 136
+    Top = 192
     Width = 75
     Height = 25
     Caption = '&Cancel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -124,14 +124,14 @@ object STStkValSlfrm: TSTStkValSlfrm
     TabOrder = 2
   end
   object SeqByRadioGroup: TRadioGroup
-    Left = 368
-    Top = 96
-    Width = 89
+    Left = 367
+    Top = 94
+    Width = 114
     Height = 65
     Caption = 'Seq. By:'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -145,12 +145,12 @@ object STStkValSlfrm: TSTStkValSlfrm
   object CostRadioGroup: TRadioGroup
     Left = 368
     Top = 8
-    Width = 89
+    Width = 113
     Height = 73
     Caption = 'Value At:'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -169,7 +169,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Caption = 'Product Range'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -178,22 +178,22 @@ object STStkValSlfrm: TSTStkValSlfrm
     object Label1: TLabel
       Left = 14
       Top = 32
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 14
       Top = 64
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtPartFrom: TEdit
       Left = 66
       Top = 24
       Width = 223
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtPartFromChange
@@ -202,7 +202,7 @@ object STStkValSlfrm: TSTStkValSlfrm
       Left = 66
       Top = 56
       Width = 223
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
     end
@@ -245,15 +245,15 @@ object STStkValSlfrm: TSTStkValSlfrm
     Caption = 'Exclude Products not in use'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 6
   end
   object btbtnExcel: TBitBtn
-    Left = 97
-    Top = 136
+    Left = 231
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'Excel'

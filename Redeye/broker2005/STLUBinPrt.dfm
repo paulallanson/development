@@ -3,36 +3,36 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
   Top = 37
   BorderStyle = bsDialog
   Caption = 'Select A Bin'
-  ClientHeight = 471
-  ClientWidth = 538
+  ClientHeight = 503
+  ClientWidth = 556
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 30
-    Height = 13
+    Width = 34
+    Height = 17
     Caption = 'Store:'
   end
   object Label2: TLabel
     Left = 8
-    Top = 64
-    Width = 43
-    Height = 13
+    Top = 66
+    Width = 48
+    Height = 17
     Caption = 'Product:'
   end
   object FuncRadioGroup: TRadioGroup
     Left = 224
     Top = 0
     Width = 305
-    Height = 97
+    Height = 105
     ItemIndex = 3
     Items.Strings = (
       'Show bins which have product in stock'
@@ -45,7 +45,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
   end
   object BinsListView: TListView
     Left = 8
-    Top = 136
+    Top = 143
     Width = 521
     Height = 209
     Columns = <>
@@ -66,21 +66,21 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     Left = 8
     Top = 24
     Width = 209
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 2
   end
   object PartEdit: TEdit
     Left = 8
-    Top = 80
+    Top = 82
     Width = 209
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 3
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 352
+    Top = 359
     Width = 313
     Height = 105
     Caption = 'Key'
@@ -95,8 +95,8 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key1Label: TLabel
       Left = 32
       Top = 25
-      Width = 91
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Can'#39't pick, empty.'
     end
     object Key2Image: TImage
@@ -108,8 +108,8 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key2Label: TLabel
       Left = 32
       Top = 46
-      Width = 84
-      Height = 13
+      Width = 95
+      Height = 17
       Caption = 'Can pick, empty.'
     end
     object Key3Image: TImage
@@ -121,8 +121,8 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key3Label: TLabel
       Left = 32
       Top = 66
-      Width = 108
-      Height = 13
+      Width = 120
+      Height = 17
       Caption = 'Can'#39't pick, has stock.'
     end
     object Key4Image: TImage
@@ -134,16 +134,16 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     object Key4Label: TLabel
       Left = 32
       Top = 86
-      Width = 98
-      Height = 13
+      Width = 110
+      Height = 17
       Caption = 'Can pick, has stock'
     end
   end
   object PartDescrEdit: TEdit
     Left = 8
-    Top = 104
+    Top = 111
     Width = 321
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 5
   end

@@ -9,7 +9,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
   Constraints.MinWidth = 782
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -18,7 +18,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -27,40 +27,41 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 768
     object Label1: TLabel
       Left = 600
       Top = 10
-      Width = 114
-      Height = 13
+      Width = 129
+      Height = 17
       Caption = 'Picking List Reference '
       Enabled = False
       Visible = False
     end
     object Label2: TLabel
       Left = 368
-      Top = 8
-      Width = 30
-      Height = 13
+      Top = 10
+      Width = 34
+      Height = 17
       Caption = 'Store:'
     end
     object StoreNameLbl: TLabel
       Left = 416
-      Top = 8
-      Width = 3
-      Height = 13
+      Top = 10
+      Width = 4
+      Height = 17
     end
     object Label3: TLabel
       Left = 24
-      Top = 8
-      Width = 80
-      Height = 13
+      Top = 10
+      Width = 94
+      Height = 17
       Caption = 'Order Number: '
     end
     object LblOrdNo: TLabel
       Left = 136
-      Top = 8
-      Width = 3
-      Height = 13
+      Top = 10
+      Width = 4
+      Height = 17
     end
   end
   object Panel2: TPanel
@@ -71,6 +72,8 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     Align = alRight
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 671
+    ExplicitHeight = 410
     DesignSize = (
       97
       419)
@@ -101,6 +104,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = ConfirmBtnClick
+      ExplicitTop = 336
     end
     object BitBtn2: TBitBtn
       Left = 14
@@ -130,6 +134,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
+      ExplicitTop = 376
     end
     object DeleteBitBtn: TBitBtn
       Left = 14
@@ -173,6 +178,8 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 671
+    ExplicitHeight = 410
     object PickingGrid: TStringGrid
       Left = 1
       Top = 1
@@ -191,6 +198,8 @@ object STPickbyPartFrm: TSTPickbyPartFrm
       OnClick = PickingGridClick
       OnDblClick = PickingGridDblClick
       OnSelectCell = PickingGridSelectCell
+      ExplicitWidth = 669
+      ExplicitHeight = 408
       ColWidths = (
         123
         183

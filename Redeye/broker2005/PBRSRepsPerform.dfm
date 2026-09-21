@@ -3,29 +3,29 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
   Top = 219
   BorderStyle = bsDialog
   Caption = 'Reps Performance report'
-  ClientHeight = 208
-  ClientWidth = 397
+  ClientHeight = 241
+  ClientWidth = 402
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 100
-    Width = 102
-    Height = 13
+    Top = 93
+    Width = 116
+    Height = 17
     Caption = 'Select Financial Year'
   end
   object rgRep: TRadioGroup
     Left = 8
-    Top = 16
+    Top = 7
     Width = 121
     Height = 65
     Caption = 'By Rep'
@@ -48,15 +48,15 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 209
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -78,9 +78,9 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
   end
   object dblkpFY: TDBLookupComboBox
     Left = 132
-    Top = 96
+    Top = 89
     Width = 157
-    Height = 21
+    Height = 25
     KeyField = 'Financial_Year'
     ListField = 'Title'
     ListSource = dtsFY
@@ -89,7 +89,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
   end
   object CancelBitBtn: TBitBtn
     Left = 254
-    Top = 176
+    Top = 200
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -98,7 +98,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 68
-    Top = 176
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -122,7 +122,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
   end
   object PrintBitBtn: TBitBtn
     Left = 161
-    Top = 176
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -148,43 +148,43 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Left = 0
     Top = 128
     Width = 401
-    Height = 41
+    Height = 49
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 6
     object Label2: TLabel
       Left = 8
       Top = 2
-      Width = 50
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Progress: '
     end
     object Label3: TLabel
       Left = 80
       Top = 2
-      Width = 101
-      Height = 13
+      Width = 113
+      Height = 17
       Caption = 'Reading invoice file'
     end
     object lblProgress: TLabel
       Left = 265
       Top = 2
-      Width = 5
-      Height = 13
+      Width = 6
+      Height = 17
       Caption = 'x'
       Visible = False
     end
     object lblRecordCount: TLabel
       Left = 315
       Top = 2
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'records read.'
       Visible = False
     end
     object prgrsbrImport: TProgressBar
       Left = 8
-      Top = 16
+      Top = 29
       Width = 380
       Height = 17
       TabOrder = 0
@@ -196,13 +196,13 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       'select *'
       'from Financial_Year'
       'order by Financial_Year')
-    Left = 304
-    Top = 72
+    Left = 204
+    Top = 66
   end
   object dtsFY: TDataSource
     DataSet = qryFY
-    Left = 336
-    Top = 72
+    Left = 404
+    Top = 82
   end
   object qryCompany: TFDQuery
     ConnectionName = 'PB'
@@ -210,13 +210,13 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       'select *'
       'from Company'
       'where company = 1')
-    Left = 16
-    Top = 56
+    Left = 4
+    Top = 62
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'
-    Left = 80
-    Top = 24
+    Left = 84
+    Top = 22
   end
   object AddIntSelQuery: TFDQuery
     ConnectionName = 'PB'
@@ -240,8 +240,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 192
-    Top = 16
+    Left = 224
+    Top = 12
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -278,8 +278,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 144
-    Top = 14
+    Left = 164
+    Top = 10
     ParamData = <
       item
         Name = 'Purch_Ord'
@@ -299,8 +299,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 48
-    Top = 14
+    Left = 44
+    Top = 10
     ParamData = <
       item
         Name = 'PurchOrder'
@@ -314,8 +314,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       'from Period'
       'where :Invoice_Date > Last_Period_End_Date AND'
       ':Invoice_Date <= Period_End_Date')
-    Left = 268
-    Top = 16
+    Left = 319
+    Top = 12
     ParamData = <
       item
         Name = 'Invoice_Date'
@@ -354,8 +354,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ''
       ' ')
-    Left = 336
-    Top = 16
+    Left = 404
+    Top = 12
     ParamData = <
       item
         Name = 'Sel5'
@@ -383,8 +383,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       'from Period'
       'where Financial_Year = :Financial_Year'
       'order by Period')
-    Left = 184
-    Top = 88
+    Left = 214
+    Top = 102
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -422,8 +422,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 16
-    Top = 16
+    Left = 4
+    Top = 12
     ParamData = <
       item
         Name = 'invoice_no'
@@ -456,8 +456,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ''
       ' '
       ' ')
-    Left = 78
-    Top = 78
+    Left = 82
+    Top = 90
     ParamData = <
       item
         Name = 'Invoice_No'
@@ -477,8 +477,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       'Line = :Line AND'
       '(Purchase_OrderLine.Order_unit = Price_unit.Price_Unit)'
       ' ')
-    Left = 227
-    Top = 70
+    Left = 268
+    Top = 80
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -495,8 +495,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       'WHERE Job_Bag_Line_Dets.Job_Bag = :Job_Bag and'
       'Job_Bag_Line_Dets.Job_Bag_line = :Job_Bag_Line'
       ' ')
-    Left = 228
-    Top = 128
+    Left = 269
+    Top = 152
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -522,8 +522,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 296
-    Top = 72
+    Left = 354
+    Top = 82
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -559,8 +559,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 224
-    Top = 16
+    Left = 264
+    Top = 12
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -614,8 +614,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 128
-    Top = 64
+    Left = 144
+    Top = 72
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -649,7 +649,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 288
+    Left = 344
     Top = 32
     ParamData = <
       item
@@ -685,8 +685,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       ' '
       ' '
       ' ')
-    Left = 288
-    Top = 104
+    Left = 344
+    Top = 122
     ParamData = <
       item
         Name = 'Sales_Order'

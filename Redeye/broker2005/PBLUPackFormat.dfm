@@ -24,7 +24,8 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 338
+    ExplicitLeft = 326
+    ExplicitHeight = 297
     DesignSize = (
       105
       306)
@@ -37,6 +38,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 83
       object AddBitBtn: TBitBtn
         Left = 6
         Top = 29
@@ -182,6 +184,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = SelectBitBtnClick
+      ExplicitTop = 215
     end
     object CloseBitBtn: TBitBtn
       Left = 12
@@ -192,6 +195,7 @@ object PBLUPackFormatFrm: TPBLUPackFormatFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitTop = 260
     end
   end
   object Panel2: TPanel

@@ -8,7 +8,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
   DesignSize = (
     467
     193)
-  TextHeight = 13
+  TextHeight = 17
   object PreviewBitBtn: TBitBtn
     Left = 374
     Top = 156
@@ -40,7 +40,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 162
+    ExplicitTop = 147
   end
   object CancelBitBtn: TBitBtn
     Left = 20
@@ -51,7 +51,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 1
-    ExplicitTop = 162
+    ExplicitTop = 147
   end
   object GroupBox1: TGroupBox
     Left = 12
@@ -64,15 +64,15 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 33
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Period'
     end
     object dblkpGraph1: TDBLookupComboBox
       Left = 64
       Top = 24
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Period'
       ListField = 'Description'
       ListSource = dsPeriods1
@@ -90,15 +90,15 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label3: TLabel
       Left = 16
       Top = 28
-      Width = 33
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Period'
     end
     object dblkpGraph2: TDBLookupComboBox
       Left = 64
       Top = 24
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Period'
       ListField = 'Description'
       ListSource = dsPeriods2
@@ -116,15 +116,15 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label2: TLabel
       Left = 16
       Top = 28
-      Width = 33
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Period'
     end
     object dblkpGraph3: TDBLookupComboBox
       Left = 64
       Top = 24
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Period'
       ListField = 'Description'
       ListSource = dsPeriods3
@@ -142,15 +142,15 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     object Label4: TLabel
       Left = 16
       Top = 28
-      Width = 33
-      Height = 13
+      Width = 38
+      Height = 17
       Caption = 'Period'
     end
     object dblkpGraph4: TDBLookupComboBox
       Left = 64
       Top = 24
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Period'
       ListField = 'Description'
       ListSource = dsPeriods4
@@ -263,7 +263,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
   end
   object dsPeriods4: TDataSource
     DataSet = qryPeriods4
-    Left = 244
-    Top = 107
+    Left = 185
+    Top = 38
   end
 end

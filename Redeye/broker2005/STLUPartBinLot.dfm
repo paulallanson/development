@@ -2,18 +2,18 @@ object STLUPartBinLotFrm: TSTLUPartBinLotFrm
   Left = 200
   Top = 118
   Caption = 'Look-Up A Part Bin Lot'
-  ClientHeight = 301
-  ClientWidth = 385
+  ClientHeight = 324
+  ClientWidth = 413
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DetsDBGrid: TDBGrid
     Left = 8
     Top = 8
@@ -23,7 +23,7 @@ object STLUPartBinLotFrm: TSTLUPartBinLotFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -31,7 +31,7 @@ object STLUPartBinLotFrm: TSTLUPartBinLotFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter

@@ -2,36 +2,36 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
   Left = 177
   Top = 122
   Caption = 'Oustanding Invoicing Report Selection'
-  ClientHeight = 217
-  ClientWidth = 653
+  ClientHeight = 253
+  ClientWidth = 712
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 156
-    Width = 36
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Sort by'
   end
   object Label2: TLabel
     Left = 464
-    Top = 120
-    Width = 161
-    Height = 26
+    Top = 113
+    Width = 217
+    Height = 34
     Caption = 'Show where order status equal or greater than'
     WordWrap = True
   end
   object PrintBitBtn: TBitBtn
     Left = 576
-    Top = 184
+    Top = 197
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -40,7 +40,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 488
-    Top = 184
+    Top = 197
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -58,15 +58,15 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -88,7 +88,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 184
+    Top = 197
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -120,15 +120,15 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -166,7 +166,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Left = 56
     Top = 152
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 7
     OnChange = cmboSortChange
@@ -188,7 +188,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
   object rdgrpOrders: TRadioGroup
     Left = 464
     Top = 11
-    Width = 185
+    Width = 217
     Height = 89
     Caption = 'Include '
     ItemIndex = 0
@@ -203,7 +203,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Left = 464
     Top = 152
     Width = 185
-    Height = 21
+    Height = 25
     KeyField = 'Status'
     ListField = 'Description'
     ListSource = dtsStatus
@@ -236,7 +236,7 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
       'from sales_order_head_status'
       'where sales_order_Head_Status >= 150 AND'
       'sales_order_head_status < 250')
-    Left = 424
-    Top = 144
+    Left = 530
+    Top = 193
   end
 end

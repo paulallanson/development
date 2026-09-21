@@ -9,13 +9,13 @@ object STMaintStockFrm: TSTMaintStockFrm
   Constraints.MinWidth = 796
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object pnlBottom: TPanel
     Left = 0
     Top = 470
@@ -24,11 +24,13 @@ object STMaintStockFrm: TSTMaintStockFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 461
+    ExplicitWidth = 778
     DesignSize = (
       784
       41)
     object btnClose: TBitBtn
-      Left = 691
+      Left = 685
       Top = 8
       Width = 75
       Height = 25
@@ -36,6 +38,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 679
     end
   end
   object pnlLeft: TPanel
@@ -46,6 +49,7 @@ object STMaintStockFrm: TSTMaintStockFrm
     Align = alLeft
     ParentBackground = False
     TabOrder = 1
+    ExplicitHeight = 461
     object Panel5: TPanel
       Left = 1
       Top = 1
@@ -56,23 +60,23 @@ object STMaintStockFrm: TSTMaintStockFrm
       TabOrder = 0
       object Label1: TLabel
         Left = 16
-        Top = 16
-        Width = 69
-        Height = 13
+        Top = 13
+        Width = 79
+        Height = 17
         Caption = 'Product From'
       end
       object lblDescriptionFrom: TLabel
         Left = 16
         Top = 64
-        Width = 98
-        Height = 13
+        Width = 110
+        Height = 17
         Caption = 'lblDescriptionFrom'
       end
       object edtPartFrom: TEdit
         Left = 16
         Top = 32
         Width = 225
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -102,7 +106,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -110,7 +114,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDblClick = dbgDetailsFromDblClick
@@ -160,6 +164,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 349
+    ExplicitHeight = 461
     object Panel6: TPanel
       Left = 1
       Top = 1
@@ -168,25 +174,26 @@ object STMaintStockFrm: TSTMaintStockFrm
       Align = alTop
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 347
       object Label2: TLabel
         Left = 16
-        Top = 16
-        Width = 55
-        Height = 13
+        Top = 13
+        Width = 63
+        Height = 17
         Caption = 'Product To'
       end
       object lblDescriptionTo: TLabel
         Left = 16
         Top = 64
-        Width = 84
-        Height = 13
+        Width = 94
+        Height = 17
         Caption = 'lblDescriptionTo'
       end
       object edtPartTo: TEdit
         Left = 16
         Top = 32
         Width = 225
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -216,7 +223,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -224,7 +231,7 @@ object STMaintStockFrm: TSTMaintStockFrm
       TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDblClick = dbgDetailsToDblClick
@@ -274,6 +281,7 @@ object STMaintStockFrm: TSTMaintStockFrm
     Align = alLeft
     ParentBackground = False
     TabOrder = 3
+    ExplicitHeight = 461
     object btnFromSingle: TBitBtn
       Left = 8
       Top = 120
@@ -376,6 +384,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     Width = 784
     Height = 19
     Panels = <>
+    ExplicitTop = 502
+    ExplicitWidth = 778
   end
   object qryStockFrom: TFDQuery
     ConnectionName = 'PB'

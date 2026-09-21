@@ -2,14 +2,14 @@ object STMntSOrdFrm: TSTMntSOrdFrm
   Left = 208
   Top = 56
   Caption = 'Maintain Sales Orders'
-  ClientHeight = 534
-  ClientWidth = 794
+  ClientHeight = 563
+  ClientWidth = 842
   Color = clBtnFace
   Constraints.MinHeight = 570
   Constraints.MinWidth = 800
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -20,11 +20,11 @@ object STMntSOrdFrm: TSTMntSOrdFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 515
-    Width = 794
+    Top = 544
+    Width = 842
     Height = 19
     Panels = <
       item
@@ -33,105 +33,110 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       item
         Width = 50
       end>
+    ExplicitTop = 506
+    ExplicitWidth = 788
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 794
-    Height = 515
+    Width = 842
+    Height = 544
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 788
+    ExplicitHeight = 506
     object pnlTop: TPanel
       Left = 0
       Top = 0
-      Width = 794
-      Height = 61
+      Width = 842
+      Height = 83
       Align = alTop
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 794
       DesignSize = (
-        794
-        61)
+        842
+        83)
       object Label5: TLabel
         Left = 8
-        Top = 12
-        Width = 51
-        Height = 13
+        Top = 17
+        Width = 60
+        Height = 17
         Caption = 'Order No.'
       end
       object Label8: TLabel
-        Left = 360
-        Top = 12
-        Width = 74
-        Height = 13
+        Left = 392
+        Top = 17
+        Width = 84
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Required Date'
       end
       object OrdNoLabel: TLabel
         Left = 80
-        Top = 12
-        Width = 71
-        Height = 13
+        Top = 17
+        Width = 82
+        Height = 17
         Caption = 'order number'
       end
       object Label2: TLabel
         Left = 176
-        Top = 12
-        Width = 57
-        Height = 13
+        Top = 17
+        Width = 66
+        Height = 17
         Caption = 'Order Date'
       end
       object Label18: TLabel
         Left = 8
-        Top = 36
-        Width = 56
-        Height = 13
+        Top = 54
+        Width = 66
+        Height = 17
         Caption = 'Order Type'
       end
       object lblJobBagCaption: TLabel
-        Left = 224
-        Top = 36
-        Width = 43
-        Height = 13
+        Left = 232
+        Top = 54
+        Width = 50
+        Height = 17
         Caption = 'Job Bag:'
         Visible = False
       end
       object lblJobBagNo: TLabel
-        Left = 280
-        Top = 36
-        Width = 65
-        Height = 13
+        Left = 288
+        Top = 54
+        Width = 75
+        Height = 17
         Caption = 'lblJobBagNo'
         Visible = False
       end
       object Label20: TLabel
-        Left = 566
-        Top = 12
-        Width = 47
-        Height = 13
+        Left = 621
+        Top = 17
+        Width = 54
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Operator'
       end
       object DateEdit: TEdit
-        Left = 240
-        Top = 8
+        Left = 248
+        Top = 13
         Width = 81
-        Height = 21
+        Height = 25
         MaxLength = 30
         TabOrder = 0
         OnExit = DateEditExit
       end
       object DateBitBtn: TBitBtn
-        Left = 328
-        Top = 6
+        Left = 336
+        Top = 13
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -152,18 +157,19 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         OnClick = DateBitBtnClick
       end
       object DtReqEdit: TEdit
-        Left = 440
-        Top = 8
+        Left = 482
+        Top = 13
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         MaxLength = 30
         TabOrder = 2
         OnExit = DtReqEditExit
+        ExplicitLeft = 434
       end
       object DtReqBitBtn: TBitBtn
-        Left = 528
-        Top = 6
+        Left = 570
+        Top = 13
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -183,12 +189,13 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         NumGlyphs = 2
         TabOrder = 3
         OnClick = DtReqBitBtnClick
+        ExplicitLeft = 522
       end
       object cmbbxOrderType: TComboBox
         Left = 80
-        Top = 32
+        Top = 50
         Width = 137
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 5
         OnChange = cmbbxOrderTypeChange
@@ -199,10 +206,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           'Destroy Notification')
       end
       object OfficeComboBox: TDBLookupComboBox
-        Left = 619
-        Top = 8
+        Left = 682
+        Top = 13
         Width = 153
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Operator'
         ListField = 'Name'
@@ -210,8 +217,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         TabOrder = 4
       end
       object chkbxCashSale: TCheckBox
-        Left = 619
-        Top = 36
+        Left = 714
+        Top = 54
         Width = 121
         Height = 17
         Anchors = [akTop, akRight]
@@ -221,39 +228,40 @@ object STMntSOrdFrm: TSTMntSOrdFrm
     end
     object pnlAddCharges: TPanel
       Left = 0
-      Top = 370
-      Width = 794
+      Top = 378
+      Width = 842
       Height = 112
       Align = alBottom
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
+      ExplicitTop = 361
+      ExplicitWidth = 788
       DesignSize = (
-        794
+        842
         112)
       object Label10: TLabel
-        Left = 542
+        Left = 593
         Top = 20
-        Width = 89
-        Height = 13
+        Width = 102
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Total Order Value'
-        ExplicitLeft = 548
       end
       object Label16: TLabel
         Left = 3
         Top = 3
-        Width = 99
-        Height = 13
+        Width = 111
+        Height = 17
         Caption = 'Additional Charges'
       end
       object memoTotal: TMemo
-        Left = 665
+        Left = 716
         Top = 16
         Width = 97
         Height = 23
@@ -289,9 +297,9 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           96)
       end
       object chkbxDoNotInvc: TCheckBox
-        Left = 542
+        Left = 571
         Top = 68
-        Width = 97
+        Width = 239
         Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Do Not Invoice'
@@ -299,9 +307,9 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         OnClick = chkbxDoNotInvcClick
       end
       object chkbxAuthorise: TCheckBox
-        Left = 542
+        Left = 571
         Top = 47
-        Width = 121
+        Width = 234
         Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Authorise Call Off'
@@ -309,9 +317,9 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         Visible = False
       end
       object chkbxInactive: TCheckBox
-        Left = 542
+        Left = 572
         Top = 89
-        Width = 225
+        Width = 255
         Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Order is inactive and has been cancelled'
@@ -320,32 +328,33 @@ object STMntSOrdFrm: TSTMntSOrdFrm
     end
     object pnlFooter: TPanel
       Left = 0
-      Top = 482
-      Width = 794
-      Height = 33
+      Top = 490
+      Width = 842
+      Height = 54
       Align = alBottom
       BevelOuter = bvNone
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
+      ExplicitTop = 489
       DesignSize = (
-        794
-        33)
+        842
+        54)
       object lblFAO: TLabel
         Left = 200
-        Top = 12
-        Width = 21
-        Height = 13
+        Top = 20
+        Width = 23
+        Height = 17
         Caption = 'FAO'
       end
       object OKBitBtn: TBitBtn
-        Left = 603
-        Top = 5
+        Left = 645
+        Top = 16
         Width = 76
         Height = 25
         Anchors = [akTop, akRight]
@@ -420,8 +429,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
         OnClick = OKBitBtnClick
       end
       object CancelBitBtn: TBitBtn
-        Left = 691
-        Top = 5
+        Left = 733
+        Top = 16
         Width = 76
         Height = 25
         Anchors = [akTop, akRight]
@@ -497,7 +506,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       end
       object NotesBitBtn: TBitBtn
         Left = 8
-        Top = 5
+        Top = 16
         Width = 75
         Height = 25
         Caption = 'Notes'
@@ -520,7 +529,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       end
       object btnDelivery: TBitBtn
         Left = 104
-        Top = 5
+        Top = 16
         Width = 75
         Height = 25
         Caption = 'Delivery'
@@ -543,9 +552,9 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       end
       object edtFAO: TEdit
         Left = 232
-        Top = 8
+        Top = 16
         Width = 209
-        Height = 21
+        Height = 25
         TabOrder = 4
         Text = 'edtFAO'
         OnChange = edtFAOChange
@@ -553,26 +562,32 @@ object STMntSOrdFrm: TSTMntSOrdFrm
     end
     object pnlDetails: TPanel
       Left = 0
-      Top = 61
-      Width = 794
-      Height = 309
+      Top = 83
+      Width = 842
+      Height = 295
       Align = alClient
       Caption = 'pnlDetails'
       ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 61
+      ExplicitWidth = 788
+      ExplicitHeight = 300
       object pnlLines: TPanel
         Left = 1
-        Top = 145
-        Width = 792
-        Height = 163
+        Top = 161
+        Width = 840
+        Height = 133
         Align = alClient
         ParentBackground = False
         TabOrder = 0
+        ExplicitTop = 145
+        ExplicitWidth = 786
+        ExplicitHeight = 154
         object LineDetsStringGrid: TStringGrid
           Left = 1
           Top = 1
-          Width = 790
-          Height = 161
+          Width = 838
+          Height = 131
           Align = alClient
           ColCount = 8
           DefaultRowHeight = 20
@@ -580,7 +595,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           RowCount = 10
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
@@ -591,6 +606,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnDrawCell = LineDetsStringGridDrawCell
           OnKeyUp = LineDetsStringGridKeyUp
           OnSelectCell = LineDetsStringGridSelectCell
+          ExplicitWidth = 784
+          ExplicitHeight = 152
           ColWidths = (
             38
             225
@@ -605,92 +622,90 @@ object STMntSOrdFrm: TSTMntSOrdFrm
       object pnlHead: TPanel
         Left = 1
         Top = 1
-        Width = 792
-        Height = 144
+        Width = 840
+        Height = 160
         Align = alTop
         BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
         DesignSize = (
-          792
-          144)
+          840
+          160)
         object Label3: TLabel
           Left = 8
           Top = 10
-          Width = 49
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Customer'
         end
         object Label6: TLabel
           Left = 8
           Top = 38
-          Width = 40
-          Height = 13
+          Width = 44
+          Height = 17
           Caption = 'Contact'
         end
         object Label11: TLabel
-          Left = 380
+          Left = 422
           Top = 37
-          Width = 83
-          Height = 13
+          Width = 97
+          Height = 17
           Anchors = [akTop, akRight]
           Caption = 'Delivery address'
-          ExplicitLeft = 386
         end
         object Label13: TLabel
           Left = 8
           Top = 94
-          Width = 43
-          Height = 13
+          Width = 48
+          Height = 17
           Caption = 'Cust Ref'
         end
         object Label7: TLabel
           Left = 9
           Top = 120
-          Width = 20
-          Height = 13
+          Width = 23
+          Height = 17
           Caption = 'Rep'
         end
         object Label1: TLabel
-          Left = 380
+          Left = 422
           Top = 67
-          Width = 77
-          Height = 13
+          Width = 87
+          Height = 17
           Anchors = [akTop, akRight]
           Caption = 'Replenish Type'
-          ExplicitLeft = 386
         end
         object Label17: TLabel
-          Left = 380
+          Left = 422
           Top = 8
-          Width = 49
-          Height = 13
+          Width = 56
+          Height = 17
           Anchors = [akTop, akRight]
           Caption = 'Deliver to'
-          ExplicitLeft = 386
         end
         object pnlWarehouse: TPanel
-          Left = 366
+          Left = 408
           Top = 88
           Width = 401
           Height = 49
           Anchors = [akTop, akRight]
           ParentBackground = False
           TabOrder = 12
+          ExplicitLeft = 354
           DesignSize = (
             401
             49)
           object Label14: TLabel
             Left = 14
             Top = 15
-            Width = 80
-            Height = 13
+            Width = 90
+            Height = 17
             Anchors = [akTop, akRight]
             Caption = 'Replenish From'
           end
@@ -698,7 +713,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
             Left = 102
             Top = 11
             Width = 222
-            Height = 21
+            Height = 25
             Anchors = [akTop, akRight]
             KeyField = 'Part_Store'
             ListField = 'Part_Store_Name'
@@ -708,10 +723,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           end
         end
         object CustNameEdit: TEdit
-          Left = 78
+          Left = 85
           Top = 6
-          Width = 239
-          Height = 21
+          Width = 281
+          Height = 25
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
           Color = clBtnFace
@@ -721,7 +736,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnExit = CustNameEditExit
         end
         object CustBitBtn: TBitBtn
-          Left = 326
+          Left = 375
           Top = 4
           Width = 25
           Height = 25
@@ -738,10 +753,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnClick = CustBitBtnClick
         end
         object ContactEdit: TEdit
-          Left = 78
+          Left = 85
           Top = 34
-          Width = 239
-          Height = 21
+          Width = 281
+          Height = 25
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
           Color = clBtnFace
@@ -750,7 +765,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           TabOrder = 2
         end
         object SelContactBtn: TButton
-          Left = 326
+          Left = 375
           Top = 32
           Width = 25
           Height = 25
@@ -766,19 +781,19 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnClick = SelContactBtnClick
         end
         object OrdEdit: TEdit
-          Left = 78
+          Left = 85
           Top = 90
-          Width = 209
-          Height = 21
+          Width = 251
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 5
           OnChange = OrdEditChange
         end
         object dbLkpCmbRep: TDBLookupComboBox
-          Left = 78
+          Left = 85
           Top = 116
-          Width = 209
-          Height = 21
+          Width = 251
+          Height = 25
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Rep'
           ListField = 'Name'
@@ -787,7 +802,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnClick = dbLkpCmbRepClick
         end
         object DeliveryBitBtn: TBitBtn
-          Left = 734
+          Left = 797
           Top = 31
           Width = 25
           Height = 25
@@ -803,10 +818,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnClick = DeliveryBitBtnClick
         end
         object DeliveryEdit: TEdit
-          Left = 468
+          Left = 531
           Top = 33
           Width = 257
-          Height = 21
+          Height = 25
           TabStop = False
           Anchors = [akTop, akRight]
           Color = clBtnFace
@@ -816,10 +831,10 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnChange = CustNameEditChange
         end
         object dblkpReplType: TDBLookupComboBox
-          Left = 468
+          Left = 531
           Top = 63
           Width = 222
-          Height = 21
+          Height = 25
           Anchors = [akTop, akRight]
           KeyField = 'Replenish_Source'
           ListField = 'Replenish_Source_Descr'
@@ -828,7 +843,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           OnClick = dblkpReplTypeClick
         end
         object pnlDeliveryType: TPanel
-          Left = 468
+          Left = 510
           Top = 2
           Width = 307
           Height = 25
@@ -836,6 +851,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 7
+          ExplicitLeft = 456
           DesignSize = (
             307
             25)
@@ -852,7 +868,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
             OnClick = RdBtnToCustClick
           end
           object RDBtnToAdHoc: TRadioButton
-            Left = 72
+            Left = 85
             Top = 5
             Width = 73
             Height = 17
@@ -862,9 +878,9 @@ object STMntSOrdFrm: TSTMntSOrdFrm
             OnClick = RDBtnToAdHocClick
           end
           object rdbtnToProduction: TRadioButton
-            Left = 144
+            Left = 165
             Top = 5
-            Width = 73
+            Width = 108
             Height = 17
             Anchors = [akTop, akRight]
             Caption = 'Production'
@@ -874,32 +890,33 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           end
         end
         object pnlSupplier: TPanel
-          Left = 374
+          Left = 416
           Top = 88
           Width = 401
           Height = 57
           Anchors = [akTop, akRight]
           ParentBackground = False
           TabOrder = 11
+          ExplicitLeft = 362
           object Label4: TLabel
             Left = 14
             Top = 8
-            Width = 43
-            Height = 13
+            Width = 48
+            Height = 17
             Caption = 'Supplier'
           end
           object Label15: TLabel
             Left = 14
             Top = 32
-            Width = 55
-            Height = 13
+            Width = 64
+            Height = 17
             Caption = 'Order type'
           end
           object edtSupplier: TEdit
             Left = 102
             Top = 4
             Width = 249
-            Height = 21
+            Height = 25
             ReadOnly = True
             TabOrder = 0
           end
@@ -922,7 +939,7 @@ object STMntSOrdFrm: TSTMntSOrdFrm
             Left = 102
             Top = 28
             Width = 195
-            Height = 21
+            Height = 25
             KeyField = 'Supp_Order_type'
             ListField = 'Supp_Order_Desc'
             ListSource = STSalesOrdDM.GetSuppOTypeSRC
@@ -945,20 +962,20 @@ object STMntSOrdFrm: TSTMntSOrdFrm
           object Label12: TLabel
             Left = 8
             Top = 8
-            Width = 60
-            Height = 13
+            Width = 68
+            Height = 17
             Caption = 'Cost Centre'
           end
           object edtCostCentre: TEdit
-            Left = 78
+            Left = 85
             Top = 4
             Width = 185
-            Height = 21
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
           end
           object btnCostCentre: TBitBtn
-            Left = 280
+            Left = 287
             Top = 2
             Width = 25
             Height = 25
@@ -1041,8 +1058,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
   end
   object ExtChgMenu: TPopupMenu
     OnPopup = ExtChgMenuPopup
-    Left = 256
-    Top = 449
+    Left = 320
+    Top = 545
     object ChrgAddBitBtn: TMenuItem
       Caption = '&Add'
       ShortCut = 16449
@@ -1062,8 +1079,8 @@ object STMntSOrdFrm: TSTMntSOrdFrm
   object FalshTimerDelNotes: TTimer
     Enabled = False
     OnTimer = FalshTimerDelNotesTimer
-    Left = 712
-    Top = 104
+    Left = 546
+    Top = 290
   end
   object qryVATCode: TFDQuery
     ConnectionName = 'PB'

@@ -8,7 +8,7 @@ object STRSPordFrm: TSTRSPordFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object STRSPordFrm: TSTRSPordFrm
   DesignSize = (
     485
     368)
-  TextHeight = 13
+  TextHeight = 17
   object GroupBox1: TGroupBox
     Left = 8
     Top = 144
@@ -28,22 +28,22 @@ object STRSPordFrm: TSTRSPordFrm
     object Label2: TLabel
       Left = 24
       Top = 30
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 40
       Top = 62
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtFrom: TEdit
       Left = 64
       Top = 22
       Width = 129
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtFromChange
@@ -52,7 +52,7 @@ object STRSPordFrm: TSTRSPordFrm
       Left = 64
       Top = 54
       Width = 129
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
       OnChange = EnablePrint
@@ -103,6 +103,7 @@ object STRSPordFrm: TSTRSPordFrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 10
+    ExplicitHeight = 16
   end
   object btnPreview: TBitBtn
     Left = 315
@@ -134,6 +135,7 @@ object STRSPordFrm: TSTRSPordFrm
     ParentFont = False
     TabOrder = 12
     OnClick = btnPreviewClick
+    ExplicitHeight = 16
   end
   object btnPrint: TBitBtn
     Left = 398
@@ -165,6 +167,7 @@ object STRSPordFrm: TSTRSPordFrm
     ParentFont = False
     TabOrder = 13
     OnClick = btnPrintClick
+    ExplicitHeight = 16
   end
   object GroupBox2: TGroupBox
     Left = 8
@@ -177,15 +180,15 @@ object STRSPordFrm: TSTRSPordFrm
     object Label4: TLabel
       Left = 24
       Top = 27
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label5: TLabel
       Left = 39
       Top = 56
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object DateFromButton: TSpeedButton
@@ -234,7 +237,7 @@ object STRSPordFrm: TSTRSPordFrm
       Left = 63
       Top = 19
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnChange = EnablePrint
@@ -244,7 +247,7 @@ object STRSPordFrm: TSTRSPordFrm
       Left = 63
       Top = 51
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 1
       OnChange = EnablePrint
@@ -286,7 +289,7 @@ object STRSPordFrm: TSTRSPordFrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -305,7 +308,7 @@ object STRSPordFrm: TSTRSPordFrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -315,8 +318,8 @@ object STRSPordFrm: TSTRSPordFrm
     object Label6: TLabel
       Left = 8
       Top = 16
-      Width = 89
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'Selected Supplier'
     end
     object SuppLuSpeedButton: TSpeedButton
@@ -340,7 +343,7 @@ object STRSPordFrm: TSTRSPordFrm
       Left = 8
       Top = 32
       Width = 249
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -420,6 +423,7 @@ object STRSPordFrm: TSTRSPordFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 11
     OnClick = btnExcelClick
+    ExplicitHeight = 16
   end
   object OleContainer1: TOleContainer
     Left = 196
@@ -442,8 +446,8 @@ object STRSPordFrm: TSTRSPordFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -462,7 +466,7 @@ object STRSPordFrm: TSTRSPordFrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -481,7 +485,7 @@ object STRSPordFrm: TSTRSPordFrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -491,8 +495,8 @@ object STRSPordFrm: TSTRSPordFrm
     object Label1: TLabel
       Left = 8
       Top = 16
-      Width = 95
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = 'Selected Customer'
     end
     object CustLuSpeedButton: TSpeedButton
@@ -516,7 +520,7 @@ object STRSPordFrm: TSTRSPordFrm
       Left = 8
       Top = 32
       Width = 249
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end

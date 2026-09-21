@@ -3,62 +3,62 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
   Top = 123
   BorderStyle = bsDialog
   Caption = 'Maintain Work Centre Sizes'
-  ClientHeight = 325
+  ClientHeight = 333
   ClientWidth = 468
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 40
-    Width = 67
-    Height = 13
+    Top = 38
+    Width = 76
+    Height = 17
     Caption = 'Current Sizes'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 98
-    Height = 13
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object Label3: TLabel
     Left = 8
-    Top = 16
-    Width = 68
-    Height = 13
+    Top = 12
+    Width = 81
+    Height = 17
     Caption = 'Work Centre:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblDetails: TLabel
     Left = 88
-    Top = 16
-    Width = 48
-    Height = 13
+    Top = 12
+    Width = 59
+    Height = 17
     Caption = 'lblDetails'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object Label4: TLabel
     Left = 288
-    Top = 40
-    Width = 93
-    Height = 13
+    Top = 38
+    Width = 106
+    Height = 17
     Caption = 'Un-assigned Sizes'
   end
   object lstbxMembers: TListBox
@@ -66,7 +66,7 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 0
     OnClick = lstbxMembersClick
@@ -124,19 +124,21 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 3
     OnClick = lstbxNonMembersClick
   end
   object Panel2: TPanel
     Left = 0
-    Top = 284
+    Top = 292
     Width = 468
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 275
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 153
       Top = 8
@@ -162,7 +164,7 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 5
     Visible = False
   end
@@ -171,7 +173,7 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 6
     Visible = False
   end

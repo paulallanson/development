@@ -3,12 +3,12 @@ object STRSLabelsfrm: TSTRSLabelsfrm
   Top = 65
   BorderStyle = bsDialog
   Caption = 'Print Box Labels'
-  ClientHeight = 291
-  ClientWidth = 411
+  ClientHeight = 332
+  ClientWidth = 442
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,120 +17,120 @@ object STRSLabelsfrm: TSTRSLabelsfrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object POGroupBox: TGroupBox
     Left = 8
     Top = 0
-    Width = 393
-    Height = 65
+    Width = 418
+    Height = 74
     Caption = 'Delivery details for order '
     ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 52
-      Height = 13
+      Left = 23
+      Top = 24
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object CustomerLbl: TLabel
-      Left = 80
-      Top = 20
-      Width = 64
-      Height = 13
+      Left = 92
+      Top = 24
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
     object DescrLbl: TLabel
-      Left = 80
-      Top = 41
-      Width = 43
-      Height = 13
+      Left = 92
+      Top = 45
+      Width = 50
+      Height = 17
       Caption = 'DescrLbl'
     end
     object Label2: TLabel
-      Left = 8
-      Top = 41
-      Width = 62
-      Height = 13
+      Left = 15
+      Top = 45
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
   end
   object GroupBox2: TGroupBox
     Left = 8
-    Top = 126
-    Width = 209
-    Height = 130
+    Top = 134
+    Width = 233
+    Height = 139
     Caption = 'Box Quantities'
     ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 50
       Top = 21
-      Width = 65
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Box Quantity'
     end
     object Label4: TLabel
       Left = 10
       Top = 108
-      Width = 102
-      Height = 13
+      Width = 117
+      Height = 17
       Caption = 'Start at box number'
     end
     object Label5: TLabel
       Left = 49
       Top = 79
-      Width = 65
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'No. of boxes'
     end
     object Label10: TLabel
       Left = 15
       Top = 50
-      Width = 93
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Sets per Book/Pad'
     end
     object BoxQuantityEdit: TEdit
-      Left = 123
+      Left = 129
       Top = 13
       Width = 73
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnKeyPress = BoxQuantityEditKeyPress
       OnKeyUp = BoxQuantityEditKeyUp
     end
     object StartBoxSpinEdit: TSpinEdit
-      Left = 123
+      Left = 129
       Top = 100
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 9999
       MinValue = 1
       TabOrder = 2
       Value = 1
     end
     object NoofBoxesSpinEdit: TSpinEdit
-      Left = 123
+      Left = 129
       Top = 71
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 999
       MinValue = 1
       TabOrder = 1
       Value = 1
     end
     object SetsEdit: TEdit
-      Left = 123
+      Left = 129
       Top = 42
       Width = 73
-      Height = 21
+      Height = 25
       TabOrder = 3
     end
   end
   object GroupBox3: TGroupBox
-    Left = 224
-    Top = 126
+    Left = 249
+    Top = 134
     Width = 177
     Height = 91
     Caption = 'Numbering'
@@ -139,41 +139,41 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     object Label6: TLabel
       Left = 24
       Top = 24
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'from'
     end
     object Label8: TLabel
       Left = 19
       Top = 56
-      Width = 28
-      Height = 13
+      Width = 32
+      Height = 17
       Caption = 'Prefix'
     end
     object FromEdit: TEdit
       Left = 56
       Top = 16
       Width = 97
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object PrefixEdit: TEdit
       Left = 56
       Top = 48
       Width = 57
-      Height = 21
+      Height = 25
       TabOrder = 1
     end
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 261
+    Top = 285
     Width = 75
     Height = 25
     Caption = '&Cancel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -182,15 +182,15 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     TabOrder = 3
   end
   object PreviewBitBtn: TBitBtn
-    Left = 144
-    Top = 261
+    Left = 256
+    Top = 285
     Width = 75
     Height = 25
     Caption = 'Pre&view'
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -213,23 +213,23 @@ object STRSLabelsfrm: TSTRSLabelsfrm
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 72
-    Width = 393
+    Top = 80
+    Width = 418
     Height = 55
     ParentBackground = False
     TabOrder = 5
     object Label9: TLabel
       Left = 8
       Top = 24
-      Width = 67
-      Height = 13
+      Width = 77
+      Height = 17
       Caption = 'Delivery Date'
     end
     object DeliveryDateEdit: TEdit
       Left = 120
       Top = 20
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'DeliveryDateEdit'
       OnChange = DeliveryDateEditChange
@@ -259,8 +259,8 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 232
-    Top = 261
+    Left = 344
+    Top = 285
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -268,7 +268,7 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {

@@ -9,7 +9,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
   Constraints.MinWidth = 782
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
@@ -17,7 +17,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object ToDataTreeView: TTreeView
     Left = 416
     Top = 280
@@ -39,6 +39,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
       item
         Width = 50
       end>
+    ExplicitTop = 470
+    ExplicitWidth = 777
   end
   object pnlBottom: TPanel
     Left = 0
@@ -48,6 +50,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 429
+    ExplicitWidth = 777
     DesignSize = (
       783
       41)
@@ -67,7 +71,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       AutoSize = False
     end
     object OKBitBtn: TBitBtn
-      Left = 533
+      Left = 524
       Top = 8
       Width = 75
       Height = 25
@@ -96,7 +100,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
-      Left = 613
+      Left = 607
       Top = 8
       Width = 75
       Height = 25
@@ -123,9 +127,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 601
     end
     object CloseBitBtn: TBitBtn
-      Left = 693
+      Left = 687
       Top = 8
       Width = 75
       Height = 25
@@ -134,6 +139,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = OKBitBtnClick
+      ExplicitLeft = 681
     end
   end
   object pnlTop: TPanel
@@ -144,42 +150,43 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 777
     DesignSize = (
       783
       141)
     object QtyLabel: TLabel
       Left = 11
       Top = 117
-      Width = 121
-      Height = 13
+      Width = 141
+      Height = 17
       Caption = 'Qty To Move (in singles)'
     end
     object MovedLabel: TLabel
       Left = 352
       Top = 117
-      Width = 113
-      Height = 13
+      Width = 131
+      Height = 17
       Caption = 'Qty Moved (in singles)'
     end
     object Label3: TLabel
       Left = 11
       Top = 10
-      Width = 81
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'Movement Date'
     end
     object lblMoveType: TLabel
-      Left = 304
+      Left = 295
       Top = 10
-      Width = 80
-      Height = 13
+      Width = 93
+      Height = 17
       Caption = 'Movement Type'
     end
     object lblReference: TLabel
-      Left = 554
+      Left = 541
       Top = 10
-      Width = 51
-      Height = 13
+      Width = 58
+      Height = 17
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       Caption = 'Reference'
@@ -187,37 +194,38 @@ object PBPartTransferFrm: TPBPartTransferFrm
     object GRNGroupBox: TGroupBox
       Left = 7
       Top = 29
-      Width = 759
+      Width = 753
       Height = 75
       Anchors = [akLeft, akTop, akRight]
       ParentBackground = False
       TabOrder = 3
+      ExplicitWidth = 747
       object Label1: TLabel
         Left = 8
         Top = 20
-        Width = 48
-        Height = 13
+        Width = 57
+        Height = 17
         Caption = 'Order No'
       end
       object Label4: TLabel
         Left = 296
         Top = 20
-        Width = 43
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Supplier'
       end
       object Label5: TLabel
         Left = 8
         Top = 52
-        Width = 67
-        Height = 13
+        Width = 79
+        Height = 17
         Caption = 'GRN Number'
       end
       object PORefEdit: TEdit
         Left = 128
         Top = 16
         Width = 81
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -225,7 +233,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
         Left = 352
         Top = 16
         Width = 409
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 1
       end
@@ -233,7 +241,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
         Left = 128
         Top = 48
         Width = 145
-        Height = 21
+        Height = 25
         MaxLength = 20
         TabOrder = 2
       end
@@ -241,47 +249,47 @@ object PBPartTransferFrm: TPBPartTransferFrm
     object PartGroupBox: TGroupBox
       Left = 7
       Top = 31
-      Width = 760
+      Width = 761
       Height = 73
       Anchors = [akLeft, akTop, akRight]
       ParentBackground = False
       TabOrder = 2
       DesignSize = (
-        760
+        761
         73)
       object Label2: TLabel
         Left = 8
-        Top = 20
-        Width = 70
-        Height = 13
+        Top = 17
+        Width = 80
+        Height = 17
         Caption = 'Product Code'
       end
       object Label8: TLabel
-        Left = 384
-        Top = 47
-        Width = 59
-        Height = 13
+        Left = 385
+        Top = 44
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object Label6: TLabel
         Left = 8
-        Top = 47
-        Width = 80
-        Height = 13
+        Top = 44
+        Width = 92
+        Height = 17
         Caption = 'Form Reference'
       end
       object Label7: TLabel
-        Left = 384
-        Top = 20
-        Width = 49
-        Height = 13
+        Left = 385
+        Top = 17
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object PartEdit: TEdit
-        Left = 128
-        Top = 16
+        Left = 129
+        Top = 13
         Width = 209
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         MaxLength = 25
         TabOrder = 0
@@ -289,8 +297,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         OnKeyPress = PartEditKeyPress
       end
       object PartBitBtn: TBitBtn
-        Left = 344
-        Top = 14
+        Left = 345
+        Top = 13
         Width = 25
         Height = 25
         Caption = '...'
@@ -304,20 +312,20 @@ object PBPartTransferFrm: TPBPartTransferFrm
         OnClick = PartBitBtnClick
       end
       object PartDescrEdit: TEdit
-        Left = 456
-        Top = 43
-        Width = 297
-        Height = 21
+        Left = 457
+        Top = 40
+        Width = 298
+        Height = 25
         Anchors = [akLeft, akTop, akRight, akBottom]
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 2
       end
       object edtFormReference: TEdit
-        Left = 128
-        Top = 43
+        Left = 129
+        Top = 40
         Width = 241
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         Color = clBtnFace
         ReadOnly = True
@@ -325,10 +333,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
         OnKeyPress = PartEditKeyPress
       end
       object edtCustomerName: TEdit
-        Left = 456
-        Top = 16
-        Width = 297
-        Height = 21
+        Left = 457
+        Top = 13
+        Width = 298
+        Height = 25
         Anchors = [akLeft, akTop, akRight, akBottom]
         CharCase = ecUpperCase
         Color = clBtnFace
@@ -337,10 +345,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
         OnKeyPress = PartEditKeyPress
       end
       object dblkpVersions: TDBLookupComboBox
-        Left = 128
-        Top = 16
+        Left = 129
+        Top = 13
         Width = 241
-        Height = 21
+        Height = 25
         KeyField = 'Stock_Code_No'
         ListField = 'Stock_Description'
         ListSource = dtsVersions
@@ -350,7 +358,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       end
     end
     object QtyMemo: TMemo
-      Left = 135
+      Left = 155
       Top = 112
       Width = 81
       Height = 23
@@ -362,7 +370,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       OnKeyPress = QtyMemoKeyPress
     end
     object MovedMemo: TMemo
-      Left = 463
+      Left = 491
       Top = 112
       Width = 81
       Height = 23
@@ -377,15 +385,15 @@ object PBPartTransferFrm: TPBPartTransferFrm
     end
     object DateEdit: TEdit
       Left = 135
-      Top = 7
+      Top = 6
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 4
       OnExit = DateEditExit
     end
     object DateBitBtn: TBitBtn
       Left = 227
-      Top = 5
+      Top = 6
       Width = 25
       Height = 25
       Font.Charset = ANSI_CHARSET
@@ -412,10 +420,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
       OnClick = DateBitBtnClick
     end
     object edtReference: TEdit
-      Left = 614
-      Top = 7
+      Left = 613
+      Top = 6
       Width = 153
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       TabOrder = 6
     end
@@ -423,7 +431,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Left = 392
       Top = 6
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Part_Movement_Type'
       ListField = 'Part_Move_Type_Descr'
       ListSource = dtsMoveType
@@ -440,6 +448,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Caption = 'pnlcentre'
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 777
+    ExplicitHeight = 288
     object pnlCentreRight: TPanel
       Left = 401
       Top = 1
@@ -450,40 +460,44 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Caption = 'pnlCentreRight'
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 375
+      ExplicitHeight = 286
       DesignSize = (
         381
         295)
       object ToGroupBox: TGroupBox
         Left = 9
         Top = 9
-        Width = 361
+        Width = 355
         Height = 273
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move To'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 349
+        ExplicitHeight = 264
         DesignSize = (
-          361
+          355
           273)
         object ToStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 27
-          Height = 13
+          Width = 31
+          Height = 17
           Caption = 'Store'
         end
         object ToDetsLabel: TLabel
           Left = 8
           Top = 56
-          Width = 38
-          Height = 13
+          Width = 44
+          Height = 17
           Caption = 'To Dets'
         end
         object ToStoreDBLookupComboBox: TDBLookupComboBox
           Left = 48
           Top = 24
           Width = 193
-          Height = 21
+          Height = 25
           DropDownRows = 8
           DropDownWidth = 195
           KeyField = 'Part_Store'
@@ -495,12 +509,12 @@ object PBPartTransferFrm: TPBPartTransferFrm
         object ToTreeView: TTreeView
           Left = 8
           Top = 74
-          Width = 342
+          Width = 336
           Height = 186
           Anchors = [akLeft, akTop, akRight, akBottom]
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Indent = 19
@@ -510,6 +524,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
           OnDragDrop = ToTreeViewDragDrop
           OnDragOver = ToTreeViewDragOver
           OnStartDrag = ToTreeViewStartDrag
+          ExplicitWidth = 330
+          ExplicitHeight = 177
         end
       end
     end
@@ -523,6 +539,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Caption = 'pnlCentreLeft'
       ParentBackground = False
       TabOrder = 1
+      ExplicitHeight = 286
       DesignSize = (
         400
         295)
@@ -535,28 +552,29 @@ object PBPartTransferFrm: TPBPartTransferFrm
         Caption = 'Move From'
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 265
         DesignSize = (
           384
           274)
         object FromStoreLabel: TLabel
           Left = 8
           Top = 28
-          Width = 27
-          Height = 13
+          Width = 31
+          Height = 17
           Caption = 'Store'
         end
         object FromDetsLabel: TLabel
           Left = 8
           Top = 56
-          Width = 52
-          Height = 13
+          Width = 60
+          Height = 17
           Caption = 'From Dets'
         end
         object FromStoreDBLookupComboBox: TDBLookupComboBox
           Left = 48
           Top = 24
           Width = 193
-          Height = 21
+          Height = 25
           DropDownRows = 8
           DropDownWidth = 195
           KeyField = 'Part_Store'
@@ -574,7 +592,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
           DragMode = dmAutomatic
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Indent = 19
@@ -583,6 +601,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
           OnChange = FromTreeViewChange
           OnDblClick = FromTreeViewDblClick
           OnStartDrag = FromTreeViewStartDrag
+          ExplicitHeight = 177
         end
       end
     end
@@ -1125,8 +1144,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
       ' '
       ' '
       ' ')
-    Left = 304
-    Top = 124
+    Left = 356
+    Top = 123
     ParamData = <
       item
         Name = 'Purch_Ord_Status'

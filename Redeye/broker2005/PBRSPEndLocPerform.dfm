@@ -4,11 +4,11 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
   BorderStyle = bsDialog
   Caption = 'Revenue Centre Performance report'
   ClientHeight = 248
-  ClientWidth = 416
+  ClientWidth = 453
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,27 +16,27 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
   OnClose = FormClose
   OnCreate = FormCreate
   DesignSize = (
-    416
+    453
     248)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 60
-    Height = 13
+    Width = 69
+    Height = 17
     Caption = 'Start Period'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 70
-    Height = 13
+    Width = 82
+    Height = 17
     Caption = 'No of Periods'
   end
   object rdgrpReportType: TRadioGroup
-    Left = 288
+    Left = 275
     Top = 11
-    Width = 119
+    Width = 145
     Height = 64
     Caption = ' Report by '
     ItemIndex = 0
@@ -60,7 +60,7 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
   object rgRevenueLoc: TRadioGroup
     Left = 8
     Top = 88
-    Width = 121
+    Width = 137
     Height = 65
     Caption = 'By Revenue Centre'
     ItemIndex = 0
@@ -72,7 +72,7 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     OnClick = rgRevenueLocClick
   end
   object pnlRevenueLocSearch: TPanel
-    Left = 140
+    Left = 152
     Top = 88
     Width = 267
     Height = 65
@@ -81,16 +81,16 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 81
-      Height = 13
+      Top = 4
+      Width = 91
+      Height = 17
       Caption = 'Revenue Centre'
     end
     object edtRevenueLoc: TEdit
       Left = 8
       Top = 24
       Width = 209
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -111,7 +111,7 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     end
   end
   object CancelBitBtn: TBitBtn
-    Left = 335
+    Left = 366
     Top = 208
     Width = 75
     Height = 25
@@ -120,6 +120,8 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitLeft = 323
+    ExplicitTop = 199
   end
   object PreviewBitBtn: TBitBtn
     Left = 12
@@ -145,6 +147,7 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 198
   end
   object PrintBitBtn: TBitBtn
     Left = 97
@@ -170,12 +173,13 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = PrintBitBtnClick
+    ExplicitTop = 198
   end
   object dblkpPeriod: TDBLookupComboBox
     Left = 112
     Top = 16
     Width = 153
-    Height = 21
+    Height = 25
     KeyField = 'Period'
     ListField = 'Description'
     ListSource = dtsPeriod
@@ -185,7 +189,7 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     Left = 112
     Top = 48
     Width = 65
-    Height = 22
+    Height = 27
     MaxValue = 36
     MinValue = 1
     TabOrder = 6
@@ -244,10 +248,11 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
+    ExplicitTop = 199
   end
   object pnlExportPrgrss: TPanel
-    Left = 59
-    Top = 59
+    Left = 107
+    Top = 70
     Width = 289
     Height = 61
     ParentBackground = False
@@ -256,8 +261,8 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -272,7 +277,7 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
   object chkbxConsolidate: TCheckBox
     Left = 13
     Top = 168
-    Width = 204
+    Width = 238
     Height = 17
     Caption = 'Consolidate by Product Category'
     TabOrder = 10
@@ -280,7 +285,7 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
   object chkbxShowRep: TCheckBox
     Left = 293
     Top = 168
-    Width = 108
+    Width = 140
     Height = 17
     Caption = 'Show current Rep'
     TabOrder = 12

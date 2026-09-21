@@ -7,14 +7,14 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object strgrdOrdHist: TStringGrid
     Left = 0
     Top = 0
@@ -28,6 +28,8 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goColMoving, goRowSelect]
     TabOrder = 0
     OnDrawCell = strgrdOrdHistDrawCell
+    ExplicitWidth = 645
+    ExplicitHeight = 224
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -35,6 +37,8 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     Width = 651
     Height = 19
     Panels = <>
+    ExplicitTop = 224
+    ExplicitWidth = 645
   end
   object qrySelPOLine: TFDQuery
     ConnectionName = 'PB'

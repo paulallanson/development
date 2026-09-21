@@ -2,45 +2,46 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
   Left = 146
   Top = 45
   Caption = 'THIS FORM IS NEVER SEEN, ONLY THE GROUP BOX'
-  ClientHeight = 485
-  ClientWidth = 475
+  ClientHeight = 503
+  ClientWidth = 474
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 13
+  TextHeight = 17
   object SupCapGroupBox: TGroupBox
     Left = 0
     Top = 0
     Width = 457
-    Height = 465
+    Height = 481
     TabOrder = 0
     object Panel1: TPanel
       Left = 2
-      Top = 15
+      Top = 19
       Width = 191
-      Height = 448
+      Height = 460
       Align = alLeft
       Caption = 'Panel1'
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 444
       DesignSize = (
         191
-        448)
+        460)
       object Label1: TLabel
         Left = 1
-        Top = 1
-        Width = 106
-        Height = 13
+        Top = -3
+        Width = 120
+        Height = 17
         Caption = 'Selected Capabilities'
       end
       object SuppCapTreeView: TTreeView
         Left = 3
         Top = 16
         Width = 184
-        Height = 423
+        Height = 439
         Anchors = [akLeft, akTop, akRight, akBottom]
         Images = TreeViewImageList
         Indent = 19
@@ -51,26 +52,30 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         OnClick = SuppCapTreeViewClick
         OnCollapsing = SuppCapTreeViewCollapsing
         OnExpanding = SuppCapTreeViewExpanding
+        ExplicitHeight = 423
       end
     end
     object UnSelPanel: TPanel
       Left = 198
-      Top = 15
+      Top = 19
       Width = 257
-      Height = 448
+      Height = 460
       Align = alRight
       Anchors = [akLeft, akTop, akRight, akBottom]
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 15
+      ExplicitHeight = 448
       object UnSelCapsPanel: TPanel
         Left = 1
-        Top = 232
+        Top = 244
         Width = 255
         Height = 215
         Align = alBottom
         Caption = 'UnSelCapsPanel'
         ParentBackground = False
         TabOrder = 0
+        ExplicitTop = 232
         DesignSize = (
           255
           215)
@@ -118,9 +123,9 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         end
         object Label3: TLabel
           Left = 2
-          Top = 1
-          Width = 120
-          Height = 13
+          Top = -7
+          Width = 135
+          Height = 17
           Caption = 'Unselected Capabilities'
         end
         object UnSelCapsDBGrid: TDBGrid
@@ -158,14 +163,14 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         Left = 1
         Top = 1
         Width = 255
-        Height = 224
+        Height = 237
         Align = alTop
         Caption = 'Panel3'
         ParentBackground = False
         TabOrder = 1
         DesignSize = (
           255
-          224)
+          237)
         object AddProdTypSpeedButton: TSpeedButton
           Left = 4
           Top = 34
@@ -210,16 +215,16 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         end
         object Label2: TLabel
           Left = 2
-          Top = 1
-          Width = 131
-          Height = 13
+          Top = -3
+          Width = 150
+          Height = 17
           Caption = 'Unselected Product Types'
         end
         object UnSelProdTypsDBGrid: TDBGrid
           Left = 32
           Top = 16
           Width = 219
-          Height = 201
+          Height = 214
           Anchors = [akLeft, akTop, akRight, akBottom]
           DataSource = UnSelProdTypsDS
           DrawingStyle = gdsGradient

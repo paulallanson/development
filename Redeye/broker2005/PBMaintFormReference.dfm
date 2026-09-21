@@ -209,8 +209,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 173
-    ExplicitWidth = 456
+    ExplicitTop = 210
+    ExplicitWidth = 471
     object DelLabel: TLabel
       Left = 128
       Top = 6

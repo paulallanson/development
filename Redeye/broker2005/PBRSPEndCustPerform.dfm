@@ -3,25 +3,27 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
   Top = 159
   BorderStyle = bsDialog
   Caption = 'Customer Profit Analysis Report'
-  ClientHeight = 167
-  ClientWidth = 347
+  ClientHeight = 179
+  ClientWidth = 368
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
-    Top = 126
-    Width = 347
+    Top = 138
+    Width = 368
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 117
+    ExplicitWidth = 341
     object btnPreview: TBitBtn
       Left = 87
       Top = 6
@@ -137,23 +139,25 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
   object pnlReportSelect: TPanel
     Left = 0
     Top = 0
-    Width = 347
-    Height = 126
+    Width = 368
+    Height = 138
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 341
+    ExplicitHeight = 117
     object Label3: TLabel
       Left = 16
-      Top = 64
-      Width = 81
-      Height = 13
+      Top = 60
+      Width = 95
+      Height = 17
       Caption = 'Customer Name'
     end
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 20
-      Height = 13
+      Width = 25
+      Height = 17
       Caption = 'Year'
     end
     object OleContainer1: TOleContainer
@@ -170,13 +174,13 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
       Left = 16
       Top = 80
       Width = 201
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
     object btnLUCust: TButton
-      Left = 224
-      Top = 80
+      Left = 240
+      Top = 81
       Width = 25
       Height = 25
       Caption = '...'
@@ -193,7 +197,7 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
       Left = 60
       Top = 16
       Width = 141
-      Height = 21
+      Height = 25
       KeyField = 'Financial_Year'
       ListField = 'Title'
       ListSource = dtsFY
@@ -201,8 +205,8 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
       OnClick = dblkpFYClick
     end
     object pnlExportPrgrss: TPanel
-      Left = 42
-      Top = 33
+      Left = 47
+      Top = 38
       Width = 289
       Height = 61
       ParentBackground = False
@@ -211,8 +215,8 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Exporting...'
       end
       object prgbrExport: TProgressBar

@@ -1,31 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Look-Up A Product Type Capability
-
-VSS Info:
-$Header: /PBL D5/PBLUPrdTypOChg.pas 4     20/06/03 9:52 Andrewh $
-$History: PBLUPrdTypOChg.pas $
- * 
- * *****************  Version 4  *****************
- * User: Andrewh      Date: 20/06/03   Time: 9:52
- * Updated in $/PBL D5
- * 
- * *****************  Version 2  *****************
- * User: Andrewh      Date: 19/06/03   Time: 12:15
- * Updated in $/PBL D5
- * Add extra "Rep" parameter onto ScreenAccessControl function calls.
- * 
- * *****************  Version 1  *****************
- * User: Paul         Date: 23/12/:2   Time: 11:08
- * Created in $/PBL D5
- * Initial take on of Product type optional charges maintenance and lookup
- * programs
- *
-*******************************************************************************)
 unit PBLUPrdTypOChg;
 
 interface

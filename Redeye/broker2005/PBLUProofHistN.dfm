@@ -47,6 +47,7 @@ object PBLUProofHistNFrm: TPBLUProofHistNFrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 55
       object AddBitBtn: TBitBtn
         Left = 8
         Top = 21

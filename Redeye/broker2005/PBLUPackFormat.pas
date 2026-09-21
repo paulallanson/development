@@ -1,17 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Look-Up Job Type.
-
-VSS Info:
-$Header: /PBL D5/PBLUAddCharges.pas 12    20/06/03 9:52 Andrewh $
-$History: PBLUAddCharges.pas $
-
-
-*******************************************************************************)
 unit PBLUPackFormat;
 
 interface

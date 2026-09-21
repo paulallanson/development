@@ -2,52 +2,52 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
   Left = 131
   Top = 104
   Caption = 'Product Suppliers'
-  ClientHeight = 453
+  ClientHeight = 477
   ClientWidth = 539
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
-  TextHeight = 13
+  TextHeight = 17
   object PartLabel: TLabel
     Left = 8
     Top = 8
-    Width = 114
-    Height = 13
+    Width = 129
+    Height = 17
     Caption = 'Suppliers For Product:'
   end
   object Label4: TLabel
     Left = 8
-    Top = 360
-    Width = 132
-    Height = 13
+    Top = 366
+    Width = 151
+    Height = 17
     Caption = 'Drag and Drop to change'
   end
   object PartEdit: TEdit
     Left = 8
-    Top = 32
+    Top = 38
     Width = 193
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 0
   end
   object PartDescrEdit: TEdit
     Left = 208
-    Top = 32
+    Top = 38
     Width = 305
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 1
   end
   object SuppsListView: TListView
     Left = 264
-    Top = 72
+    Top = 78
     Width = 250
     Height = 281
     Columns = <
@@ -63,7 +63,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
   end
   object AvailListView: TListView
     Left = 6
-    Top = 72
+    Top = 78
     Width = 250
     Height = 281
     Columns = <
@@ -78,8 +78,8 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     OnDragOver = AvailListViewDragOver
   end
   object OKBitBtn: TBitBtn
-    Left = 360
-    Top = 408
+    Left = 358
+    Top = 420
     Width = 75
     Height = 25
     Kind = bkOK
@@ -88,8 +88,8 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 440
-    Top = 408
+    Left = 438
+    Top = 420
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -98,7 +98,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 384
+    Top = 396
     Width = 249
     Height = 49
     Caption = 'Type here to narrow the search'
@@ -108,7 +108,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
       Left = 8
       Top = 16
       Width = 225
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -128,7 +128,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
       '      (Supplier_Branch.Branch_No = Part_Supplier.Branch_No)'
       'Order By Supplier_Preference_Order')
     Left = 392
-    Top = 128
+    Top = 134
     ParamData = <
       item
         Name = 'Part'
@@ -155,7 +155,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
         'r_Branch.Branch_No)))'
       'Order By Supplier.Name, Supplier_Branch.Name')
     Left = 136
-    Top = 136
+    Top = 142
     ParamData = <
       item
         Name = 'Name'
@@ -175,7 +175,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
       ' '
       ' ')
     Left = 368
-    Top = 192
+    Top = 198
     ParamData = <
       item
         Name = 'Part'
@@ -197,7 +197,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
       'Where (Part_Supplier.Part = :Part)'
       ' ')
     Left = 352
-    Top = 128
+    Top = 134
     ParamData = <
       item
         Name = 'Part'
@@ -208,6 +208,6 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     Interval = 250
     OnTimer = tmrSearchTimer
     Left = 216
-    Top = 136
+    Top = 142
   end
 end

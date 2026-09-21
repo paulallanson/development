@@ -3,36 +3,36 @@ object STLUCourierFrm: TSTLUCourierFrm
   Top = 145
   BorderStyle = bsDialog
   Caption = 'Look-Up A Courier'
-  ClientHeight = 347
-  ClientWidth = 433
+  ClientHeight = 385
+  ClientWidth = 453
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CountLabel: TLabel
-    Left = 262
-    Top = 264
-    Width = 59
-    Height = 13
+    Left = 256
+    Top = 272
+    Width = 65
+    Height = 17
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object DetsDBGrid: TDBGrid
     Left = 8
-    Top = 8
+    Top = 16
     Width = 321
     Height = 249
     DataSource = DetsSRC
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +40,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter
@@ -56,8 +56,8 @@ object STLUCourierFrm: TSTLUCourierFrm
       end>
   end
   object SelectBitBtn: TBitBtn
-    Left = 344
-    Top = 276
+    Left = 354
+    Top = 304
     Width = 75
     Height = 25
     Caption = 'Select'
@@ -131,7 +131,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     OnClick = SelectBitBtnClick
   end
   object FuncGrpBox: TGroupBox
-    Left = 339
+    Left = 349
     Top = 152
     Width = 87
     Height = 105
@@ -209,7 +209,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     end
   end
   object btnServices: TBitBtn
-    Left = 344
+    Left = 354
     Top = 16
     Width = 75
     Height = 25
@@ -233,9 +233,9 @@ object STLUCourierFrm: TSTLUCourierFrm
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 280
+    Top = 288
     Width = 321
-    Height = 65
+    Height = 73
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 4
@@ -243,13 +243,13 @@ object STLUCourierFrm: TSTLUCourierFrm
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
-      Top = 40
+      Top = 44
       Width = 217
       Height = 17
       Caption = 'Only show active couriers'
@@ -260,8 +260,8 @@ object STLUCourierFrm: TSTLUCourierFrm
     end
   end
   object BitBtn1: TBitBtn
-    Left = 343
-    Top = 309
+    Left = 353
+    Top = 337
     Width = 75
     Height = 25
     Caption = 'Ca&ncel'
@@ -270,7 +270,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     TabOrder = 5
   end
   object BitBtn2: TBitBtn
-    Left = 344
+    Left = 354
     Top = 48
     Width = 75
     Height = 25
@@ -293,7 +293,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     OnClick = BitBtn2Click
   end
   object BitBtn3: TBitBtn
-    Left = 344
+    Left = 354
     Top = 80
     Width = 75
     Height = 25
@@ -344,7 +344,7 @@ object STLUCourierFrm: TSTLUCourierFrm
     Enabled = False
     Interval = 250
     OnTimer = SearchTimerTimer
-    Left = 272
-    Top = 88
+    Left = 350
+    Top = 110
   end
 end

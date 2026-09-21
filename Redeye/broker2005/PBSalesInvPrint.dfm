@@ -7,7 +7,7 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -15,12 +15,12 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 232
     Top = 106
-    Width = 24
-    Height = 13
+    Width = 27
+    Height = 17
     Caption = 'Date'
     Visible = False
   end
@@ -56,7 +56,7 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
     Left = 264
     Top = 102
     Width = 73
-    Height = 21
+    Height = 25
     TabOrder = 7
     Visible = False
     OnExit = InvoiceDateEditExit
@@ -110,8 +110,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
   object SelectionGroup: TRadioGroup
     Left = 24
     Top = 16
-    Width = 345
-    Height = 73
+    Width = 343
+    Height = 65
     Caption = 'Invoice Selection'
     ItemIndex = 0
     Items.Strings = (
@@ -167,7 +167,7 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
     Top = 24
     Width = 25
     Height = 113
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 8
     Visible = False
@@ -257,8 +257,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
       '  Customer.Name,'
       '  Customer_Branch.Name'
       '')
-    Left = 232
-    Top = 16
+    Left = 322
+    Top = 108
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -342,8 +342,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
       '  Customer.Name,'
       '  Customer_Branch.Name'
       '')
-    Left = 280
-    Top = 16
+    Left = 358
+    Top = 100
     ParamData = <
       item
         Name = 'Int_Sel'
@@ -458,8 +458,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
       '(Sales_Invoice.Customer = Customer_Branch.Customer)'
       ')'
       'order by sales_invoice.sales_invoice')
-    Left = 192
-    Top = 21
+    Left = 152
+    Top = 98
   end
   object CreditHeadSQL: TFDQuery
     ConnectionName = 'PB'
@@ -485,8 +485,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
       '(Sales_Invoice.Customer = Customer_Branch.Customer)'
       ')'
       'order by sales_invoice.sales_invoice ')
-    Left = 128
-    Top = 21
+    Left = 224
+    Top = 90
   end
   object qryInvEmail: TFDQuery
     ConnectionName = 'PB'
@@ -620,8 +620,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
       ' '
       ' '
       ' ')
-    Left = 160
-    Top = 16
+    Left = 256
+    Top = 76
     ParamData = <
       item
         Name = 'Int_sel'
@@ -639,8 +639,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
   end
   object InvPrintSQL: TFDQuery
     ConnectionName = 'PB'
-    Left = 56
-    Top = 16
+    Left = 222
+    Top = 116
   end
   object qryCheckInvoice: TFDQuery
     ConnectionName = 'PB'
@@ -648,8 +648,8 @@ object PBSalesInvPrintFrm: TPBSalesInvPrintFrm
       'SELECT Sales_Invoice_No'
       'FROM Sales_Invoice'
       'WHERE Sales_Invoice = :Sales_Invoice')
-    Left = 16
-    Top = 32
+    Left = 332
+    Top = 56
     ParamData = <
       item
         Name = 'Sales_Invoice'

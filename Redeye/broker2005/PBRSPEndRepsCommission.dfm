@@ -3,33 +3,33 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
   Top = 155
   BorderStyle = bsDialog
   Caption = 'Reps Commission Report'
-  ClientHeight = 320
-  ClientWidth = 532
+  ClientHeight = 338
+  ClientWidth = 549
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    532
-    320)
-  TextHeight = 13
+    549
+    338)
+  TextHeight = 17
   object lblYear: TLabel
     Left = 8
     Top = 20
-    Width = 20
-    Height = 13
+    Width = 25
+    Height = 17
     Caption = 'Year'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 33
-    Height = 13
+    Width = 38
+    Height = 17
     Caption = 'Period'
   end
   object OleContainer1: TOleContainer
@@ -67,15 +67,15 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 209
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -99,7 +99,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Left = 68
     Top = 16
     Width = 157
-    Height = 21
+    Height = 25
     KeyField = 'Financial_Year'
     ListField = 'Title'
     ListSource = dtsFY
@@ -110,7 +110,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     Left = 68
     Top = 48
     Width = 157
-    Height = 21
+    Height = 25
     KeyField = 'Period'
     ListField = 'Description'
     ListSource = dtsPeriods
@@ -133,7 +133,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
   object ChkBxNewPgRep: TCheckBox
     Left = 8
     Top = 228
-    Width = 177
+    Width = 217
     Height = 16
     Caption = 'New page on change of Rep'
     Checked = True
@@ -142,7 +142,7 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 446
-    Top = 282
+    Top = 300
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -150,10 +150,11 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     NumGlyphs = 2
     TabOrder = 6
     OnClick = CancelBitBtnClick
+    ExplicitTop = 273
   end
   object PreviewBitBtn: TBitBtn
     Left = 8
-    Top = 282
+    Top = 300
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -175,10 +176,11 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     NumGlyphs = 2
     TabOrder = 7
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 273
   end
   object PrintBitBtn: TBitBtn
     Left = 99
-    Top = 282
+    Top = 300
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -200,10 +202,11 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     NumGlyphs = 2
     TabOrder = 8
     OnClick = PrintBitBtnClick
+    ExplicitTop = 273
   end
   object ExcelBitBtn: TBitBtn
     Left = 190
-    Top = 282
+    Top = 300
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -254,11 +257,12 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = ExcelBitBtnClick
+    ExplicitTop = 273
   end
   object chkbxExcludeJBCosts: TCheckBox
     Left = 8
-    Top = 251
-    Width = 185
+    Top = 269
+    Width = 241
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Exclude Default Job Bag Costs'
@@ -279,8 +283,8 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     OnClick = rgRepClick
   end
   object rdgrpRepType: TRadioGroup
-    Left = 400
-    Top = 77
+    Left = 402
+    Top = 79
     Width = 121
     Height = 65
     Caption = 'Type of Rep'
@@ -303,8 +307,8 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -360,8 +364,8 @@ object PBRSPEndRepsCommissionFrm: TPBRSPEndRepsCommissionFrm
       'from Period'
       'where Financial_Year = :Financial_Year'
       'order by Period')
-    Left = 168
-    Top = 162
+    Left = 322
+    Top = 187
     ParamData = <
       item
         Name = 'Financial_Year'

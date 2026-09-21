@@ -3,26 +3,26 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Stock Order Returns Report'
-  ClientHeight = 197
-  ClientWidth = 429
+  ClientHeight = 215
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object PreviewBitBtn: TBitBtn
-    Left = 104
-    Top = 162
+    Left = 146
+    Top = 164
     Width = 75
     Height = 25
     Caption = 'Pre&view'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -44,14 +44,14 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 190
-    Top = 162
+    Left = 232
+    Top = 164
     Width = 75
     Height = 25
     Caption = '&Print'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -73,13 +73,13 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     OnClick = PrintBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 16
-    Top = 162
+    Left = 58
+    Top = 164
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -90,11 +90,11 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
   object AllorOneRadioGroup: TRadioGroup
     Left = 16
     Top = 8
-    Width = 121
+    Width = 153
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -107,13 +107,13 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     OnClick = AllorOneRadioGroupClick
   end
   object grpbxAccountMgr: TGroupBox
-    Left = 142
-    Top = 8
+    Left = 175
+    Top = 9
     Width = 265
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -123,8 +123,8 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     object Label4: TLabel
       Left = 8
       Top = 16
-      Width = 137
-      Height = 13
+      Width = 156
+      Height = 17
       Caption = 'Selected Account Manager'
     end
     object btnAccountMgr: TSpeedButton
@@ -148,7 +148,7 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
       Left = 8
       Top = 32
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -156,11 +156,11 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
   object CustRadioGroup: TRadioGroup
     Left = 16
     Top = 80
-    Width = 121
+    Width = 153
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -173,13 +173,13 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     OnClick = CustRadioGroupClick
   end
   object grpbxCustomer: TGroupBox
-    Left = 142
+    Left = 175
     Top = 80
     Width = 265
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -189,8 +189,8 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
     object Label5: TLabel
       Left = 8
       Top = 16
-      Width = 95
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = 'Selected Customer'
     end
     object btnCustomer: TSpeedButton
@@ -214,20 +214,20 @@ object STRSSOReturnsFrm: TSTRSSOReturnsFrm
       Left = 8
       Top = 32
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
   end
   object EmailBitBtn: TBitBtn
-    Left = 279
-    Top = 162
+    Left = 321
+    Top = 164
     Width = 75
     Height = 25
     Caption = '&Email'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {

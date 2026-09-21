@@ -4,11 +4,11 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
   BorderStyle = bsDialog
   Caption = 'Rep Team Performance report'
   ClientHeight = 294
-  ClientWidth = 579
+  ClientWidth = 634
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,14 +16,14 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
   OnClose = FormClose
   OnCreate = FormCreate
   DesignSize = (
-    579
+    634
     294)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 20
-    Width = 102
-    Height = 13
+    Top = 18
+    Width = 116
+    Height = 17
     Caption = 'Select Financial Year'
   end
   object rgRep: TRadioGroup
@@ -50,16 +50,16 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 58
-      Height = 13
+      Top = 6
+      Width = 70
+      Height = 17
       Caption = 'Team Name'
     end
     object edtRepTeam: TEdit
       Left = 8
       Top = 24
       Width = 209
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -83,7 +83,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Left = 132
     Top = 16
     Width = 157
-    Height = 21
+    Height = 25
     KeyField = 'Financial_Year'
     ListField = 'Title'
     ListSource = dtsFY
@@ -91,7 +91,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     OnClick = dblkpFYClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 491
+    Left = 534
     Top = 248
     Width = 75
     Height = 25
@@ -125,6 +125,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 239
   end
   object PrintBitBtn: TBitBtn
     Left = 99
@@ -150,6 +151,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     NumGlyphs = 2
     TabOrder = 5
     OnClick = PrintBitBtnClick
+    ExplicitTop = 239
   end
   object chkbxExcludeJBCosts: TCheckBox
     Left = 8
@@ -159,6 +161,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Anchors = [akLeft, akBottom]
     Caption = 'Exclude Default Job Bag Costs'
     TabOrder = 6
+    ExplicitTop = 190
   end
   object OleContainer1: TOleContainer
     Left = 187
@@ -223,6 +226,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = ExcelBitBtnClick
+    ExplicitTop = 239
   end
   object rdgrpBudgetType: TRadioGroup
     Left = 8
@@ -241,7 +245,7 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
   object rdgrpReportType: TRadioGroup
     Left = 400
     Top = 43
-    Width = 169
+    Width = 209
     Height = 89
     Caption = ' Report by '
     ItemIndex = 0
@@ -253,8 +257,8 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     TabOrder = 11
   end
   object pnlExportPrgrss: TPanel
-    Left = 131
-    Top = 83
+    Left = 203
+    Top = 103
     Width = 289
     Height = 61
     ParentBackground = False
@@ -263,8 +267,8 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -296,13 +300,13 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
       'select *'
       'from Company'
       'where company = 1')
-    Left = 304
-    Top = 192
+    Left = 444
+    Top = 136
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'
-    Left = 376
-    Top = 192
+    Left = 534
+    Top = 136
   end
   object qryGetFYPeriods: TFDQuery
     ConnectionName = 'PB'

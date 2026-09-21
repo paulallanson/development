@@ -8,17 +8,17 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 328
     Top = 80
-    Width = 98
-    Height = 13
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object Panel2: TPanel
@@ -29,6 +29,8 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 256
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 153
       Top = 8
@@ -57,15 +59,16 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 462
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 53
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Rep Team:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -73,12 +76,12 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     object lblDetails: TLabel
       Left = 92
       Top = 16
-      Width = 48
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'lblDetails'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -92,28 +95,29 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 43
     object Label5: TLabel
       Left = 8
-      Top = 8
-      Width = 67
-      Height = 13
+      Top = 3
+      Width = 79
+      Height = 17
       Caption = 'Current Reps'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label6: TLabel
       Left = 288
-      Top = 8
-      Width = 93
-      Height = 13
+      Top = 3
+      Width = 109
+      Height = 17
       Caption = 'Un-assigned Reps'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -123,7 +127,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
       Top = 25
       Width = 169
       Height = 184
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
       OnClick = lstbxRepsClick
@@ -134,7 +138,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
       Top = 25
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 1
       Visible = False
     end
@@ -143,7 +147,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
       Top = 25
       Width = 169
       Height = 184
-      ItemHeight = 13
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 2
       OnClick = lstbxNonRepsClick
@@ -154,7 +158,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
       Top = 25
       Width = 41
       Height = 140
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 3
       Visible = False
     end

@@ -3,32 +3,29 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
   Top = 117
   BorderStyle = bsSingle
   Caption = 'Slow Moving Stock Report'
-  ClientHeight = 372
-  ClientWidth = 422
+  ClientHeight = 398
+  ClientWidth = 453
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  DesignSize = (
-    422
-    372)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 156
-    Width = 107
-    Height = 13
+    Width = 123
+    Height = 17
     Caption = 'Last Movement Date:'
   end
   object PreviewBitBtn: TBitBtn
-    Left = 88
-    Top = 312
+    Left = 94
+    Top = 321
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -50,8 +47,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 174
-    Top = 312
+    Left = 180
+    Top = 321
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -73,8 +70,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     OnClick = PrintBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 6
-    Top = 344
+    Left = 12
+    Top = 353
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET
@@ -95,7 +92,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Caption = 'Product Range'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -104,22 +101,22 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     object Label2: TLabel
       Left = 14
       Top = 27
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 14
       Top = 59
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtPartFrom: TEdit
       Left = 66
       Top = 23
       Width = 183
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtPartFromChange
@@ -128,7 +125,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
       Left = 66
       Top = 55
       Width = 185
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
     end
@@ -167,7 +164,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Left = 144
     Top = 152
     Width = 137
-    Height = 21
+    Height = 25
     MaxLength = 30
     TabOrder = 4
     OnChange = DateEditChange
@@ -206,7 +203,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -225,7 +222,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -234,9 +231,9 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Visible = False
     object Label4: TLabel
       Left = 8
-      Top = 16
-      Width = 66
-      Height = 13
+      Top = 13
+      Width = 76
+      Height = 17
       Caption = 'Selected Rep'
     end
     object RepLUSpeedButton: TSpeedButton
@@ -260,7 +257,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
       Left = 8
       Top = 32
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -272,7 +269,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -281,9 +278,9 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Visible = False
     object Label5: TLabel
       Left = 8
-      Top = 16
-      Width = 95
-      Height = 13
+      Top = 13
+      Width = 109
+      Height = 17
       Caption = 'Selected Customer'
     end
     object CustLuSpeedButton: TSpeedButton
@@ -307,7 +304,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
       Left = 8
       Top = 32
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -319,7 +316,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -332,8 +329,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     OnClick = CustRadioGroupClick
   end
   object FaxBitBtn: TBitBtn
-    Left = 260
-    Top = 312
+    Left = 266
+    Top = 321
     Width = 75
     Height = 25
     Caption = '&Fax'
@@ -355,8 +352,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     OnClick = FaxBitBtnClick
   end
   object EmailBitBtn: TBitBtn
-    Left = 344
-    Top = 312
+    Left = 350
+    Top = 321
     Width = 75
     Height = 25
     Caption = '&Email'
@@ -384,11 +381,10 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     OnClick = EmailBitBtnClick
   end
   object btbtnExcel: TBitBtn
-    Left = -5
-    Top = 313
+    Left = 12
+    Top = 322
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -457,8 +453,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

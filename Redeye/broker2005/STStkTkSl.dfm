@@ -3,12 +3,12 @@ object STStkTkslfrm: TSTStkTkslfrm
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Stock Count Listing'
-  ClientHeight = 357
-  ClientWidth = 449
+  ClientHeight = 373
+  ClientWidth = 574
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,31 +16,28 @@ object STStkTkslfrm: TSTStkTkslfrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  DesignSize = (
-    449
-    357)
-  TextHeight = 13
+  TextHeight = 17
   object SelectGroupBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 433
+    Width = 537
     Height = 305
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
     object StoreLabel: TLabel
-      Left = 8
-      Top = 65
-      Width = 59
-      Height = 13
+      Left = 9
+      Top = 57
+      Width = 65
+      Height = 17
       Caption = 'Warehouse'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -48,12 +45,12 @@ object STStkTkslfrm: TSTStkTkslfrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 117
-      Height = 13
+      Width = 131
+      Height = 17
       Caption = 'Stock Count Reference'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -65,7 +62,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Height = 81
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
@@ -87,7 +84,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       object RngToLabel: TLabel
         Left = 8
         Top = 50
-        Width = 38
+        Width = 37
         Height = 13
         Caption = 'Part To '
         Color = clBtnFace
@@ -162,14 +159,14 @@ object STStkTkslfrm: TSTStkTkslfrm
       end
     end
     object SeqByRadioGroup: TRadioGroup
-      Left = 312
-      Top = 16
+      Left = 408
+      Top = 17
       Width = 113
       Height = 65
       Caption = 'Seq. By:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
@@ -184,13 +181,13 @@ object STStkTkslfrm: TSTStkTkslfrm
       OnClick = SeqByRadioGroupClick
     end
     object StoreDBLookupComboBox: TDBLookupComboBox
-      Left = 128
-      Top = 61
+      Left = 152
+      Top = 55
       Width = 225
-      Height = 21
+      Height = 25
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       KeyField = 'Part_Store'
@@ -208,7 +205,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Caption = 'Print existing Stock Quantities'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -223,7 +220,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Caption = 'Print All Bins'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -231,15 +228,15 @@ object STStkTkslfrm: TSTStkTkslfrm
       OnClick = PrAllBinsCheckBoxClick
     end
     object RefEdit: TEdit
-      Left = 128
-      Top = 24
+      Left = 152
+      Top = 25
       Width = 201
       Height = 24
       AutoSize = False
       CharCase = ecUpperCase
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       MaxLength = 30
@@ -255,7 +252,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Height = 69
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
@@ -274,7 +271,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Height = 69
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
@@ -284,8 +281,8 @@ object STStkTkslfrm: TSTStkTkslfrm
       object Label5: TLabel
         Left = 8
         Top = 8
-        Width = 95
-        Height = 13
+        Width = 109
+        Height = 17
         Caption = 'Selected Customer'
       end
       object CustLuSpeedButton: TSpeedButton
@@ -309,7 +306,7 @@ object STStkTkslfrm: TSTStkTkslfrm
         Left = 8
         Top = 32
         Width = 241
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -322,7 +319,7 @@ object STStkTkslfrm: TSTStkTkslfrm
       Caption = 'Include'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
@@ -335,8 +332,8 @@ object STStkTkslfrm: TSTStkTkslfrm
       TabOrder = 8
     end
     object pnlExportPrgrss: TPanel
-      Left = 80
-      Top = 112
+      Left = 106
+      Top = 97
       Width = 289
       Height = 61
       ParentBackground = False
@@ -345,8 +342,8 @@ object STStkTkslfrm: TSTStkTkslfrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Exporting...'
       end
       object prgbrExport: TProgressBar
@@ -359,8 +356,8 @@ object STStkTkslfrm: TSTStkTkslfrm
       end
     end
     object OleContainer1: TOleContainer
-      Left = 292
-      Top = 228
+      Left = 260
+      Top = 64
       Width = 98
       Height = 53
       Caption = 'OleContainer1'
@@ -370,15 +367,15 @@ object STStkTkslfrm: TSTStkTkslfrm
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 365
-    Top = 320
+    Left = 470
+    Top = 324
     Width = 75
     Height = 25
     Caption = 'Print'
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -401,15 +398,15 @@ object STStkTkslfrm: TSTStkTkslfrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 277
-    Top = 320
+    Left = 382
+    Top = 324
     Width = 75
     Height = 25
     Caption = 'Preview'
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -419,12 +416,12 @@ object STStkTkslfrm: TSTStkTkslfrm
   end
   object BitBtn3: TBitBtn
     Left = 8
-    Top = 320
+    Top = 323
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -433,11 +430,10 @@ object STStkTkslfrm: TSTStkTkslfrm
     TabOrder = 3
   end
   object Excelbitbtn: TBitBtn
-    Left = 190
-    Top = 320
+    Left = 301
+    Top = 323
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
     Caption = 'Excel'
     Enabled = False
     Glyph.Data = {
@@ -494,8 +490,8 @@ object STStkTkslfrm: TSTStkTkslfrm
       'where'
       'Stock_Take_Ref = :Ref'
       ' ')
-    Left = 336
-    Top = 72
+    Left = 356
+    Top = 82
     ParamData = <
       item
         Name = 'Ref'

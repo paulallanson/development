@@ -3,26 +3,26 @@ object STRSSOProdReturnsFrm: TSTRSSOProdReturnsFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Stock Order Returns Report'
-  ClientHeight = 147
+  ClientHeight = 162
   ClientWidth = 428
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object PreviewBitBtn: TBitBtn
-    Left = 104
-    Top = 106
+    Left = 136
+    Top = 114
     Width = 75
     Height = 25
     Caption = 'Pre&view'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -44,14 +44,14 @@ object STRSSOProdReturnsFrm: TSTRSSOProdReturnsFrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 190
-    Top = 106
+    Left = 222
+    Top = 114
     Width = 75
     Height = 25
     Caption = '&Print'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -73,13 +73,13 @@ object STRSSOProdReturnsFrm: TSTRSSOProdReturnsFrm
     OnClick = PrintBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 16
-    Top = 106
+    Left = 48
+    Top = 114
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -88,14 +88,14 @@ object STRSSOProdReturnsFrm: TSTRSSOProdReturnsFrm
     TabOrder = 2
   end
   object EmailBitBtn: TBitBtn
-    Left = 279
-    Top = 106
+    Left = 311
+    Top = 114
     Width = 75
     Height = 25
     Caption = '&Email'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -126,29 +126,29 @@ object STRSSOProdReturnsFrm: TSTRSSOProdReturnsFrm
     object Label5: TLabel
       Left = 16
       Top = 16
-      Width = 61
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Job Bag No:'
     end
     object lblJobBag: TLabel
       Left = 96
       Top = 16
-      Width = 50
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'lblJobBag'
     end
     object Label1: TLabel
       Left = 16
       Top = 48
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object lblDescription: TLabel
       Left = 96
       Top = 48
-      Width = 72
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
   end

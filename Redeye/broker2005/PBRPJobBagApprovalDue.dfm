@@ -10,13 +10,13 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 8
     Top = 8
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -75,31 +75,31 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
     PreviewLeft = 0
     PreviewTop = 0
     object qrbPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 107
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 134
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        283.104166666666700000
-        2770.187500000000000000)
+        283.633333333333300000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
-        Left = 335
-        Top = 8
-        Width = 350
-        Height = 25
+        Left = 411
+        Top = 10
+        Width = 454
+        Height = 33
         Size.Values = (
-          66.145833333333340000
-          886.354166666666900000
+          69.850000000000000000
+          869.950000000000000000
           21.166666666666670000
-          926.041666666666800000)
+          960.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -109,7 +109,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -120,15 +120,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 16
       end
       object QRSysData1: TQRSysData
-        Left = 984
-        Top = 32
-        Width = 56
-        Height = 17
+        Left = 1232
+        Top = 40
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2603.500000000000000000
-          84.666666666666680000
-          148.166666666666700000)
+          44.450000000000000000
+          2607.733333333333000000
+          84.666666666666670000
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -138,7 +138,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -149,15 +149,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRSysData2: TQRSysData
-        Left = 976
-        Top = 8
-        Width = 63
-        Height = 17
+        Left = 1223
+        Top = 10
+        Width = 76
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2582.333333333333000000
+          44.450000000000000000
+          2588.683333333333000000
           21.166666666666670000
-          166.687500000000000000)
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -167,7 +167,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -178,15 +178,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
-        Left = 451
-        Top = 40
-        Width = 150
-        Height = 17
+        Left = 564
+        Top = 50
+        Width = 189
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1193.270833333333000000
+          44.450000000000000000
+          1193.800000000000000000
           105.833333333333300000
-          396.875000000000000000)
+          400.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -194,6 +194,12 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         AlignToBand = False
         Caption = 'From SEP Approval Date:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -201,15 +207,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 10
       end
       object QRLabel1: TQRLabel
-        Left = 26
-        Top = 88
-        Width = 40
-        Height = 16
+        Left = 33
+        Top = 110
+        Width = 48
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          68.791666666666680000
-          232.833333333333400000
-          105.833333333333300000)
+          42.333333333333330000
+          69.850000000000000000
+          232.833333333333300000
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -219,7 +225,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -230,15 +236,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 80
-        Top = 88
-        Width = 47
-        Height = 17
+        Left = 100
+        Top = 110
+        Width = 57
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           211.666666666666700000
-          232.833333333333400000
-          124.354166666666700000)
+          232.833333333333300000
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -248,7 +254,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -259,15 +265,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 256
-        Top = 88
-        Width = 40
-        Height = 17
+        Left = 320
+        Top = 110
+        Width = 49
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          677.333333333333400000
-          232.833333333333400000
-          105.833333333333300000)
+          44.450000000000000000
+          677.333333333333300000
+          232.833333333333300000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -277,7 +283,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -288,10 +294,10 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 741
-        Top = 76
-        Width = 52
-        Height = 28
+        Left = 926
+        Top = 95
+        Width = 65
+        Height = 35
         Size.Values = (
           74.083333333333340000
           1960.562500000000000000
@@ -307,7 +313,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -318,10 +324,10 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRLabel7: TQRLabel
-        Left = 824
-        Top = 75
-        Width = 73
-        Height = 28
+        Left = 1030
+        Top = 94
+        Width = 91
+        Height = 35
         Size.Values = (
           74.083333333333340000
           2180.166666666667000000
@@ -337,7 +343,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -348,15 +354,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 960
-        Top = 88
-        Width = 69
-        Height = 17
+        Left = 1200
+        Top = 110
+        Width = 83
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           2540.000000000000000000
-          232.833333333333400000
-          182.562500000000000000)
+          232.833333333333300000
+          175.683333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -366,7 +372,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -377,15 +383,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 584
-        Top = 88
-        Width = 41
-        Height = 17
+        Left = 730
+        Top = 110
+        Width = 50
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1545.166666666667000000
-          232.833333333333400000
-          108.479166666666700000)
+          232.833333333333300000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -395,7 +401,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -407,10 +413,10 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
       end
     end
     object qrGroup: TQRGroup
-      Left = 38
-      Top = 145
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 181
+      Width = 1309
+      Height = 50
       AlignToBottom = False
       Enabled = False
       TransparentBand = False
@@ -418,22 +424,22 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'Job_Bag'
       Master = QRSubDetail1
       ReprintOnNewPage = False
       object qrlblGroupHeader: TQRLabel
-        Left = 8
-        Top = 11
-        Width = 101
-        Height = 17
+        Left = 10
+        Top = 14
+        Width = 129
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          29.104166666666670000
-          267.229166666666700000)
+          29.633333333333330000
+          273.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -441,6 +447,12 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         AlignToBand = False
         Caption = 'qrlblGroupHeader'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -448,15 +460,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 10
       end
       object qrdbtext: TQRDBText
-        Left = 144
-        Top = 11
-        Width = 48
-        Height = 17
+        Left = 180
+        Top = 14
+        Width = 58
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           381.000000000000000000
-          29.104166666666670000
-          127.000000000000000000)
+          29.633333333333330000
+          122.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -464,6 +476,12 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         AlignToBand = False
         Color = clWhite
         DataSet = qryReport
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -474,10 +492,10 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 38
-      Top = 185
-      Width = 1047
-      Height = 23
+      Left = 47
+      Top = 231
+      Width = 1309
+      Height = 29
       AfterPrint = QRSubDetail1AfterPrint
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
@@ -485,8 +503,8 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        60.854166666666670000
-        2770.187500000000000000)
+        61.383333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -494,15 +512,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBText1: TQRDBText
-        Left = 23
-        Top = 3
-        Width = 43
-        Height = 16
+        Left = 32
+        Top = 4
+        Width = 51
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          60.854166666666680000
-          7.937500000000000000
-          113.770833333333300000)
+          42.333333333333330000
+          67.733333333333330000
+          8.466666666666667000
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -513,7 +531,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         DataField = 'Job_Bag'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -526,10 +544,10 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 80
-        Top = 3
-        Width = 169
-        Height = 16
+        Left = 100
+        Top = 4
+        Width = 211
+        Height = 20
         Size.Values = (
           42.333333333333340000
           211.666666666666700000
@@ -546,7 +564,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -559,10 +577,10 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 256
-        Top = 3
-        Width = 313
-        Height = 16
+        Left = 320
+        Top = 4
+        Width = 391
+        Height = 20
         Size.Values = (
           42.333333333333340000
           677.333333333333400000
@@ -579,7 +597,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         DataField = 'Job_Bag_descr'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -592,15 +610,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRDBText8: TQRDBText
-        Left = 584
-        Top = 3
-        Width = 41
-        Height = 16
+        Left = 731
+        Top = 4
+        Width = 50
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          1545.166666666667000000
-          7.937500000000000000
-          108.479166666666700000)
+          42.333333333333330000
+          1547.283333333333000000
+          8.466666666666667000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -611,7 +629,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         DataField = 'Quantity'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -624,15 +642,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object QRDBText9: TQRDBText
-        Left = 947
-        Top = 3
-        Width = 82
-        Height = 16
+        Left = 1190
+        Top = 4
+        Width = 97
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          2505.604166666667000000
-          7.937500000000000000
-          216.958333333333400000)
+          42.333333333333330000
+          2518.833333333333000000
+          8.466666666666667000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -643,7 +661,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         DataField = 'Goods_Required'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -656,15 +674,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object qrlblSEPApprovalDate: TQRLabel
-        Left = 790
-        Top = 2
-        Width = 106
-        Height = 15
+        Left = 992
+        Top = 3
+        Width = 128
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2090.208333333333000000
-          5.291666666666667000
-          280.458333333333400000)
+          40.216666666666670000
+          2099.733333333333000000
+          6.350000000000000000
+          270.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -674,7 +692,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -685,15 +703,15 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         FontSize = 8
       end
       object qrlblSEPClientDate: TQRLabel
-        Left = 712
-        Top = 2
-        Width = 88
-        Height = 15
+        Left = 888
+        Top = 3
+        Width = 112
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1883.833333333333000000
-          5.291666666666667000
-          232.833333333333400000)
+          40.216666666666670000
+          1879.600000000000000000
+          6.350000000000000000
+          237.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -703,7 +721,7 @@ object PBRPJobBagApprovalDueFrm: TPBRPJobBagApprovalDueFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False

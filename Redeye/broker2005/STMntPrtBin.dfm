@@ -2,23 +2,23 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
   Left = 87
   Top = 93
   Caption = 'Product Bins'
-  ClientHeight = 420
+  ClientHeight = 447
   ClientWidth = 552
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object StoreLabel: TLabel
     Left = 8
     Top = 8
-    Width = 54
-    Height = 13
+    Width = 62
+    Height = 17
     Caption = 'StoreLabel'
   end
   object BinsListView: TListView
@@ -29,7 +29,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     Columns = <>
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     IconOptions.AutoArrange = True
@@ -43,7 +43,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
   end
   object FuncGroupBox: TGroupBox
     Left = 192
-    Top = 288
+    Top = 297
     Width = 337
     Height = 49
     ParentBackground = False
@@ -86,8 +86,8 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     end
   end
   object CloseBitBtn: TBitBtn
-    Left = 456
-    Top = 376
+    Left = 454
+    Top = 392
     Width = 75
     Height = 25
     Kind = bkClose
@@ -96,7 +96,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
   end
   object GroupBox1: TGroupBox
     Left = 8
-    Top = 280
+    Top = 289
     Width = 177
     Height = 113
     Caption = 'Key'
@@ -111,8 +111,8 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label1: TLabel
       Left = 32
       Top = 25
-      Width = 91
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Can'#39't pick, empty.'
     end
     object Image2: TImage
@@ -124,8 +124,8 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label2: TLabel
       Left = 32
       Top = 46
-      Width = 84
-      Height = 13
+      Width = 95
+      Height = 17
       Caption = 'Can pick, empty.'
     end
     object Image3: TImage
@@ -137,8 +137,8 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label3: TLabel
       Left = 32
       Top = 66
-      Width = 108
-      Height = 13
+      Width = 120
+      Height = 17
       Caption = 'Can'#39't pick, has stock.'
     end
     object Image4: TImage
@@ -150,14 +150,14 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     object Label4: TLabel
       Left = 32
       Top = 86
-      Width = 98
-      Height = 13
+      Width = 110
+      Height = 17
       Caption = 'Can pick, has stock'
     end
   end
   object SelBitBtn: TBitBtn
-    Left = 456
-    Top = 344
+    Left = 454
+    Top = 360
     Width = 75
     Height = 25
     Caption = 'Select'

@@ -9,7 +9,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -20,19 +20,19 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
   DesignSize = (
     497
     313)
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 248
     Top = 80
-    Width = 33
-    Height = 13
+    Width = 38
+    Height = 17
     Caption = 'Label2'
   end
   object lblFileFormat: TLabel
     Left = 240
     Top = 212
-    Width = 57
-    Height = 13
+    Width = 64
+    Height = 17
     Caption = 'File Format'
   end
   object selectionGrp: TGroupBox
@@ -46,8 +46,8 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     object Label1: TLabel
       Left = 8
       Top = 80
-      Width = 244
-      Height = 39
+      Width = 221
+      Height = 51
       Caption = 
         'Enter invoice numbers and/or invoice ranges separated by commas.' +
         ' For example, 1234, 1236, 1240-1245'
@@ -129,7 +129,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Top = 16
     Width = 25
     Height = 113
-    ItemHeight = 13
+    ItemHeight = 17
     Sorted = True
     TabOrder = 4
     Visible = False
@@ -195,7 +195,7 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
     Visible = False
   end
   object btbtnExcel: TBitBtn
-    Left = 390
+    Left = 384
     Top = 256
     Width = 75
     Height = 25
@@ -246,13 +246,13 @@ object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 10
     OnClick = BitBtn1Click
-    ExplicitLeft = 371
+    ExplicitLeft = 378
   end
   object cmbFileFormat: TComboBox
     Left = 321
     Top = 208
     Width = 144
-    Height = 21
+    Height = 25
     TabOrder = 11
     Text = 'cmbFileFormat'
     Items.Strings = (

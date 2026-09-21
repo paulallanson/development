@@ -2,92 +2,95 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   Left = 222
   Top = 126
   Caption = 'Print Picking Notes'
-  ClientHeight = 415
-  ClientWidth = 652
+  ClientHeight = 405
+  ClientWidth = 709
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 652
+    Width = 709
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 646
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 59
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Sales Order'
     end
     object Label4: TLabel
       Left = 8
       Top = 32
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object CustomerLbl: TLabel
       Left = 88
       Top = 32
-      Width = 64
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
     object SalesOrderlbl: TLabel
       Left = 88
       Top = 8
-      Width = 69
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'SalesOrderlbl'
     end
     object Label6: TLabel
       Left = 368
       Top = 8
-      Width = 57
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Order Date'
     end
     object OrderDatelbl: TLabel
       Left = 456
       Top = 8
-      Width = 86
-      Height = 13
+      Width = 97
+      Height = 17
       Caption = 'DateRequiredLbl'
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 364
-    Width = 652
+    Top = 354
+    Width = 709
     Height = 51
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 355
+    ExplicitWidth = 646
     DesignSize = (
-      652
+      709
       51)
     object lblPickingConfirmed: TLabel
       Left = 8
       Top = 12
-      Width = 338
-      Height = 26
+      Width = 335
+      Height = 34
       Caption = 
         'This Picking Note has been confirmed and the details cannot be  ' +
         'changed'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -96,13 +99,13 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     object chkbxAutoConfirm: TCheckBox
       Left = 10
       Top = 18
-      Width = 319
+      Width = 391
       Height = 17
       Caption = 'Automatically confirm the picking for this Picking Note'
       TabOrder = 3
     end
     object Previewbitbtn: TBitBtn
-      Left = 390
+      Left = 441
       Top = 14
       Width = 75
       Height = 25
@@ -110,7 +113,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Caption = 'Pre&view'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -130,9 +133,10 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 0
       OnClick = PreviewbitbtnClick
+      ExplicitLeft = 378
     end
     object PrintBitBtn: TBitBtn
-      Left = 479
+      Left = 530
       Top = 14
       Width = 75
       Height = 25
@@ -141,7 +145,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Default = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -161,9 +165,10 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 467
     end
     object CancelBitBtn: TBitBtn
-      Left = 568
+      Left = 619
       Top = 14
       Width = 75
       Height = 25
@@ -171,7 +176,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
@@ -179,32 +184,34 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ParentFont = False
       TabOrder = 2
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 556
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 57
-    Width = 652
+    Width = 709
     Height = 56
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 646
     object Label2: TLabel
       Left = 8
       Top = 4
-      Width = 70
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'Picking Notes'
     end
     object Label1: TLabel
       Left = 256
       Top = 25
-      Width = 67
-      Height = 13
+      Width = 77
+      Height = 17
       Caption = 'Delivery Date'
     end
     object btnDate: TSpeedButton
-      Left = 415
+      Left = 425
       Top = 19
       Width = 25
       Height = 25
@@ -228,7 +235,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Left = 8
       Top = 21
       Width = 169
-      Height = 21
+      Height = 25
       Style = csDropDownList
       ItemIndex = 0
       TabOrder = 0
@@ -238,17 +245,17 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
         '<New Picking Note>')
     end
     object edtPickingDate: TEdit
-      Left = 328
+      Left = 338
       Top = 21
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnExit = edtPickingDateExit
     end
     object chkbxPrintCopy: TCheckBox
       Left = 480
       Top = 24
-      Width = 169
+      Width = 201
       Height = 17
       Caption = 'Print copy to default printer'
       TabOrder = 2
@@ -257,8 +264,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   object sgDetails: TStringGrid
     Left = 0
     Top = 113
-    Width = 652
-    Height = 251
+    Width = 709
+    Height = 241
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20
@@ -269,7 +276,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     OnDrawCell = sgDetailsDrawCell
     OnKeyPress = sgDetailsKeyPress
     OnSelectCell = sgDetailsSelectCell
-    ExplicitTop = 119
+    ExplicitWidth = 646
+    ExplicitHeight = 242
     ColWidths = (
       119
       203
@@ -539,8 +547,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       
         '      Sales_Order.Production_Location = Production_Location.Prod' +
         'uction_Location')
-    Left = 32
-    Top = 273
+    Left = 184
+    Top = 253
     ParamData = <
       item
         Name = 'Sales_Order'

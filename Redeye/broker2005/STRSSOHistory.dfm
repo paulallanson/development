@@ -9,14 +9,14 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
   Constraints.MinWidth = 536
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 81
@@ -27,7 +27,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -35,7 +35,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -174,11 +174,13 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 401
+    ExplicitWidth = 725
     DesignSize = (
       731
       40)
     object CancelBitBtn: TBitBtn
-      Left = 17
+      Left = 11
       Top = 8
       Width = 72
       Height = 25
@@ -186,16 +188,17 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
+      ExplicitLeft = 5
     end
     object PreviewBitBtn: TBitBtn
-      Left = 417
+      Left = 411
       Top = 8
       Width = 72
       Height = 25
@@ -203,7 +206,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Caption = 'Pre&view'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -223,9 +226,10 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 405
     end
     object PrintBitBtn: TBitBtn
-      Left = 505
+      Left = 499
       Top = 8
       Width = 72
       Height = 25
@@ -233,7 +237,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Caption = '&Print'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -253,9 +257,10 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 493
     end
     object btbtnCustCopy: TBitBtn
-      Left = 589
+      Left = 583
       Top = 7
       Width = 129
       Height = 25
@@ -263,7 +268,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Caption = '&Customer Copy'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -283,9 +288,10 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       ParentFont = False
       TabOrder = 3
       OnClick = btbtnCustCopyClick
+      ExplicitLeft = 577
     end
     object btnExcel: TBitBtn
-      Left = 329
+      Left = 323
       Top = 8
       Width = 75
       Height = 25
@@ -336,6 +342,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitLeft = 317
     end
   end
   object Panel1: TPanel
@@ -346,32 +353,33 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 725
     object Label3: TLabel
       Left = 8
       Top = 18
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label1: TLabel
       Left = 8
       Top = 48
-      Width = 23
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'Part:'
     end
     object Label2: TLabel
-      Left = 376
+      Left = 380
       Top = 18
-      Width = 89
-      Height = 13
+      Width = 100
+      Height = 17
       Caption = 'Show sales since:'
     end
     object edtPart: TEdit
-      Left = 70
+      Left = 74
       Top = 44
       Width = 257
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       MaxLength = 30
@@ -379,10 +387,10 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       TabOrder = 0
     end
     object CustNameEdit: TEdit
-      Left = 70
+      Left = 74
       Top = 13
       Width = 257
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       MaxLength = 30
@@ -390,7 +398,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       TabOrder = 1
     end
     object CustBitBtn: TBitBtn
-      Left = 336
+      Left = 340
       Top = 12
       Width = 25
       Height = 25
@@ -405,7 +413,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       OnClick = CustBitBtnClick
     end
     object btbtnPart: TBitBtn
-      Left = 336
+      Left = 340
       Top = 42
       Width = 25
       Height = 25
@@ -420,15 +428,15 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       OnClick = btbtnPartClick
     end
     object DateEdit: TEdit
-      Left = 488
+      Left = 492
       Top = 13
       Width = 81
-      Height = 21
+      Height = 25
       MaxLength = 30
       TabOrder = 4
     end
     object DateBitBtn: TBitBtn
-      Left = 576
+      Left = 580
       Top = 12
       Width = 25
       Height = 25
@@ -461,8 +469,8 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

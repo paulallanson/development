@@ -1,20 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Look up store type.
-
-VSS Info:
-$Header: /Broker Stock/STLUStorTyp.pas 2     28/11/00 15:59 Davidn $
-$History: STLUStorTyp.pas $
- * 
- * *****************  Version 2  *****************
- * User: Davidn       Date: 28/11/00   Time: 15:59
- * Updated in $/Broker Stock
- * Checking fonts, button & tab order, and glyphs.
-*******************************************************************************)
 unit STLUStorTyp;
 
 interface

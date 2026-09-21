@@ -4,11 +4,11 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   BorderStyle = bsDialog
   Caption = 'Print Box Labels'
   ClientHeight = 430
-  ClientWidth = 757
+  ClientWidth = 791
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,11 +17,11 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object LineDetsStringGrid: TStringGrid
     Left = 0
     Top = 121
-    Width = 757
+    Width = 791
     Height = 249
     Align = alClient
     ColCount = 8
@@ -32,6 +32,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     TabOrder = 0
     OnKeyPress = BoxQuantityEditKeyPress
     OnSelectCell = LineDetsStringGridSelectCell
+    ExplicitWidth = 751
+    ExplicitHeight = 240
     ColWidths = (
       38
       70
@@ -45,7 +47,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   object StatusBar1: TStatusBar
     Left = 0
     Top = 411
-    Width = 757
+    Width = 791
     Height = 19
     Panels = <
       item
@@ -54,15 +56,19 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       item
         Width = 50
       end>
+    ExplicitTop = 402
+    ExplicitWidth = 751
   end
   object pnlFooter: TPanel
     Left = 0
     Top = 370
-    Width = 757
+    Width = 791
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 361
+    ExplicitWidth = 751
     object CancelBitBtn: TBitBtn
       Left = 656
       Top = 8
@@ -71,7 +77,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
@@ -88,7 +94,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -119,7 +125,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -144,53 +150,54 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 757
+    Width = 791
     Height = 121
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 751
     object POGroupBox: TGroupBox
       Left = 8
       Top = 8
-      Width = 393
+      Width = 420
       Height = 49
       Caption = 'Delivery details for order '
       ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
-        Left = 16
-        Top = 20
-        Width = 52
-        Height = 13
+        Left = 20
+        Top = 22
+        Width = 59
+        Height = 17
         Caption = 'Customer:'
       end
       object CustomerLbl: TLabel
-        Left = 80
-        Top = 20
-        Width = 64
-        Height = 13
+        Left = 84
+        Top = 22
+        Width = 73
+        Height = 17
         Caption = 'CustomerLbl'
       end
     end
     object GroupBox1: TGroupBox
       Left = 8
       Top = 66
-      Width = 393
+      Width = 420
       Height = 45
       ParentBackground = False
       TabOrder = 1
       object Label9: TLabel
         Left = 16
         Top = 20
-        Width = 67
-        Height = 13
+        Width = 77
+        Height = 17
         Caption = 'Delivery Date'
       end
       object DeliveryDateEdit: TEdit
         Left = 104
         Top = 16
         Width = 121
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'DeliveryDateEdit'
         OnChange = DeliveryDateEditChange
@@ -198,7 +205,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end
       object BitBtn2: TBitBtn
         Left = 232
-        Top = 14
+        Top = 16
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -220,15 +227,15 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end
       object chkAddressOnly: TCheckBox
         Left = 272
-        Top = 18
-        Width = 113
+        Top = 20
+        Width = 137
         Height = 17
         Caption = 'Print Address Only'
         TabOrder = 2
       end
     end
     object GroupBox5: TGroupBox
-      Left = 408
+      Left = 434
       Top = 66
       Width = 329
       Height = 45
@@ -237,23 +244,23 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       object Label12: TLabel
         Left = 16
         Top = 20
-        Width = 56
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Label Logo'
       end
       object dblkpLogos: TDBLookupComboBox
-        Left = 80
+        Left = 86
         Top = 16
         Width = 185
-        Height = 21
+        Height = 25
         KeyField = 'ID'
         ListField = 'Logo_Name'
         ListSource = dtsLogos
         TabOrder = 0
       end
       object FormRefClrBitBtn: TBitBtn
-        Left = 282
-        Top = 14
+        Left = 288
+        Top = 17
         Width = 23
         Height = 23
         Hint = 'Clear'
@@ -341,8 +348,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       'WHERE Document_Type = '#39'L'#39' AND'
       '((inactive = '#39'N'#39') or (inactive is NULL))'
       'ORDER BY Logo_Name')
-    Left = 648
-    Top = 34
+    Left = 562
+    Top = 179
   end
   object dtsLogos: TDataSource
     DataSet = qryLogos

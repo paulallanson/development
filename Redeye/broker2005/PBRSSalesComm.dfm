@@ -3,38 +3,41 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   Top = 29
   Caption = 'Reps Commission report'
   ClientHeight = 471
-  ClientWidth = 774
+  ClientWidth = 836
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDisplay: TPanel
     Left = 0
-    Top = 145
-    Width = 774
-    Height = 285
+    Top = 161
+    Width = 836
+    Height = 269
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 145
+    ExplicitWidth = 768
+    ExplicitHeight = 276
     object dbgrdSalesInvoice: TDBGrid
       Left = 1
       Top = 1
-      Width = 772
-      Height = 283
+      Width = 834
+      Height = 267
       Align = alClient
       DataSource = dtsrcSalesComm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -42,7 +45,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDrawColumnCell = dbgrdSalesInvoiceDrawColumnCell
@@ -126,23 +129,23 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 774
-    Height = 145
+    Width = 836
+    Height = 161
     Align = alTop
     ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
       Top = 84
-      Width = 59
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
       Top = 84
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'then sort by'
     end
     object DateFromButton: TSpeedButton
@@ -188,24 +191,24 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       OnClick = DateToButtonClick
     end
     object Label1: TLabel
-      Left = 600
+      Left = 611
       Top = 8
-      Width = 102
-      Height = 13
+      Width = 117
+      Height = 17
       Caption = 'From Payment Date:'
     end
     object Label2: TLabel
-      Left = 600
+      Left = 611
       Top = 64
-      Width = 88
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'To Payment Date:'
     end
     object rdgrpRep: TRadioGroup
       Left = 8
-      Top = 16
+      Top = 8
       Width = 113
-      Height = 57
+      Height = 65
       Caption = 'By Rep'
       ItemIndex = 0
       Items.Strings = (
@@ -226,15 +229,15 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 52
-        Height = 13
+        Width = 62
+        Height = 17
         Caption = 'Rep Name'
       end
       object edtRep: TEdit
         Left = 8
         Top = 24
         Width = 209
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -256,9 +259,9 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     end
     object cbSort1: TComboBox
       Left = 8
-      Top = 98
+      Top = 104
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 2
       OnChange = cbSortChange
@@ -270,9 +273,9 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     end
     object cbSort2: TComboBox
       Left = 160
-      Top = 98
+      Top = 104
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 3
       OnChange = cbSortChange
@@ -283,19 +286,19 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
         'Order Number')
     end
     object DateFromEdit: TEdit
-      Left = 599
+      Left = 610
       Top = 32
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 4
       OnExit = DateFromEditExit
     end
     object rdgrpCommType: TRadioGroup
       Left = 392
-      Top = 10
-      Width = 185
-      Height = 63
+      Top = 7
+      Width = 201
+      Height = 65
       Caption = 'Commission based on'
       ItemIndex = 0
       Items.Strings = (
@@ -306,10 +309,10 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       OnClick = rdgrpCommTypeClick
     end
     object RdGrpRepTyp: TRadioGroup
-      Left = 392
-      Top = 74
-      Width = 185
-      Height = 63
+      Left = 391
+      Top = 76
+      Width = 201
+      Height = 65
       Caption = 'Report Type'
       ItemIndex = 0
       Items.Strings = (
@@ -320,9 +323,9 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       OnClick = RdGrpRepTypClick
     end
     object ChkBxNewPgRep: TCheckBox
-      Left = 600
+      Left = 611
       Top = 112
-      Width = 177
+      Width = 217
       Height = 30
       Caption = 'New page on change of Rep'
       TabOrder = 7
@@ -332,29 +335,31 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   object pnlPrintControl: TPanel
     Left = 0
     Top = 430
-    Width = 774
+    Width = 836
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 421
+    ExplicitWidth = 768
     DesignSize = (
-      774
+      836
       41)
     object lblRecordCount: TLabel
       Left = 104
       Top = 16
-      Width = 3
-      Height = 13
+      Width = 4
+      Height = 17
     end
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 74
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 541
+      Left = 603
       Top = 1
       Width = 232
       Height = 39
@@ -362,6 +367,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 535
       DesignSize = (
         232
         39)
@@ -423,7 +429,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 479
+      Left = 535
       Top = 8
       Width = 75
       Height = 25
@@ -474,13 +480,14 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
+      ExplicitLeft = 467
     end
   end
   object DateToEdit: TEdit
-    Left = 599
+    Left = 611
     Top = 85
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 3
     OnExit = DateToEditExit
@@ -506,8 +513,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

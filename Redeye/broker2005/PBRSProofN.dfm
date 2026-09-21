@@ -4,12 +4,12 @@ object PBRSProofNFrm: TPBRSProofNFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Proof Approval Print'
-  ClientHeight = 184
+  ClientHeight = 200
   ClientWidth = 359
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,24 +17,24 @@ object PBRSProofNFrm: TPBRSProofNFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
-    Top = 64
-    Width = 74
-    Height = 13
+    Top = 59
+    Width = 84
+    Height = 17
     Caption = 'Proof Revision'
   end
   object Label2: TLabel
     Left = 16
-    Top = 96
-    Width = 58
-    Height = 13
+    Top = 91
+    Width = 65
+    Height = 17
     Caption = 'New Status'
   end
   object PrintBitBtn: TBitBtn
     Left = 184
-    Top = 152
+    Top = 161
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -64,7 +64,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 96
-    Top = 152
+    Top = 161
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -94,7 +94,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 152
+    Top = 161
     Width = 75
     Height = 25
     Caption = '&Cancel'
@@ -117,13 +117,13 @@ object PBRSProofNFrm: TPBRSProofNFrm
     TabOrder = 3
     object EstNumLabel: TLabel
       Left = 8
-      Top = 22
-      Width = 65
-      Height = 13
+      Top = 14
+      Width = 75
+      Height = 17
       Caption = 'P.O. Number'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -150,7 +150,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
       Color = clBtnFace
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -161,14 +161,14 @@ object PBRSProofNFrm: TPBRSProofNFrm
     end
   end
   object chkbxPrintLogo: TCheckBox
-    Left = 8
-    Top = 124
-    Width = 129
+    Left = 16
+    Top = 123
+    Width = 177
     Height = 17
     Caption = 'Print Company Logo'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -178,14 +178,14 @@ object PBRSProofNFrm: TPBRSProofNFrm
     Left = 104
     Top = 56
     Width = 177
-    Height = 21
+    Height = 25
     TabOrder = 5
   end
   object dblkpProofStatus: TDBLookupComboBox
     Left = 104
     Top = 88
     Width = 177
-    Height = 21
+    Height = 25
     KeyField = 'Proof_Status'
     ListField = 'Description'
     ListSource = ProofStatusSRC
@@ -194,7 +194,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
   end
   object EmailBitBtn: TBitBtn
     Left = 272
-    Top = 151
+    Top = 160
     Width = 75
     Height = 25
     Caption = '&Email'
@@ -301,8 +301,8 @@ object PBRSProofNFrm: TPBRSProofNFrm
       'WHERE ((inactive = '#39'N'#39') or (inactive is NULL)) OR'
       '(Proof_Status = :Proof_Status)'
       '')
-    Left = 88
-    Top = 16
+    Left = 294
+    Top = 12
     ParamData = <
       item
         Name = 'Proof_Status'
@@ -310,8 +310,8 @@ object PBRSProofNFrm: TPBRSProofNFrm
   end
   object ProofStatusSRC: TDataSource
     DataSet = ProofStatusSQL
-    Left = 16
-    Top = 85
+    Left = 44
+    Top = 65530
   end
   object DefStatSQL: TFDQuery
     ConnectionName = 'PB'
@@ -319,7 +319,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
       'select Proof_Status'
       'from Proof_Status'
       'where Proof_Approval_Status = '#39'Y'#39)
-    Left = 152
-    Top = 112
+    Left = 190
+    Top = 149
   end
 end

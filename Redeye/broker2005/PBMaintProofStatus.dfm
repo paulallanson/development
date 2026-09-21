@@ -8,20 +8,20 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 120
-    Top = 128
-    Width = 122
-    Height = 15
+    Left = 115
+    Top = 124
+    Width = 137
+    Height = 16
     Caption = 'Delete these details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,7 +34,7 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,15 +43,15 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object DescrEdit: TEdit
       Left = 94
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -240,8 +240,8 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
       'Select Proof_Status'
       'From Proof_Status'
       'Where Description = :GUID')
-    Left = 192
-    Top = 24
+    Left = 56
+    Top = 46
     ParamData = <
       item
         Name = 'GUID'
@@ -263,8 +263,8 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
       ''
       ''
       ' ')
-    Left = 32
-    Top = 24
+    Left = 176
+    Top = 70
     ParamData = <
       item
         Name = 'Proof_Status'
@@ -290,8 +290,8 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
       'Where'
       '(Proof_Status = :Proof_Status) '
       '')
-    Left = 80
-    Top = 16
+    Left = 100
+    Top = 20
     ParamData = <
       item
         Name = 'Description'
@@ -315,8 +315,8 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
       'Delete From Proof_Status'
       'Where'
       '(Proof_Status = :Proof_Status)')
-    Left = 240
-    Top = 16
+    Left = 212
+    Top = 28
     ParamData = <
       item
         Name = 'Proof_Status'
@@ -324,8 +324,8 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
   end
   object DetsSRC: TDataSource
     DataSet = AddSQL
-    Left = 320
-    Top = 16
+    Left = 64
+    Top = 28
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -348,8 +348,8 @@ object PBMaintProofStatusFrm: TPBMaintProofStatusFrm
     SQL.Strings = (
       'select * from Proof_Status'
       'where proof_status = :proof_Status')
-    Left = 48
-    Top = 120
+    Left = 156
+    Top = 38
     ParamData = <
       item
         Name = 'proof_Status'

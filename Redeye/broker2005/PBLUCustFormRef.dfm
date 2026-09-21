@@ -43,7 +43,7 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
   object Label1: TLabel
     Left = 8
     Top = 22
-    Width = 38
+    Width = 39
     Height = 13
     Caption = 'Branch:'
   end
@@ -57,7 +57,7 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
   object RefDBGrid: TDBGrid
     Left = 8
     Top = 40
-    Width = 512
+    Width = 506
     Height = 374
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsSRC
@@ -109,6 +109,7 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
     Caption = 'Type here to narrow the search'
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 411
     object NameEdit: TEdit
       Left = 8
       Top = 16
@@ -119,7 +120,7 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 530
+    Left = 524
     Top = 449
     Width = 75
     Height = 25
@@ -129,9 +130,11 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
+    ExplicitLeft = 518
+    ExplicitTop = 440
   end
   object CloseBitBtn: TBitBtn
-    Left = 530
+    Left = 524
     Top = 477
     Width = 75
     Height = 25
@@ -139,9 +142,11 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 3
+    ExplicitLeft = 518
+    ExplicitTop = 468
   end
   object FuncGrpBox: TGroupBox
-    Left = 526
+    Left = 520
     Top = 309
     Width = 87
     Height = 105
@@ -149,6 +154,8 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 4
+    ExplicitLeft = 514
+    ExplicitTop = 300
     object AddBitBtn: TBitBtn
       Left = 4
       Top = 16
@@ -230,6 +237,7 @@ object PBLUCustFormRefFrm: TPBLUCustFormRefFrm
     BorderStyle = bsSingle
     ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 465
     object DBContactText: TDBText
       Left = 83
       Top = 3

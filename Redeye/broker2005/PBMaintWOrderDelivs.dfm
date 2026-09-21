@@ -8,12 +8,12 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlDetails: TPanel
     Left = 0
     Top = 0
@@ -22,74 +22,75 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 615
     object Label1: TLabel
       Left = 8
       Top = 45
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Courier'
     end
     object Label2: TLabel
       Left = 8
       Top = 74
-      Width = 35
-      Height = 13
+      Width = 41
+      Height = 17
       Caption = 'Service'
     end
     object Label3: TLabel
       Left = 8
       Top = 16
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label4: TLabel
       Left = 402
       Top = 16
-      Width = 75
-      Height = 13
+      Width = 85
+      Height = 17
       Caption = 'Despatch Date'
     end
     object Label7: TLabel
       Left = 8
       Top = 166
-      Width = 46
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Pack Size'
     end
     object Label8: TLabel
       Left = 400
       Top = 166
-      Width = 94
-      Height = 13
+      Width = 107
+      Height = 17
       Caption = 'Pack Weight (gms)'
     end
     object lblHandoverDate: TLabel
       Left = 402
       Top = 72
-      Width = 77
-      Height = 13
+      Width = 88
+      Height = 17
       Caption = 'Handover Date'
     end
     object Label13: TLabel
       Left = 8
       Top = 101
-      Width = 21
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = 'Sort'
     end
     object Label14: TLabel
       Left = 8
       Top = 132
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'Speed'
     end
     object edtCourier: TEdit
       Left = 104
       Top = 41
       Width = 249
-      Height = 21
+      Height = 25
       TabStop = False
       ReadOnly = True
       TabOrder = 3
@@ -116,7 +117,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 70
       Width = 193
-      Height = 21
+      Height = 25
       KeyField = 'Service_no'
       ListField = 'Service_Description'
       ListSource = dtmdlWOrders.dtsCourierService
@@ -127,7 +128,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 496
       Top = 12
       Width = 80
-      Height = 21
+      Height = 25
       MaxLength = 30
       TabOrder = 1
       OnChange = CheckOK
@@ -171,7 +172,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 162
       Width = 193
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 10
     end
@@ -209,7 +210,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 496
       Top = 68
       Width = 80
-      Height = 21
+      Height = 25
       MaxLength = 30
       TabOrder = 6
       OnChange = CheckOK
@@ -241,7 +242,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 97
       Width = 113
-      Height = 21
+      Height = 25
       KeyField = 'Courier_Sort'
       ListField = 'Sort_Description'
       ListSource = dtmdlWOrders.dtsCourierSort
@@ -251,7 +252,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 128
       Width = 113
-      Height = 21
+      Height = 25
       KeyField = 'Courier_Speed'
       ListField = 'Speed_Description'
       ListSource = dtmdlWOrders.dtsCourierSpeed
@@ -266,19 +267,21 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 445
+    ExplicitWidth = 615
     DesignSize = (
       621
       40)
     object lblDelete: TLabel
       Left = 112
       Top = 12
-      Width = 106
-      Height = 13
+      Width = 122
+      Height = 17
       Anchors = [akLeft, akBottom]
-      Caption = 'Delete these details?'
+      Caption = 'Delete these details'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -317,10 +320,11 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 615
     object rdgrpAccountType: TRadioGroup
       Left = 8
       Top = 10
-      Width = 113
+      Width = 123
       Height = 65
       Caption = 'Payment Details'
       Items.Strings = (
@@ -331,7 +335,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       OnClick = rdgrpAccountTypeClick
     end
     object grpbxAccountDetails: TGroupBox
-      Left = 128
+      Left = 140
       Top = 10
       Width = 369
       Height = 65
@@ -340,32 +344,32 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       TabOrder = 1
       object Label11: TLabel
         Left = 8
-        Top = 16
-        Width = 72
-        Height = 13
+        Top = 12
+        Width = 81
+        Height = 17
         Caption = 'Account Code'
       end
       object Label12: TLabel
         Left = 8
-        Top = 40
-        Width = 74
-        Height = 13
+        Top = 36
+        Width = 85
+        Height = 17
         Caption = 'Account Name'
       end
       object edtAccountCode: TEdit
-        Left = 84
-        Top = 12
+        Left = 97
+        Top = 8
         Width = 189
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 0
         OnChange = CheckOK
       end
       object edtAccountName: TEdit
-        Left = 84
-        Top = 38
+        Left = 97
+        Top = 34
         Width = 261
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 1
         OnChange = CheckOK
@@ -381,39 +385,41 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
     Enabled = False
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 615
+    ExplicitHeight = 165
     object Label6: TLabel
       Left = 8
       Top = 36
-      Width = 41
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Address'
     end
     object Label9: TLabel
       Left = 8
       Top = 140
-      Width = 47
-      Height = 13
+      Width = 54
+      Height = 17
       Caption = 'Postcode'
     end
     object Label10: TLabel
       Left = 8
       Top = 114
-      Width = 51
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'City/Town'
     end
     object Label5: TLabel
       Left = 8
       Top = 12
-      Width = 72
-      Height = 13
+      Width = 85
+      Height = 17
       Caption = 'Delivery Name'
     end
     object edtBuilding: TEdit
       Left = 104
       Top = 32
       Width = 253
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       OnChange = CheckOK
@@ -422,7 +428,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 58
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 2
     end
@@ -430,7 +436,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 84
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 3
     end
@@ -438,7 +444,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 110
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 4
     end
@@ -446,7 +452,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 136
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       MaxLength = 10
       TabOrder = 5
@@ -456,7 +462,7 @@ object frmPBMaintWOrderDelivs: TfrmPBMaintWOrderDelivs
       Left = 104
       Top = 8
       Width = 253
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       OnChange = CheckOK

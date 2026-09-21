@@ -3,27 +3,27 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Customer Category Performance Report'
-  ClientHeight = 285
-  ClientWidth = 473
+  ClientHeight = 305
+  ClientWidth = 509
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 24
-    Top = 143
-    Width = 107
-    Height = 13
+    Top = 133
+    Width = 123
+    Height = 17
     Caption = 'From Date Delivered:'
   end
   object DateFromButton: TSpeedButton
     Left = 127
-    Top = 157
+    Top = 152
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -44,14 +44,14 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   end
   object Label3: TLabel
     Left = 24
-    Top = 196
-    Width = 93
-    Height = 13
+    Top = 184
+    Width = 107
+    Height = 17
     Caption = 'To Date Delivered:'
   end
   object DateToButton: TSpeedButton
     Left = 127
-    Top = 208
+    Top = 202
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -72,14 +72,14 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   end
   object lblCustBran: TLabel
     Left = 26
-    Top = 31
-    Width = 49
-    Height = 13
+    Top = 21
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object pnlExportPrgrss: TPanel
-    Left = 96
-    Top = 84
+    Left = 120
+    Top = 89
     Width = 289
     Height = 61
     ParentBackground = False
@@ -88,8 +88,8 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -112,9 +112,9 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Visible = False
   end
   object rgPrdCat: TRadioGroup
-    Left = 24
-    Top = 64
-    Width = 105
+    Left = 25
+    Top = 56
+    Width = 127
     Height = 65
     Caption = ' Product Category '
     ItemIndex = 0
@@ -127,8 +127,8 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     OnClick = rgPrdCatClick
   end
   object RepPanel: TPanel
-    Left = 136
-    Top = 70
+    Left = 157
+    Top = 56
     Width = 321
     Height = 59
     ParentBackground = False
@@ -137,15 +137,15 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     object lblPrdCat: TLabel
       Left = 8
       Top = 4
-      Width = 89
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Product Category'
     end
     object edtPrdCat: TEdit
       Left = 8
       Top = 20
       Width = 257
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -167,25 +167,25 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   end
   object DateFromEdit: TEdit
     Left = 23
-    Top = 159
+    Top = 152
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 4
     OnExit = DateFromEditExit
   end
   object DateToEdit: TEdit
     Left = 23
-    Top = 209
+    Top = 202
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 5
     OnExit = DateToEditExit
   end
   object CancelBitBtn: TBitBtn
     Left = 24
-    Top = 248
+    Top = 253
     Width = 75
     Height = 25
     Caption = '&Cancel'
@@ -194,8 +194,8 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     TabOrder = 7
   end
   object ExcelBitBtn: TBitBtn
-    Left = 203
-    Top = 248
+    Left = 225
+    Top = 253
     Width = 75
     Height = 25
     Caption = 'Excel'
@@ -248,9 +248,9 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
   end
   object RdGrpRepType: TRadioGroup
     Left = 356
-    Top = 152
-    Width = 101
-    Height = 65
+    Top = 145
+    Width = 122
+    Height = 73
     Caption = 'Report Type'
     ItemIndex = 0
     Items.Strings = (
@@ -260,8 +260,8 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     TabOrder = 6
   end
   object btnCustomer: TButton
-    Left = 408
-    Top = 25
+    Left = 363
+    Top = 16
     Width = 25
     Height = 25
     Caption = '...'
@@ -275,18 +275,18 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     OnClick = btnCustomerClick
   end
   object edtCustomer: TEdit
-    Left = 144
-    Top = 25
+    Left = 100
+    Top = 15
     Width = 257
-    Height = 21
+    Height = 25
     TabStop = False
     Enabled = False
     TabOrder = 0
     OnChange = EnablePrint
   end
   object PreviewBitBtn: TBitBtn
-    Left = 294
-    Top = 248
+    Left = 316
+    Top = 253
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -309,8 +309,8 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 382
-    Top = 248
+    Left = 404
+    Top = 253
     Width = 75
     Height = 25
     Caption = '&Print'

@@ -7,7 +7,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -17,7 +17,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 414
@@ -30,6 +30,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       item
         Width = 50
       end>
+    ExplicitTop = 405
+    ExplicitWidth = 846
   end
   object Panel2: TPanel
     Left = 0
@@ -39,27 +41,29 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 364
+    ExplicitWidth = 846
     DesignSize = (
       852
       41)
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 77
-      Height = 13
+      Width = 88
+      Height = 17
       Caption = 'Product Search'
     end
     object edtSearch: TEdit
-      Left = 96
-      Top = 11
+      Left = 111
+      Top = 9
       Width = 209
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 768
+      Left = 762
       Top = 8
       Width = 75
       Height = 25
@@ -67,9 +71,10 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 756
     end
     object btnOK: TBitBtn
-      Left = 680
+      Left = 674
       Top = 8
       Width = 75
       Height = 25
@@ -97,6 +102,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
+      ExplicitLeft = 668
     end
   end
   object Panel3: TPanel
@@ -107,32 +113,33 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 846
     object Label1: TLabel
       Left = 16
       Top = 12
-      Width = 102
-      Height = 13
+      Width = 111
+      Height = 17
       Caption = 'Fulfillment Location'
     end
     object Label3: TLabel
-      Left = 640
+      Left = 633
       Top = 12
-      Width = 89
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'Transaction  Date'
     end
     object lblBinLocation: TLabel
-      Left = 352
+      Left = 364
       Top = 12
-      Width = 74
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Associated Bin'
     end
     object dblkpProductionLocation: TDBLookupComboBox
-      Left = 120
+      Left = 132
       Top = 8
       Width = 209
-      Height = 21
+      Height = 25
       KeyField = 'Production_Location'
       ListField = 'Production_Location_Name'
       TabOrder = 0
@@ -142,7 +149,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       Left = 744
       Top = 8
       Width = 97
-      Height = 21
+      Height = 25
       Date = 39470.000000000000000000
       Time = 0.402405902779719300
       TabOrder = 1
@@ -163,6 +170,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
+    ExplicitWidth = 744
+    ExplicitHeight = 323
     ColWidths = (
       178
       201
@@ -178,6 +187,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Align = alRight
     ParentBackground = False
     TabOrder = 4
+    ExplicitLeft = 744
+    ExplicitHeight = 323
     DesignSize = (
       102
       332)
@@ -263,6 +274,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitTop = 287
     end
   end
   object tmrSearch: TTimer

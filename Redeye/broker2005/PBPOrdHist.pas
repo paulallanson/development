@@ -1,17 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  View Purchase Order History
-
-VSS Info:
-$Header:
-$History:
-
-
-*******************************************************************************)
 unit PBPOrdHist;
 
 interface

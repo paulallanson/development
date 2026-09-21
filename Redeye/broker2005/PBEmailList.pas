@@ -1,32 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Fax list Form
-
-VSS Info:
-$Header: /PBL D5/PBEmailList.pas 2     24/10/02 11:56 Davidn $
-$History: PBEmailList.pas $
- * 
- * *****************  Version 2  *****************
- * User: Davidn       Date: 24/10/02   Time: 11:56
- * Updated in $/PBL D5
- * set default email file attachment type to be displayed in grid.
- * 
- * *****************  Version 1  *****************
- * User: Paul         Date: 6/02/:1    Time: 9:57
- * Created in $/PBL D5
- * Initial takeon of Email Recipient list
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:41
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBEmailList;
 
 interface

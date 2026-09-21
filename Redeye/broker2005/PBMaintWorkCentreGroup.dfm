@@ -3,30 +3,30 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
   Top = 152
   BorderStyle = bsDialog
   Caption = 'Maintain Work Centre Group'
-  ClientHeight = 122
-  ClientWidth = 347
+  ClientHeight = 137
+  ClientWidth = 356
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    347
-    122)
-  TextHeight = 13
+    356
+    137)
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 29
-    Top = 98
-    Width = 109
-    Height = 13
+    Left = 43
+    Top = 97
+    Width = 122
+    Height = 17
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete these details ?'
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,20 +34,20 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
   object Label1: TLabel
     Left = 7
     Top = 20
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 7
     Top = 52
-    Width = 60
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Short Name'
   end
   object OKBitBtn: TBitBtn
-    Left = 165
-    Top = 90
+    Left = 179
+    Top = 94
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -123,8 +123,8 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 245
-    Top = 90
+    Left = 259
+    Top = 94
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -200,20 +200,20 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
     OnClick = CancelBitBtnClick
   end
   object edtName: TEdit
-    Left = 78
+    Left = 83
     Top = 16
     Width = 252
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 2
     Text = 'edtName'
     OnChange = CheckOK
   end
   object edtShortName: TEdit
-    Left = 78
+    Left = 83
     Top = 48
     Width = 179
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 3
     Text = 'edtShortName'
@@ -225,8 +225,8 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
       'Select Work_Centre_Group.*'
       'From Work_Centre_Group'
       'Where Work_Centre_Group_Name = :GUID')
-    Left = 88
-    Top = 80
+    Left = 124
+    Top = 89
     ParamData = <
       item
         Name = 'GUID'
@@ -260,8 +260,8 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
       'Where (Work_Centre_Group = :Work_Centre_Group) '
       ''
       ' ')
-    Left = 208
-    Top = 80
+    Left = 274
+    Top = 89
     ParamData = <
       item
         Name = 'Work_Centre_Group_Name'
@@ -294,8 +294,8 @@ object PBMaintWorkCentreGroupFrm: TPBMaintWorkCentreGroupFrm
       'Where'
       '(Work_Centre_Group = :Work_Centre_Group) '
       '')
-    Left = 152
-    Top = 80
+    Left = 204
+    Top = 89
     ParamData = <
       item
         Name = 'Description'

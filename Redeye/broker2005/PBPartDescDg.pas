@@ -1,21 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999-2000
-
-Comments
---------
-  Set Part Description.
-
-VSS Info:
-$Header: /PBL D5/PBPartDescDg.pas 1     15/03/:0 11:13 Roddym $
-$History: PBPartDescDg.pas $
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 15/03/:0   Time: 11:13
- * Created in $/PBL D5
- * Allow users to give parts descriptions rather than just "Part N"
-
-*******************************************************************************)
 unit PBPartDescDg;
 
 interface

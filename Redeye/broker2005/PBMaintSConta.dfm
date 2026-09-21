@@ -4,34 +4,34 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Maintain Supplier/Branch Contacts'
-  ClientHeight = 400
-  ClientWidth = 383
+  ClientHeight = 436
+  ClientWidth = 428
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 48
-    Top = 373
-    Width = 133
-    Height = 13
-    Caption = 'Delete the above details ?'
+    Left = 46
+    Top = 395
+    Width = 150
+    Height = 17
+    Caption = 'Delete the above details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object OKBitBtn: TBitBtn
-    Left = 208
-    Top = 368
+    Left = 206
+    Top = 390
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -106,8 +106,8 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 288
-    Top = 368
+    Left = 286
+    Top = 390
     Width = 75
     Height = 25
     Cancel = True
@@ -184,12 +184,12 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 361
-    Height = 353
+    Width = 393
+    Height = 370
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -198,19 +198,19 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Supplier'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Branch '
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -218,12 +218,12 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label3: TLabel
       Left = 8
       Top = 72
-      Width = 40
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Contact'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -231,12 +231,12 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label4: TLabel
       Left = 8
       Top = 124
-      Width = 66
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'Contact Type'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -244,12 +244,12 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label6: TLabel
       Left = 8
       Top = 166
-      Width = 33
-      Height = 13
+      Width = 36
+      Height = 17
       Caption = 'Phone'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -257,12 +257,12 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label7: TLabel
       Left = 8
       Top = 260
-      Width = 75
-      Height = 13
+      Width = 88
+      Height = 17
       Caption = 'E-Mail address'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -270,38 +270,37 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     object Label8: TLabel
       Left = 8
       Top = 98
-      Width = 53
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'Salutation'
     end
     object Label5: TLabel
       Left = 8
       Top = 192
-      Width = 17
-      Height = 13
+      Width = 19
+      Height = 17
       Caption = 'Fax'
     end
     object Label9: TLabel
       Left = 8
       Top = 218
-      Width = 57
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Mobile No.'
     end
     object Label10: TLabel
       Left = 8
-      Top = 280
-      Width = 63
-      Height = 26
-      Alignment = taCenter
+      Top = 288
+      Width = 88
+      Height = 34
       Caption = 'Accept Files of type '
       WordWrap = True
     end
     object SuppNameEdit: TEdit
-      Left = 96
+      Left = 111
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       Color = clBtnFace
       MaxLength = 40
       ParentShowHint = False
@@ -311,10 +310,10 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       Text = 'SuppNameEdit'
     end
     object NameEdit: TEdit
-      Left = 96
+      Left = 111
       Top = 68
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       ParentShowHint = False
       ShowHint = True
@@ -323,10 +322,10 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       OnChange = NameEditChange
     end
     object TypeDBLCB: TDBLookupComboBox
-      Left = 96
+      Left = 111
       Top = 120
       Width = 161
-      Height = 21
+      Height = 25
       KeyField = 'Contact_Type'
       ListField = 'Description'
       ListSource = ContTypesSRC
@@ -334,10 +333,10 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       OnClick = TypeDBLCBClick
     end
     object PhoneEdit: TEdit
-      Left = 96
+      Left = 111
       Top = 162
       Width = 161
-      Height = 21
+      Height = 25
       MaxLength = 20
       ParentShowHint = False
       ShowHint = True
@@ -345,10 +344,10 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       OnChange = NameEditChange
     end
     object EMailEdit: TEdit
-      Left = 96
+      Left = 111
       Top = 256
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 120
       ParentShowHint = False
       ShowHint = True
@@ -356,31 +355,31 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       OnChange = NameEditChange
     end
     object SalutationEdit: TEdit
-      Left = 96
+      Left = 111
       Top = 94
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 3
       Text = 'SalutationEdit'
     end
     object FaxEdit: TEdit
-      Left = 96
+      Left = 111
       Top = 188
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 7
     end
     object MobileEdit: TEdit
-      Left = 96
+      Left = 111
       Top = 214
       Width = 161
-      Height = 21
+      Height = 25
       TabOrder = 8
     end
     object ContTypeMaintBitBtn: TBitBtn
-      Left = 264
-      Top = 120
+      Left = 279
+      Top = 121
       Width = 25
       Height = 23
       Hint = 'Contact Type Maintenance'
@@ -397,10 +396,10 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       OnClick = ContTypeMaintBitBtnClick
     end
     object FileTypDBLCB: TDBLookupComboBox
-      Left = 96
+      Left = 111
       Top = 282
       Width = 209
-      Height = 21
+      Height = 25
       KeyField = 'ExportFilter'
       ListField = 'Description'
       ListSource = FileTypSRC
@@ -408,7 +407,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       OnClick = FileTypDBLCBClick
     end
     object NotesBitBtn: TBitBtn
-      Left = 264
+      Left = 279
       Top = 188
       Width = 89
       Height = 25
@@ -437,10 +436,10 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       OnClick = NotesBitBtnClick
     end
     object dblkpBranchName: TDBLookupComboBox
-      Left = 96
+      Left = 111
       Top = 40
       Width = 252
-      Height = 21
+      Height = 25
       KeyField = 'Branch_no'
       ListField = 'Name'
       ListSource = dtsBranch
@@ -448,7 +447,7 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
     end
     object chkbxActive: TCheckBox
       Left = 8
-      Top = 320
+      Top = 345
       Width = 137
       Height = 17
       Caption = 'Contact is active'
@@ -624,8 +623,8 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       'Select Name from Customer_Branch'
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)')
-    Left = 312
-    Top = 60
+    Left = 350
+    Top = 11
     ParamData = <
       item
         Name = 'Customer'
@@ -640,13 +639,13 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       'Select Contact_Type, Description'
       'From Contact_Type'
       'Order By Description')
-    Left = 304
-    Top = 140
+    Left = 372
+    Top = 63
   end
   object ContTypesSRC: TDataSource
     DataSet = GetContTypesSQL
-    Left = 336
-    Top = 140
+    Left = 372
+    Top = 87
   end
   object QryZero: TFDQuery
     ConnectionName = 'PB'
@@ -671,8 +670,8 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
   object FlashTimer: TTimer
     Enabled = False
     OnTimer = FlashTimerTimer
-    Left = 264
-    Top = 72
+    Left = 306
+    Top = 26
   end
   object UpdNotesOnlySQL: TFDQuery
     ConnectionName = 'PB'
@@ -722,8 +721,8 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
         'h_no))'
       ' '
       ' ')
-    Left = 201
-    Top = 84
+    Left = 235
+    Top = 161
     ParamData = <
       item
         Name = 'Supplier'
@@ -741,8 +740,8 @@ object PBMaintSContaFrm: TPBMaintSContaFrm
       'select * from supplier_branch'
       'where supplier = :supplier'
       'order by Name')
-    Left = 16
-    Top = 24
+    Left = 244
+    Top = 30
     ParamData = <
       item
         Name = 'supplier'

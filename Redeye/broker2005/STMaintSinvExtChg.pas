@@ -1,13 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Maintain Sales Invoice  Extra Charges form.
-
- ***************************************************************)
-
 unit STMaintSinvExtChg;
 
 interface

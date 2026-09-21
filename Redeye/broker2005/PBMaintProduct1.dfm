@@ -4,23 +4,24 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
   BorderStyle = bsDialog
   Caption = 'Product Create Wizard'
   ClientHeight = 312
-  ClientWidth = 452
+  ClientWidth = 481
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pgWizard: TPageControl
     Left = 0
     Top = 0
-    Width = 452
+    Width = 481
     Height = 269
     ActivePage = tsDescription
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 452
     object tsCustomer: TTabSheet
       Caption = 'tsCustomer'
       TabVisible = False
@@ -28,15 +29,15 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label1: TLabel
         Left = 5
         Top = 20
-        Width = 95
-        Height = 13
+        Width = 109
+        Height = 17
         Caption = 'Selected Customer'
       end
       object edtCustomer: TEdit
         Left = 101
         Top = 16
         Width = 305
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
         OnChange = edtCustomerChange
@@ -65,29 +66,29 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label2: TLabel
         Left = 8
         Top = 56
-        Width = 100
-        Height = 13
+        Width = 115
+        Height = 17
         Caption = 'Available Templates'
       end
       object Label4: TLabel
         Left = 232
         Top = 56
-        Width = 70
-        Height = 13
+        Width = 80
+        Height = 17
         Caption = 'Product Code'
       end
       object Label3: TLabel
         Left = 5
         Top = 20
-        Width = 95
-        Height = 13
+        Width = 109
+        Height = 17
         Caption = 'Selected Customer'
       end
       object dblstTemplate: TDBLookupListBox
         Left = 8
         Top = 72
         Width = 209
-        Height = 160
+        Height = 157
         KeyField = 'Template_no'
         ListField = 'Product_Mask'
         ListSource = dtsTemplate
@@ -98,7 +99,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         Left = 232
         Top = 72
         Width = 209
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         Enabled = False
         TabOrder = 1
@@ -109,7 +110,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         Left = 101
         Top = 16
         Width = 305
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 2
@@ -125,36 +126,36 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         object Label16: TLabel
           Left = 0
           Top = 32
-          Width = 139
-          Height = 13
+          Width = 163
+          Height = 17
           Caption = '\ - Next character is a literal'
         end
         object Label17: TLabel
           Left = 0
           Top = 48
-          Width = 144
-          Height = 13
+          Width = 165
+          Height = 17
           Caption = 'L - alphabetic character only'
         end
         object Label18: TLabel
           Left = 0
           Top = 64
-          Width = 137
-          Height = 13
+          Width = 157
+          Height = 17
           Caption = 'A - alphanumeric character'
         end
         object Label19: TLabel
           Left = 0
           Top = 80
-          Width = 132
-          Height = 13
+          Width = 152
+          Height = 17
           Caption = '0 - numeric character only'
         end
         object Label20: TLabel
           Left = 0
           Top = 96
-          Width = 141
-          Height = 13
+          Width = 159
+          Height = 17
           Caption = 'S - auto sequential numeric'
         end
         object Label21: TLabel
@@ -180,22 +181,22 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label14: TLabel
         Left = 5
         Top = 20
-        Width = 95
-        Height = 13
+        Width = 109
+        Height = 17
         Caption = 'Selected Customer'
       end
       object Label15: TLabel
         Left = 5
         Top = 52
-        Width = 70
-        Height = 13
+        Width = 80
+        Height = 17
         Caption = 'Product Code'
       end
       object edtCustomer4: TEdit
         Left = 101
         Top = 16
         Width = 305
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 0
@@ -204,7 +205,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         Left = 101
         Top = 48
         Width = 260
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         MaxLength = 25
         TabOrder = 1
@@ -220,47 +221,47 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label6: TLabel
         Left = 5
         Top = 52
-        Width = 70
-        Height = 13
+        Width = 80
+        Height = 17
         Caption = 'Product Code'
       end
       object Label7: TLabel
         Left = 5
         Top = 132
-        Width = 66
-        Height = 13
+        Width = 76
+        Height = 17
         Caption = 'Product Type'
       end
       object Label8: TLabel
         Left = 5
         Top = 100
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Caption = 'Size'
       end
       object Label5: TLabel
         Left = 5
         Top = 20
-        Width = 95
-        Height = 13
+        Width = 109
+        Height = 17
         Caption = 'Selected Customer'
       end
       object Label9: TLabel
         Left = 5
         Top = 196
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object Bevel1: TBevel
-        Left = 0
+        Left = 18
         Top = 184
         Width = 441
         Height = 17
         Shape = bsTopLine
       end
       object Bevel2: TBevel
-        Left = 3
+        Left = 22
         Top = 80
         Width = 441
         Height = 17
@@ -269,37 +270,37 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label10: TLabel
         Left = 5
         Top = 220
-        Width = 45
-        Height = 13
+        Width = 52
+        Height = 17
         Caption = 'Free Text'
       end
       object edtProductCode: TEdit
-        Left = 101
+        Left = 120
         Top = 48
         Width = 217
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 0
       end
       object edtProductType: TEdit
-        Left = 101
+        Left = 120
         Top = 128
         Width = 217
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 3
       end
       object edtSize: TEdit
-        Left = 101
+        Left = 120
         Top = 96
         Width = 161
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 1
       end
       object BitBtn1: TBitBtn
-        Left = 277
+        Left = 296
         Top = 95
         Width = 25
         Height = 23
@@ -314,7 +315,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         OnClick = BitBtn1Click
       end
       object BitBtn2: TBitBtn
-        Left = 325
+        Left = 344
         Top = 127
         Width = 25
         Height = 23
@@ -329,29 +330,29 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         OnClick = BitBtn2Click
       end
       object edtCustomer2: TEdit
-        Left = 101
+        Left = 120
         Top = 16
         Width = 305
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 5
       end
       object edtDescription: TEdit
-        Left = 101
+        Left = 119
         Top = 192
         Width = 252
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 6
         OnChange = edtDescriptionChange
       end
       object edtFreeText: TEdit
-        Left = 101
+        Left = 119
         Top = 216
         Width = 332
-        Height = 21
+        Height = 25
         TabOrder = 7
         OnChange = edtDescriptionChange
         OnKeyPress = edtFreeTextKeyPress
@@ -365,29 +366,29 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       object Label11: TLabel
         Left = 5
         Top = 20
-        Width = 95
-        Height = 13
+        Width = 109
+        Height = 17
         Caption = 'Selected Customer'
       end
       object Label12: TLabel
         Left = 5
         Top = 52
-        Width = 70
-        Height = 13
+        Width = 80
+        Height = 17
         Caption = 'Product Code'
       end
       object Label13: TLabel
         Left = 5
         Top = 84
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object edtCustomer3: TEdit
         Left = 101
         Top = 16
         Width = 305
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 0
@@ -396,7 +397,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         Left = 101
         Top = 48
         Width = 217
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 1
@@ -405,7 +406,7 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         Left = 101
         Top = 80
         Width = 340
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 2
@@ -425,14 +426,16 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
   object Panel1: TPanel
     Left = 0
     Top = 269
-    Width = 452
+    Width = 481
     Height = 43
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 260
+    ExplicitWidth = 446
     DesignSize = (
-      452
+      481
       43)
     object btnBack: TBitBtn
       Left = 208
@@ -486,8 +489,8 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
   end
   object dtsTemplate: TDataSource
     DataSet = qryTemplate
-    Left = 304
-    Top = 16
+    Left = 380
+    Top = 92
   end
   object qryAddLevels: TFDQuery
     ConnectionName = 'PB'
@@ -556,8 +559,8 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       ''
       ' '
       ' ')
-    Left = 120
-    Top = 16
+    Left = 174
+    Top = 108
     ParamData = <
       item
         Name = 'Part'
