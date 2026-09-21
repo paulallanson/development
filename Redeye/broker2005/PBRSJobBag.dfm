@@ -3,30 +3,30 @@ object frmPBRSJobBag: TfrmPBRSJobBag
   Top = 188
   BorderStyle = bsDialog
   Caption = 'Print Job Bag Details'
-  ClientHeight = 217
-  ClientWidth = 416
+  ClientHeight = 242
+  ClientWidth = 439
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
     Top = 0
-    Width = 416
-    Height = 217
+    Width = 439
+    Height = 242
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 412
-    ExplicitHeight = 207
+    ExplicitWidth = 410
+    ExplicitHeight = 208
     object CancelBitBtn: TBitBtn
       Left = 9
-      Top = 183
+      Top = 194
       Width = 75
       Height = 25
       Caption = '&Cancel'
@@ -42,7 +42,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     end
     object PreviewBitBtn: TBitBtn
       Left = 249
-      Top = 183
+      Top = 194
       Width = 75
       Height = 25
       Caption = 'Pre&view'
@@ -71,7 +71,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     end
     object PrintBitBtn: TBitBtn
       Left = 329
-      Top = 183
+      Top = 194
       Width = 75
       Height = 25
       Caption = '&Print'
@@ -101,7 +101,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     end
     object FaxBitBtn: TBitBtn
       Left = 89
-      Top = 183
+      Top = 194
       Width = 75
       Height = 25
       Caption = '&Fax'
@@ -130,7 +130,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     end
     object EmailBitBtn: TBitBtn
       Left = 168
-      Top = 183
+      Top = 194
       Width = 75
       Height = 25
       Caption = '&Email'
@@ -155,19 +155,19 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     object GroupBox1: TGroupBox
       Left = 8
       Top = 6
-      Width = 397
+      Width = 425
       Height = 172
       ParentBackground = False
       TabOrder = 5
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 40
-        Height = 13
+        Width = 47
+        Height = 17
         Caption = 'Job Bag'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -175,22 +175,22 @@ object frmPBRSJobBag: TfrmPBRSJobBag
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 67
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object Label3: TLabel
         Left = 8
         Top = 111
-        Width = 44
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Quantity'
       end
       object memSelection: TMemo
@@ -201,7 +201,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -241,7 +241,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
         Top = 3
         Width = 25
         Height = 105
-        ItemHeight = 13
+        ItemHeight = 17
         Sorted = True
         TabOrder = 3
         Visible = False
@@ -266,7 +266,7 @@ object frmPBRSJobBag: TfrmPBRSJobBag
       object rdgReportType: TRadioGroup
         Left = 241
         Top = 96
-        Width = 144
+        Width = 173
         Height = 67
         Caption = 'Report Type'
         ItemIndex = 0
@@ -287,8 +287,8 @@ object frmPBRSJobBag: TfrmPBRSJobBag
       'WHERE'
       '  (Works_Order_Number >= :From_Works_Order) and'
       '  (Works_Order_Number <= :To_Works_order)')
-    Left = 240
-    Top = 40
+    Left = 156
+    Top = 10
     ParamData = <
       item
         Name = 'From_Works_Order'
@@ -320,8 +320,8 @@ object frmPBRSJobBag: TfrmPBRSJobBag
       '        Address.Address = Quote.Address) ON'
       '        Int_Sel.Sel1 = Works_Order.Works_Order_number'
       'WHERE Int_Sel.Int_Sel_Code = :Int_Sel_Code')
-    Left = 168
-    Top = 42
+    Left = 154
+    Top = 77
     ParamData = <
       item
         Name = 'Int_Sel_Code'

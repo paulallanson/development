@@ -8,35 +8,35 @@ object STStkTkSelFrm: TSTStkTkSelFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 16
-    Width = 137
-    Height = 13
+    Width = 154
+    Height = 17
     Caption = 'Stock Count List Reference'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object StkTkListBox: TDBLookupListBox
     Left = 16
-    Top = 32
+    Top = 36
     Width = 209
-    Height = 199
+    Height = 191
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     KeyField = 'Stock_Take_Ref'
@@ -55,7 +55,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -86,7 +86,7 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -100,8 +100,8 @@ object STStkTkSelFrm: TSTStkTkSelFrm
       'Delete from Stock_Take'
       'where Stock_Take.Stock_Take_Ref = :Stock_Take_Ref'
       ' ')
-    Left = 264
-    Top = 120
+    Left = 162
+    Top = 86
     ParamData = <
       item
         Name = 'Stock_Take_Ref'

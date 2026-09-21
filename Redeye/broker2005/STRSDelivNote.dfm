@@ -3,12 +3,12 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Despatch Note Print'
-  ClientHeight = 208
+  ClientHeight = 224
   ClientWidth = 364
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,8 +17,8 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   OnDestroy = FormDestroy
   DesignSize = (
     364
-    208)
-  TextHeight = 13
+    224)
+  TextHeight = 17
   object OrderGroupBox: TGroupBox
     Left = 7
     Top = 8
@@ -27,7 +27,7 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
     Caption = 'Delivery Details for order: '
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -36,40 +36,40 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label2: TLabel
-      Left = 19
+      Left = 12
       Top = 48
-      Width = 60
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Order Date:'
     end
     object OrderDatelbl: TLabel
-      Left = 88
+      Left = 93
       Top = 48
-      Width = 67
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'OrderDatelbl'
     end
     object CustomerLbl: TLabel
-      Left = 88
+      Left = 93
       Top = 24
-      Width = 64
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
   end
   object GroupBox1: TGroupBox
-    Left = 7
+    Left = 8
     Top = 81
     Width = 346
     Height = 56
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -77,23 +77,23 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
     TabOrder = 1
     object Label4: TLabel
       Left = 9
-      Top = 26
-      Width = 67
-      Height = 13
+      Top = 21
+      Width = 77
+      Height = 17
       Caption = 'Delivery Date'
     end
     object DeliveryDateEdit: TEdit
-      Left = 88
+      Left = 91
       Top = 18
       Width = 105
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = DeliveryDateEditChange
       OnExit = DeliveryDateEditExit
     end
     object BitBtn2: TBitBtn
-      Left = 200
-      Top = 16
+      Left = 203
+      Top = 18
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -116,7 +116,7 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   end
   object CancelBitBtn: TBitBtn
     Left = 6
-    Top = 170
+    Top = 186
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -130,10 +130,11 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 161
   end
   object Previewbitbtn: TBitBtn
     Left = 94
-    Top = 170
+    Top = 186
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -160,10 +161,11 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
     ParentFont = False
     TabOrder = 3
     OnClick = PreviewbitbtnClick
+    ExplicitTop = 161
   end
   object PrintBitBtn: TBitBtn
     Left = 183
-    Top = 170
+    Top = 186
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -191,10 +193,11 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
     ParentFont = False
     TabOrder = 4
     OnClick = PrintBitBtnClick
+    ExplicitTop = 161
   end
   object SetupBitBtn: TBitBtn
     Left = 271
-    Top = 170
+    Top = 186
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -222,11 +225,12 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
     ParentFont = False
     TabOrder = 5
     OnClick = SetupBitBtnClick
+    ExplicitTop = 161
   end
   object chkbxPrintLogo: TCheckBox
     Left = 8
     Top = 143
-    Width = 127
+    Width = 196
     Height = 17
     Caption = 'Print Company Logo'
     TabOrder = 6

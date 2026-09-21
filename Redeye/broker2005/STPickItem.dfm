@@ -2,37 +2,37 @@ object STPickItemFrm: TSTPickItemFrm
   Left = 176
   Top = 129
   Caption = 'Change Picking Details'
-  ClientHeight = 271
-  ClientWidth = 452
+  ClientHeight = 280
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 24
     Top = 16
-    Width = 50
-    Height = 13
+    Width = 58
+    Height = 17
     Caption = 'Part Code'
   end
   object Label3: TLabel
     Left = 16
     Top = 43
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object SerialNoLbl: TLabel
-    Left = 22
+    Left = 13
     Top = 224
-    Width = 57
-    Height = 13
+    Width = 66
+    Height = 17
     Alignment = taRightJustify
     Caption = 'Serial No.'#39's'
     Visible = False
@@ -40,8 +40,8 @@ object STPickItemFrm: TSTPickItemFrm
   object Label2: TLabel
     Left = 24
     Top = 72
-    Width = 46
-    Height = 13
+    Width = 53
+    Height = 17
     Caption = 'Pack Size'
   end
   object SerialGrid: TStringGrid
@@ -102,7 +102,7 @@ object STPickItemFrm: TSTPickItemFrm
     Left = 96
     Top = 8
     Width = 201
-    Height = 21
+    Height = 25
     TabStop = False
     ReadOnly = True
     TabOrder = 4
@@ -112,7 +112,7 @@ object STPickItemFrm: TSTPickItemFrm
     Left = 96
     Top = 35
     Width = 305
-    Height = 21
+    Height = 25
     TabStop = False
     ReadOnly = True
     TabOrder = 5
@@ -128,15 +128,15 @@ object STPickItemFrm: TSTPickItemFrm
     object ABinLbl: TLabel
       Left = 48
       Top = 57
-      Width = 16
-      Height = 13
+      Width = 17
+      Height = 17
       Caption = 'Bin'
     end
     object Label5: TLabel
-      Left = 19
+      Left = 15
       Top = 25
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Alignment = taRightJustify
       Caption = 'Quantity'
       WordWrap = True
@@ -144,15 +144,15 @@ object STPickItemFrm: TSTPickItemFrm
     object ALotLbl: TLabel
       Left = 28
       Top = 88
-      Width = 37
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Lot No.'
     end
     object ABinEdit: TEdit
       Left = 72
       Top = 49
       Width = 105
-      Height = 21
+      Height = 25
       TabStop = False
       ReadOnly = True
       TabOrder = 0
@@ -162,7 +162,7 @@ object STPickItemFrm: TSTPickItemFrm
       Left = 72
       Top = 80
       Width = 105
-      Height = 21
+      Height = 25
       TabStop = False
       ReadOnly = True
       TabOrder = 1
@@ -171,7 +171,7 @@ object STPickItemFrm: TSTPickItemFrm
       Left = 72
       Top = 17
       Width = 105
-      Height = 21
+      Height = 25
       TabStop = False
       ReadOnly = True
       TabOrder = 2
@@ -190,15 +190,15 @@ object STPickItemFrm: TSTPickItemFrm
     object PBinLbl: TLabel
       Left = 48
       Top = 53
-      Width = 16
-      Height = 13
+      Width = 17
+      Height = 17
       Caption = 'Bin'
     end
     object Label6: TLabel
-      Left = 19
+      Left = 15
       Top = 21
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Alignment = taRightJustify
       Caption = 'Quantity'
       WordWrap = True
@@ -206,15 +206,15 @@ object STPickItemFrm: TSTPickItemFrm
     object PLotLbl: TLabel
       Left = 28
       Top = 84
-      Width = 37
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Lot No.'
     end
     object PBinEdit: TEdit
       Left = 72
       Top = 49
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
       OnExit = ABinEditExit
@@ -224,7 +224,7 @@ object STPickItemFrm: TSTPickItemFrm
       Left = 72
       Top = 80
       Width = 105
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 2
       OnKeyUp = PLotEditKeyUp
@@ -233,7 +233,7 @@ object STPickItemFrm: TSTPickItemFrm
       Left = 72
       Top = 17
       Width = 105
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnKeyPress = PQtyEditKeyPress
       OnKeyUp = PQtyEditKeyUp
@@ -258,7 +258,7 @@ object STPickItemFrm: TSTPickItemFrm
     Left = 96
     Top = 64
     Width = 73
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 7
   end

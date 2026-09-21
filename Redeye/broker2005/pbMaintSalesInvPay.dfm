@@ -3,20 +3,20 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
   Top = 132
   BorderStyle = bsDialog
   Caption = 'Invoice Payment Details'
-  ClientHeight = 401
+  ClientHeight = 422
   ClientWidth = 494
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object btnOK: TBitBtn
     Left = 165
-    Top = 369
+    Top = 387
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -45,7 +45,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
   end
   object btnCancel: TBitBtn
     Left = 253
-    Top = 369
+    Top = 387
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -63,15 +63,15 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     object Label5: TLabel
       Left = 267
       Top = 22
-      Width = 50
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'Total Paid'
     end
     object Label10: TLabel
       Left = 8
       Top = 22
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Paid Date'
     end
     object btnDate: TSpeedButton
@@ -99,7 +99,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 112
       Top = 18
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = edtDatePaidExit
@@ -138,43 +138,43 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label2: TLabel
       Left = 8
       Top = 56
-      Width = 54
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Invoice No'
     end
     object Label3: TLabel
       Left = 267
       Top = 56
-      Width = 63
-      Height = 13
+      Width = 71
+      Height = 17
       Caption = 'Invoice Date'
     end
     object Label4: TLabel
       Left = 267
       Top = 84
-      Width = 62
-      Height = 13
+      Width = 71
+      Height = 17
       Caption = 'Total Goods'
     end
     object Label6: TLabel
       Left = 8
       Top = 84
-      Width = 59
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Sales Order'
     end
     object edtCustomer: TEdit
       Left = 112
       Top = 24
       Width = 353
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -183,7 +183,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 112
       Top = 52
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 1
@@ -192,7 +192,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 344
       Top = 52
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 2
@@ -201,7 +201,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 344
       Top = 80
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 3
@@ -210,7 +210,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 112
       Top = 80
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 4
@@ -218,9 +218,9 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
   end
   object grpbxCreditCard: TGroupBox
     Left = 8
-    Top = 258
+    Top = 264
     Width = 481
-    Height = 105
+    Height = 116
     Caption = 'Credit Card Details'
     Enabled = False
     ParentBackground = False
@@ -228,36 +228,36 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     object Label7: TLabel
       Left = 10
       Top = 24
-      Width = 86
-      Height = 13
+      Width = 98
+      Height = 17
       Caption = 'Account Number'
     end
     object Label8: TLabel
       Left = 10
       Top = 52
-      Width = 74
-      Height = 13
+      Width = 85
+      Height = 17
       Caption = 'Account Name'
     end
     object Label9: TLabel
       Left = 10
       Top = 84
-      Width = 57
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Expiry Date'
     end
     object Label13: TLabel
       Left = 164
       Top = 84
-      Width = 4
-      Height = 13
+      Width = 5
+      Height = 17
       Caption = '/'
     end
     object cmbbxMonth: TComboBox
       Left = 112
       Top = 76
       Width = 49
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = enableOK
       Items.Strings = (
@@ -278,7 +278,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 112
       Top = 46
       Width = 249
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = enableOK
     end
@@ -286,7 +286,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 112
       Top = 18
       Width = 249
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = enableOK
     end
@@ -294,7 +294,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       Left = 176
       Top = 76
       Width = 69
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnChange = enableOK
       Items.Strings = (
@@ -310,7 +310,7 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     Left = 8
     Top = 173
     Width = 121
-    Height = 79
+    Height = 85
     Caption = 'Payment Type'
     Enabled = False
     ItemIndex = 0
@@ -471,8 +471,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
       'where Purchase_Order = :Purchase_Order and'
       'Line = :Line'
       'Order By Delivery_No')
-    Left = 152
-    Top = 224
+    Left = 190
+    Top = 286
     ParamData = <
       item
         Name = 'Purchase_Order'

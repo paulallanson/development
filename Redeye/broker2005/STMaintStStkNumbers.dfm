@@ -3,19 +3,19 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Enter number range'
-  ClientHeight = 156
-  ClientWidth = 365
+  ClientHeight = 173
+  ClientWidth = 370
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object lblDelete: TLabel
     Left = 32
     Top = 136
@@ -80,36 +80,36 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
     object Label1: TLabel
       Left = 32
       Top = 24
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'First Number'
     end
     object Label2: TLabel
       Left = 32
       Top = 56
-      Width = 64
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'Last Number'
     end
     object Label3: TLabel
       Left = 32
       Top = 88
-      Width = 104
-      Height = 13
+      Width = 116
+      Height = 17
       Caption = 'Total count in range'
     end
     object lblCount: TLabel
       Left = 152
       Top = 88
-      Width = 45
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'lblCount'
     end
     object edtFirst: TEdit
       Left = 128
       Top = 16
       Width = 217
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtFirstChange
       OnExit = edtFirstExit
@@ -118,7 +118,7 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
       Left = 128
       Top = 48
       Width = 217
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = edtLastChange
     end

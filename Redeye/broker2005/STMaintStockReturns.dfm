@@ -7,7 +7,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -17,7 +17,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 422
@@ -30,6 +30,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 848
   end
   object Panel2: TPanel
     Left = 0
@@ -39,27 +41,29 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 372
+    ExplicitWidth = 848
     DesignSize = (
       854
       41)
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 77
-      Height = 13
+      Width = 88
+      Height = 17
       Caption = 'Product Search'
     end
     object edtSearch: TEdit
-      Left = 96
+      Left = 112
       Top = 11
       Width = 209
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 770
+      Left = 764
       Top = 8
       Width = 75
       Height = 25
@@ -67,9 +71,10 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 758
     end
     object btnOK: TBitBtn
-      Left = 682
+      Left = 676
       Top = 8
       Width = 75
       Height = 25
@@ -97,9 +102,10 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
+      ExplicitLeft = 670
     end
     object PrintBitBtn: TBitBtn
-      Left = 560
+      Left = 554
       Top = 8
       Width = 75
       Height = 25
@@ -130,9 +136,10 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       ShowHint = True
       TabOrder = 3
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 548
     end
     object btnExcel: TBitBtn
-      Left = 466
+      Left = 460
       Top = 8
       Width = 75
       Height = 25
@@ -184,6 +191,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitLeft = 454
     end
   end
   object Panel3: TPanel
@@ -194,32 +202,33 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 848
     object Label1: TLabel
       Left = 16
       Top = 12
-      Width = 102
-      Height = 13
+      Width = 111
+      Height = 17
       Caption = 'Fulfillment Location'
     end
     object Label3: TLabel
-      Left = 640
+      Left = 633
       Top = 12
-      Width = 89
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'Transaction  Date'
     end
     object lblBinLocation: TLabel
-      Left = 352
+      Left = 366
       Top = 12
-      Width = 74
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Associated Bin'
     end
     object dblkpProductionLocation: TDBLookupComboBox
-      Left = 120
+      Left = 134
       Top = 8
       Width = 209
-      Height = 21
+      Height = 25
       KeyField = 'Production_Location'
       ListField = 'Production_Location_Name'
       TabOrder = 0
@@ -229,7 +238,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Left = 744
       Top = 8
       Width = 97
-      Height = 21
+      Height = 25
       Date = 39470.000000000000000000
       Time = 0.402405902779719300
       TabOrder = 1
@@ -251,6 +260,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
+    ExplicitWidth = 848
+    ExplicitHeight = 331
     ColWidths = (
       178
       201

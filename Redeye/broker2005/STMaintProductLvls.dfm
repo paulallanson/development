@@ -3,41 +3,41 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Maintain product store levels'
-  ClientHeight = 340
-  ClientWidth = 326
+  ClientHeight = 361
+  ClientWidth = 358
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label3: TLabel
     Left = 8
     Top = 44
-    Width = 52
-    Height = 13
+    Width = 60
+    Height = 17
     Caption = 'Store type'
   end
   object Label4: TLabel
     Left = 8
     Top = 12
-    Width = 40
-    Height = 13
+    Width = 45
+    Height = 17
     Caption = 'Product'
   end
   object lblDelete: TLabel
     Left = 8
-    Top = 320
-    Width = 133
-    Height = 13
+    Top = 327
+    Width = 160
+    Height = 17
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -51,30 +51,30 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     TabOrder = 2
     object Label2: TLabel
       Left = 32
-      Top = 64
-      Width = 49
-      Height = 13
+      Top = 62
+      Width = 57
+      Height = 17
       Caption = 'Maximum'
     end
     object Label1: TLabel
       Left = 32
-      Top = 32
-      Width = 48
-      Height = 13
+      Top = 30
+      Width = 54
+      Height = 17
       Caption = 'Minimum'
     end
     object ReplenLabel: TLabel
       Left = 32
       Top = 204
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Store'
     end
     object LblReordr: TLabel
       Left = 32
-      Top = 96
-      Width = 69
-      Height = 13
+      Top = 94
+      Width = 81
+      Height = 17
       Caption = 'Reorder Level'
     end
     object MaxMemo: TMemo
@@ -105,9 +105,9 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     end
     object rdgrpReplenishType: TRadioGroup
       Left = 32
-      Top = 128
-      Width = 121
-      Height = 57
+      Top = 125
+      Width = 128
+      Height = 65
       Caption = 'Replenishment by'
       Items.Strings = (
         'Purchase'
@@ -117,10 +117,10 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       TabStop = True
     end
     object dblkpReplenishStore: TDBLookupComboBox
-      Left = 64
+      Left = 70
       Top = 200
       Width = 201
-      Height = 21
+      Height = 25
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
       ListSource = dtsStores
@@ -142,7 +142,7 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
   end
   object btnOK: TBitBtn
     Left = 168
-    Top = 312
+    Top = 323
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -170,7 +170,7 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
   end
   object CancelBitBtn: TBitBtn
     Left = 248
-    Top = 312
+    Top = 323
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -178,19 +178,19 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     TabOrder = 4
   end
   object edtProductCode: TEdit
-    Left = 64
+    Left = 75
     Top = 8
     Width = 241
-    Height = 21
+    Height = 25
     TabStop = False
     Color = clBtnFace
     TabOrder = 0
   end
   object dblkpStoreType: TDBLookupComboBox
-    Left = 64
+    Left = 75
     Top = 40
     Width = 241
-    Height = 21
+    Height = 25
     KeyField = 'Part_Store_Type'
     ListField = 'Part_Store_Type_Name'
     ListSource = dtsStoreType
@@ -245,8 +245,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 60
+    Left = 270
+    Top = 67
     ParamData = <
       item
         Name = 'Minimum_Stock'
@@ -284,8 +284,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       ' '
       ' '
       ' ')
-    Left = 24
-    Top = 180
+    Left = 70
+    Top = 57
     ParamData = <
       item
         Name = 'Minimum_Stock'
@@ -320,8 +320,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       ''
       ' '
       ' ')
-    Left = 24
-    Top = 116
+    Left = 270
+    Top = 137
     ParamData = <
       item
         Name = 'Part'
@@ -338,8 +338,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       '                              from part_Store_levels'
       '                              where part = :Part)'
       ' ')
-    Left = 136
-    Top = 16
+    Left = 234
+    Top = 4
     ParamData = <
       item
         Name = 'Part'

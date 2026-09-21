@@ -4,25 +4,25 @@ object PBMaintProcessOpsFrm: TPBMaintProcessOpsFrm
   BorderStyle = bsSingle
   Caption = 'Maintain Process Operations'
   ClientHeight = 158
-  ClientWidth = 412
+  ClientWidth = 429
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 110
-    Top = 128
-    Width = 109
-    Height = 13
+    Top = 123
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,11 +30,11 @@ object PBMaintProcessOpsFrm: TPBMaintProcessOpsFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 7
-    Width = 393
+    Width = 413
     Height = 106
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,32 +43,32 @@ object PBMaintProcessOpsFrm: TPBMaintProcessOpsFrm
     object Label1: TLabel
       Left = 16
       Top = 52
-      Width = 53
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Operation'
     end
     object Label2: TLabel
       Left = 16
       Top = 20
-      Width = 38
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Process'
     end
     object TextEdit: TEdit
-      Left = 78
+      Left = 82
       Top = 48
       Width = 307
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'TextEdit'
       OnChange = TextEditChange
     end
     object PrdTypDescrEdit: TEdit
-      Left = 78
+      Left = 82
       Top = 16
       Width = 203
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clBtnFace
       MaxLength = 40
@@ -251,8 +251,8 @@ object PBMaintProcessOpsFrm: TPBMaintProcessOpsFrm
       'Select Operation'
       'From Process_Operation'
       'Where Operation_Description = :GUID')
-    Left = 304
-    Top = 24
+    Left = 292
+    Top = 14
     ParamData = <
       item
         Name = 'GUID'
@@ -339,7 +339,7 @@ object PBMaintProcessOpsFrm: TPBMaintProcessOpsFrm
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
-    Left = 272
-    Top = 24
+    Left = 260
+    Top = 22
   end
 end

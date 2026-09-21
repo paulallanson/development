@@ -3,24 +3,21 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   Top = 137
   BorderStyle = bsDialog
   Caption = 'Customer Quote Report'
-  ClientHeight = 276
-  ClientWidth = 595
+  ClientHeight = 324
+  ClientWidth = 635
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  DesignSize = (
-    595
-    276)
-  TextHeight = 13
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
-    Left = 509
-    Top = 246
+    Left = 525
+    Top = 278
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -42,8 +39,8 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 420
-    Top = 246
+    Left = 436
+    Top = 278
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -74,16 +71,16 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 52
-      Height = 13
+      Top = 5
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -105,7 +102,7 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 246
+    Top = 278
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -114,7 +111,7 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   end
   object GroupBox1: TGroupBox
     Left = 5
-    Top = 147
+    Top = 177
     Width = 180
     Height = 89
     Caption = 'Date Range'
@@ -123,22 +120,22 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'To: '
     end
     object edtDateFrom: TEdit
       Left = 48
       Top = 24
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtDateFromExit
     end
@@ -168,7 +165,7 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
       Left = 48
       Top = 56
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtDateToExit
     end
@@ -219,16 +216,16 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
     Visible = False
     object Label3: TLabel
       Left = 8
-      Top = 8
-      Width = 49
-      Height = 13
+      Top = 5
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtCustChange
     end
@@ -265,7 +262,7 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   object TotByRadioGroup: TRadioGroup
     Left = 480
     Top = 8
-    Width = 105
+    Width = 120
     Height = 81
     Caption = 'Report Totals'
     ItemIndex = 2
@@ -280,15 +277,15 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   object chkbxPageBreak: TCheckBox
     Left = 480
     Top = 99
-    Width = 118
+    Width = 137
     Height = 17
     Caption = 'Page break by total'
     Enabled = False
     TabOrder = 9
   end
   object pnlExportPrgrss: TPanel
-    Left = 172
-    Top = 100
+    Left = 185
+    Top = 110
     Width = 289
     Height = 61
     ParentBackground = False
@@ -297,8 +294,8 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -311,8 +308,8 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
     end
   end
   object OleContainer1: TOleContainer
-    Left = 320
-    Top = 72
+    Left = 236
+    Top = 71
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -321,11 +318,10 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
     Visible = False
   end
   object btnExcel: TBitBtn
-    Left = 316
-    Top = 246
+    Left = 339
+    Top = 278
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -376,8 +372,8 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   object rdgrpReportType: TRadioGroup
     Left = 480
     Top = 124
-    Width = 105
-    Height = 61
+    Width = 120
+    Height = 65
     Caption = 'Report type'
     ItemIndex = 0
     Items.Strings = (
@@ -388,7 +384,7 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   end
   object chkbxShowOnlyOut: TCheckBox
     Left = 328
-    Top = 208
+    Top = 238
     Width = 265
     Height = 17
     Caption = 'Show only live quotes'
@@ -396,7 +392,7 @@ object PBRSQuoteCustFrm: TPBRSQuoteCustFrm
   end
   object chkbxProduction: TCheckBox
     Left = 328
-    Top = 184
+    Top = 214
     Width = 265
     Height = 17
     Caption = 'Show only production charges'

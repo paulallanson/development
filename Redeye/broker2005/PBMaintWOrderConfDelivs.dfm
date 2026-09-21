@@ -4,33 +4,35 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
   BorderStyle = bsDialog
   Caption = 'Confirm Works Instruction Deliveries'
   ClientHeight = 520
-  ClientWidth = 615
+  ClientWidth = 648
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlControls: TPanel
     Left = 0
     Top = 480
-    Width = 615
+    Width = 648
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 471
+    ExplicitWidth = 609
     object lblDelete: TLabel
       Left = 112
       Top = 12
-      Width = 106
-      Height = 13
-      Caption = 'Delete these details?'
+      Width = 122
+      Height = 17
+      Caption = 'Delete these details'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -62,88 +64,92 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 615
+    Width = 648
     Height = 480
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 609
+    ExplicitHeight = 471
     object pnlDetails: TPanel
       Left = 1
-      Top = 88
-      Width = 613
+      Top = 81
+      Width = 646
       Height = 193
       Align = alTop
       Enabled = False
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 88
+      ExplicitWidth = 607
       object Label1: TLabel
         Left = 8
         Top = 45
-        Width = 38
-        Height = 13
+        Width = 43
+        Height = 17
         Caption = 'Courier'
       end
       object Label2: TLabel
         Left = 8
         Top = 74
-        Width = 35
-        Height = 13
+        Width = 41
+        Height = 17
         Caption = 'Service'
       end
       object Label3: TLabel
         Left = 8
         Top = 16
-        Width = 44
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Quantity'
       end
       object Label4: TLabel
         Left = 402
         Top = 16
-        Width = 75
-        Height = 13
+        Width = 85
+        Height = 17
         Caption = 'Despatch Date'
       end
       object Label7: TLabel
         Left = 8
         Top = 158
-        Width = 46
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Pack Size'
       end
       object Label8: TLabel
         Left = 400
         Top = 158
-        Width = 94
-        Height = 13
+        Width = 107
+        Height = 17
         Caption = 'Pack Weight (gms)'
       end
       object lblHandoverDate: TLabel
         Left = 402
         Top = 74
-        Width = 77
-        Height = 13
+        Width = 88
+        Height = 17
         Caption = 'Handover Date'
       end
       object Label14: TLabel
         Left = 8
         Top = 101
-        Width = 21
-        Height = 13
+        Width = 24
+        Height = 17
         Caption = 'Sort'
       end
       object Label15: TLabel
         Left = 8
         Top = 132
-        Width = 32
-        Height = 13
+        Width = 37
+        Height = 17
         Caption = 'Speed'
       end
       object edtCourier: TEdit
         Left = 104
         Top = 41
         Width = 249
-        Height = 21
+        Height = 25
         TabStop = False
         ReadOnly = True
         TabOrder = 3
@@ -170,23 +176,23 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 70
         Width = 193
-        Height = 21
+        Height = 25
         KeyField = 'Service_no'
         ListField = 'Service_Description'
         ListSource = dtmdlWOrders.dtsCourierService
         TabOrder = 5
       end
       object edtDateReq: TEdit
-        Left = 496
+        Left = 513
         Top = 12
         Width = 80
-        Height = 21
+        Height = 25
         MaxLength = 30
         TabOrder = 1
         OnExit = edtDateReqExit
       end
       object btnDateRequired: TBitBtn
-        Left = 587
+        Left = 604
         Top = 10
         Width = 25
         Height = 25
@@ -223,7 +229,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 154
         Width = 193
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 10
       end
@@ -246,7 +252,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         OnClick = btnPackageSizeClick
       end
       object memWeight: TMemo
-        Left = 496
+        Left = 513
         Top = 154
         Width = 81
         Height = 21
@@ -258,15 +264,15 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         OnExit = ValidateQty
       end
       object edtHandoverDate: TEdit
-        Left = 496
+        Left = 513
         Top = 70
         Width = 80
-        Height = 21
+        Height = 25
         MaxLength = 30
         TabOrder = 6
       end
       object btnHandoverDate: TBitBtn
-        Left = 587
+        Left = 604
         Top = 68
         Width = 25
         Height = 25
@@ -290,7 +296,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 97
         Width = 113
-        Height = 21
+        Height = 25
         KeyField = 'Courier_Sort'
         ListField = 'Sort_Description'
         ListSource = dtmdlWOrders.dtsCourierSort
@@ -300,7 +306,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 128
         Width = 113
-        Height = 21
+        Height = 25
         KeyField = 'Courier_Speed'
         ListField = 'Speed_Description'
         ListSource = dtmdlWOrders.dtsCourierSpeed
@@ -310,17 +316,18 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     object Panel1: TPanel
       Left = 1
       Top = 1
-      Width = 613
-      Height = 87
+      Width = 646
+      Height = 80
       Align = alTop
       Enabled = False
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 613
       object rdgrpAccountType: TRadioGroup
         Left = 8
-        Top = 10
-        Width = 113
-        Height = 65
+        Top = 3
+        Width = 126
+        Height = 72
         Caption = 'Payment Details'
         Items.Strings = (
           'Client Account'
@@ -330,41 +337,41 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         OnClick = rdgrpAccountTypeClick
       end
       object grpbxAccountDetails: TGroupBox
-        Left = 128
+        Left = 140
         Top = 10
-        Width = 369
+        Width = 409
         Height = 65
         Enabled = False
         ParentBackground = False
         TabOrder = 1
         object Label11: TLabel
           Left = 8
-          Top = 16
-          Width = 72
-          Height = 13
+          Top = 12
+          Width = 81
+          Height = 17
           Caption = 'Account Code'
         end
         object Label12: TLabel
           Left = 8
-          Top = 40
-          Width = 74
-          Height = 13
+          Top = 38
+          Width = 85
+          Height = 17
           Caption = 'Account Name'
         end
         object edtAccountCode: TEdit
-          Left = 84
-          Top = 12
+          Left = 99
+          Top = 9
           Width = 189
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 0
           OnChange = CheckOK
         end
         object edtAccountName: TEdit
-          Left = 84
-          Top = 38
+          Left = 99
+          Top = 35
           Width = 261
-          Height = 21
+          Height = 25
           MaxLength = 40
           TabOrder = 1
           OnChange = CheckOK
@@ -373,46 +380,49 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     end
     object pnlAddress: TPanel
       Left = 1
-      Top = 281
-      Width = 613
-      Height = 163
+      Top = 274
+      Width = 646
+      Height = 170
       Align = alClient
       Enabled = False
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 281
+      ExplicitWidth = 607
+      ExplicitHeight = 154
       object Label6: TLabel
         Left = 8
         Top = 36
-        Width = 41
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Address'
       end
       object Label9: TLabel
         Left = 8
         Top = 140
-        Width = 47
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Postcode'
       end
       object Label10: TLabel
         Left = 8
         Top = 114
-        Width = 51
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'City/Town'
       end
       object Label5: TLabel
         Left = 8
         Top = 12
-        Width = 72
-        Height = 13
+        Width = 85
+        Height = 17
         Caption = 'Delivery Name'
       end
       object edtBuilding: TEdit
         Left = 104
         Top = 32
         Width = 253
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 1
         OnChange = CheckOK
@@ -421,7 +431,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 58
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 2
       end
@@ -429,7 +439,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 84
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 3
       end
@@ -437,7 +447,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 110
         Width = 252
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 4
       end
@@ -445,7 +455,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 136
         Width = 105
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         MaxLength = 10
         TabOrder = 5
@@ -455,7 +465,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         Left = 104
         Top = 8
         Width = 253
-        Height = 21
+        Height = 25
         MaxLength = 40
         TabOrder = 0
         OnChange = CheckOK
@@ -464,30 +474,32 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
     object Panel3: TPanel
       Left = 1
       Top = 444
-      Width = 613
+      Width = 646
       Height = 35
       Align = alBottom
       ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 435
+      ExplicitWidth = 607
       object Label13: TLabel
         Left = 384
         Top = 10
-        Width = 110
-        Height = 13
+        Width = 124
+        Height = 17
         Caption = 'Actual Despatch Date'
       end
       object edtActualDate: TEdit
-        Left = 496
+        Left = 513
         Top = 6
         Width = 80
-        Height = 21
+        Height = 25
         MaxLength = 30
         TabOrder = 0
         OnExit = edtDateReqExit
       end
       object btnDateActual: TBitBtn
-        Left = 587
-        Top = 4
+        Left = 604
+        Top = 6
         Width = 25
         Height = 25
         Glyph.Data = {

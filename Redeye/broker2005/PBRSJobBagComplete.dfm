@@ -4,29 +4,29 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
   BorderStyle = bsDialog
   Caption = 'Job Bag Work in Progress Report'
   ClientHeight = 324
-  ClientWidth = 604
+  ClientWidth = 686
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    604
+    686
     324)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
-    Left = 462
-    Top = 11
-    Width = 93
-    Height = 13
+    Left = 491
+    Top = 6
+    Width = 106
+    Height = 17
     Caption = 'Delivery due after:'
   end
   object DateFromButton: TSpeedButton
-    Left = 571
-    Top = 22
+    Left = 600
+    Top = 24
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -46,8 +46,8 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     OnClick = DateFromButtonClick
   end
   object DateToButton: TSpeedButton
-    Left = 571
-    Top = 67
+    Left = 600
+    Top = 70
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -67,14 +67,14 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     OnClick = DateToButtonClick
   end
   object Label2: TLabel
-    Left = 462
-    Top = 56
-    Width = 103
-    Height = 13
+    Left = 491
+    Top = 51
+    Width = 118
+    Height = 17
     Caption = 'Delivery due before:'
   end
   object OleContainer1: TOleContainer
-    Left = 364
+    Left = 393
     Top = 132
     Width = 98
     Height = 53
@@ -84,7 +84,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 136
+    Left = 165
     Top = 80
     Width = 289
     Height = 61
@@ -94,8 +94,8 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -108,19 +108,19 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     end
   end
   object DateFromEdit: TEdit
-    Left = 462
+    Left = 491
     Top = 24
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 0
     OnExit = DateFromEditExit
   end
   object DateToEdit: TEdit
-    Left = 462
-    Top = 69
+    Left = 491
+    Top = 70
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 1
     OnExit = DateToEditExit
@@ -128,7 +128,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
   object rgAccManager: TRadioGroup
     Left = 8
     Top = 17
-    Width = 145
+    Width = 176
     Height = 60
     Caption = ' By Account Manager'
     ItemIndex = 0
@@ -140,24 +140,24 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     OnClick = rgAccManagerClick
   end
   object pnlAccManager: TPanel
-    Left = 161
+    Left = 190
     Top = 20
     Width = 281
     Height = 57
     ParentBackground = False
     TabOrder = 3
     object lblSupplier: TLabel
-      Left = 8
-      Top = 4
-      Width = 91
-      Height = 13
+      Left = 9
+      Top = 3
+      Width = 103
+      Height = 17
       Caption = 'Account Manager'
     end
     object edtAccountManager: TEdit
       Left = 8
       Top = 20
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -179,8 +179,8 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
   end
   object rgCustomer: TRadioGroup
     Left = 8
-    Top = 103
-    Width = 145
+    Top = 104
+    Width = 176
     Height = 60
     Caption = ' By Customer '
     ItemIndex = 0
@@ -192,8 +192,8 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     OnClick = rgCustomerClick
   end
   object pnlCustomer: TPanel
-    Left = 162
-    Top = 105
+    Left = 191
+    Top = 106
     Width = 281
     Height = 57
     ParentBackground = False
@@ -201,15 +201,15 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     object lblCustomer: TLabel
       Left = 8
       Top = 3
-      Width = 88
-      Height = 13
+      Width = 100
+      Height = 17
       Caption = 'Customer/Branch'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 19
       Width = 233
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -239,9 +239,10 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 6
+    ExplicitTop = 269
   end
   object btnExcel: TBitBtn
-    Left = 341
+    Left = 400
     Top = 278
     Width = 75
     Height = 25
@@ -294,7 +295,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     OnClick = btnExcelClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 432
+    Left = 491
     Top = 278
     Width = 75
     Height = 25
@@ -318,7 +319,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 520
+    Left = 579
     Top = 278
     Width = 75
     Height = 25
@@ -342,9 +343,9 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     OnClick = PrintBitBtnClick
   end
   object rdgrpTotals: TRadioGroup
-    Left = 462
+    Left = 491
     Top = 100
-    Width = 136
+    Width = 163
     Height = 85
     Caption = 'Report Totals'
     ItemIndex = 2
@@ -358,7 +359,7 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
   object rdgrpShowJobs: TRadioGroup
     Left = 8
     Top = 176
-    Width = 145
+    Width = 176
     Height = 85
     Caption = 'Show Jobs:  '
     ItemIndex = 2

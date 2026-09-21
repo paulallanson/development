@@ -7,13 +7,13 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlGrid: TPanel
     Left = 0
     Top = 0
@@ -22,6 +22,8 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 683
+    ExplicitHeight = 269
     object dbgrdPurchases: TDBGrid
       Left = 1
       Top = 33
@@ -31,7 +33,7 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -39,7 +41,7 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -159,25 +161,26 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 681
       object lblPartDesc: TLabel
         Left = 176
         Top = 8
-        Width = 57
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'lblPartDesc'
       end
       object lblPartCode: TLabel
         Left = 64
         Top = 8
-        Width = 60
-        Height = 13
+        Width = 68
+        Height = 17
         Caption = 'lblPartCode'
       end
       object lblPart: TLabel
         Left = 8
         Top = 8
-        Width = 43
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Product:'
       end
     end
@@ -190,6 +193,8 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 269
+    ExplicitWidth = 683
     DesignSize = (
       689
       41)
@@ -202,6 +207,7 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 578
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
@@ -213,7 +219,7 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
       end
     end
     object btnExcel: TBitBtn
-      Left = 450
+      Left = 444
       Top = 8
       Width = 75
       Height = 25
@@ -265,6 +271,7 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
+      ExplicitLeft = 438
     end
   end
 end

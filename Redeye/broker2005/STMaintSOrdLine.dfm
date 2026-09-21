@@ -3,31 +3,33 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
   Top = 109
   BorderStyle = bsDialog
   Caption = 'Maintain Sales Order Line'
-  ClientHeight = 367
+  ClientHeight = 388
   ClientWidth = 713
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlFunctions: TPanel
     Left = 0
-    Top = 316
+    Top = 337
     Width = 713
     Height = 51
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     TabStop = True
+    ExplicitTop = 307
+    ExplicitWidth = 707
     DesignSize = (
       713
       51)
     object DelLabel: TLabel
-      Left = 377
+      Left = 371
       Top = 28
       Width = 145
       Height = 15
@@ -42,7 +44,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       ExplicitLeft = 401
     end
     object OKBtn: TBitBtn
-      Left = 537
+      Left = 531
       Top = 18
       Width = 75
       Height = 25
@@ -76,9 +78,10 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       ParentFont = False
       TabOrder = 0
       OnClick = OKBtnClick
+      ExplicitLeft = 525
     end
     object CancelBtn: TBitBtn
-      Left = 617
+      Left = 611
       Top = 18
       Width = 75
       Height = 25
@@ -92,6 +95,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
+      ExplicitLeft = 605
     end
   end
   object pnlproduct: TPanel
@@ -102,6 +106,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 707
     object Label1: TLabel
       Left = 5
       Top = 23
@@ -118,15 +123,15 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     object lblSource: TLabel
       Left = 5
       Top = 48
-      Width = 92
-      Height = 13
+      Width = 103
+      Height = 17
       Caption = 'Replenish Source:'
     end
     object lblReplenishName: TLabel
       Left = 112
       Top = 48
-      Width = 93
-      Height = 13
+      Width = 105
+      Height = 17
       Caption = 'lblReplenishName'
     end
     object PartEdit: TEdit
@@ -190,12 +195,13 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     Left = 202
     Top = 73
     Width = 511
-    Height = 243
+    Height = 264
     Align = alRight
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
     TabStop = True
+    ExplicitHeight = 255
     object GroupBox2: TGroupBox
       Left = 0
       Top = 4
@@ -206,30 +212,30 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       TabOrder = 0
       object Label2: TLabel
         Left = 8
-        Top = 29
-        Width = 92
-        Height = 13
+        Top = 26
+        Width = 106
+        Height = 17
         Caption = 'Purchase Pack Qty'
       end
       object Label6: TLabel
         Left = 8
-        Top = 57
-        Width = 73
-        Height = 13
+        Top = 54
+        Width = 84
+        Height = 17
         Caption = 'Purchase Price'
       end
       object Label3: TLabel
         Left = 8
-        Top = 86
-        Width = 58
-        Height = 13
+        Top = 83
+        Width = 65
+        Height = 17
         Caption = 'Discount %'
       end
       object Label8: TLabel
         Left = 8
-        Top = 114
-        Width = 85
-        Height = 13
+        Top = 111
+        Width = 95
+        Height = 17
         Caption = 'Discounted Cost'
       end
       object PurchPackMemo: TMemo
@@ -316,26 +322,26 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label7: TLabel
         Left = 10
         Top = 26
-        Width = 64
-        Height = 13
+        Width = 74
+        Height = 17
         Caption = 'Sell Pack Qty'
       end
       object Label4: TLabel
         Left = 10
         Top = 54
-        Width = 91
-        Height = 13
+        Width = 106
+        Height = 17
         Caption = 'Sell Price per Pack'
       end
       object Label5: TLabel
         Left = 10
         Top = 80
-        Width = 72
-        Height = 13
+        Width = 81
+        Height = 17
         Caption = 'Discount Type'
       end
       object btnClear: TSpeedButton
-        Left = 266
+        Left = 271
         Top = 75
         Width = 23
         Height = 22
@@ -361,8 +367,8 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object lblDiscount: TLabel
         Left = 10
         Top = 109
-        Width = 58
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Discount %'
       end
       object PBinLbl: TLabel
@@ -381,8 +387,8 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label9: TLabel
         Left = 10
         Top = 164
-        Width = 90
-        Height = 13
+        Width = 101
+        Height = 17
         Caption = 'Quantity (Singles)'
       end
       object OrdqtyLbl: TLabel
@@ -401,13 +407,13 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object lblOvers: TLabel
         Left = 10
         Top = 220
-        Width = 75
-        Height = 13
+        Width = 87
+        Height = 17
         Caption = 'Overs (Singles)'
         Visible = False
       end
       object PackSizeMemo: TMemo
-        Left = 118
+        Left = 123
         Top = 21
         Width = 75
         Height = 21
@@ -425,7 +431,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         OnKeyPress = QtyEditKeyPress
       end
       object SellPriceMemo: TMemo
-        Left = 118
+        Left = 123
         Top = 49
         Width = 75
         Height = 21
@@ -443,10 +449,10 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         WantReturns = False
       end
       object dbLkpDiscountType: TDBLookupComboBox
-        Left = 118
+        Left = 123
         Top = 76
         Width = 139
-        Height = 21
+        Height = 25
         KeyField = 'Discount_type'
         ListField = 'Description'
         ListSource = STSalesOrdDM.GetDiscTypeSRC
@@ -454,7 +460,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         OnClick = dbLkpDiscountTypeClick
       end
       object DiscountMemo: TMemo
-        Left = 118
+        Left = 123
         Top = 104
         Width = 75
         Height = 21
@@ -473,7 +479,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         OnKeyPress = CheckKeyIsNumber
       end
       object DiscPriceMemo: TMemo
-        Left = 118
+        Left = 123
         Top = 130
         Width = 75
         Height = 21
@@ -492,10 +498,10 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         OnKeyPress = CheckKeyIsNumber
       end
       object QtySinglesMemo: TEdit
-        Left = 118
+        Left = 123
         Top = 160
         Width = 75
-        Height = 21
+        Height = 25
         TabOrder = 5
         OnChange = QtySinglesMemoChange
         OnEnter = QtySinglesMemoEnter
@@ -503,10 +509,10 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         OnKeyPress = QtyEditKeyPress
       end
       object QtyEdit: TEdit
-        Left = 118
+        Left = 123
         Top = 189
         Width = 75
-        Height = 21
+        Height = 25
         TabOrder = 6
         OnChange = QtyEditChange
         OnEnter = QtyEditEnter
@@ -514,10 +520,10 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         OnKeyPress = QtyEditKeyPress
       end
       object QtyOversMemo: TEdit
-        Left = 118
+        Left = 123
         Top = 216
         Width = 75
-        Height = 21
+        Height = 25
         TabOrder = 7
         Visible = False
         OnChange = QtyOversMemoChange
@@ -537,8 +543,8 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label15: TLabel
         Left = 8
         Top = 24
-        Width = 81
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Total Free Stock'
       end
       object memTotalStock: TMemo
@@ -565,11 +571,13 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     Left = 0
     Top = 73
     Width = 202
-    Height = 243
+    Height = 264
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 196
+    ExplicitHeight = 234
     object GroupBox1: TGroupBox
       Left = 8
       Top = 4
@@ -581,57 +589,57 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       object Label10: TLabel
         Left = 8
         Top = 26
-        Width = 94
-        Height = 13
+        Width = 103
+        Height = 17
         Caption = 'In this Warehouse'
       end
       object Label11: TLabel
         Left = 8
         Top = 53
-        Width = 48
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Allocated'
       end
       object Label12: TLabel
         Left = 8
         Top = 81
-        Width = 53
-        Height = 13
+        Width = 60
+        Height = 17
         Caption = 'Free Stock'
       end
       object Label13: TLabel
         Left = 8
         Top = 109
-        Width = 42
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Paid For'
       end
       object Label14: TLabel
         Left = 8
         Top = 137
-        Width = 38
-        Height = 13
+        Width = 42
+        Height = 17
         Caption = 'Unpaid'
       end
       object Label16: TLabel
         Left = 8
         Top = 165
-        Width = 48
-        Height = 13
+        Width = 54
+        Height = 17
         Caption = 'Minimum'
       end
       object Label17: TLabel
         Left = 8
         Top = 193
-        Width = 49
-        Height = 13
+        Width = 57
+        Height = 17
         Caption = 'Maximum'
       end
       object Label18: TLabel
         Left = 8
         Top = 221
-        Width = 69
-        Height = 13
+        Width = 81
+        Height = 17
         Caption = 'Reorder Level'
       end
       object meminWhouse: TMemo

@@ -8,31 +8,31 @@ object PBMntPrtBinUpdFrm: TPBMntPrtBinUpdFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 45
-    Height = 13
+    Width = 51
+    Height = 17
     Caption = 'Bin From'
   end
   object Label2: TLabel
     Left = 8
     Top = 40
-    Width = 31
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Bin To'
   end
   object BinFromEdit: TEdit
     Left = 88
     Top = 8
     Width = 121
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 0
     OnChange = BinFromEditChange
@@ -41,7 +41,7 @@ object PBMntPrtBinUpdFrm: TPBMntPrtBinUpdFrm
     Left = 88
     Top = 40
     Width = 121
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 1
     OnChange = BinToEditChange

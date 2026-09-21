@@ -7,14 +7,14 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlFooter: TPanel
     Left = 0
     Top = 379
@@ -23,17 +23,19 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Align = alBottom
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 370
+    ExplicitWidth = 762
     DesignSize = (
       768
       36)
     object btnConfirm: TBitBtn
-      Left = 593
+      Left = 587
       Top = 6
       Width = 76
       Height = 25
@@ -107,9 +109,10 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnConfirmClick
+      ExplicitLeft = 581
     end
     object CancelBitBtn: TBitBtn
-      Left = 681
+      Left = 675
       Top = 6
       Width = 76
       Height = 25
@@ -183,11 +186,12 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 669
     end
     object chkbxDoNotInvc: TCheckBox
       Left = 8
       Top = 9
-      Width = 97
+      Width = 148
       Height = 17
       Caption = 'Do Not Invoice'
       TabOrder = 2
@@ -200,6 +204,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Width = 768
     Height = 19
     Panels = <>
+    ExplicitTop = 406
+    ExplicitWidth = 762
   end
   object Panel1: TPanel
     Left = 0
@@ -210,86 +216,87 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Enabled = False
     ParentBackground = False
     TabOrder = 2
+    ExplicitLeft = -1
     DesignSize = (
       768
       65)
     object Label5: TLabel
       Left = 8
       Top = 12
-      Width = 51
-      Height = 13
+      Width = 60
+      Height = 17
       Caption = 'Order No.'
     end
     object OrdNoLabel: TLabel
-      Left = 64
+      Left = 74
       Top = 12
-      Width = 71
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'order number'
     end
     object Label2: TLabel
-      Left = 152
+      Left = 166
       Top = 12
-      Width = 57
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Order Date'
     end
     object Label8: TLabel
-      Left = 328
+      Left = 342
       Top = 12
-      Width = 74
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Required Date'
     end
     object Label9: TLabel
-      Left = 568
+      Left = 564
       Top = 12
-      Width = 66
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'Account Mgr'
     end
     object Label19: TLabel
-      Left = 568
+      Left = 558
       Top = 38
-      Width = 71
-      Height = 13
+      Width = 81
+      Height = 17
       Caption = 'Account Team'
     end
     object Label1: TLabel
       Left = 8
       Top = 38
-      Width = 40
-      Height = 13
+      Width = 47
+      Height = 17
       Caption = 'Job Bag'
     end
     object lblJobBagNumber: TLabel
-      Left = 64
+      Left = 74
       Top = 38
-      Width = 71
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'order number'
     end
     object DateEdit: TEdit
-      Left = 224
+      Left = 239
       Top = 8
       Width = 81
-      Height = 21
+      Height = 25
       MaxLength = 30
       TabOrder = 0
     end
     object DtReqEdit: TEdit
-      Left = 408
+      Left = 435
       Top = 8
       Width = 81
-      Height = 21
+      Height = 25
       MaxLength = 30
       TabOrder = 1
     end
     object edtAccountManager: TEdit
-      Left = 639
+      Left = 642
       Top = 8
       Width = 115
-      Height = 21
+      Height = 25
       TabStop = False
       Anchors = [akTop, akRight]
       Color = clWhite
@@ -297,10 +304,10 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       TabOrder = 2
     end
     object edtAccountTeam: TEdit
-      Left = 639
+      Left = 642
       Top = 34
       Width = 115
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       Color = clWhite
       ReadOnly = True
@@ -316,64 +323,64 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
+    ExplicitWidth = 762
     DesignSize = (
       768
       120)
     object Label3: TLabel
       Left = 8
       Top = 14
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object Label6: TLabel
       Left = 8
-      Top = 42
-      Width = 40
-      Height = 13
+      Top = 37
+      Width = 44
+      Height = 17
       Caption = 'Contact'
     end
     object Label11: TLabel
-      Left = 400
+      Left = 416
       Top = 14
-      Width = 54
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Delivery to'
     end
     object Label13: TLabel
       Left = 8
       Top = 66
-      Width = 20
-      Height = 13
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object Label4: TLabel
       Left = 8
       Top = 94
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Cust Ref'
     end
     object Label14: TLabel
-      Left = 394
-      Top = 43
-      Width = 80
-      Height = 13
+      Left = 388
+      Top = 41
+      Width = 90
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Replenish From'
-      ExplicitLeft = 400
     end
     object CustNameEdit: TEdit
       Left = 78
       Top = 6
       Width = 257
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clWhite
       MaxLength = 30
@@ -384,7 +391,7 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Left = 78
       Top = 34
       Width = 257
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clWhite
       MaxLength = 40
@@ -395,14 +402,14 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Left = 78
       Top = 90
       Width = 227
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object DeliveryEdit: TEdit
       Left = 486
       Top = 6
       Width = 257
-      Height = 21
+      Height = 25
       TabStop = False
       Color = clWhite
       MaxLength = 30
@@ -410,10 +417,10 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       TabOrder = 3
     end
     object StoreComboBox: TDBLookupComboBox
-      Left = 480
-      Top = 39
+      Left = 486
+      Top = 37
       Width = 222
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
@@ -422,9 +429,9 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     end
     object dbLkpCmbRep: TDBLookupComboBox
       Left = 78
-      Top = 59
+      Top = 63
       Width = 227
-      Height = 21
+      Height = 25
       KeyField = 'Rep'
       ListField = 'Name'
       ListSource = STSalesOrdDM.RepSRC
@@ -442,13 +449,15 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     RowCount = 10
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
     ParentFont = False
     TabOrder = 4
     OnDblClick = sgLinesDblClick
+    ExplicitWidth = 762
+    ExplicitHeight = 185
     ColWidths = (
       38
       159

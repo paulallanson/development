@@ -7,14 +7,14 @@ object STLUPartStockFrm: TSTLUPartStockFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -23,18 +23,19 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1144
     object Label2: TLabel
       Left = 8
-      Top = 16
-      Width = 62
-      Height = 13
+      Top = 11
+      Width = 68
+      Height = 17
       Caption = 'Warehouse:'
     end
     object lblWarehouse: TLabel
       Left = 88
-      Top = 16
-      Width = 72
-      Height = 13
+      Top = 11
+      Width = 79
+      Height = 17
       Caption = 'lblWarehouse'
     end
   end
@@ -46,27 +47,29 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 418
+    ExplicitWidth = 1144
     DesignSize = (
       1150
       46)
     object Label1: TLabel
       Left = 8
-      Top = 18
-      Width = 70
-      Height = 13
+      Top = 14
+      Width = 80
+      Height = 17
       Caption = 'Product Code'
     end
     object edtSearch: TEdit
-      Left = 88
-      Top = 14
+      Left = 98
+      Top = 11
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 1060
+      Left = 1054
       Top = 12
       Width = 75
       Height = 25
@@ -75,9 +78,10 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
+      ExplicitLeft = 1048
     end
     object btnSelect: TBitBtn
-      Left = 970
+      Left = 964
       Top = 12
       Width = 75
       Height = 25
@@ -144,6 +148,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 958
     end
   end
   object dbgDetails: TDBGrid
@@ -156,7 +161,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -164,7 +169,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -245,6 +250,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       item
         Width = 50
       end>
+    ExplicitTop = 464
+    ExplicitWidth = 1144
   end
   object dtsStock: TDataSource
     DataSet = qryStock

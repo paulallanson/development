@@ -3,12 +3,12 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Category Turnover report'
-  ClientHeight = 229
-  ClientWidth = 410
+  ClientHeight = 255
+  ClientWidth = 457
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,27 +16,27 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
   OnClose = FormClose
   OnCreate = FormCreate
   DesignSize = (
-    410
-    229)
-  TextHeight = 13
+    457
+    255)
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 60
-    Height = 13
+    Width = 69
+    Height = 17
     Caption = 'Start Period'
   end
   object Label2: TLabel
     Left = 8
     Top = 52
-    Width = 70
-    Height = 13
+    Width = 82
+    Height = 17
     Caption = 'No of Periods'
   end
   object rdgrpReportType: TRadioGroup
     Left = 288
     Top = 11
-    Width = 119
+    Width = 137
     Height = 64
     Caption = ' Report by '
     ItemIndex = 0
@@ -82,15 +82,15 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 46
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Category'
     end
     object edtRevenueLoc: TEdit
       Left = 8
       Top = 24
       Width = 209
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -111,8 +111,8 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     end
   end
   object CancelBitBtn: TBitBtn
-    Left = 323
-    Top = 189
+    Left = 364
+    Top = 215
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -120,10 +120,12 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitLeft = 311
+    ExplicitTop = 180
   end
   object PreviewBitBtn: TBitBtn
     Left = 12
-    Top = 188
+    Top = 214
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -145,10 +147,11 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 179
   end
   object PrintBitBtn: TBitBtn
     Left = 97
-    Top = 188
+    Top = 214
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -170,12 +173,13 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = PrintBitBtnClick
+    ExplicitTop = 179
   end
   object dblkpPeriod: TDBLookupComboBox
     Left = 112
     Top = 16
     Width = 153
-    Height = 21
+    Height = 25
     KeyField = 'Period'
     ListField = 'Description'
     ListSource = dtsPeriod
@@ -185,7 +189,7 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     Left = 112
     Top = 48
     Width = 65
-    Height = 22
+    Height = 27
     MaxValue = 12
     MinValue = 1
     TabOrder = 6
@@ -193,7 +197,7 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
   end
   object btnExcel: TBitBtn
     Left = 178
-    Top = 189
+    Top = 215
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -244,10 +248,11 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
+    ExplicitTop = 180
   end
   object pnlExportPrgrss: TPanel
-    Left = 67
-    Top = 75
+    Left = 97
+    Top = 81
     Width = 289
     Height = 61
     ParentBackground = False
@@ -255,9 +260,9 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
     Visible = False
     object lblExporting: TLabel
       Left = 16
-      Top = 12
-      Width = 59
-      Height = 13
+      Top = 9
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -280,7 +285,7 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
   object chkbxShowRep: TCheckBox
     Left = 293
     Top = 168
-    Width = 108
+    Width = 146
     Height = 17
     Caption = 'Show current Rep'
     TabOrder = 12
@@ -293,8 +298,8 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
       'from Period'
       'where Financial_Year = :Financial_Year'
       'order by Period')
-    Left = 296
-    Top = 72
+    Left = 370
+    Top = 98
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -306,12 +311,12 @@ object PBRSPEndCatPerformfrm: TPBRSPEndCatPerformfrm
       'select *'
       'from Period'
       'order by period desc')
-    Left = 184
-    Top = 16
+    Left = 246
+    Top = 52
   end
   object dtsPeriod: TDataSource
     DataSet = qryPeriod
-    Left = 232
-    Top = 16
+    Left = 242
+    Top = 140
   end
 end

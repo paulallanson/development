@@ -7,11 +7,11 @@ object STNegStkSlfrm: TSTNegStkSlfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
     Left = 184
     Top = 120
@@ -20,7 +20,7 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Caption = '&Print'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -49,7 +49,7 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Caption = 'Pre&view'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -78,7 +78,7 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Caption = '&Cancel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -94,7 +94,7 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Caption = 'Seq. By:'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0

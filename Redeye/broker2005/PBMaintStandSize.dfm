@@ -7,21 +7,21 @@ object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
     Top = 208
-    Width = 109
-    Height = 13
-    Caption = 'Delete these details ?'
+    Width = 122
+    Height = 17
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,7 +34,7 @@ object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,58 +43,58 @@ object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 15
       Top = 89
-      Width = 32
-      Height = 13
+      Width = 34
+      Height = 17
       Caption = 'Width'
     end
     object Label3: TLabel
       Left = 15
       Top = 116
-      Width = 32
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Depth'
     end
     object Label4: TLabel
       Left = 191
       Top = 89
-      Width = 18
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'mm'
     end
     object Label5: TLabel
       Left = 191
       Top = 116
-      Width = 18
-      Height = 13
+      Width = 22
+      Height = 17
       Caption = 'mm'
     end
     object Label6: TLabel
       Left = 16
       Top = 45
-      Width = 59
-      Height = 26
+      Width = 66
+      Height = 34
       Caption = 'Short Description'
       WordWrap = True
     end
     object Label7: TLabel
       Left = 16
       Top = 153
-      Width = 66
-      Height = 13
+      Width = 74
+      Height = 17
       Caption = 'A4 Multiplier'
     end
     object DescrEdit: TEdit
       Left = 94
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -127,7 +127,7 @@ object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
       Left = 94
       Top = 48
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 1
       Text = 'edtShort'
     end
@@ -146,7 +146,7 @@ object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
   end
   object OKBitBtn: TBitBtn
     Left = 256
-    Top = 200
+    Top = 205
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -222,7 +222,7 @@ object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 336
-    Top = 200
+    Top = 205
     Width = 75
     Height = 25
     Cancel = True

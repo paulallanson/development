@@ -1,33 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Purchase Order Add Additional Details form.
-
-VSS Info:
-$Header: /PBL D5/PBPOAddDtls.pas 2     14/02/:0 17:14 Paul $
-$History: PBPOAddDtls.pas $
- * 
- * *****************  Version 2  *****************
- * User: Paul         Date: 14/02/:0   Time: 17:14
- * Updated in $/PBL D5
- * Changed to allow the selection of Special Instructions from a lookup
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:42
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
- *
- * *****************  Version 1  *****************
- * User: Roddym       Date: 3/12/99    Time: 10:35
- * Created in $/PBL V5
- * New purchase order objects and database tables.
-
-*******************************************************************************)
 unit PBPOAddDtls;
 
 interface

@@ -8,7 +8,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -17,7 +17,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
@@ -26,28 +26,29 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 665
     object Label3: TLabel
       Left = 16
       Top = 7
-      Width = 23
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Rep:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label4: TLabel
       Left = 16
-      Top = 31
-      Width = 74
-      Height = 13
+      Top = 37
+      Width = 90
+      Height = 17
       Caption = 'Financial Year:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -55,25 +56,25 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     object lblRepName: TLabel
       Left = 112
       Top = 7
-      Width = 64
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'lblRepName'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblFinancialYear: TLabel
       Left = 112
-      Top = 31
-      Width = 81
-      Height = 13
+      Top = 37
+      Width = 97
+      Height = 17
       Caption = 'lblFinancialYear'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -89,15 +90,15 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 16
-        Width = 52
-        Height = 13
+        Width = 62
+        Height = 17
         Caption = 'Rep Name'
       end
       object edtRep: TEdit
         Left = 8
         Top = 32
         Width = 196
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -126,6 +127,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 460
     object OKBitBtn: TBitBtn
       Left = 254
       Top = 7
@@ -152,7 +154,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Left = 0
     Top = 70
     Width = 671
-    Height = 85
+    Height = 99
     Align = alTop
     ParentBackground = False
     TabOrder = 2
@@ -165,14 +167,14 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       TabOrder = 0
       object lblBonus: TLabel
         Left = 8
-        Top = 16
-        Width = 44
-        Height = 13
+        Top = 12
+        Width = 50
+        Height = 17
         Caption = 'Bonus %'
       end
       object memBonus: TMemo
         Left = 112
-        Top = 13
+        Top = 9
         Width = 81
         Height = 21
         Alignment = taRightJustify
@@ -181,10 +183,10 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       end
     end
     object rdgrpBonus: TRadioGroup
-      Left = 192
+      Left = 179
       Top = 1
       Width = 113
-      Height = 77
+      Height = 92
       Caption = 'Bonus Period'
       ItemIndex = 0
       Items.Strings = (
@@ -195,10 +197,10 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       TabOrder = 1
     end
     object rdgrpBonusType: TRadioGroup
-      Left = 312
+      Left = 302
       Top = 1
-      Width = 121
-      Height = 64
+      Width = 132
+      Height = 72
       Caption = 'Bonus Type'
       ItemIndex = 0
       Items.Strings = (
@@ -217,14 +219,14 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       TabOrder = 3
       object Label1: TLabel
         Left = 8
-        Top = 16
-        Width = 100
-        Height = 13
+        Top = 12
+        Width = 116
+        Height = 17
         Caption = 'Commission Rate %'
       end
       object memCommission: TMemo
         Left = 112
-        Top = 11
+        Top = 10
         Width = 81
         Height = 21
         Alignment = taRightJustify
@@ -235,8 +237,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     object rdgrpCommType: TRadioGroup
       Left = 8
       Top = 1
-      Width = 177
-      Height = 77
+      Width = 161
+      Height = 92
       Caption = 'Commission basis'
       ItemIndex = 0
       Items.Strings = (
@@ -250,19 +252,21 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   end
   object PageControl1: TPageControl
     Left = 0
-    Top = 155
+    Top = 169
     Width = 671
-    Height = 303
+    Height = 289
     ActivePage = tbshtCommission
     Align = alClient
     TabOrder = 3
+    ExplicitTop = 155
+    ExplicitHeight = 303
     object tbshtCommission: TTabSheet
       Caption = 'Commission'
       object grdCategory: TStringGrid
         Left = 0
         Top = 0
         Width = 663
-        Height = 275
+        Height = 257
         Align = alClient
         DefaultColWidth = 200
         DefaultRowHeight = 19
@@ -274,6 +278,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         OnExit = grdCategoryExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdCategorySelectCell
+        ExplicitWidth = 657
+        ExplicitHeight = 266
         ColWidths = (
           200
           94
@@ -291,7 +297,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         Left = 184
         Top = 208
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 1
         Visible = False
@@ -307,8 +313,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       object grdDetails: TStringGrid
         Left = 0
         Top = 0
-        Width = 669
-        Height = 284
+        Width = 663
+        Height = 257
         Align = alClient
         ColCount = 4
         DefaultRowHeight = 19
@@ -320,6 +326,7 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         OnExit = grdDetailsExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdDetailsSelectCell
+        ExplicitHeight = 271
         ColWidths = (
           155
           93
@@ -341,8 +348,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       'from Period'
       'where Financial_Year = :Financial_Year'
       'ORDER BY Period')
-    Left = 232
-    Top = 8
+    Left = 234
+    Top = 2
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -350,8 +357,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   end
   object dtsPeriods: TDataSource
     DataSet = qryPeriods
-    Left = 272
-    Top = 8
+    Left = 284
+    Top = 65530
   end
   object qryGetRepBudgets: TFDQuery
     ConnectionName = 'PB'
@@ -388,8 +395,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       'from Period'
       'where Financial_year = :Financial_Year'
       'order by Period')
-    Left = 304
-    Top = 136
+    Left = 392
+    Top = 144
     ParamData = <
       item
         Name = 'Financial_Year'

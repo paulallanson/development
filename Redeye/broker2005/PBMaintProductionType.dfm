@@ -3,26 +3,26 @@ object PBMaintProductionTypeFrm: TPBMaintProductionTypeFrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Maintain Production Type'
-  ClientHeight = 106
-  ClientWidth = 455
+  ClientHeight = 123
+  ClientWidth = 475
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 152
     Top = 80
-    Width = 109
-    Height = 13
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -30,11 +30,11 @@ object PBMaintProductionTypeFrm: TPBMaintProductionTypeFrm
   object DetsGrpBox: TGroupBox
     Left = 16
     Top = 8
-    Width = 433
+    Width = 451
     Height = 57
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,15 +43,15 @@ object PBMaintProductionTypeFrm: TPBMaintProductionTypeFrm
     object Label1: TLabel
       Left = 8
       Top = 24
-      Width = 83
-      Height = 13
+      Width = 94
+      Height = 17
       Caption = 'Production Type'
     end
     object DescrEdit: TEdit
-      Left = 94
+      Left = 107
       Top = 20
       Width = 331
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -60,7 +60,7 @@ object PBMaintProductionTypeFrm: TPBMaintProductionTypeFrm
   end
   object OKBitBtn: TBitBtn
     Left = 288
-    Top = 72
+    Top = 77
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -136,7 +136,7 @@ object PBMaintProductionTypeFrm: TPBMaintProductionTypeFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 368
-    Top = 72
+    Top = 77
     Width = 75
     Height = 25
     Cancel = True
@@ -301,8 +301,8 @@ object PBMaintProductionTypeFrm: TPBMaintProductionTypeFrm
       'Select Production_Type'
       'from Production_Type'
       'Where Production_Type_Description = :Production_Type_Description')
-    Left = 72
-    Top = 16
+    Left = 234
+    Top = 44
     ParamData = <
       item
         Name = 'Production_Type_Description'

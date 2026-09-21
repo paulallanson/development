@@ -3,69 +3,73 @@ object frmSTMaintProduct: TfrmSTMaintProduct
   Top = 18
   BorderStyle = bsDialog
   Caption = 'Maintain product details'
-  ClientHeight = 601
-  ClientWidth = 531
+  ClientHeight = 667
+  ClientWidth = 566
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pgDetails: TPageControl
     Left = 0
     Top = 0
-    Width = 531
-    Height = 560
+    Width = 566
+    Height = 626
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 531
+    ExplicitHeight = 560
     object tsGeneral: TTabSheet
       Caption = 'General'
       object grpbxDetails: TGroupBox
         Left = 0
         Top = 0
-        Width = 523
-        Height = 532
+        Width = 558
+        Height = 594
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 517
+        ExplicitHeight = 523
         DesignSize = (
-          523
-          532)
+          558
+          594)
         object Label1: TLabel
           Left = 8
-          Top = 40
-          Width = 27
-          Height = 13
+          Top = 42
+          Width = 31
+          Height = 17
           Caption = 'Code'
         end
         object Label2: TLabel
           Left = 8
-          Top = 67
-          Width = 59
-          Height = 13
+          Top = 69
+          Width = 66
+          Height = 17
           Caption = 'Description'
         end
         object Label11: TLabel
           Left = 8
           Top = 17
-          Width = 49
-          Height = 13
+          Width = 56
+          Height = 17
           Caption = 'Customer'
         end
         object Label8: TLabel
           Left = 8
-          Top = 120
-          Width = 33
-          Height = 13
+          Top = 122
+          Width = 37
+          Height = 17
           Caption = 'Group'
         end
         object Label12: TLabel
           Left = 8
-          Top = 145
+          Top = 147
           Width = 100
           Height = 35
           AutoSize = False
@@ -74,71 +78,71 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object Label5: TLabel
           Left = 8
-          Top = 299
-          Width = 48
-          Height = 13
+          Top = 285
+          Width = 56
+          Height = 17
           Caption = 'VAT Code'
         end
         object Label6: TLabel
           Left = 8
-          Top = 326
-          Width = 71
-          Height = 13
+          Top = 350
+          Width = 85
+          Height = 17
           Caption = 'Cost Price (PK)'
         end
         object Label7: TLabel
           Left = 216
-          Top = 319
-          Width = 52
-          Height = 26
+          Top = 349
+          Width = 90
+          Height = 24
           Caption = 'Cost Pack Qty'
           WordWrap = True
         end
         object Label13: TLabel
-          Left = 363
-          Top = 353
-          Width = 52
-          Height = 13
+          Left = 391
+          Top = 381
+          Width = 60
+          Height = 17
           Caption = 'Markup %'
         end
         object Label9: TLabel
           Left = 216
-          Top = 353
-          Width = 64
-          Height = 13
+          Top = 381
+          Width = 74
+          Height = 17
           Caption = 'Sell Pack Qty'
         end
         object Label4: TLabel
           Left = 8
-          Top = 353
-          Width = 66
-          Height = 13
+          Top = 381
+          Width = 79
+          Height = 17
           Caption = 'Sell Price (PK)'
         end
         object Label3: TLabel
           Left = 8
-          Top = 382
-          Width = 81
-          Height = 13
+          Top = 410
+          Width = 92
+          Height = 17
           Caption = 'Cost Uplift Type'
         end
         object Label14: TLabel
-          Left = 365
-          Top = 381
-          Width = 29
-          Height = 13
+          Left = 416
+          Top = 407
+          Width = 31
+          Height = 17
           Caption = 'Uplift'
         end
         object Label10: TLabel
           Left = 8
-          Top = 409
-          Width = 83
-          Height = 13
+          Top = 440
+          Width = 94
+          Height = 17
           Caption = 'Unit of Measure'
         end
         object LblSlsNomCode: TLabel
           Left = 8
-          Top = 467
+          Top = 499
           Width = 100
           Height = 17
           AutoSize = False
@@ -147,7 +151,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object LblPurchNom: TLabel
           Left = 8
-          Top = 496
+          Top = 529
           Width = 100
           Height = 17
           AutoSize = False
@@ -156,37 +160,37 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object Label15: TLabel
           Left = 8
-          Top = 437
-          Width = 88
-          Height = 13
+          Top = 468
+          Width = 99
+          Height = 17
           Caption = 'Invoice Price Unit'
         end
         object Label16: TLabel
           Left = 8
-          Top = 243
-          Width = 66
-          Height = 13
+          Top = 255
+          Width = 76
+          Height = 17
           Caption = 'Product Type'
         end
         object Label17: TLabel
           Left = 8
-          Top = 93
-          Width = 80
-          Height = 13
+          Top = 95
+          Width = 92
+          Height = 17
           Caption = 'Form Reference'
         end
         object lblPrefix: TLabel
           Left = 376
-          Top = 40
-          Width = 28
-          Height = 13
+          Top = 42
+          Width = 32
+          Height = 17
           Caption = 'Prefix'
         end
         object dblkpPartGroup: TDBLookupComboBox
           Left = 112
-          Top = 116
+          Top = 118
           Width = 257
-          Height = 21
+          Height = 25
           KeyField = 'Part_Group'
           ListField = 'Part_Group_Descr'
           ListSource = dtsPartGroup
@@ -196,7 +200,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Left = 112
           Top = 12
           Width = 257
-          Height = 21
+          Height = 25
           TabStop = False
           Color = clBtnFace
           MaxLength = 30
@@ -206,9 +210,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object edtDescription: TEdit
           Left = 112
-          Top = 62
+          Top = 64
           Width = 337
-          Height = 21
+          Height = 25
           MaxLength = 100
           TabOrder = 3
           OnChange = CheckOK
@@ -216,9 +220,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object edtProductCode: TEdit
           Left = 112
-          Top = 36
+          Top = 38
           Width = 257
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           MaxLength = 25
           TabOrder = 2
@@ -228,7 +232,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnClearPartGroup: TBitBtn
           Left = 408
-          Top = 115
+          Top = 117
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -251,14 +255,14 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnPartGroup: TBitBtn
           Left = 376
-          Top = 115
+          Top = 117
           Width = 25
           Height = 23
           Hint = 'Vat Code Maintenance'
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -307,9 +311,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object rdgrpClass: TRadioGroup
           Left = 112
-          Top = 138
+          Top = 146
           Width = 129
-          Height = 95
+          Height = 102
           ItemIndex = 0
           Items.Strings = (
             'Stocked'
@@ -322,7 +326,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object ChkBxNumbered: TCheckBox
           Left = 256
-          Top = 168
+          Top = 172
           Width = 129
           Height = 17
           Caption = 'Numbered'
@@ -330,9 +334,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object dblkpVat: TDBLookupComboBox
           Left = 112
-          Top = 295
+          Top = 281
           Width = 161
-          Height = 21
+          Height = 25
           KeyField = 'Vat_Code'
           ListField = 'Description'
           ListSource = dtsVatCode
@@ -341,7 +345,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object memPurchPrice: TMemo
           Left = 112
-          Top = 322
+          Top = 346
           Width = 89
           Height = 21
           Alignment = taRightJustify
@@ -356,8 +360,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           OnKeyPress = memPurchPriceKeyPress
         end
         object memPurchPackQty: TMemo
-          Left = 284
-          Top = 322
+          Left = 312
+          Top = 346
           Width = 70
           Height = 21
           Alignment = taRightJustify
@@ -372,8 +376,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           OnKeyPress = memSellPackQtyKeyPress
         end
         object memSellPackQty: TMemo
-          Left = 284
-          Top = 349
+          Left = 312
+          Top = 377
           Width = 70
           Height = 21
           Alignment = taRightJustify
@@ -388,8 +392,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           OnKeyPress = memSellPackQtyKeyPress
         end
         object memCatMArkup: TMemo
-          Left = 416
-          Top = 349
+          Left = 453
+          Top = 377
           Width = 65
           Height = 21
           TabStop = False
@@ -406,7 +410,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object memCatPrice: TMemo
           Left = 112
-          Top = 349
+          Top = 377
           Width = 89
           Height = 21
           Alignment = taRightJustify
@@ -422,17 +426,17 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object dblkpCostUplift: TDBLookupComboBox
           Left = 112
-          Top = 378
+          Top = 406
           Width = 161
-          Height = 21
+          Height = 25
           KeyField = 'Markup_type'
           ListField = 'Markup_Description'
           ListSource = dtsCostUplift
           TabOrder = 24
         end
         object MemCostUplift: TMemo
-          Left = 416
-          Top = 376
+          Left = 453
+          Top = 404
           Width = 65
           Height = 21
           Alignment = taRightJustify
@@ -448,13 +452,13 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnPriceUnit: TBitBtn
           Left = 256
-          Top = 435
+          Top = 466
           Width = 25
           Height = 23
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -463,7 +467,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnClearPriceUnit: TBitBtn
           Left = 288
-          Top = 435
+          Top = 466
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -486,9 +490,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object dblkpPriceUnit: TDBLookupComboBox
           Left = 112
-          Top = 436
+          Top = 467
           Width = 129
-          Height = 21
+          Height = 25
           KeyField = 'Price_Unit'
           ListField = 'Description'
           ListSource = dtsPriceUnit
@@ -496,7 +500,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object chkbxNotinUse: TCheckBox
           Left = 352
-          Top = 502
+          Top = 533
           Width = 153
           Height = 17
           Caption = 'Inactive'
@@ -504,14 +508,14 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object VatMaintBitBtn: TBitBtn
           Left = 280
-          Top = 294
+          Top = 280
           Width = 25
           Height = 23
           Hint = 'Vat Code Maintenance'
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -523,9 +527,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object dblkpUOM: TDBLookupComboBox
           Left = 112
-          Top = 405
+          Top = 436
           Width = 129
-          Height = 21
+          Height = 25
           KeyField = 'Unit_of_Measure'
           ListField = 'UOM_Description'
           ListSource = dtsUOM
@@ -533,13 +537,13 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnUOM: TBitBtn
           Left = 256
-          Top = 404
+          Top = 435
           Width = 25
           Height = 23
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -547,7 +551,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnClearUOM: TBitBtn
           Left = 288
-          Top = 404
+          Top = 435
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -570,9 +574,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object dblkpProductType: TDBLookupComboBox
           Left = 112
-          Top = 239
+          Top = 251
           Width = 161
-          Height = 21
+          Height = 25
           KeyField = 'Product_Type'
           ListField = 'Description'
           ListSource = dtsProductTypes
@@ -581,13 +585,13 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnPType: TBitBtn
           Left = 280
-          Top = 238
+          Top = 250
           Width = 25
           Height = 23
           Caption = '...'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -12
+          Font.Height = -13
           Font.Name = 'System'
           Font.Style = [fsBold]
           ParentFont = False
@@ -596,7 +600,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnClearPType: TBitBtn
           Left = 312
-          Top = 238
+          Top = 250
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -619,9 +623,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object edtFormReference: TEdit
           Left = 112
-          Top = 88
+          Top = 90
           Width = 257
-          Height = 21
+          Height = 25
           TabStop = False
           Color = clBtnFace
           MaxLength = 30
@@ -631,7 +635,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnFormReference: TBitBtn
           Left = 376
-          Top = 88
+          Top = 90
           Width = 25
           Height = 23
           Caption = '...'
@@ -646,7 +650,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object btnClearFormRef: TBitBtn
           Left = 408
-          Top = 88
+          Top = 90
           Width = 25
           Height = 23
           Glyph.Data = {
@@ -668,17 +672,17 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object chkbxOrderOnline: TCheckBox
           Left = 352
-          Top = 454
-          Width = 153
+          Top = 485
+          Width = 165
           Height = 17
           Caption = 'Order Online'
           TabOrder = 35
         end
         object edtPurchaseNominal: TMaskEdit
           Left = 112
-          Top = 494
+          Top = 527
           Width = 129
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
@@ -687,9 +691,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object edtSalesNominal: TMaskEdit
           Left = 112
-          Top = 465
+          Top = 497
           Width = 129
-          Height = 21
+          Height = 25
           CharCase = ecUpperCase
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
@@ -698,58 +702,59 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object chkbxStockZero: TCheckBox
           Left = 352
-          Top = 478
-          Width = 153
+          Top = 509
+          Width = 201
           Height = 17
           Caption = 'Inactive when balance zero'
           TabOrder = 36
         end
         object pnlFSCClaim: TPanel
-          Left = 1
-          Top = 263
-          Width = 506
-          Height = 25
+          Left = 0
+          Top = 296
+          Width = 518
+          Height = 35
           Anchors = [akLeft, akBottom]
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 15
+          ExplicitTop = 307
           object lblFSCClaim: TLabel
             Left = 8
-            Top = 6
-            Width = 50
-            Height = 13
+            Top = 10
+            Width = 57
+            Height = 17
             Caption = 'FSC Claim'
           end
           object lblFSCMix: TLabel
             Left = 280
-            Top = 6
-            Width = 30
-            Height = 13
+            Top = 10
+            Width = 36
+            Height = 17
             Caption = '% Mix'
           end
           object dblkpFSCClaim: TDBLookupComboBox
             Left = 111
-            Top = 2
+            Top = 6
             Width = 161
-            Height = 21
+            Height = 25
             KeyField = 'FSC_Material_Claim'
             ListField = 'Claim_Description'
             ListSource = dtsFSCClaim
             TabOrder = 0
           end
           object spnFSCMix: TSpinEdit
-            Left = 313
-            Top = 1
+            Left = 327
+            Top = 5
             Width = 55
-            Height = 22
+            Height = 27
             MaxValue = 0
             MinValue = 0
             TabOrder = 1
             Value = 0
           end
           object btnClearClaim: TBitBtn
-            Left = 375
-            Top = 1
+            Left = 389
+            Top = 7
             Width = 25
             Height = 23
             Glyph.Data = {
@@ -772,7 +777,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object chkbxHasBOM: TCheckBox
           Left = 256
-          Top = 144
+          Top = 148
           Width = 209
           Height = 17
           Caption = 'Product has Bill of Materials'
@@ -781,8 +786,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         end
         object chkbxGlobalProduct: TCheckBox
           Left = 352
-          Top = 430
-          Width = 153
+          Top = 461
+          Width = 165
           Height = 17
           Caption = 'Global Product'
           TabOrder = 34
@@ -793,13 +798,15 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       Caption = 'Bill of Materials'
       ImageIndex = 1
       object pnlComponents: TPanel
-        Left = 432
+        Left = 463
         Top = 0
         Width = 95
-        Height = 533
+        Height = 594
         Align = alRight
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 428
+        ExplicitHeight = 528
         object btnAdd: TBitBtn
           Left = 14
           Top = 16
@@ -873,14 +880,14 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       object dbgComponents: TDBGrid
         Left = 0
         Top = 0
-        Width = 432
-        Height = 533
+        Width = 463
+        Height = 594
         Align = alClient
         DataSource = dtsGetBOM
         DrawingStyle = gdsGradient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -888,7 +895,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -13
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = dbgComponentsDblClick
@@ -911,21 +918,23 @@ object frmSTMaintProduct: TfrmSTMaintProduct
   end
   object Panel1: TPanel
     Left = 0
-    Top = 560
-    Width = 531
+    Top = 626
+    Width = 566
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 551
+    ExplicitWidth = 525
     object lblDelete: TLabel
-      Left = 190
-      Top = 16
-      Width = 133
-      Height = 13
+      Left = 149
+      Top = 14
+      Width = 160
+      Height = 17
       Caption = 'Delete the above details ?'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -1148,7 +1157,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       '       ) as form_reference_id'
       'From Part'
       'Where Part = :Part')
-    Left = 432
+    Left = 80
     Top = 152
     ParamData = <
       item
@@ -1163,18 +1172,18 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'Part_Group'
       'Order by Part_Group_Descr'
       ' ')
-    Left = 312
-    Top = 144
+    Left = 358
+    Top = 100
   end
   object dtsPartGroup: TDataSource
     DataSet = qryPartGroup
-    Left = 376
-    Top = 104
+    Left = 126
+    Top = 130
   end
   object dtsVatCode: TDataSource
     DataSet = qryVatCode
-    Left = 312
-    Top = 224
+    Left = 342
+    Top = 280
   end
   object qryVatCode: TFDQuery
     ConnectionName = 'PB'
@@ -1182,21 +1191,21 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'Select * From VAT_Code'
       'Order By VAT_Code'
       ' ')
-    Left = 264
-    Top = 224
+    Left = 298
+    Top = 200
   end
   object qryCostUplift: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Markup_type')
-    Left = 496
+    Left = 144
     Top = 208
   end
   object dtsCostUplift: TDataSource
     DataSet = qryCostUplift
-    Left = 496
-    Top = 272
+    Left = 152
+    Top = 256
   end
   object qryPriceUnit: TFDQuery
     ConnectionName = 'PB'
@@ -1204,12 +1213,12 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'select *'
       'from Price_Unit'
       'order by Description')
-    Left = 424
-    Top = 288
+    Left = 80
+    Top = 272
   end
   object dtsPriceUnit: TDataSource
     DataSet = qryPriceUnit
-    Left = 488
+    Left = 136
     Top = 376
   end
   object qryGetCust: TFDQuery
@@ -1222,7 +1231,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'Where (Customer.Customer = :Customer) and'
       '      (Customer_Branch.Customer = :Customer) and'
       '      (Customer_Branch.Branch_No = :Branch)')
-    Left = 416
+    Left = 64
     Top = 208
     ParamData = <
       item
@@ -1241,8 +1250,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'delete from Part'
       'Where (Part = :Part)'
       '')
-    Left = 208
-    Top = 80
+    Left = 228
+    Top = 60
     ParamData = <
       item
         Name = 'Part'
@@ -1298,7 +1307,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       ' '
       ' ')
     Left = 160
-    Top = 64
+    Top = 56
     ParamData = <
       item
         Name = 'Part_Description'
@@ -1457,8 +1466,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       ''
       ' '
       ' ')
-    Left = 120
-    Top = 16
+    Left = 286
+    Top = 52
     ParamData = <
       item
         Name = 'Part'
@@ -1574,8 +1583,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     SQL.Strings = (
       'Select Part From Part Where Part = :Part'
       ' ')
-    Left = 56
-    Top = 120
+    Left = 198
+    Top = 142
     ParamData = <
       item
         Name = 'Part'
@@ -1589,7 +1598,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       '          Part_Store_type,'
       '          0,:Stock_Levels,'#39'P'#39',NULL,0'
       'from Part_Store_type')
-    Left = 480
+    Left = 128
     Top = 320
     ParamData = <
       item
@@ -1605,13 +1614,13 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'select *'
       'from Unit_of_Measure'
       'order by UOM_Description')
-    Left = 280
-    Top = 448
+    Left = 278
+    Top = 360
   end
   object dtsUOM: TDataSource
     DataSet = qryUOM
-    Left = 360
-    Top = 336
+    Left = 338
+    Top = 356
   end
   object qryProductTypes: TFDQuery
     ConnectionName = 'PB'
@@ -1620,13 +1629,13 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'from Product_Type'
       'where ((inactive IS NULL) or (inactive <> '#39'Y'#39'))'
       'order by Description')
-    Left = 200
-    Top = 160
+    Left = 314
+    Top = 88
   end
   object dtsProductTypes: TDataSource
     DataSet = qryProductTypes
-    Left = 240
-    Top = 152
+    Left = 364
+    Top = 78
   end
   object qryUpStockRef: TFDQuery
     ConnectionName = 'PB'
@@ -1634,8 +1643,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'Update Form_Reference'
       'set Stock_Reference = :Stock_Reference'
       'where Form_Reference = :Form_Reference')
-    Left = 360
-    Top = 168
+    Left = 402
+    Top = 210
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -1650,8 +1659,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'Update Form_Reference'
       'set Stock_Reference = '#39#39
       'where Stock_Reference = :Stock_Reference')
-    Left = 288
-    Top = 168
+    Left = 328
+    Top = 130
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -1662,7 +1671,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     SQL.Strings = (
       'Delete from Part_Store_Levels'
       'where Part = :Part')
-    Left = 448
+    Left = 96
     Top = 272
     ParamData = <
       item
@@ -1675,12 +1684,12 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'select *'
       'from FSC_Material_Claim'
       'Order By Claim_Description')
-    Left = 472
+    Left = 120
     Top = 64
   end
   object dtsFSCClaim: TDataSource
     DataSet = qryFSCClaim
-    Left = 472
+    Left = 120
     Top = 112
   end
   object qryGetBOM: TFDQuery
@@ -1689,8 +1698,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'select *'
       'from Part_Element'
       'where part = :Part')
-    Left = 84
-    Top = 328
+    Left = 201
+    Top = 386
     ParamData = <
       item
         Name = 'Part'
@@ -1698,8 +1707,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
   end
   object dtsGetBOM: TDataSource
     DataSet = qryGetBOM
-    Left = 156
-    Top = 328
+    Left = 251
+    Top = 314
   end
   object qryGetProductType: TFDQuery
     ConnectionName = 'PB'
@@ -1707,8 +1716,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       'SELECT Nominal, Purchase_Nominal'
       'FROM Product_Type'
       'WHERE Product_Type = :Product_Type')
-    Left = 20
-    Top = 176
+    Left = 153
+    Top = 212
     ParamData = <
       item
         Name = 'Product_Type'
@@ -1725,8 +1734,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       
         ' Where Store_Stock.Part = :Part) = Store_Stock_Serial_Item.store' +
         '_Stock')
-    Left = 28
-    Top = 440
+    Left = 147
+    Top = 278
     ParamData = <
       item
         Name = 'Part'

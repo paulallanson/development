@@ -3,42 +3,42 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
   Top = 161
   BorderStyle = bsDialog
   Caption = 'Stock Levels'
-  ClientHeight = 138
-  ClientWidth = 207
+  ClientHeight = 168
+  ClientWidth = 232
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object lblMin: TLabel
     Left = 16
     Top = 20
-    Width = 79
-    Height = 13
+    Width = 90
+    Height = 17
     Caption = 'Minimum Level:'
   end
   object lblMax: TLabel
     Left = 16
     Top = 52
-    Width = 80
-    Height = 13
+    Width = 93
+    Height = 17
     Caption = 'Maximum Level:'
   end
   object lblReOrder: TLabel
     Left = 16
     Top = 84
-    Width = 72
-    Height = 13
+    Width = 84
+    Height = 17
     Caption = 'Reorder Level:'
   end
   object btbtnOK: TBitBtn
     Left = 24
-    Top = 112
+    Top = 123
     Width = 75
     Height = 25
     Kind = bkOK
@@ -49,7 +49,7 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
     Left = 112
     Top = 16
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 1
     OnExit = edtMinExit
     OnKeyPress = edtReOrderKeyPress
@@ -58,7 +58,7 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
     Left = 112
     Top = 48
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 2
     OnExit = edtMaxExit
     OnKeyPress = edtReOrderKeyPress
@@ -67,14 +67,14 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
     Left = 112
     Top = 80
     Width = 89
-    Height = 21
+    Height = 25
     TabOrder = 3
     OnExit = edtReOrderExit
     OnKeyPress = edtReOrderKeyPress
   end
   object btnCancel: TBitBtn
     Left = 112
-    Top = 112
+    Top = 123
     Width = 75
     Height = 25
     Kind = bkCancel

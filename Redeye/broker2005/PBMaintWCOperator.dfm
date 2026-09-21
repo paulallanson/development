@@ -3,33 +3,33 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Maintain Work Centre Operator'
-  ClientHeight = 280
-  ClientWidth = 353
+  ClientHeight = 333
+  ClientWidth = 396
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 30
-    Top = 253
-    Width = 145
-    Height = 15
-    Caption = 'Delete the above details ?'
+    Left = 54
+    Top = 285
+    Width = 154
+    Height = 16
+    Caption = 'Delete the above details'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object btnOK: TBitBtn
-    Left = 188
-    Top = 248
+    Left = 212
+    Top = 280
     Width = 75
     Height = 25
     Enabled = False
@@ -39,8 +39,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     OnClick = btnOKClick
   end
   object btnCancel: TBitBtn
-    Left = 270
-    Top = 248
+    Left = 294
+    Top = 280
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -50,55 +50,55 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
   object detsgrpbox: TGroupBox
     Left = 8
     Top = 8
-    Width = 337
-    Height = 231
+    Width = 361
+    Height = 241
     ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 10
       Top = 20
-      Width = 29
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Name'
     end
     object Label2: TLabel
       Left = 8
       Top = 53
-      Width = 70
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'Employee No:'
     end
     object Label3: TLabel
       Left = 8
       Top = 83
-      Width = 61
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Department'
     end
     object Label4: TLabel
       Left = 8
       Top = 115
-      Width = 38
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Process'
     end
     object Label5: TLabel
       Left = 8
       Top = 144
-      Width = 60
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Hourly Rate'
     end
     object Label6: TLabel
       Left = 8
       Top = 176
-      Width = 87
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'No. of Operators'
     end
     object btnOperators: TBitBtn
-      Left = 296
-      Top = 14
+      Left = 317
+      Top = 15
       Width = 25
       Height = 25
       Hint = 'Maintain Operators'
@@ -113,18 +113,18 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       OnClick = btnOperatorsClick
     end
     object edtEmployeeNo: TEdit
-      Left = 96
-      Top = 48
+      Left = 117
+      Top = 49
       Width = 145
-      Height = 21
+      Height = 25
       TabOrder = 2
       Text = 'edtEmployeeNo'
     end
     object dblkpProcessGroup: TDBLookupComboBox
-      Left = 96
-      Top = 80
+      Left = 117
+      Top = 81
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Process_Group'
       ListField = 'Process_Group_Description'
       ListSource = dtsProcessGroup
@@ -140,18 +140,18 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       TabOrder = 5
     end
     object dblkpProcess: TDBLookupComboBox
-      Left = 96
-      Top = 111
+      Left = 117
+      Top = 112
       Width = 193
-      Height = 21
+      Height = 25
       KeyField = 'Process'
       ListField = 'Process_Description'
       ListSource = dtsProcess
       TabOrder = 4
     end
     object btnProcessClear: TBitBtn
-      Left = 296
-      Top = 110
+      Left = 317
+      Top = 111
       Width = 25
       Height = 23
       Glyph.Data = {
@@ -173,16 +173,16 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       OnClick = btnProcessClearClick
     end
     object edtEmployeeName: TEdit
-      Left = 96
-      Top = 16
+      Left = 117
+      Top = 17
       Width = 193
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'edtEmployeeName'
     end
     object memHourlyRate: TMemo
-      Left = 96
-      Top = 140
+      Left = 117
+      Top = 141
       Width = 91
       Height = 21
       TabOrder = 7
@@ -192,10 +192,10 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object spnNoOperators: TSpinEdit
-      Left = 96
-      Top = 168
+      Left = 117
+      Top = 169
       Width = 49
-      Height = 22
+      Height = 27
       MaxValue = 99
       MinValue = 1
       TabOrder = 8
@@ -211,8 +211,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       
         'Select Max(Work_Centre_Operator)+1, :GUID From Work_Centre_Opera' +
         'tor')
-    Left = 152
-    Top = 112
+    Left = 94
+    Top = 148
     ParamData = <
       item
         Name = 'GUID'
@@ -224,13 +224,13 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       'select *'
       'from process_group'
       'order by Process_Group_Description')
-    Left = 32
-    Top = 8
+    Left = 56
+    Top = 18
   end
   object dtsProcessGroup: TDataSource
     DataSet = qryProcessGroup
-    Left = 32
-    Top = 48
+    Left = 56
+    Top = 68
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'
@@ -247,8 +247,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       '        Operator_Count = :Operator_Count'
       'Where'
       '(Work_Centre_Operator = :Work_Centre_Operator)')
-    Left = 152
-    Top = 56
+    Left = 94
+    Top = 78
     ParamData = <
       item
         Name = 'Name'
@@ -289,8 +289,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       ''
       ''
       ' ')
-    Left = 192
-    Top = 8
+    Left = 144
+    Top = 18
     ParamData = <
       item
         Name = 'GUID'
@@ -304,8 +304,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       'Delete From Work_Centre_Operator'
       'Where'
       '(Work_Centre_Operator = :Work_Centre_Operator)')
-    Left = 256
-    Top = 8
+    Left = 224
+    Top = 18
     ParamData = <
       item
         Name = 'Work_Centre_Operator'
@@ -317,8 +317,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       'Select Work_Centre_Operator'
       'From Work_Centre_Operator'
       'Where Name = :GUID')
-    Left = 264
-    Top = 112
+    Left = 234
+    Top = 148
     ParamData = <
       item
         Name = 'GUID'
@@ -334,8 +334,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       'from Process'
       'where Process_Group = :Process_Group'
       'Order by Process_Description')
-    Left = 240
-    Top = 168
+    Left = 204
+    Top = 218
     ParamData = <
       item
         Name = 'Process_Group'
@@ -343,8 +343,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
   end
   object dtsProcess: TDataSource
     DataSet = qryProcess
-    Left = 288
-    Top = 168
+    Left = 264
+    Top = 218
   end
   object qryGetOperator: TFDQuery
     ConnectionName = 'PB'
@@ -352,8 +352,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       'select *'
       'from Operator'
       'where Operator.Name = :Name')
-    Left = 256
-    Top = 64
+    Left = 224
+    Top = 88
     ParamData = <
       item
         Name = 'Name'

@@ -3,23 +3,26 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Weekly Production Report'
-  ClientHeight = 269
-  ClientWidth = 460
+  ClientHeight = 265
+  ClientWidth = 481
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  DesignSize = (
+    481
+    265)
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
-    Top = 87
-    Width = 56
-    Height = 13
+    Top = 83
+    Width = 64
+    Height = 17
     Caption = 'From Date:'
   end
   object DateFromButton: TSpeedButton
@@ -45,9 +48,9 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
   end
   object Label2: TLabel
     Left = 16
-    Top = 148
-    Width = 42
-    Height = 13
+    Top = 142
+    Width = 48
+    Height = 17
     Caption = 'To Date:'
   end
   object DateToButton: TSpeedButton
@@ -74,8 +77,8 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
   object rgDepartment: TRadioGroup
     Left = 16
     Top = 8
-    Width = 113
-    Height = 60
+    Width = 137
+    Height = 65
     Caption = ' By Department'
     ItemIndex = 0
     Items.Strings = (
@@ -86,25 +89,25 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     OnClick = rgDepartmentClick
   end
   object pnlDepartment: TPanel
-    Left = 137
-    Top = 14
+    Left = 159
+    Top = 16
     Width = 304
-    Height = 50
+    Height = 57
     ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblRep: TLabel
       Left = 8
       Top = 4
-      Width = 61
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Department'
     end
     object edtDepartment: TEdit
       Left = 8
       Top = 20
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       ReadOnly = True
       TabOrder = 0
@@ -129,7 +132,7 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     Left = 15
     Top = 103
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 2
     OnExit = DateFromEditExit
@@ -138,7 +141,7 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     Left = 15
     Top = 161
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 3
     OnExit = DateToEditExit
@@ -148,16 +151,18 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     Top = 223
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Caption = '&Cancel'
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 4
   end
   object btnExcel: TBitBtn
-    Left = 166
+    Left = 202
     Top = 223
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
@@ -206,10 +211,11 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     OnClick = btnExcelClick
   end
   object btnPreview: TBitBtn
-    Left = 264
+    Left = 300
     Top = 223
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Caption = 'Pre&view'
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
@@ -229,10 +235,11 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     OnClick = btnPreviewClick
   end
   object btnPrint: TBitBtn
-    Left = 352
+    Left = 388
     Top = 223
     Width = 75
     Height = 25
+    Anchors = [akLeft, akBottom]
     Caption = '&Print'
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
@@ -252,8 +259,8 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     OnClick = btnPrintClick
   end
   object pnlExportPrgrss: TPanel
-    Left = 100
-    Top = 76
+    Left = 119
+    Top = 93
     Width = 289
     Height = 61
     ParentBackground = False
@@ -262,8 +269,8 @@ object PBRSProdWeeklyFrm: TPBRSProdWeeklyFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

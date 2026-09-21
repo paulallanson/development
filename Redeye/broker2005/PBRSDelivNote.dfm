@@ -3,12 +3,12 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   Top = 127
   BorderStyle = bsDialog
   Caption = 'Print Delivery Note'
-  ClientHeight = 192
-  ClientWidth = 391
+  ClientHeight = 227
+  ClientWidth = 425
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,10 +16,10 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object CancelBitBtn: TBitBtn
     Left = 6
-    Top = 166
+    Top = 181
     Width = 75
     Height = 25
     Caption = '&Cancel'
@@ -35,7 +35,7 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   end
   object Previewbitbtn: TBitBtn
     Left = 86
-    Top = 166
+    Top = 181
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -64,7 +64,7 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   end
   object SetupBitBtn: TBitBtn
     Left = 245
-    Top = 166
+    Top = 181
     Width = 75
     Height = 25
     Caption = '&Setup'
@@ -94,7 +94,7 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   end
   object BitBtn1: TBitBtn
     Left = 324
-    Top = 166
+    Top = 181
     Width = 75
     Height = 25
     Caption = '&Lineup'
@@ -124,7 +124,7 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   object OrderGroupBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 385
+    Width = 409
     Height = 73
     Caption = 'Delivery Details for order: '
     ParentBackground = False
@@ -132,66 +132,66 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label2: TLabel
       Left = 16
       Top = 48
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object DescrLbl: TLabel
       Left = 88
       Top = 48
-      Width = 43
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'DescrLbl'
     end
     object CustomerLbl: TLabel
       Left = 88
       Top = 24
-      Width = 64
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
   end
   object GroupBox1: TGroupBox
     Left = 8
     Top = 81
-    Width = 385
+    Width = 409
     Height = 80
     ParentBackground = False
     TabOrder = 5
     object Label4: TLabel
       Left = 9
-      Top = 58
-      Width = 67
-      Height = 13
+      Top = 54
+      Width = 77
+      Height = 17
       Caption = 'Delivery Date'
     end
     object Label3: TLabel
       Left = 35
       Top = 25
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object DeliveryDateEdit: TEdit
-      Left = 88
+      Left = 92
       Top = 50
       Width = 105
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'DeliveryDateEdit'
       OnChange = DeliveryDateEditChange
       OnExit = DeliveryDateEditExit
     end
     object BitBtn2: TBitBtn
-      Left = 200
-      Top = 48
+      Left = 204
+      Top = 50
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -212,26 +212,26 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
       OnClick = BitBtn2Click
     end
     object Confirmchkbox: TCheckBox
-      Left = 232
+      Left = 247
       Top = 56
-      Width = 127
+      Width = 159
       Height = 17
       Caption = 'Confirmed Delivery'
       TabOrder = 2
     end
     object QtyEdit: TEdit
-      Left = 88
-      Top = 16
+      Left = 92
+      Top = 17
       Width = 81
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 3
       Text = 'QtyEdit'
     end
     object chkbxPrintLogo: TCheckBox
-      Left = 232
+      Left = 247
       Top = 31
-      Width = 127
+      Width = 159
       Height = 17
       Caption = 'Print Company Logo'
       TabOrder = 4
@@ -239,7 +239,7 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 165
-    Top = 166
+    Top = 181
     Width = 75
     Height = 25
     Caption = '&Print'

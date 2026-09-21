@@ -2,32 +2,32 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   Left = 15
   Top = 33
   Caption = 'Allocate Stock To Store Orders'
-  ClientHeight = 485
+  ClientHeight = 486
   ClientWidth = 733
   Color = clBtnFace
   Constraints.MinHeight = 524
   Constraints.MinWidth = 713
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 41
     Width = 733
-    Height = 384
+    Height = 385
     Align = alClient
     DataSource = DetsDataSource
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -36,7 +36,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = DetsDBGridCellClick
@@ -98,24 +98,26 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 425
+    Top = 426
     Width = 733
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 417
+    ExplicitWidth = 727
     DesignSize = (
       733
       41)
     object lblAllocateSeq: TLabel
       Left = 8
-      Top = 16
-      Width = 93
-      Height = 13
+      Top = 12
+      Width = 105
+      Height = 17
       Caption = 'Allocate sequence'
     end
     object OKBitBtn: TBitBtn
-      Left = 554
+      Left = 548
       Top = 8
       Width = 75
       Height = 25
@@ -142,9 +144,10 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 542
     end
     object CancelBitBtn: TBitBtn
-      Left = 642
+      Left = 636
       Top = 8
       Width = 75
       Height = 25
@@ -152,9 +155,10 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 630
     end
     object AllBitBtn: TBitBtn
-      Left = 462
+      Left = 456
       Top = 8
       Width = 75
       Height = 25
@@ -179,12 +183,13 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       ShowHint = True
       TabOrder = 2
       OnClick = AllBitBtnClick
+      ExplicitLeft = 450
     end
     object cmbAllocateSeq: TComboBox
-      Left = 112
+      Left = 125
       Top = 8
       Width = 169
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 3
       Items.Strings = (
@@ -195,7 +200,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   end
   object stsDetails: TStatusBar
     Left = 0
-    Top = 466
+    Top = 467
     Width = 733
     Height = 19
     Panels = <
@@ -205,6 +210,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       item
         Width = 50
       end>
+    ExplicitTop = 458
+    ExplicitWidth = 727
   end
   object Panel1: TPanel
     Left = 0
@@ -214,11 +221,12 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 727
     object lblSalesOrderNo: TLabel
       Left = 16
-      Top = 16
-      Width = 84
-      Height = 13
+      Top = 11
+      Width = 97
+      Height = 17
       Caption = 'lblSalesOrderNo'
     end
   end
@@ -325,8 +333,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       ' '
       ' '
       ' ')
-    Left = 270
-    Top = 310
+    Left = 346
+    Top = 252
     ParamData = <
       item
         Name = 'status'

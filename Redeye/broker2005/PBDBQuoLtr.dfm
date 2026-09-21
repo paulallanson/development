@@ -1,6 +1,7 @@
 inherited dbQuoLtr: TdbQuoLtr
   Height = 498
   Width = 639
+  PixelsPerInch = 120
   object GetNotesSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (

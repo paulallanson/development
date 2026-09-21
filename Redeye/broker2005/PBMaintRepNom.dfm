@@ -7,21 +7,21 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 86
-    Top = 130
-    Width = 133
-    Height = 13
-    Caption = 'Delete the above details ?'
+    Top = 123
+    Width = 150
+    Height = 17
+    Caption = 'Delete the above details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -193,12 +193,12 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 4
-    Width = 409
+    Width = 420
     Height = 109
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -207,29 +207,29 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
     object NomLbl: TLabel
       Left = 9
       Top = 46
-      Width = 43
-      Height = 13
+      Width = 49
+      Height = 17
       Caption = 'Nominal'
     end
     object AdditDetsLbl: TLabel
       Left = 9
       Top = 71
-      Width = 105
-      Height = 13
+      Width = 119
+      Height = 17
       Caption = 'Nominal Description'
     end
     object Label2: TLabel
       Left = 10
       Top = 22
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object NameEdit: TEdit
-      Left = 128
+      Left = 135
       Top = 18
       Width = 201
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 1
@@ -237,19 +237,19 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
       OnChange = NameEditChange
     end
     object NomDescrEdit: TEdit
-      Left = 128
+      Left = 135
       Top = 68
       Width = 270
-      Height = 21
+      Height = 25
       TabOrder = 0
       Text = 'NomDescrEdit'
       OnChange = NomDescrEditChange
     end
     object NomEdit: TMaskEdit
-      Left = 128
+      Left = 135
       Top = 43
       Width = 129
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
@@ -288,8 +288,8 @@ object PBMaintRepNomFrm: TPBMaintRepNomFrm
       '     '
       '       '
       '      ')
-    Left = 168
-    Top = 104
+    Left = 122
+    Top = 130
     ParamData = <
       item
         Name = 'Rep'

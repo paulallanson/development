@@ -2,24 +2,24 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   Left = 77
   Top = 88
   Caption = 'Job Bag Margin Report'
-  ClientHeight = 489
-  ClientWidth = 801
+  ClientHeight = 510
+  ClientWidth = 871
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 750
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 470
-    Width = 801
+    Top = 491
+    Width = 871
     Height = 19
     Panels = <
       item
@@ -28,17 +28,21 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       item
         Width = 50
       end>
+    ExplicitTop = 461
+    ExplicitWidth = 795
   end
   object Panel1: TPanel
     Left = 0
-    Top = 429
-    Width = 801
+    Top = 450
+    Width = 871
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 420
+    ExplicitWidth = 795
     DesignSize = (
-      801
+      871
       41)
     object btnCancel: TBitBtn
       Left = 8
@@ -51,7 +55,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       TabOrder = 0
     end
     object btnPreview: TBitBtn
-      Left = 620
+      Left = 684
       Top = 8
       Width = 75
       Height = 25
@@ -73,9 +77,10 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnPreviewClick
+      ExplicitLeft = 608
     end
     object btnPrint: TBitBtn
-      Left = 707
+      Left = 771
       Top = 8
       Width = 75
       Height = 25
@@ -97,9 +102,10 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
+      ExplicitLeft = 695
     end
     object btnExcel: TBitBtn
-      Left = 536
+      Left = 600
       Top = 8
       Width = 75
       Height = 25
@@ -150,22 +156,24 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
+      ExplicitLeft = 524
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 801
-    Height = 137
+    Width = 871
+    Height = 145
     Align = alTop
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 820
     object lblDateFrom: TLabel
       Left = 424
       Top = 8
@@ -209,7 +217,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object lblDateto: TLabel
       Left = 424
       Top = 58
-      Width = 42
+      Width = 41
       Height = 13
       Caption = 'Date To:'
       Font.Charset = ANSI_CHARSET
@@ -254,7 +262,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Caption = 'By Customer'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
@@ -273,7 +281,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Height = 49
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
@@ -282,7 +290,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       object lblCustomer: TLabel
         Left = 8
         Top = 4
-        Width = 88
+        Width = 89
         Height = 13
         Caption = 'Customer/Branch'
         Font.Charset = ANSI_CHARSET
@@ -296,7 +304,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Left = 8
         Top = 20
         Width = 233
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -324,7 +332,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Caption = ' By supplier '
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ItemIndex = 0
@@ -343,7 +351,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       Height = 49
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
@@ -352,15 +360,15 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       object lblSupplier: TLabel
         Left = 8
         Top = 4
-        Width = 82
-        Height = 13
+        Width = 92
+        Height = 17
         Caption = 'Supplier/Branch'
       end
       object edtSupplier: TEdit
         Left = 8
         Top = 20
         Width = 233
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -381,18 +389,18 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end
     end
     object Panel3: TPanel
-      Left = 532
+      Left = 552
       Top = 1
-      Width = 268
-      Height = 135
+      Width = 318
+      Height = 143
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 4
       object chkbxPageBreak: TCheckBox
         Left = 140
-        Top = 104
-        Width = 125
+        Top = 110
+        Width = 149
         Height = 17
         Caption = 'Page break by total'
         Enabled = False
@@ -400,10 +408,10 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         WordWrap = True
       end
       object RdGrpRepType: TRadioGroup
-        Left = 140
+        Left = 139
         Top = 8
         Width = 101
-        Height = 57
+        Height = 66
         Caption = 'Report Type'
         ItemIndex = 0
         Items.Strings = (
@@ -420,7 +428,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         Caption = 'Report Totals'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ItemIndex = 4
@@ -437,8 +445,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end
       object chkbxInvoicedValues: TCheckBox
         Left = 140
-        Top = 70
-        Width = 125
+        Top = 80
+        Width = 165
         Height = 17
         Caption = 'Actual invoice values'
         TabOrder = 3
@@ -478,22 +486,22 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
   end
   object dbgJobBag: TDBGrid
     Left = 0
-    Top = 137
-    Width = 801
-    Height = 292
+    Top = 145
+    Width = 871
+    Height = 305
     Align = alClient
     DataSource = dsReport
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -579,8 +587,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

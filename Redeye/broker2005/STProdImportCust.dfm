@@ -4,50 +4,54 @@ object STProdImportCustFrm: TSTProdImportCustFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Customer Product File Import'
-  ClientHeight = 443
-  ClientWidth = 375
+  ClientHeight = 450
+  ClientWidth = 385
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object mmErrorRecords: TMemo
     Left = 0
-    Top = 316
-    Width = 375
-    Height = 86
+    Top = 321
+    Width = 385
+    Height = 88
     Align = alClient
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 5
+    ExplicitTop = 316
+    ExplicitWidth = 369
+    ExplicitHeight = 77
   end
   object pnlImportFile: TPanel
     Left = 0
     Top = 164
-    Width = 375
+    Width = 385
     Height = 56
     Align = alTop
     Enabled = False
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 369
     object lblStep3: TLabel
       Left = 8
       Top = 8
-      Width = 164
-      Height = 13
+      Width = 187
+      Height = 17
       Caption = '3. Select the file to be imported.'
     end
     object edtImportFileName: TEdit
       Left = 8
       Top = 24
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtImportFileNameChange
     end
@@ -65,66 +69,68 @@ object STProdImportCustFrm: TSTProdImportCustFrm
   object pnlProgress: TPanel
     Left = 0
     Top = 261
-    Width = 375
-    Height = 55
+    Width = 385
+    Height = 60
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 375
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 50
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Progress: '
     end
     object lblProgress: TLabel
       Left = 257
       Top = 8
-      Width = 5
-      Height = 13
+      Width = 6
+      Height = 17
       Caption = 'x'
       Visible = False
     end
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'records read.'
       Visible = False
     end
     object lblReadingFile: TLabel
       Left = 64
       Top = 8
-      Width = 108
-      Height = 13
+      Width = 121
+      Height = 17
       Caption = 'Reading Product file.'
     end
     object prgrsbrImport: TProgressBar
       Left = 8
-      Top = 24
+      Top = 28
       Width = 353
-      Height = 17
+      Height = 21
       TabOrder = 0
     end
   end
   object pnlCustomer: TPanel
     Left = 0
     Top = 0
-    Width = 375
+    Width = 385
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 369
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 117
-      Height = 13
+      Width = 141
+      Height = 17
       Caption = '1. Select the Customer.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -132,8 +138,8 @@ object STProdImportCustFrm: TSTProdImportCustFrm
     object LblCustName: TLabel
       Left = 32
       Top = 32
-      Width = 18
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = '      '
     end
     object btnSelectCustomer: TButton
@@ -149,16 +155,17 @@ object STProdImportCustFrm: TSTProdImportCustFrm
   object pnlImport: TPanel
     Left = 0
     Top = 220
-    Width = 375
+    Width = 385
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 369
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 90
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = '4. Run the Import'
     end
     object ImportBtn: TButton
@@ -174,12 +181,14 @@ object STProdImportCustFrm: TSTProdImportCustFrm
   end
   object pnlCancel: TPanel
     Left = 0
-    Top = 402
-    Width = 375
+    Top = 409
+    Width = 385
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 6
+    ExplicitTop = 393
+    ExplicitWidth = 369
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8
@@ -194,50 +203,51 @@ object STProdImportCustFrm: TSTProdImportCustFrm
   object pnlPrefix: TPanel
     Left = 0
     Top = 57
-    Width = 375
+    Width = 385
     Height = 107
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 369
     object lblStep2: TLabel
       Left = 8
       Top = 8
-      Width = 193
-      Height = 13
+      Width = 220
+      Height = 17
       Caption = '2. Select the Customer product prefix.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 32
-      Top = 35
-      Width = 75
-      Height = 13
+      Left = 22
+      Top = 33
+      Width = 85
+      Height = 17
       Caption = 'Product prefix:'
     end
     object Label2: TLabel
-      Left = 32
-      Top = 60
-      Width = 59
-      Height = 13
+      Left = 22
+      Top = 58
+      Width = 65
+      Height = 17
       Caption = 'Warehouse'
     end
     object Label4: TLabel
-      Left = 32
-      Top = 84
-      Width = 16
-      Height = 13
+      Left = 22
+      Top = 82
+      Width = 17
+      Height = 17
       Caption = 'Bin'
     end
     object edtPrefix: TEdit
       Left = 112
       Top = 27
       Width = 65
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       Enabled = False
       TabOrder = 0
@@ -256,7 +266,7 @@ object STProdImportCustFrm: TSTProdImportCustFrm
       Left = 112
       Top = 56
       Width = 201
-      Height = 21
+      Height = 25
       Enabled = False
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
@@ -268,7 +278,7 @@ object STProdImportCustFrm: TSTProdImportCustFrm
       Left = 112
       Top = 80
       Width = 97
-      Height = 21
+      Height = 25
       Enabled = False
       ReadOnly = True
       TabOrder = 3

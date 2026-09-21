@@ -3,13 +3,13 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   Top = 93
   Caption = 'Maintain Rep Commissions and Budgets'
   ClientHeight = 507
-  ClientWidth = 646
+  ClientWidth = 716
   Color = clBtnFace
   Constraints.MinHeight = 536
   Constraints.MinWidth = 658
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -18,22 +18,26 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
     Top = 488
-    Width = 646
+    Width = 716
     Height = 19
     Panels = <>
+    ExplicitTop = 479
+    ExplicitWidth = 640
   end
   object Panel1: TPanel
     Left = 0
     Top = 447
-    Width = 646
+    Width = 716
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 438
+    ExplicitWidth = 640
     object OKBitBtn: TBitBtn
       Left = 243
       Top = 8
@@ -59,14 +63,15 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pnlBonus: TPanel
     Left = 0
     Top = 70
-    Width = 646
-    Height = 83
+    Width = 716
+    Height = 105
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 646
     object grpbxBonus: TGroupBox
-      Left = 440
-      Top = 41
+      Left = 496
+      Top = 49
       Width = 201
       Height = 40
       ParentBackground = False
@@ -75,8 +80,8 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object lblBonus: TLabel
         Left = 8
         Top = 16
-        Width = 58
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Bonus Rate'
       end
       object memBonus: TMemo
@@ -92,10 +97,10 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       end
     end
     object rdgrpBonus: TRadioGroup
-      Left = 192
-      Top = 1
-      Width = 113
-      Height = 77
+      Left = 231
+      Top = 6
+      Width = 107
+      Height = 88
       Caption = 'Bonus Period'
       ItemIndex = 0
       Items.Strings = (
@@ -106,10 +111,10 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       TabOrder = 1
     end
     object rdgrpBonusType: TRadioGroup
-      Left = 312
-      Top = 1
-      Width = 121
-      Height = 64
+      Left = 344
+      Top = 6
+      Width = 136
+      Height = 67
       Caption = 'Bonus Type'
       ItemIndex = 0
       Items.Strings = (
@@ -120,8 +125,8 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       OnClick = rdgrpBonusTypeClick
     end
     object grpbxCommission: TGroupBox
-      Left = 440
-      Top = 1
+      Left = 496
+      Top = 9
       Width = 201
       Height = 40
       ParentBackground = False
@@ -130,8 +135,8 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object Label4: TLabel
         Left = 8
         Top = 16
-        Width = 100
-        Height = 13
+        Width = 116
+        Height = 17
         Caption = 'Commission Rate %'
       end
       object memCommission: TMemo
@@ -148,9 +153,9 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     end
     object rdgrpCommType: TRadioGroup
       Left = 8
-      Top = 1
-      Width = 177
-      Height = 77
+      Top = 6
+      Width = 217
+      Height = 88
       Caption = 'Commission basis'
       ItemIndex = 0
       Items.Strings = (
@@ -164,19 +169,22 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   end
   object pgBudgets: TPageControl
     Left = 0
-    Top = 153
-    Width = 646
-    Height = 294
+    Top = 175
+    Width = 716
+    Height = 272
     ActivePage = tbshtCategory
     Align = alClient
     TabOrder = 3
+    ExplicitTop = 153
+    ExplicitWidth = 646
+    ExplicitHeight = 294
     object tbshtCategory: TTabSheet
       Caption = 'Category Commission Rates'
       object grdCategory: TStringGrid
         Left = 0
         Top = 0
         Width = 633
-        Height = 266
+        Height = 240
         Align = alLeft
         DefaultColWidth = 200
         DefaultRowHeight = 19
@@ -188,6 +196,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         OnExit = grdCategoryExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdCategorySelectCell
+        ExplicitHeight = 257
         ColWidths = (
           200
           94
@@ -205,7 +214,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         Left = 184
         Top = 208
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 1
         Visible = False
@@ -221,28 +230,30 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 645
+        Width = 708
         Height = 22
         Align = alTop
         Caption = 'Panel5'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 638
         object Label3: TLabel
           Left = 6
           Top = 3
-          Width = 46
-          Height = 13
+          Width = 53
+          Height = 17
           Caption = 'Category'
         end
         object ScrollBox1: TScrollBox
           Left = 212
           Top = 1
-          Width = 432
+          Width = 495
           Height = 20
           VertScrollBar.Visible = False
           Align = alRight
           Anchors = [akLeft, akTop, akRight, akBottom]
           TabOrder = 0
+          ExplicitWidth = 425
           object StringGrid1: TStringGrid
             Left = -2
             Top = -5
@@ -261,8 +272,8 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object grdDetails: TStringGrid
         Left = 0
         Top = 22
-        Width = 645
-        Height = 258
+        Width = 708
+        Height = 218
         Align = alClient
         ColCount = 25
         DefaultColWidth = 70
@@ -313,33 +324,34 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 646
+    Width = 716
     Height = 70
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 640
     object Label2: TLabel
       Left = 16
       Top = 7
-      Width = 23
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'Rep:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label1: TLabel
       Left = 16
-      Top = 31
-      Width = 74
-      Height = 13
+      Top = 35
+      Width = 90
+      Height = 17
       Caption = 'Financial Year:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -347,25 +359,25 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     object lblRepName: TLabel
       Left = 112
       Top = 7
-      Width = 64
-      Height = 13
+      Width = 75
+      Height = 17
       Caption = 'lblRepName'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblFinancialYear: TLabel
       Left = 112
-      Top = 31
-      Width = 81
-      Height = 13
+      Top = 35
+      Width = 97
+      Height = 17
       Caption = 'lblFinancialYear'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -381,15 +393,15 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 16
-        Width = 52
-        Height = 13
+        Width = 62
+        Height = 17
         Caption = 'Rep Name'
       end
       object edtRep: TEdit
         Left = 8
         Top = 32
         Width = 196
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end

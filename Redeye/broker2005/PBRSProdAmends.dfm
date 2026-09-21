@@ -3,29 +3,29 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Production Data Collection Report'
-  ClientHeight = 221
-  ClientWidth = 752
+  ClientHeight = 256
+  ClientWidth = 805
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    752
-    221)
-  TextHeight = 13
+    805
+    256)
+  TextHeight = 17
   object Label1: TLabel
     Left = 456
-    Top = 15
-    Width = 56
-    Height = 13
+    Top = 10
+    Width = 64
+    Height = 17
     Caption = 'From Date:'
   end
   object DateFromButton: TSpeedButton
-    Left = 559
+    Left = 560
     Top = 32
     Width = 25
     Height = 22
@@ -48,13 +48,13 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   object Label2: TLabel
     Left = 456
     Top = 76
-    Width = 42
-    Height = 13
+    Width = 48
+    Height = 17
     Caption = 'To Date:'
   end
   object DateToButton: TSpeedButton
     Left = 559
-    Top = 88
+    Top = 95
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -76,8 +76,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   object rgDepartment: TRadioGroup
     Left = 8
     Top = 8
-    Width = 113
-    Height = 60
+    Width = 129
+    Height = 65
     Caption = ' By Department'
     ItemIndex = 0
     Items.Strings = (
@@ -90,8 +90,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   object rgCustomer: TRadioGroup
     Left = 8
     Top = 80
-    Width = 113
-    Height = 60
+    Width = 128
+    Height = 65
     Caption = 'By Customer'
     ItemIndex = 0
     Items.Strings = (
@@ -102,8 +102,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     OnClick = rgCustomerClick
   end
   object pnlDepartment: TPanel
-    Left = 129
-    Top = 14
+    Left = 143
+    Top = 15
     Width = 304
     Height = 50
     ParentBackground = False
@@ -112,15 +112,15 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     object lblRep: TLabel
       Left = 8
       Top = 4
-      Width = 61
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Department'
     end
     object edtDepartment: TEdit
       Left = 8
       Top = 20
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       ReadOnly = True
       TabOrder = 0
@@ -142,8 +142,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     end
   end
   object pnlCustSearch: TPanel
-    Left = 128
-    Top = 83
+    Left = 142
+    Top = 88
     Width = 305
     Height = 57
     ParentBackground = False
@@ -152,15 +152,15 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 1
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 17
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -184,16 +184,16 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Left = 455
     Top = 31
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 4
     OnExit = DateFromEditExit
   end
   object DateToEdit: TEdit
     Left = 455
-    Top = 89
+    Top = 95
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 5
     OnExit = DateToEditExit
@@ -201,8 +201,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   object TotByRadioGroup: TRadioGroup
     Left = 600
     Top = 8
-    Width = 113
-    Height = 121
+    Width = 137
+    Height = 129
     Caption = 'Report Totals'
     ItemIndex = 4
     Items.Strings = (
@@ -217,8 +217,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   end
   object chkbxPageBreak: TCheckBox
     Left = 600
-    Top = 143
-    Width = 113
+    Top = 148
+    Width = 158
     Height = 17
     Caption = 'Page break by total'
     Enabled = False
@@ -226,7 +226,7 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   end
   object btnCancel: TBitBtn
     Left = 8
-    Top = 189
+    Top = 208
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -234,10 +234,11 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 8
+    ExplicitTop = 245
   end
   object btnExcel: TBitBtn
-    Left = 446
-    Top = 189
+    Left = 510
+    Top = 208
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -287,10 +288,11 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
+    ExplicitTop = 245
   end
   object btnPreview: TBitBtn
-    Left = 544
-    Top = 189
+    Left = 608
+    Top = 208
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -311,10 +313,11 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     NumGlyphs = 2
     TabOrder = 10
     OnClick = btnPreviewClick
+    ExplicitTop = 245
   end
   object btnPrint: TBitBtn
-    Left = 632
-    Top = 189
+    Left = 696
+    Top = 208
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -335,10 +338,11 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     NumGlyphs = 2
     TabOrder = 11
     OnClick = btnPrintClick
+    ExplicitTop = 245
   end
   object pnlExportPrgrss: TPanel
-    Left = 196
-    Top = 52
+    Left = 239
+    Top = 62
     Width = 289
     Height = 61
     ParentBackground = False
@@ -347,8 +351,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -361,8 +365,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
     end
   end
   object OleContainer1: TOleContainer
-    Left = 344
-    Top = 24
+    Left = 279
+    Top = 129
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -372,8 +376,8 @@ object PBRSProdAmendsFrm: TPBRSProdAmendsFrm
   end
   object chkbxRechargeable: TCheckBox
     Left = 600
-    Top = 162
-    Width = 153
+    Top = 172
+    Width = 193
     Height = 17
     Caption = 'Only show re-chargeables'
     TabOrder = 14

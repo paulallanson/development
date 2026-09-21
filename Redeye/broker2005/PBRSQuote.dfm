@@ -3,57 +3,60 @@ object frmPBRSQuote: TfrmPBRSQuote
   Top = 188
   BorderStyle = bsDialog
   Caption = 'Print Quote Details'
-  ClientHeight = 243
+  ClientHeight = 264
   ClientWidth = 414
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
     Top = 0
     Width = 414
-    Height = 243
+    Height = 264
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 408
+    ExplicitHeight = 234
     DesignSize = (
       414
-      243)
+      264)
     object CancelBitBtn: TBitBtn
       Left = 9
-      Top = 209
+      Top = 230
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
+      ExplicitTop = 200
     end
     object PreviewBitBtn: TBitBtn
       Left = 97
-      Top = 209
+      Top = 230
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = 'Pre&view'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -73,10 +76,11 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
+      ExplicitTop = 200
     end
     object PrintBitBtn: TBitBtn
       Left = 177
-      Top = 209
+      Top = 230
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -84,7 +88,7 @@ object frmPBRSQuote: TfrmPBRSQuote
       Default = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -104,17 +108,18 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitTop = 200
     end
     object FaxBitBtn: TBitBtn
       Left = 257
-      Top = 209
+      Top = 230
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Fax'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -134,10 +139,11 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 3
       Visible = False
+      ExplicitTop = 200
     end
     object EmailBitBtn: TBitBtn
       Left = 336
-      Top = 209
+      Top = 230
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -158,6 +164,7 @@ object frmPBRSQuote: TfrmPBRSQuote
       NumGlyphs = 2
       TabOrder = 4
       OnClick = EmailBitBtnClick
+      ExplicitTop = 200
     end
     object GroupBox1: TGroupBox
       Left = 8
@@ -169,12 +176,12 @@ object frmPBRSQuote: TfrmPBRSQuote
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 32
-        Height = 13
+        Width = 36
+        Height = 17
         Caption = 'Quote'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -182,22 +189,22 @@ object frmPBRSQuote: TfrmPBRSQuote
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 75
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object Label3: TLabel
         Left = 8
         Top = 111
-        Width = 44
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Quantity'
       end
       object memSelection: TMemo
@@ -208,7 +215,7 @@ object frmPBRSQuote: TfrmPBRSQuote
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -248,7 +255,7 @@ object frmPBRSQuote: TfrmPBRSQuote
         Top = 3
         Width = 25
         Height = 105
-        ItemHeight = 13
+        ItemHeight = 17
         Sorted = True
         TabOrder = 3
         Visible = False

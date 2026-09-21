@@ -2,7 +2,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   Left = 15
   Top = 30
   Caption = 'Expected Reorder Report'
-  ClientHeight = 423
+  ClientHeight = 424
   ClientWidth = 733
   Color = clBtnFace
   Constraints.MinHeight = 462
@@ -24,34 +24,41 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     Width = 733
     Height = 113
     Align = alTop
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 727
     object lblOrderBy1: TLabel
       Left = 8
       Top = 84
-      Width = 38
-      Height = 13
+      Width = 44
+      Height = 17
       Caption = 'Sort By:'
     end
     object Label1: TLabel
       Left = 240
       Top = 84
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Then By:'
     end
     object Label2: TLabel
       Left = 480
       Top = 84
-      Width = 130
-      Height = 13
+      Width = 148
+      Height = 17
       Caption = 'Show Orders Due in Next'
     end
     object Label3: TLabel
-      Left = 688
+      Left = 693
       Top = 84
-      Width = 23
-      Height = 13
+      Width = 27
+      Height = 17
       Caption = 'days'
     end
     object AllOrOneRadioGroup: TRadioGroup
@@ -84,7 +91,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Left = 64
       Top = 80
       Width = 145
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnChange = cmbbxOrderBy1Change
       Items.Strings = (
@@ -96,7 +103,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Left = 296
       Top = 80
       Width = 145
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnChange = cmbbxOrderBy1Change
       Items.Strings = (
@@ -105,7 +112,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         'Expiry Date')
     end
     object UpDown1: TUpDown
-      Left = 665
+      Left = 670
       Top = 80
       Width = 15
       Height = 21
@@ -114,10 +121,10 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnClick = UpDown1Click
     end
     object edtDueDays: TEdit
-      Left = 632
+      Left = 637
       Top = 80
       Width = 33
-      Height = 21
+      Height = 25
       TabOrder = 5
       Text = '0'
       OnExit = edtDueDaysExit
@@ -132,9 +139,9 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Visible = False
       object lblRep: TLabel
         Left = 8
-        Top = 16
-        Width = 20
-        Height = 13
+        Top = 12
+        Width = 23
+        Height = 17
         Caption = 'Rep'
         Visible = False
       end
@@ -157,7 +164,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         Left = 8
         Top = 32
         Width = 201
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
         Visible = False
@@ -173,9 +180,9 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Visible = False
       object Customerlbl: TLabel
         Left = 6
-        Top = 16
-        Width = 88
-        Height = 13
+        Top = 12
+        Width = 100
+        Height = 17
         Caption = 'Customer/Branch'
         Visible = False
       end
@@ -198,7 +205,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         Left = 8
         Top = 32
         Width = 193
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
         Visible = False
@@ -207,12 +214,20 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object pnlButton: TPanel
     Left = 0
-    Top = 363
+    Top = 364
     Width = 733
     Height = 41
     Align = alBottom
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 1
+    ExplicitTop = 355
+    ExplicitWidth = 727
     DesignSize = (
       733
       41)
@@ -276,7 +291,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnClick = btbtnChangeClick
     end
     object PreviewBitBtn: TBitBtn
-      Left = 543
+      Left = 537
       Top = 8
       Width = 75
       Height = 25
@@ -298,9 +313,10 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 531
     end
     object PrintBitBtn: TBitBtn
-      Left = 631
+      Left = 625
       Top = 8
       Width = 75
       Height = 25
@@ -322,20 +338,21 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 619
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
     Width = 733
-    Height = 250
+    Height = 251
     Align = alClient
     DataSource = dtsrcLive
     DefaultDrawing = False
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -344,7 +361,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -456,7 +473,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 404
+    Top = 405
     Width = 733
     Height = 19
     Panels = <
@@ -466,6 +483,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 396
+    ExplicitWidth = 727
   end
   object qryLive: TFDQuery
     ConnectionName = 'PB'

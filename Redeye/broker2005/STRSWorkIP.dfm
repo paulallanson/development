@@ -3,29 +3,31 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
   Top = 43
   Caption = 'Work In Progress'
   ClientHeight = 489
-  ClientWidth = 760
+  ClientWidth = 777
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 768
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlControl: TPanel
     Left = 0
     Top = 448
-    Width = 760
+    Width = 777
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 439
+    ExplicitWidth = 754
     object pnlRightControl: TPanel
-      Left = 429
+      Left = 446
       Top = 0
       Width = 331
       Height = 41
@@ -33,6 +35,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 423
       DesignSize = (
         331
         41)
@@ -149,24 +152,27 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
   end
   object pnlDetail: TPanel
     Left = 0
-    Top = 177
-    Width = 760
-    Height = 271
+    Top = 203
+    Width = 777
+    Height = 245
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 177
+    ExplicitWidth = 754
+    ExplicitHeight = 262
     object DBGrid: TDBGrid
       Left = 0
       Top = 0
-      Width = 760
-      Height = 271
+      Width = 777
+      Height = 245
       Align = alClient
       DataSource = dsReport
       DrawingStyle = gdsGradient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -174,7 +180,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -253,8 +259,8 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Exporting...'
       end
       object prgbrExport: TProgressBar
@@ -280,43 +286,44 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 760
-    Height = 177
+    Width = 777
+    Height = 203
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 760
     object Label3: TLabel
       Left = 8
-      Top = 128
-      Width = 59
-      Height = 13
+      Top = 149
+      Width = 68
+      Height = 17
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
-      Top = 128
-      Width = 62
-      Height = 13
+      Top = 149
+      Width = 70
+      Height = 17
       Caption = 'then sort by'
     end
     object Label5: TLabel
       Left = 312
-      Top = 128
-      Width = 92
-      Height = 13
+      Top = 149
+      Width = 104
+      Height = 17
       Caption = 'and finally sort by'
     end
     object Label1: TLabel
       Left = 439
       Top = 3
-      Width = 75
-      Height = 13
+      Width = 86
+      Height = 17
       Caption = 'Ordered since:'
     end
     object DateFromButton: TSpeedButton
       Left = 552
-      Top = 14
+      Top = 20
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -337,14 +344,14 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
     object Label2: TLabel
       Left = 439
-      Top = 48
-      Width = 103
-      Height = 13
+      Top = 54
+      Width = 118
+      Height = 17
       Caption = 'Delivery due before:'
     end
     object DateToButton: TSpeedButton
       Left = 552
-      Top = 59
+      Top = 71
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -366,8 +373,8 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     object rgRep: TRadioGroup
       Left = 8
       Top = 1
-      Width = 100
-      Height = 58
+      Width = 124
+      Height = 65
       Caption = ' By Rep'
       ItemIndex = 0
       Items.Strings = (
@@ -379,9 +386,9 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
     object rgCustomer: TRadioGroup
       Left = 8
-      Top = 63
-      Width = 100
-      Height = 58
+      Top = 70
+      Width = 124
+      Height = 65
       Caption = ' By customer '
       ItemIndex = 0
       Items.Strings = (
@@ -392,8 +399,8 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       OnClick = rgCustomerClick
     end
     object RepPanel: TPanel
-      Left = 113
-      Top = 6
+      Left = 139
+      Top = 10
       Width = 281
       Height = 49
       ParentBackground = False
@@ -401,15 +408,15 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       object lblSupplier: TLabel
         Left = 8
         Top = 4
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Caption = 'Rep'
       end
       object edtRep: TEdit
         Left = 8
         Top = 20
         Width = 233
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -430,8 +437,8 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       end
     end
     object CustomerPanel: TPanel
-      Left = 115
-      Top = 68
+      Left = 139
+      Top = 79
       Width = 281
       Height = 49
       ParentBackground = False
@@ -439,15 +446,15 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       object lblCustomer: TLabel
         Left = 8
         Top = 4
-        Width = 88
-        Height = 13
+        Width = 100
+        Height = 17
         Caption = 'Customer/Branch'
       end
       object edtCustomer: TEdit
         Left = 8
         Top = 20
         Width = 233
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -469,9 +476,9 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
     object cbSort1: TComboBox
       Left = 8
-      Top = 144
+      Top = 165
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 4
       OnChange = cbSortChange
@@ -484,9 +491,9 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
     object cbSort2: TComboBox
       Left = 160
-      Top = 144
+      Top = 165
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 5
       OnChange = cbSortChange
@@ -499,9 +506,9 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
     object cbSort3: TComboBox
       Left = 312
-      Top = 144
+      Top = 165
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 6
       OnChange = cbSortChange
@@ -513,17 +520,19 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
         ' ')
     end
     object pnlDates: TPanel
-      Left = 582
+      Left = 599
       Top = 0
       Width = 178
-      Height = 177
+      Height = 203
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 7
+      ExplicitLeft = 576
+      ExplicitHeight = 177
       object chkbxPageBreak: TCheckBox
         Left = 33
-        Top = 96
+        Top = 111
         Width = 145
         Height = 17
         Caption = 'Page break on total'
@@ -534,8 +543,8 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       object TotByRadioGroup: TRadioGroup
         Left = 33
         Top = 8
-        Width = 105
-        Height = 73
+        Width = 128
+        Height = 88
         Caption = 'Report Totals'
         ItemIndex = 2
         Items.Strings = (
@@ -549,18 +558,18 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
     object DateFromEdit: TEdit
       Left = 439
-      Top = 16
+      Top = 22
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 8
       OnExit = DateFromEditExit
     end
     object DateToEdit: TEdit
       Left = 439
-      Top = 61
+      Top = 73
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 9
       OnExit = DateToEditExit

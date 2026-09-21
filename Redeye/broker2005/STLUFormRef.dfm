@@ -8,53 +8,53 @@ object frmSTLUFormRef: TfrmSTLUFormRef
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object CustLabel: TLabel
-    Left = 88
+    Left = 99
     Top = 54
-    Width = 50
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object Label2: TLabel
     Left = 8
     Top = 54
-    Width = 52
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer:'
   end
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 73
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Product Code:'
   end
   object lblProductCode: TLabel
-    Left = 88
+    Left = 99
     Top = 8
-    Width = 80
-    Height = 13
+    Width = 90
+    Height = 17
     Caption = 'lblProductCode'
   end
   object Label3: TLabel
     Left = 8
     Top = 32
-    Width = 62
-    Height = 13
+    Width = 69
+    Height = 17
     Caption = 'Description:'
   end
   object lblDescription: TLabel
-    Left = 88
+    Left = 99
     Top = 32
-    Width = 72
-    Height = 13
+    Width = 80
+    Height = 17
     Caption = 'lblDescription'
   end
   object RefDBGrid: TDBGrid
@@ -66,7 +66,7 @@ object frmSTLUFormRef: TfrmSTLUFormRef
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -74,7 +74,7 @@ object frmSTLUFormRef: TfrmSTLUFormRef
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = RefDBGridColEnter
@@ -100,7 +100,7 @@ object frmSTLUFormRef: TfrmSTLUFormRef
       Left = 8
       Top = 16
       Width = 305
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = NameEditChange
     end
@@ -230,8 +230,8 @@ object frmSTLUFormRef: TfrmSTLUFormRef
     object LabelName: TLabel
       Left = 4
       Top = 2
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
   end
@@ -270,11 +270,13 @@ object frmSTLUFormRef: TfrmSTLUFormRef
       item
         Width = 50
       end>
+    ExplicitTop = 355
+    ExplicitWidth = 442
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
-    Left = 344
-    Top = 8
+    Left = 238
+    Top = 26
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -287,8 +289,8 @@ object frmSTLUFormRef: TfrmSTLUFormRef
         '      ((Stock_Reference = '#39#39') or (Stock_Reference = :Stock_Refer' +
         'ence))'
       'order by Form_reference_id')
-    Left = 368
-    Top = 72
+    Left = 236
+    Top = 98
     ParamData = <
       item
         Name = 'Code_From'

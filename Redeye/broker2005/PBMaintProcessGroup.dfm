@@ -3,25 +3,25 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
   Top = 152
   Caption = 'Maintain Process Group'
   ClientHeight = 202
-  ClientWidth = 409
+  ClientWidth = 442
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 117
-    Top = 176
-    Width = 109
-    Height = 13
+    Top = 171
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -29,7 +29,7 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 401
+    Width = 426
     Height = 145
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -42,19 +42,25 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
     object Label1: TLabel
       Left = 8
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
     end
     object Label7: TLabel
       Left = 7
       Top = 80
-      Width = 95
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = 'Department E-mail'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -62,12 +68,12 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
     object Label5: TLabel
       Left = 81
       Top = 104
-      Width = 10
-      Height = 13
+      Width = 12
+      Height = 17
       Caption = 'cc'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -75,51 +81,75 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
     object Label2: TLabel
       Left = 7
       Top = 48
-      Width = 60
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Hourly Rate'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object DescrEdit: TEdit
-      Left = 102
+      Left = 121
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       MaxLength = 40
+      ParentFont = False
       TabOrder = 0
       Text = 'DescrEdit'
       OnChange = CheckOK
     end
     object EMailEdit: TEdit
-      Left = 102
+      Left = 121
       Top = 76
       Width = 283
-      Height = 21
+      Height = 25
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       MaxLength = 100
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
     end
     object ccEmailEdit: TEdit
-      Left = 102
+      Left = 121
       Top = 100
       Width = 283
-      Height = 21
+      Height = 25
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       MaxLength = 100
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 3
     end
     object memHourlyRate: TMemo
-      Left = 102
+      Left = 121
       Top = 44
       Width = 91
       Height = 21
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
       WantReturns = False
       WordWrap = False
@@ -304,8 +334,8 @@ object PBMaintProcessGroupFrm: TPBMaintProcessGroupFrm
       'Select Max(Process_Group)+1, :GUID'
       'From Process_Group'
       ' ')
-    Left = 344
-    Top = 16
+    Left = 230
+    Top = 12
     ParamData = <
       item
         Name = 'GUID'

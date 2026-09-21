@@ -8,21 +8,21 @@ object PBMaintQuoteReasonFrm: TPBMaintQuoteReasonFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 237
-    Top = 84
-    Width = 109
-    Height = 13
+    Top = 80
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -31,11 +31,11 @@ object PBMaintQuoteReasonFrm: TPBMaintQuoteReasonFrm
     Left = 88
     Top = 8
     Width = 441
-    Height = 57
+    Height = 66
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -44,15 +44,15 @@ object PBMaintQuoteReasonFrm: TPBMaintQuoteReasonFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Reason'
     end
     object DescrEdit: TEdit
-      Left = 54
+      Left = 60
       Top = 24
-      Width = 379
-      Height = 21
+      Width = 371
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -215,7 +215,7 @@ object PBMaintQuoteReasonFrm: TPBMaintQuoteReasonFrm
     Left = 8
     Top = 8
     Width = 73
-    Height = 57
+    Height = 65
     Caption = 'Type'
     ItemIndex = 0
     Items.Strings = (

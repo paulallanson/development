@@ -8,7 +8,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,12 +18,12 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
   DesignSize = (
     532
     297)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 20
-    Width = 102
-    Height = 13
+    Width = 116
+    Height = 17
     Caption = 'Select Financial Year'
   end
   object rgRep: TRadioGroup
@@ -50,16 +50,16 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 52
-      Height = 13
+      Top = 5
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 209
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -83,7 +83,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Left = 132
     Top = 16
     Width = 157
-    Height = 21
+    Height = 25
     KeyField = 'Financial_Year'
     ListField = 'Title'
     ListSource = dtsFY
@@ -100,6 +100,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = CancelBitBtnClick
+    ExplicitTop = 250
   end
   object PreviewBitBtn: TBitBtn
     Left = 8
@@ -125,6 +126,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 250
   end
   object PrintBitBtn: TBitBtn
     Left = 99
@@ -150,6 +152,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     NumGlyphs = 2
     TabOrder = 5
     OnClick = PrintBitBtnClick
+    ExplicitTop = 250
   end
   object chkbxExcludeJBCosts: TCheckBox
     Left = 8
@@ -159,10 +162,11 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Anchors = [akLeft, akBottom]
     Caption = 'Exclude Default Job Bag Costs'
     TabOrder = 6
+    ExplicitTop = 193
   end
   object pnlExportPrgrss: TPanel
-    Left = 59
-    Top = 59
+    Left = 140
+    Top = 79
     Width = 289
     Height = 61
     ParentBackground = False
@@ -171,8 +175,8 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -247,6 +251,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = ExcelBitBtnClick
+    ExplicitTop = 250
   end
   object rdgrpBudgetType: TRadioGroup
     Left = 8
@@ -272,12 +277,13 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Checked = True
     State = cbChecked
     TabOrder = 11
+    ExplicitTop = 217
   end
   object rdgrpRepType: TRadioGroup
     Left = 400
     Top = 120
     Width = 121
-    Height = 62
+    Height = 65
     Caption = 'Rep Type '
     ItemIndex = 0
     Items.Strings = (
@@ -291,7 +297,7 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
     Left = 400
     Top = 48
     Width = 121
-    Height = 62
+    Height = 65
     Caption = 'Report Type '
     ItemIndex = 0
     Items.Strings = (
@@ -326,8 +332,8 @@ object PBRSPEndRepsPerformfrm: TPBRSPEndRepsPerformfrm
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'
-    Left = 88
-    Top = 8
+    Left = 310
+    Top = 10
   end
   object qryGetFYPeriods: TFDQuery
     ConnectionName = 'PB'

@@ -8,18 +8,18 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 468
-    Height = 65
+    Height = 83
     Align = alTop
     Enabled = False
     ParentBackground = False
@@ -27,36 +27,36 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
     object lblProduct: TLabel
       Left = 8
       Top = 8
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Product:'
     end
     object lblDescription: TLabel
       Left = 8
-      Top = 27
-      Width = 62
-      Height = 13
+      Top = 29
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object Label4: TLabel
       Left = 248
       Top = 8
-      Width = 104
-      Height = 13
+      Width = 117
+      Height = 17
       Caption = 'Movement Quantity:'
     end
     object lblQuantity: TLabel
-      Left = 360
+      Left = 369
       Top = 8
-      Width = 57
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'lblQuantity'
     end
     object lblSetsperPad: TLabel
       Left = 8
-      Top = 45
-      Width = 98
-      Height = 13
+      Top = 50
+      Width = 113
+      Height = 17
       Caption = 'Sets per pad/book:'
     end
   end
@@ -68,6 +68,8 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 296
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 156
       Top = 8
@@ -109,17 +111,20 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
   end
   object Panel3: TPanel
     Left = 0
-    Top = 65
+    Top = 83
     Width = 468
-    Height = 240
+    Height = 222
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 65
+    ExplicitWidth = 462
+    ExplicitHeight = 231
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Number Sequence'
     end
     object sgDetail: TStringGrid

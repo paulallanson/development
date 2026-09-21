@@ -4,27 +4,27 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
   BorderStyle = bsDialog
   Caption = 'Transfer Details'
   ClientHeight = 399
-  ClientWidth = 343
+  ClientWidth = 375
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object PnlActn: TPanel
     Left = 0
     Top = 358
-    Width = 343
+    Width = 375
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 343
-    ExplicitWidth = 332
+    ExplicitTop = 349
+    ExplicitWidth = 337
     object OKBitBtn: TBitBtn
       Left = 91
       Top = 8
@@ -66,38 +66,35 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
   object pnlJobNumber: TPanel
     Left = 0
     Top = 320
-    Width = 343
+    Width = 375
     Height = 38
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 305
-    ExplicitWidth = 332
+    ExplicitTop = 311
+    ExplicitWidth = 337
     object grpbxJobNumber: TGroupBox
       Left = 0
       Top = 0
-      Width = 343
+      Width = 375
       Height = 38
       Align = alClient
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 8
-      ExplicitTop = -2
-      ExplicitWidth = 329
-      ExplicitHeight = 34
+      ExplicitWidth = 337
       object Label8: TLabel
         Left = 9
         Top = 13
-        Width = 62
-        Height = 13
+        Width = 73
+        Height = 17
         Caption = 'Job Number'
       end
       object edtJobNumber: TEdit
         Left = 88
         Top = 9
         Width = 89
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         TabOrder = 0
       end
@@ -106,55 +103,56 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
   object pnlMain: TPanel
     Left = 0
     Top = 0
-    Width = 343
+    Width = 375
     Height = 321
     Align = alTop
     TabOrder = 2
+    ExplicitTop = 2
     object GroupBox1: TGroupBox
       Left = 8
       Top = 8
-      Width = 329
+      Width = 345
       Height = 169
       ParentBackground = False
       TabOrder = 0
       object Label5: TLabel
         Left = 9
         Top = 50
-        Width = 44
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Quantity'
       end
       object Label1: TLabel
         Left = 9
-        Top = 80
-        Width = 46
-        Height = 13
+        Top = 75
+        Width = 53
+        Height = 17
         Caption = 'Pack Size'
       end
       object QtyLabel: TLabel
         Left = 9
-        Top = 110
-        Width = 60
-        Height = 13
+        Top = 105
+        Width = 70
+        Height = 17
         Caption = 'No of Packs'
       end
       object BinLabel: TLabel
         Left = 9
-        Top = 21
-        Width = 40
-        Height = 13
+        Top = 16
+        Width = 43
+        Height = 17
         Caption = 'Into Bin'
       end
       object Label2: TLabel
         Left = 9
-        Top = 140
-        Width = 49
-        Height = 13
+        Top = 135
+        Width = 56
+        Height = 17
         Caption = 'Pack Cost'
       end
       object memoQty: TMemo
-        Left = 88
-        Top = 45
+        Left = 94
+        Top = 47
         Width = 89
         Height = 21
         Alignment = taRightJustify
@@ -164,8 +162,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         OnKeyPress = memoQtyKeyPress
       end
       object PackSizeMemo: TMemo
-        Left = 88
-        Top = 74
+        Left = 94
+        Top = 76
         Width = 89
         Height = 21
         Alignment = taRightJustify
@@ -177,8 +175,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         OnKeyPress = PackSizeMemoKeyPress
       end
       object MemoNoofPacks: TMemo
-        Left = 88
-        Top = 103
+        Left = 94
+        Top = 105
         Width = 89
         Height = 21
         Alignment = taRightJustify
@@ -188,16 +186,16 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         OnKeyPress = MemoNoofPacksKeyPress
       end
       object BinEdit: TEdit
-        Left = 88
-        Top = 17
+        Left = 94
+        Top = 14
         Width = 153
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         TabOrder = 0
       end
       object BinBitBtn: TBitBtn
-        Left = 256
-        Top = 15
+        Left = 262
+        Top = 12
         Width = 25
         Height = 25
         Caption = '...'
@@ -211,8 +209,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         OnClick = BinBitBtnClick
       end
       object CostMemo: TMemo
-        Left = 88
-        Top = 132
+        Left = 94
+        Top = 134
         Width = 89
         Height = 21
         Alignment = taRightJustify
@@ -227,7 +225,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     object GroupBox2: TGroupBox
       Left = 8
       Top = 177
-      Width = 329
+      Width = 345
       Height = 136
       ParentBackground = False
       TabOrder = 1
@@ -241,55 +239,55 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         WordWrap = True
       end
       object Label4: TLabel
-        Left = 128
+        Left = 150
         Top = 42
-        Width = 94
-        Height = 13
+        Width = 109
+        Height = 17
         Caption = 'sets per pad/book'
       end
       object Label6: TLabel
         Left = 9
         Top = 67
-        Width = 79
-        Height = 13
+        Width = 91
+        Height = 17
         Caption = 'Purchase Order'
       end
       object Label7: TLabel
         Left = 9
         Top = 103
-        Width = 42
-        Height = 13
+        Width = 47
+        Height = 17
         Caption = 'Pallet ID'
       end
       object EdtStckDsc: TEdit
-        Left = 88
+        Left = 110
         Top = 10
-        Width = 209
-        Height = 21
+        Width = 215
+        Height = 25
         CharCase = ecUpperCase
         TabOrder = 0
       end
       object ChkBxInvUpfrnt: TCheckBox
         Left = 7
         Top = 40
-        Width = 94
+        Width = 122
         Height = 17
         Alignment = taLeftJustify
         Caption = 'Paid Stock'
         TabOrder = 1
       end
       object spnSets: TSpinEdit
-        Left = 236
+        Left = 270
         Top = 37
-        Width = 65
-        Height = 22
+        Width = 55
+        Height = 27
         MaxValue = 1000
         MinValue = 1
         TabOrder = 2
         Value = 1
       end
       object memPO: TMemo
-        Left = 88
+        Left = 110
         Top = 63
         Width = 89
         Height = 21
@@ -299,19 +297,19 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         OnKeyPress = PackSizeMemoKeyPress
       end
       object edtPalletID: TEdit
-        Left = 88
+        Left = 110
         Top = 99
         Width = 89
-        Height = 21
+        Height = 25
         CharCase = ecUpperCase
         Enabled = False
         ReadOnly = True
         TabOrder = 4
       end
       object chkbxOvers: TCheckBox
-        Left = 207
+        Left = 219
         Top = 100
-        Width = 94
+        Width = 106
         Height = 17
         Alignment = taLeftJustify
         Caption = 'Stock is Overs'
@@ -328,8 +326,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
       'Where (Part_Store = :Part_Store) and'
       '      (Part_Bin = :Part_Bin)'
       ' ')
-    Left = 192
-    Top = 160
+    Left = 344
+    Top = 24
     ParamData = <
       item
         Name = 'Part_Store'
@@ -346,8 +344,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
       'where part_store = :part_store and'
       'bin_can_pick = '#39'Y'#39';  '
       ' ')
-    Left = 264
-    Top = 160
+    Left = 282
+    Top = 80
     ParamData = <
       item
         Name = 'part_store'

@@ -3,34 +3,35 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
   Top = 134
   BorderStyle = bsDialog
   Caption = 'Product stock levels'
-  ClientHeight = 170
-  ClientWidth = 522
+  ClientHeight = 192
+  ClientWidth = 546
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    522
-    170)
-  TextHeight = 13
+    546
+    192)
+  TextHeight = 17
   object Button1: TButton
-    Left = 173
-    Top = 134
+    Left = 197
+    Top = 148
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Caption = '&Add'
     TabOrder = 0
     OnClick = Button1Click
+    ExplicitLeft = 173
   end
   object btnChange: TButton
-    Left = 254
-    Top = 134
+    Left = 278
+    Top = 148
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -38,10 +39,11 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
     Enabled = False
     TabOrder = 1
     OnClick = btnChangeClick
+    ExplicitLeft = 254
   end
   object btnClose: TButton
     Left = 439
-    Top = 134
+    Top = 148
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -58,7 +60,7 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -66,7 +68,7 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -177,7 +179,7 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
   object dtsStoreLevels: TDataSource
     DataSet = qryStoreLevels
     OnDataChange = SetButtons
-    Left = 424
-    Top = 16
+    Left = 338
+    Top = 44
   end
 end

@@ -3,78 +3,78 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
   Top = 133
   BorderStyle = bsSingle
   Caption = 'Maintain Product E-Commerce Info'
-  ClientHeight = 224
-  ClientWidth = 448
+  ClientHeight = 249
+  ClientWidth = 474
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object lblProdCode: TLabel
-    Left = 29
+    Left = 35
     Top = 16
-    Width = 73
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Product Code:'
   end
   object lblPromptInfo: TLabel
-    Left = 61
+    Left = 72
     Top = 50
-    Width = 40
-    Height = 13
+    Width = 46
+    Height = 17
     Caption = 'Prompt:'
   end
   object lblThmNail: TLabel
     Left = 8
     Top = 84
-    Width = 96
-    Height = 13
+    Width = 110
+    Height = 17
     Caption = 'Thumb Nail Image:'
   end
   object lblPopUp: TLabel
-    Left = 29
+    Left = 33
     Top = 118
-    Width = 73
-    Height = 13
+    Width = 85
+    Height = 17
     Caption = 'Pop-Up Image'
   end
   object lblPopImagePath: TLabel
-    Left = 29
+    Left = 34
     Top = 152
-    Width = 72
-    Height = 13
+    Width = 84
+    Height = 17
     Caption = 'Pop Up Image'
   end
   object edtProdCode: TEdit
-    Left = 120
+    Left = 128
     Top = 12
     Width = 145
-    Height = 21
+    Height = 25
     Enabled = False
     TabOrder = 0
   end
   object edtPromptInfo: TEdit
-    Left = 120
+    Left = 128
     Top = 46
     Width = 297
-    Height = 21
+    Height = 25
     MaxLength = 50
     TabOrder = 1
   end
   object edtThmNailFile: TEdit
-    Left = 120
+    Left = 128
     Top = 80
     Width = 241
-    Height = 21
+    Height = 25
     MaxLength = 100
     TabOrder = 2
   end
   object chkbxPopupYN: TCheckBox
-    Left = 120
+    Left = 128
     Top = 117
     Width = 25
     Height = 17
@@ -82,16 +82,16 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     OnClick = chkbxPopupYNClick
   end
   object edtPopImagePath: TEdit
-    Left = 120
+    Left = 128
     Top = 148
     Width = 241
-    Height = 21
+    Height = 25
     Enabled = False
     MaxLength = 100
     TabOrder = 4
   end
   object btnBrowse1: TButton
-    Left = 368
+    Left = 376
     Top = 79
     Width = 75
     Height = 25
@@ -100,7 +100,7 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     OnClick = btnBrowse1Click
   end
   object btnBrowse2: TButton
-    Left = 368
+    Left = 376
     Top = 147
     Width = 75
     Height = 25
@@ -110,8 +110,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     OnClick = btnBrowse2Click
   end
   object btbtnOK: TBitBtn
-    Left = 248
-    Top = 184
+    Left = 288
+    Top = 201
     Width = 75
     Height = 25
     Kind = bkOK
@@ -120,8 +120,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     OnClick = btbtnOKClick
   end
   object BitBtn2: TBitBtn
-    Left = 336
-    Top = 184
+    Left = 376
+    Top = 201
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -129,8 +129,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     TabOrder = 8
   end
   object OpenPictureDialog1: TOpenPictureDialog
-    Left = 248
-    Top = 112
+    Left = 294
+    Top = 84
   end
   object qryInsECommInfo: TFDQuery
     ConnectionName = 'PB'
@@ -145,8 +145,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
         '(:Ecommerce_info, :Stock_Reference, :Other_info_prompt, :Thumbna' +
         'il_image,'
       ':Generate_popup, :Popup_image)')
-    Left = 344
-    Top = 8
+    Left = 286
+    Top = 26
     ParamData = <
       item
         Name = 'Ecommerce_info'
@@ -190,8 +190,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
       'where'
       '  Ecommerce_info = :Ecommerce_info;'
       '')
-    Left = 376
-    Top = 8
+    Left = 350
+    Top = 18
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -229,8 +229,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     SQL.Strings = (
       'select * from ecommerce_info'
       'where stock_reference = :stock_reference;')
-    Left = 304
-    Top = 8
+    Left = 212
+    Top = 18
     ParamData = <
       item
         Name = 'stock_reference'
@@ -241,7 +241,7 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     SQL.Strings = (
       'select max(ecommerce_info) as top_No '
       'from ecommerce_info;')
-    Left = 192
-    Top = 176
+    Left = 288
+    Top = 20
   end
 end

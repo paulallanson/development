@@ -8,12 +8,12 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object OrderGroupBox: TGroupBox
     Left = 7
     Top = 8
@@ -25,29 +25,29 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
     object Label1: TLabel
       Left = 8
       Top = 24
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label2: TLabel
       Left = 8
       Top = 48
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object lblDescription: TLabel
-      Left = 72
+      Left = 79
       Top = 48
-      Width = 72
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'lblDescription'
     end
     object lblCustomer: TLabel
-      Left = 72
+      Left = 79
       Top = 24
-      Width = 62
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'lblCustomer'
     end
   end

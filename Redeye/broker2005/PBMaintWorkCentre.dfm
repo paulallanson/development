@@ -3,30 +3,30 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
   Top = 152
   BorderStyle = bsDialog
   Caption = 'Maintain Work Centre'
-  ClientHeight = 265
-  ClientWidth = 374
+  ClientHeight = 306
+  ClientWidth = 441
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    374
-    265)
-  TextHeight = 13
+    441
+    306)
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 69
-    Top = 241
-    Width = 109
-    Height = 13
+    Left = 121
+    Top = 262
+    Width = 122
+    Height = 17
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete these details ?'
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,19 +34,19 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
   object Label1: TLabel
     Left = 7
     Top = 20
-    Width = 29
-    Height = 13
+    Width = 35
+    Height = 17
     Caption = 'Name'
   end
   object Label2: TLabel
     Left = 7
     Top = 149
-    Width = 60
-    Height = 13
+    Width = 68
+    Height = 17
     Caption = 'Hourly Rate'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -54,48 +54,48 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
   object Label3: TLabel
     Left = 7
     Top = 52
-    Width = 60
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'Short Name'
   end
   object Label4: TLabel
     Left = 7
     Top = 112
-    Width = 69
-    Height = 13
+    Width = 78
+    Height = 17
     Caption = 'Feed Method'
   end
   object Label5: TLabel
     Left = 7
     Top = 84
-    Width = 86
-    Height = 13
+    Width = 99
+    Height = 17
     Caption = 'Estimating Name'
   end
   object Label6: TLabel
     Left = 7
     Top = 184
-    Width = 59
-    Height = 13
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label7: TLabel
-    Left = 215
+    Left = 234
     Top = 141
-    Width = 60
-    Height = 39
+    Width = 97
+    Height = 37
     Caption = 'Click Charge per 1000'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     WordWrap = True
   end
   object OKBitBtn: TBitBtn
-    Left = 205
-    Top = 233
+    Left = 257
+    Top = 258
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -171,8 +171,8 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 285
-    Top = 233
+    Left = 337
+    Top = 258
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -248,17 +248,17 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     OnClick = CancelBitBtnClick
   end
   object edtName: TEdit
-    Left = 94
+    Left = 113
     Top = 16
-    Width = 267
-    Height = 21
+    Width = 299
+    Height = 25
     MaxLength = 40
     TabOrder = 0
     Text = 'edtName'
     OnChange = CheckOK
   end
   object memHourlyRate: TMemo
-    Left = 94
+    Left = 113
     Top = 145
     Width = 75
     Height = 21
@@ -270,20 +270,20 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     OnKeyPress = CheckKeyIsFloat
   end
   object edtShortName: TEdit
-    Left = 94
+    Left = 113
     Top = 48
     Width = 171
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 1
     Text = 'edtShortName'
     OnChange = CheckOK
   end
   object dblkpFeedMethod: TDBLookupComboBox
-    Left = 94
+    Left = 113
     Top = 108
     Width = 130
-    Height = 21
+    Height = 25
     KeyField = 'Feed_Method'
     ListField = 'Feed_Method_Descr'
     ListSource = dtsFeedMethod
@@ -291,26 +291,26 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     OnClick = CheckOK
   end
   object edtEstimateName: TEdit
-    Left = 94
+    Left = 113
     Top = 80
     Width = 203
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 2
     Text = 'edtEstimateName'
     OnChange = CheckOK
   end
   object memDescription: TMemo
-    Left = 94
+    Left = 113
     Top = 184
-    Width = 267
+    Width = 299
     Height = 45
     Lines.Strings = (
       'memDescription')
     TabOrder = 6
   end
   object memClickCharge: TMemo
-    Left = 286
+    Left = 337
     Top = 145
     Width = 75
     Height = 21
@@ -327,8 +327,8 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
       'Select Work_Centre.*'
       'From Work_Centre'
       'Where Work_Centre_Name = :GUID')
-    Left = 96
-    Top = 16
+    Left = 128
+    Top = 28
     ParamData = <
       item
         Name = 'GUID'
@@ -352,8 +352,8 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
       'Feed_method)'
       'Select Max(Work_Centre)+1,:GUID,0,1,0,0,0,0,0,'#39'S'#39
       'From Work_Centre')
-    Left = 264
-    Top = 24
+    Left = 322
+    Top = 30
     ParamData = <
       item
         Name = 'GUID'
@@ -381,8 +381,8 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
       'Where (Work_Centre = :Work_Centre) '
       ''
       ' ')
-    Left = 200
-    Top = 16
+    Left = 258
+    Top = 28
     ParamData = <
       item
         Name = 'Work_Centre_Name'
@@ -415,8 +415,8 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
       'Delete From Work_Centre'
       'Where'
       '(Work_Centre = :Work_Centre)')
-    Left = 32
-    Top = 16
+    Left = 64
+    Top = 28
     ParamData = <
       item
         Name = 'Work_Centre'
@@ -430,8 +430,8 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
       'Where'
       '(Work_Centre = :Work_Centre) '
       '')
-    Left = 144
-    Top = 16
+    Left = 196
+    Top = 28
     ParamData = <
       item
         Name = 'Description'
@@ -446,12 +446,12 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
       'select *'
       'from Feed_Method'
       'order by Feed_Method_Descr')
-    Left = 312
-    Top = 40
+    Left = 318
+    Top = 106
   end
   object dtsFeedMethod: TDataSource
     DataSet = qryFeedMethod
-    Left = 256
-    Top = 72
+    Left = 64
+    Top = 114
   end
 end

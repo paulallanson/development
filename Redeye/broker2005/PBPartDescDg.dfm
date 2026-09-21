@@ -6,9 +6,13 @@ object PBPartDescDlg: TPBPartDescDlg
   ClientHeight = 214
   ClientWidth = 313
   Color = clBtnFace
-  ParentFont = True
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
+  Font.Style = []
   Position = poScreenCenter
-  TextHeight = 15
+  TextHeight = 17
   object Bevel1: TBevel
     Left = 8
     Top = 8
@@ -19,8 +23,8 @@ object PBPartDescDlg: TPBPartDescDlg
   object lblDescription: TLabel
     Left = 28
     Top = 65
-    Width = 60
-    Height = 15
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object OKBtn: TButton
@@ -48,7 +52,7 @@ object PBPartDescDlg: TPBPartDescDlg
     Left = 28
     Top = 81
     Width = 257
-    Height = 23
+    Height = 25
     TabOrder = 0
   end
 end

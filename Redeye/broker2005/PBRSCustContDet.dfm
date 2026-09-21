@@ -3,88 +3,87 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   Top = 88
   Caption = 'Customer Contact Details'
   ClientHeight = 493
-  ClientWidth = 976
+  ClientWidth = 1004
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 976
-    Height = 117
+    Width = 1004
+    Height = 129
     Align = alTop
     ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      976
-      117)
+      1004
+      129)
     object Label3: TLabel
       Left = 8
-      Top = 70
-      Width = 57
-      Height = 14
+      Top = 78
+      Width = 67
+      Height = 16
       Caption = 'Sort first by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
     end
     object Label4: TLabel
       Left = 156
-      Top = 70
-      Width = 58
-      Height = 14
+      Top = 78
+      Width = 69
+      Height = 16
       Caption = 'then sort by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
     end
     object Label5: TLabel
       Left = 300
-      Top = 70
-      Width = 58
-      Height = 14
+      Top = 78
+      Width = 69
+      Height = 16
       Caption = 'then sort by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
     end
     object Label8: TLabel
-      Left = 598
-      Top = 88
-      Width = 112
-      Height = 13
+      Left = 620
+      Top = 96
+      Width = 127
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Default Markup % =>'
-      ExplicitLeft = 604
     end
     object Label9: TLabel
       Left = 447
-      Top = 70
-      Width = 86
-      Height = 14
+      Top = 78
+      Width = 102
+      Height = 16
       Caption = 'and finally sort by'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
@@ -99,12 +98,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       object Label1: TLabel
         Left = 8
         Top = 8
-        Width = 31
-        Height = 14
+        Width = 38
+        Height = 16
         Caption = 'Status'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -113,7 +112,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Left = 8
         Top = 24
         Width = 133
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxContStatusChange
@@ -121,9 +120,9 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     end
     object cbSort1: TComboBox
       Left = 8
-      Top = 84
+      Top = 92
       Width = 135
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 1
       OnChange = cbSortChange
@@ -135,9 +134,9 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     end
     object cbSort2: TComboBox
       Left = 156
-      Top = 84
+      Top = 92
       Width = 135
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 2
       OnChange = cbSortChange
@@ -149,9 +148,9 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     end
     object cbSort3: TComboBox
       Left = 300
-      Top = 84
+      Top = 92
       Width = 135
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 3
       OnChange = cbSortChange
@@ -171,12 +170,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       object Label2: TLabel
         Left = 8
         Top = 8
-        Width = 63
-        Height = 14
+        Width = 76
+        Height = 16
         Caption = 'Contact Type'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -185,7 +184,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Left = 8
         Top = 24
         Width = 133
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxContStatusChange
@@ -201,12 +200,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       object Label7: TLabel
         Left = 8
         Top = 8
-        Width = 19
-        Height = 14
+        Width = 23
+        Height = 16
         Caption = 'Rep'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -215,17 +214,17 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Left = 8
         Top = 24
         Width = 133
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = RepComboBoxChange
       end
     end
     object RadioGroup1: TRadioGroup
-      Left = 863
-      Top = 12
-      Width = 108
-      Height = 97
+      Left = 878
+      Top = 8
+      Width = 125
+      Height = 102
       Anchors = [akTop, akRight]
       Caption = 'Report Type'
       ItemIndex = 0
@@ -239,10 +238,10 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       OnClick = RadioGroup1Click
     end
     object spnedtMarkup: TSpinEdit
-      Left = 707
-      Top = 83
+      Left = 734
+      Top = 91
       Width = 41
-      Height = 22
+      Height = 27
       Anchors = [akTop, akRight]
       MaxValue = 500
       MinValue = 0
@@ -251,8 +250,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       OnExit = spnedtMarkupExit
     end
     object chkbxCustomers: TCheckBox
-      Left = 707
-      Top = 16
+      Left = 714
+      Top = 12
       Width = 152
       Height = 17
       Anchors = [akTop, akRight]
@@ -261,8 +260,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       OnClick = cmbbxContStatusChange
     end
     object chkbxContacts: TCheckBox
-      Left = 707
-      Top = 38
+      Left = 714
+      Top = 34
       Width = 144
       Height = 17
       Anchors = [akTop, akRight]
@@ -271,8 +270,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       OnClick = cmbbxContStatusChange
     end
     object chkbxShowStatus: TCheckBox
-      Left = 707
-      Top = 60
+      Left = 714
+      Top = 56
       Width = 97
       Height = 17
       Anchors = [akTop, akRight]
@@ -289,12 +288,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       object lblCustomerType: TLabel
         Left = 8
         Top = 8
-        Width = 72
-        Height = 14
+        Width = 87
+        Height = 16
         Caption = 'Customer Type'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -303,7 +302,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Left = 8
         Top = 24
         Width = 133
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = RepComboBoxChange
@@ -311,9 +310,9 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     end
     object cbSort4: TComboBox
       Left = 447
-      Top = 84
+      Top = 92
       Width = 135
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 12
       OnChange = cbSortChange
@@ -333,12 +332,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       object Label6: TLabel
         Left = 8
         Top = 8
-        Width = 80
-        Height = 14
+        Width = 98
+        Height = 16
         Caption = 'Customer Status'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -347,7 +346,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Left = 8
         Top = 24
         Width = 97
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
         Text = 'Show All'
@@ -362,16 +361,18 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   object pnlPrintControl: TPanel
     Left = 0
     Top = 433
-    Width = 976
+    Width = 1004
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 424
+    ExplicitWidth = 970
     DesignSize = (
-      976
+      1004
       41)
     object Panel1: TPanel
-      Left = 673
+      Left = 701
       Top = 1
       Width = 302
       Height = 39
@@ -379,6 +380,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 667
       DesignSize = (
         302
         39)
@@ -485,7 +487,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       end
     end
     object btnCancel: TBitBtn
-      Left = 20
+      Left = 21
       Top = 9
       Width = 75
       Height = 25
@@ -493,12 +495,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 19
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 474
-    Width = 976
+    Width = 1004
     Height = 19
     Panels = <
       item
@@ -510,25 +513,27 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       item
         Width = 50
       end>
+    ExplicitTop = 465
+    ExplicitWidth = 970
   end
   object dbgrdContStatus: TDBGrid
     Left = 0
-    Top = 117
-    Width = 976
-    Height = 316
+    Top = 129
+    Width = 1004
+    Height = 304
     Align = alClient
     DataSource = dtsrcCurrentContStatus
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -642,8 +647,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -1151,8 +1156,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       'select Customer_Type, Description'
       'from Customer_Type'
       'Order by Description')
-    Left = 522
-    Top = 36
+    Left = 629
+    Top = 21
     object qryCustTypeDescription: TWideStringField
       FieldName = 'Description'
     end

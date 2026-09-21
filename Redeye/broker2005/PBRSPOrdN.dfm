@@ -4,7 +4,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   BorderIcons = [biSystemMenu]
   Caption = 'Purchase Order Print'
   ClientHeight = 331
-  ClientWidth = 472
+  ClientWidth = 491
   Color = clBtnFace
   Constraints.MaxHeight = 510
   Constraints.MaxWidth = 620
@@ -12,18 +12,18 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   Constraints.MinWidth = 432
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
     Top = 312
-    Width = 472
+    Width = 491
     Height = 19
     Panels = <
       item
@@ -32,24 +32,29 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       item
         Width = 50
       end>
+    ExplicitTop = 303
+    ExplicitWidth = 466
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 472
+    Width = 491
     Height = 312
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 466
+    ExplicitHeight = 303
     object Panel1: TPanel
       Left = 0
       Top = 0
-      Width = 472
+      Width = 491
       Height = 81
       Align = alTop
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 466
       object gbLayouts: TGroupBox
         Left = 1
         Top = 6
@@ -66,23 +71,41 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         object Label3: TLabel
           Left = 8
           Top = 15
-          Width = 66
-          Height = 13
+          Width = 76
+          Height = 17
           Caption = 'Paper Layout'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object Label4: TLabel
           Left = 8
           Top = 42
-          Width = 66
-          Height = 13
+          Width = 75
+          Height = 17
           Caption = 'Letter Layout'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
         end
         object cmbPageLayout: TComboBox
           Left = 88
           Top = 11
           Width = 161
-          Height = 21
+          Height = 25
           Style = csDropDownList
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 0
           OnChange = cmbPageLayoutChange
         end
@@ -90,8 +113,14 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
           Left = 88
           Top = 38
           Width = 161
-          Height = 21
+          Height = 25
           Style = csDropDownList
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 1
           OnChange = cmbLetterLayoutChange
         end
@@ -100,13 +129,15 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     object pnlButtons: TPanel
       Left = 0
       Top = 81
-      Width = 472
+      Width = 491
       Height = 96
       Align = alClient
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 466
+      ExplicitHeight = 87
       DesignSize = (
-        472
+        491
         96)
       object cbPrintLogo: TCheckBox
         Left = 16
@@ -134,12 +165,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         object EstNumLabel: TLabel
           Left = 8
           Top = 15
-          Width = 65
-          Height = 13
+          Width = 75
+          Height = 17
           Caption = 'P.O. Number'
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -151,7 +182,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
           Height = 25
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -166,12 +197,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       object TypeRadioGroup: TRadioGroup
         Left = 256
         Top = 2
-        Width = 203
+        Width = 216
         Height = 65
         Anchors = [akLeft, akTop, akRight]
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ItemIndex = 0
@@ -182,6 +213,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         ParentFont = False
         TabOrder = 2
         OnClick = TypeRadioGroupClick
+        ExplicitWidth = 191
       end
       object chkbxAttachDelNote: TCheckBox
         Left = 10
@@ -191,7 +223,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         Caption = 'Attach Delivery Note to E-Mail'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -206,7 +238,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         Caption = 'Attach Labels to E-Mail'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -217,16 +249,18 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     object pnlLabels: TPanel
       Left = 0
       Top = 177
-      Width = 472
+      Width = 491
       Height = 94
       Align = alBottom
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 168
+      ExplicitWidth = 466
       object Label12: TLabel
         Left = 192
         Top = 12
-        Width = 56
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Label Logo'
       end
       object grpbxLabels: TGroupBox
@@ -265,17 +299,17 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         end
       end
       object dblkpLogos: TDBLookupComboBox
-        Left = 256
+        Left = 264
         Top = 8
         Width = 185
-        Height = 21
+        Height = 25
         KeyField = 'ID'
         ListField = 'Logo_Name'
         ListSource = dtsLogos
         TabOrder = 1
       end
       object FormRefClrBitBtn: TBitBtn
-        Left = 450
+        Left = 458
         Top = 6
         Width = 23
         Height = 23
@@ -303,11 +337,13 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     object pnlBottom: TPanel
       Left = 0
       Top = 271
-      Width = 472
+      Width = 491
       Height = 41
       Align = alBottom
       ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 262
+      ExplicitWidth = 466
       object CancelBitBtn: TBitBtn
         Left = 8
         Top = 8

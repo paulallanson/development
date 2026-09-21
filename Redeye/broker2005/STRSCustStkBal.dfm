@@ -3,25 +3,22 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
   Top = 123
   BorderStyle = bsDialog
   Caption = 'Customer Stock Balance Report'
-  ClientHeight = 330
-  ClientWidth = 415
+  ClientHeight = 391
+  ClientWidth = 436
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnShow = FormShow
-  DesignSize = (
-    415
-    330)
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 88
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object GroupBox1: TGroupBox
@@ -35,22 +32,22 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     object Label2: TLabel
       Left = 24
       Top = 30
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 40
       Top = 62
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtFrom: TEdit
       Left = 64
       Top = 22
       Width = 249
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtFromChange
@@ -59,7 +56,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       Left = 64
       Top = 54
       Width = 249
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
       OnChange = EnablePrint
@@ -106,8 +103,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -123,7 +120,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Left = 72
     Top = 84
     Width = 249
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 0
   end
@@ -144,12 +141,12 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
   end
   object btnClose: TBitBtn
     Left = 8
-    Top = 300
+    Top = 348
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -158,8 +155,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     TabOrder = 3
   end
   object btnPreview: TBitBtn
-    Left = 91
-    Top = 268
+    Left = 90
+    Top = 300
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -181,8 +178,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     OnClick = btnPreviewClick
   end
   object btnPrint: TBitBtn
-    Left = 174
-    Top = 268
+    Left = 173
+    Top = 300
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -204,8 +201,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     OnClick = btnPrintClick
   end
   object btnFax: TBitBtn
-    Left = 257
-    Top = 268
+    Left = 256
+    Top = 300
     Width = 75
     Height = 25
     Caption = '&Fax'
@@ -227,14 +224,14 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Visible = False
   end
   object btnEmail: TBitBtn
-    Left = 340
-    Top = 268
+    Left = 339
+    Top = 300
     Width = 75
     Height = 25
     Caption = '&Email'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -259,12 +256,12 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Left = 8
     Top = 216
     Width = 353
-    Height = 49
+    Height = 65
     ParentBackground = False
     TabOrder = 8
     object ChkBxExcProd: TCheckBox
       Left = 17
-      Top = 30
+      Top = 35
       Width = 200
       Height = 17
       Caption = 'Exclude Products not in use'
@@ -274,7 +271,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     end
     object chkbxNumbers: TCheckBox
       Left = 16
-      Top = 8
+      Top = 13
       Width = 257
       Height = 17
       Caption = 'Show serial numbers held in stock'
@@ -312,11 +309,10 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     OnClick = BitBtn4Click
   end
   object btbtnExcel: TBitBtn
-    Left = 7
-    Top = 268
+    Left = 8
+    Top = 300
     Width = 75
     Height = 25
-    Anchors = [akTop, akRight]
     Caption = 'Excel'
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100

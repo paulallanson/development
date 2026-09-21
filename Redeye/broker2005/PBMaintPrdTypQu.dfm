@@ -19,7 +19,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     257)
   TextHeight = 17
   object DelLabel: TLabel
-    Left = 98
+    Left = 86
     Top = 223
     Width = 132
     Height = 17
@@ -31,6 +31,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitLeft = 98
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -163,7 +164,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 234
+    Left = 222
     Top = 221
     Width = 75
     Height = 25
@@ -238,11 +239,11 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
-    ExplicitLeft = 228
+    ExplicitLeft = 216
     ExplicitTop = 212
   end
   object CancelBitBtn: TBitBtn
-    Left = 314
+    Left = 302
     Top = 221
     Width = 75
     Height = 25
@@ -317,7 +318,7 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    ExplicitLeft = 308
+    ExplicitLeft = 296
     ExplicitTop = 212
   end
   object GetLastSQL: TFDQuery
@@ -519,8 +520,8 @@ object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
       '             :Question, '
       '             :Question_List_No, '
       '             :Question_List_Descr)')
-    Left = 152
-    Top = 160
+    Left = 182
+    Top = 152
     ParamData = <
       item
         Name = 'Product_Type'

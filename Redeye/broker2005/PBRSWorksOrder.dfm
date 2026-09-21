@@ -8,13 +8,13 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
     Top = 0
@@ -23,19 +23,21 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 412
+    ExplicitHeight = 205
     DesignSize = (
       418
       214)
     object lblSchedule: TLabel
       Left = 8
       Top = 144
-      Width = 114
-      Height = 13
+      Width = 127
+      Height = 17
       Caption = 'Updating Schedule ... '
       Visible = False
     end
     object CancelBitBtn: TBitBtn
-      Left = 9
+      Left = 8
       Top = 178
       Width = 75
       Height = 25
@@ -43,7 +45,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
@@ -52,7 +54,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       TabOrder = 0
     end
     object PreviewBitBtn: TBitBtn
-      Left = 169
+      Left = 168
       Top = 178
       Width = 75
       Height = 25
@@ -60,7 +62,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       Caption = 'Pre&view'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -91,7 +93,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       Default = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -111,6 +113,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitTop = 169
     end
     object EmailBitBtn: TBitBtn
       Left = 328
@@ -135,6 +138,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       NumGlyphs = 2
       TabOrder = 3
       OnClick = EmailBitBtnClick
+      ExplicitTop = 169
     end
     object GroupBox1: TGroupBox
       Left = 8
@@ -146,12 +150,12 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 66
-        Height = 13
+        Width = 75
+        Height = 17
         Caption = 'Works Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -159,15 +163,15 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 67
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object imgPlanning: TImage
@@ -418,7 +422,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
         Top = 3
         Width = 25
         Height = 105
-        ItemHeight = 13
+        ItemHeight = 17
         Sorted = True
         TabOrder = 3
         Visible = False
@@ -496,8 +500,8 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
     Request.Ranges.Units = 'bytes'
     Request.Ranges = <>
     HTTPOptions = [hoForceEncodeParams]
-    Left = 264
-    Top = 104
+    Left = 322
+    Top = 42
   end
   object qryUpWOStatus: TFDQuery
     ConnectionName = 'PB'

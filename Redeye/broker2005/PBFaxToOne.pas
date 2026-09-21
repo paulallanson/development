@@ -1,22 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Send Fax Confirmation Form
-
-VSS Info:
-$Header: /PBL D5/PBFaxToOne.pas 1     7/12/99 9:41 Roddym $
-$History: PBFaxToOne.pas $
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:41
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBFaxToOne;
 
 interface

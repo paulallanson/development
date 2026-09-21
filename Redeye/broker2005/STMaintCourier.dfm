@@ -8,7 +8,7 @@ object STMaintCourierFrm: TSTMaintCourierFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object STMaintCourierFrm: TSTMaintCourierFrm
   DesignSize = (
     438
     263)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 104
     Top = 233
@@ -106,6 +106,7 @@ object STMaintCourierFrm: TSTMaintCourierFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 220
   end
   object CancelBitBtn: TBitBtn
     Left = 352
@@ -116,6 +117,7 @@ object STMaintCourierFrm: TSTMaintCourierFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 220
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -127,54 +129,54 @@ object STMaintCourierFrm: TSTMaintCourierFrm
     object Label1: TLabel
       Left = 8
       Top = 12
-      Width = 70
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'Courier Name'
     end
     object Label2: TLabel
       Left = 8
       Top = 44
-      Width = 95
-      Height = 13
+      Width = 107
+      Height = 17
       Caption = 'Our Account Code'
     end
     object Label3: TLabel
       Left = 8
       Top = 76
-      Width = 88
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'Transfer File Type'
     end
     object NameEdit: TEdit
-      Left = 104
+      Left = 123
       Top = 8
       Width = 249
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       OnChange = NameEditChange
     end
     object AccountEdit: TEdit
-      Left = 104
+      Left = 123
       Top = 40
       Width = 121
-      Height = 21
+      Height = 25
       MaxLength = 20
       TabOrder = 1
       OnChange = AccountEditChange
     end
     object edtFileType: TEdit
-      Left = 104
+      Left = 123
       Top = 72
       Width = 121
-      Height = 21
+      Height = 25
       MaxLength = 5
       TabOrder = 2
     end
     object chkbxAddressRequired: TCheckBox
       Left = 8
       Top = 114
-      Width = 153
+      Width = 273
       Height = 17
       Caption = 'Requires Delivery Address'
       TabOrder = 3
@@ -182,7 +184,7 @@ object STMaintCourierFrm: TSTMaintCourierFrm
     object chkbxAccountCodeMandatory: TCheckBox
       Left = 8
       Top = 153
-      Width = 257
+      Width = 345
       Height = 17
       Caption = 'Account Code Mandatory if using Client Account'
       TabOrder = 5
@@ -198,7 +200,7 @@ object STMaintCourierFrm: TSTMaintCourierFrm
     object chkbxReturnAddress: TCheckBox
       Left = 8
       Top = 133
-      Width = 153
+      Width = 273
       Height = 17
       Caption = 'Requires Return Address'
       TabOrder = 4
@@ -227,8 +229,8 @@ object STMaintCourierFrm: TSTMaintCourierFrm
     SQL.Strings = (
       'SELECT Courier FROM Courier WHERE Courier_Name = :GUID'
       ' ')
-    Left = 346
-    Top = 26
+    Left = 385
+    Top = 17
     ParamData = <
       item
         Name = 'GUID'
@@ -242,8 +244,8 @@ object STMaintCourierFrm: TSTMaintCourierFrm
       'INSERT INTO Courier (Courier, Courier_Name, Our_Account_Code)'
       'SELECT Max(Courier)+1, :GUID, '#39'0'#39' FROM Courier'
       ' ')
-    Left = 186
-    Top = 26
+    Left = 281
+    Top = 41
     ParamData = <
       item
         Name = 'GUID'
@@ -266,8 +268,8 @@ object STMaintCourierFrm: TSTMaintCourierFrm
       'Where (Courier = :Courier)'
       ''
       ' ')
-    Left = 234
-    Top = 26
+    Left = 357
+    Top = 89
     ParamData = <
       item
         Name = 'Courier_Name'

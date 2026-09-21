@@ -3,30 +3,32 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Sales Order Line'
-  ClientHeight = 250
-  ClientWidth = 491
+  ClientHeight = 263
+  ClientWidth = 505
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
-    Top = 209
-    Width = 491
+    Top = 222
+    Width = 505
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 200
+    ExplicitWidth = 485
     DesignSize = (
-      491
+      505
       41)
     object btnOK: TBitBtn
-      Left = 305
+      Left = 313
       Top = 8
       Width = 75
       Height = 25
@@ -54,9 +56,10 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 293
     end
     object BitBtn2: TBitBtn
-      Left = 393
+      Left = 401
       Top = 8
       Width = 75
       Height = 25
@@ -64,53 +67,56 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 381
     end
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 106
-    Width = 491
-    Height = 103
+    Width = 505
+    Height = 116
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 485
+    ExplicitHeight = 94
     object Label3: TLabel
       Left = 15
       Top = 16
-      Width = 96
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Quantity Produced'
     end
     object Label4: TLabel
       Left = 15
       Top = 76
-      Width = 45
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Sell Price'
     end
     object Label6: TLabel
       Left = 274
       Top = 76
-      Width = 46
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Pack Size'
     end
     object Label9: TLabel
       Left = 15
       Top = 46
-      Width = 80
-      Height = 13
+      Width = 89
+      Height = 17
       Caption = 'Return to Stock'
     end
     object Label10: TLabel
       Left = 279
       Top = 46
-      Width = 45
-      Height = 13
+      Width = 50
+      Height = 17
       Caption = 'Wastage'
     end
     object memProduced: TMemo
-      Left = 113
+      Left = 128
       Top = 12
       Width = 97
       Height = 21
@@ -121,7 +127,7 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
       OnKeyPress = memProducedKeyPress
     end
     object memPrice: TMemo
-      Left = 113
+      Left = 128
       Top = 71
       Width = 97
       Height = 21
@@ -147,7 +153,7 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
       OnKeyPress = memPackSizeKeyPress
     end
     object memReturns: TMemo
-      Left = 113
+      Left = 128
       Top = 42
       Width = 97
       Height = 21
@@ -172,39 +178,40 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 491
+    Width = 505
     Height = 65
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 485
     object Label7: TLabel
       Left = 15
       Top = 12
-      Width = 73
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Product Code:'
     end
     object Label8: TLabel
       Left = 15
       Top = 40
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object edtProductCode: TEdit
-      Left = 112
-      Top = 8
+      Left = 128
+      Top = 4
       Width = 281
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
     end
     object edtDescription: TEdit
-      Left = 112
+      Left = 128
       Top = 35
       Width = 361
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 1
@@ -213,27 +220,28 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
   object Panel2: TPanel
     Left = 0
     Top = 65
-    Width = 491
+    Width = 505
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 485
     object Label1: TLabel
       Left = 15
       Top = 16
-      Width = 90
-      Height = 13
+      Width = 102
+      Height = 17
       Caption = 'Quantity Ordered'
     end
     object Label2: TLabel
       Left = 239
       Top = 16
-      Width = 87
-      Height = 13
+      Width = 100
+      Height = 17
       Caption = 'Overs Requested'
     end
     object memQuantity: TMemo
-      Left = 113
+      Left = 128
       Top = 12
       Width = 97
       Height = 21
@@ -244,7 +252,7 @@ object frmSTMaintSalesOrderLine: TfrmSTMaintSalesOrderLine
       WordWrap = False
     end
     object memOvers: TMemo
-      Left = 337
+      Left = 346
       Top = 12
       Width = 97
       Height = 21

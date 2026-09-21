@@ -7,34 +7,34 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 16
-    Top = 112
-    Width = 122
-    Height = 15
-    Caption = 'Delete these details ?'
+    Left = 76
+    Top = 116
+    Width = 125
+    Height = 16
+    Caption = 'Delete these details'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object PurchOrdLabel: TLabel
     Left = 8
-    Top = 6
-    Width = 32
-    Height = 13
+    Top = 3
+    Width = 35
+    Height = 17
     Caption = 'Status'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -47,35 +47,35 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
-      Left = 16
-      Top = 20
-      Width = 24
-      Height = 13
+      Left = 21
+      Top = 24
+      Width = 27
+      Height = 17
       Caption = 'Date'
     end
     object Label6: TLabel
-      Left = 16
-      Top = 46
-      Width = 35
-      Height = 15
+      Left = 21
+      Top = 50
+      Width = 38
+      Height = 16
       Caption = 'Status'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
     end
     object SelDateBtn: TSpeedButton
       Left = 192
-      Top = 16
+      Top = 20
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -95,19 +95,19 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
       OnClick = SelDateBtnClick
     end
     object DateEdit: TEdit
-      Left = 62
-      Top = 16
+      Left = 67
+      Top = 20
       Width = 115
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = DateEditExit
     end
     object StatDBLCB: TDBLookupComboBox
-      Left = 62
-      Top = 43
+      Left = 67
+      Top = 47
       Width = 259
-      Height = 21
+      Height = 25
       KeyField = 'Proof_Status'
       ListField = 'Description'
       ListSource = StatSRC
@@ -276,8 +276,8 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
         'Where Proof_Date=:Date and Purchase_Order=:Order and Line=:Line ' +
         'and Proof_Status=:Proof_Status'
       ' ')
-    Left = 120
-    Top = 64
+    Left = 174
+    Top = 8
     ParamData = <
       item
         Name = 'Date'
@@ -342,8 +342,8 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
       'Line = :Line,'
       'Operator = :Operator'
       'Where (Proof_History = :Proof_History)')
-    Left = 56
-    Top = 8
+    Left = 278
+    Top = 18
     ParamData = <
       item
         Name = 'Proof_Status'
@@ -371,8 +371,8 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
       'Delete From Proof_History'
       'Where'
       '(Proof_History = :Proof_History)')
-    Left = 80
-    Top = 88
+    Left = 84
+    Top = 38
     ParamData = <
       item
         Name = 'Proof_History'
@@ -391,8 +391,8 @@ object PBMaintProofHistNFrm: TPBMaintProofHistNFrm
       'WHERE ((inactive = '#39'N'#39') or (inactive is NULL)) OR'
       '(Proof_Status = :Proof_Status)'
       'Order By Proof_Status')
-    Left = 32
-    Top = 88
+    Left = 24
+    Top = 38
     ParamData = <
       item
         Name = 'Proof_Status'

@@ -9,14 +9,14 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   Constraints.MinWidth = 1070
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 661
@@ -47,21 +47,21 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     ExplicitHeight = 652
     object pgDetails: TPageControl
       Left = 0
-      Top = 233
+      Top = 251
       Width = 1115
-      Height = 244
+      Height = 226
       ActivePage = tsCharges
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 1109
-      ExplicitHeight = 235
+      ExplicitTop = 233
+      ExplicitHeight = 244
       object tsCharges: TTabSheet
         Caption = 'Charges'
         object pnlActions: TPanel
           Left = 1022
           Top = 0
           Width = 85
-          Height = 180
+          Height = 158
           Align = alRight
           ParentBackground = False
           TabOrder = 0
@@ -113,7 +113,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
         object pnlChargesControls: TPanel
           Left = 0
-          Top = 180
+          Top = 158
           Width = 1107
           Height = 36
           Align = alBottom
@@ -128,22 +128,21 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           object Label12: TLabel
             Left = 8
             Top = 13
-            Width = 62
-            Height = 13
+            Width = 70
+            Height = 17
             Caption = 'Estimate file'
           end
           object edtEstimateFile: TEdit
-            Left = 80
+            Left = 85
             Top = 9
-            Width = 729
-            Height = 21
+            Width = 721
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             Color = clBtnFace
             Enabled = False
             ReadOnly = True
             TabOrder = 0
             OnChange = edtEstimateFileChange
-            ExplicitWidth = 723
           end
           object btnOpen: TButton
             Left = 896
@@ -183,7 +182,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 0
           Top = 0
           Width = 1022
-          Height = 180
+          Height = 158
           Align = alClient
           ColCount = 9
           DefaultColWidth = 40
@@ -218,7 +217,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 0
           Top = 0
           Width = 1022
-          Height = 216
+          Height = 194
           Align = alClient
           ColCount = 7
           DefaultColWidth = 40
@@ -242,10 +241,11 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 1022
           Top = 0
           Width = 85
-          Height = 216
+          Height = 194
           Align = alRight
           ParentBackground = False
           TabOrder = 1
+          ExplicitHeight = 212
           object btnDeleteSupply: TBitBtn
             Left = 8
             Top = 104
@@ -296,20 +296,22 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 0
           Top = 0
           Width = 1107
-          Height = 216
+          Height = 194
           Align = alClient
           Caption = 'Panel6'
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 212
           object Panel7: TPanel
             Left = 1
-            Top = 191
+            Top = 169
             Width = 1105
             Height = 24
             Align = alBottom
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 0
+            ExplicitTop = 187
             object lblDocumentDir: TLabel
               Left = 8
               Top = 6
@@ -328,7 +330,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             Left = 1
             Top = 1
             Width = 1069
-            Height = 190
+            Height = 168
             Align = alClient
             Columns = <
               item
@@ -352,12 +354,13 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             OnColumnClick = lstvwDocumentsColumnClick
             OnCompare = lstvwDocumentsCompare
             OnDblClick = lstvwDocumentsDblClick
+            ExplicitHeight = 186
           end
           object ToolBar1: TToolBar
             Left = 1070
             Top = 1
             Width = 36
-            Height = 190
+            Height = 168
             Align = alRight
             ButtonHeight = 30
             ButtonWidth = 30
@@ -368,6 +371,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ParentShowHint = False
             ShowHint = True
             TabOrder = 2
+            ExplicitHeight = 186
             object btnExcel: TToolButton
               Left = 0
               Top = 0
@@ -421,10 +425,11 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 1022
           Top = 0
           Width = 85
-          Height = 216
+          Height = 194
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 212
           object btnPrintSpec: TBitBtn
             Left = 8
             Top = 8
@@ -440,11 +445,12 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 0
           Top = 0
           Width = 1022
-          Height = 216
+          Height = 194
           Align = alClient
           ScrollBars = ssBoth
           TabOrder = 1
           OnChange = memSpecChange
+          ExplicitHeight = 212
         end
       end
       object tsSpecification: TTabSheet
@@ -454,10 +460,11 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 1022
           Top = 0
           Width = 85
-          Height = 216
+          Height = 194
           Align = alRight
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 212
           object BitBtn3: TBitBtn
             Left = 8
             Top = 8
@@ -473,11 +480,12 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Left = 0
           Top = 0
           Width = 1022
-          Height = 216
+          Height = 194
           Align = alClient
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
+          ExplicitHeight = 212
         end
       end
     end
@@ -495,15 +503,15 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       object Label10: TLabel
         Left = 112
         Top = 18
-        Width = 96
-        Height = 13
+        Width = 110
+        Height = 17
         Caption = 'Conversion Rate %'
       end
       object spnConversionRate: TSpinEdit
         Left = 208
         Top = 13
         Width = 57
-        Height = 22
+        Height = 27
         MaxValue = 100
         MinValue = 0
         TabOrder = 0
@@ -555,67 +563,67 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object labCosts: TLabel
           Left = 66
           Top = 36
-          Width = 55
-          Height = 13
+          Width = 64
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Costs'
         end
         object labSales: TLabel
           Left = 66
           Top = 54
-          Width = 53
-          Height = 13
+          Width = 62
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Sales'
         end
         object labMargin: TLabel
           Left = 57
           Top = 72
-          Width = 68
-          Height = 13
+          Width = 77
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin Value'
         end
         object LabMarginPerc: TLabel
           Left = 76
           Top = 88
-          Width = 49
-          Height = 13
+          Width = 57
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin %'
         end
         object labTotalCost: TLabel
-          Left = 155
+          Left = 144
           Top = 36
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object labTotalSell: TLabel
-          Left = 155
+          Left = 144
           Top = 54
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object LabTotalMargin: TLabel
-          Left = 155
+          Left = 144
           Top = 72
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object labTotalMarginPerc: TLabel
-          Left = 155
+          Left = 144
           Top = 88
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
@@ -650,16 +658,16 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           object Label7: TLabel
             Left = 1
             Top = 6
-            Width = 27
-            Height = 13
+            Width = 31
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'Price:'
           end
           object labUnitSell: TLabel
             Left = 34
             Top = 6
-            Width = 68
-            Height = 13
+            Width = 79
+            Height = 17
             Anchors = [akRight, akBottom]
             Caption = 'TotalsGoHere'
           end
@@ -667,7 +675,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             Left = 107
             Top = 2
             Width = 90
-            Height = 21
+            Height = 25
             Anchors = [akRight, akBottom]
             KeyField = 'Price_Unit'
             ListField = 'Description'
@@ -729,67 +737,67 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object Label15: TLabel
           Left = 21
           Top = 37
-          Width = 55
-          Height = 13
+          Width = 64
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Costs'
         end
         object Label16: TLabel
           Left = 21
           Top = 55
-          Width = 53
-          Height = 13
+          Width = 62
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Sales'
         end
         object Label17: TLabel
           Left = 12
           Top = 73
-          Width = 68
-          Height = 13
+          Width = 77
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin Value'
         end
         object Label18: TLabel
           Left = 31
           Top = 89
-          Width = 49
-          Height = 13
+          Width = 57
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin %'
         end
         object reselTotalCost: TLabel
-          Left = 126
+          Left = 115
           Top = 37
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object reselTotalSell: TLabel
-          Left = 126
+          Left = 115
           Top = 55
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object reselTotalMargin: TLabel
-          Left = 126
+          Left = 115
           Top = 73
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object reselTotalMarginPerc: TLabel
-          Left = 126
+          Left = 115
           Top = 89
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
@@ -826,67 +834,67 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object Label60: TLabel
           Left = 2
           Top = 37
-          Width = 99
-          Height = 13
+          Width = 113
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Costs (Incl Int)'
         end
         object Label61: TLabel
           Left = 42
           Top = 55
-          Width = 53
-          Height = 13
+          Width = 62
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Total Sales'
         end
         object Label62: TLabel
           Left = 33
           Top = 73
-          Width = 68
-          Height = 13
+          Width = 77
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin Value'
         end
         object Label63: TLabel
           Left = 52
           Top = 89
-          Width = 49
-          Height = 13
+          Width = 57
+          Height = 17
           Anchors = [akRight, akBottom]
           Caption = 'Margin %'
         end
         object repTotalCost: TLabel
-          Left = 147
+          Left = 136
           Top = 37
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object RepTotalSell: TLabel
-          Left = 147
+          Left = 136
           Top = 55
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object RepTotalMargin: TLabel
-          Left = 147
+          Left = 136
           Top = 73
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
         end
         object repTotalMarginPerc: TLabel
-          Left = 147
+          Left = 136
           Top = 89
-          Width = 68
-          Height = 13
+          Width = 79
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
@@ -917,15 +925,15 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object Label59: TLabel
           Left = 16
           Top = 8
-          Width = 62
-          Height = 13
+          Width = 71
+          Height = 17
           Caption = 'Pack Format'
         end
         object dblkpPackFormat: TDBLookupComboBox
           Left = 16
           Top = 25
           Width = 170
-          Height = 21
+          Height = 25
           KeyField = 'ID'
           ListField = 'Pack_Format_Description'
           TabOrder = 0
@@ -933,7 +941,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
         object btnPackFormat: TBitBtn
           Left = 192
-          Top = 23
+          Top = 25
           Width = 25
           Height = 25
           Caption = '...'
@@ -949,7 +957,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object rdgrpEnclosingType: TRadioGroup
           Left = 232
           Top = 8
-          Width = 129
+          Width = 97
           Height = 97
           Caption = ' Enclosing '
           ItemIndex = 0
@@ -968,52 +976,51 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Left = 0
       Top = 41
       Width = 1115
-      Height = 192
+      Height = 210
       Align = alTop
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 1109
       object Panel9: TPanel
-        Left = 898
+        Left = 877
         Top = 1
-        Width = 216
-        Height = 190
+        Width = 237
+        Height = 208
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 892
+        ExplicitHeight = 190
         DesignSize = (
-          216
-          190)
+          237
+          208)
         object Label8: TLabel
-          Left = 41
+          Left = 57
           Top = 88
-          Width = 44
-          Height = 13
+          Width = 48
+          Height = 17
           Anchors = [akTop, akRight]
           Caption = 'Quantity'
         end
         object Label25: TLabel
-          Left = -4
+          Left = 11
           Top = 18
-          Width = 84
-          Height = 13
+          Width = 94
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akTop, akRight]
           Caption = 'Production Start'
         end
         object Label3: TLabel
-          Left = 31
+          Left = 49
           Top = 52
-          Width = 49
-          Height = 13
+          Width = 56
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akTop, akRight]
           Caption = 'Mail Date'
         end
         object memQuantity: TMemo
-          Left = 89
+          Left = 110
           Top = 84
           Width = 81
           Height = 21
@@ -1023,9 +1030,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           OnEnter = memQuantityEnter
           OnExit = ValidateQty
           OnKeyPress = memQuantityKeyPress
+          ExplicitLeft = 89
         end
         object BitBtn6: TBitBtn
-          Left = 183
+          Left = 204
           Top = 12
           Width = 25
           Height = 25
@@ -1046,27 +1054,30 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           NumGlyphs = 2
           TabOrder = 1
           OnClick = BitBtn6Click
+          ExplicitLeft = 183
         end
         object edtStartDate: TEdit
-          Left = 89
+          Left = 110
           Top = 14
           Width = 81
-          Height = 21
+          Height = 25
           Anchors = [akTop, akRight]
           TabOrder = 2
           OnExit = edtStartDateExit
+          ExplicitLeft = 89
         end
         object edtDateReq: TEdit
-          Left = 89
+          Left = 110
           Top = 48
           Width = 81
-          Height = 21
+          Height = 25
           Anchors = [akTop, akRight]
           TabOrder = 3
           OnExit = edtDateReqExit
+          ExplicitLeft = 89
         end
         object BitBtn2: TBitBtn
-          Left = 183
+          Left = 204
           Top = 46
           Width = 25
           Height = 25
@@ -1087,13 +1098,14 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           NumGlyphs = 2
           TabOrder = 4
           OnClick = BitBtn2Click
+          ExplicitLeft = 183
         end
       end
       object Panel10: TPanel
         Left = 1
         Top = 1
-        Width = 96
-        Height = 190
+        Width = 121
+        Height = 208
         Align = alLeft
         BevelOuter = bvNone
         ParentBackground = False
@@ -1101,7 +1113,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object rdgType: TRadioGroup
           Left = 9
           Top = 2
-          Width = 78
+          Width = 96
           Height = 64
           Caption = 'Type'
           ItemIndex = 0
@@ -1114,80 +1126,78 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
       end
       object Panel11: TPanel
-        Left = 97
+        Left = 122
         Top = 1
-        Width = 801
-        Height = 190
+        Width = 755
+        Height = 208
         Align = alClient
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
+        ExplicitLeft = 97
         ExplicitWidth = 795
+        ExplicitHeight = 190
         object Panel12: TPanel
           Left = 0
           Top = 0
-          Width = 801
-          Height = 78
+          Width = 755
+          Height = 84
           Align = alTop
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 795
           DesignSize = (
-            801
-            78)
+            755
+            84)
           object lblCustomer: TLabel
             Left = 8
             Top = 8
-            Width = 49
-            Height = 13
+            Width = 56
+            Height = 17
             Caption = 'Customer'
           end
           object Label6: TLabel
             Left = 8
-            Top = 34
-            Width = 40
-            Height = 13
+            Top = 35
+            Width = 44
+            Height = 17
             Caption = 'Contact'
           end
           object Label11: TLabel
             Left = 8
-            Top = 58
-            Width = 27
-            Height = 13
+            Top = 63
+            Width = 31
+            Height = 17
             Caption = 'Email'
           end
           object Label13: TLabel
-            Left = 549
-            Top = 34
-            Width = 33
-            Height = 13
+            Left = 506
+            Top = 35
+            Width = 36
+            Height = 17
             Anchors = [akTop, akRight]
             Caption = 'Phone'
-            ExplicitLeft = 575
           end
           object edtContactName: TEdit
-            Left = 69
-            Top = 30
-            Width = 467
-            Height = 21
+            Left = 78
+            Top = 31
+            Width = 415
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 6
             Visible = False
-            ExplicitWidth = 461
           end
           object edtCustomer: TEdit
-            Left = 69
+            Left = 78
             Top = 4
-            Width = 542
-            Height = 21
+            Width = 490
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             ReadOnly = True
             TabOrder = 0
-            ExplicitWidth = 536
           end
           object BitBtn1: TBitBtn
-            Left = 618
+            Left = 575
             Top = 2
             Width = 25
             Height = 25
@@ -1201,11 +1211,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ParentFont = False
             TabOrder = 1
             OnClick = BitBtn1Click
-            ExplicitLeft = 612
           end
           object btnContact: TBitBtn
-            Left = 511
-            Top = 28
+            Left = 468
+            Top = 31
             Width = 25
             Height = 25
             Anchors = [akTop, akRight]
@@ -1218,80 +1227,75 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ParentFont = False
             TabOrder = 2
             OnClick = btnContactClick
-            ExplicitLeft = 505
           end
           object dblkpCustomerContact: TDBLookupComboBox
-            Left = 69
-            Top = 30
-            Width = 433
-            Height = 21
+            Left = 78
+            Top = 31
+            Width = 381
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             KeyField = 'Contact_no'
             ListField = 'Name'
             TabOrder = 3
             OnClick = dblkpCustomerContactClick
-            ExplicitWidth = 427
           end
           object edtEmail: TEdit
-            Left = 69
-            Top = 54
-            Width = 686
-            Height = 21
+            Left = 78
+            Top = 59
+            Width = 634
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 4
             OnChange = CheckOK
-            ExplicitWidth = 680
           end
           object edtPhone: TEdit
-            Left = 589
-            Top = 30
+            Left = 546
+            Top = 31
             Width = 165
-            Height = 21
+            Height = 25
             Anchors = [akTop, akRight]
             TabOrder = 5
-            ExplicitLeft = 583
           end
         end
         object Panel13: TPanel
           Left = 0
-          Top = 78
-          Width = 801
-          Height = 84
+          Top = 84
+          Width = 755
+          Height = 96
           Align = alClient
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 795
+          ExplicitTop = 83
           DesignSize = (
-            801
-            84)
+            755
+            96)
           object Label1: TLabel
             Left = 8
             Top = 66
-            Width = 59
-            Height = 13
+            Width = 66
+            Height = 17
             Caption = 'Description'
           end
           object Label9: TLabel
             Left = 8
             Top = 8
-            Width = 20
-            Height = 13
+            Width = 23
+            Height = 17
             Caption = 'Rep'
           end
           object edtDescription: TEdit
-            Left = 69
+            Left = 78
             Top = 62
-            Width = 687
-            Height = 21
+            Width = 635
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
             OnChange = CheckOK
-            ExplicitWidth = 681
           end
           object btnReps: TBitBtn
-            Left = 511
-            Top = 2
+            Left = 469
+            Top = 4
             Width = 25
             Height = 25
             Anchors = [akTop, akRight]
@@ -1304,51 +1308,47 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ParentFont = False
             TabOrder = 1
             OnClick = btnRepsClick
-            ExplicitLeft = 505
           end
           object edtRep: TEdit
-            Left = 69
+            Left = 78
             Top = 4
-            Width = 433
-            Height = 21
+            Width = 381
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             ReadOnly = True
             TabOrder = 2
-            ExplicitWidth = 427
           end
           object pnlSubReps: TPanel
-            Left = 0
+            Left = 10
             Top = 29
-            Width = 544
+            Width = 492
             Height = 30
             Anchors = [akLeft, akTop, akRight]
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 3
-            ExplicitWidth = 538
             DesignSize = (
-              544
+              492
               30)
             object Label2: TLabel
-              Left = 8
+              Left = -2
               Top = 8
-              Width = 43
-              Height = 13
+              Width = 49
+              Height = 17
               Caption = 'Sub Rep'
             end
             object edtSubRep: TEdit
-              Left = 69
+              Left = 68
               Top = 4
-              Width = 433
-              Height = 21
+              Width = 381
+              Height = 25
               Anchors = [akLeft, akTop, akRight]
               ReadOnly = True
               TabOrder = 0
-              ExplicitWidth = 427
             end
             object btnSubReps: TBitBtn
-              Left = 511
-              Top = 2
+              Left = 459
+              Top = 4
               Width = 25
               Height = 25
               Anchors = [akTop, akRight]
@@ -1361,14 +1361,13 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
               ParentFont = False
               TabOrder = 1
               OnClick = btnSubRepsClick
-              ExplicitLeft = 505
             end
           end
         end
         object pnlEndUSer: TPanel
           Left = 0
-          Top = 162
-          Width = 801
+          Top = 180
+          Width = 755
           Height = 28
           Align = alBottom
           BevelOuter = bvNone
@@ -1376,30 +1375,30 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           ParentBackground = False
           TabOrder = 2
           Visible = False
+          ExplicitTop = 162
           ExplicitWidth = 795
           DesignSize = (
-            801
+            755
             28)
           object Label14: TLabel
             Left = 8
-            Top = 9
-            Width = 46
-            Height = 13
+            Top = 3
+            Width = 53
+            Height = 17
             Caption = 'End User'
           end
           object edtEndUser: TEdit
-            Left = 69
-            Top = 5
-            Width = 542
-            Height = 21
+            Left = 78
+            Top = 0
+            Width = 490
+            Height = 25
             Anchors = [akLeft, akTop, akRight]
             ReadOnly = True
             TabOrder = 0
-            ExplicitWidth = 536
           end
           object btnEndUser: TBitBtn
-            Left = 618
-            Top = 4
+            Left = 574
+            Top = -1
             Width = 25
             Height = 25
             Anchors = [akTop, akRight]
@@ -1412,7 +1411,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ParentFont = False
             TabOrder = 1
             OnClick = btnEndUserClick
-            ExplicitLeft = 612
           end
         end
       end
@@ -1432,41 +1430,39 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       object lblQuoteNo: TLabel
         Left = 9
         Top = 15
-        Width = 53
-        Height = 13
+        Width = 61
+        Height = 17
         Caption = 'Quote No.'
       end
       object Label4: TLabel
         Left = 184
         Top = 15
-        Width = 24
-        Height = 13
+        Width = 27
+        Height = 17
         Caption = 'Date'
       end
       object lblAccountManager: TLabel
-        Left = 847
+        Left = 841
         Top = 15
-        Width = 74
-        Height = 13
+        Width = 82
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Office Contact'
-        ExplicitLeft = 873
       end
       object Label5: TLabel
-        Left = 599
+        Left = 579
         Top = 15
-        Width = 97
-        Height = 13
+        Width = 111
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = 'Quote Required by'
-        ExplicitLeft = 625
       end
       object edtQuote: TEdit
         Left = 80
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 0
       end
@@ -1474,13 +1470,13 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Left = 216
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnExit = edtDateExit
       end
       object btnDate: TBitBtn
         Left = 304
-        Top = 9
+        Top = 11
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -1501,20 +1497,19 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         OnClick = btnDateClick
       end
       object edtOfficeContact: TEdit
-        Left = 928
+        Left = 931
         Top = 11
         Width = 95
-        Height = 21
+        Height = 25
         TabStop = False
         Anchors = [akTop, akRight]
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 3
-        ExplicitLeft = 922
       end
       object btnAccountManager: TButton
-        Left = 1035
-        Top = 8
+        Left = 1038
+        Top = 12
         Width = 23
         Height = 23
         Anchors = [akTop, akRight]
@@ -1527,21 +1522,19 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         ParentFont = False
         TabOrder = 4
         OnClick = btnAccountManagerClick
-        ExplicitLeft = 1029
       end
       object edtQuoteReqDate: TEdit
-        Left = 703
+        Left = 697
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 5
         OnExit = edtQuoteReqDateExit
-        ExplicitLeft = 697
       end
       object BitBtn9: TBitBtn
-        Left = 794
-        Top = 9
+        Left = 788
+        Top = 11
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
@@ -1561,7 +1554,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         NumGlyphs = 2
         TabOrder = 6
         OnClick = BitBtn9Click
-        ExplicitLeft = 788
       end
     end
     object Panel2: TPanel
@@ -1576,7 +1568,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       ExplicitWidth = 1109
       object lblGDPRSignedStatement: TLabel
         Left = 491
-        Top = 13
+        Top = 11
         Width = 213
         Height = 17
         Caption = 'GDPR Policy has not been signed!!'
@@ -1590,9 +1582,9 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
       object lblReason: TLabel
         Left = 128
-        Top = 17
-        Width = 38
-        Height = 13
+        Top = 11
+        Width = 43
+        Height = 17
         Caption = 'Reason'
         Visible = False
       end
@@ -1610,16 +1602,16 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           376
           37)
         object lblDeletePrompt: TLabel
-          Left = 95
-          Top = 13
-          Width = 95
-          Height = 13
+          Left = 75
+          Top = 9
+          Width = 115
+          Height = 17
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'Delete this Quote?'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -1699,7 +1691,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
       object chkbxDeclined: TCheckBox
         Left = 8
-        Top = 15
+        Top = 11
         Width = 114
         Height = 16
         Caption = 'Quote Declined'
@@ -1708,9 +1700,9 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
       object dblkpReason: TDBLookupComboBox
         Left = 176
-        Top = 13
+        Top = 7
         Width = 201
-        Height = 21
+        Height = 25
         KeyField = 'Quote_Reason'
         ListField = 'Quote_Reason_Description'
         TabOrder = 2
@@ -1718,7 +1710,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
       object btnReason: TButton
         Left = 389
-        Top = 12
+        Top = 8
         Width = 23
         Height = 22
         Caption = '...'
@@ -1763,8 +1755,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Top = 393
   end
   object imgDocuments: TImageList
-    Left = 336
-    Top = 228
+    Left = 264
+    Top = 164
   end
   object imgIcons: TImageList
     Left = 696

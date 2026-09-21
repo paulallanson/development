@@ -9,19 +9,21 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
   Constraints.MinWidth = 796
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
     Top = 511
     Width = 784
     Height = 19
     Panels = <>
+    ExplicitTop = 502
+    ExplicitWidth = 778
   end
   object pnlBody: TPanel
     Left = 0
@@ -32,6 +34,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 778
+    ExplicitHeight = 502
     object pnlBottom: TPanel
       Left = 0
       Top = 470
@@ -40,6 +44,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 461
+      ExplicitWidth = 778
       DesignSize = (
         784
         41)
@@ -52,6 +58,7 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         Caption = '&Close'
         TabOrder = 0
         OnClick = btnCloseClick
+        ExplicitLeft = 685
       end
     end
     object pnlCentre: TPanel
@@ -62,6 +69,7 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Align = alLeft
       ParentBackground = False
       TabOrder = 1
+      ExplicitHeight = 461
       object btnFromSingle: TBitBtn
         Left = 8
         Top = 120
@@ -164,6 +172,7 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Align = alLeft
       ParentBackground = False
       TabOrder = 2
+      ExplicitHeight = 461
       object Panel5: TPanel
         Left = 1
         Top = 1
@@ -174,22 +183,22 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         TabOrder = 0
         object Label1: TLabel
           Left = 16
-          Top = 16
-          Width = 78
-          Height = 13
+          Top = 13
+          Width = 90
+          Height = 17
           Caption = 'Customer From'
         end
         object edtCustomerFrom: TEdit
           Left = 16
           Top = 32
           Width = 225
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
         object btnLUCustomerFrom: TBitBtn
           Left = 252
-          Top = 30
+          Top = 32
           Width = 25
           Height = 25
           Caption = '...'
@@ -207,13 +216,13 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         Left = 1
         Top = 73
         Width = 335
-        Height = 347
+        Height = 335
         Align = alClient
         DataSource = dtsProductsFrom
         DrawingStyle = gdsGradient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -221,7 +230,7 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -13
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         Columns = <
@@ -242,37 +251,37 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       end
       object Panel1: TPanel
         Left = 1
-        Top = 420
+        Top = 408
         Width = 335
-        Height = 49
+        Height = 61
         Align = alBottom
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
         DesignSize = (
           335
-          49)
+          61)
         object Label3: TLabel
           Left = 5
-          Top = 9
-          Width = 34
-          Height = 13
+          Top = 14
+          Width = 39
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Search'
         end
         object lblRecordsFrom: TLabel
           Left = 5
-          Top = 32
-          Width = 80
-          Height = 13
+          Top = 39
+          Width = 92
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'lblRecordsFrom'
         end
         object edtSearchFrom: TEdit
           Left = 54
-          Top = 5
+          Top = 10
           Width = 211
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akBottom]
           CharCase = ecUpperCase
           TabOrder = 0
@@ -288,6 +297,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Align = alClient
       ParentBackground = False
       TabOrder = 3
+      ExplicitWidth = 349
+      ExplicitHeight = 461
       object Panel6: TPanel
         Left = 1
         Top = 1
@@ -296,24 +307,25 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         Align = alTop
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 347
         object Label2: TLabel
           Left = 16
-          Top = 16
-          Width = 64
-          Height = 13
+          Top = 13
+          Width = 74
+          Height = 17
           Caption = 'Customer To'
         end
         object edtCustomerTo: TEdit
           Left = 16
           Top = 32
           Width = 225
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
         object btnLUCustomerTo: TBitBtn
           Left = 252
-          Top = 30
+          Top = 32
           Width = 25
           Height = 25
           Caption = '...'
@@ -331,13 +343,13 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         Left = 1
         Top = 73
         Width = 353
-        Height = 347
+        Height = 335
         Align = alClient
         DataSource = dtsProductsTo
         DrawingStyle = gdsGradient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -345,7 +357,7 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -13
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         Columns = <
@@ -366,37 +378,37 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       end
       object Panel2: TPanel
         Left = 1
-        Top = 420
+        Top = 408
         Width = 353
-        Height = 49
+        Height = 61
         Align = alBottom
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
         DesignSize = (
           353
-          49)
+          61)
         object Label5: TLabel
-          Left = 5
-          Top = 9
-          Width = 34
-          Height = 13
+          Left = 11
+          Top = 14
+          Width = 39
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Search'
         end
         object lblRecordsTo: TLabel
-          Left = 5
-          Top = 32
-          Width = 66
-          Height = 13
+          Left = 11
+          Top = 39
+          Width = 76
+          Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'lblRecordsTo'
         end
         object edtSearchTo: TEdit
-          Left = 54
-          Top = 5
+          Left = 60
+          Top = 10
           Width = 227
-          Height = 21
+          Height = 25
           Anchors = [akLeft, akBottom]
           CharCase = ecUpperCase
           TabOrder = 0
@@ -469,8 +481,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       'update Part'
       'set Customer = :Customer, Branch_no = :Branch_no'
       'where Part = :Part')
-    Left = 369
-    Top = 328
+    Left = 525
+    Top = 250
     ParamData = <
       item
         Name = 'Customer'

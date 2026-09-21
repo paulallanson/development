@@ -4,41 +4,41 @@ object PBRSPORepFrm: TPBRSPORepFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Purchase Order Report'
-  ClientHeight = 457
-  ClientWidth = 433
+  ClientHeight = 490
+  ClientWidth = 477
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    433
-    457)
-  TextHeight = 13
+    477
+    490)
+  TextHeight = 17
   object SupplierLabel: TLabel
     Left = 160
     Top = 8
-    Width = 82
-    Height = 13
+    Width = 92
+    Height = 17
     Caption = 'Supplier/Branch'
     Visible = False
   end
   object Label1: TLabel
     Left = 8
     Top = 144
-    Width = 56
-    Height = 13
+    Width = 64
+    Height = 17
     Caption = 'Date From:'
     Visible = False
   end
   object Label2: TLabel
     Left = 8
     Top = 192
-    Width = 42
-    Height = 13
+    Width = 48
+    Height = 17
     Caption = 'Date To:'
     Visible = False
   end
@@ -87,14 +87,14 @@ object PBRSPORepFrm: TPBRSPORepFrm
   object CustBranchLabel: TLabel
     Left = 160
     Top = 80
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 17
     Caption = 'Customer'
     Visible = False
   end
   object Panel1: TPanel
     Left = 7
-    Top = 324
+    Top = 358
     Width = 226
     Height = 85
     BevelOuter = bvNone
@@ -136,7 +136,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
   object AllOrOneRadioGroup: TRadioGroup
     Left = 8
     Top = 5
-    Width = 113
+    Width = 137
     Height = 65
     ItemIndex = 0
     Items.Strings = (
@@ -148,7 +148,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 352
-    Top = 422
+    Top = 455
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -169,10 +169,11 @@ object PBRSPORepFrm: TPBRSPORepFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PrintBitBtnClick
+    ExplicitTop = 413
   end
   object PreviewBitBtn: TBitBtn
     Left = 264
-    Top = 422
+    Top = 455
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -193,10 +194,11 @@ object PBRSPORepFrm: TPBRSPORepFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 413
   end
   object CancelBitBtn: TBitBtn
     Left = 16
-    Top = 422
+    Top = 455
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -204,12 +206,13 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 3
+    ExplicitTop = 413
   end
   object SuppEdit: TEdit
     Left = 160
     Top = 24
     Width = 233
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 4
     Visible = False
@@ -217,8 +220,8 @@ object PBRSPORepFrm: TPBRSPORepFrm
   object RepTypeRadioGroup: TRadioGroup
     Left = 160
     Top = 144
-    Width = 132
-    Height = 169
+    Width = 153
+    Height = 191
     Caption = 'Sort first by'
     ItemIndex = 0
     Items.Strings = (
@@ -237,7 +240,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Left = 8
     Top = 160
     Width = 113
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 6
     OnExit = DateFromEditExit
@@ -246,7 +249,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Left = 8
     Top = 208
     Width = 113
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 7
     OnExit = DateToEditExit
@@ -270,7 +273,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
   object CustRadioGroup: TRadioGroup
     Left = 8
     Top = 73
-    Width = 113
+    Width = 137
     Height = 65
     ItemIndex = 0
     Items.Strings = (
@@ -284,7 +287,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Left = 160
     Top = 96
     Width = 233
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 10
     Visible = False
@@ -306,9 +309,9 @@ object PBRSPORepFrm: TPBRSPORepFrm
     OnClick = LUCustButtonClick
   end
   object Sort2RadioGroup: TRadioGroup
-    Left = 308
+    Left = 319
     Top = 144
-    Width = 117
+    Width = 138
     Height = 89
     Caption = 'then sort by'
     ItemIndex = 0
@@ -320,8 +323,8 @@ object PBRSPORepFrm: TPBRSPORepFrm
     TabOrder = 12
   end
   object OleContainer1: TOleContainer
-    Left = 168
-    Top = 176
+    Left = 195
+    Top = 80
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -330,8 +333,8 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 88
-    Top = 172
+    Left = 104
+    Top = 208
     Width = 289
     Height = 61
     ParentBackground = False
@@ -340,8 +343,8 @@ object PBRSPORepFrm: TPBRSPORepFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -355,7 +358,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
   end
   object btbtnExcel: TBitBtn
     Left = 174
-    Top = 422
+    Top = 455
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -405,11 +408,12 @@ object PBRSPORepFrm: TPBRSPORepFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 16
     OnClick = btbtnExcelClick
+    ExplicitTop = 413
   end
   object rdgrpInclude: TRadioGroup
     Left = 240
-    Top = 320
-    Width = 185
+    Top = 341
+    Width = 229
     Height = 65
     Caption = 'Orders to include '
     ItemIndex = 0
@@ -420,9 +424,9 @@ object PBRSPORepFrm: TPBRSPORepFrm
     TabOrder = 17
   end
   object chkbxExcludeCosts: TCheckBox
-    Left = 24
-    Top = 310
-    Width = 121
+    Left = 23
+    Top = 344
+    Width = 161
     Height = 17
     Caption = 'Exclude Cost details'
     TabOrder = 18

@@ -7,14 +7,14 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlGrid: TPanel
     Left = 0
     Top = 0
@@ -23,16 +23,18 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 679
+    ExplicitHeight = 280
     object dbgrdMvmnts: TDBGrid
       Left = 1
-      Top = 49
+      Top = 57
       Width = 683
-      Height = 239
+      Height = 231
       Align = alClient
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -40,7 +42,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -124,19 +126,19 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       Left = 1
       Top = 1
       Width = 683
-      Height = 48
+      Height = 56
       Align = alTop
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
         683
-        48)
+        56)
       object lblPartDesc: TLabel
         Left = 240
         Top = 8
         Width = 273
-        Height = 13
+        Height = 18
         AutoSize = False
         Caption = 'lblPartDesc'
       end
@@ -144,19 +146,19 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
         Left = 64
         Top = 8
         Width = 169
-        Height = 13
+        Height = 18
         AutoSize = False
         Caption = 'lblPartCode'
       end
       object lblPart: TLabel
         Left = 8
         Top = 8
-        Width = 43
-        Height = 13
+        Width = 48
+        Height = 18
         Caption = 'Product:'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -164,45 +166,45 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       object Label1: TLabel
         Left = 528
         Top = 8
-        Width = 56
-        Height = 13
+        Width = 63
+        Height = 18
         Anchors = [akTop, akRight]
         Caption = 'Total Stock'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object Label2: TLabel
         Left = 528
-        Top = 24
-        Width = 53
-        Height = 13
+        Top = 30
+        Width = 60
+        Height = 18
         Anchors = [akTop, akRight]
         Caption = 'Free Stock'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
       end
       object lblTotalStock: TLabel
-        Left = 604
+        Left = 597
         Top = 8
-        Width = 66
-        Height = 13
+        Width = 73
+        Height = 18
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = 'lblTotalStock'
       end
       object lblFreeStock: TLabel
-        Left = 607
-        Top = 24
-        Width = 63
-        Height = 13
+        Left = 600
+        Top = 30
+        Width = 70
+        Height = 18
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = 'lblFreeStock'
@@ -217,6 +219,8 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 280
+    ExplicitWidth = 679
     DesignSize = (
       685
       41)
@@ -229,6 +233,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 574
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
@@ -240,7 +245,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       end
     end
     object btnExcel: TBitBtn
-      Left = 450
+      Left = 444
       Top = 8
       Width = 75
       Height = 25
@@ -292,6 +297,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
+      ExplicitLeft = 438
     end
   end
 end

@@ -2,34 +2,36 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   Left = 283
   Top = 87
   Caption = 'Work In Progress Report'
-  ClientHeight = 461
-  ClientWidth = 834
+  ClientHeight = 462
+  ClientWidth = 893
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 850
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 15
   object pnlControl: TPanel
     Left = 0
-    Top = 401
-    Width = 834
+    Top = 402
+    Width = 893
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 393
+    ExplicitWidth = 832
     DesignSize = (
-      834
+      893
       41)
     object pnlRightControl: TPanel
-      Left = 503
+      Left = 562
       Top = 0
       Width = 331
       Height = 41
@@ -37,6 +39,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 6
       DesignSize = (
         331
         41)
@@ -155,24 +158,33 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 834
-    Height = 201
+    Width = 893
+    Height = 234
     Align = alTop
     BevelOuter = bvNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 838
     object pnlDates: TPanel
-      Left = 656
+      Left = 715
       Top = 0
       Width = 178
-      Height = 201
+      Height = 234
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 654
+      ExplicitHeight = 201
       object chkbxPageBreak: TCheckBox
-        Left = 17
-        Top = 136
+        Left = 6
+        Top = 153
         Width = 145
         Height = 17
         Caption = 'Page break on total'
@@ -180,10 +192,10 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         TabOrder = 0
       end
       object TotByRadioGroup: TRadioGroup
-        Left = 17
+        Left = -7
         Top = 4
-        Width = 136
-        Height = 113
+        Width = 160
+        Height = 135
         Caption = 'Report Totals'
         ItemIndex = 4
         Items.Strings = (
@@ -197,16 +209,16 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         OnClick = TotByRadioGroupClick
       end
       object chkbxShowCosts: TCheckBox
-        Left = 17
-        Top = 173
+        Left = 6
+        Top = 190
         Width = 145
         Height = 17
         Caption = 'Hide cost/margin values'
         TabOrder = 2
       end
       object chkbxShowSales: TCheckBox
-        Left = 17
-        Top = 154
+        Left = 6
+        Top = 171
         Width = 145
         Height = 17
         Caption = 'Hide sales value'
@@ -215,24 +227,24 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
     end
     object Panel1: TPanel
-      Left = 459
+      Left = 464
       Top = 0
-      Width = 197
-      Height = 201
+      Width = 251
+      Height = 234
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       object Label1: TLabel
         Left = 19
-        Top = 3
-        Width = 93
-        Height = 13
+        Top = 13
+        Width = 106
+        Height = 17
         Caption = 'Delivery due after:'
       end
       object DateFromButton: TSpeedButton
-        Left = 124
-        Top = 14
+        Left = 123
+        Top = 33
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -253,14 +265,14 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
       object Label2: TLabel
         Left = 19
-        Top = 48
-        Width = 103
-        Height = 13
+        Top = 64
+        Width = 118
+        Height = 17
         Caption = 'Delivery due before:'
       end
       object DateToButton: TSpeedButton
-        Left = 124
-        Top = 59
+        Left = 123
+        Top = 82
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -281,25 +293,25 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
       object DateFromEdit: TEdit
         Left = 19
-        Top = 16
+        Top = 32
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 0
         OnExit = DateFromEditExit
       end
       object DateToEdit: TEdit
         Left = 19
-        Top = 61
+        Top = 82
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 1
         OnExit = DateToEditExit
       end
       object chkbxExcludeInvCallOff: TCheckBox
         Left = 19
-        Top = 119
+        Top = 142
         Width = 182
         Height = 17
         Caption = 'Exclude Inv On Call Off'
@@ -308,7 +320,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
       object ExcOnHoldCheckBox: TCheckBox
         Left = 19
-        Top = 137
+        Top = 160
         Width = 182
         Height = 17
         Caption = 'Exclude on hold items'
@@ -317,7 +329,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
       object chkbxIncludeJB: TCheckBox
         Left = 19
-        Top = 154
+        Top = 177
         Width = 182
         Height = 17
         Caption = 'Include orders in Job bags'
@@ -326,7 +338,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
       object chkbxincludezero: TCheckBox
         Left = 19
-        Top = 173
+        Top = 196
         Width = 182
         Height = 17
         Hint = 'Show zero sales values for confirmed deliveries'
@@ -338,8 +350,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
       object chkbxExcludeDelivered: TCheckBox
         Left = 19
-        Top = 101
-        Width = 182
+        Top = 122
+        Width = 226
         Height = 17
         Caption = 'Exclude Fully Delivered Orders'
         TabOrder = 6
@@ -349,38 +361,40 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     object Panel2: TPanel
       Left = 0
       Top = 0
-      Width = 459
-      Height = 201
+      Width = 464
+      Height = 234
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 465
+      ExplicitHeight = 213
       object Label3: TLabel
-        Left = 8
-        Top = 152
-        Width = 59
-        Height = 13
+        Left = 9
+        Top = 170
+        Width = 68
+        Height = 17
         Caption = 'Sort first by'
       end
       object Label4: TLabel
-        Left = 160
-        Top = 152
-        Width = 62
-        Height = 13
+        Left = 161
+        Top = 170
+        Width = 70
+        Height = 17
         Caption = 'then sort by'
       end
       object Label5: TLabel
-        Left = 312
-        Top = 152
-        Width = 92
-        Height = 13
+        Left = 313
+        Top = 170
+        Width = 104
+        Height = 17
         Caption = 'and finally sort by'
       end
       object rgSupplier: TRadioGroup
         Left = 8
         Top = 1
-        Width = 100
-        Height = 58
+        Width = 109
+        Height = 65
         Caption = ' By supplier '
         ItemIndex = 0
         Items.Strings = (
@@ -393,8 +407,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       object rgCustomer: TRadioGroup
         Left = 8
         Top = 63
-        Width = 100
-        Height = 60
+        Width = 109
+        Height = 65
         Caption = ' By customer '
         ItemIndex = 0
         Items.Strings = (
@@ -405,8 +419,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         OnClick = rgCustomerClick
       end
       object SupplierPanel: TPanel
-        Left = 113
-        Top = 6
+        Left = 122
+        Top = 9
         Width = 336
         Height = 49
         ParentBackground = False
@@ -414,15 +428,15 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         object lblSupplier: TLabel
           Left = 8
           Top = 4
-          Width = 82
-          Height = 13
+          Width = 92
+          Height = 17
           Caption = 'Supplier/Branch'
         end
         object edtSupplier: TEdit
           Left = 8
           Top = 20
           Width = 273
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
@@ -443,8 +457,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         end
       end
       object CustomerPanel: TPanel
-        Left = 115
-        Top = 68
+        Left = 122
+        Top = 72
         Width = 334
         Height = 57
         ParentBackground = False
@@ -452,15 +466,15 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         object lblCustomer: TLabel
           Left = 8
           Top = 1
-          Width = 88
-          Height = 13
+          Width = 100
+          Height = 17
           Caption = 'Customer/Branch'
         end
         object edtCustomer: TEdit
           Left = 8
           Top = 17
           Width = 273
-          Height = 21
+          Height = 25
           ReadOnly = True
           TabOrder = 0
         end
@@ -491,10 +505,10 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         end
       end
       object cbSort1: TComboBox
-        Left = 8
-        Top = 168
+        Left = 9
+        Top = 186
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 4
         OnChange = cbSortChange
@@ -507,10 +521,10 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
           'Rep')
       end
       object cbSort2: TComboBox
-        Left = 160
-        Top = 168
+        Left = 161
+        Top = 186
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 5
         OnChange = cbSortChange
@@ -523,10 +537,10 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
           'Rep')
       end
       object cbSort3: TComboBox
-        Left = 312
-        Top = 168
+        Left = 313
+        Top = 186
         Width = 145
-        Height = 21
+        Height = 25
         Style = csDropDownList
         TabOrder = 6
         OnChange = cbSortChange
@@ -542,22 +556,24 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 442
-    Width = 834
+    Top = 443
+    Width = 893
     Height = 19
     Panels = <>
+    ExplicitTop = 434
+    ExplicitWidth = 832
   end
   object DBGrid: TDBGrid
     Left = 0
-    Top = 201
-    Width = 834
-    Height = 200
+    Top = 234
+    Width = 893
+    Height = 168
     Align = alClient
     DataSource = dsReport
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -565,7 +581,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -628,8 +644,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end>
   end
   object pnlExportPrgrss: TPanel
-    Left = 250
-    Top = 212
+    Left = 218
+    Top = 268
     Width = 289
     Height = 61
     ParentBackground = False
@@ -639,7 +655,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       Left = 16
       Top = 12
       Width = 59
-      Height = 13
+      Height = 15
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -722,8 +738,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       '    (Delivery_Detail.Date_deliv_actual is not null)) and'
       '    ((Purchase_orderline.Inactive <> '#39'Y'#39') or'
       '    (Purchase_orderline.Inactive is null)))')
-    Left = 512
-    Top = 32
+    Left = 440
+    Top = 72
     object qryReportPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
     end
@@ -825,8 +841,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   object dsReport: TDataSource
     AutoEdit = False
     DataSet = qryReport
-    Left = 464
-    Top = 32
+    Left = 352
+    Top = 56
   end
   object qryRepName: TFDQuery
     ConnectionName = 'PB'

@@ -8,16 +8,16 @@ object PBSendPOViaFTPFrm: TPBSendPOViaFTPFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 40
-    Width = 249
+    Width = 273
     Height = 232
     Align = alLeft
     ParentBackground = False
@@ -34,18 +34,18 @@ object PBSendPOViaFTPFrm: TPBSendPOViaFTPFrm
       TabOrder = 0
     end
     object edtUserName: TEdit
-      Left = 73
+      Left = 87
       Top = 40
       Width = 121
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 1
     end
     object edtPassword: TEdit
-      Left = 73
+      Left = 87
       Top = 72
       Width = 121
-      Height = 21
+      Height = 25
       PasswordChar = '*'
       ReadOnly = True
       TabOrder = 2
@@ -73,22 +73,26 @@ object PBSendPOViaFTPFrm: TPBSendPOViaFTPFrm
       TabOrder = 4
     end
     object edtFTP: TEdit
-      Left = 73
+      Left = 87
       Top = 8
       Width = 168
-      Height = 21
+      Height = 25
       TabOrder = 5
     end
   end
   object lstbxStatus: TListBox
-    Left = 249
+    Left = 273
     Top = 40
-    Width = 360
+    Width = 336
     Height = 232
     Hint = 'Transaction Log'
     Style = lbOwnerDrawFixed
     Align = alClient
     TabOrder = 1
+    ExplicitLeft = 353
+    ExplicitTop = 55
+    ExplicitWidth = 354
+    ExplicitHeight = 223
   end
   object Panel2: TPanel
     Left = 0
@@ -98,33 +102,34 @@ object PBSendPOViaFTPFrm: TPBSendPOViaFTPFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 603
     object Label1: TLabel
       Left = 5
       Top = 13
-      Width = 62
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'PO Number:'
     end
     object Label2: TLabel
-      Left = 190
-      Top = 13
-      Width = 46
-      Height = 13
+      Left = 220
+      Top = 14
+      Width = 51
+      Height = 17
       Caption = 'Supplier:'
     end
     object edtPONumber: TEdit
-      Left = 73
+      Left = 87
       Top = 8
       Width = 96
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
     object edtSupplier: TEdit
-      Left = 240
-      Top = 8
-      Width = 362
-      Height = 21
+      Left = 273
+      Top = 9
+      Width = 321
+      Height = 25
       ReadOnly = True
       TabOrder = 1
     end
@@ -137,6 +142,8 @@ object PBSendPOViaFTPFrm: TPBSendPOViaFTPFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 263
+    ExplicitWidth = 603
     object btnSend: TBitBtn
       Left = 223
       Top = 12
@@ -300,11 +307,11 @@ object PBSendPOViaFTPFrm: TPBSendPOViaFTPFrm
     end
   end
   object lstbxFiles: TListBox
-    Left = 72
-    Top = 144
+    Left = 87
+    Top = 143
     Width = 121
     Height = 97
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 4
     Visible = False
   end

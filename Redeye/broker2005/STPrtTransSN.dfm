@@ -2,26 +2,26 @@ object STPrtTransSNFrm: TSTPrtTransSNFrm
   Left = 233
   Top = 107
   Caption = 'Specify Serial Numbers'
-  ClientHeight = 265
-  ClientWidth = 336
+  ClientHeight = 296
+  ClientWidth = 356
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object ItemNoLabel: TLabel
     Left = 8
     Top = 8
-    Width = 64
-    Height = 13
+    Width = 74
+    Height = 17
     Caption = 'ItemNoLabel'
   end
   object OKBitBtn: TBitBtn
-    Left = 176
-    Top = 240
+    Left = 173
+    Top = 256
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -48,8 +48,8 @@ object STPrtTransSNFrm: TSTPrtTransSNFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 256
-    Top = 240
+    Left = 253
+    Top = 256
     Width = 75
     Height = 25
     Kind = bkCancel

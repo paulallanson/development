@@ -3,92 +3,92 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   Top = 38
   BorderStyle = bsDialog
   Caption = 'Maintain Products'
-  ClientHeight = 476
-  ClientWidth = 511
+  ClientHeight = 525
+  ClientWidth = 547
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 4
-    Width = 27
-    Height = 13
+    Top = 14
+    Width = 31
+    Height = 17
     Caption = 'Code'
   end
   object Label2: TLabel
     Left = 8
-    Top = 30
-    Width = 59
-    Height = 13
+    Top = 42
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label4: TLabel
     Left = 8
-    Top = 256
-    Width = 66
-    Height = 13
+    Top = 283
+    Width = 79
+    Height = 17
     Caption = 'Sell Price (PK)'
   end
   object Label5: TLabel
     Left = 8
-    Top = 185
-    Width = 48
-    Height = 13
+    Top = 218
+    Width = 56
+    Height = 17
     Caption = 'VAT Code'
   end
   object Label6: TLabel
     Left = 8
-    Top = 216
-    Width = 71
-    Height = 13
+    Top = 250
+    Width = 85
+    Height = 17
     Caption = 'Cost Price (PK)'
   end
   object Label7: TLabel
     Left = 216
-    Top = 214
-    Width = 52
-    Height = 26
+    Top = 251
+    Width = 88
+    Height = 19
     Caption = 'Cost Pack Qty'
     WordWrap = True
   end
   object Label8: TLabel
     Left = 8
-    Top = 80
-    Width = 33
-    Height = 13
+    Top = 104
+    Width = 37
+    Height = 17
     Caption = 'Group'
   end
   object Label9: TLabel
     Left = 216
-    Top = 256
-    Width = 64
-    Height = 13
+    Top = 283
+    Width = 74
+    Height = 17
     Caption = 'Sell Pack Qty'
   end
   object Label10: TLabel
     Left = 8
-    Top = 338
-    Width = 88
-    Height = 13
+    Top = 349
+    Width = 99
+    Height = 17
     Caption = 'Invoice Price Unit'
   end
   object Label11: TLabel
     Left = 8
-    Top = 56
-    Width = 49
-    Height = 13
+    Top = 75
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object LblSlsNomCode: TLabel
     Left = 8
-    Top = 368
+    Top = 375
     Width = 100
     Height = 33
     AutoSize = False
@@ -97,7 +97,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object LblPurchNom: TLabel
     Left = 8
-    Top = 408
+    Top = 415
     Width = 100
     Height = 33
     AutoSize = False
@@ -106,7 +106,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object Label12: TLabel
     Left = 8
-    Top = 120
+    Top = 140
     Width = 100
     Height = 35
     AutoSize = False
@@ -115,30 +115,30 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object Label3: TLabel
     Left = 8
-    Top = 304
-    Width = 81
-    Height = 13
+    Top = 315
+    Width = 92
+    Height = 17
     Caption = 'Cost Uplift Type'
   end
   object Label13: TLabel
-    Left = 384
-    Top = 256
-    Width = 52
-    Height = 13
+    Left = 394
+    Top = 283
+    Width = 60
+    Height = 17
     Caption = 'Markup %'
   end
   object Label14: TLabel
-    Left = 384
-    Top = 304
-    Width = 29
-    Height = 13
+    Left = 394
+    Top = 315
+    Width = 31
+    Height = 17
     Caption = 'Uplift'
   end
   object CodeEdit: TEdit
     Left = 112
-    Top = 4
+    Top = 14
     Width = 265
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     MaxLength = 15
     TabOrder = 0
@@ -147,16 +147,16 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object DescrEdit: TEdit
     Left = 112
-    Top = 30
+    Top = 42
     Width = 361
-    Height = 21
+    Height = 25
     MaxLength = 50
     TabOrder = 1
     OnChange = DescrEditChange
   end
   object CatMemo: TMemo
     Left = 112
-    Top = 246
+    Top = 280
     Width = 89
     Height = 25
     Alignment = taRightJustify
@@ -172,9 +172,9 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object VATDBLookupComboBox: TDBLookupComboBox
     Left = 112
-    Top = 185
+    Top = 218
     Width = 161
-    Height = 21
+    Height = 25
     KeyField = 'Vat_Code'
     ListField = 'Description'
     ListSource = VATsDataSource
@@ -182,8 +182,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
     OnClick = VATDBLookupComboBoxClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 328
-    Top = 456
+    Left = 310
+    Top = 479
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -191,8 +191,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
     TabOrder = 26
   end
   object OKBitBtn: TBitBtn
-    Left = 248
-    Top = 456
+    Left = 230
+    Top = 479
     Width = 75
     Height = 25
     Kind = bkOK
@@ -203,7 +203,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object PurchPriceMemo: TMemo
     Left = 112
-    Top = 216
+    Top = 250
     Width = 89
     Height = 25
     Alignment = taRightJustify
@@ -218,8 +218,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
     OnKeyPress = PurchPriceMemoKeyPress
   end
   object PurchPackQtyMemo: TMemo
-    Left = 300
-    Top = 214
+    Left = 310
+    Top = 248
     Width = 70
     Height = 25
     Alignment = taRightJustify
@@ -235,9 +235,9 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object PartGroupDBLookupComboBox: TDBLookupComboBox
     Left = 112
-    Top = 80
+    Top = 100
     Width = 209
-    Height = 21
+    Height = 25
     KeyField = 'Part_Group'
     ListField = 'Part_Group_Descr'
     ListSource = GroupsDataSource
@@ -245,7 +245,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object GroupClearBitBtn: TBitBtn
     Left = 328
-    Top = 80
+    Top = 101
     Width = 25
     Height = 23
     Glyph.Data = {
@@ -267,16 +267,16 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
     OnClick = GroupClearBitBtnClick
   end
   object NotInUseCheckBox: TCheckBox
-    Left = 416
-    Top = 421
+    Left = 394
+    Top = 427
     Width = 97
     Height = 17
     Caption = 'Not In Use'
     TabOrder = 23
   end
   object OKSuppBitBtn: TBitBtn
-    Left = 152
-    Top = 456
+    Left = 134
+    Top = 479
     Width = 89
     Height = 25
     Caption = 'OK+Supp'
@@ -288,7 +288,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object VatMaintBitBtn: TBitBtn
     Left = 288
-    Top = 185
+    Top = 218
     Width = 25
     Height = 23
     Hint = 'Vat Code Maintenance'
@@ -307,7 +307,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object PrtGrpMaintBitBtn: TBitBtn
     Left = 360
-    Top = 80
+    Top = 101
     Width = 25
     Height = 23
     Hint = 'Vat Code Maintenance'
@@ -325,8 +325,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
     OnClick = PrtGrpMaintBitBtnClick
   end
   object SellPackQtyMemo: TMemo
-    Left = 300
-    Top = 246
+    Left = 310
+    Top = 280
     Width = 70
     Height = 25
     Alignment = taRightJustify
@@ -342,9 +342,9 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object dblkpPriceUnit: TDBLookupComboBox
     Left = 112
-    Top = 338
+    Top = 345
     Width = 129
-    Height = 21
+    Height = 25
     KeyField = 'Price_Unit'
     ListField = 'Description'
     ListSource = srcPriceUnit
@@ -352,7 +352,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object BitBtn1: TBitBtn
     Left = 280
-    Top = 338
+    Top = 346
     Width = 25
     Height = 23
     Caption = '...'
@@ -367,7 +367,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object BitBtn2: TBitBtn
     Left = 248
-    Top = 338
+    Top = 346
     Width = 25
     Height = 23
     Glyph.Data = {
@@ -390,9 +390,9 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object CustNameEdit: TEdit
     Left = 112
-    Top = 56
+    Top = 71
     Width = 257
-    Height = 21
+    Height = 25
     TabStop = False
     MaxLength = 30
     ReadOnly = True
@@ -401,7 +401,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object CustBitBtn: TBitBtn
     Left = 408
-    Top = 56
+    Top = 72
     Width = 25
     Height = 23
     Caption = '...'
@@ -416,7 +416,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object BitBtnClrCust: TBitBtn
     Left = 376
-    Top = 56
+    Top = 72
     Width = 25
     Height = 23
     Glyph.Data = {
@@ -439,7 +439,7 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object ChkBxNumbrd: TCheckBox
     Left = 256
-    Top = 118
+    Top = 138
     Width = 129
     Height = 17
     Caption = 'Numbered'
@@ -447,25 +447,25 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object EdtSlsNom: TEdit
     Left = 112
-    Top = 368
+    Top = 375
     Width = 121
-    Height = 21
+    Height = 25
     ParentShowHint = False
     ShowHint = False
     TabOrder = 21
   end
   object EdtPurchNom: TEdit
     Left = 112
-    Top = 416
+    Top = 423
     Width = 121
-    Height = 21
+    Height = 25
     TabOrder = 22
   end
   object RadGrpPrdClass: TRadioGroup
     Left = 112
-    Top = 104
+    Top = 129
     Width = 129
-    Height = 73
+    Height = 81
     ItemIndex = 0
     Items.Strings = (
       'Stocked'
@@ -477,17 +477,17 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object DBLUCmbBxCstUplft: TDBLookupComboBox
     Left = 112
-    Top = 297
+    Top = 311
     Width = 161
-    Height = 21
+    Height = 25
     KeyField = 'Markup_type'
     ListField = 'Markup_Description'
     ListSource = DataSRCCstUplft
     TabOrder = 16
   end
   object CatMUMemo: TMemo
-    Left = 448
-    Top = 246
+    Left = 458
+    Top = 280
     Width = 65
     Height = 25
     TabStop = False
@@ -503,8 +503,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
     OnKeyPress = CatMUMemoKeyPress
   end
   object MemoUplift: TMemo
-    Left = 448
-    Top = 294
+    Left = 458
+    Top = 311
     Width = 65
     Height = 25
     Alignment = taRightJustify
@@ -520,16 +520,16 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   end
   object VATsDataSource: TDataSource
     DataSet = GetVatsQuery
-    Left = 312
-    Top = 176
+    Left = 224
+    Top = 182
   end
   object CheckPartExistsQuery: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part From Part Where Part = :Part'
       ' ')
-    Left = 360
-    Top = 16
+    Left = 202
+    Top = 36
     ParamData = <
       item
         Name = 'Part'
@@ -574,8 +574,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
       ''
       ' '
       ' ')
-    Left = 392
-    Top = 16
+    Left = 242
+    Top = 36
     ParamData = <
       item
         Name = 'Part'
@@ -697,8 +697,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
       ' '
       ' '
       ' ')
-    Left = 288
-    Top = 16
+    Left = 112
+    Top = 36
     ParamData = <
       item
         Name = 'Part_Description'
@@ -785,8 +785,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
       'delete from Part'
       'Where (Part = :Part)'
       '')
-    Left = 320
-    Top = 16
+    Left = 152
+    Top = 36
     ParamData = <
       item
         Name = 'Part'
@@ -800,13 +800,13 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
       'Part_Group'
       'Order by Part_Group_Descr'
       ' ')
-    Left = 416
-    Top = 72
+    Left = 112
+    Top = 98
   end
   object GroupsDataSource: TDataSource
     DataSet = GetGroupsQuery
-    Left = 440
-    Top = 72
+    Left = 302
+    Top = 106
   end
   object GetVatsQuery: TFDQuery
     ConnectionName = 'PB'
@@ -814,13 +814,13 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
       'Select * From VAT_Code'
       'Order By VAT_Code'
       ' ')
-    Left = 328
-    Top = 176
+    Left = 284
+    Top = 182
   end
   object srcPriceUnit: TDataSource
     DataSet = qryPriceUnit
-    Left = 320
-    Top = 336
+    Left = 112
+    Top = 171
   end
   object qryPriceUnit: TFDQuery
     ConnectionName = 'PB'
@@ -828,20 +828,20 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
       'select *'
       'from Price_Unit'
       'order by Description')
-    Left = 304
-    Top = 336
+    Left = 252
+    Top = 99
   end
   object qryCstUplft: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Markup_type')
-    Left = 288
-    Top = 288
+    Left = 216
+    Top = 111
   end
   object DataSRCCstUplft: TDataSource
     DataSet = qryCstUplft
-    Left = 304
-    Top = 288
+    Left = 164
+    Top = 111
   end
 end

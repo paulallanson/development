@@ -7,11 +7,11 @@ object STMntSOrdSpecInFrm: TSTMntSOrdSpecInFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DispMemo: TMemo
     Left = 8
     Top = 8

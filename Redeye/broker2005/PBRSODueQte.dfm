@@ -4,40 +4,40 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Overdue Quotation Print'
-  ClientHeight = 151
-  ClientWidth = 421
+  ClientHeight = 172
+  ClientWidth = 404
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DateLabel: TLabel
     Left = 8
     Top = 86
-    Width = 158
-    Height = 13
+    Width = 178
+    Height = 17
     Caption = 'Include any quotes due before'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object DateSpeedButton: TSpeedButton
-    Left = 280
-    Top = 88
+    Left = 297
+    Top = 82
     Width = 25
     Height = 25
     Hint = 'Specify due date'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     Glyph.Data = {
@@ -66,7 +66,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -80,7 +80,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
   end
   object PrintBitBtn: TBitBtn
     Left = 267
-    Top = 120
+    Top = 128
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -109,7 +109,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
   end
   object PreviewBitBtn: TBitBtn
     Left = 173
-    Top = 120
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -138,7 +138,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 80
-    Top = 120
+    Top = 128
     Width = 75
     Height = 25
     Caption = '&Cancel'
@@ -153,13 +153,13 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
     TabOrder = 3
   end
   object DateEdit: TEdit
-    Left = 176
+    Left = 193
     Top = 82
     Width = 97
-    Height = 21
+    Height = 25
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     MaxLength = 10
@@ -175,7 +175,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -184,9 +184,9 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
     Visible = False
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 118
-      Height = 13
+      Top = 10
+      Width = 136
+      Height = 17
       Caption = 'Selected Customer Rep'
     end
     object RepLUSpeedButton: TSpeedButton
@@ -210,7 +210,7 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
       Left = 8
       Top = 32
       Width = 217
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -221,8 +221,8 @@ object PBRSODueQteFrm: TPBRSODueQteFrm
       'select *'
       'from Rep'
       'where rep = :Rep')
-    Left = 336
-    Top = 64
+    Left = 332
+    Top = 16
     ParamData = <
       item
         Name = 'Rep'

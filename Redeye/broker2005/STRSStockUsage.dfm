@@ -3,21 +3,21 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   Top = 146
   BorderStyle = bsDialog
   Caption = 'Product Usage Report'
-  ClientHeight = 353
-  ClientWidth = 461
+  ClientHeight = 445
+  ClientWidth = 478
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    461
-    353)
-  TextHeight = 13
+    478
+    445)
+  TextHeight = 17
   object OleContainer1: TOleContainer
     Left = 359
     Top = 124
@@ -30,7 +30,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   end
   object pnlExportPrgrss: TPanel
     Left = 136
-    Top = 184
+    Top = 222
     Width = 289
     Height = 61
     ParentBackground = False
@@ -39,8 +39,8 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -62,15 +62,15 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     object Label1: TLabel
       Left = 8
       Top = 2
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 20
       Width = 249
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -120,7 +120,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   end
   object Panel1: TPanel
     Left = 8
-    Top = 288
+    Top = 326
     Width = 353
     Height = 36
     ParentBackground = False
@@ -138,7 +138,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   end
   object btnClose: TBitBtn
     Left = 8
-    Top = 334
+    Top = 388
     Width = 75
     Height = 25
     Font.Charset = ANSI_CHARSET
@@ -153,7 +153,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   end
   object btnPreview: TBitBtn
     Left = 299
-    Top = 334
+    Top = 388
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -177,7 +177,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   end
   object btnPrint: TBitBtn
     Left = 382
-    Top = 334
+    Top = 388
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -201,7 +201,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   end
   object GroupBox2: TGroupBox
     Left = 8
-    Top = 193
+    Top = 231
     Width = 209
     Height = 89
     Caption = 'Date range'
@@ -210,15 +210,15 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     object Label4: TLabel
       Left = 24
       Top = 27
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label5: TLabel
       Left = 39
       Top = 56
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object DateFromButton: TSpeedButton
@@ -267,7 +267,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       Left = 63
       Top = 19
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnChange = EnablePrint
@@ -277,7 +277,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       Left = 63
       Top = 51
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 1
       OnChange = EnablePrint
@@ -297,8 +297,8 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     TabOrder = 6
   end
   object btnExcel: TBitBtn
-    Left = 203
-    Top = 334
+    Left = 214
+    Top = 388
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
@@ -349,12 +349,13 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 7
     OnClick = btnExcelClick
+    ExplicitLeft = 197
   end
   object GroupBox1: TGroupBox
     Left = 8
     Top = 80
     Width = 449
-    Height = 110
+    Height = 145
     Caption = 'Product range'
     ParentBackground = False
     TabOrder = 10
@@ -371,7 +372,7 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       Left = 8
       Top = 73
       Width = 433
-      Height = 27
+      Height = 56
       BevelInner = bvNone
       BevelOuter = bvNone
       BorderStyle = bsNone
@@ -379,11 +380,11 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       Lines.Strings = (
         
           'Enter full or partial product codes separated by commas. To repo' +
-          'rt on products '
-        'with a '
+          'rt on '
         
-          'specific suffix, type the '#39'>'#39' character then the suffix. e.g.  A' +
-          'BC/, EGG/>/TP, MID/')
+          'products with a specific suffix, type the '#39'>'#39' character then the' +
+          ' suffix. e.g.  '
+        'ABC/, EGG/>/TP, MID/')
       TabOrder = 1
     end
   end

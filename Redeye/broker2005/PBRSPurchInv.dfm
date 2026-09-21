@@ -3,45 +3,48 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
   Top = 29
   Caption = 'Invoice Daybook'
   ClientHeight = 463
-  ClientWidth = 765
+  ClientWidth = 893
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlDisplay: TPanel
     Left = 0
-    Top = 137
-    Width = 765
-    Height = 285
+    Top = 177
+    Width = 893
+    Height = 245
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 137
+    ExplicitWidth = 759
+    ExplicitHeight = 276
     object dbgrdProofStatus: TDBGrid
       Left = 1
       Top = 1
-      Width = 763
-      Height = 283
+      Width = 891
+      Height = 243
       Align = alClient
       DataSource = dtsrcPurchInv
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -131,8 +134,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
         end>
     end
     object pnlExportPrgrss: TPanel
-      Left = 276
-      Top = 85
+      Left = 331
+      Top = 0
       Width = 289
       Height = 61
       ParentBackground = False
@@ -141,8 +144,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       object lblExporting: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Exporting...'
       end
       object prgbrExport: TProgressBar
@@ -158,30 +161,31 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 765
-    Height = 137
+    Width = 893
+    Height = 177
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = -5
     object Label3: TLabel
       Left = 8
-      Top = 92
-      Width = 59
-      Height = 13
+      Top = 116
+      Width = 68
+      Height = 17
       Caption = 'Sort first by'
     end
     object Label4: TLabel
       Left = 160
-      Top = 92
-      Width = 62
-      Height = 13
+      Top = 116
+      Width = 70
+      Height = 17
       Caption = 'then sort by'
     end
     object rgSupplier: TRadioGroup
       Left = 8
-      Top = 16
+      Top = 7
       Width = 113
-      Height = 57
+      Height = 65
       Caption = 'By Supplier'
       ItemIndex = 0
       Items.Strings = (
@@ -202,15 +206,15 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 8
-        Width = 85
-        Height = 13
+        Width = 96
+        Height = 17
         Caption = 'Supplier/ Branch'
       end
       object edtSupplier: TEdit
         Left = 8
         Top = 24
         Width = 257
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -232,9 +236,9 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     end
     object cbSort1: TComboBox
       Left = 8
-      Top = 106
+      Top = 137
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 2
       OnChange = cbSortChange
@@ -247,9 +251,9 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     end
     object cbSort2: TComboBox
       Left = 160
-      Top = 106
+      Top = 137
       Width = 145
-      Height = 21
+      Height = 25
       Style = csDropDownList
       TabOrder = 3
       OnChange = cbSortChange
@@ -260,10 +264,10 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
         'Supplier')
     end
     object TotByRadioGroup: TRadioGroup
-      Left = 608
+      Left = 626
       Top = 8
       Width = 153
-      Height = 57
+      Height = 65
       Caption = 'Report Totals'
       Items.Strings = (
         'By Supplier'
@@ -272,46 +276,46 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       TabOrder = 4
     end
     object chkbxUnmatchedOnly: TCheckBox
-      Left = 608
-      Top = 72
-      Width = 161
+      Left = 636
+      Top = 90
+      Width = 233
       Height = 17
       Caption = 'Only show unmatched orders'
       TabOrder = 5
     end
     object chkbxExcludeZero: TCheckBox
-      Left = 608
-      Top = 112
-      Width = 153
+      Left = 636
+      Top = 130
+      Width = 209
       Height = 17
       Caption = 'Exclude zero cost orders'
       TabOrder = 6
     end
     object chkbxInvoiced: TCheckBox
-      Left = 608
-      Top = 92
-      Width = 161
+      Left = 636
+      Top = 110
+      Width = 201
       Height = 17
       Caption = 'Only show invoiced orders'
       TabOrder = 7
     end
     object GroupBox1: TGroupBox
       Left = 440
-      Top = 8
-      Width = 153
-      Height = 121
+      Top = 14
+      Width = 180
+      Height = 132
       ParentBackground = False
       TabOrder = 8
       object lblDatefrom: TLabel
         Left = 16
         Top = 24
-        Width = 89
-        Height = 13
+        Width = 103
+        Height = 17
         Caption = 'From Order Date:'
       end
       object DateFromButton: TSpeedButton
         Left = 120
-        Top = 38
+        Top = 44
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -332,14 +336,14 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       end
       object lblDateto: TLabel
         Left = 16
-        Top = 72
-        Width = 75
-        Height = 13
+        Top = 76
+        Width = 87
+        Height = 17
         Caption = 'To Order Date:'
       end
       object DateToButton: TSpeedButton
         Left = 120
-        Top = 80
+        Top = 96
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -360,9 +364,9 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       end
       object DateFromEdit: TEdit
         Left = 15
-        Top = 40
+        Top = 44
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 0
         OnChange = DateFromEditChange
@@ -370,9 +374,9 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       end
       object DateToEdit: TEdit
         Left = 15
-        Top = 84
+        Top = 96
         Width = 98
-        Height = 21
+        Height = 25
         MaxLength = 10
         TabOrder = 1
         OnChange = DateToEditChange
@@ -381,7 +385,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       object chkbxbyInvoice: TCheckBox
         Left = 8
         Top = -1
-        Width = 137
+        Width = 161
         Height = 17
         Caption = 'Report by Invoice Date'
         TabOrder = 2
@@ -392,26 +396,28 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
   object pnlPrintControl: TPanel
     Left = 0
     Top = 422
-    Width = 765
+    Width = 893
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 413
+    ExplicitWidth = 759
     object lblRecordCount: TLabel
       Left = 104
       Top = 16
-      Width = 3
-      Height = 13
+      Width = 4
+      Height = 17
     end
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 74
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 444
+      Left = 572
       Top = 1
       Width = 320
       Height = 39
@@ -419,6 +425,7 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 438
       DesignSize = (
         320
         39)
@@ -523,8 +530,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       end
     end
     object CancelBitBtn: TBitBtn
-      Left = 344
-      Top = 8
+      Left = 512
+      Top = 10
       Width = 75
       Height = 25
       Kind = bkCancel

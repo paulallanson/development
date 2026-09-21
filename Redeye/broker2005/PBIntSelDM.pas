@@ -1,39 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999-2000
-
-Comments
---------
-  A Data Module to handle the IntSel table.
-
-VSS Info:
-$Header: /PBL D5/PBIntSelDM.pas 4     2/05/:1 12:52 Paul $
-$History: PBIntSelDM.pas $
- * 
- * *****************  Version 4  *****************
- * User: Paul         Date: 2/05/:1    Time: 12:52
- * Updated in $/PBL D5
- * Changed to convert the property of the Purchase Order to float rather
- * than integer, this then allows the creation of Call Off Orders
- * 
- * *****************  Version 3  *****************
- * User: Roddym       Date: 23/02/:0   Time: 13:41
- * Updated in $/PBL D5
- * Speed up Delivery Note printing by overriding the CR Record Selection
- * criteria at runtime.  Fix bug where label printing wasn't writing
- * required number of Int_Sel records.
- * 
- * *****************  Version 2  *****************
- * User: Roddym       Date: 16/02/:0   Time: 17:20
- * Updated in $/PBL D5
- * Complete Delete procedure and add new AddWithKey method.
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 9/02/:0    Time: 11:39
- * Created in $/PBL D5
- * First check in
-
-*******************************************************************************)
 unit PBIntSelDM;
 
 interface

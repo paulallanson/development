@@ -8,61 +8,61 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 624
-    Height = 65
+    Height = 81
     Align = alTop
     ParentBackground = False
     TabOrder = 0
     object label3: TLabel
       Left = 8
       Top = 16
-      Width = 43
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Product:'
     end
     object lblProductCode: TLabel
       Left = 72
       Top = 16
-      Width = 80
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'lblProductCode'
     end
     object Label4: TLabel
       Left = 432
       Top = 16
-      Width = 93
-      Height = 13
+      Width = 105
+      Height = 17
       Caption = 'Quantity Ordered:'
     end
     object lblQuantity: TLabel
       Left = 544
       Top = 16
-      Width = 57
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'lblQuantity'
     end
     object Label5: TLabel
       Left = 8
-      Top = 40
-      Width = 89
-      Height = 13
+      Top = 44
+      Width = 102
+      Height = 17
       Caption = 'Total Serial items:'
     end
     object lblSerialItems: TLabel
       Left = 120
-      Top = 40
-      Width = 68
-      Height = 13
+      Top = 44
+      Width = 77
+      Height = 17
       Caption = 'lblSerialItems'
     end
   end
@@ -74,6 +74,8 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 384
+    ExplicitWidth = 618
     object btnOK: TBitBtn
       Left = 230
       Top = 8
@@ -97,26 +99,29 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
   end
   object Panel3: TPanel
     Left = 0
-    Top = 65
+    Top = 81
     Width = 355
-    Height = 328
+    Height = 312
     Align = alClient
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 65
+    ExplicitWidth = 349
+    ExplicitHeight = 319
     object Label2: TLabel
       Left = 8
       Top = 3
-      Width = 169
-      Height = 13
+      Width = 194
+      Height = 17
       Caption = 'Serial Numbers on this order line'
     end
     object lstbxSOLSerialNos: TListBox
       Left = 8
-      Top = 22
+      Top = 26
       Width = 241
-      Height = 297
-      ItemHeight = 13
+      Height = 293
+      ItemHeight = 17
       TabOrder = 0
     end
     object btnAdd: TBitBtn
@@ -194,26 +199,29 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
   end
   object Panel4: TPanel
     Left = 355
-    Top = 65
+    Top = 81
     Width = 269
-    Height = 328
+    Height = 312
     Align = alRight
     Caption = 'Panel4'
     ParentBackground = False
     TabOrder = 3
+    ExplicitLeft = 349
+    ExplicitTop = 65
+    ExplicitHeight = 319
     object Label1: TLabel
       Left = 6
       Top = 5
-      Width = 176
-      Height = 13
+      Width = 202
+      Height = 17
       Caption = 'Serial Numbers currently available:'
     end
     object lstbxSerialNos: TListBox
       Left = 4
-      Top = 22
+      Top = 28
       Width = 261
-      Height = 297
-      ItemHeight = 13
+      Height = 291
+      ItemHeight = 17
       MultiSelect = True
       TabOrder = 0
     end

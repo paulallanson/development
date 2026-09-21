@@ -4,29 +4,29 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
   BorderStyle = bsDialog
   Caption = 'Maintain Revenue Centre'
   ClientHeight = 541
-  ClientWidth = 528
+  ClientWidth = 559
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    528
+    559
     541)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 48
-    Top = 516
-    Width = 109
-    Height = 13
+    Top = 511
+    Width = 122
+    Height = 17
     Anchors = [akLeft, akBottom]
-    Caption = 'Delete these details ?'
+    Caption = 'Delete these details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -34,61 +34,61 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
   object DetsGrpBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 505
+    Width = 537
     Height = 489
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
     DesignSize = (
-      505
+      537
       489)
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 35
-      Height = 13
+      Width = 39
+      Height = 17
       Caption = 'Colour'
     end
     object Label7: TLabel
       Left = 16
       Top = 132
-      Width = 31
-      Height = 13
+      Width = 36
+      Height = 17
       Caption = 'Image'
     end
     object Label3: TLabel
       Left = 16
       Top = 308
-      Width = 43
-      Height = 26
+      Width = 49
+      Height = 34
       Caption = 'Payment Details'
       WordWrap = True
     end
     object Label4: TLabel
       Left = 16
       Top = 388
-      Width = 55
-      Height = 39
+      Width = 63
+      Height = 51
       Caption = 'Registered Address Details'
       WordWrap = True
     end
     object DescrEdit: TEdit
-      Left = 78
+      Left = 87
       Top = 16
       Width = 411
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -105,16 +105,16 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
     object chkbxDefault: TCheckBox
       Left = 16
       Top = 96
-      Width = 241
+      Width = 292
       Height = 17
       Caption = 'Default Print Management Revenue Centre'
       TabOrder = 4
     end
     object edtColor: TEdit
-      Left = 78
+      Left = 87
       Top = 56
       Width = 131
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 1
@@ -122,7 +122,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       OnChange = CheckOK
     end
     object Button1: TButton
-      Left = 224
+      Left = 233
       Top = 56
       Width = 75
       Height = 25
@@ -131,7 +131,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 304
+      Left = 313
       Top = 56
       Width = 75
       Height = 25
@@ -140,15 +140,15 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       OnClick = Button2Click
     end
     object edtLogoPath: TEdit
-      Left = 80
-      Top = 128
+      Left = 87
+      Top = 126
       Width = 329
-      Height = 21
+      Height = 25
       TabOrder = 5
       Text = 'edtLogoPath'
     end
     object Button3: TButton
-      Left = 414
+      Left = 421
       Top = 126
       Width = 75
       Height = 25
@@ -157,7 +157,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       OnClick = Button3Click
     end
     object Panel1: TPanel
-      Left = 80
+      Left = 87
       Top = 160
       Width = 409
       Height = 135
@@ -174,7 +174,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       end
     end
     object memRegistered: TMemo
-      Left = 80
+      Left = 87
       Top = 389
       Width = 409
       Height = 65
@@ -184,9 +184,9 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       TabOrder = 9
     end
     object memPayment: TMemo
-      Left = 80
+      Left = 87
       Top = 305
-      Width = 409
+      Width = 441
       Height = 65
       Anchors = [akLeft, akTop, akRight, akBottom]
       ScrollBars = ssVertical
@@ -269,6 +269,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 499
   end
   object CancelBitBtn: TBitBtn
     Left = 275
@@ -346,6 +347,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
+    ExplicitTop = 499
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -353,8 +355,8 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       'Select Invoice_Location'
       'From Invoice_Location'
       'Where Invoice_Location_Descr = :GUID')
-    Left = 192
-    Top = 24
+    Left = 328
+    Top = 214
     ParamData = <
       item
         Name = 'GUID'
@@ -397,8 +399,8 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       'Where'
       '(Invoice_Location = :Invoice_Location) '
       '')
-    Left = 144
-    Top = 16
+    Left = 332
+    Top = 140
     ParamData = <
       item
         Name = 'Invoice_Location_Descr'
@@ -469,8 +471,8 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       end>
   end
   object ColorDialog1: TColorDialog
-    Left = 360
-    Top = 91
+    Left = 418
+    Top = 234
   end
   object OpenPictureDialog1: TOpenPictureDialog
     Filter = 
@@ -479,7 +481,7 @@ object PBMaintRevenueLocFrm: TPBMaintRevenueLocFrm
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Bi' +
       'tmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.em' +
       'f)|*.emf|Metafiles (*.wmf)|*.wmf'
-    Left = 280
-    Top = 96
+    Left = 262
+    Top = 208
   end
 end

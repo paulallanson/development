@@ -10,13 +10,13 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 8
     Top = 8
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
@@ -75,31 +75,31 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
     PreviewLeft = 0
     PreviewTop = 0
     object qrbPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 107
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 134
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        283.104166666666700000
-        2770.187500000000000000)
+        283.633333333333300000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
-        Left = 313
-        Top = 8
-        Width = 394
-        Height = 25
+        Left = 383
+        Top = 10
+        Width = 509
+        Height = 33
         Size.Values = (
-          66.145833333333340000
-          828.145833333333200000
+          69.850000000000000000
+          810.683333333333300000
           21.166666666666670000
-          1042.458333333333000000)
+          1077.383333333333000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -109,7 +109,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -120,15 +120,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 16
       end
       object QRSysData1: TQRSysData
-        Left = 984
-        Top = 32
-        Width = 56
-        Height = 17
+        Left = 1232
+        Top = 40
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2603.500000000000000000
-          84.666666666666680000
-          148.166666666666700000)
+          44.450000000000000000
+          2607.733333333333000000
+          84.666666666666670000
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -138,7 +138,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -149,15 +149,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRSysData2: TQRSysData
-        Left = 976
-        Top = 8
-        Width = 63
-        Height = 17
+        Left = 1223
+        Top = 10
+        Width = 76
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2582.333333333333000000
+          44.450000000000000000
+          2588.683333333333000000
           21.166666666666670000
-          166.687500000000000000)
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -167,7 +167,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -178,15 +178,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
-        Left = 437
-        Top = 40
-        Width = 179
-        Height = 17
+        Left = 543
+        Top = 50
+        Width = 230
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1156.229166666667000000
+          44.450000000000000000
+          1149.350000000000000000
           105.833333333333300000
-          473.604166666666700000)
+          486.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -194,6 +194,12 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         AlignToBand = False
         Caption = 'From Live Proof Approval Date:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -201,15 +207,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 10
       end
       object QRLabel1: TQRLabel
-        Left = 18
-        Top = 88
-        Width = 40
-        Height = 16
+        Left = 23
+        Top = 110
+        Width = 48
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          47.625000000000000000
-          232.833333333333400000
-          105.833333333333300000)
+          42.333333333333330000
+          48.683333333333330000
+          232.833333333333300000
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -219,7 +225,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -230,15 +236,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 72
-        Top = 88
-        Width = 47
-        Height = 17
+        Left = 90
+        Top = 110
+        Width = 57
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           190.500000000000000000
-          232.833333333333400000
-          124.354166666666700000)
+          232.833333333333300000
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -248,7 +254,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -259,15 +265,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 256
-        Top = 88
-        Width = 40
-        Height = 17
+        Left = 320
+        Top = 110
+        Width = 49
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          677.333333333333400000
-          232.833333333333400000
-          105.833333333333300000)
+          44.450000000000000000
+          677.333333333333300000
+          232.833333333333300000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -277,7 +283,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -288,10 +294,10 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 808
-        Top = 75
-        Width = 57
-        Height = 28
+        Left = 1010
+        Top = 94
+        Width = 71
+        Height = 35
         Size.Values = (
           74.083333333333340000
           2137.833333333333000000
@@ -307,7 +313,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -318,10 +324,10 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 878
-        Top = 74
-        Width = 70
-        Height = 29
+        Left = 1098
+        Top = 93
+        Width = 87
+        Height = 36
         Size.Values = (
           76.729166666666680000
           2323.041666666667000000
@@ -337,7 +343,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -348,15 +354,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 629
-        Top = 88
-        Width = 75
-        Height = 17
+        Left = 786
+        Top = 110
+        Width = 88
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1664.229166666667000000
-          232.833333333333400000
-          198.437500000000000000)
+          44.450000000000000000
+          1663.700000000000000000
+          232.833333333333300000
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -366,7 +372,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -377,10 +383,10 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel7: TQRLabel
-        Left = 720
-        Top = 75
-        Width = 73
-        Height = 28
+        Left = 900
+        Top = 94
+        Width = 91
+        Height = 35
         Size.Values = (
           74.083333333333340000
           1905.000000000000000000
@@ -396,7 +402,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -407,15 +413,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 968
-        Top = 88
-        Width = 69
-        Height = 17
+        Left = 1210
+        Top = 110
+        Width = 83
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           2561.166666666667000000
-          232.833333333333400000
-          182.562500000000000000)
+          232.833333333333300000
+          175.683333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -425,7 +431,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -436,15 +442,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 576
-        Top = 88
-        Width = 41
-        Height = 17
+        Left = 720
+        Top = 110
+        Width = 50
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1524.000000000000000000
-          232.833333333333400000
-          108.479166666666700000)
+          232.833333333333300000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -454,7 +460,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -466,10 +472,10 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
       end
     end
     object qrGroup: TQRGroup
-      Left = 38
-      Top = 145
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 181
+      Width = 1309
+      Height = 50
       AlignToBottom = False
       Enabled = False
       TransparentBand = False
@@ -477,22 +483,22 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'Job_Bag'
       Master = QRSubDetail1
       ReprintOnNewPage = False
       object qrlblGroupHeader: TQRLabel
-        Left = 8
-        Top = 11
-        Width = 99
-        Height = 17
+        Left = 10
+        Top = 14
+        Width = 115
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          29.104166666666670000
-          261.937500000000000000)
+          29.633333333333330000
+          243.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -502,7 +508,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -513,15 +519,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object qrdbtext: TQRDBText
-        Left = 144
-        Top = 11
-        Width = 48
-        Height = 17
+        Left = 180
+        Top = 14
+        Width = 54
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           381.000000000000000000
-          29.104166666666670000
-          127.000000000000000000)
+          29.633333333333330000
+          114.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -531,7 +537,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         DataSet = qryReport
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -545,10 +551,10 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 38
-      Top = 185
-      Width = 1047
-      Height = 24
+      Left = 47
+      Top = 231
+      Width = 1309
+      Height = 30
       AfterPrint = QRSubDetail1AfterPrint
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
@@ -557,7 +563,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -565,15 +571,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBText1: TQRDBText
-        Left = 16
-        Top = 3
-        Width = 43
-        Height = 16
+        Left = 23
+        Top = 4
+        Width = 51
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          42.333333333333340000
-          7.937500000000000000
-          113.770833333333300000)
+          42.333333333333330000
+          48.683333333333330000
+          8.466666666666667000
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -584,7 +590,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         DataField = 'Job_Bag'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -597,10 +603,10 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 72
-        Top = 3
-        Width = 169
-        Height = 16
+        Left = 90
+        Top = 4
+        Width = 211
+        Height = 20
         Size.Values = (
           42.333333333333340000
           190.500000000000000000
@@ -617,7 +623,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -630,10 +636,10 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 254
-        Top = 3
-        Width = 313
-        Height = 16
+        Left = 318
+        Top = 4
+        Width = 391
+        Height = 20
         Size.Values = (
           42.333333333333340000
           672.041666666666800000
@@ -650,7 +656,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         DataField = 'Job_Bag_descr'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -663,15 +669,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRDBText8: TQRDBText
-        Left = 576
-        Top = 3
-        Width = 41
-        Height = 16
+        Left = 721
+        Top = 4
+        Width = 50
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          1524.000000000000000000
-          7.937500000000000000
-          108.479166666666700000)
+          42.333333333333330000
+          1526.116666666667000000
+          8.466666666666667000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -682,7 +688,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         DataField = 'Quantity'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -695,15 +701,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object QRDBText9: TQRDBText
-        Left = 955
-        Top = 3
-        Width = 82
-        Height = 16
+        Left = 1200
+        Top = 4
+        Width = 97
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          2526.770833333333000000
-          7.937500000000000000
-          216.958333333333400000)
+          42.333333333333330000
+          2540.000000000000000000
+          8.466666666666667000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -714,7 +720,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         DataField = 'Goods_Required'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -727,15 +733,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object qrlblLiveAppDate: TQRLabel
-        Left = 709
-        Top = 2
-        Width = 83
-        Height = 15
+        Left = 893
+        Top = 3
+        Width = 97
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1875.895833333333000000
-          5.291666666666667000
-          219.604166666666700000)
+          40.216666666666670000
+          1890.183333333333000000
+          6.350000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -745,7 +751,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -756,15 +762,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object qrlblLiveReqDate: TQRLabel
-        Left = 622
-        Top = 2
-        Width = 82
-        Height = 15
+        Left = 783
+        Top = 3
+        Width = 97
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1645.708333333333000000
-          5.291666666666667000
-          216.958333333333400000)
+          40.216666666666670000
+          1657.350000000000000000
+          6.350000000000000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -774,7 +780,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -785,15 +791,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object qrlblSEPApprovalDate: TQRLabel
-        Left = 842
-        Top = 2
-        Width = 106
-        Height = 15
+        Left = 1058
+        Top = 3
+        Width = 128
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2227.791666666667000000
-          5.291666666666667000
-          280.458333333333400000)
+          40.216666666666670000
+          2239.433333333333000000
+          6.350000000000000000
+          270.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -803,7 +809,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -814,15 +820,15 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         FontSize = 8
       end
       object qrlblSEPtoClientDate: TQRLabel
-        Left = 764
-        Top = 2
-        Width = 97
-        Height = 15
+        Left = 953
+        Top = 3
+        Width = 123
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2021.416666666667000000
-          5.291666666666667000
-          256.645833333333400000)
+          40.216666666666670000
+          2017.183333333333000000
+          6.350000000000000000
+          260.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -832,7 +838,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False

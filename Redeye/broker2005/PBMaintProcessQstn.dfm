@@ -8,22 +8,22 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDeactivate = FormDeactivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 110
-    Top = 192
-    Width = 109
-    Height = 13
+    Top = 187
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -35,7 +35,7 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
     Height = 170
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -43,73 +43,73 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 16
-      Top = 52
-      Width = 47
-      Height = 13
+      Top = 49
+      Width = 52
+      Height = 17
       Caption = 'Question'
     end
     object Label2: TLabel
       Left = 16
-      Top = 20
-      Width = 66
-      Height = 13
+      Top = 17
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object Label3: TLabel
       Left = 16
       Top = 108
-      Width = 50
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Sequence'
     end
     object Label5: TLabel
       Left = 16
-      Top = 83
-      Width = 63
-      Height = 13
+      Top = 80
+      Width = 74
+      Height = 17
       Caption = 'Prompt Type'
     end
     object lblItems: TLabel
-      Left = 312
+      Left = 316
       Top = 80
-      Width = 27
-      Height = 13
+      Width = 31
+      Height = 17
       Caption = 'Items'
     end
     object TextEdit: TEdit
-      Left = 94
+      Left = 98
       Top = 48
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 1
       Text = 'TextEdit'
       OnChange = TextEditChange
     end
     object PrdTypDescrEdit: TEdit
-      Left = 94
+      Left = 98
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       ReadOnly = True
       TabOrder = 0
       Text = 'DescrEdit'
     end
     object SequenceEdit: TEdit
-      Left = 94
+      Left = 98
       Top = 104
       Width = 121
-      Height = 21
+      Height = 25
       MaxLength = 5
       TabOrder = 3
       Text = 'SequenceEdit'
     end
     object DBLUPromptType: TDBLookupComboBox
-      Left = 94
+      Left = 98
       Top = 75
       Width = 171
-      Height = 21
+      Height = 25
       KeyField = 'Prompt_Type'
       ListField = 'Prompt_type_Description'
       ListSource = srcPromptType
@@ -118,7 +118,7 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
     end
     object BtnItems: TBitBtn
       Left = 360
-      Top = 72
+      Top = 79
       Width = 23
       Height = 23
       Caption = '...'
@@ -132,8 +132,8 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
       OnClick = BtnItemsClick
     end
     object chkbxMandatory: TCheckBox
-      Left = 264
-      Top = 104
+      Left = 268
+      Top = 109
       Width = 97
       Height = 17
       Caption = 'Mandatory'
@@ -306,8 +306,8 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
       'Select Question'
       'From Process_Question'
       'Where Question_Text = :GUID')
-    Left = 304
-    Top = 24
+    Left = 332
+    Top = 142
     ParamData = <
       item
         Name = 'GUID'
@@ -407,8 +407,8 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
       'Select :Product_Type, Max(Capability)+1, :GUID'
       'From Product_TypeCapability'
       'Where Product_Type = :Product_Type')
-    Left = 16
-    Top = 24
+    Left = 20
+    Top = 166
     ParamData = <
       item
         Name = 'Product_Type'
@@ -444,8 +444,8 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
       'select * from Process_Question_List'
       'where Process = :Process and'
       'Question = :Question')
-    Left = 16
-    Top = 56
+    Left = 68
+    Top = 158
     ParamData = <
       item
         Name = 'Process'
@@ -460,8 +460,8 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
       'delete from Process_Question_List'
       'where Process = :Process and'
       'Question = :Question')
-    Left = 80
-    Top = 64
+    Left = 140
+    Top = 136
     ParamData = <
       item
         Name = 'Process'
@@ -506,8 +506,8 @@ object PBMaintProcessQstnFrm: TPBMaintProcessQstnFrm
       'Where Process = :Process and'
       'Question = :Question'
       '')
-    Left = 216
-    Top = 64
+    Left = 214
+    Top = 112
     ParamData = <
       item
         Name = 'Process'

@@ -4,12 +4,12 @@ object PBRSPODueFrm: TPBRSPODueFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'P.O.s Due For Delivery'
-  ClientHeight = 324
-  ClientWidth = 427
+  ClientHeight = 359
+  ClientWidth = 472
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,41 +17,41 @@ object PBRSPODueFrm: TPBRSPODueFrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    427
-    324)
-  TextHeight = 13
+    472
+    359)
+  TextHeight = 17
   object SupplierLabel: TLabel
-    Left = 152
-    Top = 16
-    Width = 82
-    Height = 13
+    Left = 186
+    Top = 24
+    Width = 92
+    Height = 17
     Caption = 'Supplier/Branch'
     Visible = False
   end
   object DateLabel: TLabel
     Left = 8
-    Top = 260
-    Width = 73
-    Height = 13
+    Top = 265
+    Width = 83
+    Height = 17
     Caption = 'ie: Due before'
   end
   object Label1: TLabel
     Left = 8
-    Top = 228
-    Width = 79
-    Height = 13
+    Top = 233
+    Width = 87
+    Height = 17
     Caption = 'Due in the next'
   end
   object Label2: TLabel
     Left = 152
-    Top = 228
-    Width = 26
-    Height = 13
+    Top = 233
+    Width = 30
+    Height = 17
     Caption = 'days.'
   end
   object LUSuppSpeedButton: TSpeedButton
-    Left = 392
-    Top = 32
+    Left = 426
+    Top = 40
     Width = 25
     Height = 25
     Caption = '...'
@@ -65,16 +65,16 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = LUSuppSpeedButtonClick
   end
   object Customerlbl: TLabel
-    Left = 152
-    Top = 88
-    Width = 88
-    Height = 13
+    Left = 186
+    Top = 96
+    Width = 100
+    Height = 17
     Caption = 'Customer/Branch'
     Visible = False
   end
   object LUCustSpeedButton: TSpeedButton
-    Left = 392
-    Top = 104
+    Left = 426
+    Top = 112
     Width = 25
     Height = 25
     Caption = '...'
@@ -88,8 +88,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = LUCustSpeedButtonClick
   end
   object luOperatorSpeedbutton: TSpeedButton
-    Left = 392
-    Top = 176
+    Left = 426
+    Top = 184
     Width = 25
     Height = 25
     Caption = '...'
@@ -103,16 +103,16 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = luOperatorSpeedbuttonClick
   end
   object operatorlbl: TLabel
-    Left = 152
-    Top = 160
-    Width = 91
-    Height = 13
+    Left = 186
+    Top = 168
+    Width = 103
+    Height = 17
     Caption = 'Account Manager'
     Visible = False
   end
   object OleContainer1: TOleContainer
-    Left = 200
-    Top = 104
+    Left = 234
+    Top = 112
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -123,7 +123,7 @@ object PBRSPODueFrm: TPBRSPODueFrm
   object AllOrOneRadioGroup: TRadioGroup
     Left = 8
     Top = 8
-    Width = 121
+    Width = 145
     Height = 65
     ItemIndex = 0
     Items.Strings = (
@@ -134,8 +134,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = AllOrOneRadioGroupClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 264
-    Top = 288
+    Left = 296
+    Top = 301
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -157,8 +157,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 184
-    Top = 288
+    Left = 216
+    Top = 301
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -181,7 +181,7 @@ object PBRSPODueFrm: TPBRSPODueFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 288
+    Top = 301
     Width = 75
     Height = 25
     Caption = '&Cancel'
@@ -191,26 +191,26 @@ object PBRSPODueFrm: TPBRSPODueFrm
   end
   object DateEdit: TEdit
     Left = 96
-    Top = 256
+    Top = 261
     Width = 217
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 4
   end
   object SuppEdit: TEdit
-    Left = 152
-    Top = 32
+    Left = 186
+    Top = 40
     Width = 233
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 5
     Visible = False
   end
   object DaysSpinEdit: TSpinEdit
     Left = 96
-    Top = 224
+    Top = 229
     Width = 49
-    Height = 22
+    Height = 27
     MaxLength = 3
     MaxValue = 200
     MinValue = 0
@@ -221,7 +221,7 @@ object PBRSPODueFrm: TPBRSPODueFrm
   object customerrg: TRadioGroup
     Left = 8
     Top = 80
-    Width = 121
+    Width = 145
     Height = 65
     ItemIndex = 0
     Items.Strings = (
@@ -232,17 +232,17 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = customerrgClick
   end
   object CustEdit: TEdit
-    Left = 152
-    Top = 104
+    Left = 186
+    Top = 112
     Width = 233
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 8
     Visible = False
   end
   object chkbxBranches: TCheckBox
-    Left = 152
-    Top = 128
+    Left = 186
+    Top = 136
     Width = 201
     Height = 17
     Caption = 'Report on all branches'
@@ -252,8 +252,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
     Visible = False
   end
   object EmailBitBtn: TBitBtn
-    Left = 344
-    Top = 288
+    Left = 376
+    Top = 301
     Width = 75
     Height = 25
     Caption = '&Email'
@@ -275,8 +275,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = EmailBitBtnClick
   end
   object btnExcel: TBitBtn
-    Left = 104
-    Top = 288
+    Left = 135
+    Top = 301
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
@@ -328,8 +328,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = btnExcelClick
   end
   object pnlExportPrgrss: TPanel
-    Left = 82
-    Top = 68
+    Left = 116
+    Top = 76
     Width = 289
     Height = 61
     ParentBackground = False
@@ -338,8 +338,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -353,8 +353,8 @@ object PBRSPODueFrm: TPBRSPODueFrm
   end
   object Operatorrg: TRadioGroup
     Left = 8
-    Top = 152
-    Width = 121
+    Top = 153
+    Width = 145
     Height = 65
     ItemIndex = 0
     Items.Strings = (
@@ -365,10 +365,10 @@ object PBRSPODueFrm: TPBRSPODueFrm
     OnClick = OperatorrgClick
   end
   object Operatoredit: TEdit
-    Left = 152
-    Top = 176
+    Left = 186
+    Top = 184
     Width = 233
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 15
     Visible = False

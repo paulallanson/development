@@ -8,23 +8,23 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
-    Top = 77
-    Width = 116
-    Height = 15
+    Top = 76
+    Width = 130
+    Height = 16
     Caption = 'Delete this Reason ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -38,7 +38,7 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
     Caption = 'Reason'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -47,15 +47,15 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object edtDescription: TEdit
       Left = 94
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'edtDescription'
@@ -220,8 +220,8 @@ object PBMaintReasCodeFrm: TPBMaintReasCodeFrm
       'Where (Enq_InActive_Reason <> :Enq_InActive_Reason) and'
       '      (Description = :Description)'
       ' ')
-    Left = 72
-    Top = 16
+    Left = 50
+    Top = 44
     ParamData = <
       item
         Name = 'Enq_InActive_Reason'

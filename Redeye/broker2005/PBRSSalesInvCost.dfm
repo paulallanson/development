@@ -8,7 +8,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -18,19 +18,19 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
   DesignSize = (
     482
     218)
-  TextHeight = 13
+  TextHeight = 17
   object lblYear: TLabel
     Left = 16
     Top = 20
-    Width = 20
-    Height = 13
+    Width = 25
+    Height = 17
     Caption = 'Year'
   end
   object Label2: TLabel
     Left = 16
     Top = 52
-    Width = 33
-    Height = 13
+    Width = 38
+    Height = 17
     Caption = 'Period'
   end
   object PrintBitBtn: TBitBtn
@@ -56,6 +56,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PrintBitBtnClick
+    ExplicitTop = 172
   end
   object PreviewBitBtn: TBitBtn
     Left = 300
@@ -80,6 +81,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 172
   end
   object CancelBitBtn: TBitBtn
     Left = 16
@@ -90,6 +92,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 172
   end
   object pnlCustomer: TPanel
     Left = 147
@@ -102,15 +105,15 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 49
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'Customer'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtCustomerChange
     end
@@ -155,8 +158,8 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -230,12 +233,13 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 7
     OnClick = btnExcelClick
+    ExplicitTop = 172
   end
   object dblkpFY: TDBLookupComboBox
     Left = 68
     Top = 16
     Width = 157
-    Height = 21
+    Height = 25
     KeyField = 'Financial_Year'
     ListField = 'Title'
     ListSource = dtsFY
@@ -245,7 +249,7 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     Left = 68
     Top = 48
     Width = 177
-    Height = 21
+    Height = 25
     KeyField = 'Period'
     ListField = 'Description'
     ListSource = dtsPeriods

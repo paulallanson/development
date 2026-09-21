@@ -3,42 +3,42 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   Top = 75
   ActiveControl = edtCustomer
   Caption = 'Quick Quotation screen'
-  ClientHeight = 480
+  ClientHeight = 516
   ClientWidth = 709
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label12: TLabel
     Left = 8
-    Top = 33
-    Width = 49
-    Height = 13
+    Top = 40
+    Width = 56
+    Height = 17
     Caption = 'Customer'
   end
   object Label14: TLabel
     Left = 21
-    Top = 63
-    Width = 40
-    Height = 13
+    Top = 70
+    Width = 44
+    Height = 17
     Caption = 'Contact'
   end
   object Label15: TLabel
     Left = 416
-    Top = 4
-    Width = 66
-    Height = 13
+    Top = 11
+    Width = 74
+    Height = 17
     Caption = 'Enquiry Date'
   end
   object EnqDateBtn: TSpeedButton
-    Left = 662
-    Top = 0
+    Left = 667
+    Top = 7
     Width = 23
     Height = 23
     Glyph.Data = {
@@ -58,8 +58,8 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     OnClick = EnqDateBtnClick
   end
   object DateBtn: TSpeedButton
-    Left = 662
-    Top = 29
+    Left = 667
+    Top = 36
     Width = 23
     Height = 23
     Hint = 'Select the date the enquiry is reqiored'
@@ -81,119 +81,119 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   end
   object Label16: TLabel
     Left = 406
-    Top = 33
-    Width = 74
-    Height = 13
+    Top = 40
+    Width = 84
+    Height = 17
     Caption = 'Date Required'
   end
   object Label1: TLabel
     Left = 0
-    Top = 92
-    Width = 59
-    Height = 13
+    Top = 99
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object Label2: TLabel
     Left = 410
-    Top = 92
-    Width = 74
-    Height = 13
+    Top = 99
+    Width = 82
+    Height = 17
     Caption = 'Office Contact'
   end
   object Label4: TLabel
     Left = 405
-    Top = 63
-    Width = 72
-    Height = 13
+    Top = 70
+    Width = 83
+    Height = 17
     Caption = 'Customer Rep'
   end
   object Label6: TLabel
     Left = 22
-    Top = 4
-    Width = 39
-    Height = 13
+    Top = 11
+    Width = 43
+    Height = 17
     Caption = 'Enquiry'
   end
   object lblEnqNo: TLabel
     Left = 72
-    Top = 4
-    Width = 48
-    Height = 13
+    Top = 11
+    Width = 54
+    Height = 17
     Caption = 'lblEnqNo'
   end
   object GroupBox3: TGroupBox
-    Left = 0
-    Top = 112
+    Left = 4
+    Top = 136
     Width = 697
-    Height = 321
+    Height = 334
     ParentBackground = False
     TabOrder = 6
     object Label8: TLabel
       Left = 8
       Top = 10
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Product Type'
     end
     object Label9: TLabel
       Left = 8
       Top = 52
-      Width = 66
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'Specification'
     end
     object Label10: TLabel
       Left = 368
       Top = 52
-      Width = 29
-      Height = 13
+      Width = 34
+      Height = 17
       Caption = 'Prices'
     end
     object Label11: TLabel
       Left = 360
-      Top = 245
-      Width = 49
-      Height = 13
+      Top = 250
+      Width = 55
+      Height = 17
       Caption = 'Price Unit'
     end
     object Label3: TLabel
       Left = 368
       Top = 10
-      Width = 82
-      Height = 13
+      Width = 92
+      Height = 17
       Caption = 'Supplier/Branch'
     end
     object lblRunOn: TLabel
       Left = 360
-      Top = 296
-      Width = 41
-      Height = 13
+      Top = 301
+      Width = 44
+      Height = 17
       Caption = 'Run-On'
     end
     object lblRunOnPrice: TLabel
       Left = 504
-      Top = 274
-      Width = 45
-      Height = 13
+      Top = 279
+      Width = 52
+      Height = 17
       Caption = 'Sell Price'
     end
     object lblRunOnCost: TLabel
       Left = 592
-      Top = 274
-      Width = 45
-      Height = 13
+      Top = 279
+      Width = 52
+      Height = 17
       Caption = 'Buy Price'
     end
     object lblRunOnQty: TLabel
       Left = 408
-      Top = 274
-      Width = 44
-      Height = 13
+      Top = 279
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object mmLineNarrative: TMemo
       Left = 8
-      Top = 66
+      Top = 71
       Width = 345
       Height = 247
       ScrollBars = ssVertical
@@ -202,7 +202,7 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     end
     object PriceGrid: TStringGrid
       Left = 368
-      Top = 66
+      Top = 71
       Width = 321
       Height = 165
       ColCount = 4
@@ -228,16 +228,16 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
       Left = 8
       Top = 26
       Width = 289
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
       OnChange = edtProdTypeChange
     end
     object PriceUnitComboBox: TDBLookupComboBox
       Left = 432
-      Top = 241
+      Top = 246
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = PBEnqDM.PriceUnitSRC
@@ -262,7 +262,7 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     end
     object PriceUnitSpeedBtn: TButton
       Left = 592
-      Top = 240
+      Top = 245
       Width = 25
       Height = 25
       Caption = '...'
@@ -279,7 +279,7 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
       Left = 368
       Top = 26
       Width = 289
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 3
     end
@@ -300,9 +300,9 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     end
     object edtRunOnQty: TEdit
       Left = 408
-      Top = 292
+      Top = 297
       Width = 81
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 8
       OnChange = edtRunOnQtyChange
@@ -310,9 +310,9 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     end
     object edtRunOnPrice: TEdit
       Left = 504
-      Top = 292
+      Top = 297
       Width = 73
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 9
       OnChange = edtRunOnPriceChange
@@ -320,9 +320,9 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     end
     object edtRunOnCost: TEdit
       Left = 592
-      Top = 292
+      Top = 297
       Width = 81
-      Height = 21
+      Height = 25
       TabOrder = 10
       OnChange = edtRunOnCostChange
       OnKeyPress = edtRunOnCostKeyPress
@@ -330,9 +330,9 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   end
   object edtCustomer: TEdit
     Left = 70
-    Top = 29
+    Top = 36
     Width = 267
-    Height = 21
+    Height = 25
     TabStop = False
     ReadOnly = True
     TabOrder = 0
@@ -340,16 +340,16 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   end
   object edtDescription: TEdit
     Left = 70
-    Top = 88
+    Top = 95
     Width = 307
-    Height = 21
+    Height = 25
     MaxLength = 80
     TabOrder = 2
     OnChange = edtDescriptionChange
   end
   object spdbtnLUCust: TButton
     Left = 352
-    Top = 28
+    Top = 35
     Width = 25
     Height = 25
     Caption = '...'
@@ -363,24 +363,24 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     OnClick = spdbtnLUCustClick
   end
   object edtdatePoint: TEdit
-    Left = 494
-    Top = 0
+    Left = 499
+    Top = 7
     Width = 160
-    Height = 21
+    Height = 25
     TabOrder = 3
     OnExit = edtdatePointExit
   end
   object edtDateRequired: TEdit
-    Left = 494
-    Top = 29
+    Left = 499
+    Top = 36
     Width = 160
-    Height = 21
+    Height = 25
     TabOrder = 4
     OnExit = edtDateRequiredExit
   end
   object btbtnOK: TBitBtn
-    Left = 520
-    Top = 440
+    Left = 528
+    Top = 476
     Width = 75
     Height = 25
     Caption = 'Save'
@@ -408,8 +408,8 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     OnClick = btbtnOKClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 608
-    Top = 440
+    Left = 616
+    Top = 476
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -417,8 +417,8 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     TabOrder = 8
   end
   object spdbtnLURep: TButton
-    Left = 660
-    Top = 58
+    Left = 665
+    Top = 65
     Width = 25
     Height = 25
     Caption = '...'
@@ -433,34 +433,34 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   end
   object cmbbxContactList: TComboBox
     Left = 70
-    Top = 59
+    Top = 66
     Width = 267
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 9
     OnChange = cmbbxContactListChange
   end
   object cmbbxRepList: TComboBox
-    Left = 494
-    Top = 59
+    Left = 499
+    Top = 66
     Width = 156
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 10
     OnChange = cmbbxRepListChange
   end
   object cmbbxOperators: TComboBox
-    Left = 494
-    Top = 88
+    Left = 499
+    Top = 95
     Width = 156
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 11
     OnChange = cmbbxOperatorsChange
   end
   object ContactSpeedButton: TButton
     Left = 352
-    Top = 56
+    Top = 63
     Width = 25
     Height = 25
     Caption = '...'
@@ -475,8 +475,8 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     OnClick = ContactSpeedButtonClick
   end
   object btnConvert: TButton
-    Left = 0
-    Top = 440
+    Left = 8
+    Top = 476
     Width = 129
     Height = 25
     Caption = 'Convert to Enquiry'

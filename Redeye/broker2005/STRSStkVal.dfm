@@ -3,21 +3,21 @@ object STRSStkValfrm: TSTRSStkValfrm
   Top = 69
   BorderStyle = bsDialog
   Caption = 'Stock Valuation Selection Screen'
-  ClientHeight = 445
-  ClientWidth = 488
+  ClientHeight = 532
+  ClientWidth = 536
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    488
-    445)
-  TextHeight = 13
+    536
+    532)
+  TextHeight = 17
   object pnlExportPrgrss: TPanel
     Left = 64
     Top = 136
@@ -29,8 +29,8 @@ object STRSStkValfrm: TSTRSStkValfrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -43,10 +43,11 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 280
-    Top = 408
+    Left = 419
+    Top = 490
     Width = 75
     Height = 25
+    Anchors = [akTop, akRight]
     Caption = '&Print'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -70,16 +71,18 @@ object STRSStkValfrm: TSTRSStkValfrm
     ParentFont = False
     TabOrder = 4
     OnClick = PrintBitBtnClick
+    ExplicitLeft = 455
   end
   object BitBtn2: TBitBtn
-    Left = 192
-    Top = 408
+    Left = 331
+    Top = 490
     Width = 75
     Height = 25
+    Anchors = [akTop, akRight]
     Caption = 'Pre&view'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Glyph.Data = {
@@ -99,16 +102,17 @@ object STRSStkValfrm: TSTRSStkValfrm
     ParentFont = False
     TabOrder = 3
     OnClick = BitBtn2Click
+    ExplicitLeft = 367
   end
   object BitBtn3: TBitBtn
     Left = 8
-    Top = 408
+    Top = 489
     Width = 75
     Height = 25
     Caption = '&Cancel'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Kind = bkCancel
@@ -117,14 +121,14 @@ object STRSStkValfrm: TSTRSStkValfrm
     TabOrder = 2
   end
   object SeqByRadioGroup: TRadioGroup
-    Left = 368
-    Top = 355
-    Width = 115
-    Height = 81
+    Left = 367
+    Top = 376
+    Width = 130
+    Height = 91
     Caption = 'Seq. By:'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -137,14 +141,14 @@ object STRSStkValfrm: TSTRSStkValfrm
     TabOrder = 0
   end
   object CostRadioGroup: TRadioGroup
-    Left = 368
-    Top = 195
-    Width = 115
-    Height = 71
+    Left = 367
+    Top = 208
+    Width = 130
+    Height = 65
     Caption = 'Value At:'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -157,13 +161,13 @@ object STRSStkValfrm: TSTRSStkValfrm
   end
   object grpbxRange: TGroupBox
     Left = 8
-    Top = 270
+    Top = 279
     Width = 289
     Height = 86
     Caption = 'Product Range'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -172,22 +176,22 @@ object STRSStkValfrm: TSTRSStkValfrm
     object Label1: TLabel
       Left = 14
       Top = 32
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 14
       Top = 64
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtPartFrom: TEdit
       Left = 66
       Top = 24
       Width = 185
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtPartFromChange
@@ -196,7 +200,7 @@ object STRSStkValfrm: TSTRSStkValfrm
       Left = 66
       Top = 56
       Width = 185
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
     end
@@ -233,13 +237,13 @@ object STRSStkValfrm: TSTRSStkValfrm
   end
   object ChkBxExcProd: TCheckBox
     Left = 9
-    Top = 362
+    Top = 371
     Width = 180
     Height = 25
     Caption = 'Exclude Products not in use'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -252,7 +256,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -268,10 +272,10 @@ object STRSStkValfrm: TSTRSStkValfrm
     Left = 8
     Top = 68
     Width = 121
-    Height = 61
+    Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -290,7 +294,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Height = 61
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -300,8 +304,8 @@ object STRSStkValfrm: TSTRSStkValfrm
     object Label5: TLabel
       Left = 8
       Top = 8
-      Width = 95
-      Height = 13
+      Width = 109
+      Height = 17
       Caption = 'Selected Customer'
     end
     object CustLuSpeedButton: TSpeedButton
@@ -325,7 +329,7 @@ object STRSStkValfrm: TSTRSStkValfrm
       Left = 8
       Top = 32
       Width = 241
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -337,7 +341,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Height = 65
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     ParentBackground = False
@@ -347,12 +351,12 @@ object STRSStkValfrm: TSTRSStkValfrm
     object Label4: TLabel
       Left = 8
       Top = 8
-      Width = 66
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Selected Rep'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -378,19 +382,19 @@ object STRSStkValfrm: TSTRSStkValfrm
       Left = 8
       Top = 32
       Width = 241
-      Height = 23
+      Height = 24
       ReadOnly = True
       TabOrder = 0
     end
   end
   object RadioGroup1: TRadioGroup
     Left = 8
-    Top = 129
+    Top = 136
     Width = 121
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -404,12 +408,12 @@ object STRSStkValfrm: TSTRSStkValfrm
   end
   object StoresGrpBox: TGroupBox
     Left = 137
-    Top = 129
+    Top = 134
     Width = 288
     Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -419,8 +423,8 @@ object STRSStkValfrm: TSTRSStkValfrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 73
-      Height = 13
+      Width = 84
+      Height = 17
       Caption = 'Selected Store'
     end
     object LUSpdBttnStr: TSpeedButton
@@ -444,7 +448,7 @@ object STRSStkValfrm: TSTRSStkValfrm
       Left = 8
       Top = 32
       Width = 241
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
       OnChange = EdtStoreChange
@@ -452,12 +456,12 @@ object STRSStkValfrm: TSTRSStkValfrm
   end
   object RadioGroup2: TRadioGroup
     Left = 8
-    Top = 195
+    Top = 204
     Width = 121
-    Height = 71
+    Height = 65
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -471,12 +475,12 @@ object STRSStkValfrm: TSTRSStkValfrm
   end
   object GroupBox2: TGroupBox
     Left = 137
-    Top = 195
+    Top = 204
     Width = 224
     Height = 71
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -503,8 +507,8 @@ object STRSStkValfrm: TSTRSStkValfrm
     object Label6: TLabel
       Left = 14
       Top = 17
-      Width = 22
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = 'First'
     end
     object SpeedButton1: TSpeedButton
@@ -527,15 +531,15 @@ object STRSStkValfrm: TSTRSStkValfrm
     object Label7: TLabel
       Left = 14
       Top = 46
-      Width = 20
-      Height = 13
+      Width = 23
+      Height = 17
       Caption = 'Last'
     end
     object EdtBinFrm: TEdit
       Left = 64
       Top = 13
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = EdtBinFrmChange
     end
@@ -543,20 +547,20 @@ object STRSStkValfrm: TSTRSStkValfrm
       Left = 64
       Top = 42
       Width = 121
-      Height = 21
+      Height = 25
       TabOrder = 1
       OnChange = EDTBinToChange
     end
   end
   object RDGrpPdFor: TRadioGroup
-    Left = 368
-    Top = 270
-    Width = 115
-    Height = 81
+    Left = 367
+    Top = 279
+    Width = 130
+    Height = 91
     Caption = 'Value:'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ItemIndex = 0
@@ -569,8 +573,8 @@ object STRSStkValfrm: TSTRSStkValfrm
     TabOrder = 15
   end
   object btbtnExcel: TBitBtn
-    Left = 103
-    Top = 408
+    Left = 250
+    Top = 489
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
@@ -620,10 +624,11 @@ object STRSStkValfrm: TSTRSStkValfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 16
     OnClick = btbtnExcelClick
+    ExplicitLeft = 286
   end
   object OleContainer1: TOleContainer
-    Left = 276
-    Top = 260
+    Left = 172
+    Top = 109
     Width = 98
     Height = 53
     Caption = 'OleContainer1'

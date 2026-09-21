@@ -8,21 +8,21 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 120
-    Top = 176
-    Width = 109
-    Height = 13
+    Top = 171
+    Width = 132
+    Height = 17
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
@@ -35,7 +35,7 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -44,22 +44,22 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
     object Label1: TLabel
       Left = 16
       Top = 20
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object Label2: TLabel
       Left = 16
       Top = 52
-      Width = 57
-      Height = 13
+      Width = 63
+      Height = 17
       Caption = 'Unit Factor'
     end
     object DescrEdit: TEdit
       Left = 94
       Top = 16
       Width = 252
-      Height = 21
+      Height = 25
       MaxLength = 40
       TabOrder = 0
       Text = 'DescrEdit'
@@ -68,7 +68,7 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
       Left = 94
       Top = 48
       Width = 75
-      Height = 21
+      Height = 25
       MaxLength = 15
       TabOrder = 1
       Text = 'UnitFactorEdit'
@@ -260,8 +260,8 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
       'Select Price_Unit'
       'From Price_unit'
       'Where Description = :GUID')
-    Left = 192
-    Top = 24
+    Left = 248
+    Top = 6
     ParamData = <
       item
         Name = 'GUID'
@@ -282,8 +282,8 @@ object PBMaintPriceUnitFrm: TPBMaintPriceUnitFrm
       ''
       ''
       ' ')
-    Left = 276
-    Top = 32
+    Left = 329
+    Top = 16
     ParamData = <
       item
         Name = 'GUID'

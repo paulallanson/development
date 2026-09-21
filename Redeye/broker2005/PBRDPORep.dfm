@@ -1,6 +1,7 @@
 object PBRDPORepDataMod: TPBRDPORepDataMod
-  Height = 563
-  Width = 741
+  Height = 704
+  Width = 926
+  PixelsPerInch = 120
   object GetPOsSeq00SQL: TFDQuery
     AfterCancel = GetPOsSeq00SQLAfterCancel
     ConnectionName = 'PB'
@@ -94,8 +95,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
         'nd'
       '       (Rep.Rep = Purchase_OrderLine.Rep)'
       '')
-    Left = 40
-    Top = 19
+    Left = 50
+    Top = 24
     ParamData = <
       item
         Name = 'Date_From'
@@ -231,8 +232,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 48
-    Top = 211
+    Left = 60
+    Top = 264
     ParamData = <
       item
         Name = 'Date_From'
@@ -372,8 +373,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 48
-    Top = 147
+    Left = 60
+    Top = 184
     ParamData = <
       item
         Name = 'Date_From'
@@ -514,8 +515,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 48
-    Top = 339
+    Left = 60
+    Top = 424
     ParamData = <
       item
         Name = 'Date_From'
@@ -657,8 +658,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 48
-    Top = 283
+    Left = 60
+    Top = 354
     ParamData = <
       item
         Name = 'Date_From'
@@ -796,8 +797,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 152
-    Top = 283
+    Left = 190
+    Top = 354
     ParamData = <
       item
         Name = 'Date_From'
@@ -930,8 +931,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
         'nd'
       '       (Rep.Rep = Purchase_OrderLine.Rep)'
       ' ')
-    Left = 152
-    Top = 75
+    Left = 190
+    Top = 94
     ParamData = <
       item
         Name = 'Date_From'
@@ -1069,8 +1070,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 40
-    Top = 75
+    Left = 50
+    Top = 94
     ParamData = <
       item
         Name = 'Date_From'
@@ -1212,8 +1213,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 19
+    Left = 350
+    Top = 24
     ParamData = <
       item
         Name = 'Date_From'
@@ -1352,8 +1353,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 152
-    Top = 19
+    Left = 190
+    Top = 24
     ParamData = <
       item
         Name = 'Date_From'
@@ -1492,8 +1493,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 152
-    Top = 147
+    Left = 190
+    Top = 184
     ParamData = <
       item
         Name = 'Date_From'
@@ -1632,8 +1633,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 75
+    Left = 350
+    Top = 94
     ParamData = <
       item
         Name = 'Date_From'
@@ -1777,8 +1778,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 147
+    Left = 350
+    Top = 184
     ParamData = <
       item
         Name = 'Date_From'
@@ -1916,8 +1917,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 152
-    Top = 211
+    Left = 190
+    Top = 264
     ParamData = <
       item
         Name = 'Date_From'
@@ -2056,8 +2057,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 211
+    Left = 350
+    Top = 264
     ParamData = <
       item
         Name = 'Date_From'
@@ -2196,8 +2197,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 283
+    Left = 350
+    Top = 354
     ParamData = <
       item
         Name = 'Date_From'
@@ -2339,8 +2340,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 160
-    Top = 339
+    Left = 200
+    Top = 424
     ParamData = <
       item
         Name = 'Date_From'
@@ -2479,8 +2480,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ' '
       ' '
       ' ')
-    Left = 280
-    Top = 339
+    Left = 350
+    Top = 424
     ParamData = <
       item
         Name = 'Date_From'
@@ -2526,8 +2527,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       'select Form_Reference, Form_Reference_ID, Form_Reference_Descr'
       'from Form_Reference'
       'where Form_Reference = :Form_Reference')
-    Left = 368
-    Top = 16
+    Left = 460
+    Top = 20
     ParamData = <
       item
         Name = 'Form_Reference'
@@ -2628,8 +2629,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ''
       ' '
       ' ')
-    Left = 48
-    Top = 392
+    Left = 60
+    Top = 490
     ParamData = <
       item
         Name = 'Date_From'
@@ -2752,8 +2753,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
         'nd'
       '       (Rep.Rep = Purchase_OrderLine.Rep)'
       ' ')
-    Left = 160
-    Top = 392
+    Left = 200
+    Top = 490
     ParamData = <
       item
         Name = 'Date_From'
@@ -2879,8 +2880,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ''
       ''
       ' ')
-    Left = 280
-    Top = 392
+    Left = 350
+    Top = 490
     ParamData = <
       item
         Name = 'Date_From'
@@ -3005,8 +3006,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ''
       ' '
       ' ')
-    Left = 48
-    Top = 456
+    Left = 60
+    Top = 570
     ParamData = <
       item
         Name = 'Date_From'
@@ -3129,8 +3130,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
         'nd'
       '       (Rep.Rep = Purchase_OrderLine.Rep)'
       ' ')
-    Left = 160
-    Top = 456
+    Left = 200
+    Top = 570
     ParamData = <
       item
         Name = 'Date_From'
@@ -3256,8 +3257,8 @@ object PBRDPORepDataMod: TPBRDPORepDataMod
       ''
       ''
       ' ')
-    Left = 280
-    Top = 448
+    Left = 350
+    Top = 560
     ParamData = <
       item
         Name = 'Date_From'

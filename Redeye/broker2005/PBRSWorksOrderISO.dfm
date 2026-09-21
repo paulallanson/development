@@ -8,12 +8,12 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlButtons: TPanel
     Left = 0
     Top = 0
@@ -22,6 +22,8 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 412
+    ExplicitHeight = 161
     DesignSize = (
       418
       170)
@@ -41,6 +43,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
+      ExplicitTop = 125
     end
     object PreviewBitBtn: TBitBtn
       Left = 169
@@ -71,6 +74,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
+      ExplicitTop = 125
     end
     object PrintBitBtn: TBitBtn
       Left = 249
@@ -102,6 +106,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitTop = 125
     end
     object EmailBitBtn: TBitBtn
       Left = 328
@@ -126,6 +131,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = EmailBitBtnClick
+      ExplicitTop = 125
     end
     object GroupBox1: TGroupBox
       Left = 8
@@ -137,12 +143,12 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       object EstNumLabel: TLabel
         Left = 8
         Top = 15
-        Width = 66
-        Height = 13
+        Width = 75
+        Height = 17
         Caption = 'Works Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -150,15 +156,15 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
       object Label1: TLabel
         Left = 8
         Top = 43
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label2: TLabel
         Left = 8
         Top = 67
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object memSelection: TMemo
@@ -169,7 +175,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -186,7 +192,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
@@ -209,7 +215,7 @@ object PBRSWorksOrderISOfrm: TPBRSWorksOrderISOfrm
         Top = 3
         Width = 25
         Height = 105
-        ItemHeight = 13
+        ItemHeight = 17
         Sorted = True
         TabOrder = 3
         Visible = False

@@ -7,21 +7,21 @@ object PBPOAddDtlsFrm: TPBPOAddDtlsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label2: TLabel
     Left = 16
     Top = 8
-    Width = 33
-    Height = 13
+    Width = 38
+    Height = 17
     Caption = 'Notes:'
   end
   object AddDetailsMemo: TMemo
     Left = 16
-    Top = 24
+    Top = 28
     Width = 265
     Height = 145
     MaxLength = 255
@@ -29,7 +29,7 @@ object PBPOAddDtlsFrm: TPBPOAddDtlsFrm
   end
   object OKBitBtn: TBitBtn
     Left = 163
-    Top = 184
+    Top = 188
     Width = 75
     Height = 25
     Kind = bkOK
@@ -39,7 +39,7 @@ object PBPOAddDtlsFrm: TPBPOAddDtlsFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 251
-    Top = 184
+    Top = 188
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -48,7 +48,7 @@ object PBPOAddDtlsFrm: TPBPOAddDtlsFrm
   end
   object ToWhomRadioGroup: TRadioGroup
     Left = 288
-    Top = 16
+    Top = 20
     Width = 193
     Height = 89
     Caption = 'To Whom'
@@ -62,7 +62,7 @@ object PBPOAddDtlsFrm: TPBPOAddDtlsFrm
   end
   object BitBtn1: TBitBtn
     Left = 288
-    Top = 112
+    Top = 116
     Width = 25
     Height = 25
     Hint = 'Select from Special Instructions'

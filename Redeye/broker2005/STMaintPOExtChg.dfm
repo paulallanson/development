@@ -3,21 +3,21 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Maintain Purchase Order Extra Charges'
-  ClientHeight = 174
-  ClientWidth = 400
+  ClientHeight = 227
+  ClientWidth = 418
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 72
-    Top = 157
+    Top = 181
     Width = 145
     Height = 15
     Caption = 'Delete the above details ?'
@@ -29,22 +29,22 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 24
-    Top = 96
-    Width = 51
-    Height = 13
+    Left = 146
+    Top = 8
+    Width = 58
+    Height = 17
     Caption = 'Reference'
   end
   object POrdLabel: TLabel
     Left = 8
-    Top = 0
-    Width = 53
-    Height = 13
+    Top = 7
+    Width = 61
+    Height = 17
     Caption = 'POrdLabel'
   end
   object OKBitBtn: TBitBtn
     Left = 232
-    Top = 152
+    Top = 176
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -120,7 +120,7 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 320
-    Top = 152
+    Top = 176
     Width = 75
     Height = 25
     Cancel = True
@@ -196,13 +196,13 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
   end
   object DetsGrpBox: TGroupBox
     Left = 8
-    Top = 20
+    Top = 31
     Width = 385
-    Height = 117
+    Height = 127
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -211,22 +211,22 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
     object Label9: TLabel
       Left = 16
       Top = 28
-      Width = 30
-      Height = 13
+      Width = 33
+      Height = 17
       Caption = 'Detail'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Price'
     end
     object Label5: TLabel
-      Left = 8
-      Top = 94
-      Width = 48
-      Height = 13
+      Left = 16
+      Top = 98
+      Width = 56
+      Height = 17
       Caption = 'VAT Code'
     end
     object CostMemo: TMemo
@@ -245,16 +245,16 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
       Left = 96
       Top = 24
       Width = 265
-      Height = 21
+      Height = 25
       MaxLength = 50
       TabOrder = 0
       OnChange = CheckOK
     end
     object VATDBLookupComboBox: TDBLookupComboBox
       Left = 96
-      Top = 86
+      Top = 93
       Width = 161
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = VATsDataSource
@@ -264,8 +264,8 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
   end
   object VATsDataSource: TDataSource
     DataSet = GetVatsQuery
-    Left = 104
-    Top = 40
+    Left = 314
+    Top = 34
   end
   object GetVatsQuery: TFDQuery
     ConnectionName = 'PB'
@@ -273,7 +273,7 @@ object STMaintPOExtChgFrm: TSTMaintPOExtChgFrm
       'Select * From VAT_Code'
       'Order By VAT_Code'
       ' ')
-    Left = 248
-    Top = 56
+    Left = 318
+    Top = 102
   end
 end

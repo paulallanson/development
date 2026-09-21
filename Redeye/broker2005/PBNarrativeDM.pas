@@ -1,36 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999-2000
-
-Comments
---------
-  A datamodule to take care of the narrative_line table.  Declares the
-  TNarrative object which auto-creates the datamodule.
-
-VSS Info:
-$Header: /PBL D5/PBNarrativeDM.pas 3     7/02/02 17:11 Davidn $
-$History: PBNarrativeDM.pas $
- * 
- * *****************  Version 3  *****************
- * User: Davidn       Date: 7/02/02    Time: 17:11
- * Updated in $/PBL D5
- * Corrected Error,When PO Line narrative was removed the relevent lines
- * were deleted from the narrative_lines table but the narrative reference
- * number was still left in the PurchaseOrder_Lines table.
- * 
- * *****************  Version 2  *****************
- * User: Roddym       Date: 31/01/:0   Time: 16:35
- * Updated in $/PBL D5
- * Add code to write a dummy first record if the database is empty (to
- * overcome problem with NULL values).
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 31/01/:0   Time: 13:10
- * Created in $/PBL D5
- * New TNarrative object to centralise access to the Narrative_Line table
- * and improve allocation of next key value.
-
-*******************************************************************************)
 unit PBNarrativeDM;
 
 interface

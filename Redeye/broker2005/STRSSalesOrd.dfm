@@ -8,13 +8,13 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object OrderGroupBox: TGroupBox
     Left = 7
     Top = 16
@@ -26,29 +26,29 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     object Label1: TLabel
       Left = 24
       Top = 24
-      Width = 52
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Customer:'
     end
     object Label2: TLabel
-      Left = 19
+      Left = 14
       Top = 48
-      Width = 60
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Order Date:'
     end
     object OrderDatelbl: TLabel
       Left = 88
       Top = 48
-      Width = 67
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'OrderDatelbl'
     end
     object CustomerLbl: TLabel
       Left = 88
       Top = 24
-      Width = 64
-      Height = 13
+      Width = 73
+      Height = 17
       Caption = 'CustomerLbl'
     end
   end

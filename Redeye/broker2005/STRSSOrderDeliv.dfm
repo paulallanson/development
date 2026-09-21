@@ -7,13 +7,13 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel2: TPanel
     Left = 0
     Top = 395
@@ -22,11 +22,13 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 386
+    ExplicitWidth = 727
     DesignSize = (
       733
       41)
     object PreviewBitBtn: TBitBtn
-      Left = 480
+      Left = 474
       Top = 8
       Width = 76
       Height = 25
@@ -34,7 +36,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Caption = 'Pre&view'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -54,9 +56,10 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       ParentFont = False
       TabOrder = 0
       Visible = False
+      ExplicitLeft = 468
     end
     object PrintBitBtn: TBitBtn
-      Left = 571
+      Left = 565
       Top = 8
       Width = 72
       Height = 25
@@ -64,7 +67,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Caption = '&Print'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -84,9 +87,10 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       ParentFont = False
       TabOrder = 1
       Visible = False
+      ExplicitLeft = 559
     end
     object CancelBitBtn: TBitBtn
-      Left = 655
+      Left = 649
       Top = 8
       Width = 72
       Height = 25
@@ -94,13 +98,14 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Caption = '&Cancel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 2
+      ExplicitLeft = 643
     end
     object btnEmail: TBitBtn
       Left = 15
@@ -111,7 +116,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -141,7 +146,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -173,7 +178,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -181,7 +186,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     TabOrder = 1
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
@@ -229,31 +234,30 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 727
     DesignSize = (
       733
       81)
     object Label2: TLabel
-      Left = 532
+      Left = 522
       Top = 18
-      Width = 56
-      Height = 13
+      Width = 64
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Date From:'
-      ExplicitLeft = 538
     end
     object Label1: TLabel
-      Left = 532
+      Left = 522
       Top = 50
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Date To:'
-      ExplicitLeft = 538
     end
     object grpbxCustomer: TGroupBox
-      Left = 128
+      Left = 139
       Top = 4
-      Width = 313
+      Width = 325
       Height = 69
       ParentBackground = False
       TabOrder = 0
@@ -261,15 +265,15 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       object Label3: TLabel
         Left = 16
         Top = 16
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object edtCustomer: TEdit
         Left = 14
         Top = 36
         Width = 257
-        Height = 21
+        Height = 25
         TabStop = False
         MaxLength = 30
         ReadOnly = True
@@ -293,10 +297,10 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       end
     end
     object edtDateFrom: TEdit
-      Left = 598
+      Left = 592
       Top = 14
       Width = 84
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       MaxLength = 30
       TabOrder = 1
@@ -304,10 +308,10 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       OnExit = edtDateFromExit
     end
     object edtDateTo: TEdit
-      Left = 598
+      Left = 592
       Top = 46
       Width = 84
-      Height = 21
+      Height = 25
       Anchors = [akTop, akRight]
       MaxLength = 30
       TabOrder = 2
@@ -315,7 +319,7 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       OnExit = edtDateToExit
     end
     object btnDateFrom: TBitBtn
-      Left = 694
+      Left = 688
       Top = 12
       Width = 25
       Height = 25
@@ -336,9 +340,10 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = btnDateFromClick
+      ExplicitLeft = 682
     end
     object btnDateTo: TBitBtn
-      Left = 694
+      Left = 688
       Top = 44
       Width = 25
       Height = 25
@@ -359,11 +364,12 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = btnDateToClick
+      ExplicitLeft = 682
     end
     object rgCustomer: TRadioGroup
       Left = 8
       Top = 4
-      Width = 113
+      Width = 122
       Height = 69
       ItemIndex = 0
       Items.Strings = (
@@ -386,6 +392,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
       item
         Width = 50
       end>
+    ExplicitTop = 427
+    ExplicitWidth = 727
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

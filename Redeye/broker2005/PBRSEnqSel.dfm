@@ -9,14 +9,14 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
     Left = 408
     Top = 264
@@ -116,15 +116,15 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -154,8 +154,8 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 56
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Date From:'
     end
     object DateFromButton: TSpeedButton
@@ -182,8 +182,8 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Date To:'
     end
     object DateToButton: TSpeedButton
@@ -211,7 +211,7 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
       Left = 104
       Top = 10
       Width = 113
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = DateFromEditExit
@@ -220,7 +220,7 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
       Left = 104
       Top = 42
       Width = 113
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 1
       OnExit = DateToEditExit
@@ -259,15 +259,15 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 74
-      Height = 13
+      Width = 82
+      Height = 17
       Caption = 'Office Contact'
     end
     object edtOperator: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -353,8 +353,8 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     OnClick = ExcelBitBtnClick
   end
   object pnlExportPrgrss: TPanel
-    Left = 125
-    Top = 123
+    Left = 145
+    Top = 83
     Width = 289
     Height = 61
     ParentBackground = False
@@ -362,9 +362,9 @@ object PBRSEnqSelFrm: TPBRSEnqSelFrm
     Visible = False
     object lblExporting: TLabel
       Left = 16
-      Top = 12
-      Width = 59
-      Height = 13
+      Top = 9
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

@@ -8,14 +8,14 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlGrid: TPanel
     Left = 0
     Top = 0
@@ -24,17 +24,19 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 526
+    ExplicitHeight = 158
     object dbgrdBinLots: TDBGrid
       Left = 1
-      Top = 41
+      Top = 49
       Width = 530
-      Height = 125
+      Height = 117
       Align = alClient
       DefaultDrawing = False
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
@@ -43,7 +45,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnDrawColumnCell = dbgrdBinLotsDrawColumnCell
@@ -112,51 +114,50 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       Left = 1
       Top = 1
       Width = 530
-      Height = 40
+      Height = 48
       Align = alTop
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
         530
-        40)
+        48)
       object lblPartCode: TLabel
         Left = 72
-        Top = 8
-        Width = 60
-        Height = 13
+        Top = 4
+        Width = 68
+        Height = 17
         Caption = 'lblPartCode'
       end
       object lblPart: TLabel
         Left = 8
-        Top = 8
-        Width = 43
-        Height = 13
+        Top = 4
+        Width = 48
+        Height = 17
         Caption = 'Product:'
       end
       object lblStore: TLabel
         Left = 8
-        Top = 24
-        Width = 30
-        Height = 13
+        Top = 25
+        Width = 34
+        Height = 17
         Caption = 'Store:'
       end
       object lblStoreName: TLabel
         Left = 72
-        Top = 24
-        Width = 69
-        Height = 13
+        Top = 25
+        Width = 80
+        Height = 17
         Caption = 'lblStoreName'
       end
       object lblQuantities: TLabel
-        Left = 443
-        Top = 8
-        Width = 66
-        Height = 13
+        Left = 437
+        Top = 4
+        Width = 72
+        Height = 17
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = 'lblQuantities'
-        ExplicitLeft = 455
       end
     end
   end
@@ -175,6 +176,8 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 199
+    ExplicitWidth = 526
   end
   object Panel1: TPanel
     Left = 0
@@ -184,6 +187,8 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 158
+    ExplicitWidth = 526
     object Panel3: TPanel
       Left = 428
       Top = 1
@@ -193,6 +198,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 422
       object BitBtn1: TBitBtn
         Left = 16
         Top = 8

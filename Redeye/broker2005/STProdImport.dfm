@@ -4,26 +4,28 @@ object STProdImportFrm: TSTProdImportFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Product File Import'
-  ClientHeight = 385
+  ClientHeight = 402
   ClientWidth = 380
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object mmErrorRecords: TMemo
     Left = 0
-    Top = 253
+    Top = 255
     Width = 380
     Height = 100
     Align = alTop
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 0
+    ExplicitTop = 253
+    ExplicitWidth = 374
   end
   object pnlImportFile: TPanel
     Left = 0
@@ -34,18 +36,19 @@ object STProdImportFrm: TSTProdImportFrm
     Enabled = False
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 374
     object lblStep2: TLabel
       Left = 8
-      Top = 8
-      Width = 164
-      Height = 13
+      Top = 4
+      Width = 187
+      Height = 17
       Caption = '2. Select the file to be imported.'
     end
     object edtImportFileName: TEdit
       Left = 8
       Top = 24
       Width = 289
-      Height = 21
+      Height = 25
       TabOrder = 0
     end
     object btnFindFile: TButton
@@ -60,47 +63,49 @@ object STProdImportFrm: TSTProdImportFrm
   end
   object pnlProgress: TPanel
     Left = 0
-    Top = 177
+    Top = 179
     Width = 380
     Height = 76
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 177
+    ExplicitWidth = 374
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 50
-      Height = 13
+      Width = 59
+      Height = 17
       Caption = 'Progress: '
     end
     object lblProgress: TLabel
       Left = 257
       Top = 8
-      Width = 5
-      Height = 13
+      Width = 6
+      Height = 17
       Caption = 'x'
       Visible = False
     end
     object lblRecordCount: TLabel
       Left = 299
       Top = 8
-      Width = 67
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'records read.'
       Visible = False
     end
     object lblReadingFile: TLabel
-      Left = 64
+      Left = 68
       Top = 8
-      Width = 108
-      Height = 13
+      Width = 121
+      Height = 17
       Caption = 'Reading Product file.'
     end
     object prgrsbrImport: TProgressBar
       Left = 8
-      Top = 24
+      Top = 37
       Width = 353
-      Height = 17
+      Height = 21
       TabOrder = 0
     end
   end
@@ -112,15 +117,16 @@ object STProdImportFrm: TSTProdImportFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 374
     object lblStep1: TLabel
       Left = 8
       Top = 8
-      Width = 110
-      Height = 13
+      Width = 133
+      Height = 17
       Caption = '1. Select the Supplier.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -128,8 +134,8 @@ object STProdImportFrm: TSTProdImportFrm
     object LblSuppName: TLabel
       Left = 32
       Top = 32
-      Width = 18
-      Height = 13
+      Width = 24
+      Height = 17
       Caption = '      '
     end
     object btnSelectSupplier: TButton
@@ -146,15 +152,15 @@ object STProdImportFrm: TSTProdImportFrm
     Left = 0
     Top = 121
     Width = 380
-    Height = 56
+    Height = 58
     Align = alTop
     ParentBackground = False
     TabOrder = 4
     object lblStep4: TLabel
       Left = 8
       Top = 8
-      Width = 90
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = '3. Run the Import'
     end
     object ImportBtn: TButton
@@ -180,15 +186,15 @@ object STProdImportFrm: TSTProdImportFrm
   end
   object pnlCancel: TPanel
     Left = 0
-    Top = 353
+    Top = 355
     Width = 380
-    Height = 41
+    Height = 46
     Align = alTop
     ParentBackground = False
     TabOrder = 5
     object Cancel2BitBtn: TBitBtn
       Left = 288
-      Top = 8
+      Top = 11
       Width = 75
       Height = 25
       Caption = 'Close'

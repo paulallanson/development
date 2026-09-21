@@ -7,7 +7,7 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -17,19 +17,19 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
   DesignSize = (
     384
     184)
-  TextHeight = 13
+  TextHeight = 17
   object lblCustomerName: TLabel
     Left = 8
     Top = 24
-    Width = 52
-    Height = 13
+    Width = 59
+    Height = 17
     Caption = 'Customer:'
   end
   object Label1: TLabel
     Left = 8
     Top = 56
-    Width = 39
-    Height = 13
+    Width = 44
+    Height = 17
     Caption = 'Sender:'
   end
   object CancelBitBtn: TBitBtn
@@ -48,6 +48,7 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 124
   end
   object EmailBitBtn: TBitBtn
     Left = 288
@@ -72,6 +73,7 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = EmailBitBtnClick
+    ExplicitTop = 124
   end
   object Previewbitbtn: TBitBtn
     Left = 105
@@ -102,6 +104,7 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     ParentFont = False
     TabOrder = 2
     OnClick = PreviewbitbtnClick
+    ExplicitTop = 124
   end
   object PrintBitBtn: TBitBtn
     Left = 196
@@ -133,12 +136,13 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     ParentFont = False
     TabOrder = 3
     OnClick = PrintBitBtnClick
+    ExplicitTop = 124
   end
   object edtCustomerName: TEdit
     Left = 72
     Top = 20
     Width = 289
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 4
     Text = 'edtCustomerName'
@@ -151,7 +155,7 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     Caption = 'Print Company Logo'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -161,7 +165,7 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     Left = 72
     Top = 52
     Width = 193
-    Height = 21
+    Height = 25
     KeyField = 'Operator'
     ListField = 'Name'
     ListSource = dtsOperators

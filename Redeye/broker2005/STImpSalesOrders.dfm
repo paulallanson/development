@@ -3,46 +3,46 @@ object STImpSalesOrdersFrm: TSTImpSalesOrdersFrm
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Import Sales Order details'
-  ClientHeight = 347
-  ClientWidth = 359
+  ClientHeight = 367
+  ClientWidth = 372
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 82
-    Height = 13
+    Width = 95
+    Height = 17
     Caption = 'Import directory'
   end
   object Label2: TLabel
     Left = 8
-    Top = 104
-    Width = 51
-    Height = 13
+    Top = 108
+    Width = 57
+    Height = 17
     Caption = 'Filenames'
   end
   object Label3: TLabel
     Left = 8
     Top = 56
-    Width = 105
-    Height = 13
+    Width = 120
+    Height = 17
     Caption = 'Replenish orders for'
   end
   object lstbxFileNames: TListBox
     Left = 8
-    Top = 120
+    Top = 128
     Width = 209
     Height = 217
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 0
   end
@@ -60,14 +60,14 @@ object STImpSalesOrdersFrm: TSTImpSalesOrdersFrm
     Left = 8
     Top = 24
     Width = 337
-    Height = 21
+    Height = 25
     Color = clBtnFace
     ReadOnly = True
     TabOrder = 2
   end
   object btnClose: TBitBtn
     Left = 272
-    Top = 312
+    Top = 320
     Width = 75
     Height = 25
     Caption = 'Close'
@@ -76,9 +76,9 @@ object STImpSalesOrdersFrm: TSTImpSalesOrdersFrm
   end
   object dblkpWarehouse: TDBLookupComboBox
     Left = 8
-    Top = 72
+    Top = 76
     Width = 209
-    Height = 21
+    Height = 25
     KeyField = 'Part_Store'
     ListField = 'Part_Store_Name'
     ListSource = dtsWarehouse
@@ -117,12 +117,12 @@ object STImpSalesOrdersFrm: TSTImpSalesOrdersFrm
     SQL.Strings = (
       'select * from part_store'
       'order by Part_Store_name')
-    Left = 232
-    Top = 56
+    Left = 218
+    Top = 70
   end
   object dtsWarehouse: TDataSource
     DataSet = qryWarehouse
-    Left = 288
-    Top = 56
+    Left = 216
+    Top = 206
   end
 end

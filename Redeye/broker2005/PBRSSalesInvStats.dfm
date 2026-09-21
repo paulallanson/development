@@ -2,45 +2,45 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
   Left = 506
   Top = 138
   Caption = 'Sales Invoice Statistical Report'
-  ClientHeight = 146
-  ClientWidth = 400
+  ClientHeight = 164
+  ClientWidth = 442
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 20
-    Width = 60
-    Height = 13
+    Width = 69
+    Height = 17
     Caption = 'Start Period'
   end
   object Label2: TLabel
     Left = 16
     Top = 64
-    Width = 96
-    Height = 13
+    Width = 112
+    Height = 17
     Caption = 'Number of Periods'
   end
   object dblkpPeriod: TDBLookupComboBox
-    Left = 112
-    Top = 16
+    Left = 134
+    Top = 14
     Width = 153
-    Height = 21
+    Height = 25
     KeyField = 'Period'
     ListField = 'Description'
     ListSource = dtsPeriod
     TabOrder = 0
   end
   object rdgrpSortBy: TRadioGroup
-    Left = 286
-    Top = 10
-    Width = 99
+    Left = 310
+    Top = 8
+    Width = 115
     Height = 81
     Caption = 'Sort by'
     ItemIndex = 0
@@ -52,8 +52,8 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
     TabOrder = 1
   end
   object PrintReportBitBtn: TBitBtn
-    Left = 310
-    Top = 108
+    Left = 350
+    Top = 111
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -75,8 +75,8 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
     OnClick = PrintReportBitBtnClick
   end
   object PreviewReportBitBtn: TBitBtn
-    Left = 214
-    Top = 108
+    Left = 254
+    Top = 111
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -107,10 +107,10 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
     TabOrder = 4
   end
   object spnPeriods: TSpinEdit
-    Left = 112
-    Top = 56
+    Left = 134
+    Top = 54
     Width = 65
-    Height = 22
+    Height = 27
     MaxValue = 36
     MinValue = 1
     TabOrder = 5
@@ -122,12 +122,12 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
       'select *'
       'from Period'
       'order by period desc')
-    Left = 256
-    Top = 16
+    Left = 280
+    Top = 52
   end
   object dtsPeriod: TDataSource
     DataSet = qryPeriod
-    Left = 296
-    Top = 16
+    Left = 234
+    Top = 52
   end
 end

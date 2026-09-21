@@ -3,34 +3,40 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
   Top = 149
   BorderStyle = bsDialog
   Caption = 'Supplier Purchase Cost Selection'
-  ClientHeight = 204
-  ClientWidth = 365
+  ClientHeight = 255
+  ClientWidth = 401
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label3: TLabel
     Left = 8
-    Top = 139
-    Width = 36
-    Height = 13
+    Top = 146
+    Width = 42
+    Height = 17
     Caption = 'Sort by'
     Visible = False
   end
   object GroupBox1: TGroupBox
     Left = 248
     Top = 80
-    Width = 115
+    Width = 121
     Height = 65
     Caption = 'No. of Suppliers'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 7
   end
   object GrpBxDts: TGroupBox
@@ -39,18 +45,24 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Width = 217
     Height = 137
     Caption = 'Selected Invoice Dates'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 0
     object Label2: TLabel
       Left = 16
-      Top = 66
-      Width = 81
-      Height = 13
+      Top = 76
+      Width = 92
+      Height = 17
       Caption = 'To Invoice Date:'
     end
     object DateToButton: TSpeedButton
       Left = 119
-      Top = 80
+      Top = 90
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -72,13 +84,13 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     object Label1: TLabel
       Left = 16
       Top = 23
-      Width = 95
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'From Invoice Date:'
     end
     object DateFromButton: TSpeedButton
       Left = 119
-      Top = 39
+      Top = 43
       Width = 25
       Height = 25
       Glyph.Data = {
@@ -99,26 +111,26 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     end
     object DateToEdit: TEdit
       Left = 15
-      Top = 82
+      Top = 92
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 1
       OnExit = DateToEditExit
     end
     object DateFromEdit: TEdit
       Left = 15
-      Top = 39
+      Top = 43
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnExit = DateFromEditExit
     end
   end
   object PrintBitBtn: TBitBtn
-    Left = 288
-    Top = 176
+    Left = 291
+    Top = 206
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -148,21 +160,27 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
   object TotByRadioGroup: TRadioGroup
     Left = 248
     Top = 8
-    Width = 115
+    Width = 121
     Height = 65
     Caption = 'Report Totals'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ItemIndex = 1
     Items.Strings = (
       'Ascending'
       'Descending')
     ParentBackground = False
+    ParentFont = False
     TabOrder = 2
   end
   object cbSort1: TComboBox
     Left = 8
-    Top = 153
+    Top = 169
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 3
     Visible = False
@@ -173,8 +191,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       'Profit %')
   end
   object PreviewReportBitBtn: TBitBtn
-    Left = 206
-    Top = 176
+    Left = 209
+    Top = 206
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -196,8 +214,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     OnClick = PreviewReportBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 6
-    Top = 176
+    Left = 9
+    Top = 206
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -209,7 +227,7 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Left = 270
     Top = 104
     Width = 50
-    Height = 22
+    Height = 27
     MaxValue = 99999
     MinValue = 0
     TabOrder = 6
@@ -218,15 +236,15 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
   object chkbxExcludeCosts: TCheckBox
     Left = 184
     Top = 155
-    Width = 185
+    Width = 209
     Height = 17
     Caption = 'exclude printing costs && profit'
     TabOrder = 8
     Visible = False
   end
   object OleContainer1: TOleContainer
-    Left = 88
-    Top = 40
+    Left = 135
+    Top = 54
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -235,18 +253,24 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 64
-    Top = 44
+    Left = 56
+    Top = 70
     Width = 289
     Height = 61
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -259,8 +283,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     end
   end
   object btbtnExcel: TBitBtn
-    Left = 125
-    Top = 176
+    Left = 128
+    Top = 206
     Width = 75
     Height = 25
     Caption = 'Excel'
@@ -312,8 +336,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
   end
   object qryPurchByInv: TFDQuery
     ConnectionName = 'PB'
-    Left = 80
-    Top = 16
+    Left = 84
+    Top = 20
   end
   object qryUpdIntSel: TFDQuery
     ConnectionName = 'PB'
@@ -345,8 +369,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       ' '
       ''
       ' ')
-    Left = 200
-    Top = 16
+    Left = 146
+    Top = 68
     ParamData = <
       item
         Name = 'Sel4'
@@ -386,8 +410,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       ' '
       ' '
       ' ')
-    Left = 224
-    Top = 104
+    Left = 264
+    Top = 130
     ParamData = <
       item
         Name = 'Int_Sel_Code'
@@ -437,8 +461,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       ''
       ' '
       ' ')
-    Left = 48
-    Top = 120
+    Left = 44
+    Top = 150
     ParamData = <
       item
         Name = 'invoice_no'
@@ -467,8 +491,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       ' '
       ' '
       ' ')
-    Left = 218
-    Top = 62
+    Left = 129
+    Top = 110
     ParamData = <
       item
         Name = 'Sales_invoice'

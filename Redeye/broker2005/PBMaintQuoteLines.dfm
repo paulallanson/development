@@ -4,16 +4,16 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
   BorderStyle = bsDialog
   Caption = 'Maintain Quote details'
   ClientHeight = 522
-  ClientWidth = 499
+  ClientWidth = 520
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 125
     Top = 493
@@ -115,89 +115,89 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
   object grpbxDetails: TGroupBox
     Left = 8
     Top = 8
-    Width = 489
+    Width = 504
     Height = 339
     ParentBackground = False
     TabOrder = 1
     object Label2: TLabel
       Left = 8
       Top = 161
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object lblCostPrice: TLabel
       Left = 8
       Top = 187
-      Width = 56
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Direct Cost'
     end
     object Label4: TLabel
       Left = 8
       Top = 289
-      Width = 49
-      Height = 13
+      Width = 55
+      Height = 17
       Caption = 'Price Unit'
     end
     object Label5: TLabel
       Left = 8
       Top = 239
-      Width = 80
-      Height = 13
+      Width = 91
+      Height = 17
       Caption = 'Actual Sell Price'
     end
     object Label6: TLabel
       Left = 8
       Top = 213
-      Width = 103
-      Height = 13
+      Width = 118
+      Height = 17
       Caption = 'Suggested Sell Price'
     end
     object Label9: TLabel
-      Left = 235
+      Left = 250
       Top = 187
-      Width = 120
-      Height = 13
+      Width = 138
+      Height = 17
       Caption = 'Direct Cost + Overhead'
     end
     object Label10: TLabel
-      Left = 277
+      Left = 297
       Top = 213
-      Width = 78
-      Height = 13
+      Width = 91
+      Height = 17
       Caption = 'Old System SSP'
     end
     object Label14: TLabel
       Left = 8
       Top = 315
-      Width = 42
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Vat Rate'
     end
     object lblResellerPrice: TLabel
       Left = 8
       Top = 263
-      Width = 67
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'Reseller Price'
     end
     object Label16: TLabel
-      Left = 266
+      Left = 287
       Top = 161
-      Width = 89
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'Cascade Quantity'
     end
     object Label17: TLabel
-      Left = 414
+      Left = 437
       Top = 160
-      Width = 24
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'lines'
     end
     object memQuantity: TMemo
-      Left = 112
+      Left = 130
       Top = 157
       Width = 105
       Height = 21
@@ -210,7 +210,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsNumber
     end
     object memCostPrice: TMemo
-      Left = 112
+      Left = 130
       Top = 183
       Width = 105
       Height = 21
@@ -223,10 +223,10 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object dblkpPriceUnit: TDBLookupComboBox
-      Left = 112
+      Left = 130
       Top = 285
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = dtsPriceUnit
@@ -234,7 +234,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnClick = CheckOK
     end
     object memASPrice: TMemo
-      Left = 112
+      Left = 130
       Top = 235
       Width = 105
       Height = 21
@@ -247,7 +247,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object memSSPrice: TMemo
-      Left = 112
+      Left = 130
       Top = 209
       Width = 105
       Height = 21
@@ -260,7 +260,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object memDCOHD: TMemo
-      Left = 368
+      Left = 391
       Top = 183
       Width = 105
       Height = 21
@@ -273,7 +273,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object memSSPOrig: TMemo
-      Left = 368
+      Left = 391
       Top = 209
       Width = 105
       Height = 21
@@ -286,10 +286,10 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object dblkpVat: TDBLookupComboBox
-      Left = 112
+      Left = 130
       Top = 311
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = dtsVat
@@ -297,7 +297,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnClick = CheckOK
     end
     object memResellerPrice: TMemo
-      Left = 112
+      Left = 130
       Top = 259
       Width = 105
       Height = 21
@@ -310,10 +310,10 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object spnQuantity: TSpinEdit
-      Left = 368
+      Left = 391
       Top = 156
       Width = 40
-      Height = 22
+      Height = 27
       MaxValue = 0
       MinValue = 0
       TabOrder = 7
@@ -323,40 +323,40 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
   object grpbxWorkCentre: TGroupBox
     Left = 8
     Top = 400
-    Width = 489
+    Width = 504
     Height = 73
     ParentBackground = False
     TabOrder = 3
     object Label3: TLabel
-      Left = 352
+      Left = 353
       Top = 47
-      Width = 31
-      Height = 13
+      Width = 35
+      Height = 17
       Caption = 'Hours'
     end
     object Label11: TLabel
       Left = 8
       Top = 18
-      Width = 101
-      Height = 13
+      Width = 113
+      Height = 17
       Caption = 'Work Centre Group'
     end
     object Label12: TLabel
       Left = 8
       Top = 47
-      Width = 65
-      Height = 13
+      Width = 72
+      Height = 17
       Caption = 'Work Centre'
     end
     object Label13: TLabel
-      Left = 328
+      Left = 324
       Top = 18
-      Width = 59
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Staff Count'
     end
     object memHours: TMemo
-      Left = 392
+      Left = 391
       Top = 43
       Width = 81
       Height = 21
@@ -369,10 +369,10 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object dblkpWorkCentreGroup: TDBLookupComboBox
-      Left = 112
+      Left = 130
       Top = 14
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Work_Centre_Group'
       ListField = 'Work_Centre_Group_Name'
       ListSource = dtsWCGroup
@@ -380,10 +380,10 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnClick = dblkpWorkCentreGroupClick
     end
     object dblkpWorkCentre: TDBLookupComboBox
-      Left = 112
+      Left = 130
       Top = 43
       Width = 145
-      Height = 21
+      Height = 25
       KeyField = 'Work_Centre'
       ListField = 'Work_Centre_Name'
       ListSource = dtsWC
@@ -391,7 +391,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnClick = CheckOK
     end
     object memStaff: TMemo
-      Left = 392
+      Left = 391
       Top = 14
       Width = 81
       Height = 21
@@ -407,19 +407,19 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
   object grpbxInternalCost: TGroupBox
     Left = 8
     Top = 353
-    Width = 489
+    Width = 504
     Height = 41
     ParentBackground = False
     TabOrder = 2
     object Label15: TLabel
       Left = 8
       Top = 16
-      Width = 52
-      Height = 13
+      Width = 60
+      Height = 17
       Caption = 'Markup %'
     end
     object memMarkupPerc: TMemo
-      Left = 112
+      Left = 130
       Top = 12
       Width = 105
       Height = 21
@@ -434,29 +434,29 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
   object grpbxHeader: TGroupBox
     Left = 8
     Top = 8
-    Width = 489
+    Width = 504
     Height = 145
     ParentBackground = False
     TabOrder = 0
     object Label7: TLabel
       Left = 10
       Top = 14
-      Width = 61
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Department'
     end
     object Label8: TLabel
       Left = 11
       Top = 41
-      Width = 38
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Process'
     end
     object Label1: TLabel
       Left = 12
       Top = 72
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object btnProdType: TButton
@@ -478,7 +478,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Left = 112
       Top = 10
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'Process_Group'
       ListField = 'Process_Group_Description'
       ListSource = dtsProcessGroup
@@ -489,7 +489,7 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       Left = 112
       Top = 37
       Width = 185
-      Height = 21
+      Height = 25
       KeyField = 'Process'
       ListField = 'Process_Description'
       ListSource = dtsProcess
@@ -537,8 +537,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       'select *'
       'from Process_Group'
       'order by Process_Group_Description')
-    Left = 336
-    Top = 24
+    Left = 364
+    Top = 14
   end
   object dtsProcessGroup: TDataSource
     DataSet = qryProcessGroup
@@ -620,8 +620,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       'from Process'
       'where process_group = :process_group'
       'order by Process_Description')
-    Left = 336
-    Top = 88
+    Left = 388
+    Top = 38
     ParamData = <
       item
         Name = 'process_group'

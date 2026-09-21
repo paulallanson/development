@@ -1,15 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 2003
-
-Comments
---------
-  Enquiries Report.
-
-VSS Info:
-$Header: /PBL D5/PBRPEnqLst.pas 1    janine$
-$History: PBRPEnqLst.pas $
-*******************************************************************************)
 unit PBRPEnqLst;
 
 interface

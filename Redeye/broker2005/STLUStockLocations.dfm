@@ -7,7 +7,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnActivate = FormActivate
@@ -15,12 +15,12 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 821
-    Height = 38
+    Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 0
@@ -28,22 +28,23 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       Left = 1
       Top = 1
       Width = 560
-      Height = 36
+      Height = 39
       Align = alLeft
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 31
       object Label1: TLabel
         Left = 16
         Top = 12
-        Width = 59
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Warehouse'
       end
       object dblkpWarehouse: TDBLookupComboBox
         Left = 88
         Top = 8
         Width = 153
-        Height = 21
+        Height = 25
         KeyField = 'Part_Store'
         ListField = 'Part_Store_Name'
         TabOrder = 0
@@ -54,7 +55,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       Left = 561
       Top = 1
       Width = 259
-      Height = 36
+      Height = 39
       Align = alClient
       Anchors = [akRight, akBottom]
       Bands = <
@@ -64,13 +65,16 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
           MinHeight = 30
           Width = 253
         end>
+      ExplicitWidth = 253
+      ExplicitHeight = 36
       object ToolBar2: TToolBar
         Left = 11
-        Top = 0
+        Top = 6
         Width = 244
         Height = 30
         Align = alClient
-        ButtonWidth = 83
+        ButtonHeight = 23
+        ButtonWidth = 88
         Caption = 'ToolBar2'
         Color = clBtnFace
         EdgeInner = esNone
@@ -89,7 +93,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
           OnClick = btnTransfersClick
         end
         object btnAdjustOut: TToolButton
-          Left = 83
+          Left = 88
           Top = 0
           Caption = 'Adjust Out'
           ImageIndex = 9
@@ -106,27 +110,29 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 363
+    ExplicitWidth = 815
     DesignSize = (
       821
       41)
     object Label2: TLabel
       Left = 16
       Top = 15
-      Width = 63
-      Height = 13
+      Width = 70
+      Height = 17
       Caption = 'Bin Location'
     end
     object edtSearch: TEdit
       Left = 96
       Top = 11
       Width = 121
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 737
+      Left = 731
       Top = 8
       Width = 75
       Height = 25
@@ -135,9 +141,10 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
+      ExplicitLeft = 725
     end
     object btnPrint: TBitBtn
-      Left = 649
+      Left = 643
       Top = 8
       Width = 75
       Height = 25
@@ -159,9 +166,10 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnPrintClick
+      ExplicitLeft = 637
     end
     object btnPreview: TBitBtn
-      Left = 563
+      Left = 557
       Top = 8
       Width = 75
       Height = 25
@@ -189,9 +197,10 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       ParentFont = False
       TabOrder = 3
       OnClick = btnPreviewClick
+      ExplicitLeft = 551
     end
     object btnExcel: TBitBtn
-      Left = 474
+      Left = 468
       Top = 8
       Width = 75
       Height = 25
@@ -243,6 +252,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
+      ExplicitLeft = 462
     end
   end
   object stsbrDetails: TStatusBar
@@ -257,17 +267,19 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
       item
         Width = 50
       end>
+    ExplicitTop = 404
+    ExplicitWidth = 815
   end
   object dbgDetails: TDBGrid
     Left = 0
-    Top = 38
+    Top = 41
     Width = 821
-    Height = 334
+    Height = 331
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -275,7 +287,7 @@ object frmSTLUStockLocations: TfrmSTLUStockLocations
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <

@@ -1,22 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Look up Store.
-
-VSS Info:
-$Header: /Broker Stock/STLUPrtStor.pas 3     28/11/00 16:05 Davidn $
-$History: STLUPrtStor.pas $
- *
- * *****************  Version 3  *****************
- * User: Davidn       Date: 28/11/00   Time: 16:05
- * Updated in $/Broker Stock
- * Added VSS section to top of unit and checked fonts, tab order, button
- * order, and glyphs.
-
-*******************************************************************************)
 unit STLUPrtStor;
 
 interface

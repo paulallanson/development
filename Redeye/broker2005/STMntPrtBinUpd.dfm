@@ -3,52 +3,52 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Bin Details'
-  ClientHeight = 175
-  ClientWidth = 233
+  ClientHeight = 185
+  ClientWidth = 254
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
-    Left = 8
-    Top = 8
-    Width = 45
-    Height = 13
+    Left = 9
+    Top = 13
+    Width = 51
+    Height = 17
     Caption = 'Bin From'
   end
   object Label2: TLabel
-    Left = 8
-    Top = 40
-    Width = 31
-    Height = 13
+    Left = 9
+    Top = 45
+    Width = 35
+    Height = 17
     Caption = 'Bin To'
   end
   object BinFromEdit: TEdit
-    Left = 88
-    Top = 8
+    Left = 89
+    Top = 13
     Width = 121
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 0
     OnChange = BinFromEditChange
   end
   object BinToEdit: TEdit
-    Left = 88
-    Top = 40
+    Left = 89
+    Top = 45
     Width = 121
-    Height = 21
+    Height = 25
     CharCase = ecUpperCase
     TabOrder = 1
     OnChange = BinToEditChange
   end
   object OKBitBtn: TBitBtn
-    Left = 136
-    Top = 96
+    Left = 153
+    Top = 108
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -77,8 +77,8 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 136
-    Top = 128
+    Left = 153
+    Top = 140
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -86,8 +86,8 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     TabOrder = 3
   end
   object PickRadioGroup: TRadioGroup
-    Left = 8
-    Top = 72
+    Left = 9
+    Top = 77
     Width = 89
     Height = 65
     Caption = 'Can Pick'
@@ -99,9 +99,9 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     OnClick = PickRadioGroupClick
   end
   object chkbxProduction: TCheckBox
-    Left = 8
-    Top = 144
-    Width = 97
+    Left = 9
+    Top = 149
+    Width = 129
     Height = 17
     Caption = 'Production Bin'
     TabOrder = 5
@@ -113,8 +113,8 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
       'from Part_Store_Bin'
       'Where (Part_Store = :Part_Store) and'
       '      (Part_Bin = :Part_Bin)')
-    Left = 80
-    Top = 8
+    Left = 196
+    Top = 50
     ParamData = <
       item
         Name = 'Part_Store'
@@ -130,8 +130,8 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
       '(Part_Store, Part_Bin, Bin_Can_Pick, Production_Bin)'
       'Values'
       '(:Part_Store, :Part_Bin, :Bin_Can_Pick, :Production_Bin)')
-    Left = 152
-    Top = 8
+    Left = 191
+    Top = 23
     ParamData = <
       item
         Name = 'Part_Store'

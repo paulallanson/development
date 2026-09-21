@@ -9,7 +9,7 @@ object STPrtMntFrm: TSTPrtMntFrm
   Constraints.MinWidth = 681
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -18,7 +18,7 @@ object STPrtMntFrm: TSTPrtMntFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -28,6 +28,7 @@ object STPrtMntFrm: TSTPrtMntFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 704
     object CoolBar1: TCoolBar
       Left = 0
       Top = 0
@@ -46,13 +47,14 @@ object STPrtMntFrm: TSTPrtMntFrm
           MinHeight = 41
           Width = 704
         end>
+      ExplicitWidth = 704
       object ToolBar1: TToolBar
         Left = 11
         Top = 0
         Width = 695
         Height = 41
-        ButtonHeight = 36
-        ButtonWidth = 53
+        ButtonHeight = 40
+        ButtonWidth = 59
         HotImages = HotImageList1
         Images = CoolImageList1
         ShowCaptions = True
@@ -65,21 +67,21 @@ object STPrtMntFrm: TSTPrtMntFrm
           OnClick = AddBitBtnClick
         end
         object ChangeBitBtn: TToolButton
-          Left = 53
+          Left = 59
           Top = 0
           Caption = 'Change'
           ImageIndex = 1
           OnClick = ChangeBitBtnClick
         end
         object DelBitBtn: TToolButton
-          Left = 106
+          Left = 118
           Top = 0
           Caption = 'Delete'
           ImageIndex = 2
           OnClick = DelBitBtnClick
         end
         object ImportBitBtn: TToolButton
-          Left = 159
+          Left = 177
           Top = 0
           Hint = 'Import Product Text File'
           Caption = 'Import'
@@ -89,7 +91,7 @@ object STPrtMntFrm: TSTPrtMntFrm
           OnClick = ImportBitBtnClick
         end
         object ToolButton5: TToolButton
-          Left = 212
+          Left = 236
           Top = 0
           Width = 8
           Caption = 'ToolButton5'
@@ -97,35 +99,35 @@ object STPrtMntFrm: TSTPrtMntFrm
           Style = tbsSeparator
         end
         object SelAllBitBtn: TToolButton
-          Left = 220
+          Left = 244
           Top = 0
           Caption = 'Select All'
           ImageIndex = 5
           OnClick = SelAllBitBtnClick
         end
         object SuppBitBtn: TToolButton
-          Left = 273
+          Left = 303
           Top = 0
           Caption = 'Supplier'
           ImageIndex = 6
           OnClick = SuppBitBtnClick
         end
         object SuppPartBitBtn: TToolButton
-          Left = 326
+          Left = 362
           Top = 0
           Caption = 'Details'
           ImageIndex = 8
           OnClick = SuppPartBitBtnClick
         end
         object btbtnEComm: TToolButton
-          Left = 379
+          Left = 421
           Top = 0
           Caption = 'E-Comm'
           ImageIndex = 9
           OnClick = btbtnECommClick
         end
         object ToolButton4: TToolButton
-          Left = 432
+          Left = 480
           Top = 0
           Width = 8
           Caption = 'ToolButton4'
@@ -133,7 +135,7 @@ object STPrtMntFrm: TSTPrtMntFrm
           Style = tbsSeparator
         end
         object CloseBitBtn: TToolButton
-          Left = 440
+          Left = 488
           Top = 0
           Caption = 'Close'
           ImageIndex = 4
@@ -145,8 +147,8 @@ object STPrtMntFrm: TSTPrtMntFrm
         Top = 43
         Width = 695
         Height = 41
-        ButtonHeight = 36
-        ButtonWidth = 37
+        ButtonHeight = 40
+        ButtonWidth = 41
         Caption = 'ToolBar2'
         HotImages = HotImageList2
         Images = CoolImageList2
@@ -160,7 +162,7 @@ object STPrtMntFrm: TSTPrtMntFrm
           OnClick = SelectBitBtnClick
         end
         object ToolButton1: TToolButton
-          Left = 37
+          Left = 41
           Top = 0
           Width = 8
           Caption = 'ToolButton1'
@@ -168,7 +170,7 @@ object STPrtMntFrm: TSTPrtMntFrm
           Style = tbsSeparator
         end
         object ToolButton2: TToolButton
-          Left = 45
+          Left = 49
           Top = 0
           Caption = 'Close'
           ImageIndex = 1
@@ -185,27 +187,29 @@ object STPrtMntFrm: TSTPrtMntFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 388
+    ExplicitWidth = 704
     DesignSize = (
       710
       88)
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 70
-      Height = 13
+      Width = 80
+      Height = 17
       Caption = 'Product Code'
     end
     object Label2: TLabel
       Left = 8
       Top = 46
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object ShowAllCheckBox: TCheckBox
-      Left = 577
+      Left = 562
       Top = 48
-      Width = 121
+      Width = 133
       Height = 17
       Anchors = [akRight, akBottom]
       Caption = 'Show All Products'
@@ -213,10 +217,10 @@ object STPrtMntFrm: TSTPrtMntFrm
       OnClick = ShowAllCheckBoxClick
     end
     object CodeEdit: TEdit
-      Left = 88
-      Top = 6
+      Left = 94
+      Top = 11
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
       OnChange = CodeEditChange
@@ -234,12 +238,13 @@ object STPrtMntFrm: TSTPrtMntFrm
         item
           Width = 50
         end>
+      ExplicitWidth = 702
     end
     object EdtDesc: TEdit
-      Left = 88
-      Top = 38
+      Left = 94
+      Top = 43
       Width = 241
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 3
       OnChange = CodeEditChange
@@ -255,6 +260,8 @@ object STPrtMntFrm: TSTPrtMntFrm
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 704
+    ExplicitHeight = 343
     object PartsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -265,7 +272,7 @@ object STPrtMntFrm: TSTPrtMntFrm
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -273,7 +280,7 @@ object STPrtMntFrm: TSTPrtMntFrm
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       OnCellClick = PartsDBGridCellClick

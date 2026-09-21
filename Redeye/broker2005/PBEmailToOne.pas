@@ -1,20 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Send Email Confirmation Form
-
-VSS Info:
-$Header: /PBL D5/PBEmailToOne.pas 1     7/11/:2 14:02 Janiner $
-$History: PBEmailToOne.pas $
- * 
- * *****************  Version 1  *****************
- * User: Janiner      Date: 7/11/:2    Time: 14:02
- * Created in $/PBL D5
- *
-*******************************************************************************)
 unit PBEmailToOne;
 
 interface

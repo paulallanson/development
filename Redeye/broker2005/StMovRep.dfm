@@ -10,14 +10,14 @@ object StMovRepFrm: TStMovRepFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnActivate = FormActivate
   TextHeight = 13
   object StMoveQuickRep: TQuickRep
     Left = 5
     Top = 0
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = StMoveQuickRepBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -76,30 +76,30 @@ object StMovRepFrm: TStMovRepFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand2: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 67
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 84
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        177.270833333333300000
-        2770.187500000000000000)
+        177.800000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object TitleQRLabel: TQRLabel
-        Left = 423
-        Top = 8
-        Width = 226
-        Height = 25
+        Left = 523
+        Top = 10
+        Width = 294
+        Height = 33
         Size.Values = (
-          66.145833333333330000
-          1119.187500000000000000
+          69.850000000000000000
+          1107.016666666667000000
           21.166666666666670000
-          597.958333333333300000)
+          622.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -109,7 +109,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -21
+        Font.Height = -27
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -120,15 +120,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 16
       end
       object SelDateQRLabel: TQRLabel
-        Left = 490
-        Top = 32
-        Width = 79
-        Height = 19
+        Left = 613
+        Top = 40
+        Width = 97
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1296.458333333333000000
+          50.800000000000000000
+          1297.516666666667000000
           84.666666666666670000
-          209.020833333333300000)
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -139,7 +139,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -150,15 +150,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRSysData1: TQRSysData
-        Left = 947
-        Top = 8
-        Width = 84
-        Height = 18
+        Left = 1186
+        Top = 10
+        Width = 103
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          2505.604166666667000000
+          48.683333333333330000
+          2510.366666666667000000
           21.166666666666670000
-          222.250000000000000000)
+          218.016666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -168,7 +168,7 @@ object StMovRepFrm: TStMovRepFrm
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -179,15 +179,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object PageQRSysData: TQRSysData
-        Left = 965
-        Top = 32
-        Width = 66
-        Height = 19
+        Left = 1209
+        Top = 40
+        Width = 80
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          2553.229166666667000000
+          50.800000000000000000
+          2559.050000000000000000
           84.666666666666670000
-          174.625000000000000000)
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -197,7 +197,7 @@ object StMovRepFrm: TStMovRepFrm
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -209,10 +209,10 @@ object StMovRepFrm: TStMovRepFrm
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 38
-      Top = 145
-      Width = 1047
-      Height = 21
+      Left = 47
+      Top = 181
+      Width = 1309
+      Height = 26
       AfterPrint = QRSubDetail1AfterPrint
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
@@ -220,8 +220,8 @@ object StMovRepFrm: TStMovRepFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        55.562500000000000000
-        2770.187500000000000000)
+        55.033333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = StMoveQuickRep
@@ -229,10 +229,10 @@ object StMovRepFrm: TStMovRepFrm
       PrintBefore = False
       PrintIfEmpty = True
       object PartQRDBText: TQRDBText
-        Left = 8
+        Left = 10
         Top = 1
-        Width = 113
-        Height = 15
+        Width = 141
+        Height = 19
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
@@ -250,7 +250,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Part'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -263,10 +263,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object RecDateQRDBText: TQRDBText
-        Left = 137
+        Left = 171
         Top = 1
-        Width = 64
-        Height = 15
+        Width = 80
+        Height = 19
         Size.Values = (
           39.687500000000000000
           362.479166666666700000
@@ -283,7 +283,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Date_Received'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -296,10 +296,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object MoveTypeQRDBText: TQRDBText
-        Left = 216
+        Left = 270
         Top = 1
-        Width = 86
-        Height = 15
+        Width = 108
+        Height = 19
         Size.Values = (
           39.687500000000000000
           571.500000000000000000
@@ -316,7 +316,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Part_Move_Type_Descr'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -329,10 +329,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object BinQRDBText: TQRDBText
-        Left = 590
+        Left = 738
         Top = 1
-        Width = 107
-        Height = 15
+        Width = 134
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1561.041666666667000000
@@ -349,7 +349,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Part_Movement_Bin'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -362,10 +362,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object LotQRDBText: TQRDBText
-        Left = 727
+        Left = 909
         Top = 1
-        Width = 73
-        Height = 15
+        Width = 91
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1923.520833333334000000
@@ -382,7 +382,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Part_Store_Lot'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -395,10 +395,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object costQRDBText: TQRDBText
-        Left = 869
+        Left = 1086
         Top = 1
-        Width = 65
-        Height = 15
+        Width = 81
+        Height = 19
         Size.Values = (
           39.687500000000000000
           2299.229166666667000000
@@ -415,7 +415,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Store_Cost'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         Mask = #163'######0.00'
@@ -429,10 +429,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QtyQRDBText: TQRDBText
-        Left = 826
+        Left = 1032
         Top = 1
-        Width = 52
-        Height = 15
+        Width = 65
+        Height = 19
         Size.Values = (
           39.687500000000000000
           2185.458333333333000000
@@ -449,7 +449,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Store_Quantity'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         Mask = '######'
@@ -463,10 +463,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object RefQRDBText: TQRDBText
-        Left = 318
+        Left = 398
         Top = 1
-        Width = 139
-        Height = 15
+        Width = 174
+        Height = 19
         Size.Values = (
           39.687500000000000000
           841.375000000000000000
@@ -483,7 +483,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Part_Movement_Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -496,10 +496,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object StoreQRDBText: TQRDBText
-        Left = 470
+        Left = 588
         Top = 1
-        Width = 107
-        Height = 15
+        Width = 134
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1243.541666666667000000
@@ -516,7 +516,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Part_Store_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -529,10 +529,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRDBText11: TQRDBText
-        Left = 944
+        Left = 1180
         Top = 1
-        Width = 55
-        Height = 15
+        Width = 69
+        Height = 19
         Size.Values = (
           39.687500000000000000
           2497.666666666667000000
@@ -549,7 +549,7 @@ object StMovRepFrm: TStMovRepFrm
         DataField = 'Audit_User'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -562,10 +562,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLblInUse: TQRLabel
-        Left = 1022
+        Left = 1278
         Top = 1
-        Width = 15
-        Height = 17
+        Width = 19
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2704.041666666667000000
@@ -581,7 +581,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -593,10 +593,10 @@ object StMovRepFrm: TStMovRepFrm
       end
     end
     object QRGroup1: TQRGroup
-      Left = 38
-      Top = 105
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 131
+      Width = 1309
+      Height = 50
       AlignToBottom = False
       TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
@@ -609,22 +609,22 @@ object StMovRepFrm: TStMovRepFrm
       ParentFont = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       FooterBand = qrbRepFooter
       Master = QRSubDetail1
       ReprintOnNewPage = True
       object QRLabel2: TQRLabel
-        Left = 8
-        Top = 17
-        Width = 44
-        Height = 15
+        Left = 10
+        Top = 21
+        Width = 50
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           21.166666666666670000
-          44.979166666666670000
-          116.416666666666700000)
+          44.450000000000000000
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -634,7 +634,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -645,15 +645,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel13: TQRLabel
-        Left = 136
-        Top = 18
-        Width = 65
-        Height = 15
+        Left = 170
+        Top = 23
+        Width = 76
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           359.833333333333300000
-          47.625000000000000000
-          171.979166666666700000)
+          48.683333333333330000
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -663,7 +663,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -674,15 +674,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 216
-        Top = 18
-        Width = 28
-        Height = 15
+        Left = 270
+        Top = 23
+        Width = 32
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           571.500000000000000000
-          47.625000000000000000
-          74.083333333333330000)
+          48.683333333333330000
+          67.733333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -692,7 +692,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -703,15 +703,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 471
-        Top = 18
-        Width = 64
-        Height = 15
+        Left = 589
+        Top = 23
+        Width = 73
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1246.187500000000000000
-          47.625000000000000000
-          169.333333333333300000)
+          40.216666666666670000
+          1246.716666666667000000
+          48.683333333333330000
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -721,7 +721,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -732,15 +732,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 592
-        Top = 18
-        Width = 18
-        Height = 15
+        Left = 740
+        Top = 23
+        Width = 22
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1566.333333333333000000
-          47.625000000000000000
-          47.625000000000000000)
+          48.683333333333330000
+          46.566666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -750,7 +750,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -761,15 +761,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 727
-        Top = 18
-        Width = 19
-        Height = 15
+        Left = 909
+        Top = 23
+        Width = 21
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1923.520833333333000000
-          47.625000000000000000
-          50.270833333333330000)
+          40.216666666666670000
+          1924.050000000000000000
+          48.683333333333330000
+          44.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -779,7 +779,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -790,15 +790,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object qrlblCost: TQRLabel
-        Left = 906
-        Top = 18
-        Width = 27
-        Height = 15
+        Left = 1132
+        Top = 23
+        Width = 28
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2397.125000000000000000
-          47.625000000000000000
-          71.437500000000000000)
+          40.216666666666670000
+          2396.066666666667000000
+          48.683333333333330000
+          59.266666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -808,7 +808,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -819,15 +819,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 832
-        Top = 18
-        Width = 46
-        Height = 15
+        Left = 1040
+        Top = 23
+        Width = 54
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           2201.333333333333000000
-          47.625000000000000000
-          121.708333333333300000)
+          48.683333333333330000
+          114.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -837,7 +837,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -848,15 +848,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 320
-        Top = 18
-        Width = 58
-        Height = 15
+        Left = 400
+        Top = 23
+        Width = 66
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           846.666666666666700000
-          47.625000000000000000
-          153.458333333333300000)
+          48.683333333333330000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -866,7 +866,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -877,15 +877,15 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRLabel11: TQRLabel
-        Left = 943
-        Top = 18
-        Width = 27
-        Height = 15
+        Left = 1179
+        Top = 23
+        Width = 29
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2495.020833333333000000
-          47.625000000000000000
-          71.437500000000000000)
+          40.216666666666670000
+          2495.550000000000000000
+          48.683333333333330000
+          61.383333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -895,7 +895,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -906,10 +906,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 5
-        Top = 32
-        Width = 1034
-        Height = 7
+        Left = 6
+        Top = 40
+        Width = 1293
+        Height = 9
         Size.Values = (
           18.520833333333300000
           13.229166666666700000
@@ -923,10 +923,10 @@ object StMovRepFrm: TStMovRepFrm
         VertAdjust = 0
       end
       object QRLabel1: TQRLabel
-        Left = 1006
-        Top = 2
-        Width = 40
-        Height = 31
+        Left = 1257
+        Top = 3
+        Width = 50
+        Height = 39
         Size.Values = (
           82.020833333333340000
           2661.708333333333000000
@@ -942,7 +942,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -954,30 +954,30 @@ object StMovRepFrm: TStMovRepFrm
       end
     end
     object qrbRepFooter: TQRBand
-      Left = 38
-      Top = 166
-      Width = 1047
+      Left = 47
+      Top = 207
+      Width = 1309
       Height = 32
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        2770.187500000000000000)
+        67.733333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object Group1TotalQRLabel: TQRLabel
-        Left = 752
-        Top = 8
-        Width = 65
-        Height = 17
+        Left = 940
+        Top = 10
+        Width = 78
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1989.666666666667000000
           21.166666666666670000
-          171.979166666666700000)
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -987,7 +987,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -998,10 +998,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object TotCostQRExpr: TQRExpr
-        Left = 845
-        Top = 8
-        Width = 89
-        Height = 17
+        Left = 1056
+        Top = 10
+        Width = 111
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2235.729166666667000000
@@ -1015,7 +1015,7 @@ object StMovRepFrm: TStMovRepFrm
         AutoSize = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         Color = clWhite
@@ -1030,10 +1030,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRShape3: TQRShape
-        Left = 829
-        Top = -2
-        Width = 105
-        Height = 10
+        Left = 1036
+        Top = -3
+        Width = 131
+        Height = 12
         Size.Values = (
           26.458333333333330000
           2193.395833333333000000
@@ -1048,30 +1048,30 @@ object StMovRepFrm: TStMovRepFrm
       end
     end
     object qrbRepSummary: TQRBand
-      Left = 38
-      Top = 198
-      Width = 1047
+      Left = 47
+      Top = 239
+      Width = 1309
       Height = 32
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        2770.187500000000000000)
+        67.733333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel3: TQRLabel
-        Left = 742
-        Top = 8
-        Width = 75
-        Height = 17
+        Left = 927
+        Top = 10
+        Width = 88
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1963.208333333333000000
+          44.450000000000000000
+          1962.150000000000000000
           21.166666666666670000
-          198.437500000000000000)
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1081,7 +1081,7 @@ object StMovRepFrm: TStMovRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1092,10 +1092,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRExpr1: TQRExpr
-        Left = 845
-        Top = 8
-        Width = 89
-        Height = 17
+        Left = 1056
+        Top = 10
+        Width = 111
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2235.729166666667000000
@@ -1109,7 +1109,7 @@ object StMovRepFrm: TStMovRepFrm
         AutoSize = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         Color = clWhite
@@ -1124,10 +1124,10 @@ object StMovRepFrm: TStMovRepFrm
         FontSize = 8
       end
       object QRShape2: TQRShape
-        Left = 829
-        Top = -2
-        Width = 105
-        Height = 10
+        Left = 1036
+        Top = -3
+        Width = 131
+        Height = 12
         Size.Values = (
           26.458333333333330000
           2193.395833333333000000

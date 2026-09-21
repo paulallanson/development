@@ -8,12 +8,12 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -25,47 +25,49 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
   end
   object PageControl1: TPageControl
     Left = 0
-    Top = 49
+    Top = 57
     Width = 391
-    Height = 143
+    Height = 135
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 1
+    ExplicitTop = 49
+    ExplicitHeight = 143
     object TabSheet1: TTabSheet
       Caption = 'Details'
       object Label1: TLabel
         Left = 7
         Top = 11
-        Width = 46
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Pack Size'
       end
       object QtyLabel: TLabel
         Left = 7
         Top = 43
-        Width = 44
-        Height = 13
+        Width = 48
+        Height = 17
         Caption = 'Quantity'
       end
       object CostLabel: TLabel
         Left = 7
         Top = 75
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Pack Cost'
       end
       object DiscLbl: TLabel
         Left = 191
         Top = 76
-        Width = 58
-        Height = 13
+        Width = 65
+        Height = 17
         Caption = 'Discount %'
       end
       object PackSizeEdit: TEdit
         Left = 71
         Top = 7
         Width = 89
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnEnter = ValueEditEnter
         OnExit = QtyEditExit
@@ -74,7 +76,7 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
         Left = 71
         Top = 39
         Width = 89
-        Height = 21
+        Height = 25
         TabOrder = 1
         OnEnter = ValueEditEnter
         OnExit = QtyEditExit
@@ -84,17 +86,17 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
         Left = 71
         Top = 71
         Width = 89
-        Height = 21
+        Height = 25
         TabOrder = 2
         OnChange = CostPriceEditChange
         OnEnter = ValueEditEnter
         OnExit = CostPriceEditExit
       end
       object EdtDiscount: TEdit
-        Left = 255
+        Left = 264
         Top = 71
         Width = 49
-        Height = 21
+        Height = 25
         ReadOnly = True
         TabOrder = 3
       end
@@ -114,11 +116,12 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
         Left = 0
         Top = 0
         Width = 383
-        Height = 115
+        Height = 103
         Align = alClient
         MaxLength = 255
         ScrollBars = ssVertical
         TabOrder = 0
+        ExplicitHeight = 111
       end
     end
   end
@@ -126,36 +129,36 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
     Left = 0
     Top = 0
     Width = 391
-    Height = 49
+    Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 2
     object lblPartLabel: TLabel
       Left = 7
-      Top = 8
-      Width = 26
-      Height = 13
+      Top = 4
+      Width = 30
+      Height = 17
       Caption = 'Part: '
     end
     object Label2: TLabel
       Left = 7
       Top = 28
-      Width = 62
-      Height = 13
+      Width = 69
+      Height = 17
       Caption = 'Description:'
     end
     object lblPart: TLabel
-      Left = 72
-      Top = 8
-      Width = 33
-      Height = 13
+      Left = 82
+      Top = 4
+      Width = 37
+      Height = 17
       Caption = 'lblPart'
     end
     object lblPartDesc: TLabel
-      Left = 72
+      Left = 82
       Top = 28
-      Width = 33
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'lblPart'
     end
   end
@@ -167,6 +170,8 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 183
+    ExplicitWidth = 385
     object OKBitBtn: TBitBtn
       Left = 119
       Top = 16

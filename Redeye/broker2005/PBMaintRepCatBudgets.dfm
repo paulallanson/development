@@ -7,7 +7,7 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -16,13 +16,15 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
     Top = 480
     Width = 774
     Height = 19
     Panels = <>
+    ExplicitTop = 471
+    ExplicitWidth = 768
   end
   object Panel1: TPanel
     Left = 0
@@ -32,6 +34,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 430
+    ExplicitWidth = 768
     object OKBitBtn: TBitBtn
       Left = 312
       Top = 8
@@ -80,25 +84,26 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 768
     object Label1: TLabel
       Left = 16
       Top = 14
-      Width = 69
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'Financial Year'
     end
     object Label2: TLabel
       Left = 16
       Top = 46
-      Width = 20
-      Height = 13
+      Width = 23
+      Height = 17
       Caption = 'Rep'
     end
     object edtFY: TEdit
       Left = 120
       Top = 10
       Width = 121
-      Height = 21
+      Height = 25
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 0
@@ -107,7 +112,7 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
       Left = 120
       Top = 42
       Width = 193
-      Height = 21
+      Height = 25
       KeyField = 'Rep'
       ListField = 'Name'
       ListSource = dtsReps
@@ -131,6 +136,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     OnKeyPress = grdDetailsKeyPress
     OnSelectCell = grdDetailsSelectCell
     OnTopLeftChanged = grdDetailsTopLeftChanged
+    ExplicitWidth = 768
+    ExplicitHeight = 335
     ColWidths = (
       211
       70
@@ -173,22 +180,24 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Caption = 'Panel5'
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 768
     object Label3: TLabel
       Left = 6
       Top = 3
-      Width = 46
-      Height = 13
+      Width = 53
+      Height = 17
       Caption = 'Category'
     end
     object ScrollBox1: TScrollBox
-      Left = 210
+      Left = 216
       Top = 1
-      Width = 563
+      Width = 557
       Height = 20
       VertScrollBar.Visible = False
       Align = alRight
       Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 0
+      ExplicitWidth = 551
       object StringGrid1: TStringGrid
         Left = -2
         Top = -3

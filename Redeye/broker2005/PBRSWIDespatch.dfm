@@ -3,27 +3,27 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Works Instruction Despatch Details'
-  ClientHeight = 299
-  ClientWidth = 596
+  ClientHeight = 326
+  ClientWidth = 603
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
-    Left = 440
+    Left = 450
     Top = 15
-    Width = 104
-    Height = 13
+    Width = 119
+    Height = 17
     Caption = 'From Despatch Date'
   end
   object DateFromButton: TSpeedButton
-    Left = 543
-    Top = 29
+    Left = 553
+    Top = 33
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -43,15 +43,15 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     OnClick = DateFromButtonClick
   end
   object Label2: TLabel
-    Left = 440
-    Top = 76
-    Width = 93
-    Height = 13
+    Left = 450
+    Top = 80
+    Width = 106
+    Height = 17
     Caption = 'To Despatch Date:'
   end
   object DateToButton: TSpeedButton
-    Left = 543
-    Top = 88
+    Left = 553
+    Top = 97
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -73,19 +73,19 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   object Label3: TLabel
     Left = 8
     Top = 209
-    Width = 59
-    Height = 13
+    Width = 68
+    Height = 17
     Caption = 'Sort first by'
   end
   object Label4: TLabel
     Left = 160
     Top = 209
-    Width = 62
-    Height = 13
+    Width = 70
+    Height = 17
     Caption = 'then sort by'
   end
   object pnlExportPrgrss: TPanel
-    Left = 200
+    Left = 210
     Top = 150
     Width = 289
     Height = 61
@@ -95,8 +95,8 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -109,7 +109,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     end
   end
   object OleContainer1: TOleContainer
-    Left = 452
+    Left = 462
     Top = 132
     Width = 98
     Height = 53
@@ -121,8 +121,8 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   object rgRep: TRadioGroup
     Left = 8
     Top = 72
-    Width = 100
-    Height = 60
+    Width = 115
+    Height = 65
     Caption = ' By Rep'
     ItemIndex = 0
     Items.Strings = (
@@ -133,8 +133,8 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     OnClick = rgRepClick
   end
   object pnlRep: TPanel
-    Left = 121
-    Top = 78
+    Left = 131
+    Top = 80
     Width = 304
     Height = 50
     ParentBackground = False
@@ -143,15 +143,15 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     object lblRep: TLabel
       Left = 8
       Top = 4
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 20
       Width = 257
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -172,26 +172,26 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     end
   end
   object DateFromEdit: TEdit
-    Left = 439
-    Top = 31
+    Left = 449
+    Top = 35
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 2
     OnExit = DateFromEditExit
   end
   object DateToEdit: TEdit
-    Left = 439
-    Top = 89
+    Left = 449
+    Top = 98
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 3
     OnExit = DateToEditExit
   end
   object pnlCustomer: TPanel
-    Left = 120
-    Top = 144
+    Left = 130
+    Top = 146
     Width = 305
     Height = 50
     ParentBackground = False
@@ -200,15 +200,15 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 1
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 17
       Width = 257
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -231,8 +231,8 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   object rgCustomer: TRadioGroup
     Left = 8
     Top = 136
-    Width = 100
-    Height = 60
+    Width = 114
+    Height = 65
     Caption = 'By Customer'
     ItemIndex = 0
     Items.Strings = (
@@ -244,7 +244,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   end
   object btnPrint: TBitBtn
     Left = 494
-    Top = 264
+    Top = 271
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -267,7 +267,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   end
   object btnPreview: TBitBtn
     Left = 406
-    Top = 264
+    Top = 271
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -290,7 +290,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 264
+    Top = 271
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -299,7 +299,7 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   end
   object btnExcel: TBitBtn
     Left = 317
-    Top = 264
+    Top = 271
     Width = 75
     Height = 25
     Caption = 'Excel'
@@ -351,9 +351,9 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   end
   object cbSort1: TComboBox
     Left = 8
-    Top = 223
+    Top = 228
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 10
     OnChange = cbSort1Change
@@ -367,9 +367,9 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   end
   object cbSort2: TComboBox
     Left = 160
-    Top = 223
+    Top = 228
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 11
     OnChange = cbSort1Change
@@ -384,8 +384,8 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
   object rgCourier: TRadioGroup
     Left = 8
     Top = 8
-    Width = 100
-    Height = 57
+    Width = 114
+    Height = 65
     Caption = 'By Courier'
     ItemIndex = 0
     Items.Strings = (
@@ -396,8 +396,8 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     OnClick = rgCourierClick
   end
   object pnlCourier: TPanel
-    Left = 120
-    Top = 16
+    Left = 130
+    Top = 18
     Width = 305
     Height = 50
     ParentBackground = False
@@ -406,15 +406,15 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     object Label5: TLabel
       Left = 8
       Top = 4
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Courier'
     end
     object edtCourier: TEdit
       Left = 8
       Top = 20
       Width = 257
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -435,9 +435,9 @@ object PBRSWIDespatchFrm: TPBRSWIDespatchFrm
     end
   end
   object chkbxPageBreak: TCheckBox
-    Left = 423
-    Top = 231
-    Width = 164
+    Left = 384
+    Top = 232
+    Width = 202
     Height = 17
     Caption = 'Page break by first sort type'
     TabOrder = 14

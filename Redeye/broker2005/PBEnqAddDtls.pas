@@ -1,28 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  A description of the unit here
-
-VSS Info:
-$Header: /PBL D5/PBEnqAddDtls.pas 2     11/02/:0 16:54 Paul $
-$History: PBEnqAddDtls.pas $
- * 
- * *****************  Version 2  *****************
- * User: Paul         Date: 11/02/:0   Time: 16:54
- * Updated in $/PBL D5
- * Changed to allow the selection of Additional details from a Special
- * Instructions lookup
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:41
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBEnqAddDtls;
 
 interface

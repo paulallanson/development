@@ -1,8 +1,9 @@
 object PBEnqDataModFrm: TPBEnqDataModFrm
   OnCreate = PBEnqDataModFrmCreate
   OnDestroy = PBEnqDataModFrmDestroy
-  Height = 479
-  Width = 741
+  Height = 599
+  Width = 926
+  PixelsPerInch = 120
   object EnqHeadSQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
@@ -22,8 +23,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       '(Enquiry.Branch_no = customer_Branch.Branch_no)'
       ')'
       '')
-    Left = 24
-    Top = 8
+    Left = 30
+    Top = 10
     ParamData = <
       item
         Name = 'enquiry'
@@ -53,8 +54,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       'where Enquiry = :Enquiry'
       'order by line'
       ' ')
-    Left = 24
-    Top = 56
+    Left = 30
+    Top = 70
     ParamData = <
       item
         Name = 'Enquiry'
@@ -63,8 +64,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
   end
   object EnqHeadSRC: TDataSource
     DataSet = EnqHeadSQL
-    Left = 120
-    Top = 8
+    Left = 150
+    Top = 10
   end
   object EnqLineQtySQL: TFDQuery
     MasterSource = EnqLineSRC
@@ -74,8 +75,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       'from Enquiry_LineQuantity'
       'where (Enquiry = :Enquiry) AND'
       '(Line = :Line)')
-    Left = 24
-    Top = 104
+    Left = 30
+    Top = 130
     ParamData = <
       item
         Name = 'Enquiry'
@@ -103,8 +104,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       ') AND'
       '(Enquiry = :Enquiry) AND'
       '(Line = :Line)')
-    Left = 24
-    Top = 152
+    Left = 30
+    Top = 190
     ParamData = <
       item
         Name = 'Enquiry'
@@ -124,8 +125,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       'where (enquiry = :enquiry) AND'
       '(Line = :Line)'
       'order by Additional_Details')
-    Left = 24
-    Top = 200
+    Left = 30
+    Top = 250
     ParamData = <
       item
         Name = 'enquiry'
@@ -143,8 +144,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       'from EnquiryLinePart_Detail'
       'where (Enquiry = :Enquiry) AND'
       '(Line = :Line)')
-    Left = 24
-    Top = 248
+    Left = 30
+    Top = 310
     ParamData = <
       item
         Name = 'Enquiry'
@@ -172,8 +173,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       ') AND'
       '(enquiry = :Enquiry) AND'
       '(Line = :Line)')
-    Left = 24
-    Top = 296
+    Left = 30
+    Top = 370
     ParamData = <
       item
         Name = 'Enquiry'
@@ -186,33 +187,33 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
   end
   object EnqLineSRC: TDataSource
     DataSet = EnqLineSQL
-    Left = 120
-    Top = 56
+    Left = 150
+    Top = 70
   end
   object EnqLineQtySRC: TDataSource
     DataSet = EnqLineQtySQL
-    Left = 120
-    Top = 104
+    Left = 150
+    Top = 130
   end
   object EnqLineQSRC: TDataSource
     DataSet = EnqLineQSQL
-    Left = 120
-    Top = 152
+    Left = 150
+    Top = 190
   end
   object EnqLineAddSRC: TDataSource
     DataSet = EnqLineAddSQL
-    Left = 120
-    Top = 200
+    Left = 150
+    Top = 250
   end
   object EnqLinePartSRC: TDataSource
     DataSet = EnqLinePartSQL
-    Left = 120
-    Top = 248
+    Left = 150
+    Top = 310
   end
   object EnqLineCapSRC: TDataSource
     DataSet = EnqLineCapSQL
-    Left = 120
-    Top = 296
+    Left = 150
+    Top = 370
   end
   object EnqLineSuppSQL: TFDQuery
     MasterSource = EnqLineSRC
@@ -256,8 +257,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       '(Line = :Line)'
       ''
       ' ')
-    Left = 24
-    Top = 344
+    Left = 30
+    Top = 430
     ParamData = <
       item
         Name = 'Enquiry'
@@ -270,8 +271,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
   end
   object EnqLineSuppSRC: TDataSource
     DataSet = EnqLineSuppSQL
-    Left = 120
-    Top = 344
+    Left = 150
+    Top = 430
   end
   object OldEnqLineSQL: TFDQuery
     MasterSource = EnqHeadSRC
@@ -293,8 +294,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       'order by line'
       ' '
       ' ')
-    Left = 208
-    Top = 8
+    Left = 260
+    Top = 10
     ParamData = <
       item
         Name = 'Enquiry'
@@ -318,8 +319,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       ') AND'
       '(enquiry = :Enquiry) AND'
       '(Line = :Line)')
-    Left = 208
-    Top = 296
+    Left = 260
+    Top = 370
     ParamData = <
       item
         Name = 'Enquiry'
@@ -332,16 +333,16 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
   end
   object DataSource1: TDataSource
     DataSet = EnqLineOptSQL
-    Left = 264
-    Top = 296
+    Left = 330
+    Top = 370
   end
   object qryDelEnqLineDocs: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'delete from EnquiryLineDocs'
       'where enquiry = :enquiry')
-    Left = 300
-    Top = 12
+    Left = 375
+    Top = 15
     ParamData = <
       item
         Name = 'enquiry'
@@ -356,8 +357,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       '(Enquiry, Line, Document_no, Document_Title, Document)'
       'values'
       '(:Enquiry, :Line, :Document_no, :Document_Title, :Document)')
-    Left = 300
-    Top = 56
+    Left = 375
+    Top = 70
     ParamData = <
       item
         Name = 'Enquiry'
@@ -381,8 +382,8 @@ object PBEnqDataModFrm: TPBEnqDataModFrm
       'select * from EnquiryLineDocs '
       'where enquiry = :enquiry and line = :line '
       'order by document_no')
-    Left = 300
-    Top = 100
+    Left = 375
+    Top = 125
     ParamData = <
       item
         Name = 'enquiry'

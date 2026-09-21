@@ -3,22 +3,22 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
   Top = 192
   BorderStyle = bsDialog
   Caption = 'Products Suppliers Report'
-  ClientHeight = 181
-  ClientWidth = 445
+  ClientHeight = 206
+  ClientWidth = 488
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object PreviewBitBTn: TBitBtn
-    Left = 265
-    Top = 136
+    Left = 295
+    Top = 149
     Width = 80
     Height = 27
     Caption = 'Pre&view'
@@ -42,7 +42,7 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
   object SelectionType: TRadioGroup
     Left = 280
     Top = 16
-    Width = 161
+    Width = 185
     Height = 105
     Caption = 'Report Selection'
     ItemIndex = 0
@@ -55,8 +55,8 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     TabOrder = 1
   end
   object PrintBitBtn: TBitBtn
-    Left = 353
-    Top = 136
+    Left = 383
+    Top = 149
     Width = 80
     Height = 27
     Caption = '&Print'
@@ -79,7 +79,7 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
   end
   object BitBtn3: TBitBtn
     Left = 9
-    Top = 136
+    Top = 149
     Width = 80
     Height = 27
     Caption = '&Cancel'
@@ -98,22 +98,22 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     object Label1: TLabel
       Left = 16
       Top = 40
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label2: TLabel
       Left = 33
       Top = 72
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtPartFrom: TEdit
       Left = 56
       Top = 32
       Width = 169
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtPartFromChange
@@ -122,7 +122,7 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
       Left = 56
       Top = 64
       Width = 169
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
     end

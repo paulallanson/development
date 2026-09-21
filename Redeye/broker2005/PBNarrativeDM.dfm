@@ -1,6 +1,7 @@
 object dmNarrative: TdmNarrative
-  Height = 540
-  Width = 443
+  Height = 675
+  Width = 554
+  PixelsPerInch = 120
   object qryReserveSlot: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
@@ -11,8 +12,8 @@ object dmNarrative: TdmNarrative
       '  SELECT MAX(Narrative)+1, 1, :GUID, '#39'N'#39' FROM Narrative_Line'
       ' '
       ' ')
-    Left = 56
-    Top = 16
+    Left = 70
+    Top = 20
     ParamData = <
       item
         Name = 'GUID'
@@ -25,8 +26,8 @@ object dmNarrative: TdmNarrative
     SQL.Strings = (
       'SELECT * FROM narrative_line '
       'WHERE narrative_Text = :GUID')
-    Left = 56
-    Top = 72
+    Left = 70
+    Top = 90
     ParamData = <
       item
         Name = 'GUID'
@@ -36,8 +37,8 @@ object dmNarrative: TdmNarrative
     ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Narrative_Line WHERE Narrative = :Narrative')
-    Left = 56
-    Top = 128
+    Left = 70
+    Top = 160
     ParamData = <
       item
         Name = 'Narrative'
@@ -51,8 +52,8 @@ object dmNarrative: TdmNarrative
       'UPDATE Narrative_Line'
       'SET Narrative_Text = :Text, Narrative_Line_Updated = :Updated'
       'WHERE Narrative = :Narrative AND Narrative_Line = 1')
-    Left = 56
-    Top = 184
+    Left = 70
+    Top = 230
     ParamData = <
       item
         Name = 'Text'
@@ -79,8 +80,8 @@ object dmNarrative: TdmNarrative
         'ed)'
       'VALUES'
       '(:Narrative, :Line, :Text, :Updated)')
-    Left = 56
-    Top = 240
+    Left = 70
+    Top = 300
     ParamData = <
       item
         Name = 'Narrative'
@@ -109,8 +110,8 @@ object dmNarrative: TdmNarrative
       'SELECT * FROM Narrative_Line'
       'WHERE Narrative = :Narrative'
       'order by Narrative_Line')
-    Left = 56
-    Top = 296
+    Left = 70
+    Top = 370
     ParamData = <
       item
         Name = 'Narrative'
@@ -120,7 +121,7 @@ object dmNarrative: TdmNarrative
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
-    Left = 160
-    Top = 16
+    Left = 200
+    Top = 20
   end
 end

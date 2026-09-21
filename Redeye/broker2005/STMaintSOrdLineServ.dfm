@@ -4,24 +4,25 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
   BorderStyle = bsDialog
   Caption = 'Maintain Sales Order Service item'
   ClientHeight = 213
-  ClientWidth = 722
+  ClientWidth = 742
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object pnlproduct: TPanel
     Left = 0
     Top = 0
-    Width = 722
+    Width = 742
     Height = 49
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 716
     object Label1: TLabel
       Left = 8
       Top = 19
@@ -69,7 +70,7 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
     object DescriptionEdit: TEdit
       Left = 352
       Top = 15
-      Width = 361
+      Width = 371
       Height = 21
       TabStop = False
       Color = clInfoBk
@@ -87,31 +88,33 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
   object pnlFunctions: TPanel
     Left = 0
     Top = 162
-    Width = 722
+    Width = 742
     Height = 51
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     TabStop = True
+    ExplicitTop = 153
+    ExplicitWidth = 716
     DesignSize = (
-      722
+      742
       51)
     object DelLabel: TLabel
-      Left = 398
-      Top = 28
-      Width = 145
-      Height = 15
+      Left = 412
+      Top = 22
+      Width = 166
+      Height = 16
       Anchors = [akRight, akBottom]
       Caption = 'Delete the above details ?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -12
+      Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object OKBtn: TBitBtn
-      Left = 558
+      Left = 572
       Top = 18
       Width = 75
       Height = 25
@@ -121,7 +124,7 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -145,86 +148,90 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
       ParentFont = False
       TabOrder = 0
       OnClick = OKBtnClick
+      ExplicitLeft = 546
     end
     object CancelBtn: TBitBtn
-      Left = 638
+      Left = 652
       Top = 18
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
+      ExplicitLeft = 626
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 49
-    Width = 722
+    Width = 742
     Height = 113
     Align = alClient
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 716
+    ExplicitHeight = 104
     object Label2: TLabel
       Left = 8
       Top = 13
-      Width = 50
-      Height = 13
+      Width = 58
+      Height = 17
       Caption = 'Cost Price'
     end
     object Label3: TLabel
       Left = 8
       Top = 45
-      Width = 45
-      Height = 13
+      Width = 52
+      Height = 17
       Caption = 'Sell Price'
     end
     object Label4: TLabel
       Left = 8
       Top = 84
-      Width = 44
-      Height = 13
+      Width = 48
+      Height = 17
       Caption = 'Quantity'
     end
     object Label5: TLabel
       Left = 312
       Top = 12
-      Width = 80
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'Cost Uplift type'
     end
     object Label6: TLabel
-      Left = 568
+      Left = 578
       Top = 12
-      Width = 60
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Uplift Value'
     end
     object Label7: TLabel
       Left = 168
       Top = 13
-      Width = 47
-      Height = 13
+      Width = 51
+      Height = 17
       Caption = 'Cost unit'
     end
     object Label8: TLabel
       Left = 168
       Top = 45
-      Width = 42
-      Height = 13
+      Width = 45
+      Height = 17
       Caption = 'Sell unit'
     end
     object QtyEdit: TEdit
       Left = 86
       Top = 80
       Width = 75
-      Height = 21
+      Height = 25
       TabOrder = 6
       OnChange = QtyEditChange
     end
@@ -297,17 +304,17 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
       WantReturns = False
     end
     object dblkpMarkupType: TDBLookupComboBox
-      Left = 400
+      Left = 410
       Top = 8
       Width = 153
-      Height = 21
+      Height = 25
       KeyField = 'Markup_type'
       ListField = 'Markup_Description'
       ListSource = STSalesOrdDM.srcMarkup
       TabOrder = 2
     end
     object MarkupValueMemo: TMemo
-      Left = 638
+      Left = 648
       Top = 9
       Width = 75
       Height = 23

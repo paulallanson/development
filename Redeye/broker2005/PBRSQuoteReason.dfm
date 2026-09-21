@@ -3,26 +3,27 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
   Top = 137
   BorderStyle = bsDialog
   Caption = 'Reason Quote Lost Report'
-  ClientHeight = 276
-  ClientWidth = 595
+  ClientHeight = 304
+  ClientWidth = 634
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    595
-    276)
-  TextHeight = 13
+    634
+    304)
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
-    Left = 509
-    Top = 246
+    Left = 534
+    Top = 255
     Width = 75
     Height = 25
+    Anchors = [akTop, akRight]
     Caption = 'Print'
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
@@ -42,10 +43,11 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 420
-    Top = 246
+    Left = 445
+    Top = 255
     Width = 75
     Height = 25
+    Anchors = [akTop, akRight]
     Caption = 'Preview'
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
@@ -75,15 +77,15 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -105,7 +107,7 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 246
+    Top = 255
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -123,22 +125,22 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'To: '
     end
     object edtDateFrom: TEdit
       Left = 48
       Top = 24
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtDateFromExit
     end
@@ -168,7 +170,7 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
       Left = 48
       Top = 56
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtDateToExit
     end
@@ -196,8 +198,8 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
     end
   end
   object rdgrpRep: TRadioGroup
-    Left = 5
-    Top = 8
+    Left = 4
+    Top = 6
     Width = 129
     Height = 65
     Caption = 'Rep'
@@ -220,15 +222,15 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtCustChange
     end
@@ -265,7 +267,7 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
   object TotByRadioGroup: TRadioGroup
     Left = 480
     Top = 8
-    Width = 105
+    Width = 129
     Height = 81
     Caption = 'Report Totals'
     ItemIndex = 2
@@ -280,7 +282,7 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
   object chkbxPageBreak: TCheckBox
     Left = 480
     Top = 99
-    Width = 118
+    Width = 162
     Height = 17
     Caption = 'Page break by total'
     Enabled = False
@@ -297,8 +299,8 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -321,8 +323,8 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
     Visible = False
   end
   object btnExcel: TBitBtn
-    Left = 316
-    Top = 246
+    Left = 355
+    Top = 255
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
@@ -376,8 +378,8 @@ object PBRSQuoteReasonFrm: TPBRSQuoteReasonFrm
   object rdgrpReportType: TRadioGroup
     Left = 480
     Top = 124
-    Width = 105
-    Height = 61
+    Width = 129
+    Height = 65
     Caption = 'Report type'
     ItemIndex = 0
     Items.Strings = (

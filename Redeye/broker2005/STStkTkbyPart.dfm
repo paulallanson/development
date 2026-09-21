@@ -2,14 +2,14 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   Left = 4
   Top = 76
   Caption = 'Enter Stock Count Details '
-  ClientHeight = 427
-  ClientWidth = 774
+  ClientHeight = 449
+  ClientWidth = 794
   Color = clBtnFace
   Constraints.MinHeight = 466
   Constraints.MinWidth = 790
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -18,25 +18,26 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 774
+    Width = 794
     Height = 41
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 772
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 120
-      Height = 13
+      Width = 135
+      Height = 17
       Caption = 'Stock Count Reference '
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -44,12 +45,12 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object Label2: TLabel
       Left = 288
       Top = 8
-      Width = 30
-      Height = 13
+      Width = 34
+      Height = 17
       Caption = 'Store:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -57,29 +58,31 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object StoreNameLbl: TLabel
       Left = 336
       Top = 8
-      Width = 71
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'StoreNameLbl'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
   end
   object Panel2: TPanel
-    Left = 688
+    Left = 708
     Top = 41
     Width = 86
-    Height = 367
+    Height = 389
     Align = alRight
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 686
+    ExplicitHeight = 359
     DesignSize = (
       86
-      367)
+      389)
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 8
@@ -89,7 +92,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Caption = '&Add'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -119,7 +122,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Caption = '&Change'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -149,7 +152,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Caption = '&Delete'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -173,14 +176,14 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     end
     object ConfirmBtn: TBitBtn
       Left = 6
-      Top = 300
+      Top = 321
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'C&onfirm'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -204,29 +207,31 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       ParentFont = False
       TabOrder = 3
       OnClick = ConfirmBtnClick
+      ExplicitTop = 291
     end
     object BitBtn2: TBitBtn
       Left = 6
-      Top = 332
+      Top = 353
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Ca&ncel'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Kind = bkCancel
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 4
+      ExplicitTop = 323
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 408
-    Width = 774
+    Top = 430
+    Width = 794
     Height = 19
     Panels = <
       item
@@ -235,45 +240,51 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       item
         Width = 50
       end>
+    ExplicitTop = 400
+    ExplicitWidth = 772
   end
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 688
-    Height = 367
+    Width = 708
+    Height = 389
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel3'
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 686
+    ExplicitHeight = 359
     object Panel4: TPanel
       Left = 0
-      Top = 326
-      Width = 688
+      Top = 348
+      Width = 708
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 318
+      ExplicitWidth = 686
       object Label3: TLabel
         Left = 5
         Top = 15
-        Width = 55
-        Height = 13
+        Width = 62
+        Height = 17
         Caption = 'Import File'
       end
       object edtFile: TEdit
-        Left = 61
-        Top = 11
+        Left = 72
+        Top = 8
         Width = 345
-        Height = 21
+        Height = 25
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 0
         OnChange = edtFileChange
       end
       object btnBrowse: TBitBtn
-        Left = 416
+        Left = 427
         Top = 8
         Width = 75
         Height = 25
@@ -282,7 +293,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
         OnClick = btnBrowseClick
       end
       object btnImport: TBitBtn
-        Left = 504
+        Left = 515
         Top = 8
         Width = 75
         Height = 25
@@ -294,8 +305,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object CountGrid: TStringGrid
       Left = 0
       Top = 0
-      Width = 688
-      Height = 326
+      Width = 708
+      Height = 348
       Align = alClient
       ColCount = 7
       DefaultColWidth = 60
@@ -305,7 +316,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       RowCount = 2
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect, goThumbTracking]
@@ -317,6 +328,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       OnDblClick = CountGridDblClick
       OnDrawCell = CountGridDrawCell
       OnSelectCell = CountGridSelectCell
+      ExplicitWidth = 686
+      ExplicitHeight = 318
       ColWidths = (
         89
         138

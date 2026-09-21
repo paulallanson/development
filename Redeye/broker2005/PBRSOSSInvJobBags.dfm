@@ -2,28 +2,28 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
   Left = 293
   Top = 193
   Caption = 'Oustanding Job Bag Invoicing Report'
-  ClientHeight = 216
-  ClientWidth = 619
+  ClientHeight = 234
+  ClientWidth = 668
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 156
-    Width = 36
-    Height = 13
+    Width = 42
+    Height = 17
     Caption = 'Sort by'
   end
   object PrintBitBtn: TBitBtn
-    Left = 536
-    Top = 184
+    Left = 560
+    Top = 193
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -31,8 +31,8 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 448
-    Top = 184
+    Left = 472
+    Top = 193
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -50,15 +50,15 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -80,7 +80,7 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 184
+    Top = 193
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -112,15 +112,15 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -158,7 +158,7 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
     Left = 56
     Top = 152
     Width = 145
-    Height = 21
+    Height = 25
     Style = csDropDownList
     TabOrder = 7
     OnChange = cmboSortChange
@@ -179,7 +179,7 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
   object chkbxIncludePOs: TCheckBox
     Left = 464
     Top = 16
-    Width = 145
+    Width = 193
     Height = 17
     Caption = 'Include Purchase Orders'
     Checked = True
@@ -189,7 +189,7 @@ object PBRSOSSInvJobBagsFrm: TPBRSOSSInvJobBagsFrm
   object chkbxIncludeNotReady: TCheckBox
     Left = 464
     Top = 48
-    Width = 153
+    Width = 193
     Height = 17
     Caption = 'Show Job bags not ready'
     TabOrder = 10

@@ -19,7 +19,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
     400)
   TextHeight = 17
   object CountLabel: TLabel
-    Left = 265
+    Left = 262
     Top = 274
     Width = 65
     Height = 17
@@ -31,7 +31,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
   object DetsDBGrid: TDBGrid
     Left = 8
     Top = 8
-    Width = 322
+    Width = 316
     Height = 260
     Anchors = [akLeft, akTop, akRight]
     DataSource = DetsSRC
@@ -68,7 +68,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
       end>
   end
   object SelectBitBtn: TBitBtn
-    Left = 372
+    Left = 367
     Top = 337
     Width = 75
     Height = 25
@@ -142,9 +142,11 @@ object PBLUOpsFrm: TPBLUOpsFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = SelectBitBtnClick
+    ExplicitLeft = 362
+    ExplicitTop = 328
   end
   object CloseBitBtn: TBitBtn
-    Left = 372
+    Left = 367
     Top = 365
     Width = 75
     Height = 25
@@ -152,9 +154,11 @@ object PBLUOpsFrm: TPBLUOpsFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitLeft = 362
+    ExplicitTop = 356
   end
   object FuncGrpBox: TGroupBox
-    Left = 364
+    Left = 358
     Top = 132
     Width = 90
     Height = 132
@@ -162,7 +166,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 368
+    ExplicitLeft = 352
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 24
@@ -234,7 +238,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
     end
   end
   object grpbxReport: TGroupBox
-    Left = 364
+    Left = 358
     Top = 8
     Width = 90
     Height = 89
@@ -242,7 +246,7 @@ object PBLUOpsFrm: TPBLUOpsFrm
     Caption = 'Report'
     ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 368
+    ExplicitLeft = 352
     object btbtnPreview: TBitBtn
       Left = 8
       Top = 20

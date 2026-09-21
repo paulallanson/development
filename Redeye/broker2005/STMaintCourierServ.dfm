@@ -8,7 +8,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
@@ -16,7 +16,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
   DesignSize = (
     470
     240)
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 128
     Top = 208
@@ -108,6 +108,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
+    ExplicitTop = 194
   end
   object CancelBitBtn: TBitBtn
     Left = 368
@@ -184,6 +185,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 194
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -193,7 +195,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -202,19 +204,19 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     object Label1: TLabel
       Left = 16
       Top = 28
-      Width = 38
-      Height = 13
+      Width = 43
+      Height = 17
       Caption = 'Courier'
     end
     object Label6: TLabel
       Left = 16
       Top = 92
-      Width = 90
-      Height = 13
+      Width = 101
+      Height = 17
       Caption = 'Short Description'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
@@ -222,22 +224,22 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
     object Label8: TLabel
       Left = 16
       Top = 60
-      Width = 59
-      Height = 13
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object lblServiceCode: TLabel
       Left = 16
       Top = 124
-      Width = 65
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Service Code'
     end
     object edtCourrierName: TEdit
-      Left = 120
+      Left = 124
       Top = 24
       Width = 226
-      Height = 21
+      Height = 25
       Color = clBtnFace
       Enabled = False
       MaxLength = 40
@@ -248,10 +250,10 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       Text = 'edtCourrierName'
     end
     object edtDescShort: TEdit
-      Left = 120
+      Left = 124
       Top = 88
       Width = 129
-      Height = 21
+      Height = 25
       MaxLength = 20
       ParentShowHint = False
       ShowHint = True
@@ -259,28 +261,28 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       OnChange = edtDescShortChange
     end
     object edtDesc: TEdit
-      Left = 120
+      Left = 124
       Top = 56
       Width = 313
-      Height = 21
+      Height = 25
       MaxLength = 30
       TabOrder = 1
       Text = 'edtDesc'
       OnChange = edtDescChange
     end
     object edtServiceCode: TEdit
-      Left = 120
+      Left = 124
       Top = 120
       Width = 129
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 3
       OnChange = edtServiceCodeChange
     end
     object chkbxDeferred: TCheckBox
-      Left = 320
+      Left = 314
       Top = 122
-      Width = 113
+      Width = 127
       Height = 17
       Caption = 'Deferred Service'
       TabOrder = 4
@@ -313,7 +315,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       '   :Deferred_Service,'
       '   :inactive)'
       ' ')
-    Left = 264
+    Left = 330
     Top = 32
     ParamData = <
       item
@@ -351,7 +353,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       'Where courier = :courier and'
       ' service_no = :service_no;'
       ' ')
-    Left = 296
+    Left = 370
     Top = 32
     ParamData = <
       item
@@ -382,7 +384,7 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       'Delete From courier_service '
       'where courier = :courier and '
       '  service_no = :service_no;')
-    Left = 328
+    Left = 410
     Top = 32
     ParamData = <
       item
@@ -398,8 +400,8 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       'select max (service_no) as max_serv_no '
       'from courier_service '
       'where courier = :courier;')
-    Left = 416
-    Top = 28
+    Left = 296
+    Top = 27
     ParamData = <
       item
         Name = 'courier'

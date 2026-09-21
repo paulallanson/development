@@ -1,27 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999-2000
-
-Comments
---------
-  Export to accounts package.
-
-VSS Info:
-$Header: /PBL D5/PBAccExport2.pas 5     8/09/:0 16:43 Paul $
-$History: PBAccExport2.pas $
- * 
- * *****************  Version 5  *****************
- * User: Paul         Date: 8/09/:0    Time: 16:43
- * Updated in $/PBL D5
- * Added functionality to import Sage Customer/Supplier/Currency
- * information
- * 
- * *****************  Version 4  *****************
- * User: Roddym       Date: 21/03/:0   Time: 15:05
- * Updated in $/PBL D5
- * Add standard header to new units.
-
-*******************************************************************************)
 unit PBAccExport2;
 
 interface

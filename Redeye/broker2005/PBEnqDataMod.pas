@@ -1,32 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  A description of the unit here
-
-VSS Info:
-$Header: /PBL D5/PBEnqDataMod.pas 3     23/12/:2 16:27 Paul $
-$History: PBEnqDataMod.pas $
- * 
- * *****************  Version 3  *****************
- * User: Paul         Date: 23/12/:2   Time: 16:27
- * Updated in $/PBL D5
- * Added the Optional Charges selection
- * 
- * *****************  Version 2  *****************
- * User: Paul         Date: 16/02/:0   Time: 13:29
- * Updated in $/PBL D5
- * Changed to correct the Enquiry Line SQL for Access database version
- * 
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:41
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBEnqDataMod;
 
 interface

@@ -3,17 +3,17 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
   Top = 113
   BorderStyle = bsDialog
   Caption = 'Job Bag Overs Report'
-  ClientHeight = 236
-  ClientWidth = 441
+  ClientHeight = 247
+  ClientWidth = 463
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object btnExcel: TBitBtn
     Left = 184
     Top = 203
@@ -77,22 +77,22 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'To: '
     end
     object edtDateFrom: TEdit
       Left = 48
       Top = 24
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtDateFromExit
     end
@@ -122,7 +122,7 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
       Left = 48
       Top = 56
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtDateToExit
     end
@@ -229,15 +229,15 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     object Label3: TLabel
       Left = 8
       Top = 8
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 233
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -258,8 +258,8 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     end
   end
   object pnlExportPrgrss: TPanel
-    Left = 102
-    Top = 68
+    Left = 103
+    Top = 74
     Width = 289
     Height = 61
     ParentBackground = False
@@ -268,22 +268,22 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
       Left = 16
       Top = 32
       Width = 257
-      Height = 16
+      Height = 22
       Step = 1
       TabOrder = 0
     end
   end
   object OleContainer1: TOleContainer
-    Left = 326
-    Top = 88
+    Left = 188
+    Top = 50
     Width = 129
     Height = 89
     Caption = 'OleContainer1'
@@ -294,7 +294,7 @@ object PBRSJobBagOversFrm: TPBRSJobBagOversFrm
   object chkbxPageBreak: TCheckBox
     Left = 208
     Top = 160
-    Width = 145
+    Width = 183
     Height = 17
     Caption = 'Page break by Customer'
     Checked = True

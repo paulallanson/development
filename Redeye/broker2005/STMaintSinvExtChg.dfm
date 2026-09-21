@@ -3,49 +3,49 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
   Top = 196
   BorderStyle = bsDialog
   Caption = 'Maintain Sales Invoice Extra Charges'
-  ClientHeight = 182
+  ClientHeight = 208
   ClientWidth = 402
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 72
-    Top = 157
-    Width = 145
-    Height = 15
+    Left = 70
+    Top = 173
+    Width = 166
+    Height = 16
     Caption = 'Delete the above details ?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 24
-    Top = 96
-    Width = 51
-    Height = 13
+    Left = 166
+    Top = 4
+    Width = 58
+    Height = 17
     Caption = 'Reference'
   end
   object SOrdLabel: TLabel
     Left = 8
-    Top = 0
-    Width = 53
-    Height = 13
+    Top = 4
+    Width = 61
+    Height = 17
     Caption = 'SOrdLabel'
   end
   object OKBitBtn: TBitBtn
-    Left = 232
-    Top = 152
+    Left = 230
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -120,8 +120,8 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 320
-    Top = 152
+    Left = 318
+    Top = 168
     Width = 75
     Height = 25
     Cancel = True
@@ -197,13 +197,13 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
   end
   object DetsGrpBox: TGroupBox
     Left = 8
-    Top = 20
+    Top = 29
     Width = 385
     Height = 117
     Caption = 'Details'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
@@ -212,29 +212,29 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
     object Label9: TLabel
       Left = 16
       Top = 28
-      Width = 30
-      Height = 13
+      Width = 33
+      Height = 17
       Caption = 'Detail'
     end
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 24
-      Height = 13
+      Width = 28
+      Height = 17
       Caption = 'Price'
     end
     object Label5: TLabel
-      Left = 8
+      Left = 16
       Top = 94
-      Width = 48
-      Height = 13
+      Width = 56
+      Height = 17
       Caption = 'VAT Code'
     end
     object LblCst: TLabel
       Left = 224
       Top = 60
-      Width = 23
-      Height = 13
+      Width = 26
+      Height = 17
       Caption = 'Cost'
       Visible = False
     end
@@ -254,7 +254,7 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
       Left = 76
       Top = 86
       Width = 161
-      Height = 21
+      Height = 25
       KeyField = 'Vat_Code'
       ListField = 'Description'
       ListSource = VATsDataSource
@@ -278,7 +278,7 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
       Left = 76
       Top = 24
       Width = 249
-      Height = 21
+      Height = 25
       TabOrder = 3
       OnClick = cmbbxAddChrgClick
     end
@@ -300,8 +300,8 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
   end
   object VATsDataSource: TDataSource
     DataSet = GetVatsQuery
-    Left = 108
-    Top = 120
+    Left = 229
+    Top = 54
   end
   object GetVatsQuery: TFDQuery
     ConnectionName = 'PB'
@@ -309,14 +309,15 @@ object STMaintSInvExtChgFrm: TSTMaintSInvExtChgFrm
       'Select * From VAT_Code'
       'Order By VAT_Code'
       ' ')
-    Left = 76
-    Top = 120
+    Left = 189
+    Top = 54
   end
   object qryAddChrgs: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from additional_charge'
       'order by details')
-    Left = 320
+    Left = 336
+    Top = 32
   end
 end

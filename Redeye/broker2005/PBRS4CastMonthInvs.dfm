@@ -2,29 +2,29 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
   Left = 374
   Top = 158
   Caption = 'Current Period Anticipated Invoicing Report'
-  ClientHeight = 231
-  ClientWidth = 514
+  ClientHeight = 257
+  ClientWidth = 555
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
-    Left = 63
-    Top = 19
-    Width = 93
-    Height = 13
+    Left = 15
+    Top = 9
+    Width = 106
+    Height = 17
     Caption = 'Delivery due after:'
   end
   object DateFromButton: TSpeedButton
-    Left = 176
-    Top = 30
+    Left = 128
+    Top = 28
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -44,15 +44,15 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     OnClick = DateFromButtonClick
   end
   object Label2: TLabel
-    Left = 63
-    Top = 64
-    Width = 103
-    Height = 13
+    Left = 15
+    Top = 55
+    Width = 118
+    Height = 17
     Caption = 'Delivery due before:'
   end
   object DateToButton: TSpeedButton
-    Left = 176
-    Top = 75
+    Left = 128
+    Top = 73
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -72,17 +72,17 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     OnClick = DateToButtonClick
   end
   object lblProcessing: TLabel
-    Left = 64
-    Top = 152
-    Width = 55
-    Height = 13
+    Left = 16
+    Top = 148
+    Width = 63
+    Height = 17
     Caption = 'Processing'
   end
   object TotByRadioGroup: TRadioGroup
-    Left = 225
-    Top = 12
-    Width = 136
-    Height = 104
+    Left = 177
+    Top = 8
+    Width = 160
+    Height = 117
     Caption = 'Report Totals'
     ItemIndex = 0
     Items.Strings = (
@@ -94,30 +94,30 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     TabOrder = 0
   end
   object DateFromEdit: TEdit
-    Left = 63
-    Top = 32
+    Left = 15
+    Top = 28
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 1
     OnChange = DateFromEditChange
     OnExit = DateFromEditExit
   end
   object DateToEdit: TEdit
-    Left = 63
-    Top = 77
+    Left = 15
+    Top = 73
     Width = 98
-    Height = 21
+    Height = 25
     MaxLength = 10
     TabOrder = 2
     OnChange = DateToEditChange
     OnExit = DateToEditExit
   end
   object rdgrpReportType: TRadioGroup
-    Left = 369
-    Top = 12
+    Left = 361
+    Top = 4
     Width = 113
-    Height = 61
+    Height = 71
     Caption = 'Report type'
     ItemIndex = 0
     Items.Strings = (
@@ -127,8 +127,8 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     TabOrder = 3
   end
   object PreviewBitBtn: TBitBtn
-    Left = 68
-    Top = 200
+    Left = 20
+    Top = 212
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -150,8 +150,8 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 161
-    Top = 200
+    Left = 113
+    Top = 212
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -173,8 +173,8 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     OnClick = PrintBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 310
-    Top = 200
+    Left = 262
+    Top = 212
     Width = 75
     Height = 25
     Caption = '&Close'
@@ -183,25 +183,25 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     OnClick = CancelBitBtnClick
   end
   object prgrsbrPeriodEnd: TProgressBar
-    Left = 64
-    Top = 168
+    Left = 16
+    Top = 164
     Width = 265
-    Height = 18
+    Height = 22
     TabOrder = 7
   end
   object ExcOnHoldCheckBox: TCheckBox
-    Left = 369
-    Top = 79
-    Width = 128
+    Left = 361
+    Top = 81
+    Width = 168
     Height = 17
     Caption = 'Exclude on hold items'
     TabOrder = 8
     OnClick = chkbxincludezeroClick
   end
   object chkbxincludezero: TCheckBox
-    Left = 369
-    Top = 100
-    Width = 144
+    Left = 361
+    Top = 102
+    Width = 182
     Height = 17
     Hint = 'Show zero sales values for confirmed deliveries'
     Caption = 'Include zero sales values'
@@ -211,9 +211,9 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     OnClick = chkbxincludezeroClick
   end
   object chkbxExcludeInvoices: TCheckBox
-    Left = 369
-    Top = 120
-    Width = 144
+    Left = 361
+    Top = 122
+    Width = 182
     Height = 17
     Hint = 'Show zero sales values for confirmed deliveries'
     Caption = 'Exclude Current Invoices'
@@ -228,8 +228,8 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
       'select *'
       'from Period'
       'where Period = :Period')
-    Left = 408
-    Top = 128
+    Left = 310
+    Top = 24
     ParamData = <
       item
         Name = 'Period'
@@ -237,16 +237,16 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
   end
   object qrySalesProfit: TFDQuery
     ConnectionName = 'PB'
-    Left = 472
-    Top = 184
+    Left = 318
+    Top = 94
   end
   object qryDeleteAnalysis: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
       'Delete from Analysis'
       'where Operator = :Operator')
-    Left = 408
-    Top = 184
+    Left = 246
+    Top = 94
     ParamData = <
       item
         Name = 'Operator'
@@ -257,7 +257,7 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     SQL.Strings = (
       'select Max(Operator)+1 as Operator'
       'from Analysis')
-    Left = 472
-    Top = 128
+    Left = 246
+    Top = 24
   end
 end

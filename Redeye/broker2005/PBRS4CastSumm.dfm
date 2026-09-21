@@ -8,17 +8,17 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 160
     Top = 96
-    Width = 73
-    Height = 13
+    Width = 84
+    Height = 17
     Caption = 'Forecast from:'
   end
   object RadioGroup1: TRadioGroup
@@ -78,15 +78,15 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     object lblCustBran: TLabel
       Left = 8
       Top = 8
-      Width = 52
-      Height = 13
+      Width = 62
+      Height = 17
       Caption = 'Rep Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -110,7 +110,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     Left = 160
     Top = 112
     Width = 121
-    Height = 21
+    Height = 25
     TabOrder = 5
     OnChange = DateFromEditChange
     OnExit = DateFromEditExit
@@ -191,7 +191,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
       ')'
       'ORDER BY Purchase_OrderLine.Rep, Delivery_Detail.Date_Point'
       ' ')
-    Left = 384
-    Top = 96
+    Left = 360
+    Top = 80
   end
 end

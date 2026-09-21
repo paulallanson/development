@@ -3,24 +3,24 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
   Top = 137
   BorderStyle = bsDialog
   Caption = 'Purchase Orders Authorised Report'
-  ClientHeight = 285
-  ClientWidth = 601
+  ClientHeight = 299
+  ClientWidth = 640
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    601
-    285)
-  TextHeight = 13
+    640
+    299)
+  TextHeight = 17
   object PrintBitBtn: TBitBtn
-    Left = 509
-    Top = 246
+    Left = 538
+    Top = 251
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -42,8 +42,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 420
-    Top = 246
+    Left = 449
+    Top = 251
     Width = 75
     Height = 25
     Caption = 'Preview'
@@ -74,16 +74,16 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Visible = False
     object lblCustBran: TLabel
       Left = 8
-      Top = 8
-      Width = 79
-      Height = 13
+      Top = 5
+      Width = 93
+      Height = 17
       Caption = 'Operator Name'
     end
     object edtRep: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -105,7 +105,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 246
+    Top = 251
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -123,22 +123,22 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     object Label1: TLabel
       Left = 8
       Top = 28
-      Width = 32
-      Height = 13
+      Width = 37
+      Height = 17
       Caption = 'From: '
     end
     object Label2: TLabel
       Left = 24
       Top = 60
-      Width = 18
-      Height = 13
+      Width = 21
+      Height = 17
       Caption = 'To: '
     end
     object edtDateFrom: TEdit
       Left = 48
       Top = 24
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnExit = edtDateFromExit
     end
@@ -168,7 +168,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
       Left = 48
       Top = 56
       Width = 89
-      Height = 21
+      Height = 25
       TabOrder = 2
       OnExit = edtDateToExit
     end
@@ -219,16 +219,16 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Visible = False
     object Label3: TLabel
       Left = 8
-      Top = 8
-      Width = 94
-      Height = 13
+      Top = 5
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCust: TEdit
       Left = 8
       Top = 24
       Width = 257
-      Height = 21
+      Height = 25
       Enabled = False
       TabOrder = 0
     end
@@ -249,8 +249,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     end
   end
   object rdgrpCust: TRadioGroup
-    Left = 5
-    Top = 77
+    Left = 4
+    Top = 79
     Width = 129
     Height = 65
     Caption = 'Customer'
@@ -265,7 +265,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
   object TotByRadioGroup: TRadioGroup
     Left = 480
     Top = 8
-    Width = 113
+    Width = 137
     Height = 97
     Caption = 'Report Totals'
     ItemIndex = 3
@@ -281,7 +281,7 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
   object chkbxPageBreak: TCheckBox
     Left = 480
     Top = 115
-    Width = 118
+    Width = 152
     Height = 17
     Caption = 'Page break by total'
     Enabled = False
@@ -298,8 +298,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -322,8 +322,8 @@ object PBRSPOAuthFrm: TPBRSPOAuthFrm
     Visible = False
   end
   object btnExcel: TBitBtn
-    Left = 328
-    Top = 246
+    Left = 361
+    Top = 251
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]

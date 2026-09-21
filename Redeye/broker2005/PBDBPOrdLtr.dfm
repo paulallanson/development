@@ -1,6 +1,7 @@
 inherited dbPOrdLtr: TdbPOrdLtr
   Height = 533
   Width = 574
+  PixelsPerInch = 120
   inherited qryLayout: TFDQuery
     Left = 108
   end

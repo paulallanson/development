@@ -9,39 +9,42 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object pnlDisplay: TPanel
     Left = 0
-    Top = 76
+    Top = 89
     Width = 705
-    Height = 261
+    Height = 248
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 76
+    ExplicitWidth = 699
+    ExplicitHeight = 252
     object dbgrdCustStatus: TDBGrid
       Left = 1
       Top = 1
       Width = 703
-      Height = 259
+      Height = 246
       Align = alClient
       DataSource = dtsrcCurrentSuppStatus
       DrawingStyle = gdsGradient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
       TitleFont.Charset = ANSI_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -13
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
@@ -115,7 +118,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     Left = 0
     Top = 0
     Width = 705
-    Height = 76
+    Height = 89
     Align = alTop
     ParentBackground = False
     TabOrder = 1
@@ -123,7 +126,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       Left = 8
       Top = 8
       Width = 97
-      Height = 57
+      Height = 65
       Caption = 'Report Type'
       ItemIndex = 0
       Items.Strings = (
@@ -133,8 +136,8 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       TabOrder = 0
     end
     object chkbxShowInactive: TCheckBox
-      Left = 112
-      Top = 48
+      Left = 111
+      Top = 53
       Width = 241
       Height = 17
       Caption = 'Show inactive suppliers'
@@ -150,17 +153,19 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 328
+    ExplicitWidth = 699
     object lblRecordCount: TLabel
       Left = 104
       Top = 16
-      Width = 3
-      Height = 13
+      Width = 4
+      Height = 17
     end
     object Label6: TLabel
       Left = 24
       Top = 16
-      Width = 74
-      Height = 13
+      Width = 83
+      Height = 17
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
@@ -172,6 +177,7 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 466
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8

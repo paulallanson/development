@@ -1,20 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-Product Group Look up unit.
-
-VSS Info:
-$Header: /Broker Stock/STLUPrtGrp.pas 3     28/11/00 11:01 Davidn $
-$History: STLUPrtGrp.pas $
- * 
- * *****************  Version 3  *****************
- * User: Davidn       Date: 28/11/00   Time: 11:01
- * Updated in $/Broker Stock
- * Modified font, tab order, shortcut keys, button arrangement.
-*******************************************************************************)
 unit STLUPrtGrp;
 
 interface

@@ -3,22 +3,22 @@ object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Maintain Special Instructions'
-  ClientHeight = 327
+  ClientHeight = 359
   ClientWidth = 317
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
     Top = 240
-    Width = 90
-    Height = 13
+    Width = 101
+    Height = 17
     Caption = 'Short Description'
   end
   object DataMemo: TMemo
@@ -44,7 +44,7 @@ object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 229
-    Top = 288
+    Top = 296
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -53,7 +53,7 @@ object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
   end
   object OkBitBtn: TBitBtn
     Left = 149
-    Top = 288
+    Top = 296
     Width = 75
     Height = 25
     Kind = bkOK
@@ -63,7 +63,7 @@ object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
   end
   object ClearBitBtn: TBitBtn
     Left = 8
-    Top = 288
+    Top = 296
     Width = 75
     Height = 25
     Caption = 'Clear'
@@ -87,9 +87,9 @@ object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
   end
   object NarrativeEdit: TEdit
     Left = 8
-    Top = 254
+    Top = 262
     Width = 297
-    Height = 21
+    Height = 25
     MaxLength = 50
     TabOrder = 5
   end

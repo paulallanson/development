@@ -3,20 +3,20 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
   Top = 140
   BorderStyle = bsDialog
   Caption = 'Customer Product Usage Report'
-  ClientHeight = 361
-  ClientWidth = 422
+  ClientHeight = 366
+  ClientWidth = 442
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    422
-    361)
-  TextHeight = 13
+    442
+    366)
+  TextHeight = 17
   object Panel2: TPanel
     Left = 24
     Top = 2
@@ -30,15 +30,15 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     object Label1: TLabel
       Left = 8
       Top = 2
-      Width = 94
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'Customer / Branch'
     end
     object edtCustomer: TEdit
       Left = 8
       Top = 20
       Width = 249
-      Height = 21
+      Height = 25
       ReadOnly = True
       TabOrder = 0
     end
@@ -108,22 +108,22 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     object Label2: TLabel
       Left = 24
       Top = 30
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label3: TLabel
       Left = 40
       Top = 62
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object edtFrom: TEdit
       Left = 64
       Top = 22
       Width = 249
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtFromChange
@@ -132,7 +132,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
       Left = 64
       Top = 54
       Width = 249
-      Height = 21
+      Height = 25
       CharCase = ecUpperCase
       TabOrder = 1
       OnChange = EnablePrint
@@ -188,7 +188,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
   end
   object btnClose: TBitBtn
     Left = 343
-    Top = 326
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -201,10 +201,11 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 317
   end
   object btnPreview: TBitBtn
     Left = 91
-    Top = 326
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -226,10 +227,11 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = btnPreviewClick
+    ExplicitTop = 317
   end
   object btnPrint: TBitBtn
     Left = 175
-    Top = 326
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -251,10 +253,11 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnPrintClick
+    ExplicitTop = 317
   end
   object btnEmail: TBitBtn
     Left = 259
-    Top = 326
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -282,6 +285,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     ParentFont = False
     TabOrder = 5
     Visible = False
+    ExplicitTop = 317
   end
   object GroupBox2: TGroupBox
     Left = 24
@@ -294,15 +298,15 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     object Label4: TLabel
       Left = 24
       Top = 27
-      Width = 26
-      Height = 13
+      Width = 30
+      Height = 17
       Caption = 'From'
     end
     object Label5: TLabel
       Left = 39
       Top = 56
-      Width = 12
-      Height = 13
+      Width = 14
+      Height = 17
       Caption = 'To'
     end
     object DateFromButton: TSpeedButton
@@ -351,7 +355,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
       Left = 63
       Top = 19
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 0
       OnChange = EnablePrint
@@ -361,7 +365,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
       Left = 63
       Top = 51
       Width = 98
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 1
       OnChange = EnablePrint
@@ -370,7 +374,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
   end
   object btnExcel: TBitBtn
     Left = 7
-    Top = 326
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -421,10 +425,11 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 317
   end
   object OleContainer1: TOleContainer
-    Left = 256
-    Top = 123
+    Left = 152
+    Top = 110
     Width = 113
     Height = 94
     Caption = 'OleContainer1'
@@ -433,8 +438,8 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    Left = 76
-    Top = 132
+    Left = 63
+    Top = 129
     Width = 289
     Height = 61
     ParentBackground = False
@@ -442,9 +447,9 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     Visible = False
     object lblExporting: TLabel
       Left = 16
-      Top = 12
-      Width = 59
-      Height = 13
+      Top = 9
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

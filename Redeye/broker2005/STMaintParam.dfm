@@ -3,30 +3,30 @@ object STMaintParamFrm: TSTMaintParamFrm
   Top = 111
   BorderStyle = bsDialog
   Caption = 'Maintain Stock System Parameters'
-  ClientHeight = 360
-  ClientWidth = 581
+  ClientHeight = 377
+  ClientWidth = 619
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  TextHeight = 13
+  TextHeight = 17
   object LblCour: TLabel
-    Left = 288
+    Left = 302
     Top = 248
-    Width = 79
-    Height = 13
+    Width = 88
+    Height = 17
     Caption = 'Default Courier'
   end
   object SeqNoGroupBox: TGroupBox
     Left = 8
     Top = 8
-    Width = 273
+    Width = 288
     Height = 121
     Caption = 'Sequence Numbers'
     ParentBackground = False
@@ -34,49 +34,49 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label1: TLabel
       Left = 8
       Top = 29
-      Width = 123
-      Height = 13
+      Width = 143
+      Height = 17
       Caption = 'Last Purchase Order No.'
     end
     object Label2: TLabel
       Left = 8
       Top = 61
-      Width = 104
-      Height = 13
+      Width = 122
+      Height = 17
       Caption = 'Last Store Order No.'
     end
     object SOrdLbl: TLabel
       Left = 8
       Top = 93
-      Width = 103
-      Height = 13
+      Width = 121
+      Height = 17
       Caption = 'Last Sales Order No.'
     end
     object PONoSpinEdit: TSpinEdit
-      Left = 160
+      Left = 169
       Top = 24
       Width = 105
-      Height = 22
+      Height = 27
       MaxValue = 9999999
       MinValue = 0
       TabOrder = 0
       Value = 0
     end
     object SoNoSpinEdit: TSpinEdit
-      Left = 160
+      Left = 169
       Top = 56
       Width = 105
-      Height = 22
+      Height = 27
       MaxValue = 9999999
       MinValue = 0
       TabOrder = 1
       Value = 0
     end
     object SOPNoSpinEdit: TSpinEdit
-      Left = 160
+      Left = 169
       Top = 88
       Width = 105
-      Height = 22
+      Height = 27
       MaxValue = 9999999
       MinValue = 0
       TabOrder = 2
@@ -86,7 +86,7 @@ object STMaintParamFrm: TSTMaintParamFrm
   object ReplGroupBox: TGroupBox
     Left = 8
     Top = 136
-    Width = 273
+    Width = 288
     Height = 217
     Caption = 'Replenishment'
     ParentBackground = False
@@ -94,33 +94,33 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label3: TLabel
       Left = 8
       Top = 29
-      Width = 113
-      Height = 13
+      Width = 131
+      Height = 17
       Caption = 'Purch Ord % Pack Size'
     end
     object Label4: TLabel
       Left = 8
       Top = 61
-      Width = 111
-      Height = 13
+      Width = 130
+      Height = 17
       Caption = 'Store Ord % Pack Size'
     end
     object Label5: TLabel
       Left = 8
       Top = 92
-      Width = 69
-      Height = 13
+      Width = 78
+      Height = 17
       Caption = 'Def W/House'
     end
     object Label6: TLabel
       Left = 8
       Top = 124
-      Width = 60
-      Height = 13
+      Width = 68
+      Height = 17
       Caption = 'Pick List Ref'
     end
     object POPercMemo: TMemo
-      Left = 160
+      Left = 169
       Top = 24
       Width = 105
       Height = 25
@@ -133,7 +133,7 @@ object STMaintParamFrm: TSTMaintParamFrm
       OnExit = ExitValueField
     end
     object SOPercMemo: TMemo
-      Left = 160
+      Left = 169
       Top = 56
       Width = 105
       Height = 25
@@ -146,20 +146,19 @@ object STMaintParamFrm: TSTMaintParamFrm
       OnExit = ExitValueField
     end
     object WhouseDBLookupComboBox: TDBLookupComboBox
-      Left = 88
+      Left = 97
       Top = 88
       Width = 177
-      Height = 21
+      Height = 25
       KeyField = 'Part_Store'
       ListField = 'Part_Store_Name'
-      ListSource = STStockDataMod.StoresDataSource
       TabOrder = 2
     end
     object PickRefEdit: TEdit
-      Left = 144
+      Left = 153
       Top = 120
       Width = 121
-      Height = 21
+      Height = 25
       MaxLength = 10
       TabOrder = 3
       Text = 'Pick List Ref'
@@ -195,7 +194,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object GroupBox1: TGroupBox
-    Left = 288
+    Left = 302
     Top = 8
     Width = 289
     Height = 57
@@ -205,15 +204,15 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label7: TLabel
       Left = 8
       Top = 29
-      Width = 65
-      Height = 13
+      Width = 76
+      Height = 17
       Caption = 'Search Timer'
     end
     object SearchTimerSpinEdit: TSpinEdit
       Left = 144
       Top = 24
       Width = 105
-      Height = 22
+      Height = 27
       Increment = 1000
       MaxValue = 9999999
       MinValue = 0
@@ -222,7 +221,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object ProdLUGridGroupBox: TGroupBox
-    Left = 288
+    Left = 302
     Top = 72
     Width = 289
     Height = 105
@@ -263,8 +262,8 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object OKBitBtn: TBitBtn
-    Left = 408
-    Top = 326
+    Left = 420
+    Top = 328
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -291,8 +290,8 @@ object STMaintParamFrm: TSTMaintParamFrm
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 504
-    Top = 326
+    Left = 516
+    Top = 328
     Width = 75
     Height = 25
     Kind = bkCancel
@@ -300,7 +299,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     TabOrder = 5
   end
   object GroupBox2: TGroupBox
-    Left = 288
+    Left = 302
     Top = 184
     Width = 289
     Height = 49
@@ -310,15 +309,15 @@ object STMaintParamFrm: TSTMaintParamFrm
     object Label8: TLabel
       Left = 8
       Top = 19
-      Width = 70
-      Height = 13
+      Width = 79
+      Height = 17
       Caption = 'Def Price Unit'
     end
     object DBLUcmbPriceUnit: TDBLookupComboBox
       Left = 96
       Top = 15
       Width = 124
-      Height = 21
+      Height = 25
       KeyField = 'Price_Unit'
       ListField = 'Description'
       ListSource = STStockDataMod.dtSrcPriceUnit
@@ -341,17 +340,17 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object DBLUCmbBXCourier: TDBLookupComboBox
-    Left = 376
+    Left = 397
     Top = 244
     Width = 169
-    Height = 21
+    Height = 25
     KeyField = 'Courier'
     ListField = 'Courier_Name'
     ListSource = STStockDataMod.CouriersDataSource
     TabOrder = 7
   end
   object btbtnClearCourier: TBitBtn
-    Left = 552
+    Left = 573
     Top = 243
     Width = 25
     Height = 25
@@ -397,8 +396,8 @@ object STMaintParamFrm: TSTMaintParamFrm
       ' '
       ' '
       ' ')
-    Left = 448
-    Top = 120
+    Left = 582
+    Top = 86
     ParamData = <
       item
         Name = 'Last_PO_Number'

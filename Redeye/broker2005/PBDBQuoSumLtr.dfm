@@ -1,6 +1,7 @@
 inherited dbQuoSumLtr: TdbQuoSumLtr
   Height = 398
   Width = 511
+  PixelsPerInch = 120
   inherited qryLayout: TFDQuery
     Left = 70
     Top = 6

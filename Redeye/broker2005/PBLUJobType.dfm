@@ -25,7 +25,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
     ParentBackground = False
     TabOrder = 0
     ExplicitLeft = 303
-    ExplicitHeight = 297
+    ExplicitHeight = 298
     DesignSize = (
       105
       307)
@@ -38,7 +38,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       Caption = 'Function'
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 116
+      ExplicitTop = 108
       object AddBitBtn: TBitBtn
         Left = 10
         Top = 20
@@ -184,7 +184,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = SelectBitBtnClick
-      ExplicitTop = 239
+      ExplicitTop = 240
     end
     object CloseBitBtn: TBitBtn
       Left = 16
@@ -195,7 +195,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitTop = 267
+      ExplicitTop = 268
     end
   end
   object Panel2: TPanel
@@ -208,7 +208,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
     ParentBackground = False
     TabOrder = 1
     ExplicitWidth = 303
-    ExplicitHeight = 297
+    ExplicitHeight = 298
     object Panel3: TPanel
       Left = 0
       Top = 0
@@ -219,7 +219,7 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       ParentBackground = False
       TabOrder = 0
       ExplicitWidth = 303
-      ExplicitHeight = 256
+      ExplicitHeight = 240
       object dbgrdDets: TDBGrid
         Left = 0
         Top = 0
@@ -283,6 +283,8 @@ object PBLUJobTypeFrm: TPBLUJobTypeFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 240
+      ExplicitWidth = 303
       DesignSize = (
         309
         58)

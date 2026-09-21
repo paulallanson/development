@@ -8,57 +8,57 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 40
-    Width = 133
-    Height = 13
+    Top = 37
+    Width = 152
+    Height = 17
     Caption = 'Current Process Sequence'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 98
-    Height = 13
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object Label3: TLabel
     Left = 8
-    Top = 16
-    Width = 89
-    Height = 13
+    Top = 12
+    Width = 105
+    Height = 17
     Caption = 'Production Type:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblProduction: TLabel
     Left = 120
-    Top = 16
-    Width = 71
-    Height = 13
+    Top = 12
+    Width = 84
+    Height = 17
     Caption = 'lblProduction'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object Label4: TLabel
     Left = 288
-    Top = 40
-    Width = 98
-    Height = 13
+    Top = 37
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object lstbxPProcesses: TListBox
@@ -66,7 +66,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 0
     OnClick = lstbxPProcessesClick
@@ -124,7 +124,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Top = 56
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 3
     OnClick = lstbxProcessesClick
@@ -137,6 +137,8 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 275
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 153
       Top = 8
@@ -162,7 +164,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 5
     Visible = False
   end
@@ -171,7 +173,7 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Top = 56
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 6
     Visible = False
   end

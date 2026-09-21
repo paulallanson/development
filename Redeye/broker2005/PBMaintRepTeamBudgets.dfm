@@ -8,7 +8,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -17,7 +17,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
@@ -26,15 +26,16 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 671
     object Label3: TLabel
       Left = 16
       Top = 7
-      Width = 53
-      Height = 13
+      Width = 64
+      Height = 17
       Caption = 'Rep Team:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -42,12 +43,12 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     object Label4: TLabel
       Left = 16
       Top = 31
-      Width = 74
-      Height = 13
+      Width = 90
+      Height = 17
       Caption = 'Financial Year:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -55,12 +56,12 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     object lblRepTeamName: TLabel
       Left = 112
       Top = 7
-      Width = 91
-      Height = 13
+      Width = 108
+      Height = 17
       Caption = 'lblRepTeamName'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -68,12 +69,12 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     object lblFinancialYear: TLabel
       Left = 112
       Top = 31
-      Width = 81
-      Height = 13
+      Width = 97
+      Height = 17
       Caption = 'lblFinancialYear'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
@@ -89,15 +90,15 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
       object lblCustBran: TLabel
         Left = 8
         Top = 16
-        Width = 49
-        Height = 13
+        Width = 58
+        Height = 17
         Caption = 'Rep Team'
       end
       object edtRepTeam: TEdit
         Left = 8
         Top = 32
         Width = 196
-        Height = 21
+        Height = 25
         Enabled = False
         TabOrder = 0
       end
@@ -126,6 +127,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 458
+    ExplicitWidth = 671
     object OKBitBtn: TBitBtn
       Left = 254
       Top = 7
@@ -163,7 +166,7 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
         Left = 0
         Top = 0
         Width = 669
-        Height = 369
+        Height = 365
         Align = alClient
         ColCount = 4
         DefaultRowHeight = 19
@@ -175,6 +178,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
         OnExit = grdDetailsExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdDetailsSelectCell
+        ExplicitWidth = 663
+        ExplicitHeight = 360
         ColWidths = (
           155
           93
