@@ -3,7 +3,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   Top = 7
   Caption = 'Company Details'
   ClientHeight = 618
-  ClientWidth = 768
+  ClientWidth = 767
   Color = clBtnFace
   Constraints.MinHeight = 626
   Constraints.MinWidth = 642
@@ -22,13 +22,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object tbSettings: TPageControl
     Left = 0
     Top = 39
-    Width = 768
+    Width = 767
     Height = 519
     ActivePage = tbsAddress
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 644
-    ExplicitHeight = 503
+    ExplicitWidth = 762
+    ExplicitHeight = 510
     object tbsAddress: TTabSheet
       Caption = 'Address'
       object Label5: TLabel
@@ -406,7 +406,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object Label48: TLabel
         Left = 310
-        Top = 337
+        Top = 341
         Width = 136
         Height = 17
         Caption = 'Default Payment Terms:'
@@ -444,7 +444,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object AccCustCheckBox: TCheckBox
         Left = 7
         Top = 294
-        Width = 193
+        Width = 288
         Height = 17
         Caption = 'Customer Account Codes Unique'
         TabOrder = 10
@@ -452,7 +452,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object AccSuppCheckBox: TCheckBox
         Left = 309
         Top = 294
-        Width = 181
+        Width = 230
         Height = 17
         Caption = 'Supplier Account Codes Unique'
         TabOrder = 13
@@ -482,7 +482,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxAssignPIN: TCheckBox
         Left = 7
         Top = 252
-        Width = 232
+        Width = 288
         Height = 17
         Caption = 'Assign PIN Reference to Purchase Invoices'
         TabOrder = 7
@@ -535,7 +535,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 15
         object Label20: TLabel
           Left = 8
-          Top = 24
+          Top = 22
           Width = 174
           Height = 17
           Caption = 'Maximum Unauthorised Value'
@@ -555,7 +555,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxCustMandatory: TCheckBox
         Left = 7
         Top = 273
-        Width = 193
+        Width = 288
         Height = 17
         Caption = 'Customer Account Codes Mandatory'
         TabOrder = 9
@@ -563,7 +563,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxSuppMandatory: TCheckBox
         Left = 309
         Top = 273
-        Width = 193
+        Width = 268
         Height = 17
         Caption = 'Supplier Account Codes Mandatory'
         TabOrder = 11
@@ -638,7 +638,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxPaymentTerms: TCheckBox
         Left = 311
         Top = 399
-        Width = 181
+        Width = 228
         Height = 26
         Caption = 'Use Invoice Notes for Terms'
         TabOrder = 18
@@ -646,7 +646,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxDefaultCustomerAccCode: TCheckBox
         Left = 7
         Top = 315
-        Width = 193
+        Width = 288
         Height = 17
         Caption = 'Default Customer Account Code'
         TabOrder = 19
@@ -654,7 +654,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxDefaultSupplierAccCode: TCheckBox
         Left = 309
         Top = 315
-        Width = 181
+        Width = 284
         Height = 17
         Caption = 'Default Supplier Account Codes'
         TabOrder = 20
@@ -698,7 +698,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object PayTermsDBLookupComboBox: TDBLookupComboBox
         Left = 453
-        Top = 334
+        Top = 337
         Width = 167
         Height = 25
         KeyField = 'Payment_Terms'
@@ -709,7 +709,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object BitBtn5: TBitBtn
         Left = 626
-        Top = 333
+        Top = 338
         Width = 25
         Height = 23
         Glyph.Data = {
@@ -776,7 +776,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxAuthorisePO: TCheckBox
         Left = 7
         Top = 363
-        Width = 193
+        Width = 182
         Height = 17
         Caption = 'Authorise Purchase Orders'
         TabOrder = 28
@@ -802,7 +802,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         WordWrap = True
       end
       object Label47: TLabel
-        Left = 276
+        Left = 333
         Top = 401
         Width = 69
         Height = 32
@@ -819,7 +819,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object chkbxFormRefReq: TCheckBox
         Left = 14
         Top = 181
-        Width = 251
+        Width = 305
         Height = 17
         Caption = 'Form Reference Mandatory for Purchase Orders'
         TabOrder = 0
@@ -916,7 +916,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 7
       end
       object chkbxUseProduction: TCheckBox
-        Left = 278
+        Left = 335
         Top = 181
         Width = 155
         Height = 17
@@ -956,7 +956,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 12
       end
       object chkbxDefSODeliveries: TCheckBox
-        Left = 278
+        Left = 335
         Top = 226
         Width = 163
         Height = 17
@@ -964,7 +964,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 15
       end
       object chkbxConfirmProduction: TCheckBox
-        Left = 278
+        Left = 335
         Top = 203
         Width = 155
         Height = 17
@@ -972,7 +972,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 16
       end
       object cmbAliasList: TComboBox
-        Left = 361
+        Left = 418
         Top = 408
         Width = 161
         Height = 25
@@ -980,7 +980,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 17
       end
       object BitBtn4: TBitBtn
-        Left = 529
+        Left = 586
         Top = 406
         Width = 25
         Height = 26
@@ -1011,7 +1011,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = BitBtn4Click
       end
       object chkbxDefaultVat: TCheckBox
-        Left = 278
+        Left = 335
         Top = 249
         Width = 163
         Height = 17
@@ -1019,7 +1019,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 19
       end
       object chkbxUsePackPricing: TCheckBox
-        Left = 278
+        Left = 335
         Top = 296
         Width = 163
         Height = 17
@@ -1027,7 +1027,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 20
       end
       object chkbxUseProspects: TCheckBox
-        Left = 278
+        Left = 335
         Top = 320
         Width = 163
         Height = 17
@@ -1035,7 +1035,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 21
       end
       object grpbxReorderReminder: TGroupBox
-        Left = 272
+        Left = 329
         Top = 80
         Width = 281
         Height = 89
@@ -1044,7 +1044,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         ParentColor = False
         TabOrder = 22
         object Label49: TLabel
-          Left = 198
+          Left = 223
           Top = 27
           Width = 44
           Height = 17
@@ -1059,13 +1059,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         end
         object Label51: TLabel
           Left = 30
-          Top = 51
+          Top = 58
           Width = 123
           Height = 17
           Caption = 'Minimum Sales Value'
         end
         object spnReorderReminderInterval: TSpinEdit
-          Left = 136
+          Left = 161
           Top = 22
           Width = 49
           Height = 27
@@ -1075,8 +1075,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           Value = 1
         end
         object memReOrderValue: TMemo
-          Left = 135
-          Top = 47
+          Left = 160
+          Top = 54
           Width = 90
           Height = 23
           Alignment = taRightJustify
@@ -1087,16 +1087,16 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         end
       end
       object chkbxUseReorderReminder: TCheckBox
-        Left = 280
-        Top = 77
-        Width = 147
+        Left = 337
+        Top = 73
+        Width = 185
         Height = 17
         Caption = 'Set PO Reorder Reminder '
         TabOrder = 23
         OnClick = chkbxUseReorderReminderClick
       end
       object chkbxDefaultDeliveryViaCompany: TCheckBox
-        Left = 278
+        Left = 335
         Top = 272
         Width = 163
         Height = 17
@@ -1104,7 +1104,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 24
       end
       object chkbxUseCRM: TCheckBox
-        Left = 278
+        Left = 335
         Top = 344
         Width = 163
         Height = 17
@@ -1120,7 +1120,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 13
       end
       object chkbxUseGDPR: TCheckBox
-        Left = 494
+        Left = 551
         Top = 181
         Width = 83
         Height = 17
@@ -1152,7 +1152,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 28
       end
       object chkbxUseSAPIntegration: TCheckBox
-        Left = 278
+        Left = 335
         Top = 368
         Width = 163
         Height = 17
@@ -1584,7 +1584,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object Label25: TLabel
         Left = 12
-        Top = 284
+        Top = 291
         Width = 127
         Height = 17
         Caption = 'Corresponding Name'
@@ -1598,15 +1598,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       end
       object edtWIEmailName: TEdit
         Left = 12
-        Top = 302
+        Top = 309
         Width = 197
         Height = 25
         TabOrder = 1
       end
       object chkbxShowWIPurchaseOrders: TCheckBox
         Left = 12
-        Top = 336
-        Width = 249
+        Top = 343
+        Width = 297
         Height = 17
         Caption = 'Show Purchase Orders on Works Instruction'
         TabOrder = 2
@@ -1852,13 +1852,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object PageControl1: TPageControl
         Left = 0
         Top = 0
-        Width = 760
+        Width = 759
         Height = 487
-        ActivePage = TabSheet10
+        ActivePage = TabSheet1
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 636
-        ExplicitHeight = 471
+        ExplicitWidth = 1144
         object TabSheet1: TTabSheet
           Caption = 'Enquiries'
           object Label29: TLabel
@@ -2357,7 +2356,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'CRM'
       ImageIndex = 10
       DesignSize = (
-        760
+        759
         487)
       object Label52: TLabel
         Left = 16
@@ -2413,7 +2412,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 0
       end
       object btnActivityType: TButton
-        Left = 536
+        Left = 529
         Top = 19
         Width = 22
         Height = 22
@@ -2427,7 +2426,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnActivityTypeClick
-        ExplicitLeft = 412
+        ExplicitLeft = 914
       end
       object dblkpEActivityType: TDBLookupComboBox
         Left = 235
@@ -2489,16 +2488,16 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object pnlBottom: TPanel
     Left = 0
     Top = 558
-    Width = 768
+    Width = 767
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 533
-    ExplicitWidth = 638
+    ExplicitTop = 549
+    ExplicitWidth = 762
     DesignSize = (
-      768
+      767
       41)
     object BitBtn1: TBitBtn
       Left = 279
@@ -2526,15 +2525,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 768
+    Width = 767
     Height = 39
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 638
+    ExplicitWidth = 762
     DesignSize = (
-      768
+      767
       39)
     object Label1: TLabel
       Left = 11
@@ -2552,7 +2551,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     object NameEdit: TEdit
       Left = 121
       Top = 8
-      Width = 510
+      Width = 503
       Height = 25
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
@@ -2564,12 +2563,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ParentFont = False
       TabOrder = 0
       Text = 'NameEdit'
+      ExplicitWidth = 498
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
     Top = 599
-    Width = 768
+    Width = 767
     Height = 19
     Panels = <
       item
@@ -2578,15 +2578,15 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       item
         Width = 50
       end>
-    ExplicitTop = 574
-    ExplicitWidth = 638
+    ExplicitTop = 590
+    ExplicitWidth = 762
   end
   object GetCompanySQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company')
-    Left = 400
-    Top = 444
+    Left = 316
+    Top = 507
   end
   object UpCompanySQL: TFDQuery
     ConnectionName = 'PB'
@@ -2761,8 +2761,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ' '
       ' '
       ' ')
-    Left = 536
-    Top = 420
+    Left = 486
+    Top = 477
     ParamData = <
       item
         Name = 'Name'
@@ -3174,12 +3174,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select Currency_Code, Currency_Code_Descr'
       'From Currency_Code'
       'Order By Currency_Code_Descr')
-    Left = 360
-    Top = 328
+    Left = 266
+    Top = 362
   end
   object GetCurrSRC: TDataSource
     DataSet = GetCurrSQL
-    Left = 464
+    Left = 444
     Top = 160
   end
   object GetNominalSQL: TFDQuery
@@ -3187,13 +3187,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     SQL.Strings = (
       'select *'
       'from Nominal_Level')
-    Left = 364
-    Top = 314
+    Left = 303
+    Top = 393
   end
   object GetNominalSRC: TDataSource
     DataSet = GetNominalSQL
-    Left = 340
-    Top = 274
+    Left = 241
+    Top = 295
   end
   object GetSupplierSQL: TFDQuery
     ConnectionName = 'PB'
@@ -3205,8 +3205,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       '           Supplier_Branch.Branch_no = :Branch_no and'
       '           Supplier.Supplier = Supplier_Branch.Supplier'
       '          ')
-    Left = 460
-    Top = 154
+    Left = 391
+    Top = 145
     ParamData = <
       item
         Name = 'Supplier'
@@ -3217,22 +3217,22 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object dtdrcCommission: TDataSource
     DataSet = qryCommission
-    Left = 324
-    Top = 330
+    Left = 253
+    Top = 413
   end
   object qryCommission: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from commission_type')
-    Left = 428
-    Top = 170
+    Left = 503
+    Top = 197
   end
   object FlashDelivTimer: TTimer
     Enabled = False
     OnTimer = FlashDelivTimerTimer
-    Left = 496
-    Top = 344
+    Left = 484
+    Top = 390
   end
   object UpdDelivNotesOnlySQL: TFDQuery
     ConnectionName = 'PB'
@@ -3244,8 +3244,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       ' '
       ' '
       ' ')
-    Left = 448
-    Top = 212
+    Left = 376
+    Top = 217
     ParamData = <
       item
         Name = 'Delivery_Narrative'
@@ -3257,13 +3257,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from vat_code'
       'Order By Description')
-    Left = 440
-    Top = 296
+    Left = 366
+    Top = 322
   end
   object DsVat: TDataSource
     DataSet = QryVat
-    Left = 448
-    Top = 440
+    Left = 376
+    Top = 502
   end
   object QryPrdTyp: TFDQuery
     ConnectionName = 'PB'
@@ -3272,19 +3272,19 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'description'
       'From Product_Type'
       'Order By Description')
-    Left = 396
-    Top = 212
+    Left = 463
+    Top = 249
   end
   object DSPrdTyp: TDataSource
     DataSet = QryPrdTyp
-    Left = 364
-    Top = 252
+    Left = 271
+    Top = 267
   end
   object FlashPayTimer: TTimer
     Enabled = False
     OnTimer = FlashPayTimerTimer
-    Left = 400
-    Top = 432
+    Left = 348
+    Top = 540
   end
   object qryOnlineVAT: TFDQuery
     ConnectionName = 'PB'
@@ -3292,23 +3292,23 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from vat_code'
       'Order By Description')
-    Left = 424
-    Top = 208
+    Left = 378
+    Top = 260
   end
   object dtsOnlineVAT: TDataSource
     DataSet = qryOnlineVAT
-    Left = 492
-    Top = 416
+    Left = 431
+    Top = 472
   end
   object opndlgTerms: TOpenDialog
-    Left = 388
-    Top = 256
+    Left = 453
+    Top = 304
   end
   object FlashTermsTimer: TTimer
     Enabled = False
     OnTimer = FlashTermsTimerTimer
-    Left = 464
-    Top = 88
+    Left = 396
+    Top = 62
   end
   object qryPayTerms: TFDQuery
     ConnectionName = 'PB'
@@ -3316,19 +3316,19 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'SELECT *'
       'FROM Payment_Terms'
       'ORDER BY Payment_Terms_Description')
-    Left = 376
-    Top = 344
+    Left = 318
+    Top = 430
   end
   object dtsPayTerms: TDataSource
     DataSet = qryPayTerms
-    Left = 348
-    Top = 432
+    Left = 283
+    Top = 540
   end
   object FlashCreditTimer: TTimer
     Enabled = False
     OnTimer = FlashCreditTimerTimer
-    Left = 472
-    Top = 272
+    Left = 406
+    Top = 292
   end
   object qryActivityType: TFDQuery
     ConnectionName = 'PB'
@@ -3336,13 +3336,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 408
-    Top = 80
+    Left = 510
+    Top = 132
   end
   object dtsActivityType: TDataSource
     DataSet = qryActivityType
-    Left = 468
-    Top = 88
+    Left = 585
+    Top = 142
   end
   object qryProcessGroup: TFDQuery
     ConnectionName = 'pb'
@@ -3350,13 +3350,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'select *'
       'from Process_Group'
       'order by Process_Group_Description')
-    Left = 360
-    Top = 152
+    Left = 298
+    Top = 190
   end
   object dtsProcessGroup: TDataSource
     DataSet = qryProcessGroup
-    Left = 400
-    Top = 152
+    Left = 348
+    Top = 190
   end
   object qryProcess: TFDQuery
     MasterSource = dtsProcessGroup
@@ -3366,8 +3366,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'from Process'
       'where process_group = :process_group AND (inactive = '#39'N'#39')'
       'order by Process_Description')
-    Left = 424
-    Top = 96
+    Left = 346
+    Top = 72
     ParamData = <
       item
         Name = 'process_group'
@@ -3375,13 +3375,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object dtsProcess: TDataSource
     DataSet = qryProcess
-    Left = 384
-    Top = 104
+    Left = 296
+    Top = 82
   end
   object dtsActivityTypeQuotRem: TDataSource
     DataSet = qryActivityTypeQuotRem
-    Left = 476
-    Top = 72
+    Left = 443
+    Top = 90
   end
   object qryActivityTypeQuotRem: TFDQuery
     ConnectionName = 'PB'
@@ -3389,8 +3389,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 368
-    Top = 96
+    Left = 460
+    Top = 152
   end
   object qryActivityTypeProofStActiv: TFDQuery
     ConnectionName = 'PB'
@@ -3398,18 +3398,18 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 368
-    Top = 168
+    Left = 260
+    Top = 186
   end
   object dtsActivityTypeProofStActiv: TDataSource
     DataSet = qryActivityTypeProofStActiv
-    Left = 404
-    Top = 176
+    Left = 353
+    Top = 220
   end
   object dtsActivityTypeReorderAct: TDataSource
     DataSet = qryActivityTypeReorderAct
-    Left = 364
-    Top = 248
+    Left = 303
+    Top = 310
   end
   object qryActivityTypeReorderAct: TFDQuery
     ConnectionName = 'PB'
@@ -3417,13 +3417,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 344
-    Top = 240
+    Left = 278
+    Top = 300
   end
   object dtsActivityTypeOrdAct: TDataSource
     DataSet = qryActivityTypeOrdAct
-    Left = 300
-    Top = 368
+    Left = 223
+    Top = 460
   end
   object qryActivityTypeOrdAct: TFDQuery
     ConnectionName = 'PB'
@@ -3431,8 +3431,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 432
-    Top = 328
+    Left = 388
+    Top = 410
   end
   object qryActivityTypeDelivAct: TFDQuery
     ConnectionName = 'PB'
@@ -3440,12 +3440,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       'Select *'
       'from Activity_Type'
       'Order By Activity_Type_Description')
-    Left = 344
-    Top = 352
+    Left = 278
+    Top = 440
   end
   object dtsActivityTypeDelivAct: TDataSource
     DataSet = qryActivityTypeDelivAct
-    Left = 468
-    Top = 360
+    Left = 401
+    Top = 402
   end
 end

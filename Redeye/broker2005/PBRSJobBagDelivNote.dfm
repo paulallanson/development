@@ -3,8 +3,8 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
   Top = 127
   BorderStyle = bsDialog
   Caption = 'Print Job Bag Delivery Note'
-  ClientHeight = 194
-  ClientWidth = 399
+  ClientHeight = 185
+  ClientWidth = 393
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText

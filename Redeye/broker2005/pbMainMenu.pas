@@ -530,14 +530,6 @@ begin
   LocalDrive := copy(GetWinSysDir,1,2);
 	LocalDir := ExtractFilePath(Application.ExeName);
   StrPCopy(AppIniFile, LocalDir + GetAppIniFile);
-{$IFDEF FORMPRO} {Setup the directories}
-	ServDir := '\\FPSERVER1\MIS\Centrereed\Broker' ;
-  CopyifNewer('BrokerLoad05.exe', 'Broker Load Program');
-{$ENDIF}
-{$IFDEF LATCHAM} {Setup the directories}
-	ServDir := '\\FPSERVER1\MIS\Centrereed\Broker' ;
-  CopyifNewer('BrokerLoad05.exe', 'Broker Load Program');
-{$ENDIF}
 {$IFDEF NEXUS} {Setup the directories}
 	ServDir := '\\NEXUS-UK\Redeye' ;
   CopyifNewer('RedeyeLoad.exe', 'Redeye Load Program');

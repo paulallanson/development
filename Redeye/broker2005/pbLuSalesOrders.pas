@@ -328,9 +328,9 @@ begin
   try
     with IniFile do
     begin
-      stempdate := ReadString('Centrereed Broker', 'Call Off Search Date', 'None');
-      sShowWIP := ReadString('Centrereed Broker', 'Show Sales Order WIP', 'None');
-      sShowLines := ReadString('Redeye', 'Show Sales Order Lines', 'None');
+      stempdate := ReadString('Sales Orders', 'Call Off Search Date', 'None');
+      sShowWIP := ReadString('Sales Orders', 'Show Sales Order WIP', 'None');
+      sShowLines := ReadString('Sales Orders', 'Show Sales Order Lines', 'None');
     end;
   finally
     IniFile.Free;
@@ -385,9 +385,9 @@ begin
   try
     with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Call Off Search Date', pbdatestr(dtmdlSOOrders.OrderDate));
-      WriteString('Centrereed Broker', 'Show Sales Order WIP', sShowWIP);
-      WriteString('Redeye', 'Show Sales Order Lines', sShowLines);
+      WriteString('Sales Orders', 'Call Off Search Date', pbdatestr(dtmdlSOOrders.OrderDate));
+      WriteString('Sales Orders', 'Show Sales Order WIP', sShowWIP);
+      WriteString('Sales Orders', 'Show Sales Order Lines', sShowLines);
     end;
   finally
     IniFile.Free;

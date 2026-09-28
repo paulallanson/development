@@ -24,9 +24,8 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 185
-    ExplicitWidth = 772
-    ExplicitHeight = 287
+    ExplicitWidth = 832
+    ExplicitHeight = 271
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
@@ -137,6 +136,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 832
     object Label3: TLabel
       Left = 8
       Top = 145
@@ -432,7 +432,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     ParentBackground = False
     TabOrder = 2
     ExplicitTop = 472
-    ExplicitWidth = 772
+    ExplicitWidth = 832
     DesignSize = (
       838
       41)
@@ -458,7 +458,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 539
+      ExplicitLeft = 599
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
@@ -507,7 +507,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       end
     end
     object CancelBitBtn: TBitBtn
-      Left = 428
+      Left = 422
       Top = 8
       Width = 75
       Height = 25
@@ -515,10 +515,10 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 362
+      ExplicitLeft = 416
     end
     object btbtnExcel: TBitBtn
-      Left = 524
+      Left = 518
       Top = 8
       Width = 75
       Height = 25
@@ -569,7 +569,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btbtnExcelClick
-      ExplicitLeft = 458
+      ExplicitLeft = 512
     end
   end
   object pnlExportPrgrss: TPanel

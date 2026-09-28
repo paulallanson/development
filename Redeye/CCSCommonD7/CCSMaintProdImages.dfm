@@ -3,37 +3,37 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
   Top = 111
   BorderStyle = bsDialog
   Caption = 'Maintain Product E-Commerce Info'
-  ClientHeight = 176
-  ClientWidth = 541
+  ClientHeight = 195
+  ClientWidth = 570
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object lblProdCode: TLabel
     Left = 5
     Top = 16
-    Width = 73
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Product Code:'
   end
   object Label1: TLabel
     Left = 5
     Top = 48
-    Width = 49
-    Height = 13
+    Width = 55
+    Height = 17
     Caption = 'File name'
   end
   object edtProdCode: TEdit
-    Left = 88
+    Left = 92
     Top = 12
     Width = 225
-    Height = 21
+    Height = 25
     Enabled = False
     TabOrder = 0
   end
@@ -89,9 +89,9 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     OnClick = btbtnEraseImage2Click
   end
   object memFullImagePath: TMemo
-    Left = 88
+    Left = 92
     Top = 48
-    Width = 369
+    Width = 353
     Height = 89
     Color = clBtnFace
     Lines.Strings = (
@@ -127,8 +127,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
       'All (*.jpg;*.bmp;*.gif;*.pdf)|*.jpg;*.bmp;*.gif;*.pdf|JPEG Image' +
       ' File (*.jpg)|*.jpg|Bitmaps (*.bmp)|*.bmp|GIF Image File (*.gif)' +
       '|*.gif|PDF Image File (*.pdf)|*.pdf'
-    Left = 368
-    Top = 5
+    Left = 364
+    Top = 14
   end
   object qryInsECommInfo: TFDQuery
     ConnectionName = 'PB'
@@ -160,8 +160,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
       'where'
       '  Ecommerce_info = :Ecommerce_info;'
       '')
-    Left = 336
-    Top = 64
+    Left = 404
+    Top = 168
     ParamData = <
       item
         Name = 'Stock_Reference'
@@ -179,8 +179,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     SQL.Strings = (
       'select * from ecommerce_info'
       'where stock_reference = :stock_reference;')
-    Left = 368
-    Top = 64
+    Left = 484
+    Top = 152
     ParamData = <
       item
         Name = 'stock_reference'
@@ -193,8 +193,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     SQL.Strings = (
       'select max(ecommerce_info) as top_No '
       'from ecommerce_info;')
-    Left = 400
-    Top = 64
+    Left = 380
+    Top = 136
   end
   object DataSource1: TDataSource
     DataSet = qrySelECommInfo

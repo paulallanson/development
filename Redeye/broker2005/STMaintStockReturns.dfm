@@ -2,8 +2,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   Left = 256
   Top = 114
   Caption = 'Maintain Fulfillment Stock Returns'
-  ClientHeight = 441
-  ClientWidth = 854
+  ClientHeight = 432
+  ClientWidth = 848
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,8 +20,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 422
-    Width = 854
+    Top = 413
+    Width = 848
     Height = 19
     Panels = <
       item
@@ -30,21 +30,17 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 413
-    ExplicitWidth = 848
   end
   object Panel2: TPanel
     Left = 0
-    Top = 381
-    Width = 854
+    Top = 372
+    Width = 848
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 372
-    ExplicitWidth = 848
     DesignSize = (
-      854
+      848
       41)
     object Label2: TLabel
       Left = 16
@@ -63,7 +59,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 764
+      Left = 752
       Top = 8
       Width = 75
       Height = 25
@@ -74,7 +70,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       ExplicitLeft = 758
     end
     object btnOK: TBitBtn
-      Left = 676
+      Left = 664
       Top = 8
       Width = 75
       Height = 25
@@ -105,7 +101,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       ExplicitLeft = 670
     end
     object PrintBitBtn: TBitBtn
-      Left = 554
+      Left = 542
       Top = 8
       Width = 75
       Height = 25
@@ -139,7 +135,7 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       ExplicitLeft = 548
     end
     object btnExcel: TBitBtn
-      Left = 460
+      Left = 448
       Top = 8
       Width = 75
       Height = 25
@@ -197,12 +193,11 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 854
+    Width = 848
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 848
     object Label1: TLabel
       Left = 16
       Top = 12
@@ -247,8 +242,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   object sgdetails: TStringGrid
     Left = 0
     Top = 41
-    Width = 854
-    Height = 340
+    Width = 848
+    Height = 331
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20
@@ -260,8 +255,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
-    ExplicitWidth = 848
-    ExplicitHeight = 331
     ColWidths = (
       178
       201

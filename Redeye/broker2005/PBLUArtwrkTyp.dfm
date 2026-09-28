@@ -71,7 +71,7 @@ object PBLUArtwrkTypFrm: TPBLUArtwrkTypFrm
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 342
+    Left = 349
     Top = 244
     Width = 75
     Height = 25
@@ -146,7 +146,7 @@ object PBLUArtwrkTypFrm: TPBLUArtwrkTypFrm
     OnClick = SelectBitBtnClick
   end
   object CloseBitBtn: TBitBtn
-    Left = 342
+    Left = 349
     Top = 272
     Width = 75
     Height = 25
@@ -155,7 +155,7 @@ object PBLUArtwrkTypFrm: TPBLUArtwrkTypFrm
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    Left = 336
+    Left = 343
     Top = 120
     Width = 87
     Height = 113

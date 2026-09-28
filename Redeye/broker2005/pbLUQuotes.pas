@@ -138,8 +138,8 @@ begin
   try
     with IniFile do
     begin
-      stempdate := ReadString('Centrereed Broker', 'Quote Search Date', 'None');
-      sShowLive := ReadString('Centrereed Broker', 'Show Live Quotes', 'None');
+      stempdate := ReadString('Quotes', 'Quote Search Date', 'None');
+      sShowLive := ReadString('Quotes', 'Show Live Quotes', 'None');
     end;
   finally
     IniFile.Free;
@@ -177,8 +177,8 @@ begin
   try
     with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Quote Search Date', pbdatestr(dtmdlAllQuotes.QuoteDate));
-      WriteString('Centrereed Broker', 'Show Live Quotes', sShowLive);
+      WriteString('Quotes', 'Quote Search Date', pbdatestr(dtmdlAllQuotes.QuoteDate));
+      WriteString('Quotes', 'Show Live Quotes', sShowLive);
     end;
   finally
     IniFile.Free;

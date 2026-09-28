@@ -2,14 +2,14 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   Left = 283
   Top = 53
   Caption = 'Maintain Non Conformance'
-  ClientHeight = 682
-  ClientWidth = 812
+  ClientHeight = 741
+  ClientWidth = 821
   Color = clBtnFace
   Constraints.MinHeight = 630
   Constraints.MinWidth = 790
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -19,11 +19,11 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnResize = FormResize
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 663
-    Width = 812
+    Top = 722
+    Width = 821
     Height = 19
     Panels = <
       item
@@ -35,28 +35,32 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       item
         Width = 50
       end>
+    ExplicitTop = 654
+    ExplicitWidth = 806
   end
   object pnlBody: TPanel
     Left = 0
     Top = 0
-    Width = 812
-    Height = 663
+    Width = 821
+    Height = 722
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 266
-    ExplicitHeight = 277
+    ExplicitWidth = 806
+    ExplicitHeight = 654
     object Panel2: TPanel
       Left = 0
-      Top = 624
-      Width = 812
+      Top = 683
+      Width = 821
       Height = 39
       Align = alBottom
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 615
+      ExplicitWidth = 806
       object Panel4: TPanel
-        Left = 478
+        Left = 487
         Top = 1
         Width = 333
         Height = 37
@@ -64,6 +68,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 472
         DesignSize = (
           333
           37)
@@ -125,135 +130,141 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     object pnlJobBag: TPanel
       Left = 0
       Top = 97
-      Width = 812
+      Width = 821
       Height = 97
       Align = alTop
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 806
       DesignSize = (
-        812
+        821
         97)
       object labJobBagInfo: TLabel
         Left = 9
         Top = 15
-        Width = 61
-        Height = 13
+        Width = 72
+        Height = 17
         Caption = 'Job Bag No.'
       end
       object Label25: TLabel
-        Left = 456
+        Left = 448
         Top = 15
-        Width = 51
-        Height = 13
+        Width = 58
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Start Date'
-        ExplicitLeft = 462
+        ExplicitLeft = 439
       end
       object Label3: TLabel
-        Left = 645
+        Left = 637
         Top = 15
-        Width = 74
-        Height = 13
+        Width = 84
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Date Required'
-        ExplicitLeft = 651
+        ExplicitLeft = 628
       end
       object Label2: TLabel
         Left = 9
         Top = 42
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label1: TLabel
-        Left = 660
+        Left = 663
         Top = 42
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Rep'
-        ExplicitLeft = 666
+        ExplicitLeft = 654
       end
       object Label5: TLabel
-        Left = 598
+        Left = 585
         Top = 72
-        Width = 91
-        Height = 13
+        Width = 103
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Account Manager'
-        ExplicitLeft = 604
+        ExplicitLeft = 576
       end
       object Label4: TLabel
         Left = 9
         Top = 72
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object edtJobBag: TEdit
-        Left = 80
+        Left = 90
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = CheckOK
         OnExit = edtJobBagExit
         OnKeyPress = edtJobBagKeyPress
       end
       object edtStartDate: TEdit
-        Left = 512
+        Left = 515
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 1
+        ExplicitLeft = 506
       end
       object edtDateReq: TEdit
-        Left = 727
+        Left = 730
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 2
         OnChange = CheckOK
+        ExplicitLeft = 721
       end
       object edtCustomer: TEdit
-        Left = 80
+        Left = 90
         Top = 38
-        Width = 285
-        Height = 21
+        Width = 288
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 3
+        ExplicitWidth = 279
       end
       object edtRep: TEdit
-        Left = 693
+        Left = 696
         Top = 38
         Width = 115
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 4
+        ExplicitLeft = 687
       end
       object edtAccountManager: TEdit
-        Left = 693
+        Left = 696
         Top = 68
         Width = 115
-        Height = 21
+        Height = 25
         TabStop = False
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 5
+        ExplicitLeft = 687
       end
       object edtDescription: TEdit
-        Left = 80
+        Left = 90
         Top = 68
         Width = 441
         Height = 21
@@ -272,78 +283,79 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     object pnlNCAHead: TPanel
       Left = 0
       Top = 194
-      Width = 812
+      Width = 821
       Height = 72
       Align = alTop
       ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 97
+      ExplicitWidth = 806
       DesignSize = (
-        812
+        821
         72)
       object Label7: TLabel
         Left = 8
         Top = 16
-        Width = 61
-        Height = 13
+        Width = 70
+        Height = 17
         Caption = 'Date Raised'
       end
       object Label8: TLabel
         Left = 595
         Top = 16
-        Width = 49
-        Height = 13
+        Width = 57
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Raised by'
-        ExplicitLeft = 601
+        ExplicitLeft = 586
       end
       object Label9: TLabel
-        Left = 301
+        Left = 304
         Top = 48
-        Width = 66
-        Height = 13
+        Width = 74
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Raising Dept'
-        ExplicitLeft = 307
+        ExplicitLeft = 295
       end
       object Label10: TLabel
-        Left = 582
+        Left = 580
         Top = 48
-        Width = 63
-        Height = 13
+        Width = 72
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Source Dept'
-        ExplicitLeft = 588
+        ExplicitLeft = 571
       end
       object Label11: TLabel
-        Left = 298
+        Left = 301
         Top = 16
-        Width = 64
-        Height = 13
+        Width = 74
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Reason Type'
-        ExplicitLeft = 304
+        ExplicitLeft = 292
       end
       object Label22: TLabel
         Left = 8
         Top = 48
-        Width = 46
-        Height = 13
+        Width = 53
+        Height = 17
         Caption = 'Category'
       end
       object edtRaisedBy: TEdit
-        Left = 650
+        Left = 657
         Top = 12
         Width = 115
-        Height = 21
+        Height = 25
         TabStop = False
         Anchors = [akTop, akRight]
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 0
+        ExplicitLeft = 648
       end
       object BitBtn2: TBitBtn
-        Left = 777
+        Left = 780
         Top = 10
         Width = 25
         Height = 25
@@ -357,45 +369,49 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParentFont = False
         TabOrder = 4
         OnClick = BitBtn2Click
+        ExplicitLeft = 765
       end
       object dblkpRaisedByDept: TDBLookupComboBox
-        Left = 370
+        Left = 382
         Top = 44
         Width = 153
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Non_Conform_Dept'
         ListField = 'Non_Conform_Dept_Descr'
         ListSource = dtsRaisingDept
         TabOrder = 7
         OnClick = CheckOK
+        ExplicitLeft = 373
       end
       object dblkpSourceDept: TDBLookupComboBox
-        Left = 651
+        Left = 658
         Top = 44
         Width = 155
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Non_Conform_Dept'
         ListField = 'Non_Conform_Dept_Descr'
         ListSource = dtsSourceDept
         TabOrder = 9
         OnClick = CheckOK
+        ExplicitLeft = 649
       end
       object dblkpNCType: TDBLookupComboBox
-        Left = 370
+        Left = 382
         Top = 12
         Width = 153
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         KeyField = 'Non_Conform_Type'
         ListField = 'Non_Conform_Type_Descr'
         ListSource = dtsNCType
         TabOrder = 2
         OnClick = CheckOK
+        ExplicitLeft = 373
       end
       object BitBtn1: TBitBtn
-        Left = 528
+        Left = 540
         Top = 10
         Width = 25
         Height = 25
@@ -409,9 +425,10 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParentFont = False
         TabOrder = 3
         OnClick = BitBtn1Click
+        ExplicitLeft = 531
       end
       object BitBtn3: TBitBtn
-        Left = 529
+        Left = 541
         Top = 42
         Width = 25
         Height = 25
@@ -425,17 +442,18 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParentFont = False
         TabOrder = 8
         OnClick = BitBtn3Click
+        ExplicitLeft = 532
       end
       object edtDateRaised: TEdit
-        Left = 80
+        Left = 85
         Top = 12
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 10
         OnExit = edtDateRaisedExit
       end
       object btnDateRaised: TBitBtn
-        Left = 168
+        Left = 173
         Top = 10
         Width = 25
         Height = 25
@@ -457,10 +475,10 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         OnClick = btnDateRaisedClick
       end
       object dblkpCategory: TDBLookupComboBox
-        Left = 80
+        Left = 85
         Top = 43
         Width = 155
-        Height = 21
+        Height = 25
         KeyField = 'Non_Conform_Category'
         ListField = 'Non_Conform_Category_Descr'
         ListSource = dtsCategory
@@ -468,7 +486,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         OnClick = CheckOK
       end
       object BitBtn5: TBitBtn
-        Left = 239
+        Left = 244
         Top = 39
         Width = 25
         Height = 25
@@ -486,281 +504,299 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     object pnlNotes: TPanel
       Left = 0
       Top = 266
-      Width = 812
-      Height = 277
+      Width = 821
+      Height = 336
       Align = alClient
       ParentBackground = False
       TabOrder = 3
-      ExplicitTop = 97
-      ExplicitHeight = 485
+      ExplicitWidth = 806
+      ExplicitHeight = 268
       object pnlNCADetails: TPanel
         Left = 1
         Top = 1
-        Width = 810
+        Width = 819
         Height = 85
         Align = alTop
         Caption = 'pnlNCADetails'
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 804
         object Panel5: TPanel
           Left = 1
           Top = 1
-          Width = 808
+          Width = 817
           Height = 20
           Align = alTop
           Alignment = taLeftJustify
           Caption = 'Non Conformance Details'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 802
         end
         object memDetails: TMemo
           Left = 1
           Top = 21
-          Width = 808
+          Width = 817
           Height = 63
           Align = alClient
           ScrollBars = ssVertical
           TabOrder = 1
           OnChange = memDetailsChange
+          ExplicitWidth = 802
         end
       end
       object pnlResponse: TPanel
         Left = 1
         Top = 86
-        Width = 810
-        Height = 20
+        Width = 819
+        Height = 79
         Align = alClient
         Caption = 'pnlResponse'
         ParentBackground = False
         TabOrder = 1
-        ExplicitHeight = 228
+        ExplicitWidth = 804
+        ExplicitHeight = 11
         object Panel6: TPanel
           Left = 1
           Top = 1
-          Width = 808
+          Width = 817
           Height = 20
           Align = alTop
           Alignment = taLeftJustify
           Caption = 'Response Details'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 802
         end
         object memResponse: TMemo
           Left = 1
           Top = 21
-          Width = 808
-          Height = 79
+          Width = 817
+          Height = 57
           Align = alClient
           ScrollBars = ssVertical
           TabOrder = 1
-          ExplicitHeight = 206
+          ExplicitWidth = 802
+          ExplicitHeight = 79
         end
       end
       object pnlAction: TPanel
         Left = 1
-        Top = 106
-        Width = 810
+        Top = 165
+        Width = 819
         Height = 85
         Align = alBottom
         Caption = 'pnlAction'
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 314
+        ExplicitTop = 97
+        ExplicitWidth = 804
         object pnlActionLabel: TPanel
           Left = 1
           Top = 1
-          Width = 808
+          Width = 817
           Height = 20
           Align = alTop
           Alignment = taLeftJustify
           Caption = 'Corrective Action'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 802
         end
         object memAction: TRichEdit
           Left = 1
           Top = 21
-          Width = 808
+          Width = 817
           Height = 63
           Align = alClient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           TabOrder = 1
+          ExplicitWidth = 802
         end
       end
       object pnlPrevent: TPanel
         Left = 1
-        Top = 191
-        Width = 810
+        Top = 250
+        Width = 819
         Height = 85
         Align = alBottom
         Caption = 'pnlPrevent'
         ParentBackground = False
         TabOrder = 3
-        ExplicitTop = 399
+        ExplicitTop = 182
+        ExplicitWidth = 804
         object Panel3: TPanel
           Left = 1
           Top = 1
-          Width = 808
+          Width = 817
           Height = 20
           Align = alTop
           Alignment = taLeftJustify
           Caption = 'Preventative Action'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 802
         end
         object memPrevent: TRichEdit
           Left = 1
           Top = 21
-          Width = 808
+          Width = 817
           Height = 63
           Align = alClient
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           TabOrder = 1
+          ExplicitWidth = 802
         end
       end
     end
     object pnlPO: TPanel
       Left = 0
       Top = 0
-      Width = 812
+      Width = 821
       Height = 97
       Align = alTop
       ParentBackground = False
       TabOrder = 4
+      ExplicitWidth = 806
       DesignSize = (
-        812
+        821
         97)
       object Label15: TLabel
         Left = 9
         Top = 15
-        Width = 79
-        Height = 13
+        Width = 91
+        Height = 17
         Caption = 'Purchase Order'
       end
       object Label16: TLabel
-        Left = 456
+        Left = 450
         Top = 15
-        Width = 51
-        Height = 13
+        Width = 58
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Start Date'
-        ExplicitLeft = 462
+        ExplicitLeft = 441
       end
       object Label17: TLabel
-        Left = 645
+        Left = 639
         Top = 15
-        Width = 74
-        Height = 13
+        Width = 84
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Date Required'
-        ExplicitLeft = 651
+        ExplicitLeft = 630
       end
       object Label18: TLabel
         Left = 9
         Top = 42
-        Width = 49
-        Height = 13
+        Width = 56
+        Height = 17
         Caption = 'Customer'
       end
       object Label19: TLabel
-        Left = 660
+        Left = 663
         Top = 42
-        Width = 20
-        Height = 13
+        Width = 23
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Rep'
-        ExplicitLeft = 666
+        ExplicitLeft = 654
       end
       object Label20: TLabel
-        Left = 598
+        Left = 585
         Top = 72
-        Width = 91
-        Height = 13
+        Width = 103
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Account Manager'
-        ExplicitLeft = 604
+        ExplicitLeft = 576
       end
       object Label21: TLabel
         Left = 9
         Top = 72
-        Width = 59
-        Height = 13
+        Width = 66
+        Height = 17
         Caption = 'Description'
       end
       object edtPurchaseOrder: TEdit
-        Left = 96
+        Left = 105
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 0
         OnChange = CheckOK
         OnExit = edtPurchaseOrderExit
         OnKeyPress = edtJobBagKeyPress
       end
       object edtPOStartDate: TEdit
-        Left = 512
+        Left = 515
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 1
+        ExplicitLeft = 506
       end
       object edtPODateReq: TEdit
-        Left = 727
+        Left = 730
         Top = 11
         Width = 81
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 2
         OnChange = CheckOK
+        ExplicitLeft = 721
       end
       object edtPOCustomer: TEdit
-        Left = 96
+        Left = 105
         Top = 38
-        Width = 285
-        Height = 21
+        Width = 288
+        Height = 25
         Anchors = [akLeft, akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 3
+        ExplicitWidth = 279
       end
       object edtPORep: TEdit
-        Left = 693
+        Left = 696
         Top = 38
         Width = 115
-        Height = 21
+        Height = 25
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 4
+        ExplicitLeft = 687
       end
       object edtPOAccountManager: TEdit
-        Left = 693
+        Left = 696
         Top = 68
         Width = 115
-        Height = 21
+        Height = 25
         TabStop = False
         Anchors = [akTop, akRight]
         Enabled = False
         ReadOnly = True
         TabOrder = 5
+        ExplicitLeft = 687
       end
       object edtPODescription: TEdit
-        Left = 96
+        Left = 105
         Top = 68
         Width = 441
         Height = 21
@@ -778,50 +814,52 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     end
     object pnlQASignOff: TPanel
       Left = 0
-      Top = 543
-      Width = 812
+      Top = 602
+      Width = 821
       Height = 81
       Align = alBottom
       ParentBackground = False
       TabOrder = 5
-      ExplicitTop = 582
+      ExplicitLeft = -1
+      ExplicitTop = 544
+      ExplicitWidth = 812
       DesignSize = (
-        812
+        821
         81)
       object Label14: TLabel
-        Left = 635
+        Left = 620
         Top = 40
-        Width = 88
-        Height = 13
+        Width = 101
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Cost to Company'
-        ExplicitLeft = 641
+        ExplicitLeft = 611
       end
       object Label6: TLabel
-        Left = 651
-        Top = 8
-        Width = 70
-        Height = 13
+        Left = 643
+        Top = 11
+        Width = 78
+        Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Cost to Client'
-        ExplicitLeft = 657
+        ExplicitLeft = 634
       end
       object Label12: TLabel
-        Left = 336
-        Top = 10
-        Width = 90
-        Height = 13
+        Left = 329
+        Top = 11
+        Width = 103
+        Height = 17
         Caption = 'QA Signed off by:'
       end
       object Label13: TLabel
         Left = 392
         Top = 42
-        Width = 30
-        Height = 13
+        Width = 34
+        Height = 17
         Caption = ' Date:'
       end
       object memTotalCost: TMemo
-        Left = 723
+        Left = 726
         Top = 36
         Width = 72
         Height = 21
@@ -832,10 +870,11 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         OnEnter = SaveValue
         OnExit = ValidateMoney3DP
         OnKeyPress = CheckKeyIsFloat
+        ExplicitLeft = 711
       end
       object memCosttoClient: TMemo
-        Left = 723
-        Top = 4
+        Left = 726
+        Top = 9
         Width = 73
         Height = 21
         Anchors = [akTop, akRight]
@@ -845,6 +884,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         OnEnter = SaveValue
         OnExit = ValidateMoney3DP
         OnKeyPress = CheckKeyIsFloat
+        ExplicitLeft = 717
       end
       object rdgrpJobRePrinted: TRadioGroup
         Left = 8
@@ -873,10 +913,10 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         TabOrder = 3
       end
       object dblkpQAOperator: TDBLookupComboBox
-        Left = 424
-        Top = 6
+        Left = 431
+        Top = 7
         Width = 113
-        Height = 21
+        Height = 25
         KeyField = 'QA_Operator'
         ListField = 'QA_Operator_Name'
         ListSource = dtsQAOperator
@@ -884,8 +924,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         OnClick = dblkpQAOperatorClick
       end
       object BitBtn4: TBitBtn
-        Left = 542
-        Top = 4
+        Left = 549
+        Top = 7
         Width = 25
         Height = 25
         Caption = '...'
@@ -899,8 +939,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         OnClick = BitBtn1Click
       end
       object btnClear: TBitBtn
-        Left = 576
-        Top = 4
+        Left = 583
+        Top = 7
         Width = 27
         Height = 25
         Glyph.Data = {
@@ -921,16 +961,16 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         OnClick = btnClearClick
       end
       object edtQASignOff: TEdit
-        Left = 424
+        Left = 432
         Top = 38
         Width = 81
-        Height = 21
+        Height = 25
         TabOrder = 7
         OnExit = edtQASignOffExit
       end
       object btnDate: TBitBtn
-        Left = 510
-        Top = 36
+        Left = 518
+        Top = 38
         Width = 25
         Height = 25
         Glyph.Data = {
@@ -961,8 +1001,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'where ((Inactive = '#39'N'#39') or (Inactive is NULL)) or (Non_Conform_T' +
         'ype = :Non_Conform_Type)'
       'order by Non_Conform_Type_Descr')
-    Left = 425
-    Top = 17
+    Left = 483
+    Top = 141
     ParamData = <
       item
         Name = 'Non_Conform_Type'
@@ -977,8 +1017,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'where ((Inactive = '#39'N'#39') or (Inactive is NULL)) or (Non_Conform_D' +
         'ept = :Non_Conform_Dept)'
       'order by Non_Conform_Dept_Descr')
-    Left = 425
-    Top = 81
+    Left = 467
+    Top = 21
     ParamData = <
       item
         Name = 'Non_Conform_Dept'
@@ -993,8 +1033,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'where ((Inactive = '#39'N'#39') or (Inactive is NULL)) or (Non_Conform_D' +
         'ept = :Non_Conform_Dept)'
       'order by Non_Conform_Dept_Descr')
-    Left = 424
-    Top = 136
+    Left = 514
+    Top = 26
     ParamData = <
       item
         Name = 'Non_Conform_Dept'
@@ -1009,8 +1049,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'where ((Inactive = '#39'N'#39') or (Inactive is NULL)) or (QA_operator =' +
         ' :QA_Operator)'
       'order by QA_Operator_Name')
-    Left = 425
-    Top = 204
+    Left = 427
+    Top = 111
     ParamData = <
       item
         Name = 'QA_Operator'
@@ -1018,23 +1058,23 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   end
   object dtsNCType: TDataSource
     DataSet = qryNCType
-    Left = 521
-    Top = 17
+    Left = 395
+    Top = 21
   end
   object dtsRaisingDept: TDataSource
     DataSet = qryRaisingDept
-    Left = 513
-    Top = 81
+    Left = 321
+    Top = 173
   end
   object dtsSourceDept: TDataSource
     DataSet = qrySourceDept
-    Left = 520
-    Top = 136
+    Left = 530
+    Top = 170
   end
   object dtsQAOperator: TDataSource
     DataSet = qryQAOperator
-    Left = 552
-    Top = 200
+    Left = 570
+    Top = 130
   end
   object qryGetNonConform: TFDQuery
     ConnectionName = 'PB'
@@ -1165,8 +1205,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'urchase_OrderLine.Purchase_Order = Job_Bag_Non_Conform.Purchase_' +
         'Order)'
       'WHERE Job_Bag_Non_Conform = :Job_Bag_Non_Conform')
-    Left = 184
-    Top = 16
+    Left = 670
+    Top = 180
     ParamData = <
       item
         Name = 'Job_Bag_Non_Conform'
@@ -1188,8 +1228,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       'Job_Bag.Customer = Customer.Customer and'
       'Job_Bag.Office_Contact = Operator.Operator and'
       'Job_Bag.rep = rep.rep')
-    Left = 184
-    Top = 80
+    Left = 502
+    Top = 100
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1244,8 +1284,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       'Samples_Available = :Samples_Available,'
       'Non_Conform_Category = :Non_Conform_Category'
       'Where Job_Bag_Non_Conform = :Job_Bag_Non_Conform')
-    Left = 296
-    Top = 16
+    Left = 650
+    Top = 220
     ParamData = <
       item
         Name = 'Date_Point'
@@ -1337,8 +1377,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       'Update Job_Bag_Non_Conform'
       'set inactive = '#39'Y'#39', inactive_date = getdate()'
       'where Job_Bag_Non_Conform = :Job_Bag_Non_Conform')
-    Left = 288
-    Top = 88
+    Left = 304
+    Top = 38
     ParamData = <
       item
         Name = 'Job_Bag_Non_Conform'
@@ -1507,8 +1547,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       'Purchase_orderLine.Customer = Customer.Customer and'
       'Purchase_order.Office_Contact = Operator.Operator and'
       'Purchase_orderLine.rep = rep.rep')
-    Left = 184
-    Top = 153
+    Left = 718
+    Top = 119
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1523,8 +1563,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'where ((Inactive = '#39'N'#39') or (Inactive is NULL)) or (Non_Conform_C' +
         'ategory = :Non_Conform_Category)'
       'order by Non_Conform_Category_Descr')
-    Left = 184
-    Top = 240
+    Left = 622
+    Top = 132
     ParamData = <
       item
         Name = 'Non_Conform_Category'
@@ -1532,7 +1572,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   end
   object dtsCategory: TDataSource
     DataSet = qryCategory
-    Left = 264
-    Top = 240
+    Left = 530
+    Top = 188
   end
 end

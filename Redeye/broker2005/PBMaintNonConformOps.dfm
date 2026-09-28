@@ -8,31 +8,31 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 8
-    Top = 16
-    Width = 120
-    Height = 13
+    Top = 12
+    Width = 136
+    Height = 17
     Caption = 'Current NCA Recipients'
   end
   object Label2: TLabel
     Left = 328
     Top = 56
-    Width = 98
-    Height = 13
+    Width = 114
+    Height = 17
     Caption = 'Available Processes'
   end
   object Label4: TLabel
     Left = 288
-    Top = 16
-    Width = 120
-    Height = 13
+    Top = 12
+    Width = 137
+    Height = 17
     Caption = 'Un-assigned Operators'
   end
   object lstbxMembers: TListBox
@@ -40,7 +40,7 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Top = 32
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 0
     OnClick = lstbxMembersClick
@@ -99,7 +99,7 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Top = 32
     Width = 169
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     MultiSelect = True
     TabOrder = 3
     OnClick = lstbxNonMembersClick
@@ -113,6 +113,8 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 266
+    ExplicitWidth = 462
     object btnOK: TBitBtn
       Left = 153
       Top = 8
@@ -138,7 +140,7 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Top = 32
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 5
     Visible = False
   end
@@ -147,7 +149,7 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Top = 32
     Width = 41
     Height = 225
-    ItemHeight = 13
+    ItemHeight = 17
     TabOrder = 6
     Visible = False
   end

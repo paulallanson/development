@@ -2,8 +2,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Left = 211
   Top = 165
   Caption = 'Works Instructions'
-  ClientHeight = 313
-  ClientWidth = 937
+  ClientHeight = 279
+  ClientWidth = 931
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,7 +24,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 937
+    Width = 931
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -65,14 +65,14 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 937
+    Width = 931
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 931
+        Width = 935
       end>
     ExplicitWidth = 858
     object ToolBar1: TToolBar
@@ -169,8 +169,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 937
-    Height = 178
+    Width = 931
+    Height = 144
     Align = alClient
     DataSource = dtmdlWOrders.dtsWOHeaderGrid
     DrawingStyle = gdsGradient
@@ -277,8 +277,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 253
-    Width = 937
+    Top = 219
+    Width = 931
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -360,8 +360,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 294
-    Width = 937
+    Top = 260
+    Width = 931
     Height = 19
     Panels = <
       item

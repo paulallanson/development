@@ -299,8 +299,8 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
   end
   object dtsWH: TDataSource
     DataSet = qryWarehouse
-    Left = 280
-    Top = 8
+    Left = 246
+    Top = 26
   end
   object qryBins: TFDQuery
     ConnectionName = 'PB'
@@ -310,8 +310,8 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       'where Part_Store = :Part_Store and'
       'Part_bin >= :Bin_From and Part_bin <= :Bin_To'
       'Order By Part_Bin')
-    Left = 136
-    Top = 144
+    Left = 138
+    Top = 36
     ParamData = <
       item
         Name = 'Part_Store'

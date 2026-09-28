@@ -8,30 +8,30 @@ object CSLUCustCstCntrFrm: TCSLUCustCstCntrFrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
+  Font.Height = -13
   Font.Name = 'Arial'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  TextHeight = 15
+  TextHeight = 16
   object CountLabel: TLabel
-    Left = 249
+    Left = 248
     Top = 224
-    Width = 64
-    Height = 15
+    Width = 65
+    Height = 16
     Alignment = taRightJustify
     Caption = 'CountLabel'
   end
   object CustLabel: TLabel
     Left = 16
     Top = 14
-    Width = 57
-    Height = 15
+    Width = 58
+    Height = 16
     Caption = 'CustLabel'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
@@ -45,7 +45,7 @@ object CSLUCustCstCntrFrm: TCSLUCustCstCntrFrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -53,7 +53,7 @@ object CSLUCustCstCntrFrm: TCSLUCustCstCntrFrm
     TabOrder = 0
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnColEnter = DetsDBGridColEnter

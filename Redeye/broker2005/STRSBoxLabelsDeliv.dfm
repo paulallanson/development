@@ -3,8 +3,8 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
   Top = 165
   BorderStyle = bsDialog
   Caption = 'Delivery Box Labels'
-  ClientHeight = 316
-  ClientWidth = 410
+  ClientHeight = 307
+  ClientWidth = 404
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    410
-    316)
+    404
+    307)
   TextHeight = 17
   object POGroupBox: TGroupBox
     Left = 8
@@ -181,7 +181,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 271
+    Top = 262
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -195,11 +195,10 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 262
   end
   object PreviewBitBtn: TBitBtn
     Left = 144
-    Top = 271
+    Top = 262
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -227,11 +226,10 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     ParentFont = False
     TabOrder = 3
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 262
   end
   object PrintBitBtn: TBitBtn
     Left = 232
-    Top = 271
+    Top = 262
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -260,7 +258,6 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     ParentFont = False
     TabOrder = 4
     OnClick = PrintBitBtnClick
-    ExplicitTop = 262
   end
   object GroupBox5: TGroupBox
     Left = 8

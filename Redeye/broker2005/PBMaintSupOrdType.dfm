@@ -3,8 +3,8 @@ object PBMaintSupOrdTypeFrm: TPBMaintSupOrdTypeFrm
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Maintain Form Reference'
-  ClientHeight = 177
-  ClientWidth = 468
+  ClientHeight = 168
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -202,7 +202,7 @@ object PBMaintSupOrdTypeFrm: TPBMaintSupOrdTypeFrm
     object Label6: TLabel
       Left = 16
       Top = 60
-      Width = 56
+      Width = 55
       Height = 13
       Caption = 'Order Type'
       Font.Charset = ANSI_CHARSET

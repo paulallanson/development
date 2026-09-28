@@ -822,8 +822,8 @@ begin
   try
     with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Invoice Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Invoice Bin',inttostr(DefaultBin));
+      WriteString('Sales Credits', 'Invoice Printer',DefaultPrinter);
+      WriteString('Sales Credits', 'Invoice Bin',inttostr(DefaultBin));
     end;
   finally
     IniFile.Free;

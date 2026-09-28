@@ -2,8 +2,8 @@ object PBAccExport3Frm: TPBAccExport3Frm
   Left = 145
   Top = 140
   Caption = 'Export & Import Wizard'
-  ClientHeight = 300
-  ClientWidth = 358
+  ClientHeight = 291
+  ClientWidth = 352
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -20,7 +20,7 @@ object PBAccExport3Frm: TPBAccExport3Frm
     Left = 8
     Top = 70
     Width = 113
-    Height = 15
+    Height = 17
     Caption = 'Alias of Datasource'
   end
   object ExportLbl: TLabel
@@ -41,7 +41,7 @@ object PBAccExport3Frm: TPBAccExport3Frm
     Left = 8
     Top = 70
     Width = 58
-    Height = 15
+    Height = 17
     Caption = 'File Name'
   end
   object lblStatus: TLabel

@@ -12,13 +12,13 @@ object PBRPDelivFrm: TPBRPDelivFrm
   Font.Height = -16
   Font.Name = 'Courier New'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 18
   object PBDelivQuickReport: TQuickRep
     Left = 74
     Top = 8
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = PBDelivQuickReportBeforePrint
     DataSet = PODelivSQL
@@ -77,10 +77,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRSubDetail
-      Left = 38
-      Top = 38
-      Width = 718
-      Height = 779
+      Left = 47
+      Top = 47
+      Width = 898
+      Height = 974
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
@@ -93,8 +93,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        2061.104166666667000000
-        1899.708333333333000000)
+        2061.633333333333000000
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = PBDelivQuickReport
@@ -103,14 +103,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       PrintIfEmpty = True
       object Accountlbl: TQRLabel
         Left = 1
-        Top = 450
-        Width = 81
-        Height = 24
+        Top = 562
+        Width = 101
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          2.645833333333333000
-          1190.625000000000000000
-          214.312500000000000000)
+          2.116666666666667000
+          1189.566666666667000000
+          213.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -120,7 +120,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -131,15 +131,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object PONumberLbl: TQRLabel
-        Left = 632
-        Top = 451
-        Width = 81
-        Height = 20
+        Left = 790
+        Top = 564
+        Width = 101
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1672.166666666667000000
-          1193.270833333333000000
-          214.312500000000000000)
+          1193.800000000000000000
+          213.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -149,7 +149,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -160,15 +160,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DateLbl: TQRLabel
-        Left = 504
-        Top = 450
-        Width = 99
-        Height = 24
+        Left = 630
+        Top = 562
+        Width = 125
+        Height = 30
         Size.Values = (
           63.500000000000000000
           1333.500000000000000000
-          1190.625000000000000000
-          261.937500000000000000)
+          1189.566666666667000000
+          264.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -178,7 +178,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -189,15 +189,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object BoxesLbl: TQRLabel
-        Left = 632
-        Top = 540
-        Width = 61
-        Height = 20
+        Left = 790
+        Top = 675
+        Width = 79
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1672.166666666667000000
           1428.750000000000000000
-          161.395833333333300000)
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -207,7 +207,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -219,14 +219,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object QtyOrderedLbl: TQRLabel
         Left = 1
-        Top = 540
-        Width = 71
-        Height = 20
+        Top = 675
+        Width = 92
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2.645833333333333000
+          2.116666666666667000
           1428.750000000000000000
-          187.854166666666700000)
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -236,7 +236,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -247,15 +247,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object OrderRefLbl: TQRLabel
-        Left = 397
-        Top = 450
-        Width = 78
-        Height = 24
+        Left = 496
+        Top = 562
+        Width = 99
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          1050.395833333333000000
-          1190.625000000000000000
-          206.375000000000000000)
+          1049.866666666667000000
+          1189.566666666667000000
+          209.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -265,7 +265,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Gill Sans MT'
         Font.Style = []
         ParentFont = False
@@ -276,15 +276,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object YourRefLbl: TQRLabel
-        Left = 129
-        Top = 450
-        Width = 122
-        Height = 24
+        Left = 161
+        Top = 562
+        Width = 155
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          341.312500000000000000
-          1190.625000000000000000
-          322.791666666666700000)
+          340.783333333333300000
+          1189.566666666667000000
+          328.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -292,6 +292,12 @@ object PBRPDelivFrm: TPBRPDelivFrm
         AlignToBand = False
         Caption = 'XXXXXXXXXXX'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'Gill Sans MT'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -299,10 +305,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText2: TQRDBText
-        Left = 129
-        Top = 451
-        Width = 256
-        Height = 20
+        Left = 161
+        Top = 564
+        Width = 320
+        Height = 25
         Size.Values = (
           52.916666666666670000
           341.312500000000000000
@@ -319,7 +325,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Cust_Order_no'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -332,15 +338,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText3: TQRDBText
-        Left = 397
-        Top = 451
-        Width = 105
-        Height = 20
+        Left = 496
+        Top = 564
+        Width = 134
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1050.395833333333000000
-          1193.270833333333000000
-          277.812500000000000000)
+          1049.866666666667000000
+          1193.800000000000000000
+          283.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -351,7 +357,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Purchase_Order'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -365,14 +371,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object QRDBText4: TQRDBText
         Left = 1
-        Top = 540
-        Width = 57
-        Height = 20
+        Top = 675
+        Width = 74
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2.645833333333333000
+          2.116666666666667000
           1428.750000000000000000
-          150.812500000000000000)
+          156.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -383,7 +389,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Quantity'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -396,15 +402,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText5: TQRDBText
-        Left = 497
-        Top = 540
-        Width = 99
-        Height = 20
+        Left = 621
+        Top = 675
+        Width = 126
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1314.979166666667000000
+          1314.450000000000000000
           1428.750000000000000000
-          261.937500000000000000)
+          266.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -415,7 +421,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Qty_to_Deliver'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -428,10 +434,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRDBText6: TQRDBText
-        Left = 121
-        Top = 540
-        Width = 361
-        Height = 45
+        Left = 151
+        Top = 675
+        Width = 451
+        Height = 56
         Size.Values = (
           119.062500000000000000
           320.145833333333300000
@@ -449,7 +455,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Customers_Desc'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -463,9 +469,9 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object AddressMemo: TQRMemo
         Left = 1
-        Top = 263
-        Width = 331
-        Height = 154
+        Top = 329
+        Width = 414
+        Height = 192
         Size.Values = (
           407.458333333333300000
           2.645833333333333000
@@ -480,7 +486,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         Lines.Strings = (
@@ -499,10 +505,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DeliveryMemo: TQRMemo
-        Left = 397
-        Top = 263
-        Width = 311
-        Height = 146
+        Left = 496
+        Top = 329
+        Width = 389
+        Height = 183
         Size.Values = (
           386.291666666666700000
           1050.395833333333000000
@@ -517,7 +523,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         Lines.Strings = (
@@ -535,14 +541,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object Account: TQRDBText
         Left = 1
-        Top = 450
-        Width = 94
-        Height = 20
+        Top = 562
+        Width = 122
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2.645833333333333000
-          1190.625000000000000000
-          248.708333333333300000)
+          2.116666666666667000
+          1189.566666666667000000
+          258.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -553,7 +559,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         DataField = 'Account_Code'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -566,10 +572,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DelInstructMemo: TQRMemo
-        Left = 120
-        Top = 656
-        Width = 561
-        Height = 41
+        Left = 150
+        Top = 820
+        Width = 701
+        Height = 51
         Size.Values = (
           108.479166666666700000
           317.500000000000000000
@@ -584,7 +590,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         Lines.Strings = (
@@ -601,15 +607,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object FormRefLbl: TQRLabel
-        Left = 121
-        Top = 592
-        Width = 71
-        Height = 20
+        Left = 151
+        Top = 740
+        Width = 89
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          320.145833333333300000
+          319.616666666666700000
           1566.333333333333000000
-          187.854166666666700000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -619,7 +625,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -630,15 +636,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object FormRefDescLbl: TQRLabel
-        Left = 120
-        Top = 624
-        Width = 79
-        Height = 20
+        Left = 150
+        Top = 780
+        Width = 101
+        Height = 25
         Size.Values = (
           52.916666666666670000
           317.500000000000000000
           1651.000000000000000000
-          209.020833333333300000)
+          213.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -648,7 +654,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -659,10 +665,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object DeliveryDateLbl: TQRLabel
-        Left = 504
-        Top = 451
-        Width = 105
-        Height = 20
+        Left = 630
+        Top = 564
+        Width = 131
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1333.500000000000000000
@@ -678,7 +684,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -690,14 +696,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object QRLabel1: TQRLabel
         Left = 1
-        Top = 240
-        Width = 115
-        Height = 20
+        Top = 300
+        Width = 141
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2.645833333333333000
+          2.116666666666667000
           635.000000000000000000
-          304.270833333333300000)
+          298.450000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -707,7 +713,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -718,15 +724,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object lblDelInst: TQRLabel
-        Left = 397
-        Top = 240
-        Width = 142
-        Height = 20
+        Left = 496
+        Top = 300
+        Width = 173
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1050.395833333333000000
+          1049.866666666667000000
           635.000000000000000000
-          375.708333333333300000)
+          366.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -736,7 +742,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -748,14 +754,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object QRLabel3: TQRLabel
         Left = 1
-        Top = 427
-        Width = 96
-        Height = 20
+        Top = 534
+        Width = 117
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2.645833333333333000
-          1129.770833333333000000
-          254.000000000000000000)
+          2.116666666666667000
+          1130.300000000000000000
+          247.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -765,7 +771,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -776,15 +782,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel4: TQRLabel
-        Left = 129
-        Top = 427
-        Width = 92
-        Height = 20
+        Left = 161
+        Top = 534
+        Width = 114
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          341.312500000000000000
-          1129.770833333333000000
-          243.416666666666700000)
+          340.783333333333300000
+          1130.300000000000000000
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -794,7 +800,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -805,15 +811,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel5: TQRLabel
-        Left = 397
-        Top = 427
-        Width = 85
-        Height = 20
+        Left = 496
+        Top = 534
+        Width = 103
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1050.395833333333000000
-          1129.770833333333000000
-          224.895833333333300000)
+          1049.866666666667000000
+          1130.300000000000000000
+          218.016666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -823,7 +829,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -834,15 +840,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel6: TQRLabel
-        Left = 504
-        Top = 427
-        Width = 93
-        Height = 20
+        Left = 630
+        Top = 534
+        Width = 114
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1333.500000000000000000
-          1129.770833333333000000
-          246.062500000000000000)
+          1130.300000000000000000
+          241.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -852,7 +858,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -863,15 +869,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel7: TQRLabel
-        Left = 632
-        Top = 427
-        Width = 52
-        Height = 20
+        Left = 790
+        Top = 534
+        Width = 64
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1672.166666666667000000
-          1129.770833333333000000
-          137.583333333333300000)
+          1130.300000000000000000
+          135.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -881,7 +887,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -893,14 +899,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object QRLabel8: TQRLabel
         Left = 1
-        Top = 517
-        Width = 70
-        Height = 20
+        Top = 646
+        Width = 85
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2.645833333333333000
-          1367.895833333333000000
-          185.208333333333300000)
+          2.116666666666667000
+          1367.366666666667000000
+          179.916666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -910,7 +916,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -921,15 +927,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel9: TQRLabel
-        Left = 121
-        Top = 517
-        Width = 79
-        Height = 20
+        Left = 151
+        Top = 646
+        Width = 97
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          320.145833333333300000
-          1367.895833333333000000
-          209.020833333333300000)
+          319.616666666666700000
+          1367.366666666667000000
+          205.316666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -939,7 +945,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -950,15 +956,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel10: TQRLabel
-        Left = 496
-        Top = 517
-        Width = 86
-        Height = 20
+        Left = 620
+        Top = 646
+        Width = 104
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1312.333333333333000000
-          1367.895833333333000000
-          227.541666666666700000)
+          1367.366666666667000000
+          220.133333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -968,7 +974,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -979,15 +985,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel11: TQRLabel
-        Left = 632
-        Top = 517
-        Width = 86
-        Height = 20
+        Left = 790
+        Top = 646
+        Width = 106
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1672.166666666667000000
-          1367.895833333333000000
-          227.541666666666700000)
+          1367.366666666667000000
+          224.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -997,7 +1003,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1008,15 +1014,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel2: TQRLabel
-        Left = 120
-        Top = 755
-        Width = 136
-        Height = 20
+        Left = 150
+        Top = 944
+        Width = 165
+        Height = 25
         Size.Values = (
           52.916666666666670000
           317.500000000000000000
-          1997.604166666667000000
-          359.833333333333300000)
+          1998.133333333333000000
+          349.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1026,7 +1032,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1038,14 +1044,14 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
       object gtlblFSCClaim: TQRLabel
         Left = 0
-        Top = 709
-        Width = 53
-        Height = 16
+        Top = 886
+        Width = 69
+        Height = 22
         Size.Values = (
-          42.333333333333330000
+          46.566666666666670000
           0.000000000000000000
-          1875.895833333333000000
-          140.229166666666700000)
+          1875.366666666667000000
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1055,7 +1061,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Calibri'
         Font.Style = [fsItalic]
         ParentFont = False
@@ -1066,10 +1072,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 10
       end
       object ReportImage: TQRImage
-        Left = 477
+        Left = 596
         Top = 0
-        Width = 241
-        Height = 85
+        Width = 301
+        Height = 106
         Enabled = False
         Size.Values = (
           224.895833333333300000
@@ -1083,15 +1089,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Stretch = True
       end
       object QRMemoCmpnyNm: TQRMemo
-        Left = 508
-        Top = 87
-        Width = 103
-        Height = 122
+        Left = 635
+        Top = 109
+        Width = 124
+        Height = 153
         Size.Values = (
-          322.791666666666700000
+          323.850000000000000000
           1344.083333333333000000
-          230.187500000000000000
-          272.520833333333300000)
+          230.716666666666700000
+          262.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1101,7 +1107,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -1112,10 +1118,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
     end
     object QRBand2: TQRSubDetail
-      Left = 38
-      Top = 817
-      Width = 718
-      Height = 28
+      Left = 47
+      Top = 1021
+      Width = 898
+      Height = 35
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
       TransparentBand = False
@@ -1123,7 +1129,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
       ForceNewPage = False
       Size.Values = (
         74.083333333333330000
-        1899.708333333333000000)
+        1900.766666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = PBDelivQuickReport
@@ -1131,10 +1137,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
       PrintBefore = False
       PrintIfEmpty = True
       object QRShape1: TQRShape
-        Left = 448
+        Left = 560
         Top = 0
-        Width = 89
-        Height = 23
+        Width = 111
+        Height = 29
         Size.Values = (
           60.854166666666700000
           1185.333333333330000000
@@ -1147,15 +1153,15 @@ object PBRPDelivFrm: TPBRPDelivFrm
         VertAdjust = 0
       end
       object QRLabel13: TQRLabel
-        Left = 120
-        Top = 3
-        Width = 72
-        Height = 20
+        Left = 150
+        Top = 4
+        Width = 89
+        Height = 25
         Size.Values = (
           52.916666666666670000
           317.500000000000000000
-          7.937500000000000000
-          190.500000000000000000)
+          8.466666666666667000
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1165,7 +1171,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -1176,10 +1182,10 @@ object PBRPDelivFrm: TPBRPDelivFrm
         FontSize = 12
       end
       object QRLabel14: TQRLabel
-        Left = 352
-        Top = 3
-        Width = 50
-        Height = 20
+        Left = 440
+        Top = 4
+        Width = 63
+        Height = 25
         Size.Values = (
           52.916666666666660000
           931.333333333333500000
@@ -1195,7 +1201,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False

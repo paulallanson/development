@@ -3,8 +3,8 @@ object PBLUQuestnFrm: TPBLUQuestnFrm
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Look-Up A Question'
-  ClientHeight = 340
-  ClientWidth = 485
+  ClientHeight = 331
+  ClientWidth = 479
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

@@ -24,9 +24,8 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 169
     ExplicitWidth = 706
-    ExplicitHeight = 277
+    ExplicitHeight = 245
     object dbgrdProofStatus: TDBGrid
       Left = 1
       Top = 1
@@ -57,6 +56,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 706
     DesignSize = (
       712
       201)
@@ -165,13 +165,14 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       end
     end
     object pnlStatusSelect: TPanel
-      Left = 536
+      Left = 530
       Top = 12
       Width = 161
       Height = 57
       Anchors = [akTop, akRight]
       ParentBackground = False
       TabOrder = 2
+      ExplicitLeft = 524
       object Label1: TLabel
         Left = 8
         Top = 8

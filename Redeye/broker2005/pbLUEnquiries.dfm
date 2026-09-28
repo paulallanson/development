@@ -2,12 +2,12 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   Left = 59
   Top = 161
   Caption = 'Enquiries'
-  ClientHeight = 332
-  ClientWidth = 865
+  ClientHeight = 314
+  ClientWidth = 853
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 313
-    Width = 865
+    Top = 295
+    Width = 853
     Height = 19
     Panels = <
       item
@@ -38,49 +38,49 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   end
   object Panel1: TPanel
     Left = 0
-    Top = 272
-    Width = 865
+    Top = 254
+    Width = 853
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
-      Top = 16
-      Width = 86
-      Height = 13
-      Caption = 'Customer Search'
+      Top = 13
+      Width = 56
+      Height = 17
+      Caption = 'Customer'
     end
     object edtSearch: TEdit
-      Left = 107
-      Top = 12
+      Left = 70
+      Top = 9
       Width = 180
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 591
+      Left = 552
       Top = 1
-      Width = 273
+      Width = 300
       Height = 39
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
-        273
+        300
         39)
       object Label2: TLabel
-        Left = 6
-        Top = 16
-        Width = 83
-        Height = 13
+        Left = 8
+        Top = 11
+        Width = 95
+        Height = 17
         Anchors = [akRight, akBottom]
         Caption = 'Enquiry Number'
       end
       object btnClose: TButton
-        Left = 192
+        Left = 208
         Top = 8
         Width = 75
         Height = 25
@@ -89,18 +89,19 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
         OnClick = btnCloseClick
       end
       object edtNumber: TEdit
-        Left = 83
-        Top = 12
+        Left = 110
+        Top = 8
         Width = 90
-        Height = 21
+        Height = 25
         Anchors = [akRight, akBottom]
         TabOrder = 1
         OnKeyPress = edtNumberKeyPress
+        ExplicitLeft = 83
       end
     end
     object btnSearch: TBitBtn
-      Left = 296
-      Top = 10
+      Left = 259
+      Top = 9
       Width = 75
       Height = 25
       Caption = '&Search'
@@ -111,14 +112,14 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 865
-    Height = 197
+    Width = 853
+    Height = 179
     Align = alClient
     DataSource = dtmdlEnqs.dtsEnqs
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -127,7 +128,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDrawColumnCell = dbgDetailsDrawColumnCell
@@ -225,29 +226,29 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 865
+    Width = 853
     Height = 45
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 859
+        Width = 847
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 850
+      Width = 838
       Height = 41
       Control = Toolbar1
       TabOrder = 0
       object Toolbar1: TToolBar
         Left = 0
         Top = 0
-        Width = 838
+        Width = 826
         Height = 41
-        ButtonHeight = 36
-        ButtonWidth = 62
+        ButtonHeight = 40
+        ButtonWidth = 71
         Caption = 'Toolbar1'
         Images = imglstMaint
         ShowCaptions = True
@@ -262,7 +263,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnQuickClick
         end
         object btnAdd: TToolButton
-          Left = 62
+          Left = 71
           Top = 0
           Hint = 'Add Enquiry'
           Caption = '&Add'
@@ -272,7 +273,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 124
+          Left = 142
           Top = 0
           Hint = 'Change enquiry'
           Caption = '   &Change  '
@@ -283,7 +284,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnChangeClick
         end
         object btnCopy: TToolButton
-          Left = 186
+          Left = 213
           Top = 0
           Caption = 'Cop&y'
           Enabled = False
@@ -293,7 +294,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnCopyClick
         end
         object btnDecline: TToolButton
-          Left = 248
+          Left = 284
           Top = 0
           Caption = '&Decline'
           Enabled = False
@@ -301,7 +302,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnDeclineClick
         end
         object ToolButton4: TToolButton
-          Left = 310
+          Left = 355
           Top = 0
           Width = 8
           Caption = 'ToolButton4'
@@ -309,7 +310,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           Style = tbsSeparator
         end
         object btnPrint: TToolButton
-          Left = 318
+          Left = 363
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -319,7 +320,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnPrintClick
         end
         object btnRepliesSpacer: TToolButton
-          Left = 380
+          Left = 434
           Top = 0
           Width = 8
           Caption = 'btnRepliesSpacer'
@@ -327,7 +328,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           Style = tbsSeparator
         end
         object btnReplies: TToolButton
-          Left = 388
+          Left = 442
           Top = 0
           Caption = '&Replies'
           Enabled = False
@@ -335,7 +336,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnRepliesClick
         end
         object btnPricing: TToolButton
-          Left = 450
+          Left = 513
           Top = 0
           Caption = 'Pri&cing'
           Enabled = False
@@ -343,7 +344,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnPricingClick
         end
         object btnQuote: TToolButton
-          Left = 512
+          Left = 584
           Top = 0
           Caption = 'Quo&te'
           Enabled = False
@@ -351,7 +352,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnQuoteClick
         end
         object btnConvert: TToolButton
-          Left = 574
+          Left = 655
           Top = 0
           Caption = 'Con&vert'
           Enabled = False
@@ -359,7 +360,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           OnClick = btnConvertClick
         end
         object ToolButton3: TToolButton
-          Left = 636
+          Left = 726
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -367,7 +368,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 644
+          Left = 734
           Top = 0
           Caption = 'Reports'
           ImageIndex = 4
@@ -379,7 +380,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 865
+    Width = 853
     Height = 30
     Align = alTop
     BevelInner = bvLowered

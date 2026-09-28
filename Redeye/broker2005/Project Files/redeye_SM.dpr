@@ -683,7 +683,6 @@ uses
   PBMaintContract in '..\PBMaintContract.pas' {PBMaintContractFrm},
   PBLUContractCustomerJobs in '..\PBLUContractCustomerJobs.pas' {PBLUContractCustomerJobsFrm},
   PBLUContractSearch in '..\PBLUContractSearch.pas' {frmPBLUContractSearch},
-  pbLuNCA in '..\pbLuNCA.pas' {frmPBluNCA},
   PBRSJobBagComplete in '..\PBRSJobBagComplete.pas' {PBRSJobBagCompleteFrm},
   pbluEndUsers in '..\pbluEndUsers.pas' {frmPBLUEndUsers},
   PBRPDeliv in '..\Quick Reports\SM\PBRPDeliv.pas' {PBRPDelivFrm},
@@ -708,12 +707,26 @@ uses
   PBRSSalesInvCost in '..\PBRSSalesInvCost.pas',
   PBRSSuppDet in '..\PBRSSuppDet.pas',
   PBRSStkRec in '..\PBRSStkRec.pas',
-  PBLUNCARpts in '..\PBLUNCARpts.pas',
   PBRSNCACostGraph in '..\PBRSNCACostGraph.pas',
   PBRSNCASource in '..\PBRSNCASource.pas',
   PBLUArtwrkTyp in '..\PBLUArtwrkTyp.pas' {PBLUArtwrkTypFrm},
   STRSSalesHistory in '..\STRSSalesHistory.pas',
-  PBRSAccManPerformance in '..\PBRSAccManPerformance.pas' {PBRSAccManPerformanceFrm};
+  PBRSAccManPerformance in '..\PBRSAccManPerformance.pas' {PBRSAccManPerformanceFrm},
+  PBLUCountry in '..\PBLUCountry.pas' {PBLUCountryFrm},
+  PBMaintCountry in '..\PBMaintCountry.pas' {PBMaintCountryFrm},
+  PBLUActivityType in '..\PBLUActivityType.pas' {PBLUActivityTypeFrm},
+  PBMaintActivityType in '..\PBMaintActivityType.pas' {PBMaintActivityTypeFrm},
+  pbLuNCA in '..\pbLuNCA.pas' {frmPBluNCA},
+  PBLUNCARpts in '..\PBLUNCARpts.pas' {frmPBLUNCARpts},
+  pbluNCASearch in '..\pbluNCASearch.pas' {frmpbluNCASearch},
+  PBLUNonConformCat in '..\PBLUNonConformCat.pas' {PBLUNonConformCatFrm},
+  PBLUNonConformDept in '..\PBLUNonConformDept.pas' {PBLUNonConformDeptFrm},
+  PBLUNonConformType in '..\PBLUNonConformType.pas' {PBLUNonConformTypeFrm},
+  PBMaintNonConfDoc in '..\PBMaintNonConfDoc.pas' {PBMaintNonConfDocFrm},
+  PBMaintNonConformCat in '..\PBMaintNonConformCat.pas' {PBMaintNonConformCatFrm},
+  PBMaintNonConformDept in '..\PBMaintNonConformDept.pas' {PBMaintNonConformDeptFrm},
+  PBMaintNonConformOps in '..\PBMaintNonConformOps.pas' {PBMaintNonConformOpsFrm},
+  PBMaintNonConformType in '..\PBMaintNonConformType.pas' {PBMaintNonConformTypeFrm};
 
 {$R *.RES}
 
@@ -727,7 +740,6 @@ begin
   Application.CreateForm(TPBImagesFrm, PBImagesFrm);
   Application.CreateForm(TdmLetter, dmLetter);
   Application.CreateForm(TPBAuditDataMod, PBAuditDataMod);
-  Application.CreateForm(TPBLUArtwrkTypFrm, PBLUArtwrkTypFrm);
   Application.Run;
 end.
 

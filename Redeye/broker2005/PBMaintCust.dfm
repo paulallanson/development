@@ -81,6 +81,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
+          ExplicitHeight = 601
           DesignSize = (
             481
             610)
@@ -93,6 +94,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Analysis  '
             ParentBackground = False
             TabOrder = 2
+            ExplicitHeight = 277
             DesignSize = (
               465
               286)
@@ -376,6 +378,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Anchors = [akLeft, akBottom]
               Caption = 'This is a Reseller Customer'
               TabOrder = 13
+              ExplicitTop = 238
             end
             object chkbxCTRLPCustomer: TCheckBox
               Left = 8
@@ -385,6 +388,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Anchors = [akLeft, akBottom]
               Caption = 'This is a CTRL-P Master Customer'
               TabOrder = 14
+              ExplicitTop = 259
             end
           end
           object grpbxDetails: TGroupBox
@@ -747,6 +751,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'pnlHOContacts'
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 681
+          ExplicitHeight = 601
           object Panel26: TPanel
             Left = 1
             Top = 1
@@ -757,6 +763,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Head Office Contacts'
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 679
           end
           object Panel27: TPanel
             Left = 677
@@ -767,6 +774,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
+            ExplicitLeft = 671
+            ExplicitHeight = 543
           end
           object CoolBar9: TCoolBar
             Left = 1
@@ -781,6 +790,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               end>
             EdgeInner = esLowered
             EdgeOuter = esNone
+            ExplicitWidth = 679
             object ToolBar2: TToolBar
               Left = 11
               Top = 0
@@ -839,6 +849,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Align = alRight
             ParentBackground = False
             TabOrder = 3
+            ExplicitLeft = 495
+            ExplicitHeight = 543
             object Panel31: TPanel
               Left = 1
               Top = 1
@@ -869,6 +881,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Align = alRight
             ParentBackground = False
             TabOrder = 4
+            ExplicitLeft = 474
+            ExplicitHeight = 543
           end
           object Panel29: TPanel
             Left = 1
@@ -879,6 +893,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Panel29'
             ParentBackground = False
             TabOrder = 5
+            ExplicitWidth = 473
+            ExplicitHeight = 543
             object dbgHOContactDetails: TDBGrid
               Left = 1
               Top = 1
@@ -966,6 +982,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
               BevelOuter = bvNone
               ParentBackground = False
               TabOrder = 1
+              ExplicitTop = 377
+              ExplicitWidth = 471
               object LabelName: TLabel
                 Left = 4
                 Top = 10
@@ -1666,15 +1684,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object grpbxCredit: TGroupBox
             Left = 6
             Top = 1
-            Width = 477
+            Width = 471
             Height = 576
             Anchors = [akLeft, akTop, akRight, akBottom]
             Caption = 'Credit Details'
             TabOrder = 0
-            ExplicitWidth = 471
             ExplicitHeight = 567
             DesignSize = (
-              477
+              471
               576)
             object Label5: TLabel
               Tag = 100
@@ -1778,16 +1795,17 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 14
               Top = 222
-              Width = 478
+              Width = 472
               Height = 7
               Anchors = [akLeft, akTop, akRight]
               Shape = bsTopLine
+              ExplicitWidth = 478
             end
             object Bevel2: TBevel
               Tag = 100
               Left = 0
               Top = 358
-              Width = 478
+              Width = 472
               Height = 7
               Anchors = [akLeft, akTop, akRight]
               Shape = bsTopLine
@@ -2653,7 +2671,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Control = ToolBar9
                 ImageIndex = -1
                 MinHeight = 41
-                Width = 1160
+                Width = 1164
               end>
             object ToolBar9: TToolBar
               Left = 11
@@ -3041,7 +3059,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = tbrQuotes
               ImageIndex = -1
               MinHeight = 41
-              Width = 1162
+              Width = 1166
             end>
           object tbrQuotes: TToolBar
             Left = 11
@@ -3310,7 +3328,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = tbrEnquiries
               ImageIndex = -1
               MinHeight = 41
-              Width = 1162
+              Width = 1166
             end>
           object tbrEnquiries: TToolBar
             Left = 11
@@ -3628,7 +3646,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Description Search'
           end
           object Label49: TLabel
-            Left = 928
+            Left = 922
             Top = 16
             Width = 84
             Height = 17
@@ -3645,13 +3663,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnChange = edtOrderSearchChange
           end
           object edtOrderNumber: TEdit
-            Left = 1023
+            Left = 1017
             Top = 12
             Width = 90
             Height = 25
             Anchors = [akRight, akBottom]
             TabOrder = 1
             OnKeyPress = edtOrderNumberKeyPress
+            ExplicitLeft = 1023
           end
           object chkbxShowUnauthorised: TCheckBox
             Left = 394
@@ -3682,7 +3701,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller1
               ImageIndex = -1
               MinHeight = 41
-              Width = 1162
+              Width = 1166
             end>
           object PageScroller1: TPageScroller
             Left = 11
@@ -3694,9 +3713,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrOrders: TToolBar
               Left = 0
               Top = 0
-              Width = 1141
+              Width = 1153
               Height = 41
-              ButtonHeight = 48
+              ButtonHeight = 33
               ButtonWidth = 73
               Caption = 'ToolBar1'
               Images = imglstOrders
@@ -4020,7 +4039,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = tbrJobs
               ImageIndex = -1
               MinHeight = 41
-              Width = 1162
+              Width = 1166
             end>
           object tbrJobs: TToolBar
             Left = 11
@@ -4297,7 +4316,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Control = PageScroller2
                 ImageIndex = -1
                 MinHeight = 41
-                Width = 1160
+                Width = 1164
               end>
             object PageScroller2: TPageScroller
               Left = 11
@@ -4309,7 +4328,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               object tbrStock: TToolBar
                 Left = 0
                 Top = 0
-                Width = 1139
+                Width = 1151
                 Height = 41
                 ButtonHeight = 48
                 ButtonWidth = 80
@@ -4585,7 +4604,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller3
               ImageIndex = -1
               MinHeight = 40
-              Width = 1162
+              Width = 1166
             end>
           object PageScroller3: TPageScroller
             Left = 11
@@ -4598,7 +4617,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrInvoices: TToolBar
               Left = 0
               Top = 0
-              Width = 1141
+              Width = 1153
               Height = 40
               ButtonHeight = 40
               ButtonWidth = 62
@@ -4984,7 +5003,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
                 Control = ToolBar8
                 ImageIndex = -1
                 MinHeight = 41
-                Width = 1160
+                Width = 1164
               end>
             object ToolBar8: TToolBar
               Left = 11
@@ -5403,7 +5422,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         1176
         41)
       object DelLabel: TLabel
-        Left = 789
+        Left = 783
         Top = 13
         Width = 132
         Height = 17
@@ -5418,7 +5437,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitLeft = 795
       end
       object OKBitBtn: TBitBtn
-        Left = 935
+        Left = 929
         Top = 10
         Width = 75
         Height = 25
@@ -5492,10 +5511,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
         NumGlyphs = 2
         TabOrder = 4
         OnClick = OKBitBtnClick
-        ExplicitLeft = 929
+        ExplicitLeft = 923
       end
       object CancelBitBtn: TBitBtn
-        Left = 1015
+        Left = 1009
         Top = 10
         Width = 75
         Height = 25
@@ -5570,7 +5589,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         NumGlyphs = 2
         TabOrder = 5
         OnClick = CancelBitBtnClick
-        ExplicitLeft = 1009
+        ExplicitLeft = 1003
       end
       object PrintBitBtn: TBitBtn
         Left = 9
@@ -5686,7 +5705,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object NameEdit: TEdit
         Left = 108
         Top = 8
-        Width = 519
+        Width = 513
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         Color = clWhite
@@ -5695,7 +5714,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Text = 'NameEdit'
         OnChange = NameEditChange
         OnExit = NameEditExit
-        ExplicitWidth = 513
+        ExplicitWidth = 507
       end
     end
   end

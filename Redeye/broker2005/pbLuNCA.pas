@@ -132,8 +132,8 @@ begin
   try
     with IniFile do
     begin
-      stempdate := ReadString('Centrereed Broker', 'Job Bag NCA Search Date', 'None');
-      sShowWIP := ReadString('Centrereed Broker', 'Show Job Bag Live NCA', 'None');
+      stempdate := ReadString('Non Conformance', 'Job Bag NCA Search Date', 'None');
+      sShowWIP := ReadString('Non Conformance', 'Show Job Bag Live NCA', 'None');
     end;
   finally
     IniFile.Free;
@@ -171,8 +171,8 @@ begin
   try
     with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Job Bag NCA Search Date', pbdatestr(dtmdlNCAJobs.NCADate));
-      WriteString('Centrereed Broker', 'Show Job Bag Live NCA', sShowLiveNCA);
+      WriteString('Non Conformance', 'Job Bag NCA Search Date', pbdatestr(dtmdlNCAJobs.NCADate));
+      WriteString('Non Conformance', 'Show Job Bag Live NCA', sShowLiveNCA);
     end;
   finally
     IniFile.Free;

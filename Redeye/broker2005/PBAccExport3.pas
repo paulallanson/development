@@ -3001,7 +3001,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    cbSource.itemindex := cbsource.Items.Indexof(IniFile.ReadString('Centrereed Broker', 'DataSource', 'None'));
+    cbSource.itemindex := cbsource.Items.Indexof(IniFile.ReadString('Quaystone', 'DataSource', 'None'));
   finally
     IniFile.Free;
   end;
@@ -3032,7 +3032,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'DataSource',cbSource.text);
+    IniFile.WriteString('Quaystone', 'DataSource',cbSource.text);
   finally
     IniFile.Free;
   end;

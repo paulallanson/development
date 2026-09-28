@@ -3,8 +3,8 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
   Top = 74
   BorderStyle = bsDialog
   Caption = 'Print Box Labels'
-  ClientHeight = 345
-  ClientWidth = 407
+  ClientHeight = 336
+  ClientWidth = 401
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -80,7 +80,7 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     object Label3: TLabel
       Left = 49
       Top = 28
-      Width = 65
+      Width = 66
       Height = 13
       Caption = 'Box Quantity'
     end

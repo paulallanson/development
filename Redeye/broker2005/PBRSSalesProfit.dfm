@@ -4,7 +4,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   BorderStyle = bsDialog
   Caption = 'Sales Profit Report'
   ClientHeight = 234
-  ClientWidth = 560
+  ClientWidth = 285
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -118,7 +118,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   object pnlButtons: TPanel
     Left = 0
     Top = 193
-    Width = 560
+    Width = 285
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -244,8 +244,8 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   end
   object qrySalesProfit: TFDQuery
     ConnectionName = 'PB'
-    Left = 182
-    Top = 18
+    Left = 436
+    Top = 15
   end
   object qryPeriods: TFDQuery
     ConnectionName = 'PB'
@@ -254,8 +254,8 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       'from Period'
       'where Period_Year = :Period_Year'
       'order by period DESC')
-    Left = 132
-    Top = 18
+    Left = 373
+    Top = 23
     ParamData = <
       item
         Name = 'Period_Year'

@@ -3,8 +3,8 @@ object PBLUCapFrm: TPBLUCapFrm
   Top = 149
   BorderStyle = bsDialog
   Caption = 'Look-Up A Capability'
-  ClientHeight = 325
-  ClientWidth = 484
+  ClientHeight = 316
+  ClientWidth = 478
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

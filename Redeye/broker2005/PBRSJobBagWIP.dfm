@@ -3,7 +3,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   Top = 41
   Caption = 'Work In Progress Report - Purchase Orders in Job Bags'
   ClientHeight = 482
-  ClientWidth = 805
+  ClientWidth = 900
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 768
@@ -18,19 +18,19 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   object pnlControl: TPanel
     Left = 0
     Top = 441
-    Width = 805
+    Width = 900
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     ExplicitTop = 432
-    ExplicitWidth = 750
+    ExplicitWidth = 799
     DesignSize = (
-      805
+      900
       41)
     object pnlRightControl: TPanel
-      Left = 474
+      Left = 569
       Top = 0
       Width = 331
       Height = 41
@@ -38,7 +38,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 419
+      ExplicitLeft = 468
       object PreviewBitBtn: TBitBtn
         Left = 144
         Top = 8
@@ -98,7 +98,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       TabOrder = 1
     end
     object btnExcel: TBitBtn
-      Left = 532
+      Left = 621
       Top = 8
       Width = 75
       Height = 25
@@ -149,25 +149,24 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btnExcelClick
-      ExplicitLeft = 477
+      ExplicitLeft = 520
     end
   end
   object pnlDetail: TPanel
     Left = 0
     Top = 209
-    Width = 805
+    Width = 900
     Height = 232
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 177
-    ExplicitWidth = 750
-    ExplicitHeight = 255
+    ExplicitWidth = 799
+    ExplicitHeight = 223
     object DBGrid: TDBGrid
       Left = 0
       Top = 0
-      Width = 805
+      Width = 900
       Height = 232
       Align = alClient
       DataSource = dsReport
@@ -282,13 +281,15 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 805
+    Width = 900
     Height = 209
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = -6
+    ExplicitLeft = 40
+    ExplicitTop = 8
+    ExplicitWidth = 854
     object Label3: TLabel
       Left = 8
       Top = 156
@@ -532,7 +533,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         'Job Bag')
     end
     object pnlDates: TPanel
-      Left = 627
+      Left = 722
       Top = 0
       Width = 178
       Height = 209
@@ -540,19 +541,18 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 7
-      ExplicitLeft = 572
-      ExplicitHeight = 177
+      ExplicitLeft = 621
       object chkbxPageBreak: TCheckBox
-        Left = 13
+        Left = 4
         Top = 143
-        Width = 145
+        Width = 165
         Height = 17
         Caption = 'Page break on total'
         Enabled = False
         TabOrder = 0
       end
       object TotByRadioGroup: TRadioGroup
-        Left = 12
+        Left = 3
         Top = 4
         Width = 157
         Height = 133
@@ -569,17 +569,17 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
         OnClick = TotByRadioGroupClick
       end
       object chkbxShowCosts: TCheckBox
-        Left = 13
+        Left = 4
         Top = 180
-        Width = 145
+        Width = 165
         Height = 16
         Caption = 'Hide cost/margin values'
         TabOrder = 2
       end
       object chkbxShowSales: TCheckBox
-        Left = 13
+        Left = 4
         Top = 161
-        Width = 143
+        Width = 165
         Height = 17
         Caption = 'Hide sales value'
         TabOrder = 3
@@ -607,7 +607,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     object ExcOnHoldCheckBox: TCheckBox
       Left = 465
       Top = 154
-      Width = 168
+      Width = 205
       Height = 20
       Caption = 'Exclude on hold items'
       TabOrder = 10
@@ -616,7 +616,7 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     object chkbxincludezero: TCheckBox
       Left = 465
       Top = 180
-      Width = 168
+      Width = 205
       Height = 17
       Hint = 'Show zero sales values for confirmed deliveries'
       Caption = 'Include zero sales values'

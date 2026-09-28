@@ -10,6 +10,7 @@ object PBMaintArtwrkTypFrm: TPBMaintArtwrkTypFrm
   Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 17
   object DelLabel: TLabel

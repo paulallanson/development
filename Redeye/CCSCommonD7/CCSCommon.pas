@@ -195,7 +195,7 @@ type
 
 resourcestring
   SOFTWARE_KEY = 'Software\'; { where we put our entries  }
-  CCS_KEY = 'Centrereed Ltd\'; { the Company specific node }
+  CCS_KEY = 'Quaystone Ltd\'; { the Company specific node }
 
   BASE_KEY = 'Base'; { Base settings		}
   SCRIBE_KEY = 'Scribe'; { Scribe settings	}

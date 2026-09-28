@@ -499,12 +499,12 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Label Printer', '', TempArray,
+  GetPrivateProfileString('Buy Print', 'Label Printer', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
 
-  GetPrivateProfileString('Centrereed Broker', 'Label Printer Bin', '', TempArray,
+  GetPrivateProfileString('Buy Print', 'Label Printer Bin', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   sBin := TempArray;
@@ -514,7 +514,7 @@ begin
     DefaultBin := 15;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Label Printer Paper', '', TempArray,
+  GetPrivateProfileString('Buy Print', 'Label Printer Paper', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sPaper := TempArray;
   try
@@ -523,7 +523,7 @@ begin
     DefaultPaper := 9;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Label Printer Format', '', TempArray,
+  GetPrivateProfileString('Buy Print', 'Label Printer Format', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sFormat := TempArray;
 
@@ -643,10 +643,10 @@ begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
   try
-    WriteString('Centrereed Broker', 'Label Printer',DefaultPrinter);
-    WriteString('Centrereed Broker', 'Label Printer Bin',inttostr(DefaultBin));
-    WriteString('Centrereed Broker', 'Label Printer Paper',inttostr(DefaultPaper));
-    WriteString('Centrereed Broker', 'Label Printer Format',sFormat);
+    WriteString('Buy Print', 'Label Printer',DefaultPrinter);
+    WriteString('Buy Print', 'Label Printer Bin',inttostr(DefaultBin));
+    WriteString('Buy Print', 'Label Printer Paper',inttostr(DefaultPaper));
+    WriteString('Buy Print', 'Label Printer Format',sFormat);
   finally
     IniFile.Free;
   end;

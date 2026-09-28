@@ -66,7 +66,7 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     object chkbxFaceToFace: TCheckBox
       Left = 17
       Top = 60
-      Width = 185
+      Width = 219
       Height = 17
       Caption = 'This is a face to face activity type'
       TabOrder = 1
@@ -148,7 +148,7 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
-    ExplicitTop = 128
+    ExplicitTop = 126
   end
   object CancelBitBtn: TBitBtn
     Left = 336
@@ -226,7 +226,7 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    ExplicitTop = 128
+    ExplicitTop = 126
   end
   object chkbxActive: TCheckBox
     Left = 33
@@ -242,8 +242,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'Select Activity_Type'
       'From Activity_Type'
       'Where Activity_Type_Description = :GUID')
-    Left = 318
-    Top = 24
+    Left = 254
+    Top = 94
     ParamData = <
       item
         Name = 'GUID'
@@ -262,8 +262,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       ''
       ''
       ' ')
-    Left = 249
-    Top = 18
+    Left = 31
+    Top = 119
     ParamData = <
       item
         Name = 'GUID'
@@ -282,8 +282,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'Where'
       '(Activity_Type = :Activity_Type)'
       '')
-    Left = 250
-    Top = 32
+    Left = 337
+    Top = 48
     ParamData = <
       item
         Name = 'Activity_Type_Description'
@@ -304,8 +304,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'Delete From Activity_Type'
       'Where'
       '(Activity_Type = :Activity_Type)')
-    Left = 246
-    Top = 26
+    Left = 332
+    Top = 41
     ParamData = <
       item
         Name = 'Activity_Type'
@@ -313,8 +313,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
   end
   object DetsSRC: TDataSource
     DataSet = AddSQL
-    Left = 270
-    Top = 18
+    Left = 338
+    Top = 87
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
@@ -323,8 +323,8 @@ object PBMaintActivityTypeFrm: TPBMaintActivityTypeFrm
       'From Activity_Type'
       'Where Activity_Type_Description = :GUID'
       '')
-    Left = 236
-    Top = 23
+    Left = 47
+    Top = 5
     ParamData = <
       item
         Name = 'GUID'

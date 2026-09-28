@@ -3,8 +3,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
   Top = 133
   BorderStyle = bsSingle
   Caption = 'Maintain Product E-Commerce Info'
-  ClientHeight = 249
-  ClientWidth = 474
+  ClientHeight = 240
+  ClientWidth = 468
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText

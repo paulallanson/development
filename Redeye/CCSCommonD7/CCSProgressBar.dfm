@@ -3,21 +3,21 @@ object frmCCSProgressBar: TfrmCCSProgressBar
   Top = 114
   BorderStyle = bsSingle
   Caption = 'frmCCSProgressBar'
-  ClientHeight = 81
+  ClientHeight = 98
   ClientWidth = 289
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Label1: TLabel
     Left = 16
     Top = 64
-    Width = 192
-    Height = 13
+    Width = 200
+    Height = 17
     Caption = 'Please wait ............................................'
   end
   object pnlExportPrgrss: TPanel
@@ -31,8 +31,8 @@ object frmCCSProgressBar: TfrmCCSProgressBar
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar
@@ -45,8 +45,8 @@ object frmCCSProgressBar: TfrmCCSProgressBar
     end
   end
   object OleContainer1: TOleContainer
-    Left = 183
-    Top = 12
+    Left = 118
+    Top = 5
     Width = 98
     Height = 53
     Caption = 'OleContainer1'

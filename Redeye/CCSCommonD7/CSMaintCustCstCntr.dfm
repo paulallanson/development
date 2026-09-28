@@ -6,32 +6,32 @@ object CsMaintCustCstCntrFrm: TCsMaintCustCstCntrFrm
   ClientHeight = 185
   ClientWidth = 502
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -12
-  Font.Name = 'Arial'
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
-  TextHeight = 15
+  TextHeight = 17
   object DelLabel: TLabel
     Left = 14
     Top = 142
-    Width = 145
-    Height = 15
+    Width = 160
+    Height = 17
     Caption = 'Delete the above details ?'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
-    Font.Name = 'Arial'
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object CustLabel: TLabel
     Left = 8
     Top = 6
-    Width = 57
-    Height = 15
+    Width = 56
+    Height = 17
     Caption = 'CustLabel'
   end
   object OKBitBtn: TBitBtn
@@ -41,6 +41,11 @@ object CsMaintCustCstCntrFrm: TCsMaintCustCstCntrFrm
     Height = 25
     Caption = 'OK'
     Default = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -107,6 +112,7 @@ object CsMaintCustCstCntrFrm: TCsMaintCustCstCntrFrm
       007F7F007F7F007F7F007F7F007F7F007F7F}
     ModalResult = 1
     NumGlyphs = 2
+    ParentFont = False
     TabOrder = 1
     OnClick = OKBitBtnClick
   end
@@ -117,6 +123,11 @@ object CsMaintCustCstCntrFrm: TCsMaintCustCstCntrFrm
     Height = 25
     Cancel = True
     Caption = 'Cancel'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -183,6 +194,7 @@ object CsMaintCustCstCntrFrm: TCsMaintCustCstCntrFrm
       007F7F007F7F007F7F007F7F007F7F007F7F}
     ModalResult = 2
     NumGlyphs = 2
+    ParentFont = False
     TabOrder = 2
     OnClick = CancelBitBtnClick
   end
@@ -192,43 +204,43 @@ object CsMaintCustCstCntrFrm: TCsMaintCustCstCntrFrm
     Width = 481
     Height = 89
     Caption = 'Cost Centre Details'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -12
-    Font.Name = 'Arial'
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
     Font.Style = []
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object CstCntrLabel: TLabel
-      Left = 11
-      Top = 24
-      Width = 66
-      Height = 15
+      Left = 25
+      Top = 27
+      Width = 68
+      Height = 17
       Caption = 'Cost Centre'
     end
     object DescLabel: TLabel
-      Left = 11
-      Top = 56
-      Width = 63
-      Height = 15
+      Left = 25
+      Top = 59
+      Width = 66
+      Height = 17
       Caption = 'Description'
     end
     object CstCntrEdit: TEdit
-      Left = 96
-      Top = 16
+      Left = 110
+      Top = 19
       Width = 121
-      Height = 23
+      Height = 25
       MaxLength = 10
       ReadOnly = True
       TabOrder = 0
       OnChange = CstCntrEditChange
     end
     object DescEdit: TEdit
-      Left = 96
-      Top = 48
+      Left = 110
+      Top = 51
       Width = 321
-      Height = 23
+      Height = 25
       MaxLength = 50
       TabOrder = 1
       OnChange = DescEditChange

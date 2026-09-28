@@ -3,7 +3,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
   Top = 4
   Caption = 'Job Bag Work In Progress - Production Charges'
   ClientHeight = 516
-  ClientWidth = 903
+  ClientWidth = 940
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 768
@@ -19,7 +19,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
   object pnlControl: TPanel
     Left = 0
     Top = 473
-    Width = 903
+    Width = 940
     Height = 43
     Align = alBottom
     BevelOuter = bvNone
@@ -28,10 +28,10 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     ExplicitTop = 464
     ExplicitWidth = 897
     DesignSize = (
-      903
+      940
       43)
     object pnlRightControl: TPanel
-      Left = 572
+      Left = 609
       Top = 0
       Width = 331
       Height = 43
@@ -99,7 +99,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       TabOrder = 1
     end
     object btnExcel: TBitBtn
-      Left = 624
+      Left = 655
       Top = 12
       Width = 75
       Height = 25
@@ -150,12 +150,13 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 2
       OnClick = btnExcelClick
+      ExplicitLeft = 612
     end
   end
   object pnlDetail: TPanel
     Left = 0
     Top = 249
-    Width = 903
+    Width = 940
     Height = 224
     Align = alClient
     BevelOuter = bvNone
@@ -166,7 +167,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     object DBGrid: TDBGrid
       Left = 0
       Top = 0
-      Width = 903
+      Width = 940
       Height = 224
       Align = alClient
       DataSource = dsReport
@@ -274,7 +275,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 903
+    Width = 940
     Height = 249
     Align = alTop
     BevelOuter = bvNone
@@ -282,7 +283,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     TabOrder = 2
     ExplicitWidth = 897
     DesignSize = (
-      903
+      940
       249)
     object Label3: TLabel
       Left = 8
@@ -475,9 +476,9 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
         'Job Bag Status')
     end
     object pnlDates: TPanel
-      Left = 640
+      Left = 664
       Top = 0
-      Width = 263
+      Width = 276
       Height = 249
       Align = alRight
       BevelOuter = bvNone
@@ -485,7 +486,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Constraints.MinWidth = 224
       ParentBackground = False
       TabOrder = 5
-      ExplicitLeft = 634
+      ExplicitLeft = 672
       object TotByRadioGroup: TRadioGroup
         Left = 3
         Top = 4
@@ -589,7 +590,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       end
     end
     object chkbxPageBreak: TCheckBox
-      Left = 650
+      Left = 681
       Top = 139
       Width = 150
       Height = 17
@@ -597,11 +598,12 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       Caption = 'Page break on total'
       Enabled = False
       TabOrder = 10
+      ExplicitLeft = 638
     end
     object chkbxShowAllLines: TCheckBox
       Left = 440
-      Top = 149
-      Width = 191
+      Top = 148
+      Width = 201
       Height = 17
       Caption = 'Show all outstanding lines'
       TabOrder = 11
@@ -619,7 +621,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     object chkbxExcludeOnHold: TCheckBox
       Left = 440
       Top = 107
-      Width = 145
+      Width = 201
       Height = 17
       Caption = 'Exclude on hold items'
       Checked = True
@@ -630,7 +632,7 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     object chkbxComplete: TCheckBox
       Left = 440
       Top = 171
-      Width = 161
+      Width = 201
       Height = 17
       Caption = 'Show Jobs Fully Despatched'
       TabOrder = 14

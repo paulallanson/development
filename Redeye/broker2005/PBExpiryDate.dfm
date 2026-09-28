@@ -11,6 +11,7 @@ object frmPBExpiryDate: TfrmPBExpiryDate
   Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnActivate = FormActivate
   TextHeight = 17
   object Label1: TLabel
@@ -73,8 +74,8 @@ object frmPBExpiryDate: TfrmPBExpiryDate
       'Update Company'
       'Set Company_CheckSum = :Company_CheckSum'
       'Where company = 1')
-    Left = 206
-    Top = 12
+    Left = 202
+    Top = 15
     ParamData = <
       item
         Name = 'Company_CheckSum'

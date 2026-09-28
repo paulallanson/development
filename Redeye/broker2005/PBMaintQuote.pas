@@ -2161,7 +2161,6 @@ begin
   if trim(Quote.EstimateFile) = '' then
     begin
       docdir := LocalDir + 'costingtool.xls';
-//      docdir := LocalDrive + '\Program Files\Centrereed Ltd\Broker\costingtool.xls';
       Quote.EstimateFile := docdir;
     end
   else
@@ -2234,7 +2233,6 @@ begin
   if trim(Quote.EstimateFile) = '' then
     begin
       docdir := LocalDir + 'costingtool.xls';
-//      docdir := LocalDrive + '\Program Files\Centrereed Ltd\Broker\costingtool.xls';
       Quote.EstimateFile := docdir;
     end
   else

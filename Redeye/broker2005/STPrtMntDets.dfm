@@ -53,8 +53,8 @@ object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   object Label7: TLabel
     Left = 216
     Top = 251
-    Width = 88
-    Height = 19
+    Width = 80
+    Height = 17
     Caption = 'Cost Pack Qty'
     WordWrap = True
   end

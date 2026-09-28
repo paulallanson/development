@@ -2,8 +2,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   Left = 33
   Top = 115
   Caption = 'Job Bags'
-  ClientHeight = 347
-  ClientWidth = 1170
+  ClientHeight = 338
+  ClientWidth = 1164
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmPBLUJobs: TfrmPBLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1170
+    Width = 1164
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1164
+        Width = 1168
       end>
+    ExplicitWidth = 1170
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -137,8 +138,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 1170
-    Height = 189
+    Width = 1164
+    Height = 180
     Align = alClient
     DataSource = dtmdlJobs.dtsJobs
     DrawingStyle = gdsGradient
@@ -190,6 +191,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       item
         Expanded = False
         FieldName = 'Quantity'
+        Width = 64
         Visible = True
       end
       item
@@ -252,6 +254,7 @@ object frmPBLUJobs: TfrmPBLUJobs
         Expanded = False
         FieldName = 'Cash_Lines'
         Title.Caption = 'Cash Lines'
+        Width = 64
         Visible = True
       end
       item
@@ -319,12 +322,14 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 264
-    Width = 1170
+    Top = 255
+    Width = 1164
     Height = 64
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 264
+    ExplicitWidth = 1170
     object Label1: TLabel
       Left = 8
       Top = 26
@@ -431,8 +436,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 328
-    Width = 1170
+    Top = 319
+    Width = 1164
     Height = 19
     Panels = <
       item
@@ -444,11 +449,13 @@ object frmPBLUJobs: TfrmPBLUJobs
       item
         Width = 50
       end>
+    ExplicitTop = 328
+    ExplicitWidth = 1170
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1170
+    Width = 1164
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -456,6 +463,7 @@ object frmPBLUJobs: TfrmPBLUJobs
     Color = 16642529
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1170
     object Label3: TLabel
       Left = 8
       Top = 3

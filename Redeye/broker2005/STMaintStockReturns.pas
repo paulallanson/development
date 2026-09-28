@@ -83,9 +83,9 @@ begin
   with IniFile do
     begin
       try
-        WriteString('Centrereed Broker', 'Bench Stock Area', inttostr(dblkpProductionlocation.KeyValue));
+        WriteString('Stock', 'Bench Stock Area', inttostr(dblkpProductionlocation.KeyValue));
       except
-        WriteString('Centrereed Broker', 'Bench Stock Area', '0');
+        WriteString('Stock', 'Bench Stock Area', '0');
       end;
       free;
     end;
@@ -97,7 +97,7 @@ var
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
-  GetPrivateProfileString('Centrereed Broker', 'Bench Stock Area', '', TempArray,
+  GetPrivateProfileString('Stock', 'Bench Stock Area', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   try

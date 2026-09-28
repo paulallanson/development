@@ -3,10 +3,10 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   Top = 88
   Caption = 'Customer Contact Details'
   ClientHeight = 493
-  ClientWidth = 1004
+  ClientWidth = 1039
   Color = clBtnFace
-  Constraints.MinHeight = 300
-  Constraints.MinWidth = 640
+  Constraints.MinHeight = 530
+  Constraints.MinWidth = 1050
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -13
@@ -20,13 +20,14 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 1004
+    Width = 1039
     Height = 129
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 998
     DesignSize = (
-      1004
+      1039
       129)
     object Label3: TLabel
       Left = 8
@@ -68,12 +69,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ParentFont = False
     end
     object Label8: TLabel
-      Left = 620
+      Left = 649
       Top = 96
       Width = 127
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Default Markup % =>'
+      ExplicitLeft = 620
     end
     object Label9: TLabel
       Left = 447
@@ -221,7 +223,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       end
     end
     object RadioGroup1: TRadioGroup
-      Left = 878
+      Left = 907
       Top = 8
       Width = 125
       Height = 102
@@ -236,9 +238,10 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ParentBackground = False
       TabOrder = 6
       OnClick = RadioGroup1Click
+      ExplicitLeft = 866
     end
     object spnedtMarkup: TSpinEdit
-      Left = 734
+      Left = 763
       Top = 91
       Width = 41
       Height = 27
@@ -248,11 +251,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       TabOrder = 7
       Value = 0
       OnExit = spnedtMarkupExit
+      ExplicitLeft = 722
     end
     object chkbxCustomers: TCheckBox
-      Left = 714
-      Top = 12
-      Width = 152
+      Left = 720
+      Top = 11
+      Width = 181
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Include inactive Customers'
@@ -260,9 +264,9 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       OnClick = cmbbxContStatusChange
     end
     object chkbxContacts: TCheckBox
-      Left = 714
+      Left = 720
       Top = 34
-      Width = 144
+      Width = 181
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Include inactive Contacts'
@@ -270,7 +274,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       OnClick = cmbbxContStatusChange
     end
     object chkbxShowStatus: TCheckBox
-      Left = 714
+      Left = 720
       Top = 56
       Width = 97
       Height = 17
@@ -361,18 +365,18 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   object pnlPrintControl: TPanel
     Left = 0
     Top = 433
-    Width = 1004
+    Width = 1039
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     ExplicitTop = 424
-    ExplicitWidth = 970
+    ExplicitWidth = 998
     DesignSize = (
-      1004
+      1039
       41)
     object Panel1: TPanel
-      Left = 701
+      Left = 736
       Top = 1
       Width = 302
       Height = 39
@@ -380,7 +384,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 667
+      ExplicitLeft = 695
       DesignSize = (
         302
         39)
@@ -487,7 +491,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       end
     end
     object btnCancel: TBitBtn
-      Left = 21
+      Left = 22
       Top = 9
       Width = 75
       Height = 25
@@ -495,13 +499,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 19
+      ExplicitLeft = 20
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 474
-    Width = 1004
+    Width = 1039
     Height = 19
     Panels = <
       item
@@ -514,12 +518,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Width = 50
       end>
     ExplicitTop = 465
-    ExplicitWidth = 970
+    ExplicitWidth = 998
   end
   object dbgrdContStatus: TDBGrid
     Left = 0
     Top = 129
-    Width = 1004
+    Width = 1039
     Height = 304
     Align = alClient
     DataSource = dtsrcCurrentContStatus
@@ -1156,8 +1160,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       'select Customer_Type, Description'
       'from Customer_Type'
       'Order by Description')
-    Left = 629
-    Top = 21
+    Left = 722
+    Top = 162
     object qryCustTypeDescription: TWideStringField
       FieldName = 'Description'
     end

@@ -388,7 +388,7 @@ begin
  pnlRepSearch.visible := rdgrpReportType.itemindex = 2;
  if rdgrpReportType.itemindex >= 2 then
  begin
-   width := 568;
+   width := 732;
    if rdgrpReportType.itemindex = 2 then
    begin
      self.pnlRep.BringToFront;
@@ -401,7 +401,7 @@ begin
  end
  else
  begin
-   width := 296;
+   width := 380;
  end;
 
 

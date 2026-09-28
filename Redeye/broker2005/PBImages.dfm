@@ -2,8 +2,8 @@ object PBImagesFrm: TPBImagesFrm
   Left = 200
   Top = 112
   Caption = 'PBImagesFrm'
-  ClientHeight = 352
-  ClientWidth = 1198
+  ClientHeight = 343
+  ClientWidth = 1192
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack

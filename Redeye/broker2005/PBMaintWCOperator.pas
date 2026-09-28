@@ -128,7 +128,7 @@ procedure TPBMaintWCOperatorFrm.btnOperatorsClick(Sender: TObject);
 begin
   PBLUOpsFrm := TPBLUOpsFrm.Create(Self);
   try
-    PBLUOpsFrm.bIs_Lookup := False;
+    PBLUOpsFrm.bIs_Lookup := true;
     PBLUOpsFrm.bAllow_Upd := True;
     PBLUOpsFrm.SelCode := iOperator;
     PBLUOpsFrm.ShowModal;

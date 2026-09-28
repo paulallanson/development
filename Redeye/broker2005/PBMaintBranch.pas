@@ -164,7 +164,7 @@ var
   TempArray: array[0..255] of Char;
 begin
   {Search the INI file for Default Branch tab}
-  GetPrivateProfileString('Centrereed Broker', 'Default Branch Tab', '', TempArray,
+  GetPrivateProfileString('Customer Branch', 'Default Branch Tab', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   Result := strtoint(TempArray);
@@ -958,7 +958,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'Default Branch Tab', inttostr(pgBranches.TabIndex));
+    IniFile.WriteString('Customer Branch', 'Default Branch Tab', inttostr(pgBranches.TabIndex));
   finally
     Inifile.free;
   end;

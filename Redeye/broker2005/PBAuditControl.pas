@@ -49,7 +49,7 @@ With GetAuditFlagsSQL do
         end;
 //  dmBroker.ScreenAccessControl(Self,'',frmpbMainMenu.iOperator,0,0) ;
   If dmBroker.iAccCtrl = 1 then
-        MessageDlg('Any changes made here will not be applied to a user until they exit BROKER and go back in',
+        MessageDlg('Any changes made here will not be applied to a user until they exit Redeye and go back in',
                         mtInformation, [mbOK],0) ;
   dmBroker.ScreenAccessControl(Self,'mnuSystem',frmpbMainMenu.iOperator,0,0) ;
 end;

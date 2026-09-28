@@ -2,8 +2,8 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   Left = 22
   Top = 128
   Caption = 'Customer Quotes'
-  ClientHeight = 395
-  ClientWidth = 794
+  ClientHeight = 386
+  ClientWidth = 788
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 794
+    Width = 788
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 788
+        Width = 792
       end>
+    ExplicitWidth = 794
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -124,8 +125,8 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 376
-    Width = 794
+    Top = 367
+    Width = 788
     Height = 19
     Panels = <
       item
@@ -137,17 +138,21 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       item
         Width = 50
       end>
+    ExplicitTop = 376
+    ExplicitWidth = 794
   end
   object Panel1: TPanel
     Left = 0
-    Top = 335
-    Width = 794
+    Top = 326
+    Width = 788
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 335
+    ExplicitWidth = 794
     DesignSize = (
-      794
+      788
       41)
     object Label1: TLabel
       Left = 8
@@ -157,7 +162,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 533
+      Left = 521
       Top = 16
       Width = 76
       Height = 13
@@ -174,7 +179,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       OnChange = edtSearchChange
     end
     object btnClose: TButton
-      Left = 716
+      Left = 704
       Top = 10
       Width = 75
       Height = 25
@@ -182,15 +187,17 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       Caption = 'Clos&e'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 716
     end
     object edtNumber: TEdit
-      Left = 613
+      Left = 601
       Top = 12
       Width = 90
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 613
     end
     object btnSearch: TBitBtn
       Left = 296
@@ -205,13 +212,14 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 794
+    Width = 788
     Height = 30
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 794
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -248,21 +256,22 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 373
+        Width = 385
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 367
+            Width = 383
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 358
+          Width = 370
           Height = 25
           Align = alClient
-          ButtonWidth = 66
+          ButtonHeight = 19
+          ButtonWidth = 51
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -329,8 +338,8 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 794
-    Height = 260
+    Width = 788
+    Height = 251
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET

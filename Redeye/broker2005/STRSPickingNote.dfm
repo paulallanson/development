@@ -2,8 +2,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   Left = 222
   Top = 126
   Caption = 'Print Picking Notes'
-  ClientHeight = 405
-  ClientWidth = 709
+  ClientHeight = 396
+  ClientWidth = 703
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 709
+    Width = 703
     Height = 57
     Align = alTop
     ParentBackground = False
@@ -69,8 +69,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 354
-    Width = 709
+    Top = 345
+    Width = 703
     Height = 51
     Align = alBottom
     ParentBackground = False
@@ -78,7 +78,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     ExplicitTop = 355
     ExplicitWidth = 646
     DesignSize = (
-      709
+      703
       51)
     object lblPickingConfirmed: TLabel
       Left = 8
@@ -105,7 +105,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       TabOrder = 3
     end
     object Previewbitbtn: TBitBtn
-      Left = 441
+      Left = 429
       Top = 14
       Width = 75
       Height = 25
@@ -136,7 +136,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ExplicitLeft = 378
     end
     object PrintBitBtn: TBitBtn
-      Left = 530
+      Left = 518
       Top = 14
       Width = 75
       Height = 25
@@ -168,7 +168,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       ExplicitLeft = 467
     end
     object CancelBitBtn: TBitBtn
-      Left = 619
+      Left = 607
       Top = 14
       Width = 75
       Height = 25
@@ -190,7 +190,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   object Panel3: TPanel
     Left = 0
     Top = 57
-    Width = 709
+    Width = 703
     Height = 56
     Align = alTop
     ParentBackground = False
@@ -264,8 +264,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   object sgDetails: TStringGrid
     Left = 0
     Top = 113
-    Width = 709
-    Height = 241
+    Width = 703
+    Height = 232
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20

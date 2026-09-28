@@ -10,14 +10,14 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qckrpSalesInvPay: TQuickRep
     Left = 16
     Top = -8
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qckrpSalesInvPayBeforePrint
     DataSet = qrySalesInvOutPay
@@ -75,31 +75,31 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
     PreviewLeft = 0
     PreviewTop = 0
     object qrbndPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 91
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 114
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        240.770833333333300000
-        2770.187500000000000000)
+        241.300000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
-        Left = 297
-        Top = 8
-        Width = 452
-        Height = 23
+        Left = 382
+        Top = 10
+        Width = 544
+        Height = 29
         Size.Values = (
-          60.854166666666670000
-          785.812500000000000000
+          61.383333333333330000
+          808.566666666666700000
           21.166666666666670000
-          1195.916666666667000000)
+          1151.466666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -109,7 +109,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -120,15 +120,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 14
       end
       object QRLabel2: TQRLabel
-        Left = 8
-        Top = 72
-        Width = 47
-        Height = 15
+        Left = 10
+        Top = 90
+        Width = 57
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           21.166666666666670000
           190.500000000000000000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -138,7 +138,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -149,15 +149,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 296
-        Top = 72
-        Width = 54
-        Height = 15
+        Left = 370
+        Top = 90
+        Width = 64
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           783.166666666666700000
           190.500000000000000000
-          142.875000000000000000)
+          135.466666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -167,7 +167,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -178,15 +178,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 368
-        Top = 72
-        Width = 60
-        Height = 15
+        Left = 460
+        Top = 90
+        Width = 71
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           973.666666666666700000
           190.500000000000000000
-          158.750000000000000000)
+          150.283333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -196,7 +196,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -207,15 +207,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
-        Left = 444
-        Top = 32
-        Width = 158
-        Height = 17
+        Left = 555
+        Top = 40
+        Width = 199
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1174.750000000000000000
           84.666666666666670000
-          418.041666666666700000)
+          421.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -223,6 +223,12 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         AlignToBand = True
         Caption = 'For Payments Dated from: '
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -230,15 +236,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 10
       end
       object QRLabel13: TQRLabel
-        Left = 925
-        Top = 8
-        Width = 59
-        Height = 17
+        Left = 1156
+        Top = 10
+        Width = 74
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2447.395833333333000000
+          44.450000000000000000
+          2446.866666666667000000
           21.166666666666670000
-          156.104166666666700000)
+          156.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -246,6 +252,12 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         AlignToBand = False
         Caption = 'Page No.:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -253,15 +265,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 10
       end
       object QRSysData1: TQRSysData
-        Left = 989
-        Top = 8
-        Width = 46
-        Height = 17
+        Left = 1236
+        Top = 10
+        Width = 60
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2616.729166666667000000
+          44.450000000000000000
+          2616.200000000000000000
           21.166666666666670000
-          121.708333333333300000)
+          127.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -269,6 +281,12 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         AlignToBand = False
         Color = clWhite
         Data = qrsPageNumber
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Text = ''
         Transparent = False
         ExportAs = exptText
@@ -276,15 +294,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 10
       end
       object QRLabel1: TQRLabel
-        Left = 448
-        Top = 72
-        Width = 49
-        Height = 15
+        Left = 560
+        Top = 90
+        Width = 57
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1185.333333333333000000
           190.500000000000000000
-          129.645833333333300000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -294,7 +312,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -305,15 +323,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 608
-        Top = 72
-        Width = 38
-        Height = 15
+        Left = 760
+        Top = 90
+        Width = 46
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1608.666666666667000000
           190.500000000000000000
-          100.541666666666700000)
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -323,7 +341,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -334,15 +352,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 724
-        Top = 72
-        Width = 61
-        Height = 15
+        Left = 905
+        Top = 90
+        Width = 73
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1915.583333333333000000
           190.500000000000000000
-          161.395833333333300000)
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -352,7 +370,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -363,15 +381,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 812
-        Top = 72
-        Width = 56
-        Height = 15
+        Left = 1015
+        Top = 90
+        Width = 69
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           2148.416666666667000000
           190.500000000000000000
-          148.166666666666700000)
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -381,7 +399,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -392,15 +410,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel12: TQRLabel
-        Left = 896
-        Top = 72
-        Width = 55
-        Height = 15
+        Left = 1120
+        Top = 90
+        Width = 66
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           2370.666666666667000000
           190.500000000000000000
-          145.520833333333300000)
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -410,7 +428,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -421,15 +439,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel16: TQRLabel
-        Left = 976
-        Top = 72
-        Width = 32
-        Height = 15
+        Left = 1220
+        Top = 90
+        Width = 39
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           2582.333333333333000000
           190.500000000000000000
-          84.666666666666670000)
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -439,7 +457,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -450,15 +468,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel17: TQRLabel
-        Left = 976
-        Top = 56
-        Width = 21
-        Height = 17
+        Left = 1220
+        Top = 70
+        Width = 27
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           2582.333333333333000000
           148.166666666666700000
-          55.562500000000000000)
+          57.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -468,7 +486,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -479,10 +497,10 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRLabel19: TQRLabel
-        Left = 520
-        Top = 56
-        Width = 57
-        Height = 33
+        Left = 650
+        Top = 70
+        Width = 71
+        Height = 41
         Size.Values = (
           87.312500000000000000
           1375.833333333333000000
@@ -498,7 +516,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -510,10 +528,10 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 38
-      Top = 161
-      Width = 1047
-      Height = 28
+      Left = 47
+      Top = 193
+      Width = 1309
+      Height = 35
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
       TransparentBand = False
@@ -521,7 +539,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       ForceNewPage = False
       Size.Values = (
         74.083333333333330000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qckrpSalesInvPay
@@ -529,15 +547,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       PrintBefore = False
       PrintIfEmpty = True
       object qrlblExpiryDate: TQRLabel
-        Left = 805
+        Left = 1008
         Top = 0
-        Width = 73
-        Height = 17
+        Width = 89
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2129.895833333333000000
+          44.450000000000000000
+          2133.600000000000000000
           0.000000000000000000
-          193.145833333333300000)
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -547,7 +565,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -558,15 +576,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object qrdbtxtGoodsValue: TQRDBText
-        Left = 889
+        Left = 1115
         Top = 0
-        Width = 65
-        Height = 17
+        Width = 77
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2352.145833333333000000
+          44.450000000000000000
+          2360.083333333333000000
           0.000000000000000000
-          171.979166666666700000)
+          162.983333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -577,7 +595,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Total_Value'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -590,15 +608,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object qrdbtxtInvDate: TQRDBText
-        Left = 368
+        Left = 465
         Top = 0
-        Width = 63
-        Height = 17
+        Width = 74
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          973.666666666666700000
+          44.450000000000000000
+          984.250000000000000000
           0.000000000000000000
-          166.687500000000000000)
+          156.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -609,7 +627,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Invoice_Date'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -622,15 +640,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 264
+        Left = 337
         Top = 0
-        Width = 86
-        Height = 17
+        Width = 101
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          698.500000000000000000
+          44.450000000000000000
+          713.316666666666700000
           0.000000000000000000
-          227.541666666666700000)
+          213.783333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -641,7 +659,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Sales_invoice_no'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -654,15 +672,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRDBText1: TQRDBText
-        Left = 448
+        Left = 560
         Top = 0
-        Width = 52
-        Height = 17
+        Width = 59
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1185.333333333333000000
           0.000000000000000000
-          137.583333333333300000)
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -673,7 +691,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -686,15 +704,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 608
+        Left = 760
         Top = 0
-        Width = 71
-        Height = 17
+        Width = 87
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1608.666666666667000000
           0.000000000000000000
-          187.854166666666700000)
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -705,7 +723,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Contact_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -718,15 +736,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRDBText5: TQRDBText
-        Left = 980
+        Left = 1225
         Top = 0
-        Width = 58
-        Height = 17
+        Width = 72
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           2592.916666666667000000
           0.000000000000000000
-          153.458333333333300000)
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -737,7 +755,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Paid_Status'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -750,15 +768,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRDBTxtCstNm: TQRDBText
-        Left = 9
+        Left = 12
         Top = 0
-        Width = 80
-        Height = 17
+        Width = 98
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
+          44.450000000000000000
+          25.400000000000000000
           0.000000000000000000
-          211.666666666666700000)
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -769,7 +787,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -782,15 +800,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object qrlblAccountNumber: TQRLabel
-        Left = 691
+        Left = 870
         Top = 0
-        Width = 99
-        Height = 17
+        Width = 118
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1828.270833333333000000
+          44.450000000000000000
+          1841.500000000000000000
           0.000000000000000000
-          261.937500000000000000)
+          249.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -800,7 +818,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -811,10 +829,10 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 520
+        Left = 650
         Top = 0
-        Width = 73
-        Height = 17
+        Width = 91
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1375.833333333333000000
@@ -831,7 +849,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         DataField = 'Payment_Method_Desc'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -845,10 +863,10 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       end
     end
     object QRBand1: TQRBand
-      Left = 38
-      Top = 189
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 228
+      Width = 1309
+      Height = 50
       AfterPrint = QRBand1AfterPrint
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
@@ -858,20 +876,20 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel18: TQRLabel
-        Left = 840
-        Top = 8
-        Width = 35
-        Height = 20
+        Left = 1050
+        Top = 10
+        Width = 39
+        Height = 25
         Size.Values = (
           52.916666666666670000
           2222.500000000000000000
           21.166666666666670000
-          92.604166666666670000)
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -881,7 +899,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -892,15 +910,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object TotalSellLbl: TQRLabel
-        Left = 889
-        Top = 8
-        Width = 65
-        Height = 20
+        Left = 1114
+        Top = 10
+        Width = 78
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2352.145833333333000000
+          2357.966666666667000000
           21.166666666666670000
-          171.979166666666700000)
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -910,7 +928,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -921,10 +939,10 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 824
+        Left = 1030
         Top = 0
-        Width = 129
-        Height = 9
+        Width = 161
+        Height = 11
         Size.Values = (
           23.812500000000000000
           2180.166666666667000000
@@ -938,27 +956,27 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       end
     end
     object RepQRGroup: TQRGroup
-      Left = 38
-      Top = 129
-      Width = 1047
+      Left = 47
+      Top = 161
+      Width = 1309
       Height = 32
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        2770.187500000000000000)
+        67.733333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       FooterBand = QRBand1
       Master = QRSubDetail1
       ReprintOnNewPage = False
       object GrpByQRDBText: TQRDBText
-        Left = 8
-        Top = 8
-        Width = 250
-        Height = 17
+        Left = 10
+        Top = 10
+        Width = 312
+        Height = 21
         Size.Values = (
           44.979166666666700000
           21.166666666666700000
@@ -974,6 +992,12 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         DataSet = qrySalesInvOutPay
         DataField = 'Customer_Name'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         WordWrap = False
         ExportAs = exptText
@@ -985,10 +1009,10 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       end
     end
     object QRBand2: TQRBand
-      Left = 38
-      Top = 229
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 278
+      Width = 1309
+      Height = 50
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
       TransparentBand = False
@@ -996,15 +1020,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbSummary
       object QRShape2: TQRShape
-        Left = 824
-        Top = 2
-        Width = 129
-        Height = 9
+        Left = 1030
+        Top = 3
+        Width = 161
+        Height = 11
         Size.Values = (
           23.812500000000000000
           2180.166666666667000000
@@ -1017,15 +1041,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         VertAdjust = 0
       end
       object RepTotQRLabel: TQRLabel
-        Left = 840
-        Top = 10
-        Width = 35
-        Height = 20
+        Left = 1050
+        Top = 12
+        Width = 39
+        Height = 25
         Size.Values = (
           52.916666666666670000
           2222.500000000000000000
-          26.458333333333330000
-          92.604166666666670000)
+          25.400000000000000000
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1035,7 +1059,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1046,15 +1070,15 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         FontSize = 8
       end
       object RepTotSellQRLbl: TQRLabel
-        Left = 889
-        Top = 10
-        Width = 65
-        Height = 20
+        Left = 1114
+        Top = 12
+        Width = 78
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          2352.145833333333000000
-          26.458333333333330000
-          171.979166666666700000)
+          2357.966666666667000000
+          25.400000000000000000
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1064,7 +1088,7 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False

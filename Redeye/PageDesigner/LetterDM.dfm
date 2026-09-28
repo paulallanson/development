@@ -1,13 +1,14 @@
 object dmLetter: TdmLetter
-  Height = 479
-  Width = 741
+  Height = 599
+  Width = 926
+  PixelsPerInch = 120
   object qryLetter: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM tb_LetterLayout'
       'WHERE f_LetterName = :Name')
-    Left = 32
-    Top = 64
+    Left = 40
+    Top = 80
     ParamData = <
       item
         Name = 'Name'
@@ -20,8 +21,8 @@ object dmLetter: TdmLetter
     SQL.Strings = (
       'SELECT * FROM tb_LetterElement'
       'WHERE f_LetterName = :Name')
-    Left = 32
-    Top = 16
+    Left = 40
+    Top = 20
     ParamData = <
       item
         Name = 'Name'
@@ -51,8 +52,8 @@ object dmLetter: TdmLetter
       ',:Font5Size, :Font5Style, :Default'
       ',:TabUnit, :TabStop1, :TabStop2 )'
       ' ')
-    Left = 32
-    Top = 120
+    Left = 40
+    Top = 150
     ParamData = <
       item
         Name = 'LetterName'
@@ -164,15 +165,15 @@ object dmLetter: TdmLetter
     ConnectionName = 'PB'
     SQL.Strings = (
       '')
-    Left = 32
-    Top = 224
+    Left = 40
+    Top = 280
   end
   object ADOConn: TADOConnection
     LoginPrompt = False
     Provider = 'MSDASQL.1'
     BeforeConnect = ADOConnBeforeConnect
-    Left = 104
-    Top = 16
+    Left = 130
+    Top = 20
   end
   object ADOAddElement: TADOQuery
     Connection = ADOConn
@@ -329,8 +330,8 @@ object dmLetter: TdmLetter
       ' '
       ' '
       ' ')
-    Left = 104
-    Top = 64
+    Left = 130
+    Top = 80
   end
   object ADOUpdElement: TADOQuery
     Connection = ADOConn
@@ -491,8 +492,8 @@ object dmLetter: TdmLetter
       'WHERE f_LetterName = :Name AND f_ElementName = :EName'
       ' '
       ' ')
-    Left = 104
-    Top = 120
+    Left = 130
+    Top = 150
   end
   object qryUpdLetter: TFDQuery
     ConnectionName = 'PB'
@@ -519,8 +520,8 @@ object dmLetter: TdmLetter
       '  ,f_TabStop2 =    :TabStop2'
       'WHERE f_LetterName = :Name'
       ' ')
-    Left = 32
-    Top = 176
+    Left = 40
+    Top = 220
     ParamData = <
       item
         Name = 'Font1Name'
@@ -629,8 +630,8 @@ object dmLetter: TdmLetter
       'UPDATE tb_LetterLayout SET f_LetterTypeDefault = '#39'N'#39
       'WHERE f_LetterType = :Type'
       ' ')
-    Left = 104
-    Top = 176
+    Left = 130
+    Top = 220
     ParamData = <
       item
         Name = 'Type'
@@ -643,8 +644,8 @@ object dmLetter: TdmLetter
     SQL.Strings = (
       'select ExportFilter, Description'
       'from ExportFilter')
-    Left = 32
-    Top = 280
+    Left = 40
+    Top = 350
   end
   object qryGetExportFilter: TFDQuery
     ConnectionName = 'PB'
@@ -652,8 +653,8 @@ object dmLetter: TdmLetter
       'Select ExportFilter, Description'
       'from Exportfilter'
       'where Exportfilter = :Exportfilter')
-    Left = 104
-    Top = 280
+    Left = 130
+    Top = 350
     ParamData = <
       item
         Name = 'Exportfilter'
@@ -662,7 +663,7 @@ object dmLetter: TdmLetter
   object FDConn: TFDConnection
     OnError = FDConnError
     BeforeConnect = FDConnBeforeConnect
-    Left = 184
-    Top = 16
+    Left = 230
+    Top = 20
   end
 end

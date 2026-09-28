@@ -10,13 +10,13 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object QuickReport: TQuickRep
     Left = -1
     Top = -3
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = QuickReportBeforePrint
     DataSet = PBRSRptOrdsFrm.qryLive
@@ -74,10 +74,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand2: TQRBand
-      Left = 19
-      Top = 38
-      Width = 1097
-      Height = 59
+      Left = 24
+      Top = 47
+      Width = 1370
+      Height = 74
       Frame.DrawBottom = True
       Frame.Style = psDashDot
       AlignToBottom = False
@@ -91,21 +91,21 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        156.104166666666700000
-        2902.479166666667000000)
+        156.633333333333300000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRLabel1: TQRLabel
-        Left = 451
-        Top = 2
-        Width = 195
-        Height = 20
+        Left = 564
+        Top = 3
+        Width = 241
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1193.270833333333000000
-          5.291666666666667000
-          515.937500000000000000)
+          1193.800000000000000000
+          6.350000000000000000
+          510.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -115,7 +115,7 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -128,13 +128,13 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       object RunDateQRLabel: TQRLabel
         Left = 0
         Top = 0
-        Width = 79
-        Height = 17
+        Width = 92
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           0.000000000000000000
           0.000000000000000000
-          209.020833333333300000)
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -144,7 +144,7 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial Narrow'
         Font.Style = [fsBold]
         ParentFont = False
@@ -155,15 +155,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 24
-        Top = 40
-        Width = 24
-        Height = 16
+        Left = 30
+        Top = 50
+        Width = 29
+        Height = 20
         Size.Values = (
           42.333333333333330000
           63.500000000000000000
           105.833333333333300000
-          63.500000000000000000)
+          61.383333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -171,6 +171,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Order'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -178,15 +184,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 56
-        Top = 40
-        Width = 19
-        Height = 16
+        Left = 70
+        Top = 50
+        Width = 23
+        Height = 20
         Size.Values = (
           42.333333333333330000
           148.166666666666700000
           105.833333333333300000
-          50.270833333333330000)
+          48.683333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -194,6 +200,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Date'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -201,15 +213,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 112
-        Top = 40
-        Width = 41
-        Height = 16
+        Left = 140
+        Top = 50
+        Width = 46
+        Height = 20
         Size.Values = (
           42.333333333333330000
           296.333333333333300000
           105.833333333333300000
-          108.479166666666700000)
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -217,6 +229,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Customer'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -224,15 +242,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 232
-        Top = 40
-        Width = 94
-        Height = 16
+        Left = 290
+        Top = 50
+        Width = 106
+        Height = 20
         Size.Values = (
           42.333333333333330000
           613.833333333333300000
           105.833333333333300000
-          248.708333333333300000)
+          224.366666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -240,6 +258,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Customers Description'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -247,15 +271,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 400
-        Top = 40
-        Width = 43
-        Height = 16
+        Left = 500
+        Top = 50
+        Width = 48
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1058.333333333333000000
           105.833333333333300000
-          113.770833333333300000)
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -263,6 +287,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Form Ref.'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -270,15 +300,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel7: TQRLabel
-        Left = 588
-        Top = 40
-        Width = 35
-        Height = 16
+        Left = 735
+        Top = 50
+        Width = 39
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1555.750000000000000000
           105.833333333333300000
-          92.604166666666670000)
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -286,6 +316,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Quantity'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -293,36 +329,13 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 656
-        Top = 40
-        Width = 22
-        Height = 16
+        Left = 820
+        Top = 50
+        Width = 25
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1735.666666666667000000
-          105.833333333333300000
-          58.208333333333330000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
-        Alignment = taLeftJustify
-        AlignToBand = False
-        Caption = 'Price'
-        Color = clWhite
-        Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
-        FontSize = 8
-      end
-      object QRLabel9: TQRLabel
-        Left = 760
-        Top = 40
-        Width = 20
-        Height = 16
-        Size.Values = (
-          42.333333333333330000
-          2010.833333333333000000
           105.833333333333300000
           52.916666666666670000)
         XLColumn = 0
@@ -330,8 +343,43 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        Caption = 'Price'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 8
+      end
+      object QRLabel9: TQRLabel
+        Left = 950
+        Top = 50
+        Width = 22
+        Height = 20
+        Size.Values = (
+          42.333333333333330000
+          2010.833333333333000000
+          105.833333333333300000
+          46.566666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
         Caption = 'Cost'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -339,15 +387,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 840
-        Top = 40
-        Width = 21
-        Height = 16
+        Left = 1050
+        Top = 50
+        Width = 24
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2222.500000000000000000
           105.833333333333300000
-          55.562500000000000000)
+          50.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -355,6 +403,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Rep.'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -362,15 +416,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel11: TQRLabel
-        Left = 904
-        Top = 40
-        Width = 42
-        Height = 16
+        Left = 1130
+        Top = 50
+        Width = 48
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2391.833333333333000000
           105.833333333333300000
-          111.125000000000000000)
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -378,6 +432,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Repeat Of'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -385,15 +445,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel12: TQRLabel
-        Left = 952
-        Top = 40
-        Width = 33
-        Height = 16
+        Left = 1190
+        Top = 50
+        Width = 37
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2518.833333333333000000
           105.833333333333300000
-          87.312500000000000000)
+          78.316666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -401,6 +461,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Expires'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -408,15 +474,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel13: TQRLabel
-        Left = 1008
-        Top = 40
-        Width = 53
-        Height = 16
+        Left = 1260
+        Top = 50
+        Width = 60
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2667.000000000000000000
           105.833333333333300000
-          140.229166666666700000)
+          127.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -424,6 +490,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Cust Ord No'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -431,15 +503,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel15: TQRLabel
-        Left = 688
-        Top = 40
-        Width = 22
-        Height = 16
+        Left = 860
+        Top = 50
+        Width = 24
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1820.333333333333000000
           105.833333333333300000
-          58.208333333333330000)
+          50.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -447,6 +519,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Units'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -454,15 +532,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel16: TQRLabel
-        Left = 790
-        Top = 40
-        Width = 22
-        Height = 16
+        Left = 987
+        Top = 50
+        Width = 24
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2090.208333333333000000
+          2089.150000000000000000
           105.833333333333300000
-          58.208333333333330000)
+          50.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -470,6 +548,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Units'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -478,10 +562,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       end
     end
     object RepQRGroup: TQRGroup
-      Left = 19
-      Top = 97
-      Width = 1097
-      Height = 24
+      Left = 24
+      Top = 121
+      Width = 1370
+      Height = 30
       AlignToBottom = False
       TransparentBand = False
       Font.Charset = ANSI_CHARSET
@@ -494,22 +578,22 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       ParentFont = False
       Size.Values = (
         63.500000000000000000
-        2902.479166666667000000)
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       FooterBand = RepQRFooter
       Master = QRSubDetail1
       ReprintOnNewPage = False
       object GrpByQRDBText: TQRDBText
-        Left = 59
-        Top = 8
-        Width = 39
-        Height = 16
+        Left = 74
+        Top = 10
+        Width = 45
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          156.104166666666700000
+          156.633333333333300000
           21.166666666666670000
-          103.187500000000000000)
+          95.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -518,6 +602,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'repName'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -527,15 +617,15 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRLabel14: TQRLabel
-        Left = 21
-        Top = 8
-        Width = 29
-        Height = 16
+        Left = 28
+        Top = 10
+        Width = 34
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          55.562500000000000000
+          59.266666666666670000
           21.166666666666670000
-          76.729166666666670000)
+          71.966666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -543,6 +633,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         AlignToBand = False
         Caption = 'Group:'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -551,10 +647,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 19
-      Top = 121
-      Width = 1097
-      Height = 17
+      Left = 24
+      Top = 151
+      Width = 1370
+      Height = 21
       AlignToBottom = False
       TransparentBand = False
       Font.Charset = ANSI_CHARSET
@@ -566,8 +662,8 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        44.979166666666670000
-        2902.479166666667000000)
+        44.450000000000000000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = QuickReport
@@ -577,8 +673,8 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       object QRDBText1: TQRDBText
         Left = 0
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           0.000000000000000000
@@ -593,6 +689,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'purchase_order'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -602,10 +704,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 56
+        Left = 70
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           148.166666666667000000
@@ -620,6 +722,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'Date_Point'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -629,10 +737,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 112
+        Left = 140
         Top = 0
-        Width = 121
-        Height = 18
+        Width = 151
+        Height = 23
         Size.Values = (
           47.625000000000000000
           296.333333333333000000
@@ -647,6 +755,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'CustName'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -656,10 +770,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 232
+        Left = 290
         Top = 0
-        Width = 161
-        Height = 16
+        Width = 201
+        Height = 20
         Size.Values = (
           42.333333333333300000
           613.833333333333000000
@@ -674,6 +788,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'customers_desc'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -683,10 +803,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText5: TQRDBText
-        Left = 400
+        Left = 500
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           1058.333333333330000000
@@ -701,6 +821,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'Form_Reference_ID'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -710,10 +836,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText6: TQRDBText
-        Left = 456
+        Left = 570
         Top = 0
-        Width = 97
-        Height = 16
+        Width = 121
+        Height = 20
         Size.Values = (
           42.333333333333300000
           1206.500000000000000000
@@ -728,6 +854,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'Form_Reference_Descr'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -737,10 +869,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText7: TQRDBText
-        Left = 576
+        Left = 720
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           1524.000000000000000000
@@ -755,6 +887,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'Quantity'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -764,10 +902,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText8: TQRDBText
-        Left = 630
+        Left = 788
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           1666.875000000000000000
@@ -782,6 +920,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'selling_price'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -791,10 +935,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText9: TQRDBText
-        Left = 688
+        Left = 860
         Top = 0
-        Width = 41
-        Height = 16
+        Width = 51
+        Height = 20
         Size.Values = (
           42.333333333333300000
           1820.333333333330000000
@@ -809,6 +953,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'sell_unit'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -818,10 +968,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText10: TQRDBText
-        Left = 734
+        Left = 918
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           1942.041666666670000000
@@ -836,6 +986,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'order_price'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -845,10 +1001,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText11: TQRDBText
-        Left = 792
+        Left = 990
         Top = 0
-        Width = 41
-        Height = 16
+        Width = 51
+        Height = 20
         Size.Values = (
           42.333333333333300000
           2095.500000000000000000
@@ -863,6 +1019,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'order_unit'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -872,10 +1034,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText12: TQRDBText
-        Left = 840
+        Left = 1050
         Top = 0
-        Width = 57
-        Height = 16
+        Width = 71
+        Height = 20
         Size.Values = (
           42.333333333333300000
           2222.500000000000000000
@@ -890,6 +1052,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'repName'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -899,10 +1067,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText13: TQRDBText
-        Left = 896
+        Left = 1120
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           2370.666666666670000000
@@ -917,6 +1085,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'original_order'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -926,10 +1100,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText14: TQRDBText
-        Left = 952
+        Left = 1190
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           2518.833333333330000000
@@ -944,6 +1118,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'expDate'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -953,10 +1133,10 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         FontSize = 8
       end
       object QRDBText15: TQRDBText
-        Left = 1008
+        Left = 1260
         Top = 0
-        Width = 49
-        Height = 16
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333300000
           2667.000000000000000000
@@ -971,6 +1151,12 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
         Color = clWhite
         DataSet = PBRSRptOrdsFrm.qryLive
         DataField = 'cust_order_no'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -981,25 +1167,25 @@ object PBRPRptOrdsFrm: TPBRPRptOrdsFrm
       end
     end
     object RepQRFooter: TQRBand
-      Left = 19
-      Top = 138
-      Width = 1097
-      Height = 23
+      Left = 24
+      Top = 172
+      Width = 1370
+      Height = 29
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        60.854166666666670000
-        2902.479166666667000000)
+        61.383333333333330000
+        2899.833333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRShape2: TQRShape
-        Left = 136
-        Top = 8
-        Width = 800
-        Height = 3
+        Left = 170
+        Top = 10
+        Width = 1000
+        Height = 4
         Size.Values = (
           7.937500000000000000
           359.833333333333000000

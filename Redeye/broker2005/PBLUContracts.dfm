@@ -2,8 +2,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   Left = 205
   Top = 107
   Caption = 'Contracts'
-  ClientHeight = 414
-  ClientWidth = 836
+  ClientHeight = 405
+  ClientWidth = 830
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 395
-    Width = 836
+    Top = 386
+    Width = 830
     Height = 19
     Panels = <
       item
@@ -35,11 +35,13 @@ object frmPBLUContracts: TfrmPBLUContracts
       item
         Width = 50
       end>
+    ExplicitTop = 395
+    ExplicitWidth = 836
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 836
+    Width = 830
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -47,6 +49,7 @@ object frmPBLUContracts: TfrmPBLUContracts
     Color = 16642529
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 836
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -79,15 +82,16 @@ object frmPBLUContracts: TfrmPBLUContracts
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 836
+    Width = 830
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 830
+        Width = 834
       end>
+    ExplicitWidth = 836
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
@@ -140,12 +144,14 @@ object frmPBLUContracts: TfrmPBLUContracts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 354
-    Width = 836
+    Top = 345
+    Width = 830
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 354
+    ExplicitWidth = 836
     object Label60: TLabel
       Left = 8
       Top = 13
@@ -213,8 +219,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 836
-    Height = 279
+    Width = 830
+    Height = 270
     Align = alClient
     DataSource = dtmdlContract.dtsContractGrid
     DrawingStyle = gdsGradient

@@ -217,6 +217,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
+    ExplicitTop = 367
   end
   object PreviewBitBtn: TBitBtn
     Left = 191
@@ -248,6 +249,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     ParentFont = False
     TabOrder = 4
     OnClick = PreviewBitBtnClick
+    ExplicitTop = 367
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -327,6 +329,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     ParentFont = False
     TabOrder = 6
     OnClick = PrintBitBtnClick
+    ExplicitTop = 367
   end
   object GroupBox4: TGroupBox
     Left = 224

@@ -3,44 +3,45 @@ object PBMaintNonConformCatFrm: TPBMaintNonConformCatFrm
   Top = 152
   BorderStyle = bsDialog
   Caption = 'Maintain Non Conformance Category'
-  ClientHeight = 104
-  ClientWidth = 347
+  ClientHeight = 120
+  ClientWidth = 354
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    347
-    104)
-  TextHeight = 13
+    354
+    120)
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 37
-    Top = 80
-    Width = 109
-    Height = 13
+    Left = 44
+    Top = 90
+    Width = 132
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 86
   end
   object Label1: TLabel
     Left = 7
     Top = 20
-    Width = 61
-    Height = 13
+    Width = 69
+    Height = 17
     Caption = 'Department'
   end
   object OKBitBtn: TBitBtn
-    Left = 173
-    Top = 72
+    Left = 180
+    Top = 87
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -114,10 +115,11 @@ object PBMaintNonConformCatFrm: TPBMaintNonConformCatFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = OKBitBtnClick
+    ExplicitTop = 83
   end
   object CancelBitBtn: TBitBtn
-    Left = 253
-    Top = 72
+    Left = 260
+    Top = 87
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -191,12 +193,13 @@ object PBMaintNonConformCatFrm: TPBMaintNonConformCatFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = CancelBitBtnClick
+    ExplicitTop = 83
   end
   object edtDescription: TEdit
-    Left = 78
+    Left = 84
     Top = 16
     Width = 252
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 2
     Text = 'edtDescription'
@@ -216,8 +219,8 @@ object PBMaintNonConformCatFrm: TPBMaintNonConformCatFrm
       'Select Non_Conform_Category.*'
       'From Non_Conform_Category'
       'Where Non_Conform_Category_Descr = :GUID')
-    Left = 88
-    Top = 8
+    Left = 214
+    Top = 34
     ParamData = <
       item
         Name = 'GUID'
@@ -233,8 +236,8 @@ object PBMaintNonConformCatFrm: TPBMaintNonConformCatFrm
       '        Non_Conform_Category_Descr)'
       'Select Max(Non_Conform_Category)+1, :GUID'
       'From Non_Conform_Category')
-    Left = 264
-    Top = 8
+    Left = 194
+    Top = 65530
     ParamData = <
       item
         Name = 'GUID'
@@ -271,8 +274,8 @@ object PBMaintNonConformCatFrm: TPBMaintNonConformCatFrm
       'Delete From Non_Conform_Category'
       'Where'
       '(Non_Conform_Category = :Non_Conform_Category)')
-    Left = 24
-    Top = 8
+    Left = 278
+    Top = 34
     ParamData = <
       item
         Name = 'Non_Conform_Category'

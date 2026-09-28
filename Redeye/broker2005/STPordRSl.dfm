@@ -2,8 +2,8 @@ object STPordRSlFrm: TSTPordRSlFrm
   Left = 243
   Top = 172
   Caption = 'Print Purchase Orders'
-  ClientHeight = 351
-  ClientWidth = 445
+  ClientHeight = 342
+  ClientWidth = 439
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -151,7 +151,7 @@ object STPordRSlFrm: TSTPordRSlFrm
     object Label1: TLabel
       Left = 8
       Top = 71
-      Width = 273
+      Width = 255
       Height = 51
       Caption = 
         'Enter Order numbers and/or Order ranges separated by commas. For' +

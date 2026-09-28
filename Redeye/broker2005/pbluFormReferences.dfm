@@ -2,12 +2,12 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   Left = 26
   Top = 123
   Caption = 'Form References'
-  ClientHeight = 355
-  ClientWidth = 698
+  ClientHeight = 346
+  ClientWidth = 692
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsMDIChild
@@ -19,11 +19,11 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 698
+    Width = 692
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -48,22 +48,22 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 698
+    Width = 692
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 692
+        Width = 686
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 683
+      Width = 677
       Height = 41
-      ButtonHeight = 36
-      ButtonWidth = 66
+      ButtonHeight = 40
+      ButtonWidth = 75
       Caption = 'ToolBar1'
       Images = imglst
       ShowCaptions = True
@@ -76,7 +76,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 66
+        Left = 75
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -84,7 +84,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 132
+        Left = 150
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -92,7 +92,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnDeleteClick
       end
       object btnNonStock: TToolButton
-        Left = 198
+        Left = 225
         Top = 0
         Width = 8
         Caption = 'btnNonStock'
@@ -100,7 +100,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         Style = tbsSeparator
       end
       object btnMovements: TToolButton
-        Left = 206
+        Left = 233
         Top = 0
         Caption = 'Movements'
         Enabled = False
@@ -108,7 +108,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnMovementsClick
       end
       object btnLocations: TToolButton
-        Left = 272
+        Left = 308
         Top = 0
         Caption = 'Locations'
         Enabled = False
@@ -116,7 +116,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         OnClick = btnLocationsClick
       end
       object ToolButton2: TToolButton
-        Left = 338
+        Left = 383
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -124,7 +124,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 346
+        Left = 391
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -135,14 +135,14 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 698
-    Height = 220
+    Width = 692
+    Height = 211
     Align = alClient
     DataSource = dtmdlForms.dtsForms
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -150,7 +150,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnDblClick = dbgDetailsDblClick
@@ -209,8 +209,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   end
   object Panel1: TPanel
     Left = 0
-    Top = 295
-    Width = 698
+    Top = 286
+    Width = 692
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -218,20 +218,20 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
     object Label1: TLabel
       Left = 8
       Top = 14
-      Width = 86
-      Height = 13
-      Caption = 'Customer Search'
+      Width = 56
+      Height = 17
+      Caption = 'Customer'
     end
     object edtSearch: TEdit
-      Left = 104
+      Left = 69
       Top = 10
       Width = 233
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 424
+      Left = 418
       Top = 1
       Width = 273
       Height = 39
@@ -250,8 +250,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
       end
     end
     object chkbxShowNonStocked: TCheckBox
-      Left = 360
-      Top = 12
+      Left = 325
+      Top = 14
       Width = 177
       Height = 17
       Caption = 'Show non stocked items'
@@ -263,8 +263,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 336
-    Width = 698
+    Top = 327
+    Width = 692
     Height = 19
     Panels = <
       item
