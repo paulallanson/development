@@ -12,7 +12,7 @@ object frmPrintingPress: TfrmPrintingPress
   Font.Height = -16
   Font.Name = 'Times New Roman'
   Font.Style = [fsBold]
-  
+  Scaled = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 19
@@ -26,8 +26,8 @@ object frmPrintingPress: TfrmPrintingPress
   object QuickR: TQuickRep
     Left = 0
     Top = 8
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = QuickRBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -88,9 +88,9 @@ object frmPrintingPress: TfrmPrintingPress
     PreviewTop = 0
     object LineToPrint: TQRBand
       Left = 0
-      Top = 62
-      Width = 794
-      Height = 19
+      Top = 77
+      Width = 992
+      Height = 24
       Frame.Width = 0
       AfterPrint = LineToPrintAfterPrint
       AlignToBottom = False
@@ -105,21 +105,21 @@ object frmPrintingPress: TfrmPrintingPress
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        50.270833333333330000
-        2100.791666666667000000)
+        50.800000000000000000
+        2099.733333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbDetail
       object Column1: TQRLabel
-        Left = 32
+        Left = 40
         Top = 0
-        Width = 56
-        Height = 20
+        Width = 72
+        Height = 25
         Size.Values = (
           52.916666666666670000
           84.666666666666670000
           0.000000000000000000
-          148.166666666666700000)
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -129,7 +129,7 @@ object frmPrintingPress: TfrmPrintingPress
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -140,15 +140,15 @@ object frmPrintingPress: TfrmPrintingPress
         FontSize = 12
       end
       object Column2: TQRLabel
-        Left = 285
+        Left = 356
         Top = 0
-        Width = 56
-        Height = 20
+        Width = 72
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          754.062500000000000000
+          753.533333333333300000
           0.000000000000000000
-          148.166666666666700000)
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -158,7 +158,7 @@ object frmPrintingPress: TfrmPrintingPress
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -169,15 +169,15 @@ object frmPrintingPress: TfrmPrintingPress
         FontSize = 12
       end
       object Column3: TQRLabel
-        Left = 528
+        Left = 660
         Top = 0
-        Width = 56
-        Height = 20
+        Width = 72
+        Height = 25
         Size.Values = (
           52.916666666666670000
           1397.000000000000000000
           0.000000000000000000
-          148.166666666666700000)
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -187,7 +187,7 @@ object frmPrintingPress: TfrmPrintingPress
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
@@ -201,8 +201,8 @@ object frmPrintingPress: TfrmPrintingPress
     object PageHeader: TQRBand
       Left = 0
       Top = 0
-      Width = 794
-      Height = 40
+      Width = 992
+      Height = 50
       AlignToBottom = False
       BeforePrint = PageHeaderBeforePrint
       TransparentBand = False
@@ -210,37 +210,37 @@ object frmPrintingPress: TfrmPrintingPress
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2100.791666666667000000)
+        2099.733333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
     end
     object PageFooter: TQRBand
       Left = 0
-      Top = 81
-      Width = 794
-      Height = 40
+      Top = 101
+      Width = 992
+      Height = 50
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2100.791666666667000000)
+        2099.733333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageFooter
       object qrlblAuthorised: TQRLabel
-        Left = 288
-        Top = 4
-        Width = 233
-        Height = 34
+        Left = 360
+        Top = 5
+        Width = 299
+        Height = 43
         Enabled = False
         Size.Values = (
-          89.958333333333330000
+          91.016666666666670000
           762.000000000000000000
           10.583333333333330000
-          616.479166666666700000)
+          632.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -250,7 +250,7 @@ object frmPrintingPress: TfrmPrintingPress
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -29
+        Font.Height = -37
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -262,10 +262,10 @@ object frmPrintingPress: TfrmPrintingPress
       end
     end
     object imgLogo: TQRImage
-      Left = 56
-      Top = 296
-      Width = 105
-      Height = 105
+      Left = 70
+      Top = 370
+      Width = 131
+      Height = 131
       Enabled = False
       Size.Values = (
         277.812500000000000000
@@ -278,10 +278,10 @@ object frmPrintingPress: TfrmPrintingPress
       Stretch = True
     end
     object MyAddress: TQRMemo
-      Left = 208
-      Top = 240
-      Width = 67
-      Height = 17
+      Left = 260
+      Top = 300
+      Width = 84
+      Height = 21
       Size.Values = (
         44.979166666666670000
         550.333333333333300000
@@ -294,6 +294,12 @@ object frmPrintingPress: TfrmPrintingPress
       AlignToBand = False
       AutoSize = False
       Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
       Transparent = False
       FullJustify = False
       MaxBreakChars = 0
@@ -301,31 +307,31 @@ object frmPrintingPress: TfrmPrintingPress
     end
     object PageContinued: TQRChildBand
       Left = 0
-      Top = 40
-      Width = 794
-      Height = 22
+      Top = 50
+      Width = 992
+      Height = 27
       AlignToBottom = False
       Enabled = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        58.208333333333330000
-        2100.791666666667000000)
+        57.150000000000000000
+        2099.733333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = PageHeader
       PrintOrder = cboAfterParent
       object labContinued: TQRLabel
-        Left = 362
+        Left = 453
         Top = 0
-        Width = 69
-        Height = 20
+        Width = 87
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          957.791666666666700000
+          958.850000000000000000
           0.000000000000000000
-          182.562500000000000000)
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -335,7 +341,7 @@ object frmPrintingPress: TfrmPrintingPress
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
@@ -347,10 +353,10 @@ object frmPrintingPress: TfrmPrintingPress
       end
     end
     object imgLogo1: TQRImage
-      Left = 184
-      Top = 296
-      Width = 105
-      Height = 105
+      Left = 230
+      Top = 370
+      Width = 131
+      Height = 131
       Enabled = False
       Size.Values = (
         277.812500000000000000
@@ -363,10 +369,10 @@ object frmPrintingPress: TfrmPrintingPress
       Stretch = True
     end
     object imgLogo2: TQRImage
-      Left = 312
-      Top = 296
-      Width = 105
-      Height = 105
+      Left = 390
+      Top = 370
+      Width = 131
+      Height = 131
       Enabled = False
       Size.Values = (
         277.812500000000000000
@@ -379,10 +385,10 @@ object frmPrintingPress: TfrmPrintingPress
       Stretch = True
     end
     object imgLogo3: TQRImage
-      Left = 440
-      Top = 296
-      Width = 105
-      Height = 105
+      Left = 550
+      Top = 370
+      Width = 131
+      Height = 131
       Enabled = False
       Size.Values = (
         277.812500000000000000
@@ -395,10 +401,10 @@ object frmPrintingPress: TfrmPrintingPress
       Stretch = True
     end
     object MyRegAddress: TQRMemo
-      Left = 208
-      Top = 432
-      Width = 67
-      Height = 17
+      Left = 260
+      Top = 540
+      Width = 84
+      Height = 21
       Size.Values = (
         44.979166666666670000
         550.333333333333300000
@@ -411,6 +417,12 @@ object frmPrintingPress: TfrmPrintingPress
       AlignToBand = False
       AutoSize = False
       Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
       Transparent = False
       FullJustify = False
       MaxBreakChars = 0

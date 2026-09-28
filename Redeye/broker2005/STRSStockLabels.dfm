@@ -3,8 +3,8 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
   Top = 65
   BorderStyle = bsDialog
   Caption = 'Print Stock Labels'
-  ClientHeight = 220
-  ClientWidth = 390
+  ClientHeight = 202
+  ClientWidth = 378
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText

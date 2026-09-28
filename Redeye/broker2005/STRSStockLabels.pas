@@ -111,7 +111,7 @@ var
 
 implementation
 
-uses UITypes, PBIntSelDM, CCSPrint, STRPStockLabels, DateSelV5;
+uses pbMainMenu, UITypes, PBIntSelDM, CCSPrint, STRPStockLabels, DateSelV5;
 
 {$R *.DFM}
 
@@ -275,13 +275,13 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Stock Label Printer', '', TempArray,
-    sizeof(TempArray), 'Brokerstk.ini');
+  GetPrivateProfileString('Stock', 'Stock Label Printer', '', TempArray,
+    sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
 
-  GetPrivateProfileString('Centrereed Broker', 'Stock Label Printer Bin', '', TempArray,
-    sizeof(TempArray), 'Brokerstk.ini');
+  GetPrivateProfileString('Stock', 'Stock Label Printer Bin', '', TempArray,
+    sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   sBin := TempArray;
   try
@@ -290,8 +290,8 @@ begin
     DefaultBin := 15;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Stock Label Printer Paper', '', TempArray,
-    sizeof(TempArray), 'Brokerstk.ini');
+  GetPrivateProfileString('Stock', 'Stock Label Printer Paper', '', TempArray,
+    sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sPaper := TempArray;
   try
     DefaultPaper := strtoint(sPaper);
@@ -299,8 +299,8 @@ begin
     DefaultPaper := 9;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Stock Label Print Logo', '', TempArray,
-    sizeof(TempArray), 'Brokerstk.ini');
+  GetPrivateProfileString('Stock', 'Stock Label Print Logo', '', TempArray,
+    sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sPrintLogo := TempArray;
   chkbxPrintLogo.checked := (sPrintLogo = 'Y');
 end;
@@ -385,17 +385,17 @@ procedure TSTRSStockLabelsfrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Brokerstk.ini');
+  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
 
   with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Stock Label Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Stock Label Printer Bin',inttostr(DefaultBin));
-      WriteString('Centrereed Broker', 'Stock Label Printer Paper',inttostr(DefaultPaper));
+      WriteString('Stock', 'Stock Label Printer',DefaultPrinter);
+      WriteString('Stock', 'Stock Label Printer Bin',inttostr(DefaultBin));
+      WriteString('Stock', 'Stock Label Printer Paper',inttostr(DefaultPaper));
       if chkbxPrintLogo.Checked then
-        WriteString('Centrereed Broker', 'Stock Label Print Logo','Y')
+        WriteString('Stock', 'Stock Label Print Logo','Y')
       else
-        WriteString('Centrereed Broker', 'Stock Label Print Logo','N');
+        WriteString('Stock', 'Stock Label Print Logo','N');
       Free;
     end;
 

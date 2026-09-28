@@ -229,7 +229,7 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Label Printer', '', TempArray,
+  GetPrivateProfileString('Sales Orders', 'Label Printer', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
@@ -241,7 +241,7 @@ begin
     DefaultBin := 15;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Label Printer Paper', '', TempArray,
+  GetPrivateProfileString('Sales Orders', 'Label Printer Paper', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sPaper := TempArray;
   try
@@ -338,9 +338,9 @@ begin
 
   with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Label Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Label Printer Bin',inttostr(DefaultBin));
-      WriteString('Centrereed Broker', 'Label Printer Paper',inttostr(DefaultPaper));
+      WriteString('Sales Orders', 'Label Printer',DefaultPrinter);
+      WriteString('Sales Orders', 'Label Printer Bin',inttostr(DefaultBin));
+      WriteString('Sales Orders', 'Label Printer Paper',inttostr(DefaultPaper));
       Free;
     end;
 

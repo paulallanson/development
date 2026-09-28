@@ -1,205 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 1999
-
-Comments
---------
-  Purchase Order Print.
-
-VSS Info:
-$Header: /PBL D5/PBRSPOrd.pas 34    19/06/:3 11:35 Janiner $
-$History: PBRSPOrd.pas $
- * 
- * *****************  Version 34  *****************
- * User: Janiner      Date: 19/06/:3   Time: 11:35
- * Updated in $/PBL D5
- * fix bug, when emailing more than one order/enquiry, was attaching the
- * order number from the first line in the grid to each email, thus the
- * subject was incorrect.
- * 
- * *****************  Version 33  *****************
- * User: Paul         Date: 6/06/:3    Time: 17:05
- * Updated in $/PBL D5
- * Changed to get the Windows temp directory
- * 
- * *****************  Version 32  *****************
- * User: Paul         Date: 22/05/03   Time: 17:13
- * Updated in $/PBL D5
- * Corrected display of Email list, wasn't showing the Contact name
- * 
- * *****************  Version 31  *****************
- * User: Andrewh      Date: 14/01/03   Time: 12:05
- * Updated in $/PBL D5
- * New Fax Drivers - Put in the call to the WaitForFaxFinish procedure in
- * PBSendFaxFrm.
- *
- * *****************  Version 30  *****************
- * User: Paul         Date: 15/11/:1   Time: 13:45
- * Updated in $/PBL D5
- * Changed to position the Purchase Order/Acknowledgement Radio Group when
- * not using Page Designer
- * 
- * *****************  Version 29  *****************
- * User: Janiner      Date: 2/10/:1    Time: 11:03
- * Updated in $/PBL D5
- * Get selection criteria right for my/all purchase orders/Acks.
- * 
- * *****************  Version 28  *****************
- * User: Janiner      Date: 2/10/:1    Time: 9:09
- * Updated in $/PBL D5
- * Iron out Hints and Warnings
- * 
- * *****************  Version 27  *****************
- * User: Janiner      Date: 19/09/:1   Time: 9:39
- * Updated in $/PBL D5
- * Selection routine got slightly carried away for faxing and e-mail !!!!!
- * fixed JR
- * 
- * *****************  Version 26  *****************
- * User: Janiner      Date: 31/07/:1   Time: 16:19
- * Updated in $/PBL D5
- * Ensure delete work file prior to creating new selection criteria.
- * 
- * *****************  Version 25  *****************
- * User: Janiner      Date: 31/07/:1   Time: 15:45
- * Updated in $/PBL D5
- * Limit no of records on look-up to 100, and re-define screens slightly.
- * 
- * *****************  Version 24  *****************
- * User: Janiner      Date: 31/07/:1   Time: 14:02
- * Updated in $/PBL D5
- * Add new routine for multi-select range
- * 
- * *****************  Version 23  *****************
- * User: Janiner      Date: 31/07/:1   Time: 11:03
- * Updated in $/PBL D5
- * Interrim check in for new range selection functionality.
- * 
- * *****************  Version 22  *****************
- * User: Paul         Date: 26/07/:1   Time: 12:02
- * Updated in $/PBL D5
- * 
- * *****************  Version 20  *****************
- * User: Paul         Date: 19/03/:1   Time: 11:10
- * Updated in $/PBL D5
- * Changed to default the Fax Number to the Contact Fax Number, if one
- * doesn't exist then use the company fax number 
- * 
- * *****************  Version 19  *****************
- * User: Paul         Date: 6/02/:1    Time: 14:20
- * Updated in $/PBL D5
- * Modifications made to add facility to Email to multiple recipients.
- * 
- * Also uses the Workstation defaults to determine the Mail Application
- * and the temporary work directory.
- * 
- * *****************  Version 18  *****************
- * User: Paul         Date: 2/02/:1    Time: 16:59
- * Updated in $/PBL D5
- * Added new Email List form and routine
- * 
- * *****************  Version 17  *****************
- * User: Paul         Date: 1/02/:1    Time: 16:02
- * Updated in $/PBL D5
- * Changed to delete the temporary attachment files if E-mailing
- * 
- * *****************  Version 16  *****************
- * User: Paul         Date: 30/01/:1   Time: 17:18
- * Updated in $/PBL D5
- * Added E-mailing facility
- * 
- * *****************  Version 15  *****************
- * User: Paul         Date: 25/01/:1   Time: 10:15
- * Updated in $/PBL D5
- * Changed to incorporate the Email option
- *
- * *****************  Version 14  *****************
- * User: Davidn       Date: 6/10/00    Time: 16:27
- * Updated in $/PBL D5
- * Setting form type as dialogue to prevent resizing, and removed the
- * maximise and minimise buttons.
- *
- * *****************  Version 13  *****************
- * User: Roddym       Date: 10/02/:0   Time: 12:00
- * Updated in $/PBL D5
- * Add questions and answers to Purchase Order and Acknowledgement
- * structures and letter layouts.  Add new page layout field PrintDefault
- * similar to FaxDefault.  Add new letter layout field LetterTypeDefault
- * so we can display the user's selected default on print selection forms
- * in Broker.
- *
- * *****************  Version 12  *****************
- * User: Roddym       Date: 25/01/:0   Time: 9:02
- * Updated in $/PBL D5
- * After faxing anything, set the selected printer back to default
- * otherwise anything printed thereafter still goes to fax.
- *
- * *****************  Version 11  *****************
- * User: Roddym       Date: 12/01/:0   Time: 9:13
- * Updated in $/PBL D5
- * Assorted layout fixes in enquiry, quotation, purchase order and
- * acknowledgement letters.  Fixes to faxing code where incorrect layout
- * being used.  Use operator name for contact at start of letter.  Do not
- * print slash if no rep suffix.  Print rep position after signatory.
- *
- * *****************  Version 10  *****************
- * User: Roddym       Date: 7/01/:0    Time: 17:07
- * Updated in $/PBL D5
- * Make report selections act the same when handling "old" databases and
- * internally generating letter layout data.
- *
- * *****************  Version 9  *****************
- * User: Roddym       Date: 7/01/:0    Time: 16:42
- * Updated in $/PBL D5
- * Changes for new letter printing mechanism, driven by the
- * tb_LetterLayout and tb_LetterElement tables.  New Letter object, also
- * hard-coded version to make switch transparent to Forms Technology.
- *
- * *****************  Version 8  *****************
- * User: Roddym       Date: 17/12/99   Time: 8:32
- * Updated in $/PBL D5
- * Fix bug surrounding PrintLogo.  Was confusing pagelayout property with
- * form property of same name.  Now use LayoutName instead.
- *
- * *****************  Version 7  *****************
- * User: Roddym       Date: 16/12/99   Time: 17:29
- * Updated in $/PBL D5
- * Remove PrintLogo property from databrokers, use LayoutName instead.
- *
- * *****************  Version 6  *****************
- * User: Roddym       Date: 16/12/99   Time: 16:40
- * Updated in $/PBL D5
- * Make logic to deal with preview/print/fax more consistent (a
- * preponderance of booleans was spoiling the broth).
- *
- * *****************  Version 5  *****************
- * User: Roddym       Date: 16/12/99   Time: 16:17
- * Updated in $/PBL D5
- * Use Printers.Printer.PrinterIndex in new PrinterSettings object rather than hold
- * internal local value which gets out of sync.
- *
- * *****************  Version 4  *****************
- * User: Roddym       Date: 13/12/99   Time: 16:10
- * Updated in $/PBL D5
- * Force print logo if faxing.
- *
- * *****************  Version 3  *****************
- * User: Roddym       Date: 13/12/99   Time: 14:10
- * Updated in $/PBL D5
- * Use new CCSPrinterSetup dialog.
- *
- * *****************  Version 2  *****************
- * User: Roddym       Date: 8/12/99    Time: 16:17
- * Updated in $/PBL D5
- * First conversion of Enquiry and Purchase Order fax/letters.
- *
- * *****************  Version 1  *****************
- * User: Roddym       Date: 7/12/99    Time: 9:42
- * Created in $/PBL D5
- * First check-in after conversion from Delphi 2 to 5.  Sources
- * reformatted and try..finally blocks added round form creation/free.
- * Boolean comparisons standardised.  Version updated to 1.6a.
-*******************************************************************************)
 unit PBRSPOrd;
 
 interface
@@ -1413,12 +1211,12 @@ begin
   {This method used for backward compatibility with WIN95}
   if TypeRadioGroup.itemindex = 0 then
     begin
-      GetPrivateProfileString('Centrereed Broker', 'Purchase Order Printer', '', TempArray,
+      GetPrivateProfileString('Purchase Orders', 'Purchase Order Printer', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       DefaultPrinter := TempArray;
 
-      GetPrivateProfileString('Centrereed Broker', 'Purchase Order Bin', '', TempArray,
+      GetPrivateProfileString('Purchase Orders', 'Purchase Order Bin', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       sBin := TempArray;
@@ -1430,12 +1228,12 @@ begin
     end
   else
     begin
-      GetPrivateProfileString('Centrereed Broker', 'Acknowledgement Printer', '', TempArray,
+      GetPrivateProfileString('Purchase Orders', 'Acknowledgement Printer', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       DefaultPrinter := TempArray;
 
-      GetPrivateProfileString('Centrereed Broker', 'Acknowledgement Bin', '', TempArray,
+      GetPrivateProfileString('Purchase Orders', 'Acknowledgement Bin', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       sBin := TempArray;
@@ -1457,16 +1255,16 @@ begin
     begin
       with IniFile do
         begin
-          WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);
-          WriteString('Centrereed Broker', 'Purchase Order Bin',inttostr(DefaultBin));
+          WriteString('Purchase Orders', 'Purchase Order Printer',DefaultPrinter);
+          WriteString('Purchase Orders', 'Purchase Order Bin',inttostr(DefaultBin));
         end
     end
     else
     begin
       with IniFile do
         begin
-          WriteString('Centrereed Broker', 'Acknowledgement Printer',DefaultPrinter);
-          WriteString('Centrereed Broker', 'Acknowledgement Bin',inttostr(DefaultBin));
+          WriteString('Purchase Orders', 'Acknowledgement Printer',DefaultPrinter);
+          WriteString('Purchase Orders', 'Acknowledgement Bin',inttostr(DefaultBin));
         end
     end;
   finally

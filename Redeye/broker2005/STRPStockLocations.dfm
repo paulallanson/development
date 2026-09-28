@@ -10,13 +10,13 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 24
     Top = 24
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -74,31 +74,31 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 99
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 124
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        261.937500000000000000
-        2770.187500000000000000)
+        262.466666666666700000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRLabel1: TQRLabel
-        Left = 392
-        Top = 8
-        Width = 246
-        Height = 23
+        Left = 497
+        Top = 10
+        Width = 293
+        Height = 29
         Size.Values = (
-          60.854166666666670000
-          1037.166666666667000000
+          61.383333333333330000
+          1051.983333333333000000
           21.166666666666670000
-          650.875000000000000000)
+          620.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -108,7 +108,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -119,15 +119,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 14
       end
       object QRSysData1: TQRSysData
-        Left = 965
-        Top = 8
-        Width = 69
-        Height = 17
+        Left = 1208
+        Top = 10
+        Width = 84
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2553.229166666667000000
+          44.450000000000000000
+          2556.933333333333000000
           21.166666666666670000
-          182.562500000000000000)
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -137,7 +137,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -148,15 +148,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRSysData2: TQRSysData
-        Left = 979
-        Top = 28
-        Width = 56
-        Height = 15
+        Left = 1226
+        Top = 35
+        Width = 68
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2590.270833333333000000
+          40.216666666666670000
+          2595.033333333333000000
           74.083333333333330000
-          148.166666666666700000)
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -166,7 +166,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -177,15 +177,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 112
-        Top = 80
-        Width = 44
-        Height = 16
+        Left = 140
+        Top = 100
+        Width = 50
+        Height = 20
         Size.Values = (
           42.333333333333330000
           296.333333333333300000
           211.666666666666700000
-          116.416666666666700000)
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -195,7 +195,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -206,15 +206,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel3: TQRLabel
-        Left = 272
-        Top = 80
-        Width = 64
-        Height = 16
+        Left = 340
+        Top = 100
+        Width = 72
+        Height = 20
         Size.Values = (
           42.333333333333330000
           719.666666666666700000
           211.666666666666700000
-          169.333333333333300000)
+          152.400000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -224,7 +224,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -235,15 +235,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 8
-        Top = 80
-        Width = 18
-        Height = 16
+        Left = 10
+        Top = 100
+        Width = 22
+        Height = 20
         Size.Values = (
           42.333333333333330000
           21.166666666666670000
           211.666666666666700000
-          47.625000000000000000)
+          46.566666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -253,7 +253,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -264,15 +264,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 564
-        Top = 80
-        Width = 53
-        Height = 16
+        Left = 705
+        Top = 100
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1492.250000000000000000
           211.666666666666700000
-          140.229166666666700000)
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -282,7 +282,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -293,15 +293,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 776
-        Top = 80
-        Width = 78
-        Height = 16
+        Left = 970
+        Top = 100
+        Width = 93
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2053.166666666667000000
           211.666666666666700000
-          206.375000000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -311,7 +311,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -322,15 +322,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 864
-        Top = 80
-        Width = 92
-        Height = 16
+        Left = 1080
+        Top = 100
+        Width = 105
+        Height = 20
         Size.Values = (
           42.333333333333330000
           2286.000000000000000000
           211.666666666666700000
-          243.416666666666700000)
+          222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -340,7 +340,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -351,15 +351,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel7: TQRLabel
-        Left = 640
-        Top = 80
-        Width = 52
-        Height = 16
+        Left = 800
+        Top = 100
+        Width = 61
+        Height = 20
         Size.Values = (
           42.333333333333330000
           1693.333333333333000000
           211.666666666666700000
-          137.583333333333300000)
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -369,7 +369,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -380,15 +380,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 707
-        Top = 80
-        Width = 60
-        Height = 16
+        Left = 884
+        Top = 100
+        Width = 69
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          1870.604166666667000000
+          1871.133333333333000000
           211.666666666666700000
-          158.750000000000000000)
+          146.050000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -398,7 +398,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -409,15 +409,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 986
-        Top = 80
-        Width = 36
-        Height = 16
+        Left = 1233
+        Top = 100
+        Width = 40
+        Height = 20
         Size.Values = (
           42.333333333333330000
-          2608.791666666667000000
+          2609.850000000000000000
           211.666666666666700000
-          95.250000000000000000)
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -427,7 +427,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -438,15 +438,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object qrlblWarehouse: TQRLabel
-        Left = 483
-        Top = 32
-        Width = 91
-        Height = 17
+        Left = 603
+        Top = 40
+        Width = 116
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1277.937500000000000000
+          44.450000000000000000
+          1276.350000000000000000
           84.666666666666670000
-          240.770833333333300000)
+          245.533333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -454,6 +454,12 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         AlignToBand = False
         Caption = 'qrlblWarehouse'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -462,17 +468,17 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 38
-      Top = 137
-      Width = 1047
-      Height = 24
+      Left = 47
+      Top = 171
+      Width = 1309
+      Height = 30
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -480,15 +486,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBText5: TQRDBText
-        Left = 599
-        Top = 4
-        Width = 92
-        Height = 15
+        Left = 753
+        Top = 5
+        Width = 111
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1584.854166666667000000
+          40.216666666666670000
+          1593.850000000000000000
           10.583333333333330000
-          243.416666666666700000)
+          234.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -499,7 +505,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Quantity_Allocated'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -512,15 +518,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 544
-        Top = 4
-        Width = 73
-        Height = 15
+        Left = 683
+        Top = 5
+        Width = 88
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1439.333333333333000000
+          40.216666666666670000
+          1445.683333333333000000
           10.583333333333330000
-          193.145833333333300000)
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -531,7 +537,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Store_Quantity'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -544,15 +550,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRDBText1: TQRDBText
-        Left = 8
-        Top = 4
-        Width = 41
-        Height = 15
+        Left = 10
+        Top = 5
+        Width = 51
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           21.166666666666670000
           10.583333333333330000
-          108.479166666666700000)
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -563,7 +569,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Part_Bin'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -576,10 +582,10 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 112
-        Top = 4
-        Width = 153
-        Height = 15
+        Left = 140
+        Top = 5
+        Width = 191
+        Height = 19
         Size.Values = (
           39.687500000000000000
           296.333333333333400000
@@ -596,7 +602,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Part'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -609,10 +615,10 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 272
-        Top = 4
-        Width = 289
-        Height = 15
+        Left = 340
+        Top = 5
+        Width = 361
+        Height = 19
         Size.Values = (
           39.687500000000000000
           719.666666666666700000
@@ -629,7 +635,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Part_Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -642,15 +648,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRDBText6: TQRDBText
-        Left = 779
-        Top = 4
-        Width = 74
-        Height = 15
+        Left = 977
+        Top = 5
+        Width = 87
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2061.104166666667000000
+          40.216666666666670000
+          2067.983333333333000000
           10.583333333333330000
-          195.791666666666700000)
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -661,7 +667,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Date_Received'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -674,15 +680,15 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRDBText7: TQRDBText
-        Left = 712
-        Top = 4
-        Width = 56
-        Height = 15
+        Left = 892
+        Top = 5
+        Width = 68
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1883.833333333333000000
+          40.216666666666670000
+          1888.066666666667000000
           10.583333333333330000
-          148.166666666666700000)
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -693,7 +699,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Free_Stock'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -706,10 +712,10 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRDBText8: TQRDBText
-        Left = 866
-        Top = 4
-        Width = 95
-        Height = 15
+        Left = 1083
+        Top = 5
+        Width = 119
+        Height = 19
         Size.Values = (
           39.687500000000000000
           2291.291666666667000000
@@ -726,7 +732,7 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         DataField = 'Store_Stock_description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -739,10 +745,10 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 968
-        Top = 2
-        Width = 72
-        Height = 18
+        Left = 1210
+        Top = 3
+        Width = 90
+        Height = 23
         Size.Values = (
           47.625000000000000000
           2561.166666666667000000

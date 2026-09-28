@@ -34,9 +34,9 @@ object frmpbMainMenu: TfrmpbMainMenu
       end>
     ExplicitWidth = 1466
     object ToolBar1: TToolBar
-      Left = 3
+      Left = 11
       Top = 0
-      Width = 1465
+      Width = 1457
       Height = 40
       ButtonHeight = 40
       ButtonWidth = 69
@@ -757,7 +757,8 @@ object frmpbMainMenu: TfrmpbMainMenu
         OnClick = mnuClientClick
       end
       object mnuResetClientScreenSettings: TMenuItem
-        Caption = 'Reset Client Screen Settings'
+        Caption = 'Reset Client Screen Settings ...'
+        Hint = 'Reset Client Screen Settings'
         OnClick = mnuResetClientScreenSettingsClick
       end
       object N10: TMenuItem

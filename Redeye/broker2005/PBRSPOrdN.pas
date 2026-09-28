@@ -1190,12 +1190,12 @@ begin
   {This method used for backward compatibility with WIN95}
   if TypeRadioGroup.itemindex = 0 then
     begin
-      GetPrivateProfileString('Centrereed Broker', 'Purchase Order Printer', '', TempArray,
+      GetPrivateProfileString('Buy Print', 'Purchase Order Printer', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       DefaultPrinter := TempArray;
 
-      GetPrivateProfileString('Centrereed Broker', 'Purchase Order Bin', '', TempArray,
+      GetPrivateProfileString('Buy Print', 'Purchase Order Bin', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       sBin := TempArray;
@@ -1207,12 +1207,12 @@ begin
     end
   else
     begin
-      GetPrivateProfileString('Centrereed Broker', 'Acknowledgement Printer', '', TempArray,
+      GetPrivateProfileString('Buy Print', 'Acknowledgement Printer', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       DefaultPrinter := TempArray;
 
-      GetPrivateProfileString('Centrereed Broker', 'Acknowledgement Bin', '', TempArray,
+      GetPrivateProfileString('Buy Print', 'Acknowledgement Bin', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
       sBin := TempArray;
@@ -1234,8 +1234,8 @@ begin
     begin
       with IniFile do
       try
-        WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);
-        WriteString('Centrereed Broker', 'Purchase Order Bin',inttostr(DefaultBin));
+        WriteString('Buy Print', 'Purchase Order Printer',DefaultPrinter);
+        WriteString('Buy Print', 'Purchase Order Bin',inttostr(DefaultBin));
       finally
         IniFile.Free;
       end
@@ -1244,8 +1244,8 @@ begin
     begin
       with IniFile do
       try
-        WriteString('Centrereed Broker', 'Acknowledgement Printer',DefaultPrinter);
-        WriteString('Centrereed Broker', 'Acknowledgement Bin',inttostr(DefaultBin));
+        WriteString('Buy Print', 'Acknowledgement Printer',DefaultPrinter);
+        WriteString('Buy Print', 'Acknowledgement Bin',inttostr(DefaultBin));
       finally
         IniFile.Free;
       end
@@ -1316,7 +1316,7 @@ begin
 
   StatusBar1.Top := Screen.Height - StatusBar1.Height;
 
-  GetPrivateProfileString('Centrereed Broker', 'Label Printer Format', '', TempArray,
+  GetPrivateProfileString('Buy Print', 'Label Printer Format', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sFormat := TempArray;
 

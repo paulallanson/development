@@ -2,8 +2,8 @@ object frmPBluNCA: TfrmPBluNCA
   Left = 29
   Top = 115
   Caption = 'Non Conformamce Advice'
-  ClientHeight = 343
-  ClientWidth = 755
+  ClientHeight = 334
+  ClientWidth = 749
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,14 +23,14 @@ object frmPBluNCA: TfrmPBluNCA
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 755
+    Width = 749
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 749
+        Width = 753
       end>
     ExplicitWidth = 655
     object ToolBar1: TToolBar
@@ -95,8 +95,8 @@ object frmPBluNCA: TfrmPBluNCA
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 755
-    Height = 208
+    Width = 749
+    Height = 199
     Align = alClient
     DataSource = dtmdlJobs.dtsJobsNCA
     DrawingStyle = gdsGradient
@@ -223,13 +223,12 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object Panel1: TPanel
     Left = 0
-    Top = 283
-    Width = 755
+    Top = 274
+    Width = 749
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 274
     ExplicitWidth = 655
     object Label1: TLabel
       Left = 8
@@ -298,8 +297,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 324
-    Width = 755
+    Top = 315
+    Width = 749
     Height = 19
     Panels = <
       item
@@ -311,13 +310,12 @@ object frmPBluNCA: TfrmPBluNCA
       item
         Width = 50
       end>
-    ExplicitTop = 315
     ExplicitWidth = 655
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 755
+    Width = 749
     Height = 30
     Align = alTop
     BevelInner = bvLowered

@@ -70,7 +70,7 @@ var
   iAliasList: integer;
   sgList: TStringList;
 begin
-  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', 'Broker', TempArray, sizeof(TempArray), AppIniFile);
+  GetPrivateProfileString('Quaystone', 'LoginAlias', 'Redeye', TempArray, sizeof(TempArray), AppIniFile);
 
   cmbAliasList.clear;
   sgList := TStringList.Create;
@@ -98,7 +98,7 @@ begin
     sgList.Free;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Fax System', 'S', TempArray, sizeof(TempArray), AppIniFile);
+  GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray, sizeof(TempArray), AppIniFile);
   FsFaxSystem := TempArray;
 
   OK := False;
@@ -227,7 +227,7 @@ begin
 
   IniFile := TIniFile.Create(AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'LoginAlias', cmbAliasList.text);
+    IniFile.WriteString('Quaystone', 'LoginAlias', cmbAliasList.text);
   finally
     IniFile.Free;
   end;

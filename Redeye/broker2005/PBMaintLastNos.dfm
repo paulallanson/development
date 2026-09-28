@@ -158,7 +158,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Caption = 'Last Contract Number'
       end
       object LastEnqNoSpinEdit: TSpinEdit
-        Left = 168
+        Left = 207
         Top = 16
         Width = 73
         Height = 27
@@ -168,7 +168,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Value = 0
       end
       object LastPONoSpinEdit: TSpinEdit
-        Left = 168
+        Left = 207
         Top = 79
         Width = 73
         Height = 27
@@ -178,7 +178,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Value = 0
       end
       object LastJBSpinEdit: TSpinEdit
-        Left = 168
+        Left = 207
         Top = 111
         Width = 73
         Height = 27
@@ -189,7 +189,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Value = 0
       end
       object LastWOSpinEdit: TSpinEdit
-        Left = 168
+        Left = 207
         Top = 143
         Width = 73
         Height = 27
@@ -200,7 +200,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Value = 0
       end
       object LastQuoteNoSpinEdit: TSpinEdit
-        Left = 168
+        Left = 207
         Top = 47
         Width = 73
         Height = 27
@@ -210,7 +210,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Value = 0
       end
       object LastNCSpinEdit: TSpinEdit
-        Left = 168
+        Left = 207
         Top = 175
         Width = 73
         Height = 27
@@ -221,7 +221,7 @@ object PBMaintLastNosFrm: TPBMaintLastNosFrm
         Value = 0
       end
       object LastContractNoSpinEdit: TSpinEdit
-        Left = 168
+        Left = 207
         Top = 207
         Width = 73
         Height = 27

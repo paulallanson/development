@@ -3,8 +3,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   Top = 0
   ActiveControl = Panel2
   Caption = 'Customer job details'
-  ClientHeight = 524
-  ClientWidth = 788
+  ClientHeight = 515
+  ClientWidth = 782
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,8 +23,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 505
-    Width = 788
+    Top = 496
+    Width = 782
     Height = 19
     Panels = <
       item
@@ -39,8 +39,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 464
-    Width = 788
+    Top = 455
+    Width = 782
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -61,7 +61,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 514
+      Left = 508
       Top = 1
       Width = 273
       Height = 39
@@ -112,19 +112,19 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 788
+    Width = 782
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 782
+        Width = 776
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 773
+      Width = 767
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 59
@@ -207,8 +207,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 788
-    Height = 389
+    Width = 782
+    Height = 380
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -312,7 +312,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 788
+    Width = 782
     Height = 30
     Align = alTop
     BevelOuter = bvNone
@@ -347,7 +347,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 379
+      Width = 373
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -355,18 +355,18 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 367
+        Width = 361
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 361
+            Width = 355
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 352
+          Width = 346
           Height = 25
           Align = alClient
           ButtonWidth = 66

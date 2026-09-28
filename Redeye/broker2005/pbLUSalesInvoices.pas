@@ -162,8 +162,8 @@ begin
   try
     with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Invoice Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Invoice Bin',inttostr(DefaultBin));
+      WriteString('Sales Invoices', 'Invoice Printer',DefaultPrinter);
+      WriteString('Sales Invoices', 'Invoice Bin',inttostr(DefaultBin));
     end;
   finally
     IniFile.Free;
@@ -180,12 +180,12 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Invoice Printer', '', TempArray,
+  GetPrivateProfileString('Sales Invoices', 'Invoice Printer', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
 
-  GetPrivateProfileString('Centrereed Broker', 'Invoice Bin', '', TempArray,
+  GetPrivateProfileString('Sales Invoices', 'Invoice Bin', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   sBin := TempArray;

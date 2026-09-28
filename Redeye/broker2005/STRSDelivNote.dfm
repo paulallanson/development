@@ -3,8 +3,8 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Despatch Note Print'
-  ClientHeight = 224
-  ClientWidth = 364
+  ClientHeight = 215
+  ClientWidth = 358
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,8 +16,8 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    364
-    224)
+    358
+    215)
   TextHeight = 17
   object OrderGroupBox: TGroupBox
     Left = 7
@@ -116,7 +116,7 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   end
   object CancelBitBtn: TBitBtn
     Left = 6
-    Top = 186
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -134,7 +134,7 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   end
   object Previewbitbtn: TBitBtn
     Left = 94
-    Top = 186
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -165,7 +165,7 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   end
   object PrintBitBtn: TBitBtn
     Left = 183
-    Top = 186
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -197,7 +197,7 @@ object STRSDelivNotefrm: TSTRSDelivNotefrm
   end
   object SetupBitBtn: TBitBtn
     Left = 271
-    Top = 186
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

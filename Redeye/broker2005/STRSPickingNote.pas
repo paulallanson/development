@@ -588,12 +588,12 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Picking Note Printer', '', TempArray,
+  GetPrivateProfileString('Sales Orders', 'Picking Note Printer', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
 
-  GetPrivateProfileString('Centrereed Broker', 'Picking Note Bin', '', TempArray,
+  GetPrivateProfileString('Sales Orders', 'Picking Note Bin', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   sBin := TempArray;
@@ -603,7 +603,7 @@ begin
     DefaultBin := 15;
   end;
 
-  GetPrivateProfileString('Centrereed Broker', 'Print Copy Picking Note', '', TempArray,
+  GetPrivateProfileString('Sales Orders', 'Print Copy Picking Note', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
   sPrintCopy := TempArray;
 end;
@@ -621,9 +621,9 @@ begin
 
   with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Picking Note Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Picking Note Bin',inttostr(DefaultBin));
-      WriteString('Centrereed Broker', 'Print Copy Picking Note',sPrintCopy);
+      WriteString('Sales Orders', 'Picking Note Printer',DefaultPrinter);
+      WriteString('Sales Orders', 'Picking Note Bin',inttostr(DefaultBin));
+      WriteString('Sales Orders', 'Print Copy Picking Note',sPrintCopy);
       Free;
     end;
 

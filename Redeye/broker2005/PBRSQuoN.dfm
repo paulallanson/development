@@ -29,6 +29,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 113
+    ExplicitWidth = 435
     object cbPrintLogo: TCheckBox
       Left = 8
       Top = 35
@@ -223,7 +225,8 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 72
+    ExplicitWidth = 435
+    ExplicitHeight = 42
     object GroupBox2: TGroupBox
       Left = 8
       Top = 0

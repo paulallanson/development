@@ -10,13 +10,13 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object quickreport: TQuickRep
     Left = 8
     Top = 8
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = quickreportBeforePrint
     DataSet = qryRepTeams
@@ -75,10 +75,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRBand
-      Left = 19
-      Top = 38
-      Width = 1085
-      Height = 115
+      Left = 24
+      Top = 47
+      Width = 1356
+      Height = 144
       Frame.DrawBottom = True
       Frame.Width = 2
       AlignToBottom = False
@@ -87,21 +87,21 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        304.270833333333300000
-        2870.729166666667000000)
+        304.800000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
-        Left = 366
+        Left = 468
         Top = 0
-        Width = 352
-        Height = 23
+        Width = 420
+        Height = 29
         Size.Values = (
-          60.854166666666670000
-          968.375000000000000000
+          61.383333333333330000
+          990.600000000000000000
           0.000000000000000000
-          931.333333333333300000)
+          889.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -111,7 +111,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -122,15 +122,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 14
       end
       object qrlblDateRange: TQRLabel
-        Left = 498
-        Top = 24
-        Width = 88
-        Height = 17
+        Left = 622
+        Top = 30
+        Width = 112
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1317.625000000000000000
+          44.450000000000000000
+          1316.566666666667000000
           63.500000000000000000
-          232.833333333333300000)
+          237.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -138,6 +138,12 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         AlignToBand = True
         Caption = 'Financial Year:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -145,12 +151,12 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 16
-        Top = 64
-        Width = 104
-        Height = 17
+        Left = 20
+        Top = 80
+        Width = 130
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           169.333333333333300000
           275.166666666666700000)
@@ -164,7 +170,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         DataField = 'Rep_Team_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -177,15 +183,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 10
       end
       object qrlblMonth1: TQRLabel
-        Left = 134
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 166
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          354.541666666666700000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          351.366666666666700000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -195,7 +201,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -206,15 +212,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel5: TQRLabel
-        Left = 115
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 144
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          304.270833333333300000
+          29.633333333333330000
+          304.800000000000000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -224,7 +230,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -235,15 +241,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel6: TQRLabel
-        Left = 158
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 198
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          418.041666666666700000
+          29.633333333333330000
+          419.100000000000000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -253,7 +259,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -264,15 +270,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel30: TQRLabel
-        Left = 1033
-        Top = 88
-        Width = 38
-        Height = 11
+        Left = 1292
+        Top = 110
+        Width = 46
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2733.145833333333000000
+          29.633333333333330000
+          2734.733333333333000000
           232.833333333333300000
-          100.541666666666700000)
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -282,7 +288,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -293,10 +299,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel31: TQRLabel
-        Left = 1012
-        Top = 100
-        Width = 36
-        Height = 12
+        Left = 1265
+        Top = 125
+        Width = 45
+        Height = 15
         Size.Values = (
           31.750000000000000000
           2677.583333333333000000
@@ -311,7 +317,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -322,15 +328,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel32: TQRLabel
-        Left = 1060
-        Top = 100
-        Width = 22
-        Height = 12
+        Left = 1325
+        Top = 125
+        Width = 27
+        Height = 15
         Size.Values = (
           31.750000000000000000
           2804.583333333333000000
           264.583333333333300000
-          58.208333333333330000)
+          57.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -340,7 +346,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -351,15 +357,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth2: TQRLabel
-        Left = 209
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 259
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          552.979166666666700000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          548.216666666666700000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -369,7 +375,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -380,15 +386,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel13: TQRLabel
-        Left = 190
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 237
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          502.708333333333300000
+          29.633333333333330000
+          501.650000000000000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -398,7 +404,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -409,15 +415,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel14: TQRLabel
-        Left = 233
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 291
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          616.479166666666700000
+          29.633333333333330000
+          615.950000000000000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -427,7 +433,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -438,15 +444,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth3: TQRLabel
-        Left = 284
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 353
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          751.416666666666700000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          747.183333333333300000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -456,7 +462,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -467,15 +473,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel16: TQRLabel
-        Left = 265
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 331
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          701.145833333333300000
+          29.633333333333330000
+          700.616666666666700000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -485,7 +491,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -496,15 +502,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel17: TQRLabel
-        Left = 308
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 385
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
+          29.633333333333330000
           814.916666666666700000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -514,7 +520,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -525,15 +531,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth4: TQRLabel
-        Left = 359
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 447
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          949.854166666666700000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          946.150000000000000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -543,7 +549,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -554,15 +560,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel19: TQRLabel
-        Left = 340
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 425
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
+          29.633333333333330000
           899.583333333333300000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -572,7 +578,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -583,15 +589,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel20: TQRLabel
-        Left = 383
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 479
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1013.354166666667000000
+          29.633333333333330000
+          1013.883333333333000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -601,7 +607,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -612,15 +618,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth5: TQRLabel
-        Left = 434
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 541
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1148.291666666667000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          1145.116666666667000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -630,7 +636,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -641,15 +647,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel22: TQRLabel
-        Left = 415
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 519
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1098.020833333333000000
+          29.633333333333330000
+          1098.550000000000000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -659,7 +665,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -670,15 +676,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel23: TQRLabel
-        Left = 458
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 573
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1211.791666666667000000
+          29.633333333333330000
+          1212.850000000000000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -688,7 +694,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -699,15 +705,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth6: TQRLabel
-        Left = 509
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 634
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1346.729166666667000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          1341.966666666667000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -717,7 +723,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -728,15 +734,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel25: TQRLabel
-        Left = 490
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 612
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1296.458333333333000000
+          29.633333333333330000
+          1295.400000000000000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -746,7 +752,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -757,15 +763,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel26: TQRLabel
-        Left = 533
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 666
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1410.229166666667000000
+          29.633333333333330000
+          1409.700000000000000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -775,7 +781,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -786,15 +792,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth7: TQRLabel
-        Left = 584
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 728
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1545.166666666667000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          1540.933333333333000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -804,7 +810,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -815,15 +821,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel28: TQRLabel
-        Left = 565
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 706
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1494.895833333333000000
+          29.633333333333330000
+          1494.366666666667000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -833,7 +839,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -844,15 +850,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel29: TQRLabel
-        Left = 608
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 760
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
+          29.633333333333330000
           1608.666666666667000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -862,7 +868,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -873,15 +879,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth8: TQRLabel
-        Left = 659
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 822
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1743.604166666667000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          1739.900000000000000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -891,7 +897,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -902,15 +908,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel34: TQRLabel
-        Left = 640
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 800
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
+          29.633333333333330000
           1693.333333333333000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -920,7 +926,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -931,15 +937,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel35: TQRLabel
-        Left = 683
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 854
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1807.104166666667000000
+          29.633333333333330000
+          1807.633333333333000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -949,7 +955,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -960,15 +966,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth9: TQRLabel
-        Left = 734
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 916
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1942.041666666667000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          1938.866666666667000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -978,7 +984,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -989,15 +995,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel39: TQRLabel
-        Left = 715
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 894
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1891.770833333333000000
+          29.633333333333330000
+          1892.300000000000000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1007,7 +1013,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1018,15 +1024,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel40: TQRLabel
-        Left = 758
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 948
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2005.541666666667000000
+          29.633333333333330000
+          2006.600000000000000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1036,7 +1042,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1047,15 +1053,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth10: TQRLabel
-        Left = 809
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 1009
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2140.479166666667000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          2135.716666666667000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1065,7 +1071,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1076,15 +1082,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel42: TQRLabel
-        Left = 790
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 987
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2090.208333333333000000
+          29.633333333333330000
+          2089.150000000000000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1094,7 +1100,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1105,15 +1111,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel43: TQRLabel
-        Left = 833
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 1041
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2203.979166666667000000
+          29.633333333333330000
+          2203.450000000000000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1123,7 +1129,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1134,15 +1140,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth11: TQRLabel
-        Left = 884
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 1103
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2338.916666666667000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          2334.683333333333000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1152,7 +1158,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1163,15 +1169,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel45: TQRLabel
-        Left = 865
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 1081
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2288.645833333333000000
+          29.633333333333330000
+          2288.116666666667000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1181,7 +1187,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1192,15 +1198,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel46: TQRLabel
-        Left = 908
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 1135
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
+          29.633333333333330000
           2402.416666666667000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1210,7 +1216,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1221,15 +1227,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblMonth12: TQRLabel
-        Left = 958
-        Top = 87
-        Width = 31
-        Height = 11
+        Left = 1195
+        Top = 109
+        Width = 44
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2534.708333333333000000
-          230.187500000000000000
-          82.020833333333330000)
+          29.633333333333330000
+          2529.416666666667000000
+          230.716666666666700000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1239,7 +1245,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1250,15 +1256,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel50: TQRLabel
-        Left = 939
-        Top = 100
-        Width = 31
-        Height = 11
+        Left = 1174
+        Top = 125
+        Width = 43
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2484.437500000000000000
+          29.633333333333330000
+          2484.966666666667000000
           264.583333333333300000
-          82.020833333333330000)
+          91.016666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1268,7 +1274,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1279,15 +1285,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel51: TQRLabel
-        Left = 982
-        Top = 100
-        Width = 19
-        Height = 11
+        Left = 1227
+        Top = 125
+        Width = 26
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2598.208333333333000000
+          29.633333333333330000
+          2597.150000000000000000
           264.583333333333300000
-          50.270833333333330000)
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1297,7 +1303,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1308,15 +1314,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblExcludeCosts: TQRLabel
-        Left = 447
-        Top = 42
-        Width = 191
-        Height = 17
+        Left = 558
+        Top = 53
+        Width = 239
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1182.687500000000000000
-          111.125000000000000000
-          505.354166666666700000)
+          44.450000000000000000
+          1181.100000000000000000
+          112.183333333333300000
+          505.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1324,6 +1330,12 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         AlignToBand = True
         Caption = 'Excluding Default Job Bag Costs'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1331,15 +1343,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 10
       end
       object QRSysData2: TQRSysData
-        Left = 1026
-        Top = 3
-        Width = 56
-        Height = 17
+        Left = 1285
+        Top = 4
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2714.625000000000000000
-          7.937500000000000000
-          148.166666666666700000)
+          44.450000000000000000
+          2719.916666666667000000
+          8.466666666666667000
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1349,7 +1361,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1360,15 +1372,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 8
       end
       object QRSysData1: TQRSysData
-        Left = 1013
-        Top = 24
-        Width = 69
-        Height = 15
+        Left = 1268
+        Top = 30
+        Width = 84
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2680.229166666667000000
+          40.216666666666670000
+          2683.933333333333000000
           63.500000000000000000
-          182.562500000000000000)
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1378,7 +1390,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1390,10 +1402,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       end
     end
     object qrgReps: TQRGroup
-      Left = 19
-      Top = 157
-      Width = 1085
-      Height = 4
+      Left = 24
+      Top = 196
+      Width = 1356
+      Height = 5
       AlignToBottom = False
       BeforePrint = qrgRepsBeforePrint
       TransparentBand = False
@@ -1401,7 +1413,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ForceNewPage = False
       Size.Values = (
         10.583333333333330000
-        2870.729166666667000000)
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReps.Name'
@@ -1410,9 +1422,9 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ReprintOnNewPage = False
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 19
-      Top = 161
-      Width = 1085
+      Left = 24
+      Top = 201
+      Width = 1356
       Height = 32
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
@@ -1420,8 +1432,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        2870.729166666667000000)
+        67.733333333333330000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = quickreport
@@ -1429,15 +1441,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBText5: TQRDBText
-        Left = 544
-        Top = 8
-        Width = 53
-        Height = 17
+        Left = 680
+        Top = 10
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1439.333333333333000000
           21.166666666666670000
-          140.229166666666700000)
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1446,6 +1458,12 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         DataSet = qryCategory
         DataField = 'Category'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1455,15 +1473,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 10
       end
       object QRDBText6: TQRDBText
-        Left = 440
-        Top = 8
-        Width = 63
-        Height = 17
+        Left = 550
+        Top = 10
+        Width = 79
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1164.166666666667000000
           21.166666666666670000
-          166.687500000000000000)
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1472,6 +1490,12 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         DataSet = qryRepTeams
         DataField = 'Rep_Team'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1481,15 +1505,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 10
       end
       object QRLabel1: TQRLabel
-        Left = 16
-        Top = 8
-        Width = 179
-        Height = 17
+        Left = 20
+        Top = 10
+        Width = 229
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           42.333333333333330000
           21.166666666666670000
-          473.604166666666700000)
+          484.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1497,6 +1521,12 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         AlignToBand = False
         Caption = 'Product Category Header band'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1505,10 +1535,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       end
     end
     object QRBand2: TQRBand
-      Left = 19
-      Top = 153
-      Width = 1085
-      Height = 4
+      Left = 24
+      Top = 191
+      Width = 1356
+      Height = 5
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
       TransparentBand = False
@@ -1517,16 +1547,16 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       LinkBand = QRSubDetail1
       Size.Values = (
         10.583333333333330000
-        2870.729166666667000000)
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbDetail
     end
     object qrsubPeriods: TQRSubDetail
-      Left = 19
-      Top = 193
-      Width = 1085
-      Height = 24
+      Left = 24
+      Top = 233
+      Width = 1356
+      Height = 30
       AlignToBottom = False
       BeforePrint = qrsubPeriodsBeforePrint
       TransparentBand = False
@@ -1534,7 +1564,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
-        2870.729166666667000000)
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = QRSubDetail1
@@ -1543,15 +1573,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       PrintBefore = False
       PrintIfEmpty = True
       object QRLabel2: TQRLabel
-        Left = 48
+        Left = 60
         Top = 0
-        Width = 115
-        Height = 17
+        Width = 142
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           127.000000000000000000
           0.000000000000000000
-          304.270833333333300000)
+          300.566666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1559,6 +1589,12 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         AlignToBand = False
         Caption = 'Period sales details'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1567,10 +1603,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       end
     end
     object qrbGrpCatFooter: TQRBand
-      Left = 19
-      Top = 217
-      Width = 1085
-      Height = 17
+      Left = 24
+      Top = 263
+      Width = 1356
+      Height = 21
       AfterPrint = qrbGrpCatFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbGrpCatFooterBeforePrint
@@ -1584,16 +1620,16 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        44.979166666666670000
-        2870.729166666667000000)
+        44.450000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText7: TQRDBText
-        Left = 8
+        Left = 10
         Top = 0
-        Width = 89
-        Height = 11
+        Width = 111
+        Height = 14
         Size.Values = (
           29.104166666666670000
           21.166666666666670000
@@ -1610,7 +1646,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         DataField = 'Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1623,15 +1659,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO1: TQRLabel
-        Left = 117
+        Left = 140
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          309.562500000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          296.333333333333300000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1641,7 +1677,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1652,15 +1688,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf1: TQRLabel
-        Left = 151
+        Left = 183
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          399.520833333333300000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          387.350000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1670,7 +1706,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1681,15 +1717,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO2: TQRLabel
-        Left = 192
+        Left = 234
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          508.000000000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          495.300000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1699,7 +1735,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1710,15 +1746,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf2: TQRLabel
-        Left = 226
+        Left = 276
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          597.958333333333300000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          584.200000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1728,7 +1764,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1739,15 +1775,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO3: TQRLabel
-        Left = 267
+        Left = 328
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          706.437500000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          694.266666666666700000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1757,7 +1793,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1768,15 +1804,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf3: TQRLabel
-        Left = 301
+        Left = 370
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          796.395833333333300000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          783.166666666666700000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1786,7 +1822,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1797,15 +1833,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO4: TQRLabel
-        Left = 341
+        Left = 420
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          902.229166666666700000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          889.000000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1815,7 +1851,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1826,15 +1862,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf4: TQRLabel
-        Left = 375
+        Left = 463
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          992.187500000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          980.016666666666700000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1844,7 +1880,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1855,15 +1891,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO5: TQRLabel
-        Left = 417
+        Left = 515
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1103.312500000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1090.083333333333000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1873,7 +1909,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1884,15 +1920,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf5: TQRLabel
-        Left = 451
+        Left = 558
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1193.270833333333000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1181.100000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1902,7 +1938,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1913,15 +1949,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO6: TQRLabel
-        Left = 492
+        Left = 609
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1301.750000000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1289.050000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1931,7 +1967,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1942,15 +1978,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf6: TQRLabel
-        Left = 526
+        Left = 651
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1391.708333333333000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1377.950000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1960,7 +1996,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1971,15 +2007,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf7: TQRLabel
-        Left = 600
+        Left = 744
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1587.500000000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1574.800000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1989,7 +2025,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2000,15 +2036,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO7: TQRLabel
-        Left = 566
+        Left = 702
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1497.541666666667000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1485.900000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2018,7 +2054,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2029,15 +2065,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO8: TQRLabel
-        Left = 642
+        Left = 797
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1698.625000000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1686.983333333333000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2047,7 +2083,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2058,15 +2094,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf8: TQRLabel
-        Left = 676
+        Left = 839
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1788.583333333333000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1775.883333333333000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2076,7 +2112,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2087,15 +2123,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO9: TQRLabel
-        Left = 718
+        Left = 891
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1899.708333333333000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1885.950000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2105,7 +2141,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2116,15 +2152,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf9: TQRLabel
-        Left = 752
+        Left = 934
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1989.666666666667000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          1976.966666666667000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2134,7 +2170,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2145,15 +2181,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO10: TQRLabel
-        Left = 793
+        Left = 985
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2098.145833333333000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          2084.916666666667000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2163,7 +2199,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2174,15 +2210,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf10: TQRLabel
-        Left = 827
+        Left = 1028
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2188.104166666667000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          2175.933333333333000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2192,7 +2228,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2203,15 +2239,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO11: TQRLabel
-        Left = 867
+        Left = 1078
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2293.937500000000000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          2281.766666666667000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2221,7 +2257,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2232,15 +2268,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf11: TQRLabel
-        Left = 901
+        Left = 1120
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2383.895833333333000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          2370.666666666667000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2250,7 +2286,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2261,15 +2297,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTO12: TQRLabel
-        Left = 940
+        Left = 1169
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2487.083333333333000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          2474.383333333333000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2279,7 +2315,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2290,15 +2326,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActProf12: TQRLabel
-        Left = 974
+        Left = 1212
         Top = 1
-        Width = 27
-        Height = 11
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2577.041666666667000000
-          2.645833333333333000
-          71.437500000000000000)
+          29.633333333333330000
+          2565.400000000000000000
+          2.116666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2308,7 +2344,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2319,15 +2355,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblCatActTOTotal: TQRLabel
-        Left = 1012
+        Left = 1257
         Top = 1
-        Width = 33
-        Height = 11
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2677.583333333333000000
-          2.645833333333333000
-          87.312500000000000000)
+          29.633333333333330000
+          2660.650000000000000000
+          2.116666666666667000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2337,7 +2373,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2348,15 +2384,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblCatActProfTotal: TQRLabel
-        Left = 1050
+        Left = 1305
         Top = 1
-        Width = 33
-        Height = 11
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2778.125000000000000000
-          2.645833333333333000
-          87.312500000000000000)
+          29.633333333333330000
+          2762.250000000000000000
+          2.116666666666667000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2366,7 +2402,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2377,10 +2413,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object gtQRLabel1: TQRLabel
-        Left = 8
+        Left = 10
         Top = 0
-        Width = 89
-        Height = 11
+        Width = 111
+        Height = 14
         Size.Values = (
           29.104166666666670000
           21.166666666666670000
@@ -2396,7 +2432,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2408,10 +2444,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       end
     end
     object qrbGrpRepFooter: TQRBand
-      Left = 19
-      Top = 234
-      Width = 1085
-      Height = 79
+      Left = 24
+      Top = 284
+      Width = 1356
+      Height = 99
       Frame.DrawTop = True
       Frame.Width = 2
       AlignToBottom = False
@@ -2426,21 +2462,21 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        209.020833333333300000
-        2870.729166666667000000)
+        209.550000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel8: TQRLabel
-        Left = 85
-        Top = 21
-        Width = 22
-        Height = 11
+        Left = 102
+        Top = 26
+        Width = 31
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          224.895833333333300000
-          55.562500000000000000
-          58.208333333333330000)
+          29.633333333333330000
+          215.900000000000000000
+          55.033333333333330000
+          65.616666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2450,7 +2486,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2461,15 +2497,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel9: TQRLabel
-        Left = 82
-        Top = 6
-        Width = 25
-        Height = 11
+        Left = 98
+        Top = 8
+        Width = 35
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          216.958333333333300000
-          15.875000000000000000
-          66.145833333333330000)
+          29.633333333333330000
+          207.433333333333300000
+          16.933333333333330000
+          74.083333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2479,7 +2515,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2490,15 +2526,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel10: TQRLabel
-        Left = 58
-        Top = 36
-        Width = 45
-        Height = 11
+        Left = 72
+        Top = 45
+        Width = 61
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          153.458333333333300000
+          29.633333333333330000
+          152.400000000000000000
           95.250000000000000000
-          119.062500000000000000)
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2508,7 +2544,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2519,15 +2555,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel11: TQRLabel
-        Left = 8
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 10
+        Top = 8
+        Width = 30
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           21.166666666666670000
-          15.875000000000000000
-          58.208333333333330000)
+          16.933333333333330000
+          63.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2537,7 +2573,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2548,15 +2584,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO1: TQRLabel
-        Left = 117
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 140
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          309.562500000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          296.333333333333300000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2566,7 +2602,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2577,15 +2613,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO1: TQRLabel
-        Left = 117
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 140
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          309.562500000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          296.333333333333300000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2595,7 +2631,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2606,15 +2642,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf1: TQRLabel
-        Left = 151
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 183
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          399.520833333333300000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          387.350000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2624,7 +2660,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2635,15 +2671,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf1: TQRLabel
-        Left = 151
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 183
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          399.520833333333300000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          387.350000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2653,7 +2689,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2664,15 +2700,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO2: TQRLabel
-        Left = 192
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 234
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          508.000000000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          495.300000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2682,7 +2718,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2693,15 +2729,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO2: TQRLabel
-        Left = 192
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 234
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          508.000000000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          495.300000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2711,7 +2747,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2722,15 +2758,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf2: TQRLabel
-        Left = 226
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 276
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          597.958333333333300000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          584.200000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2740,7 +2776,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2751,15 +2787,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf2: TQRLabel
-        Left = 226
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 276
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          597.958333333333300000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          584.200000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2769,7 +2805,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2780,15 +2816,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO3: TQRLabel
-        Left = 267
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 328
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          706.437500000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          694.266666666666700000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2798,7 +2834,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2809,15 +2845,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO3: TQRLabel
-        Left = 267
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 328
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          706.437500000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          694.266666666666700000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2827,7 +2863,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2838,15 +2874,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf3: TQRLabel
-        Left = 301
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 370
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          796.395833333333300000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          783.166666666666700000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2856,7 +2892,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2867,15 +2903,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf3: TQRLabel
-        Left = 301
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 370
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          796.395833333333300000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          783.166666666666700000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2885,7 +2921,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2896,15 +2932,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO4: TQRLabel
-        Left = 341
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 420
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          902.229166666666700000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          889.000000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2914,7 +2950,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2925,15 +2961,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO4: TQRLabel
-        Left = 341
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 420
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          902.229166666666700000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          889.000000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2943,7 +2979,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2954,15 +2990,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf4: TQRLabel
-        Left = 375
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 463
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          992.187500000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          980.016666666666700000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2972,7 +3008,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2983,15 +3019,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf4: TQRLabel
-        Left = 375
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 463
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          992.187500000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          980.016666666666700000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3001,7 +3037,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3012,15 +3048,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO5: TQRLabel
-        Left = 417
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 515
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1103.312500000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1090.083333333333000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3030,7 +3066,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3041,15 +3077,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO5: TQRLabel
-        Left = 417
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 515
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1103.312500000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1090.083333333333000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3059,7 +3095,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3070,15 +3106,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf5: TQRLabel
-        Left = 451
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 558
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1193.270833333333000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1181.100000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3088,7 +3124,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3099,15 +3135,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf5: TQRLabel
-        Left = 451
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 558
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1193.270833333333000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1181.100000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3117,7 +3153,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3128,15 +3164,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO6: TQRLabel
-        Left = 492
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 609
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1301.750000000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1289.050000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3146,7 +3182,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3157,15 +3193,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO6: TQRLabel
-        Left = 492
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 609
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1301.750000000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1289.050000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3175,7 +3211,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3186,15 +3222,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf6: TQRLabel
-        Left = 526
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 651
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1391.708333333333000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1377.950000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3204,7 +3240,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3215,15 +3251,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf6: TQRLabel
-        Left = 526
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 651
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1391.708333333333000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1377.950000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3233,7 +3269,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3244,15 +3280,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO7: TQRLabel
-        Left = 566
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 702
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1497.541666666667000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1485.900000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3262,7 +3298,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3273,15 +3309,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO7: TQRLabel
-        Left = 566
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 702
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1497.541666666667000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1485.900000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3291,7 +3327,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3302,15 +3338,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf7: TQRLabel
-        Left = 600
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 744
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1587.500000000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1574.800000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3320,7 +3356,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3331,15 +3367,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf7: TQRLabel
-        Left = 600
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 744
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1587.500000000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1574.800000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3349,7 +3385,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3360,15 +3396,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO8: TQRLabel
-        Left = 642
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 797
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1698.625000000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1686.983333333333000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3378,7 +3414,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3389,15 +3425,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO8: TQRLabel
-        Left = 642
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 797
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1698.625000000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1686.983333333333000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3407,7 +3443,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3418,15 +3454,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf8: TQRLabel
-        Left = 676
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 839
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1788.583333333333000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1775.883333333333000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3436,7 +3472,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3447,15 +3483,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf8: TQRLabel
-        Left = 676
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 839
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1788.583333333333000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1775.883333333333000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3465,7 +3501,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3476,15 +3512,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO9: TQRLabel
-        Left = 718
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 891
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1899.708333333333000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1885.950000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3494,7 +3530,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3505,15 +3541,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO9: TQRLabel
-        Left = 718
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 891
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1899.708333333333000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1885.950000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3523,7 +3559,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3534,15 +3570,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf9: TQRLabel
-        Left = 752
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 934
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1989.666666666667000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1976.966666666667000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3552,7 +3588,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3563,15 +3599,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf9: TQRLabel
-        Left = 752
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 934
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1989.666666666667000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1976.966666666667000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3581,7 +3617,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3592,15 +3628,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO10: TQRLabel
-        Left = 793
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 985
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2098.145833333333000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2084.916666666667000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3610,7 +3646,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3621,15 +3657,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO10: TQRLabel
-        Left = 793
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 985
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2098.145833333333000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2084.916666666667000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3639,7 +3675,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3650,15 +3686,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf10: TQRLabel
-        Left = 827
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 1028
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2188.104166666667000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2175.933333333333000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3668,7 +3704,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3679,15 +3715,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf10: TQRLabel
-        Left = 827
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 1028
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2188.104166666667000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2175.933333333333000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3697,7 +3733,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3708,15 +3744,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO11: TQRLabel
-        Left = 867
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 1078
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2293.937500000000000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2281.766666666667000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3726,7 +3762,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3737,15 +3773,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO11: TQRLabel
-        Left = 867
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 1078
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2293.937500000000000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2281.766666666667000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3755,7 +3791,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3766,15 +3802,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf11: TQRLabel
-        Left = 901
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 1120
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2383.895833333333000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2370.666666666667000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3784,7 +3820,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3795,15 +3831,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf11: TQRLabel
-        Left = 901
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 1120
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2383.895833333333000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2370.666666666667000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3813,7 +3849,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3824,15 +3860,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTO12: TQRLabel
-        Left = 940
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 1169
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2487.083333333333000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2474.383333333333000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3842,7 +3878,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3853,15 +3889,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTO12: TQRLabel
-        Left = 940
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 1169
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2487.083333333333000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2474.383333333333000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3871,7 +3907,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3882,15 +3918,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProf12: TQRLabel
-        Left = 974
-        Top = 21
-        Width = 27
-        Height = 11
+        Left = 1212
+        Top = 26
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2577.041666666667000000
-          55.562500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2565.400000000000000000
+          55.033333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3900,7 +3936,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3911,15 +3947,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProf12: TQRLabel
-        Left = 974
-        Top = 6
-        Width = 27
-        Height = 11
+        Left = 1212
+        Top = 8
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2577.041666666667000000
-          15.875000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2565.400000000000000000
+          16.933333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3929,7 +3965,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3940,15 +3976,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActTOTotal: TQRLabel
-        Left = 1012
-        Top = 21
-        Width = 33
-        Height = 11
+        Left = 1257
+        Top = 26
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2677.583333333333000000
-          55.562500000000000000
-          87.312500000000000000)
+          29.633333333333330000
+          2660.650000000000000000
+          55.033333333333330000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3958,7 +3994,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3969,15 +4005,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudTOTotal: TQRLabel
-        Left = 1012
-        Top = 6
-        Width = 33
-        Height = 11
+        Left = 1257
+        Top = 8
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2677.583333333333000000
-          15.875000000000000000
-          87.312500000000000000)
+          29.633333333333330000
+          2660.650000000000000000
+          16.933333333333330000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -3987,7 +4023,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -3998,15 +4034,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepActProfTotal: TQRLabel
-        Left = 1050
-        Top = 21
-        Width = 33
-        Height = 11
+        Left = 1305
+        Top = 26
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2778.125000000000000000
-          55.562500000000000000
-          87.312500000000000000)
+          29.633333333333330000
+          2762.250000000000000000
+          55.033333333333330000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4016,7 +4052,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4027,15 +4063,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblRepBudProfTotal: TQRLabel
-        Left = 1050
-        Top = 6
-        Width = 33
-        Height = 11
+        Left = 1305
+        Top = 8
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2778.125000000000000000
-          15.875000000000000000
-          87.312500000000000000)
+          29.633333333333330000
+          2762.250000000000000000
+          16.933333333333330000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4045,7 +4081,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4056,15 +4092,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff1: TQRLabel
-        Left = 117
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 140
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          309.562500000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          296.333333333333300000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4074,7 +4110,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4085,15 +4121,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff1: TQRLabel
-        Left = 151
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 183
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          399.520833333333300000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          387.350000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4103,7 +4139,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4114,15 +4150,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff2: TQRLabel
-        Left = 192
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 234
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          508.000000000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          495.300000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4132,7 +4168,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4143,15 +4179,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff2: TQRLabel
-        Left = 226
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 276
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          597.958333333333300000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          584.200000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4161,7 +4197,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4172,15 +4208,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff3: TQRLabel
-        Left = 267
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 328
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          706.437500000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          694.266666666666700000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4190,7 +4226,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4201,15 +4237,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff3: TQRLabel
-        Left = 301
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 370
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          796.395833333333300000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          783.166666666666700000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4219,7 +4255,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4230,15 +4266,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff4: TQRLabel
-        Left = 341
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 420
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          902.229166666666700000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          889.000000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4248,7 +4284,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4259,15 +4295,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff4: TQRLabel
-        Left = 375
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 463
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          992.187500000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          980.016666666666700000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4277,7 +4313,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4288,15 +4324,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff5: TQRLabel
-        Left = 417
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 515
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1103.312500000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1090.083333333333000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4306,7 +4342,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4317,15 +4353,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff5: TQRLabel
-        Left = 451
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 558
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1193.270833333333000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1181.100000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4335,7 +4371,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4346,15 +4382,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff6: TQRLabel
-        Left = 492
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 609
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1301.750000000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1289.050000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4364,7 +4400,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4375,15 +4411,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff6: TQRLabel
-        Left = 526
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 651
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1391.708333333333000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1377.950000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4393,7 +4429,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4404,15 +4440,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff7: TQRLabel
-        Left = 566
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 702
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1497.541666666667000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1485.900000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4422,7 +4458,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4433,15 +4469,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff7: TQRLabel
-        Left = 600
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 744
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1587.500000000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1574.800000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4451,7 +4487,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4462,15 +4498,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff8: TQRLabel
-        Left = 642
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 797
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1698.625000000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1686.983333333333000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4480,7 +4516,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4491,15 +4527,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff8: TQRLabel
-        Left = 676
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 839
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1788.583333333333000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1775.883333333333000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4509,7 +4545,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4520,15 +4556,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff9: TQRLabel
-        Left = 718
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 891
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1899.708333333333000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1885.950000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4538,7 +4574,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4549,15 +4585,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff9: TQRLabel
-        Left = 752
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 934
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1989.666666666667000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          1976.966666666667000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4567,7 +4603,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4578,15 +4614,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff10: TQRLabel
-        Left = 793
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 985
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2098.145833333333000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          2084.916666666667000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4596,7 +4632,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4607,15 +4643,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff10: TQRLabel
-        Left = 827
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 1028
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2188.104166666667000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          2175.933333333333000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4625,7 +4661,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4636,15 +4672,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff11: TQRLabel
-        Left = 867
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 1078
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2293.937500000000000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          2281.766666666667000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4654,7 +4690,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4665,15 +4701,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff11: TQRLabel
-        Left = 901
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 1120
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2383.895833333333000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          2370.666666666667000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4683,7 +4719,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4694,15 +4730,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiff12: TQRLabel
-        Left = 940
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 1169
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2487.083333333333000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          2474.383333333333000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4712,7 +4748,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4723,15 +4759,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiff12: TQRLabel
-        Left = 974
-        Top = 37
-        Width = 27
-        Height = 11
+        Left = 1212
+        Top = 46
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2577.041666666667000000
-          97.895833333333330000
-          71.437500000000000000)
+          29.633333333333330000
+          2565.400000000000000000
+          97.366666666666670000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4741,7 +4777,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4752,15 +4788,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTODiffTotal: TQRLabel
-        Left = 1012
-        Top = 37
-        Width = 33
-        Height = 11
+        Left = 1257
+        Top = 46
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2677.583333333333000000
-          97.895833333333330000
-          87.312500000000000000)
+          29.633333333333330000
+          2660.650000000000000000
+          97.366666666666670000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4770,7 +4806,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4781,15 +4817,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblProfDiffTotal: TQRLabel
-        Left = 1050
-        Top = 37
-        Width = 33
-        Height = 11
+        Left = 1305
+        Top = 46
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2778.125000000000000000
-          97.895833333333330000
-          87.312500000000000000)
+          29.633333333333330000
+          2762.250000000000000000
+          97.366666666666670000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4799,7 +4835,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4810,10 +4846,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRShape1: TQRShape
-        Left = 106
-        Top = 50
-        Width = 979
-        Height = 9
+        Left = 133
+        Top = 63
+        Width = 1224
+        Height = 11
         Size.Values = (
           23.812500000000000000
           280.458333333333400000
@@ -4828,10 +4864,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       end
     end
     object QRBand3: TQRBand
-      Left = 19
-      Top = 313
-      Width = 1085
-      Height = 104
+      Left = 24
+      Top = 383
+      Width = 1356
+      Height = 130
       Frame.DrawTop = True
       Frame.Width = 2
       AlignToBottom = False
@@ -4841,20 +4877,20 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       ForceNewPage = True
       Size.Values = (
         275.166666666666700000
-        2870.729166666667000000)
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel7: TQRLabel
         Left = 0
-        Top = 30
-        Width = 55
-        Height = 15
+        Top = 38
+        Width = 78
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           0.000000000000000000
-          79.375000000000000000
-          145.520833333333300000)
+          80.433333333333330000
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4864,7 +4900,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4875,15 +4911,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel12: TQRLabel
-        Left = 85
-        Top = 45
-        Width = 22
-        Height = 11
+        Left = 102
+        Top = 56
+        Width = 31
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          224.895833333333300000
-          119.062500000000000000
-          58.208333333333330000)
+          29.633333333333330000
+          215.900000000000000000
+          118.533333333333300000
+          65.616666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4893,7 +4929,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4904,15 +4940,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel15: TQRLabel
-        Left = 82
-        Top = 30
-        Width = 25
-        Height = 11
+        Left = 98
+        Top = 38
+        Width = 35
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          216.958333333333300000
-          79.375000000000000000
-          66.145833333333330000)
+          29.633333333333330000
+          207.433333333333300000
+          80.433333333333330000
+          74.083333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4922,7 +4958,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4933,15 +4969,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRLabel18: TQRLabel
-        Left = 58
-        Top = 60
-        Width = 45
-        Height = 11
+        Left = 72
+        Top = 75
+        Width = 61
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          153.458333333333300000
+          29.633333333333330000
+          152.400000000000000000
           158.750000000000000000
-          119.062500000000000000)
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4951,7 +4987,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4962,15 +4998,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO1: TQRLabel
-        Left = 117
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 140
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          309.562500000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          296.333333333333300000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -4980,7 +5016,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -4991,15 +5027,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO1: TQRLabel
-        Left = 117
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 140
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          309.562500000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          296.333333333333300000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5009,7 +5045,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5020,15 +5056,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff1: TQRLabel
-        Left = 117
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 140
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          309.562500000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          296.333333333333300000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5038,7 +5074,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5049,15 +5085,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf1: TQRLabel
-        Left = 151
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 183
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          399.520833333333300000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          387.350000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5067,7 +5103,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5078,15 +5114,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf1: TQRLabel
-        Left = 151
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 183
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          399.520833333333300000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          387.350000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5096,7 +5132,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5107,15 +5143,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff1: TQRLabel
-        Left = 151
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 183
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          399.520833333333300000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          387.350000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5125,7 +5161,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5136,15 +5172,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO2: TQRLabel
-        Left = 192
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 234
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          508.000000000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          495.300000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5154,7 +5190,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5165,15 +5201,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO2: TQRLabel
-        Left = 192
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 234
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          508.000000000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          495.300000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5183,7 +5219,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5194,15 +5230,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff2: TQRLabel
-        Left = 192
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 234
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          508.000000000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          495.300000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5212,7 +5248,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5223,15 +5259,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf2: TQRLabel
-        Left = 226
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 276
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          597.958333333333300000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          584.200000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5241,7 +5277,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5252,15 +5288,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf2: TQRLabel
-        Left = 226
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 276
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          597.958333333333300000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          584.200000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5270,7 +5306,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5281,15 +5317,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff2: TQRLabel
-        Left = 226
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 276
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          597.958333333333300000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          584.200000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5299,7 +5335,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5310,15 +5346,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO3: TQRLabel
-        Left = 267
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 328
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          706.437500000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          694.266666666666700000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5328,7 +5364,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5339,15 +5375,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO3: TQRLabel
-        Left = 267
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 328
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          706.437500000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          694.266666666666700000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5357,7 +5393,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5368,15 +5404,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff3: TQRLabel
-        Left = 267
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 328
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          706.437500000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          694.266666666666700000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5386,7 +5422,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5397,15 +5433,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf3: TQRLabel
-        Left = 301
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 370
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          796.395833333333300000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          783.166666666666700000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5415,7 +5451,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5426,15 +5462,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf3: TQRLabel
-        Left = 301
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 370
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          796.395833333333300000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          783.166666666666700000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5444,7 +5480,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5455,15 +5491,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff3: TQRLabel
-        Left = 301
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 370
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          796.395833333333300000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          783.166666666666700000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5473,7 +5509,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5484,15 +5520,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO4: TQRLabel
-        Left = 341
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 420
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          902.229166666666700000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          889.000000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5502,7 +5538,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5513,15 +5549,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO4: TQRLabel
-        Left = 341
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 420
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          902.229166666666700000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          889.000000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5531,7 +5567,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5542,15 +5578,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff4: TQRLabel
-        Left = 341
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 420
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          902.229166666666700000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          889.000000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5560,7 +5596,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5571,15 +5607,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf4: TQRLabel
-        Left = 375
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 463
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          992.187500000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          980.016666666666700000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5589,7 +5625,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5600,15 +5636,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf4: TQRLabel
-        Left = 375
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 463
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          992.187500000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          980.016666666666700000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5618,7 +5654,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5629,15 +5665,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff4: TQRLabel
-        Left = 375
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 463
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          992.187500000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          980.016666666666700000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5647,7 +5683,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5658,15 +5694,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO5: TQRLabel
-        Left = 417
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 515
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1103.312500000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1090.083333333333000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5676,7 +5712,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5687,15 +5723,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf5: TQRLabel
-        Left = 451
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 558
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1193.270833333333000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1181.100000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5705,7 +5741,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5716,15 +5752,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf5: TQRLabel
-        Left = 451
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 558
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1193.270833333333000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1181.100000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5734,7 +5770,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5745,15 +5781,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO5: TQRLabel
-        Left = 417
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 515
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1103.312500000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1090.083333333333000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5763,7 +5799,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5774,15 +5810,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff5: TQRLabel
-        Left = 417
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 515
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1103.312500000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1090.083333333333000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5792,7 +5828,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5803,15 +5839,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff5: TQRLabel
-        Left = 451
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 558
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1193.270833333333000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1181.100000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5821,7 +5857,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5832,15 +5868,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO6: TQRLabel
-        Left = 492
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 609
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1301.750000000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1289.050000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5850,7 +5886,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5861,15 +5897,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf6: TQRLabel
-        Left = 526
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 651
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1391.708333333333000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1377.950000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5879,7 +5915,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5890,15 +5926,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO6: TQRLabel
-        Left = 492
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 609
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1301.750000000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1289.050000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5908,7 +5944,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5919,15 +5955,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf6: TQRLabel
-        Left = 526
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 651
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1391.708333333333000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1377.950000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5937,7 +5973,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5948,15 +5984,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff6: TQRLabel
-        Left = 492
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 609
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1301.750000000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1289.050000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5966,7 +6002,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -5977,15 +6013,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff6: TQRLabel
-        Left = 526
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 651
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1391.708333333333000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1377.950000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -5995,7 +6031,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6006,15 +6042,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO7: TQRLabel
-        Left = 566
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 702
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1497.541666666667000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1485.900000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6024,7 +6060,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6035,15 +6071,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf7: TQRLabel
-        Left = 600
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 744
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1587.500000000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1574.800000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6053,7 +6089,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6064,15 +6100,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf7: TQRLabel
-        Left = 600
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 744
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1587.500000000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1574.800000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6082,7 +6118,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6093,15 +6129,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO7: TQRLabel
-        Left = 566
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 702
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1497.541666666667000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1485.900000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6111,7 +6147,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6122,15 +6158,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff7: TQRLabel
-        Left = 566
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 702
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1497.541666666667000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1485.900000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6140,7 +6176,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6151,15 +6187,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff7: TQRLabel
-        Left = 600
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 744
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1587.500000000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1574.800000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6169,7 +6205,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6180,15 +6216,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO8: TQRLabel
-        Left = 642
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 797
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1698.625000000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1686.983333333333000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6198,7 +6234,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6209,15 +6245,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf8: TQRLabel
-        Left = 676
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 839
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1788.583333333333000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1775.883333333333000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6227,7 +6263,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6238,15 +6274,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf8: TQRLabel
-        Left = 676
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 839
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1788.583333333333000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1775.883333333333000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6256,7 +6292,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6267,15 +6303,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO8: TQRLabel
-        Left = 642
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 797
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1698.625000000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1686.983333333333000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6285,7 +6321,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6296,15 +6332,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff8: TQRLabel
-        Left = 642
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 797
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1698.625000000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1686.983333333333000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6314,7 +6350,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6325,15 +6361,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff8: TQRLabel
-        Left = 676
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 839
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1788.583333333333000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1775.883333333333000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6343,7 +6379,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6354,15 +6390,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO9: TQRLabel
-        Left = 718
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 891
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1899.708333333333000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1885.950000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6372,7 +6408,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6383,15 +6419,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO9: TQRLabel
-        Left = 718
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 891
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1899.708333333333000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1885.950000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6401,7 +6437,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6412,15 +6448,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff9: TQRLabel
-        Left = 718
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 891
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1899.708333333333000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1885.950000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6430,7 +6466,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6441,15 +6477,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf9: TQRLabel
-        Left = 752
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 934
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1989.666666666667000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1976.966666666667000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6459,7 +6495,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6470,15 +6506,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf9: TQRLabel
-        Left = 752
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 934
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1989.666666666667000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          1976.966666666667000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6488,7 +6524,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6499,15 +6535,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff9: TQRLabel
-        Left = 752
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 934
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          1989.666666666667000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          1976.966666666667000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6517,7 +6553,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6528,15 +6564,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO10: TQRLabel
-        Left = 793
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 985
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2098.145833333333000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2084.916666666667000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6546,7 +6582,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6557,15 +6593,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf10: TQRLabel
-        Left = 827
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 1028
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2188.104166666667000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2175.933333333333000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6575,7 +6611,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6586,15 +6622,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf10: TQRLabel
-        Left = 827
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 1028
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2188.104166666667000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2175.933333333333000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6604,7 +6640,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6615,15 +6651,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO10: TQRLabel
-        Left = 793
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 985
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2098.145833333333000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2084.916666666667000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6633,7 +6669,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6644,15 +6680,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff10: TQRLabel
-        Left = 793
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 985
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2098.145833333333000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          2084.916666666667000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6662,7 +6698,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6673,15 +6709,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff10: TQRLabel
-        Left = 827
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 1028
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2188.104166666667000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          2175.933333333333000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6691,7 +6727,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6702,15 +6738,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO11: TQRLabel
-        Left = 867
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 1078
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2293.937500000000000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2281.766666666667000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6720,7 +6756,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6731,15 +6767,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf11: TQRLabel
-        Left = 901
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 1120
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2383.895833333333000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2370.666666666667000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6749,7 +6785,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6760,15 +6796,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf11: TQRLabel
-        Left = 901
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 1120
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2383.895833333333000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2370.666666666667000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6778,7 +6814,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6789,15 +6825,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO11: TQRLabel
-        Left = 867
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 1078
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2293.937500000000000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2281.766666666667000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6807,7 +6843,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6818,15 +6854,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff11: TQRLabel
-        Left = 867
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 1078
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2293.937500000000000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          2281.766666666667000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6836,7 +6872,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6847,15 +6883,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff11: TQRLabel
-        Left = 901
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 1120
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2383.895833333333000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          2370.666666666667000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6865,7 +6901,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6876,15 +6912,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO12: TQRLabel
-        Left = 940
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 1169
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2487.083333333333000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2474.383333333333000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6894,7 +6930,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6905,15 +6941,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf12: TQRLabel
-        Left = 974
-        Top = 45
-        Width = 27
-        Height = 11
+        Left = 1212
+        Top = 56
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2577.041666666667000000
-          119.062500000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2565.400000000000000000
+          118.533333333333300000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6923,7 +6959,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6934,15 +6970,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf12: TQRLabel
-        Left = 974
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 1212
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2577.041666666667000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2565.400000000000000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6952,7 +6988,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6963,15 +6999,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO12: TQRLabel
-        Left = 940
-        Top = 30
-        Width = 27
-        Height = 11
+        Left = 1169
+        Top = 38
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2487.083333333333000000
-          79.375000000000000000
-          71.437500000000000000)
+          29.633333333333330000
+          2474.383333333333000000
+          80.433333333333330000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -6981,7 +7017,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -6992,15 +7028,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff12: TQRLabel
-        Left = 940
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 1169
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2487.083333333333000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          2474.383333333333000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7010,7 +7046,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7021,15 +7057,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff12: TQRLabel
-        Left = 974
-        Top = 61
-        Width = 27
-        Height = 11
+        Left = 1212
+        Top = 76
+        Width = 40
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2577.041666666667000000
-          161.395833333333300000
-          71.437500000000000000)
+          29.633333333333330000
+          2565.400000000000000000
+          160.866666666666700000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7039,7 +7075,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7050,15 +7086,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalTO: TQRLabel
-        Left = 1012
-        Top = 45
-        Width = 33
-        Height = 11
+        Left = 1257
+        Top = 56
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2677.583333333333000000
-          119.062500000000000000
-          87.312500000000000000)
+          29.633333333333330000
+          2660.650000000000000000
+          118.533333333333300000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7068,7 +7104,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7079,15 +7115,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalTO: TQRLabel
-        Left = 1012
-        Top = 29
-        Width = 33
-        Height = 11
+        Left = 1257
+        Top = 36
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2677.583333333333000000
-          76.729166666666670000
-          87.312500000000000000)
+          29.633333333333330000
+          2660.650000000000000000
+          76.200000000000000000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7097,7 +7133,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7108,15 +7144,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalTODiff: TQRLabel
-        Left = 1012
-        Top = 61
-        Width = 33
-        Height = 11
+        Left = 1257
+        Top = 76
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2677.583333333333000000
-          161.395833333333300000
-          87.312500000000000000)
+          29.633333333333330000
+          2660.650000000000000000
+          160.866666666666700000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7126,7 +7162,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7137,15 +7173,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblBudTotalProf: TQRLabel
-        Left = 1050
-        Top = 29
-        Width = 33
-        Height = 11
+        Left = 1305
+        Top = 36
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2778.125000000000000000
-          76.729166666666670000
-          87.312500000000000000)
+          29.633333333333330000
+          2762.250000000000000000
+          76.200000000000000000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7155,7 +7191,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7166,15 +7202,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblActTotalProf: TQRLabel
-        Left = 1050
-        Top = 45
-        Width = 33
-        Height = 11
+        Left = 1305
+        Top = 56
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2778.125000000000000000
-          119.062500000000000000
-          87.312500000000000000)
+          29.633333333333330000
+          2762.250000000000000000
+          118.533333333333300000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7184,7 +7220,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7195,15 +7231,15 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object qrlblTotalProfDiff: TQRLabel
-        Left = 1050
-        Top = 61
-        Width = 33
-        Height = 11
+        Left = 1305
+        Top = 76
+        Width = 49
+        Height = 14
         Size.Values = (
-          29.104166666666670000
-          2778.125000000000000000
-          161.395833333333300000
-          87.312500000000000000)
+          29.633333333333330000
+          2762.250000000000000000
+          160.866666666666700000
+          103.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -7213,7 +7249,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -8
+        Font.Height = -10
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -7224,10 +7260,10 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         FontSize = 6
       end
       object QRShape2: TQRShape
-        Left = 106
-        Top = 74
-        Width = 979
-        Height = 9
+        Left = 133
+        Top = 93
+        Width = 1224
+        Height = 11
         Size.Values = (
           23.812500000000000000
           280.458333333333400000

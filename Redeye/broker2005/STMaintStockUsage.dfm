@@ -2,8 +2,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   Left = 256
   Top = 114
   Caption = 'Maintain Fulfillment Stock Usage'
-  ClientHeight = 433
-  ClientWidth = 852
+  ClientHeight = 424
+  ClientWidth = 846
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,8 +20,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 414
-    Width = 852
+    Top = 405
+    Width = 846
     Height = 19
     Panels = <
       item
@@ -30,21 +30,17 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       item
         Width = 50
       end>
-    ExplicitTop = 405
-    ExplicitWidth = 846
   end
   object Panel2: TPanel
     Left = 0
-    Top = 373
-    Width = 852
+    Top = 364
+    Width = 846
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 364
-    ExplicitWidth = 846
     DesignSize = (
-      852
+      846
       41)
     object Label2: TLabel
       Left = 16
@@ -63,7 +59,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 762
+      Left = 750
       Top = 8
       Width = 75
       Height = 25
@@ -74,7 +70,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       ExplicitLeft = 756
     end
     object btnOK: TBitBtn
-      Left = 674
+      Left = 662
       Top = 8
       Width = 75
       Height = 25
@@ -108,12 +104,11 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 852
+    Width = 846
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 846
     object Label1: TLabel
       Left = 16
       Top = 12
@@ -158,8 +153,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   object sgdetails: TStringGrid
     Left = 0
     Top = 41
-    Width = 750
-    Height = 332
+    Width = 744
+    Height = 323
     Align = alClient
     DefaultRowHeight = 20
     DrawingStyle = gdsGradient
@@ -170,8 +165,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
-    ExplicitWidth = 744
-    ExplicitHeight = 323
     ColWidths = (
       178
       201
@@ -180,18 +173,16 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       81)
   end
   object Panel1: TPanel
-    Left = 750
+    Left = 744
     Top = 41
     Width = 102
-    Height = 332
+    Height = 323
     Align = alRight
     ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 744
-    ExplicitHeight = 323
     DesignSize = (
       102
-      332)
+      323)
     object btnChange: TBitBtn
       Left = 16
       Top = 48
@@ -223,7 +214,7 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     end
     object btnExcel: TBitBtn
       Left = 16
-      Top = 296
+      Top = 287
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -274,7 +265,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 3
       OnClick = btnExcelClick
-      ExplicitTop = 287
     end
   end
   object tmrSearch: TTimer

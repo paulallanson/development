@@ -242,7 +242,7 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Delivery Note Printer', '', TempArray,
+  GetPrivateProfileString('Sales Orders', 'Delivery Note Printer', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
@@ -264,7 +264,7 @@ begin
 
   with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Delivery Note Printer',DefaultPrinter);
+      WriteString('Sales Orders', 'Delivery Note Printer',DefaultPrinter);
 
       Free;
     end;

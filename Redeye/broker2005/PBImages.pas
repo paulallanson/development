@@ -64,7 +64,7 @@ begin
   else
     StrPCopy(AppIniFile, GetAppIniFile);
 
-  GetPrivateProfileString('Centrereed Broker', 'LoginAlias', cConnectionDefName, TempArray, SizeOf(TempArray), AppIniFile);
+  GetPrivateProfileString('Quaystone', 'LoginAlias', cConnectionDefName, TempArray, SizeOf(TempArray), AppIniFile);
 
   sgList := nil;
   List := nil;

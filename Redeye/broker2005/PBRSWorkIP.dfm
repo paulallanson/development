@@ -26,7 +26,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     ParentBackground = False
     TabOrder = 0
     ExplicitTop = 393
-    ExplicitWidth = 832
+    ExplicitWidth = 887
     DesignSize = (
       893
       41)
@@ -39,7 +39,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 6
+      ExplicitLeft = 556
       DesignSize = (
         331
         41)
@@ -170,7 +170,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 838
+    ExplicitWidth = 887
     object pnlDates: TPanel
       Left = 715
       Top = 0
@@ -180,19 +180,18 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 654
-      ExplicitHeight = 201
+      ExplicitLeft = 709
       object chkbxPageBreak: TCheckBox
         Left = 6
         Top = 153
-        Width = 145
+        Width = 163
         Height = 17
         Caption = 'Page break on total'
         Enabled = False
         TabOrder = 0
       end
       object TotByRadioGroup: TRadioGroup
-        Left = -7
+        Left = 6
         Top = 4
         Width = 160
         Height = 135
@@ -210,16 +209,16 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
       object chkbxShowCosts: TCheckBox
         Left = 6
-        Top = 190
-        Width = 145
+        Top = 194
+        Width = 163
         Height = 17
         Caption = 'Hide cost/margin values'
         TabOrder = 2
       end
       object chkbxShowSales: TCheckBox
         Left = 6
-        Top = 171
-        Width = 145
+        Top = 174
+        Width = 155
         Height = 17
         Caption = 'Hide sales value'
         TabOrder = 3
@@ -235,6 +234,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 458
       object Label1: TLabel
         Left = 19
         Top = 13
@@ -312,7 +312,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       object chkbxExcludeInvCallOff: TCheckBox
         Left = 19
         Top = 142
-        Width = 182
+        Width = 214
         Height = 17
         Caption = 'Exclude Inv On Call Off'
         TabOrder = 2
@@ -321,7 +321,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       object ExcOnHoldCheckBox: TCheckBox
         Left = 19
         Top = 160
-        Width = 182
+        Width = 226
         Height = 17
         Caption = 'Exclude on hold items'
         TabOrder = 3
@@ -330,7 +330,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       object chkbxIncludeJB: TCheckBox
         Left = 19
         Top = 177
-        Width = 182
+        Width = 232
         Height = 17
         Caption = 'Include orders in Job bags'
         TabOrder = 4
@@ -339,7 +339,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       object chkbxincludezero: TCheckBox
         Left = 19
         Top = 196
-        Width = 182
+        Width = 226
         Height = 17
         Hint = 'Show zero sales values for confirmed deliveries'
         Caption = 'Include zero sales values'
@@ -367,8 +367,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 465
-      ExplicitHeight = 213
+      ExplicitWidth = 458
       object Label3: TLabel
         Left = 9
         Top = 170
@@ -561,7 +560,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     Height = 19
     Panels = <>
     ExplicitTop = 434
-    ExplicitWidth = 832
+    ExplicitWidth = 887
   end
   object DBGrid: TDBGrid
     Left = 0
@@ -738,8 +737,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       '    (Delivery_Detail.Date_deliv_actual is not null)) and'
       '    ((Purchase_orderline.Inactive <> '#39'Y'#39') or'
       '    (Purchase_orderline.Inactive is null)))')
-    Left = 440
-    Top = 72
+    Left = 390
+    Top = 90
     object qryReportPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
     end

@@ -33,7 +33,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         Width = 50
       end>
     ExplicitTop = 303
-    ExplicitWidth = 466
+    ExplicitWidth = 485
   end
   object pnlBody: TPanel
     Left = 0
@@ -44,7 +44,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 466
+    ExplicitWidth = 485
     ExplicitHeight = 303
     object Panel1: TPanel
       Left = 0
@@ -54,7 +54,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       Align = alTop
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 466
+      ExplicitWidth = 485
       object gbLayouts: TGroupBox
         Left = 1
         Top = 6
@@ -134,7 +134,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       Align = alClient
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 466
+      ExplicitWidth = 485
       ExplicitHeight = 87
       DesignSize = (
         491
@@ -197,7 +197,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       object TypeRadioGroup: TRadioGroup
         Left = 256
         Top = 2
-        Width = 216
+        Width = 210
         Height = 65
         Anchors = [akLeft, akTop, akRight]
         Font.Charset = ANSI_CHARSET
@@ -213,7 +213,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
         ParentFont = False
         TabOrder = 2
         OnClick = TypeRadioGroupClick
-        ExplicitWidth = 191
+        ExplicitWidth = 204
       end
       object chkbxAttachDelNote: TCheckBox
         Left = 10
@@ -255,7 +255,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       ParentBackground = False
       TabOrder = 2
       ExplicitTop = 168
-      ExplicitWidth = 466
+      ExplicitWidth = 485
       object Label12: TLabel
         Left = 192
         Top = 12
@@ -343,7 +343,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       ParentBackground = False
       TabOrder = 3
       ExplicitTop = 262
-      ExplicitWidth = 466
+      ExplicitWidth = 485
       object CancelBitBtn: TBitBtn
         Left = 8
         Top = 8

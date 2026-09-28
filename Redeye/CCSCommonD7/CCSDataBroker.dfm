@@ -1,13 +1,14 @@
 object DataBroker: TDataBroker
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Height = 311
-  Width = 473
+  Height = 389
+  Width = 591
+  PixelsPerInch = 120
   object qryLayout: TFDQuery
     SQL.Strings = (
       'SELECT * FROM tb_PageLayout WHERE f_PageLayoutName = :Name')
-    Left = 88
-    Top = 8
+    Left = 110
+    Top = 10
     ParamData = <
       item
         Name = 'Name'
@@ -25,8 +26,8 @@ object DataBroker: TDataBroker
       'FROM Company WHERE Company = 1'
       ''
       ' ')
-    Left = 16
-    Top = 8
+    Left = 20
+    Top = 10
   end
   object qryFormRef: TFDQuery
     SQL.Strings = (
@@ -34,8 +35,8 @@ object DataBroker: TDataBroker
       'FROM Form_Reference WHERE Form_Reference = :Ref'
       ''
       ' ')
-    Left = 152
-    Top = 8
+    Left = 190
+    Top = 10
     ParamData = <
       item
         Name = 'Ref'
@@ -52,8 +53,8 @@ object DataBroker: TDataBroker
         '_Claim'
       ''
       ' ')
-    Left = 216
-    Top = 8
+    Left = 270
+    Top = 10
     ParamData = <
       item
         Name = 'FSC_Material_Claim'

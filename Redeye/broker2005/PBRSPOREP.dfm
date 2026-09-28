@@ -169,7 +169,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PrintBitBtnClick
-    ExplicitTop = 413
+    ExplicitTop = 446
   end
   object PreviewBitBtn: TBitBtn
     Left = 264
@@ -194,7 +194,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     NumGlyphs = 2
     TabOrder = 2
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 413
+    ExplicitTop = 446
   end
   object CancelBitBtn: TBitBtn
     Left = 16
@@ -206,7 +206,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 3
-    ExplicitTop = 413
+    ExplicitTop = 446
   end
   object SuppEdit: TEdit
     Left = 160
@@ -408,7 +408,7 @@ object PBRSPORepFrm: TPBRSPORepFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 16
     OnClick = btbtnExcelClick
-    ExplicitTop = 413
+    ExplicitTop = 446
   end
   object rdgrpInclude: TRadioGroup
     Left = 240

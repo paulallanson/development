@@ -4,8 +4,8 @@ object PBRSQuoFrm: TPBRSQuoFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Quotation Print'
-  ClientHeight = 364
-  ClientWidth = 430
+  ClientHeight = 355
+  ClientWidth = 424
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -58,12 +58,14 @@ object PBRSQuoFrm: TPBRSQuoFrm
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 151
-    Width = 430
+    Top = 142
+    Width = 424
     Height = 213
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 151
+    ExplicitWidth = 430
     object cbPrintLogo: TCheckBox
       Left = 14
       Top = 8

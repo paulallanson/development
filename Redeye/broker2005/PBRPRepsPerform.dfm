@@ -10,13 +10,13 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object QckRpRpsPrft: TQuickRep
     Left = 24
     Top = 8
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = QckRpRpsPrftBeforePrint
     DataSet = SQLRepPrft
@@ -74,31 +74,31 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
     PreviewLeft = 0
     PreviewTop = 0
     object PageHeader: TQRBand
-      Left = 19
-      Top = 38
-      Width = 1085
-      Height = 59
+      Left = 24
+      Top = 47
+      Width = 1356
+      Height = 74
       AlignToBottom = False
       BeforePrint = PageHeaderBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        156.104166666666700000
-        2870.729166666667000000)
+        156.633333333333300000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRSysData1: TQRSysData
-        Left = 484
-        Top = 8
-        Width = 117
-        Height = 24
+        Left = 608
+        Top = 10
+        Width = 139
+        Height = 30
         Size.Values = (
           63.500000000000000000
-          1280.583333333333000000
+          1286.933333333333000000
           21.166666666666670000
-          309.562500000000000000)
+          294.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -108,7 +108,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         Data = qrsReportTitle
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
@@ -119,15 +119,15 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         FontSize = 14
       end
       object PageNumQrl: TQRLabel
-        Left = 8
-        Top = 32
-        Width = 75
-        Height = 17
+        Left = 10
+        Top = 40
+        Width = 93
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           84.666666666666670000
-          198.437500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -135,6 +135,12 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         AlignToBand = False
         Caption = 'PageNumQrl'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -142,12 +148,12 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         FontSize = 10
       end
       object WhichSideQRL: TQRLabel
-        Left = 8
-        Top = 8
-        Width = 52
-        Height = 17
+        Left = 10
+        Top = 10
+        Width = 65
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           21.166666666666670000
           137.583333333333300000)
@@ -158,6 +164,12 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         AlignToBand = False
         Caption = 'LeftRight'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -165,15 +177,15 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         FontSize = 10
       end
       object qrlblTitle: TQRLabel
-        Left = 331
-        Top = 8
-        Width = 422
-        Height = 23
+        Left = 422
+        Top = 10
+        Width = 511
+        Height = 29
         Size.Values = (
-          60.854166666666670000
-          875.770833333333300000
+          61.383333333333330000
+          893.233333333333300000
           21.166666666666670000
-          1116.541666666667000000)
+          1081.616666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -183,7 +195,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -194,15 +206,15 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         FontSize = 14
       end
       object qrlblDateRange: TQRLabel
-        Left = 498
-        Top = 32
-        Width = 88
-        Height = 17
+        Left = 622
+        Top = 40
+        Width = 112
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1317.625000000000000000
+          44.450000000000000000
+          1316.566666666667000000
           84.666666666666670000
-          232.833333333333300000)
+          237.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -210,6 +222,12 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         AlignToBand = True
         Caption = 'Financial Year:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -218,10 +236,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object PageHeaderLeft: TQRChildBand
-      Left = 19
-      Top = 97
-      Width = 1085
-      Height = 50
+      Left = 24
+      Top = 121
+      Width = 1356
+      Height = 63
       AlignToBottom = False
       BeforePrint = PageHeaderLeftBeforePrint
       TransparentBand = False
@@ -234,22 +252,22 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        132.291666666666700000
-        2870.729166666667000000)
+        133.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = PageHeader
       PrintOrder = cboAfterParent
       object QRLabel1: TQRLabel
-        Left = 2
+        Left = 3
         Top = 0
-        Width = 41
-        Height = 17
+        Width = 51
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          5.291666666666667000
+          44.450000000000000000
+          6.350000000000000000
           0.000000000000000000
-          108.479166666666700000)
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -257,6 +275,12 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         AlignToBand = False
         Caption = 'Period'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -265,10 +289,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object PageHeaderRight: TQRChildBand
-      Left = 19
-      Top = 197
-      Width = 1085
-      Height = 50
+      Left = 24
+      Top = 247
+      Width = 1356
+      Height = 63
       AlignToBottom = False
       BeforePrint = PageHeaderRightBeforePrint
       Enabled = False
@@ -282,22 +306,22 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        132.291666666666700000
-        2870.729166666667000000)
+        133.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = PageHeaderMiddle
       PrintOrder = cboAfterParent
       object QRLabel11: TQRLabel
-        Left = 2
+        Left = 3
         Top = 0
-        Width = 41
-        Height = 17
+        Width = 51
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          5.291666666666667000
+          44.450000000000000000
+          6.350000000000000000
           0.000000000000000000
-          108.479166666666700000)
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -305,6 +329,12 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         AlignToBand = False
         Caption = 'Period'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -313,18 +343,18 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object QRSubDetailpg1: TQRSubDetail
-      Left = 19
-      Top = 252
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 316
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRSubDetailpg1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = QckRpRpsPrft
@@ -334,10 +364,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       PrintIfEmpty = True
     end
     object QRFootPg1: TQRBand
-      Left = 19
-      Top = 287
-      Width = 1085
-      Height = 50
+      Left = 24
+      Top = 360
+      Width = 1356
+      Height = 63
       AfterPrint = QRFootPg1AfterPrint
       AlignToBottom = False
       BeforePrint = QRFootPg1BeforePrint
@@ -351,21 +381,21 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        132.291666666666700000
-        2870.729166666667000000)
+        133.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel2: TQRLabel
-        Left = 2
-        Top = 13
-        Width = 45
-        Height = 17
+        Left = 3
+        Top = 16
+        Width = 51
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          5.291666666666667000
-          34.395833333333340000
-          119.062500000000000000)
+          44.450000000000000000
+          6.350000000000000000
+          33.866666666666670000
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -375,7 +405,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -387,35 +417,35 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object QRGrpHeadPg2: TQRBand
-      Left = 19
-      Top = 337
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 423
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRGrpHeadPg2BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object QRSubDetailpg2: TQRSubDetail
-      Left = 19
-      Top = 347
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 435
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRSubDetailpg2BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = QckRpRpsPrft
@@ -426,18 +456,18 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       PrintIfEmpty = True
     end
     object QRGrpPg1: TQRGroup
-      Left = 19
-      Top = 247
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 310
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRGrpPg1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'sqlrepprft.period'
@@ -446,10 +476,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ReprintOnNewPage = False
     end
     object QRDtlpg1: TQRBand
-      Left = 19
-      Top = 257
-      Width = 1085
-      Height = 30
+      Left = 24
+      Top = 322
+      Width = 1356
+      Height = 38
       AlignToBottom = False
       BeforePrint = QRDtlpg1BeforePrint
       TransparentBand = False
@@ -462,21 +492,21 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        79.375000000000000000
-        2870.729166666667000000)
+        80.433333333333330000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText1: TQRDBText
         Left = 0
         Top = 0
-        Width = 76
-        Height = 17
+        Width = 104
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           0.000000000000000000
           0.000000000000000000
-          201.083333333333300000)
+          220.133333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -487,7 +517,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         DataField = 'period_description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -9
+        Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -501,18 +531,18 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object QRGrpPg2: TQRGroup
-      Left = 19
-      Top = 342
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 429
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRGrpPg2BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'sqlrepprft.period'
@@ -521,10 +551,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ReprintOnNewPage = False
     end
     object QRDtlpg2: TQRBand
-      Left = 19
-      Top = 352
-      Width = 1085
-      Height = 30
+      Left = 24
+      Top = 441
+      Width = 1356
+      Height = 38
       AlignToBottom = False
       BeforePrint = QRDtlpg2BeforePrint
       Enabled = False
@@ -538,21 +568,21 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        79.375000000000000000
-        2870.729166666667000000)
+        80.433333333333330000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText4: TQRDBText
         Left = 0
         Top = 0
-        Width = 76
-        Height = 17
+        Width = 104
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           0.000000000000000000
           0.000000000000000000
-          201.083333333333300000)
+          220.133333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -563,7 +593,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         DataField = 'period_description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -9
+        Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -577,10 +607,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object QRFootPg2: TQRBand
-      Left = 19
-      Top = 382
-      Width = 1085
-      Height = 50
+      Left = 24
+      Top = 479
+      Width = 1356
+      Height = 63
       AfterPrint = QRFootPg2AfterPrint
       AlignToBottom = False
       BeforePrint = QRFootPg2BeforePrint
@@ -595,21 +625,21 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        132.291666666666700000
-        2870.729166666667000000)
+        133.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel3: TQRLabel
-        Left = 2
-        Top = 13
-        Width = 45
-        Height = 17
+        Left = 3
+        Top = 16
+        Width = 51
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          5.291666666666667000
-          34.395833333333340000
-          119.062500000000000000)
+          44.450000000000000000
+          6.350000000000000000
+          33.866666666666670000
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -619,7 +649,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -631,10 +661,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object PageHeaderMiddle: TQRChildBand
-      Left = 19
-      Top = 147
-      Width = 1085
-      Height = 50
+      Left = 24
+      Top = 184
+      Width = 1356
+      Height = 63
       AlignToBottom = False
       BeforePrint = PageHeaderMiddleBeforePrint
       Enabled = False
@@ -648,22 +678,22 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        132.291666666666700000
-        2870.729166666667000000)
+        133.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = PageHeaderLeft
       PrintOrder = cboAfterParent
       object QRLabel4: TQRLabel
-        Left = 2
+        Left = 3
         Top = 0
-        Width = 41
-        Height = 17
+        Width = 51
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          5.291666666666667000
+          44.450000000000000000
+          6.350000000000000000
           0.000000000000000000
-          108.479166666666700000)
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -673,7 +703,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
@@ -685,35 +715,35 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object QRGrpHeadPg3: TQRBand
-      Left = 19
-      Top = 432
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 542
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRGrpHeadPg3BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object QRGrpPg3: TQRGroup
-      Left = 19
-      Top = 437
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 548
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRGrpPg3BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'sqlrepprft.period'
@@ -722,18 +752,18 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ReprintOnNewPage = False
     end
     object QRSubDetailpg3: TQRSubDetail
-      Left = 19
-      Top = 442
-      Width = 1085
-      Height = 5
+      Left = 24
+      Top = 554
+      Width = 1356
+      Height = 6
       AlignToBottom = False
       BeforePrint = QRSubDetailpg3BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2870.729166666667000000)
+        12.700000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = QckRpRpsPrft
@@ -744,10 +774,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       PrintIfEmpty = True
     end
     object QRDtlPg3: TQRBand
-      Left = 19
-      Top = 447
-      Width = 1085
-      Height = 30
+      Left = 24
+      Top = 560
+      Width = 1356
+      Height = 38
       AlignToBottom = False
       BeforePrint = QRDtlPg3BeforePrint
       Enabled = False
@@ -761,21 +791,21 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        79.375000000000000000
-        2870.729166666667000000)
+        80.433333333333330000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText2: TQRDBText
         Left = 0
         Top = 0
-        Width = 76
-        Height = 17
+        Width = 104
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           0.000000000000000000
           0.000000000000000000
-          201.083333333333300000)
+          220.133333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -786,7 +816,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         DataField = 'period_description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -9
+        Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -800,10 +830,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       end
     end
     object QRFootpg3: TQRBand
-      Left = 19
-      Top = 477
-      Width = 1085
-      Height = 50
+      Left = 24
+      Top = 598
+      Width = 1356
+      Height = 63
       AlignToBottom = False
       BeforePrint = QRFootpg3BeforePrint
       Enabled = False
@@ -817,21 +847,21 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        132.291666666666700000
-        2870.729166666667000000)
+        133.350000000000000000
+        2870.200000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel5: TQRLabel
-        Left = 2
-        Top = 13
-        Width = 45
-        Height = 17
+        Left = 3
+        Top = 16
+        Width = 51
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          5.291666666666667000
-          34.395833333333340000
-          119.062500000000000000)
+          44.450000000000000000
+          6.350000000000000000
+          33.866666666666670000
+          107.950000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -841,7 +871,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -852,10 +882,10 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         FontSize = 8
       end
       object QRLblTotSell: TQRLabel
-        Left = 155
-        Top = 3
-        Width = 248
-        Height = 15
+        Left = 194
+        Top = 4
+        Width = 310
+        Height = 19
         Size.Values = (
           39.687500000000000000
           410.104166666667000000
@@ -873,7 +903,7 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -9
+        Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False

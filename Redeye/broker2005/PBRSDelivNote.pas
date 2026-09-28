@@ -383,12 +383,12 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Delivery Note Printer', '', TempArray,
+  GetPrivateProfileString('Buy Print', 'Delivery Note Printer', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
 
-  GetPrivateProfileString('Centrereed Broker', 'Delivery Note Bin', '', TempArray,
+  GetPrivateProfileString('Buy Print', 'Delivery Note Bin', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   sBin := TempArray;
@@ -401,7 +401,7 @@ begin
 (*  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   try
-    DefaultPrinter := IniFile.ReadString('Centrereed Broker', 'Delivery Note Printer', 'None');
+    DefaultPrinter := IniFile.ReadString('Buy Print', 'Delivery Note Printer', 'None');
   finally
     IniFile.Free;
   end;
@@ -429,8 +429,8 @@ begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
   try
-    WriteString('Centrereed Broker', 'Delivery Note Printer',DefaultPrinter);
-    WriteString('Centrereed Broker', 'Delivery Note Bin',inttostr(DefaultBin));
+    WriteString('Buy Print', 'Delivery Note Printer',DefaultPrinter);
+    WriteString('Buy Print', 'Delivery Note Bin',inttostr(DefaultBin));
   finally
     IniFile.Free;
   end;

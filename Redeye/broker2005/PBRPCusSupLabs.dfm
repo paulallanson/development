@@ -13,13 +13,13 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep
     Left = -8
     Top = -5
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     ShowingPreview = False
     BeforePrint = PBLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -76,10 +76,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRSubDetail
-      Left = 15
+      Left = 19
       Top = 2
-      Width = 380
-      Height = 280
+      Width = 474
+      Height = 350
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
@@ -87,7 +87,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
       ForceNewPage = False
       Size.Values = (
         740.833333333333300000
-        1005.416666666667000000)
+        1003.300000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = PBLabelsQuickReport
@@ -95,10 +95,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
       PrintBefore = False
       PrintIfEmpty = True
       object AddressMemo: TQRMemo
-        Left = 37
-        Top = 99
-        Width = 308
-        Height = 112
+        Left = 46
+        Top = 124
+        Width = 385
+        Height = 140
         Size.Values = (
           296.333333333333400000
           97.895833333333340000
@@ -113,7 +113,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         Lines.Strings = (
@@ -129,15 +129,15 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 12
       end
       object lblCustomer: TQRLabel
-        Left = 37
-        Top = 78
-        Width = 100
-        Height = 19
+        Left = 46
+        Top = 98
+        Width = 118
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          97.895833333333340000
-          206.375000000000000000
-          264.583333333333400000)
+          50.800000000000000000
+          97.366666666666670000
+          207.433333333333300000
+          249.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -147,7 +147,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -158,15 +158,15 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 12
       end
       object FAOCapQRLabel: TQRLabel
-        Left = 37
-        Top = 213
-        Width = 47
-        Height = 20
+        Left = 46
+        Top = 266
+        Width = 57
+        Height = 25
         Size.Values = (
-          52.916666666666660000
-          97.895833333333340000
-          563.562500000000000000
-          124.354166666666700000)
+          52.916666666666670000
+          97.366666666666670000
+          563.033333333333300000
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -176,7 +176,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -18
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -187,10 +187,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 11
       end
       object CompNameQRLabel: TQRLabel
-        Left = 16
-        Top = 30
-        Width = 345
-        Height = 24
+        Left = 20
+        Top = 38
+        Width = 431
+        Height = 30
         Size.Values = (
           63.500000000000000000
           42.333333333333300000
@@ -206,7 +206,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -22
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -217,16 +217,16 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 13
       end
       object DeliveryDateLbl: TQRLabel
-        Left = 157
-        Top = 78
-        Width = 116
-        Height = 19
+        Left = 196
+        Top = 98
+        Width = 144
+        Height = 24
         Enabled = False
         Size.Values = (
-          50.270833333333330000
-          415.395833333333400000
-          206.375000000000000000
-          306.916666666666700000)
+          50.800000000000000000
+          414.866666666666700000
+          207.433333333333300000
+          304.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -236,7 +236,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -247,10 +247,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 12
       end
       object FAOQRLabel: TQRLabel
-        Left = 112
-        Top = 213
-        Width = 241
-        Height = 19
+        Left = 140
+        Top = 266
+        Width = 301
+        Height = 24
         Size.Values = (
           50.270833333333330000
           296.333333333333400000
@@ -266,7 +266,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -18
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -277,10 +277,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 11
       end
       object CompAddrQRLabel: TQRLabel
-        Left = 7
-        Top = 50
-        Width = 369
-        Height = 15
+        Left = 9
+        Top = 63
+        Width = 461
+        Height = 19
         Size.Values = (
           39.687500000000000000
           18.520833333333330000
@@ -296,7 +296,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -9
+        Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -307,10 +307,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         FontSize = 7
       end
       object QRShape3: TQRShape
-        Left = 5
-        Top = 24
-        Width = 370
-        Height = 6
+        Left = 6
+        Top = 30
+        Width = 462
+        Height = 8
         Size.Values = (
           15.875000000000000000
           13.229166666666670000
@@ -324,10 +324,10 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         VertAdjust = 0
       end
       object QRShape4: TQRShape
-        Left = 5
-        Top = 64
-        Width = 370
-        Height = 6
+        Left = 6
+        Top = 80
+        Width = 462
+        Height = 8
         Size.Values = (
           15.875000000000000000
           13.229166666666670000

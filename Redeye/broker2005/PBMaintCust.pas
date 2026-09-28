@@ -4233,7 +4233,7 @@ begin
 
       IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
       try
-        stempdate := IniFile.ReadString('Centrereed Broker', 'Enquiry Search Date', 'None');
+        stempdate := IniFile.ReadString('Customer Enquiries', 'Enquiry Search Date', 'None');
       finally
         IniFile.Free;
       end;
@@ -4725,7 +4725,7 @@ begin
 
       IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
       try
-        stempdate := IniFile.ReadString('Centrereed Broker', 'Customer Order Search Date', 'None');
+        stempdate := IniFile.ReadString('Customer Production', 'Customer Order Search Date', 'None');
       finally
         IniFile.Free;
       end;
@@ -5319,7 +5319,7 @@ begin
 
       IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
       try
-        stempdate := IniFile.ReadString('Centrereed Broker', 'Customer Job Bag Search Date', 'None');
+        stempdate := IniFile.ReadString('Customer Job Bags', 'Customer Job Bag Search Date', 'None');
       finally
         IniFile.Free;
       end;
@@ -6449,7 +6449,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'Customer Job Bag Search Date', pbdatestr(dtmdlCustJobs.JobDate));
+    IniFile.WriteString('Customer Job Bags', 'Customer Job Bag Search Date', pbdatestr(dtmdlCustJobs.JobDate));
   finally
     IniFile.Free;
   end;
@@ -6791,7 +6791,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'Customer Order Search Date', pbdatestr(dtmdlCustOrders.OrderDate));
+    IniFile.WriteString('Customer Production', 'Customer Order Search Date', pbdatestr(dtmdlCustOrders.OrderDate));
   finally
     IniFile.Free;
   end;
@@ -6846,7 +6846,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'Enquiry Search Date', pbdatestr(dtmdlCustEnqs.EnquiryDate));
+    IniFile.WriteString('Customer Enquiries', 'Enquiry Search Date', pbdatestr(dtmdlCustEnqs.EnquiryDate));
   finally
     IniFile.Free;
   end;
@@ -7172,7 +7172,7 @@ begin
 
       IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
       try
-        stempdate := IniFile.ReadString('Centrereed Broker', 'Quote Search Date', 'None');
+        stempdate := IniFile.ReadString('Customer Quotes', 'Quote Search Date', 'None');
       finally
         IniFile.Free;
       end;
@@ -7221,7 +7221,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'Quote Search Date', pbdatestr(dtmdlCustQuotes.QuoteDate));
+    IniFile.WriteString('Customer Quotes', 'Quote Search Date', pbdatestr(dtmdlCustQuotes.QuoteDate));
   finally
     IniFile.Free;
   end;

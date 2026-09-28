@@ -2,8 +2,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   Left = 30
   Top = 92
   Caption = 'Sales Credits'
-  ClientHeight = 341
-  ClientWidth = 1124
+  ClientHeight = 332
+  ClientWidth = 1118
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1124
+    Width = 1118
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1118
+        Width = 1122
       end>
+    ExplicitWidth = 1124
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -43,7 +44,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1097
+        Width = 1109
         Height = 40
         ButtonHeight = 40
         ButtonWidth = 67
@@ -154,8 +155,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1124
-    Height = 192
+    Width = 1118
+    Height = 183
     Align = alClient
     DataSource = dmSalesInvoice.dsSCHeaderGrid
     DrawingStyle = gdsGradient
@@ -381,12 +382,14 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 266
-    Width = 1124
+    Top = 257
+    Width = 1118
     Height = 56
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 266
+    ExplicitWidth = 1124
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -494,8 +497,8 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 322
-    Width = 1124
+    Top = 313
+    Width = 1118
     Height = 19
     Panels = <
       item
@@ -504,11 +507,13 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       item
         Width = 50
       end>
+    ExplicitTop = 322
+    ExplicitWidth = 1124
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1124
+    Width = 1118
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -522,6 +527,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     ParentBackground = False
     ParentFont = False
     TabOrder = 4
+    ExplicitWidth = 1124
     object Label4: TLabel
       Left = 8
       Top = 3

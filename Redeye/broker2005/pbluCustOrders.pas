@@ -229,7 +229,7 @@ begin
 
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    stempdate := IniFile.ReadString('Centrereed Broker', 'Customer Order Search Date', 'None');
+    stempdate := IniFile.ReadString('Customer Orders', 'Customer Order Search Date', 'None');
   finally
     IniFile.Free;
   end;
@@ -263,7 +263,7 @@ var
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'Customer Order Search Date', pbdatestr(dtmdlOrders.OrderDate));
+    IniFile.WriteString('Customeer Orders', 'Customer Order Search Date', pbdatestr(dtmdlOrders.OrderDate));
   finally
     IniFile.Free;
   end;

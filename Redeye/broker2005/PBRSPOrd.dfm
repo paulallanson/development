@@ -4,8 +4,8 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Purchase Order Print'
-  ClientHeight = 345
-  ClientWidth = 420
+  ClientHeight = 336
+  ClientWidth = 414
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -99,12 +99,14 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 144
-    Width = 420
+    Top = 135
+    Width = 414
     Height = 201
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 144
+    ExplicitWidth = 420
     object CancelBitBtn: TBitBtn
       Left = 8
       Top = 164

@@ -13,13 +13,13 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 14
   object QRLabel6: TQRLabel
-    Left = 448
-    Top = 176
-    Width = 10
-    Height = 10
+    Left = 560
+    Top = 220
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1185.333333333330000000
@@ -34,7 +34,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     Color = clWhite
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -45,10 +45,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     FontSize = 10
   end
   object QRDBText6: TQRDBText
-    Left = 504
-    Top = 176
-    Width = 10
-    Height = 10
+    Left = 630
+    Top = 220
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1333.500000000000000000
@@ -64,7 +64,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     DataField = 'Fax_number'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -77,10 +77,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     FontSize = 10
   end
   object QRLabel7: TQRLabel
-    Left = 448
-    Top = 213
-    Width = 10
-    Height = 10
+    Left = 560
+    Top = 266
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1185.333333333330000000
@@ -95,7 +95,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     Color = clWhite
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -106,10 +106,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     FontSize = 10
   end
   object QRDBText7: TQRDBText
-    Left = 504
-    Top = 213
-    Width = 10
-    Height = 10
+    Left = 630
+    Top = 266
+    Width = 12
+    Height = 12
     Size.Values = (
       26.458333333333300000
       1333.500000000000000000
@@ -125,7 +125,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     DataField = 'Fax_number'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -17
     Font.Name = 'Lucida Sans'
     Font.Style = []
     ParentFont = False
@@ -140,8 +140,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
   object InvoiceReport: TQuickRep
     Left = 0
     Top = -32
-    Width = 794
-    Height = 1123
+    Width = 992
+    Height = 1403
     AfterPrint = InvoiceReportAfterPrint
     ShowingPreview = False
     BeforePrint = InvoiceReportBeforePrint
@@ -201,10 +201,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     PreviewLeft = 0
     PreviewTop = 0
     object CustBranchQRGroup: TQRGroup
-      Left = 19
-      Top = 369
-      Width = 756
-      Height = 4
+      Left = 24
+      Top = 461
+      Width = 945
+      Height = 5
       AlignToBottom = False
       BeforePrint = CustBranchQRGroupBeforePrint
       TransparentBand = False
@@ -227,10 +227,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
       ReprintOnNewPage = False
     end
     object InvDetailBand: TQRSubDetail
-      Left = 19
-      Top = 373
-      Width = 756
-      Height = 41
+      Left = 24
+      Top = 466
+      Width = 945
+      Height = 51
       AfterPrint = InvDetailBandAfterPrint
       AlignToBottom = False
       BeforePrint = InvDetailBandBeforePrint
@@ -244,7 +244,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        108.479166666666700000
+        107.950000000000000000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
@@ -253,10 +253,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
       PrintBefore = False
       PrintIfEmpty = True
       object CustRefQRDBText: TQRDBText
-        Left = 136
-        Top = 2
-        Width = 233
-        Height = 17
+        Left = 170
+        Top = 3
+        Width = 291
+        Height = 21
         Size.Values = (
           44.979166666666700000
           359.833333333333000000
@@ -273,7 +273,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         DataField = 'CustDesc'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -286,10 +286,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object QRDBText4: TQRDBText
-        Left = 8
-        Top = 2
-        Width = 121
-        Height = 17
+        Left = 10
+        Top = 3
+        Width = 151
+        Height = 21
         Size.Values = (
           44.979166666666700000
           21.166666666666700000
@@ -307,7 +307,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         DataField = 'CustRef'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -320,15 +320,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object lblVAT: TQRLabel
-        Left = 461
-        Top = 2
-        Width = 40
-        Height = 17
+        Left = 570
+        Top = 3
+        Width = 56
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1219.729166666667000000
-          5.291666666666667000
-          105.833333333333300000)
+          44.450000000000000000
+          1206.500000000000000000
+          6.350000000000000000
+          118.533333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -338,7 +338,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -349,15 +349,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object lblGoods: TQRLabel
-        Left = 376
-        Top = 2
-        Width = 57
-        Height = 17
+        Left = 463
+        Top = 3
+        Width = 78
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          994.833333333333300000
-          5.291666666666667000
-          150.812500000000000000)
+          44.450000000000000000
+          980.016666666666700000
+          6.350000000000000000
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -367,7 +367,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -378,10 +378,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object QRDBText2: TQRDBText
-        Left = 136
-        Top = 19
-        Width = 225
-        Height = 17
+        Left = 170
+        Top = 24
+        Width = 281
+        Height = 21
         Size.Values = (
           44.979166666666700000
           359.833333333333000000
@@ -398,7 +398,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         DataField = 'Form_Reference_ID'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -411,15 +411,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object QRDBText5: TQRDBText
-        Left = 695
-        Top = 2
-        Width = 37
-        Height = 17
+        Left = 867
+        Top = 3
+        Width = 48
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1838.854166666667000000
-          5.291666666666667000
-          97.895833333333330000)
+          44.450000000000000000
+          1835.150000000000000000
+          6.350000000000000000
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -428,6 +428,12 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         DataSet = SalesInvSQL
         DataField = 'Order'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Lucida Sans'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -437,15 +443,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object QRDBText1: TQRDBText
-        Left = 540
-        Top = 2
-        Width = 108
-        Height = 17
+        Left = 668
+        Top = 3
+        Width = 142
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1428.750000000000000000
-          5.291666666666667000
-          285.750000000000000000)
+          44.450000000000000000
+          1413.933333333333000000
+          6.350000000000000000
+          300.566666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -456,7 +462,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         DataField = 'Sales_Invoice_no'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -469,15 +475,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object lblTotal: TQRLabel
-        Left = 528
-        Top = 2
-        Width = 46
-        Height = 17
+        Left = 651
+        Top = 3
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1397.000000000000000000
-          5.291666666666667000
-          121.708333333333300000)
+          44.450000000000000000
+          1377.950000000000000000
+          6.350000000000000000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -485,6 +491,12 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         AlignToBand = False
         Caption = 'lblTotal'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Lucida Sans'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -493,31 +505,31 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
       end
     end
     object QRBand1: TQRBand
-      Left = 19
-      Top = 38
-      Width = 756
-      Height = 331
+      Left = 24
+      Top = 47
+      Width = 945
+      Height = 414
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        875.770833333333300000
+        876.300000000000000000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object lblAccountCode: TQRLabel
-        Left = 24
-        Top = 295
-        Width = 102
-        Height = 18
+        Left = 30
+        Top = 369
+        Width = 135
+        Height = 23
         Size.Values = (
-          47.625000000000000000
+          48.683333333333330000
           63.500000000000000000
-          780.520833333333300000
-          269.875000000000000000)
+          781.050000000000000000
+          285.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -527,7 +539,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -538,15 +550,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object lblRundate: TQRLabel
-        Left = 473
-        Top = 295
-        Width = 68
-        Height = 18
+        Left = 584
+        Top = 369
+        Width = 92
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1251.479166666667000000
-          780.520833333333300000
-          179.916666666666700000)
+          48.683333333333330000
+          1236.133333333333000000
+          781.050000000000000000
+          194.733333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -556,7 +568,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -567,15 +579,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object lblInvoiceNo: TQRLabel
-        Left = 623
-        Top = 295
-        Width = 78
-        Height = 18
+        Left = 768
+        Top = 369
+        Width = 109
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1648.354166666667000000
-          780.520833333333300000
-          206.375000000000000000)
+          48.683333333333330000
+          1625.600000000000000000
+          781.050000000000000000
+          230.716666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -585,7 +597,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -596,15 +608,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object QRLabel2: TQRLabel
-        Left = 600
+        Left = 750
         Top = 0
-        Width = 39
-        Height = 18
+        Width = 50
+        Height = 23
         Size.Values = (
-          47.625000000000000000
+          48.683333333333330000
           1587.500000000000000000
           0.000000000000000000
-          103.187500000000000000)
+          105.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -614,7 +626,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -625,10 +637,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object CustomerAddMemo: TQRMemo
-        Left = 24
-        Top = 168
-        Width = 345
-        Height = 105
+        Left = 30
+        Top = 210
+        Width = 431
+        Height = 131
         Size.Values = (
           277.812500000000000000
           63.500000000000000000
@@ -643,7 +655,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         Lines.Strings = (
@@ -661,15 +673,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object lblPage: TQRLabel
-        Left = 648
+        Left = 810
         Top = 0
-        Width = 45
-        Height = 18
+        Width = 62
+        Height = 23
         Size.Values = (
-          47.625000000000000000
+          48.683333333333330000
           1714.500000000000000000
           0.000000000000000000
-          119.062500000000000000)
+          131.233333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -679,7 +691,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = []
         ParentFont = False
@@ -690,15 +702,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object lblDateRange: TQRLabel
-        Left = 176
-        Top = 297
-        Width = 85
-        Height = 17
+        Left = 220
+        Top = 371
+        Width = 112
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           465.666666666666700000
-          785.812500000000000000
-          224.895833333333300000)
+          785.283333333333300000
+          237.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -706,6 +718,12 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         AlignToBand = False
         Caption = 'lblDateRange'
         Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Lucida Sans'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -714,10 +732,10 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
       end
     end
     object GrpFootQRBand: TQRBand
-      Left = 19
-      Top = 414
-      Width = 756
-      Height = 147
+      Left = 24
+      Top = 517
+      Width = 945
+      Height = 184
       AfterPrint = GrpFootQRBandAfterPrint
       AlignToBottom = False
       BeforePrint = GrpFootQRBandBeforePrint
@@ -731,21 +749,21 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        388.937500000000000000
+        389.466666666666700000
         2000.250000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel16: TQRLabel
-        Left = 272
-        Top = 15
-        Width = 78
-        Height = 18
+        Left = 340
+        Top = 19
+        Width = 99
+        Height = 23
         Size.Values = (
-          47.625000000000000000
+          48.683333333333330000
           719.666666666666700000
-          39.687500000000000000
-          206.375000000000000000)
+          40.216666666666670000
+          209.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -755,7 +773,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -766,15 +784,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object qrlblGoods: TQRLabel
-        Left = 367
-        Top = 15
-        Width = 68
-        Height = 18
+        Left = 460
+        Top = 19
+        Width = 84
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          971.020833333333300000
-          39.687500000000000000
-          179.916666666666700000)
+          48.683333333333330000
+          973.666666666666700000
+          40.216666666666670000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -784,7 +802,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -795,15 +813,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object qrlblVatTot: TQRLabel
-        Left = 452
-        Top = 15
-        Width = 48
-        Height = 18
+        Left = 564
+        Top = 19
+        Width = 61
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1195.916666666667000000
-          39.687500000000000000
-          127.000000000000000000)
+          48.683333333333330000
+          1193.800000000000000000
+          40.216666666666670000
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -813,7 +831,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False
@@ -824,15 +842,15 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         FontSize = 10
       end
       object qrlblTotal: TQRLabel
-        Left = 537
-        Top = 15
-        Width = 36
-        Height = 18
+        Left = 672
+        Top = 19
+        Width = 44
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          1420.812500000000000000
-          39.687500000000000000
-          95.250000000000000000)
+          48.683333333333330000
+          1422.400000000000000000
+          40.216666666666670000
+          93.133333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -842,7 +860,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Lucida Sans'
         Font.Style = [fsBold]
         ParentFont = False

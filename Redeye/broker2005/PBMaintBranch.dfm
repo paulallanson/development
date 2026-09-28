@@ -130,7 +130,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     NumGlyphs = 2
     TabOrder = 3
     OnClick = OKBitBtnClick
-    ExplicitTop = 572
+    ExplicitTop = 586
   end
   object CancelBitBtn: TBitBtn
     Left = 372
@@ -208,7 +208,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = CancelBitBtnClick
-    ExplicitTop = 572
+    ExplicitTop = 586
   end
   object PrintBitBtn: TBitBtn
     Left = 8
@@ -219,7 +219,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     Caption = 'Print'
     TabOrder = 5
     OnClick = PrintBitBtnClick
-    ExplicitTop = 572
+    ExplicitTop = 586
   end
   object pgBranches: TPageControl
     Left = 8
@@ -239,7 +239,6 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 477
         DesignSize = (
           425
           473)
@@ -891,24 +890,26 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
   object CustNameEdit: TEdit
     Left = 92
     Top = 11
-    Width = 307
+    Width = 301
     Height = 25
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 40
     ReadOnly = True
     TabOrder = 0
     Text = 'CustNameEdit'
+    ExplicitWidth = 295
   end
   object NameEdit: TEdit
     Left = 92
     Top = 40
-    Width = 307
+    Width = 301
     Height = 25
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 40
     TabOrder = 1
     Text = 'NameEdit'
     OnChange = NameEditChange
+    ExplicitWidth = 295
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'

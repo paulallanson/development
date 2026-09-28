@@ -3,44 +3,44 @@ object PBMaintNonConformTypeFrm: TPBMaintNonConformTypeFrm
   Top = 152
   BorderStyle = bsDialog
   Caption = 'Maintain Non Conformance Error Types'
-  ClientHeight = 103
-  ClientWidth = 347
+  ClientHeight = 113
+  ClientWidth = 356
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    347
-    103)
-  TextHeight = 13
+    356
+    113)
+  TextHeight = 17
   object DelLabel: TLabel
-    Left = 37
-    Top = 79
-    Width = 109
-    Height = 13
+    Left = 35
+    Top = 84
+    Width = 132
+    Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Delete these details ?'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object Label1: TLabel
     Left = 7
-    Top = 20
-    Width = 59
-    Height = 13
+    Top = 19
+    Width = 66
+    Height = 17
     Caption = 'Description'
   end
   object OKBitBtn: TBitBtn
     Left = 173
-    Top = 71
+    Top = 81
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -114,10 +114,11 @@ object PBMaintNonConformTypeFrm: TPBMaintNonConformTypeFrm
     NumGlyphs = 2
     TabOrder = 0
     OnClick = OKBitBtnClick
+    ExplicitTop = 62
   end
   object CancelBitBtn: TBitBtn
     Left = 253
-    Top = 71
+    Top = 81
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -191,12 +192,13 @@ object PBMaintNonConformTypeFrm: TPBMaintNonConformTypeFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = CancelBitBtnClick
+    ExplicitTop = 62
   end
   object edtDescription: TEdit
-    Left = 78
+    Left = 81
     Top = 16
     Width = 252
-    Height = 21
+    Height = 25
     MaxLength = 40
     TabOrder = 2
     Text = 'edtDescription'
@@ -233,8 +235,8 @@ object PBMaintNonConformTypeFrm: TPBMaintNonConformTypeFrm
       '        Non_Conform_Type_Descr)'
       'Select Max(Non_Conform_Type)+1, :GUID'
       'From Non_Conform_Type')
-    Left = 264
-    Top = 24
+    Left = 234
+    Top = 14
     ParamData = <
       item
         Name = 'GUID'
@@ -271,8 +273,8 @@ object PBMaintNonConformTypeFrm: TPBMaintNonConformTypeFrm
       'Delete From Non_Conform_Type'
       'Where'
       '(Non_Conform_Type = :Non_Conform_Type)')
-    Left = 24
-    Top = 8
+    Left = 118
+    Top = 10
     ParamData = <
       item
         Name = 'Non_Conform_Type'
@@ -286,8 +288,8 @@ object PBMaintNonConformTypeFrm: TPBMaintNonConformTypeFrm
       'Where'
       '(Non_Conform_Type = :Non_Conform_Type) '
       '')
-    Left = 152
-    Top = 24
+    Left = 190
+    Top = 6
     ParamData = <
       item
         Name = 'Description'

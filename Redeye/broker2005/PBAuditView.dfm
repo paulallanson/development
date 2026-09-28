@@ -3,7 +3,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
   Top = 20
   Caption = 'View Audit Trail - Test'
   ClientHeight = 660
-  ClientWidth = 737
+  ClientWidth = 776
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,35 +13,31 @@ object PBAuditViewFrm: TPBAuditViewFrm
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    737
+    776
     660)
   TextHeight = 17
   object CountLabel: TLabel
-    Left = 632
+    Left = 617
     Top = 520
     Width = 78
     Height = 17
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'Please Wait....'
-    ExplicitLeft = 627
-    ExplicitTop = 407
   end
   object SequenceLabel: TLabel
-    Left = 632
+    Left = 617
     Top = 543
     Width = 78
     Height = 17
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'Please Wait....'
-    ExplicitLeft = 627
-    ExplicitTop = 430
   end
   object DetsDBGrid: TDBGrid
     Left = 15
     Top = 8
-    Width = 708
+    Width = 741
     Height = 497
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsDS
@@ -55,7 +51,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnTitleClick = DetsDBGridTitleClick
@@ -98,6 +94,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Caption = 'Include'
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 511
     object ProgMoveCheckBox: TCheckBox
       Left = 13
       Top = 24
@@ -145,6 +142,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Anchors = [akLeft, akBottom]
     Caption = 'Users'
     TabOrder = 2
+    ExplicitTop = 511
     object UsersRadioGroup: TRadioGroup
       Left = 8
       Top = 16
@@ -234,7 +232,7 @@ object PBAuditViewFrm: TPBAuditViewFrm
     end
   end
   object CloseBitBtn: TBitBtn
-    Left = 632
+    Left = 681
     Top = 580
     Width = 75
     Height = 25
@@ -242,11 +240,9 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 5
-    ExplicitLeft = 626
-    ExplicitTop = 571
   end
   object btnExcel: TBitBtn
-    Left = 632
+    Left = 681
     Top = 611
     Width = 75
     Height = 25
@@ -298,8 +294,6 @@ object PBAuditViewFrm: TPBAuditViewFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 6
     OnClick = btnExcelClick
-    ExplicitLeft = 626
-    ExplicitTop = 602
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'

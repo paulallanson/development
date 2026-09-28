@@ -793,12 +793,12 @@ var
 begin
   {Search the INI file for Default Label Printer}
   {This method used for backward compatibility with WIN95}
-  GetPrivateProfileString('Centrereed Broker', 'Enquiry Printer', '', TempArray,
+  GetPrivateProfileString('Enquiries', 'Enquiry Printer', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   DefaultPrinter := TempArray;
 
-  GetPrivateProfileString('Centrereed Broker', 'Enquiry Bin', '', TempArray,
+  GetPrivateProfileString('Enquiries', 'Enquiry Bin', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   sBin := TempArray;
@@ -817,8 +817,8 @@ begin
 
   with IniFile do
   try
-    WriteString('Centrereed Broker', 'Enquiry Printer',DefaultPrinter);
-    WriteString('Centrereed Broker', 'Enquiry Bin',inttostr(DefaultBin));
+    WriteString('Enquiries', 'Enquiry Printer',DefaultPrinter);
+    WriteString('Enquiries', 'Enquiry Bin',inttostr(DefaultBin));
   finally
     IniFile.Free;
   end;

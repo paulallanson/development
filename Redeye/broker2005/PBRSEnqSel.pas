@@ -1,15 +1,3 @@
-(*******************************************************************************
-
-Copyright (c) Centrereed Ltd 2003
-
-Comments
---------
-  Enquiry Print Selection form.
-
-VSS Info:
-$Header: /PBL D5/PBRSEnqSel.pas 1    janine $
-$History: PBRSEnqSel.pas $
-*******************************************************************************)
 unit PBRSEnqSel;
 
 interface

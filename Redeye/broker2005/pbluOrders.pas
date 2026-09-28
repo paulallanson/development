@@ -418,8 +418,8 @@ begin
   try
     with IniFile do
     begin
-      stempdate := ReadString('Centrereed Broker', 'Order Search Date', 'None');
-      sShowWIP := ReadString('Centrereed Broker', 'Show Purchase Order WIP', 'None');
+      stempdate := ReadString('Buy Print', 'Order Search Date', 'None');
+      sShowWIP := ReadString('Buy Print', 'Show Purchase Order WIP', 'None');
     end;
   finally
     IniFile.Free;
@@ -464,8 +464,8 @@ begin
   try
     with IniFile do
     begin
-      WriteString('Centrereed Broker', 'Order Search Date', pbdatestr(dtmdlAllOrders.OrderDate));
-      WriteString('Centrereed Broker', 'Show Purchase Order WIP', sShowWIP);
+      WriteString('Buy Print', 'Order Search Date', pbdatestr(dtmdlAllOrders.OrderDate));
+      WriteString('Buy Print', 'Show Purchase Order WIP', sShowWIP);
     end;
   finally
     IniFile.Free;

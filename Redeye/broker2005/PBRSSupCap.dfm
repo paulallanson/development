@@ -4,8 +4,8 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Supplier Capabilities'
-  ClientHeight = 223
-  ClientWidth = 416
+  ClientHeight = 214
+  ClientWidth = 410
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -17,7 +17,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   object SupplierLabel: TLabel
     Left = 176
     Top = 8
-    Width = 82
+    Width = 83
     Height = 13
     Caption = 'Supplier/Branch'
     Visible = False
@@ -25,7 +25,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   object PrdTypLabel: TLabel
     Left = 176
     Top = 88
-    Width = 66
+    Width = 65
     Height = 13
     Caption = 'Product Type'
     Visible = False

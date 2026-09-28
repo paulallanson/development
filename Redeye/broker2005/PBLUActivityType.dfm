@@ -3,8 +3,8 @@ object PBLUActivityTypeFrm: TPBLUActivityTypeFrm
   Top = 109
   BorderStyle = bsDialog
   Caption = 'Activity Types'
-  ClientHeight = 314
-  ClientWidth = 431
+  ClientHeight = 334
+  ClientWidth = 447
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

@@ -3,8 +3,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   Top = 126
   BorderStyle = bsDialog
   Caption = 'Print Box Labels'
-  ClientHeight = 430
-  ClientWidth = 791
+  ClientHeight = 421
+  ClientWidth = 785
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -21,8 +21,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   object LineDetsStringGrid: TStringGrid
     Left = 0
     Top = 121
-    Width = 791
-    Height = 249
+    Width = 785
+    Height = 240
     Align = alClient
     ColCount = 8
     DefaultRowHeight = 20
@@ -33,7 +33,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     OnKeyPress = BoxQuantityEditKeyPress
     OnSelectCell = LineDetsStringGridSelectCell
     ExplicitWidth = 751
-    ExplicitHeight = 240
     ColWidths = (
       38
       70
@@ -46,8 +45,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 411
-    Width = 791
+    Top = 402
+    Width = 785
     Height = 19
     Panels = <
       item
@@ -56,18 +55,16 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       item
         Width = 50
       end>
-    ExplicitTop = 402
     ExplicitWidth = 751
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 370
-    Width = 791
+    Top = 361
+    Width = 785
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 361
     ExplicitWidth = 751
     object CancelBitBtn: TBitBtn
       Left = 656
@@ -150,7 +147,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 791
+    Width = 785
     Height = 121
     Align = alTop
     ParentBackground = False

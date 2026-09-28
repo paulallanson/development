@@ -2,8 +2,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   Left = 81
   Top = 105
   Caption = 'Sales Orders'
-  ClientHeight = 296
-  ClientWidth = 902
+  ClientHeight = 262
+  ClientWidth = 896
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,19 +24,19 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 902
+    Width = 896
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 896
+        Width = 890
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 887
+      Width = 881
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -44,7 +44,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 875
+        Width = 869
         Height = 40
         ButtonHeight = 48
         ButtonWidth = 73
@@ -186,13 +186,12 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 236
-    Width = 902
+    Top = 202
+    Width = 896
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = -1
     object Label1: TLabel
       Left = 8
       Top = 14
@@ -209,7 +208,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 608
+      Left = 602
       Top = 1
       Width = 293
       Height = 39
@@ -247,7 +246,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Caption = '&Close'
         TabOrder = 1
         OnClick = btnCloseClick
-        ExplicitLeft = 183
       end
     end
     object btnSearch: TBitBtn
@@ -280,8 +278,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 277
-    Width = 902
+    Top = 243
+    Width = 896
     Height = 19
     Panels = <
       item
@@ -294,7 +292,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 902
+    Width = 896
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -334,8 +332,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 902
-    Height = 162
+    Width = 896
+    Height = 128
     Align = alClient
     DataSource = dtmdlOrders.dtsCallOffs
     DrawingStyle = gdsGradient
@@ -415,7 +413,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
-        Width = 64
         Visible = True
       end
       item
@@ -429,7 +426,6 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
         Expanded = False
         FieldName = 'Purch_Ord_No'
         Title.Caption = 'Purchase Order'
-        Width = 64
         Visible = True
       end
       item

@@ -96,7 +96,7 @@ begin
   Reg := TRegistry.Create;
   try
     Reg.RootKey := HKEY_CURRENT_USER;
-    if Reg.OpenKey('\Software\Centrereed Ltd\Centrereed Broker', False) then
+    if Reg.OpenKey('\Software\Quaystone Ltd\Redeye', False) then
     begin
       Result := Reg.ReadString('ECommImageDir');
     end;
@@ -113,7 +113,7 @@ begin
   Reg := TRegistry.Create;
   try
     Reg.RootKey := HKEY_CURRENT_USER;
-    if Reg.OpenKey('\Software\Centrereed Ltd\Centrereed Broker', True) then
+    if Reg.OpenKey('\Software\Quaystone Ltd\Redeye', True) then
     begin
       Reg.WriteString('ECommImageDir', path);
     end;

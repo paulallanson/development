@@ -4,7 +4,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   BorderStyle = bsDialog
   Caption = 'Pre-Production Schedule Reports'
   ClientHeight = 329
-  ClientWidth = 704
+  ClientWidth = 721
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,15 +15,15 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   OnCreate = FormCreate
   TextHeight = 17
   object lblFrom: TLabel
-    Left = 463
+    Left = 468
     Top = 108
     Width = 124
     Height = 17
     Caption = 'Live Proof Date from:'
   end
   object DateFromButton: TSpeedButton
-    Left = 576
-    Top = 122
+    Left = 581
+    Top = 127
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -43,8 +43,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = DateFromButtonClick
   end
   object DateToButton: TSpeedButton
-    Left = 576
-    Top = 170
+    Left = 581
+    Top = 175
     Width = 25
     Height = 25
     Glyph.Data = {
@@ -64,7 +64,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = DateToButtonClick
   end
   object lblTo: TLabel
-    Left = 463
+    Left = 468
     Top = 156
     Width = 108
     Height = 17
@@ -160,7 +160,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   object rdgrpCustomer: TRadioGroup
     Left = 8
     Top = 87
-    Width = 145
+    Width = 163
     Height = 66
     Caption = 'By Customer'
     ItemIndex = 0
@@ -172,7 +172,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = rdgrpCustomerClick
   end
   object CustomerPanel: TPanel
-    Left = 169
+    Left = 178
     Top = 95
     Width = 281
     Height = 52
@@ -318,8 +318,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     TabOrder = 7
   end
   object DateFromEdit: TEdit
-    Left = 463
-    Top = 124
+    Left = 468
+    Top = 127
     Width = 98
     Height = 25
     MaxLength = 10
@@ -327,8 +327,8 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnExit = DateFromEditExit
   end
   object DateToEdit: TEdit
-    Left = 463
-    Top = 172
+    Left = 468
+    Top = 175
     Width = 98
     Height = 25
     MaxLength = 10
@@ -338,7 +338,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
   object rdgrpSortBy: TRadioGroup
     Left = 8
     Top = 160
-    Width = 193
+    Width = 163
     Height = 113
     Caption = 'Sort by'
     ItemIndex = 0
@@ -351,10 +351,10 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     TabOrder = 10
   end
   object rdgrpReportType: TRadioGroup
-    Left = 464
+    Left = 469
     Top = 8
     Width = 232
-    Height = 81
+    Height = 85
     Caption = 'Report Type'
     ItemIndex = 0
     Items.Strings = (
@@ -366,7 +366,7 @@ object PBRSDataServsWIPFrm: TPBRSDataServsWIPFrm
     OnClick = rdgrpReportTypeClick
   end
   object chkbxPageBreak: TCheckBox
-    Left = 216
+    Left = 177
     Top = 256
     Width = 182
     Height = 17

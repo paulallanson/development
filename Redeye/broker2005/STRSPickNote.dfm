@@ -3,8 +3,8 @@ object STRSPickNotefrm: TSTRSPickNotefrm
   Top = 238
   BorderStyle = bsDialog
   Caption = 'Picking Note Print'
-  ClientHeight = 186
-  ClientWidth = 364
+  ClientHeight = 177
+  ClientWidth = 358
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText

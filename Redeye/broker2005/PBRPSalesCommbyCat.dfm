@@ -10,14 +10,14 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   OnCreate = FormCreate
   TextHeight = 13
   object qckrpSalesByInv: TQuickRep
     Left = 8
     Top = -56
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qckrpSalesByInvBeforePrint
     DataSet = qrySalesComm
@@ -75,31 +75,31 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
     PreviewLeft = 0
     PreviewTop = 0
     object qrbndPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 91
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 114
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        240.770833333333300000
-        2770.187500000000000000)
+        241.300000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
-        Left = 398
-        Top = 8
-        Width = 250
-        Height = 23
+        Left = 505
+        Top = 10
+        Width = 298
+        Height = 29
         Size.Values = (
-          60.854166666666670000
-          1053.041666666667000000
+          61.383333333333330000
+          1068.916666666667000000
           21.166666666666670000
-          661.458333333333300000)
+          630.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -109,7 +109,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -120,15 +120,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 14
       end
       object QRLabel2: TQRLabel
-        Left = 8
-        Top = 56
-        Width = 70
-        Height = 17
+        Left = 10
+        Top = 70
+        Width = 87
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           148.166666666666700000
-          185.208333333333300000)
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -136,6 +136,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Customer &'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -143,15 +149,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 272
-        Top = 56
-        Width = 40
-        Height = 17
+        Left = 340
+        Top = 70
+        Width = 53
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           719.666666666666700000
           148.166666666666700000
-          105.833333333333300000)
+          112.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -159,6 +165,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Invoice'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -166,15 +178,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 8
-        Top = 72
-        Width = 104
-        Height = 17
+        Left = 10
+        Top = 90
+        Width = 135
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           190.500000000000000000
-          275.166666666666700000)
+          285.750000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -182,6 +194,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Description of Job'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -189,15 +207,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel8: TQRLabel
-        Left = 408
-        Top = 56
-        Width = 71
-        Height = 17
+        Left = 510
+        Top = 70
+        Width = 87
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1079.500000000000000000
           148.166666666666700000
-          187.854166666666700000)
+          184.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -205,6 +223,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Goods Total'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -212,15 +236,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel9: TQRLabel
-        Left = 656
-        Top = 56
-        Width = 20
-        Height = 17
+        Left = 820
+        Top = 70
+        Width = 27
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1735.666666666667000000
           148.166666666666700000
-          52.916666666666670000)
+          57.150000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -228,6 +252,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Inv.'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -235,15 +265,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel10: TQRLabel
-        Left = 502
-        Top = 56
-        Width = 62
-        Height = 17
+        Left = 627
+        Top = 70
+        Width = 78
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1328.208333333333000000
+          44.450000000000000000
+          1327.150000000000000000
           148.166666666666700000
-          164.041666666666700000)
+          165.100000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -251,6 +281,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Cost Price'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -258,15 +294,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object qrlblDateRange: TQRLabel
-        Left = 444
-        Top = 32
-        Width = 158
-        Height = 17
+        Left = 555
+        Top = 40
+        Width = 199
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1174.750000000000000000
           84.666666666666670000
-          418.041666666666700000)
+          421.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -274,6 +310,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = True
         Caption = 'For Payments Dated from: '
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -281,15 +323,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel13: TQRLabel
-        Left = 925
-        Top = 8
-        Width = 59
-        Height = 17
+        Left = 1156
+        Top = 10
+        Width = 74
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2447.395833333333000000
+          44.450000000000000000
+          2446.866666666667000000
           21.166666666666670000
-          156.104166666666700000)
+          156.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -297,6 +339,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Page No.:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -304,15 +352,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRSysData1: TQRSysData
-        Left = 989
-        Top = 8
-        Width = 46
-        Height = 17
+        Left = 1236
+        Top = 10
+        Width = 60
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2616.729166666667000000
+          44.450000000000000000
+          2616.200000000000000000
           21.166666666666670000
-          121.708333333333300000)
+          127.000000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -320,6 +368,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Color = clWhite
         Data = qrsPageNumber
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Text = ''
         Transparent = False
         ExportAs = exptText
@@ -327,12 +381,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel14: TQRLabel
-        Left = 656
-        Top = 72
-        Width = 28
-        Height = 17
+        Left = 820
+        Top = 90
+        Width = 35
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1735.666666666667000000
           190.500000000000000000
           74.083333333333330000)
@@ -343,6 +397,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Date'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -350,15 +410,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel15: TQRLabel
-        Left = 272
-        Top = 72
-        Width = 46
-        Height = 17
+        Left = 340
+        Top = 90
+        Width = 58
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           719.666666666666700000
           190.500000000000000000
-          121.708333333333300000)
+          122.766666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -366,6 +426,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Number'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -373,15 +439,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel16: TQRLabel
-        Left = 340
-        Top = 56
-        Width = 49
-        Height = 17
+        Left = 425
+        Top = 70
+        Width = 61
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           899.583333333333300000
           148.166666666666700000
-          129.645833333333300000)
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -389,6 +455,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Account'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -396,15 +468,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel17: TQRLabel
-        Left = 340
-        Top = 72
-        Width = 31
-        Height = 17
+        Left = 425
+        Top = 90
+        Width = 40
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           899.583333333333300000
           190.500000000000000000
-          82.020833333333330000)
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -412,6 +484,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Code'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -419,15 +497,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object MarginQRLabel: TQRLabel
-        Left = 597
-        Top = 56
-        Width = 31
-        Height = 17
+        Left = 746
+        Top = 70
+        Width = 40
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1579.562500000000000000
+          44.450000000000000000
+          1579.033333333333000000
           148.166666666666700000
-          82.020833333333330000)
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -435,6 +513,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Profit'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -442,10 +526,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object lblPayment: TQRLabel
-        Left = 736
-        Top = 56
-        Width = 58
-        Height = 33
+        Left = 920
+        Top = 70
+        Width = 72
+        Height = 41
         Size.Values = (
           87.312500000000000000
           1947.333333333330000000
@@ -459,6 +543,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AutoSize = False
         Caption = 'Payment Date'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -466,15 +556,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 827
-        Top = 72
-        Width = 73
-        Height = 17
+        Left = 1034
+        Top = 90
+        Width = 90
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2188.104166666667000000
+          44.450000000000000000
+          2188.633333333333000000
           190.500000000000000000
-          193.145833333333300000)
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -482,6 +572,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Commission'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -489,10 +585,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel1: TQRLabel
-        Left = 658
-        Top = 56
-        Width = 137
-        Height = 33
+        Left = 822
+        Top = 70
+        Width = 171
+        Height = 41
         Size.Values = (
           87.312500000000000000
           1740.958333333330000000
@@ -506,6 +602,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AutoSize = False
         Caption = 'Invoice   Credit            count      count'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -513,10 +615,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel7: TQRLabel
-        Left = 931
-        Top = 52
-        Width = 110
-        Height = 17
+        Left = 1164
+        Top = 65
+        Width = 138
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2463.270833333333000000
@@ -532,7 +634,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -543,10 +645,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel11: TQRLabel
-        Left = 939
-        Top = 70
-        Width = 30
-        Height = 17
+        Left = 1174
+        Top = 87
+        Width = 38
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2484.437500000000000000
@@ -562,7 +664,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -573,10 +675,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 10
       end
       object QRLabel12: TQRLabel
-        Left = 995
-        Top = 70
-        Width = 30
-        Height = 17
+        Left = 1244
+        Top = 87
+        Width = 38
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2632.604166666667000000
@@ -592,7 +694,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -604,9 +706,9 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object RepGrpFoot: TQRBand
-      Left = 38
-      Top = 273
-      Width = 1047
+      Left = 47
+      Top = 325
+      Width = 1309
       Height = 0
       AfterPrint = RepGrpFootAfterPrint
       AlignToBottom = False
@@ -616,15 +718,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         0.000000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
     end
     object RepQRGroup: TQRGroup
-      Left = 38
-      Top = 129
-      Width = 1047
+      Left = 47
+      Top = 161
+      Width = 1309
       Height = 32
       AlignToBottom = False
       BeforePrint = RepQRGroupBeforePrint
@@ -632,18 +734,18 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        84.666666666666670000
-        2770.187500000000000000)
+        67.733333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       FooterBand = RepGrpFoot
       Master = qckrpSalesByInv
       ReprintOnNewPage = False
       object GrpByQRDBText: TQRDBText
-        Left = 8
-        Top = 8
-        Width = 153
-        Height = 17
+        Left = 10
+        Top = 10
+        Width = 191
+        Height = 21
         Size.Values = (
           44.979166666666700000
           21.166666666666700000
@@ -658,6 +760,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AutoStretch = True
         Color = clWhite
         DataSet = qrySalesComm
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         WordWrap = False
         ExportAs = exptText
@@ -669,10 +777,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object QRBand2: TQRBand
-      Left = 38
-      Top = 313
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 375
+      Width = 1309
+      Height = 50
       AfterPrint = QRBand2AfterPrint
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
@@ -681,15 +789,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbSummary
       object QRShape2: TQRShape
-        Left = 336
-        Top = 2
-        Width = 297
-        Height = 9
+        Left = 420
+        Top = 3
+        Width = 371
+        Height = 11
         Size.Values = (
           23.812500000000000000
           889.000000000000000000
@@ -702,15 +810,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         VertAdjust = 0
       end
       object RepTotQRLabel: TQRLabel
-        Left = 344
-        Top = 16
-        Width = 35
-        Height = 20
+        Left = 430
+        Top = 20
+        Width = 39
+        Height = 25
         Size.Values = (
           52.916666666666670000
           910.166666666666700000
           42.333333333333330000
-          92.604166666666670000)
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -720,7 +828,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -731,15 +839,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object RepTotGoodsQRLbl: TQRLabel
-        Left = 397
-        Top = 16
-        Width = 81
-        Height = 20
+        Left = 504
+        Top = 20
+        Width = 93
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1050.395833333333000000
+          1066.800000000000000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -749,7 +857,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -760,15 +868,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object RepTotCostQRLbl: TQRLabel
-        Left = 485
-        Top = 16
-        Width = 81
-        Height = 20
+        Left = 614
+        Top = 20
+        Width = 93
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1283.229166666667000000
+          1299.633333333333000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -778,7 +886,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -789,10 +897,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object RepMargQRLbl: TQRLabel
-        Left = 565
-        Top = 16
-        Width = 65
-        Height = 17
+        Left = 706
+        Top = 20
+        Width = 81
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1494.895833333330000000
@@ -808,7 +916,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -819,15 +927,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object RepTotCommLbl: TQRLabel
-        Left = 809
-        Top = 16
-        Width = 94
-        Height = 17
+        Left = 1021
+        Top = 20
+        Width = 107
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2140.479166666667000000
+          44.450000000000000000
+          2161.116666666667000000
           42.333333333333330000
-          248.708333333333300000)
+          226.483333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -837,7 +945,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -848,10 +956,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRShape4: TQRShape
-        Left = 803
-        Top = 2
-        Width = 105
-        Height = 9
+        Left = 1004
+        Top = 3
+        Width = 131
+        Height = 11
         Size.Values = (
           23.812500000000000000
           2124.604166666670000000
@@ -864,10 +972,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         VertAdjust = 0
       end
       object QRLblTotInv: TQRLabel
-        Left = 656
-        Top = 16
-        Width = 25
-        Height = 17
+        Left = 820
+        Top = 20
+        Width = 31
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1735.666666666670000000
@@ -883,7 +991,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -894,10 +1002,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblTotCred: TQRLabel
-        Left = 704
-        Top = 16
-        Width = 25
-        Height = 17
+        Left = 880
+        Top = 20
+        Width = 31
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1862.666666666670000000
@@ -913,7 +1021,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -924,10 +1032,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRShape7: TQRShape
-        Left = 631
-        Top = 2
-        Width = 185
-        Height = 9
+        Left = 789
+        Top = 3
+        Width = 231
+        Height = 11
         Size.Values = (
           23.812500000000000000
           1669.520833333330000000
@@ -941,9 +1049,9 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object QRDtlBnd: TQRBand
-      Left = 38
-      Top = 193
-      Width = 1047
+      Left = 47
+      Top = 225
+      Width = 1309
       Height = 0
       AlignToBottom = False
       TransparentBand = False
@@ -951,15 +1059,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         0.000000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbDetail
     end
     object ChildBand1: TQRChildBand
-      Left = 38
-      Top = 193
-      Width = 1047
+      Left = 47
+      Top = 225
+      Width = 1309
       Height = 0
       AlignToBottom = False
       BeforePrint = ChildBand1BeforePrint
@@ -968,16 +1076,16 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         0.000000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = QRDtlBnd
       PrintOrder = cboAfterParent
     end
     object QRGroupProdCat: TQRGroup
-      Left = 38
-      Top = 161
-      Width = 1047
+      Left = 47
+      Top = 193
+      Width = 1309
       Height = 32
       AlignToBottom = False
       BeforePrint = QRGroupProdCatBeforePrint
@@ -985,8 +1093,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        2770.187500000000000000)
+        67.733333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qrySalesComm.Category'
@@ -994,15 +1102,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       Master = qckrpSalesByInv
       ReprintOnNewPage = False
       object lblCommission: TQRLabel
-        Left = 8
-        Top = 8
-        Width = 103
-        Height = 17
+        Left = 10
+        Top = 10
+        Width = 128
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           21.166666666666670000
-          272.520833333333300000)
+          270.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1010,6 +1118,12 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         AlignToBand = False
         Caption = 'Commission rate:'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -1018,9 +1132,9 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object QRBndProdCatGrpFoot: TQRBand
-      Left = 38
-      Top = 233
-      Width = 1047
+      Left = 47
+      Top = 275
+      Width = 1309
       Height = 0
       AfterPrint = QRBndProdCatGrpFootAfterPrint
       AlignToBottom = False
@@ -1030,15 +1144,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         0.000000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
     end
     object QRGrpInv: TQRGroup
-      Left = 38
-      Top = 193
-      Width = 1047
+      Left = 47
+      Top = 225
+      Width = 1309
       Height = 0
       AlignToBottom = False
       TransparentBand = False
@@ -1046,7 +1160,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         0.000000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qrySalesComm.Sales_Invoice_No'
@@ -1055,10 +1169,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ReprintOnNewPage = False
     end
     object QRBndInvGrpFoot: TQRBand
-      Left = 38
-      Top = 193
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 225
+      Width = 1309
+      Height = 50
       AfterPrint = QRBndInvGrpFootAfterPrint
       AlignToBottom = False
       BeforePrint = QRBndInvGrpFootBeforePrint
@@ -1067,20 +1181,20 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrdbtxtCustomer: TQRDBText
-        Left = 32
-        Top = 3
-        Width = 35
-        Height = 17
+        Left = 40
+        Top = 4
+        Width = 40
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           84.666666666666670000
-          7.937500000000000000
-          92.604166666666670000)
+          8.466666666666667000
+          84.666666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1091,7 +1205,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         DataField = 'Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1104,15 +1218,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 9
       end
       object qrdbtxtCustsDesc: TQRDBText
-        Left = 32
-        Top = 20
-        Width = 95
-        Height = 17
+        Left = 40
+        Top = 25
+        Width = 112
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           84.666666666666670000
           52.916666666666670000
-          251.354166666666700000)
+          237.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1123,7 +1237,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         DataField = 'Invoice_Description'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1136,15 +1250,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 258
-        Top = 3
-        Width = 52
-        Height = 17
+        Left = 329
+        Top = 4
+        Width = 59
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          682.625000000000000000
-          7.937500000000000000
-          137.583333333333300000)
+          44.450000000000000000
+          696.383333333333300000
+          8.466666666666667000
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1155,7 +1269,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         DataField = 'InvoiceRef'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1168,15 +1282,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object qrdbtxtAccCode: TQRDBText
-        Left = 348
-        Top = 3
-        Width = 73
-        Height = 17
+        Left = 435
+        Top = 4
+        Width = 86
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           920.750000000000000000
-          7.937500000000000000
-          193.145833333333300000)
+          8.466666666666667000
+          182.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1187,7 +1301,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         DataField = 'Account_Code'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1200,15 +1314,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotGoodsQRLbl: TQRLabel
-        Left = 391
-        Top = 3
-        Width = 87
-        Height = 17
+        Left = 498
+        Top = 4
+        Width = 100
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1034.520833333333000000
-          7.937500000000000000
-          230.187500000000000000)
+          44.450000000000000000
+          1054.100000000000000000
+          8.466666666666667000
+          211.666666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1218,7 +1332,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1229,10 +1343,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotCstQRLbl: TQRLabel
-        Left = 508
-        Top = 3
-        Width = 58
-        Height = 17
+        Left = 635
+        Top = 4
+        Width = 72
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1344.083333333330000000
@@ -1248,7 +1362,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1260,10 +1374,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object MargQRLbl: TQRLabel
-        Left = 565
-        Top = 3
-        Width = 65
-        Height = 17
+        Left = 706
+        Top = 4
+        Width = 81
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1494.895833333330000000
@@ -1279,7 +1393,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1290,15 +1404,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object qrdbtxtInvDate: TQRDBText
-        Left = 656
-        Top = 3
-        Width = 63
-        Height = 17
+        Left = 820
+        Top = 4
+        Width = 74
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1735.666666666667000000
-          7.937500000000000000
-          166.687500000000000000)
+          8.466666666666667000
+          156.633333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1309,7 +1423,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         DataField = 'Invoice_Date'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1322,15 +1436,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object lblPaidDate: TQRDBText
-        Left = 736
-        Top = 3
-        Width = 49
-        Height = 17
+        Left = 920
+        Top = 4
+        Width = 61
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1947.333333333333000000
-          7.937500000000000000
-          129.645833333333300000)
+          8.466666666666667000
+          129.116666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1341,7 +1455,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         DataField = 'Paid_Date'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1354,15 +1468,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object Commissionlbl: TQRLabel
-        Left = 819
-        Top = 3
-        Width = 85
-        Height = 17
+        Left = 1036
+        Top = 4
+        Width = 94
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2166.937500000000000000
-          7.937500000000000000
-          224.895833333333300000)
+          44.450000000000000000
+          2192.866666666667000000
+          8.466666666666667000
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1372,7 +1486,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1383,10 +1497,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object qrlblCommSplit: TQRLabel
-        Left = 912
-        Top = 3
-        Width = 65
-        Height = 17
+        Left = 1140
+        Top = 4
+        Width = 81
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2413.000000000000000000
@@ -1402,7 +1516,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1414,31 +1528,31 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object ChildBand2: TQRChildBand
-      Left = 38
-      Top = 233
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 275
+      Width = 1309
+      Height = 50
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = QRBndProdCatGrpFoot
       PrintOrder = cboAfterParent
       object QRLabel4: TQRLabel
-        Left = 344
-        Top = 16
-        Width = 35
-        Height = 20
+        Left = 430
+        Top = 20
+        Width = 39
+        Height = 25
         Size.Values = (
           52.916666666666670000
           910.166666666666700000
           42.333333333333330000
-          92.604166666666670000)
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1448,7 +1562,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1459,15 +1573,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblTotPrdGoods: TQRLabel
-        Left = 397
-        Top = 16
-        Width = 81
-        Height = 20
+        Left = 504
+        Top = 20
+        Width = 93
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1050.395833333333000000
+          1066.800000000000000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1477,7 +1591,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1488,15 +1602,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblTotPrdCst: TQRLabel
-        Left = 485
-        Top = 16
-        Width = 81
-        Height = 20
+        Left = 614
+        Top = 20
+        Width = 93
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1283.229166666667000000
+          1299.633333333333000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1506,7 +1620,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1517,10 +1631,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblTotPrdMrg: TQRLabel
-        Left = 565
-        Top = 16
-        Width = 65
-        Height = 17
+        Left = 706
+        Top = 20
+        Width = 81
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1494.895833333330000000
@@ -1536,7 +1650,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1547,10 +1661,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRShape5: TQRShape
-        Left = 336
+        Left = 420
         Top = 0
-        Width = 297
-        Height = 9
+        Width = 371
+        Height = 11
         Size.Values = (
           23.812500000000000000
           889.000000000000000000
@@ -1564,26 +1678,26 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object ChildBand3: TQRChildBand
-      Left = 38
-      Top = 273
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 325
+      Width = 1309
+      Height = 50
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = RepGrpFoot
       PrintOrder = cboAfterParent
       object QRShape1: TQRShape
-        Left = 336
+        Left = 420
         Top = 0
-        Width = 297
-        Height = 9
+        Width = 371
+        Height = 11
         Size.Values = (
           23.812500000000000000
           889.000000000000000000
@@ -1596,15 +1710,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         VertAdjust = 0
       end
       object QRLabel18: TQRLabel
-        Left = 344
-        Top = 16
-        Width = 35
-        Height = 20
+        Left = 430
+        Top = 20
+        Width = 39
+        Height = 25
         Size.Values = (
           52.916666666666670000
           910.166666666666700000
           42.333333333333330000
-          92.604166666666670000)
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1614,7 +1728,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1625,15 +1739,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotalGoodsLbl: TQRLabel
-        Left = 397
-        Top = 16
-        Width = 81
-        Height = 20
+        Left = 504
+        Top = 20
+        Width = 93
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1050.395833333333000000
+          1066.800000000000000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1643,7 +1757,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1654,15 +1768,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotalCostLbl: TQRLabel
-        Left = 485
-        Top = 16
-        Width = 81
-        Height = 20
+        Left = 614
+        Top = 20
+        Width = 93
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1283.229166666667000000
+          1299.633333333333000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1672,7 +1786,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1683,10 +1797,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object GrpMargQRLbl: TQRLabel
-        Left = 565
-        Top = 16
-        Width = 65
-        Height = 17
+        Left = 706
+        Top = 20
+        Width = 81
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1494.895833333330000000
@@ -1702,7 +1816,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1713,15 +1827,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotalCommLbl: TQRLabel
-        Left = 820
-        Top = 16
-        Width = 82
-        Height = 17
+        Left = 1033
+        Top = 20
+        Width = 94
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2169.583333333333000000
+          44.450000000000000000
+          2186.516666666667000000
           42.333333333333330000
-          216.958333333333300000)
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1731,7 +1845,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1742,10 +1856,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRShape3: TQRShape
-        Left = 803
+        Left = 1004
         Top = 0
-        Width = 106
-        Height = 9
+        Width = 132
+        Height = 11
         Size.Values = (
           23.812500000000000000
           2124.604166666670000000
@@ -1759,10 +1873,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object QRChldBndCatSumm: TQRChildBand
-      Left = 38
-      Top = 353
-      Width = 1047
-      Height = 25
+      Left = 47
+      Top = 425
+      Width = 1309
+      Height = 31
       AfterPrint = QRChldBndCatSummAfterPrint
       AlignToBottom = False
       BeforePrint = QRChldBndCatSummBeforePrint
@@ -1770,17 +1884,17 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        66.145833333333330000
-        2770.187500000000000000)
+        65.616666666666670000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = QRBndProdCatGrpFoot
       PrintOrder = cboAfterParent
       object QRLblCat: TQRLabel
-        Left = 8
-        Top = 5
-        Width = 271
-        Height = 17
+        Left = 10
+        Top = 6
+        Width = 339
+        Height = 21
         Size.Values = (
           44.979166666666700000
           21.166666666666700000
@@ -1796,7 +1910,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1807,15 +1921,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblTotPrdGoodsSumm: TQRLabel
-        Left = 397
-        Top = 5
-        Width = 81
-        Height = 17
+        Left = 504
+        Top = 6
+        Width = 93
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1050.395833333333000000
-          13.229166666666670000
-          214.312500000000000000)
+          44.450000000000000000
+          1066.800000000000000000
+          12.700000000000000000
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1825,7 +1939,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1836,15 +1950,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblTotPrdCstSumm: TQRLabel
-        Left = 485
-        Top = 5
-        Width = 81
-        Height = 17
+        Left = 614
+        Top = 6
+        Width = 93
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1283.229166666667000000
-          13.229166666666670000
-          214.312500000000000000)
+          44.450000000000000000
+          1299.633333333333000000
+          12.700000000000000000
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1854,7 +1968,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1865,10 +1979,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblTotPrdMrgSumm: TQRLabel
-        Left = 565
-        Top = 5
-        Width = 65
-        Height = 17
+        Left = 706
+        Top = 6
+        Width = 81
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1494.895833333330000000
@@ -1884,7 +1998,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1895,10 +2009,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRlblNoOfInv: TQRLabel
-        Left = 656
-        Top = 5
-        Width = 25
-        Height = 17
+        Left = 820
+        Top = 6
+        Width = 31
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1735.666666666670000000
@@ -1914,7 +2028,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1925,10 +2039,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblNoOfCreds: TQRLabel
-        Left = 704
-        Top = 5
-        Width = 25
-        Height = 17
+        Left = 880
+        Top = 6
+        Width = 31
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1862.666666666670000000
@@ -1944,7 +2058,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1955,15 +2069,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotalCommLblProdSumm: TQRLabel
-        Left = 820
-        Top = 5
-        Width = 82
-        Height = 17
+        Left = 1033
+        Top = 6
+        Width = 94
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2169.583333333333000000
-          13.229166666666670000
-          216.958333333333300000)
+          44.450000000000000000
+          2186.516666666667000000
+          12.700000000000000000
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1973,7 +2087,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1984,10 +2098,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLabelComm: TQRLabel
-        Left = 897
-        Top = 5
-        Width = 73
-        Height = 17
+        Left = 1121
+        Top = 6
+        Width = 91
+        Height = 21
         Size.Values = (
           44.979166666666670000
           2373.312500000000000000
@@ -2003,7 +2117,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2014,10 +2128,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLabelCommType: TQRLabel
-        Left = 984
-        Top = 5
-        Width = 57
-        Height = 18
+        Left = 1230
+        Top = 6
+        Width = 71
+        Height = 23
         Size.Values = (
           47.625000000000000000
           2603.500000000000000000
@@ -2033,7 +2147,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2045,10 +2159,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
     object QRChldBndRepSumm: TQRChildBand
-      Left = 38
-      Top = 378
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 456
+      Width = 1309
+      Height = 50
       AfterPrint = QRChldBndRepSummAfterPrint
       AlignToBottom = False
       BeforePrint = QRChldBndRepSummBeforePrint
@@ -2057,21 +2171,21 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = RepGrpFoot
       PrintOrder = cboAfterParent
       object TotalGoodsLblRepSumm: TQRLabel
-        Left = 397
-        Top = 16
-        Width = 81
-        Height = 17
+        Left = 504
+        Top = 20
+        Width = 93
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1050.395833333333000000
+          44.450000000000000000
+          1066.800000000000000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2081,7 +2195,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2092,15 +2206,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotalCostLblRepSumm: TQRLabel
-        Left = 485
-        Top = 16
-        Width = 81
-        Height = 17
+        Left = 614
+        Top = 20
+        Width = 93
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1283.229166666667000000
+          44.450000000000000000
+          1299.633333333333000000
           42.333333333333330000
-          214.312500000000000000)
+          196.850000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2110,7 +2224,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2121,10 +2235,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object GrpMargQRLblRepSumm: TQRLabel
-        Left = 565
-        Top = 16
-        Width = 65
-        Height = 17
+        Left = 706
+        Top = 20
+        Width = 81
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1494.895833333330000000
@@ -2140,7 +2254,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2151,10 +2265,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRLblInvRep: TQRLabel
-        Left = 656
-        Top = 16
-        Width = 25
-        Height = 17
+        Left = 820
+        Top = 20
+        Width = 31
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1735.666666666670000000
@@ -2170,7 +2284,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2181,10 +2295,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRlblCredRep: TQRLabel
-        Left = 704
-        Top = 16
-        Width = 25
-        Height = 17
+        Left = 880
+        Top = 20
+        Width = 31
+        Height = 21
         Size.Values = (
           44.979166666666700000
           1862.666666666670000000
@@ -2200,7 +2314,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2211,15 +2325,15 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object TotalCommLblRepSumm: TQRLabel
-        Left = 820
-        Top = 16
-        Width = 82
-        Height = 17
+        Left = 1033
+        Top = 20
+        Width = 94
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2169.583333333333000000
+          44.450000000000000000
+          2186.516666666667000000
           42.333333333333330000
-          216.958333333333300000)
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2229,7 +2343,7 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2240,10 +2354,10 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         FontSize = 8
       end
       object QRShape6: TQRShape
-        Left = 400
-        Top = 2
-        Width = 503
-        Height = 9
+        Left = 500
+        Top = 3
+        Width = 629
+        Height = 11
         Size.Values = (
           23.812500000000000000
           1058.333333333330000000

@@ -2,8 +2,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   Left = 277
   Top = 110
   Caption = 'Quotes'
-  ClientHeight = 414
-  ClientWidth = 836
+  ClientHeight = 405
+  ClientWidth = 830
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 836
+    Width = 830
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -31,6 +31,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     Color = 16642529
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 836
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -63,15 +64,16 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 836
+    Width = 830
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 830
+        Width = 834
       end>
+    ExplicitWidth = 836
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -166,8 +168,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 836
-    Height = 279
+    Width = 830
+    Height = 270
     Align = alClient
     DataSource = dtmdlQuotes.dsQHeaderGrid
     DrawingStyle = gdsGradient
@@ -314,12 +316,14 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 354
-    Width = 836
+    Top = 345
+    Width = 830
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 354
+    ExplicitWidth = 836
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -386,8 +390,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 395
-    Width = 836
+    Top = 386
+    Width = 830
     Height = 19
     Panels = <
       item
@@ -399,6 +403,8 @@ object frmPBLUQuotes: TfrmPBLUQuotes
       item
         Width = 50
       end>
+    ExplicitTop = 395
+    ExplicitWidth = 836
   end
   object imglstButtons: TImageList
     Left = 240

@@ -10,13 +10,13 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  
+  Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
     Top = 24
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -73,10 +73,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     PreviewLeft = 0
     PreviewTop = 0
     object qrbndPageHeader: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 60
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 75
       AlignToBottom = False
       BeforePrint = qrbndPageHeaderBeforePrint
       TransparentBand = False
@@ -90,20 +90,20 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ParentFont = False
       Size.Values = (
         158.750000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
-        Left = 402
-        Top = 8
-        Width = 242
-        Height = 23
+        Left = 509
+        Top = 10
+        Width = 290
+        Height = 29
         Size.Values = (
-          60.854166666666670000
-          1063.625000000000000000
+          61.383333333333330000
+          1077.383333333333000000
           21.166666666666670000
-          640.291666666666700000)
+          613.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -113,7 +113,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -124,15 +124,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 14
       end
       object qrlblDateRange: TQRLabel
-        Left = 453
-        Top = 32
-        Width = 141
-        Height = 17
+        Left = 568
+        Top = 40
+        Width = 172
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1198.562500000000000000
+          44.450000000000000000
+          1202.266666666667000000
           84.666666666666670000
-          373.062500000000000000)
+          364.066666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -142,7 +142,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -153,15 +153,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRSysData1: TQRSysData
-        Left = 973
-        Top = 29
-        Width = 69
-        Height = 15
+        Left = 1218
+        Top = 36
+        Width = 84
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2574.395833333333000000
-          76.729166666666670000
-          182.562500000000000000)
+          40.216666666666670000
+          2578.100000000000000000
+          76.200000000000000000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -171,7 +171,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -182,15 +182,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRSysData2: TQRSysData
-        Left = 986
-        Top = 8
-        Width = 56
-        Height = 17
+        Left = 1235
+        Top = 10
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2608.791666666667000000
+          44.450000000000000000
+          2614.083333333333000000
           21.166666666666670000
-          148.166666666666700000)
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -200,7 +200,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -211,15 +211,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblSheetNo: TQRLabel
-        Left = 8
-        Top = 8
-        Width = 45
-        Height = 17
+        Left = 10
+        Top = 10
+        Width = 55
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
           21.166666666666670000
-          119.062500000000000000)
+          116.416666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -229,7 +229,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -240,15 +240,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 10
-        Top = 77
-        Width = 40
-        Height = 15
+        Left = 12
+        Top = 96
+        Width = 48
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          203.729166666666700000
-          105.833333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          203.200000000000000000
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -258,7 +258,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -269,15 +269,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 88
-        Top = 77
-        Width = 47
-        Height = 15
+        Left = 110
+        Top = 96
+        Width = 57
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
-          203.729166666666700000
-          124.354166666666700000)
+          40.216666666666670000
+          232.833333333333300000
+          203.200000000000000000
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -287,7 +287,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -298,15 +298,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel18: TQRLabel
-        Left = 360
-        Top = 77
-        Width = 28
-        Height = 15
+        Left = 450
+        Top = 96
+        Width = 34
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           952.500000000000000000
-          203.729166666666700000
-          74.083333333333340000)
+          203.200000000000000000
+          71.966666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -316,7 +316,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -327,15 +327,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel19: TQRLabel
-        Left = 408
-        Top = 77
-        Width = 18
-        Height = 15
+        Left = 510
+        Top = 96
+        Width = 22
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1079.500000000000000000
-          203.729166666666700000
-          47.625000000000000000)
+          203.200000000000000000
+          46.566666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -345,7 +345,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -356,15 +356,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel20: TQRLabel
-        Left = 441
-        Top = 77
-        Width = 24
-        Height = 15
+        Left = 551
+        Top = 96
+        Width = 29
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1166.812500000000000000
-          203.729166666666700000
-          63.500000000000000000)
+          40.216666666666670000
+          1166.283333333333000000
+          203.200000000000000000
+          61.383333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -374,7 +374,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -385,15 +385,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel21: TQRLabel
-        Left = 504
-        Top = 77
-        Width = 28
-        Height = 15
+        Left = 630
+        Top = 96
+        Width = 34
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1333.500000000000000000
-          203.729166666666700000
-          74.083333333333340000)
+          203.200000000000000000
+          71.966666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -403,7 +403,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -414,15 +414,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel22: TQRLabel
-        Left = 552
-        Top = 77
-        Width = 18
-        Height = 15
+        Left = 690
+        Top = 96
+        Width = 22
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1460.500000000000000000
-          203.729166666666700000
-          47.625000000000000000)
+          203.200000000000000000
+          46.566666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -432,7 +432,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -443,15 +443,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel23: TQRLabel
-        Left = 592
-        Top = 77
-        Width = 29
-        Height = 15
+        Left = 740
+        Top = 96
+        Width = 35
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1566.333333333333000000
-          203.729166666666700000
-          76.729166666666680000)
+          203.200000000000000000
+          74.083333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -461,7 +461,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -472,15 +472,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel24: TQRLabel
-        Left = 672
-        Top = 77
-        Width = 36
-        Height = 15
+        Left = 840
+        Top = 96
+        Width = 42
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1778.000000000000000000
-          203.729166666666700000
-          95.250000000000000000)
+          203.200000000000000000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -490,7 +490,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -501,15 +501,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel25: TQRLabel
-        Left = 728
-        Top = 77
-        Width = 35
-        Height = 15
+        Left = 910
+        Top = 96
+        Width = 42
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1926.166666666667000000
-          203.729166666666700000
-          92.604166666666680000)
+          203.200000000000000000
+          88.900000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -519,7 +519,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -530,15 +530,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel26: TQRLabel
-        Left = 784
-        Top = 77
-        Width = 65
-        Height = 15
+        Left = 980
+        Top = 96
+        Width = 73
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           2074.333333333333000000
-          203.729166666666700000
-          171.979166666666700000)
+          203.200000000000000000
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -548,7 +548,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -559,15 +559,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel27: TQRLabel
-        Left = 392
-        Top = 63
-        Width = 51
-        Height = 15
+        Left = 490
+        Top = 79
+        Width = 63
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1037.166666666667000000
-          166.687500000000000000
-          134.937500000000000000)
+          167.216666666666700000
+          133.350000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -577,7 +577,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -588,15 +588,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel28: TQRLabel
-        Left = 538
-        Top = 63
-        Width = 38
-        Height = 15
+        Left = 672
+        Top = 79
+        Width = 46
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1423.458333333333000000
-          166.687500000000000000
-          100.541666666666700000)
+          40.216666666666670000
+          1422.400000000000000000
+          167.216666666666700000
+          97.366666666666670000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -606,7 +606,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -617,15 +617,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel29: TQRLabel
-        Left = 728
-        Top = 63
-        Width = 67
-        Height = 15
+        Left = 910
+        Top = 79
+        Width = 82
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1926.166666666667000000
-          166.687500000000000000
-          177.270833333333300000)
+          167.216666666666700000
+          173.566666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -635,7 +635,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -647,10 +647,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrbndHeaderPage1: TQRChildBand
-      Left = 38
-      Top = 98
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 122
+      Width = 1309
+      Height = 50
       Frame.DrawBottom = True
       AlignToBottom = False
       BeforePrint = qrbndHeaderPage1BeforePrint
@@ -665,21 +665,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ParentFont = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrbndPageHeader
       PrintOrder = cboAfterParent
       object QRLabel12: TQRLabel
-        Left = 10
-        Top = 20
-        Width = 40
-        Height = 15
+        Left = 12
+        Top = 25
+        Width = 48
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
+          40.216666666666670000
+          25.400000000000000000
           52.916666666666670000
-          105.833333333333300000)
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -689,7 +689,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -700,15 +700,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel13: TQRLabel
-        Left = 88
-        Top = 20
-        Width = 47
-        Height = 15
+        Left = 110
+        Top = 25
+        Width = 57
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
+          40.216666666666670000
+          232.833333333333300000
           52.916666666666670000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -718,7 +718,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -730,10 +730,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrbndHeaderPage2: TQRChildBand
-      Left = 38
-      Top = 138
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 172
+      Width = 1309
+      Height = 50
       Frame.DrawBottom = True
       AlignToBottom = False
       BeforePrint = qrbndHeaderPage2BeforePrint
@@ -749,21 +749,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ParentFont = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrbndHeaderPage1
       PrintOrder = cboAfterParent
       object QRLabel1: TQRLabel
-        Left = 10
-        Top = 20
-        Width = 40
-        Height = 15
+        Left = 12
+        Top = 25
+        Width = 48
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
+          40.216666666666670000
+          25.400000000000000000
           52.916666666666670000
-          105.833333333333300000)
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -773,7 +773,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -784,15 +784,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 88
-        Top = 20
-        Width = 47
-        Height = 15
+        Left = 110
+        Top = 25
+        Width = 57
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
+          40.216666666666670000
+          232.833333333333300000
           52.916666666666670000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -802,7 +802,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -814,10 +814,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrbndHeaderPage3: TQRChildBand
-      Left = 38
-      Top = 178
-      Width = 1047
-      Height = 40
+      Left = 47
+      Top = 222
+      Width = 1309
+      Height = 50
       Frame.DrawBottom = True
       AlignToBottom = False
       BeforePrint = qrbndHeaderPage3BeforePrint
@@ -833,21 +833,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ParentFont = False
       Size.Values = (
         105.833333333333300000
-        2770.187500000000000000)
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       ParentBand = qrbndHeaderPage2
       PrintOrder = cboAfterParent
       object QRLabel3: TQRLabel
-        Left = 10
-        Top = 20
-        Width = 40
-        Height = 15
+        Left = 12
+        Top = 25
+        Width = 48
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
+          40.216666666666670000
+          25.400000000000000000
           52.916666666666670000
-          105.833333333333300000)
+          101.600000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -857,7 +857,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -868,15 +868,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel4: TQRLabel
-        Left = 88
-        Top = 20
-        Width = 47
-        Height = 15
+        Left = 110
+        Top = 25
+        Width = 57
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
+          40.216666666666670000
+          232.833333333333300000
           52.916666666666670000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -886,7 +886,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -898,18 +898,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrGrpCustomerPage1: TQRGroup
-      Left = 38
-      Top = 218
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 272
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
@@ -917,10 +917,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
     object qrbndJobsPage1: TQRBand
-      Left = 38
-      Top = 233
-      Width = 1047
-      Height = 21
+      Left = 47
+      Top = 290
+      Width = 1309
+      Height = 26
       AfterPrint = qrbndJobsPage1AfterPrint
       AlignToBottom = False
       BeforePrint = qrbndJobsPage1BeforePrint
@@ -934,21 +934,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        55.562500000000000000
-        2770.187500000000000000)
+        55.033333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText1: TQRDBText
-        Left = 10
-        Top = 2
-        Width = 68
-        Height = 15
+        Left = 12
+        Top = 3
+        Width = 80
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          5.291666666666667000
-          179.916666666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          6.350000000000000000
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -959,7 +959,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Activity_Code'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -972,15 +972,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 88
-        Top = 2
-        Width = 80
-        Height = 15
+        Left = 110
+        Top = 3
+        Width = 98
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
-          5.291666666666667000
-          211.666666666666700000)
+          40.216666666666670000
+          232.833333333333300000
+          6.350000000000000000
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -991,7 +991,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1005,18 +1005,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrSubDetailPage1: TQRSubDetail
-      Left = 38
-      Top = 228
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 284
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrSubDetailPage1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -1026,10 +1026,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       PrintIfEmpty = True
     end
     object qrbndTotalsPage1: TQRBand
-      Left = 38
-      Top = 254
-      Width = 1047
-      Height = 65
+      Left = 47
+      Top = 316
+      Width = 1309
+      Height = 81
       Frame.DrawTop = True
       AlignToBottom = False
       BeforePrint = qrbndTotalsPage1BeforePrint
@@ -1043,21 +1043,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        171.979166666666700000
-        2770.187500000000000000)
+        171.450000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel7: TQRLabel
-        Left = 10
-        Top = 45
-        Width = 77
-        Height = 15
+        Left = 12
+        Top = 56
+        Width = 94
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          119.062500000000000000
-          203.729166666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          118.533333333333300000
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1067,7 +1067,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1078,15 +1078,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel8: TQRLabel
-        Left = 10
-        Top = 25
-        Width = 52
-        Height = 15
+        Left = 12
+        Top = 31
+        Width = 59
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          66.145833333333340000
-          137.583333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          65.616666666666670000
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1096,7 +1096,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1107,15 +1107,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel9: TQRLabel
-        Left = 10
-        Top = 5
-        Width = 64
-        Height = 15
+        Left = 12
+        Top = 6
+        Width = 76
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          13.229166666666670000
-          169.333333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          12.700000000000000000
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1125,7 +1125,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1137,35 +1137,35 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrGrpHeaderPage2: TQRBand
-      Left = 38
-      Top = 319
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 397
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpHeaderPage2BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object qrGrpCustomerPage2: TQRGroup
-      Left = 38
-      Top = 324
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 403
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage2BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
@@ -1173,18 +1173,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
     object qrSubDetailPage2: TQRSubDetail
-      Left = 38
-      Top = 334
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 415
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrSubDetailPage2BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -1195,10 +1195,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       PrintIfEmpty = True
     end
     object qrbndJobsPage2: TQRBand
-      Left = 38
-      Top = 339
-      Width = 1047
-      Height = 21
+      Left = 47
+      Top = 421
+      Width = 1309
+      Height = 26
       AfterPrint = qrbndJobsPage2AfterPrint
       AlignToBottom = False
       BeforePrint = qrbndJobsPage2BeforePrint
@@ -1213,21 +1213,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        55.562500000000000000
-        2770.187500000000000000)
+        55.033333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText3: TQRDBText
-        Left = 10
-        Top = 2
-        Width = 68
-        Height = 15
+        Left = 12
+        Top = 3
+        Width = 80
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          5.291666666666667000
-          179.916666666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          6.350000000000000000
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1238,7 +1238,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Activity_Code'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1251,15 +1251,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 88
-        Top = 2
-        Width = 80
-        Height = 15
+        Left = 110
+        Top = 3
+        Width = 98
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
-          5.291666666666667000
-          211.666666666666700000)
+          40.216666666666670000
+          232.833333333333300000
+          6.350000000000000000
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1270,7 +1270,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1284,10 +1284,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrbndTotalsPage2: TQRBand
-      Left = 38
-      Top = 360
-      Width = 1047
-      Height = 65
+      Left = 47
+      Top = 447
+      Width = 1309
+      Height = 81
       Frame.DrawTop = True
       AlignToBottom = False
       BeforePrint = qrbndTotalsPage2BeforePrint
@@ -1302,21 +1302,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        171.979166666666700000
-        2770.187500000000000000)
+        171.450000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel10: TQRLabel
-        Left = 10
-        Top = 5
-        Width = 64
-        Height = 15
+        Left = 12
+        Top = 6
+        Width = 76
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          13.229166666666670000
-          169.333333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          12.700000000000000000
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1326,7 +1326,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1337,15 +1337,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel11: TQRLabel
-        Left = 10
-        Top = 25
-        Width = 52
-        Height = 15
+        Left = 12
+        Top = 31
+        Width = 59
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          66.145833333333340000
-          137.583333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          65.616666666666670000
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1355,7 +1355,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1366,15 +1366,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel14: TQRLabel
-        Left = 10
-        Top = 45
-        Width = 77
-        Height = 15
+        Left = 12
+        Top = 56
+        Width = 94
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          119.062500000000000000
-          203.729166666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          118.533333333333300000
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1384,7 +1384,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1396,35 +1396,35 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrGrpHeaderPage3: TQRBand
-      Left = 38
-      Top = 425
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 528
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpHeaderPage3BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object qrGrpCustomerPage3: TQRGroup
-      Left = 38
-      Top = 430
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 534
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage3BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
@@ -1432,18 +1432,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
     object qrSubDetailPage3: TQRSubDetail
-      Left = 38
-      Top = 440
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 546
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrSubDetailPage3BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -1454,10 +1454,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       PrintIfEmpty = True
     end
     object qrBndJobsPage3: TQRBand
-      Left = 38
-      Top = 445
-      Width = 1047
-      Height = 21
+      Left = 47
+      Top = 552
+      Width = 1309
+      Height = 26
       AfterPrint = qrBndJobsPage3AfterPrint
       AlignToBottom = False
       BeforePrint = qrBndJobsPage3BeforePrint
@@ -1472,21 +1472,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        55.562500000000000000
-        2770.187500000000000000)
+        55.033333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText5: TQRDBText
-        Left = 10
-        Top = 2
-        Width = 68
-        Height = 15
+        Left = 12
+        Top = 3
+        Width = 80
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          5.291666666666667000
-          179.916666666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          6.350000000000000000
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1497,7 +1497,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Activity_Code'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1510,15 +1510,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRDBText6: TQRDBText
-        Left = 88
-        Top = 2
-        Width = 80
-        Height = 15
+        Left = 110
+        Top = 3
+        Width = 98
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
-          5.291666666666667000
-          211.666666666666700000)
+          40.216666666666670000
+          232.833333333333300000
+          6.350000000000000000
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1529,7 +1529,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1543,10 +1543,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrbndTotalsPage3: TQRBand
-      Left = 38
-      Top = 466
-      Width = 1047
-      Height = 65
+      Left = 47
+      Top = 578
+      Width = 1309
+      Height = 81
       Frame.DrawTop = True
       AlignToBottom = False
       BeforePrint = qrbndTotalsPage3BeforePrint
@@ -1561,21 +1561,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        171.979166666666700000
-        2770.187500000000000000)
+        171.450000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel15: TQRLabel
-        Left = 10
-        Top = 5
-        Width = 64
-        Height = 15
+        Left = 12
+        Top = 6
+        Width = 76
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          13.229166666666670000
-          169.333333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          12.700000000000000000
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1585,7 +1585,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1596,15 +1596,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel16: TQRLabel
-        Left = 10
-        Top = 25
-        Width = 52
-        Height = 15
+        Left = 12
+        Top = 31
+        Width = 59
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          66.145833333333340000
-          137.583333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          65.616666666666670000
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1614,7 +1614,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1625,15 +1625,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel17: TQRLabel
-        Left = 10
-        Top = 45
-        Width = 77
-        Height = 15
+        Left = 12
+        Top = 56
+        Width = 94
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          119.062500000000000000
-          203.729166666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          118.533333333333300000
+          198.966666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1643,7 +1643,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1655,35 +1655,35 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrgrpHeaderFinal: TQRBand
-      Left = 38
-      Top = 531
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 659
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrgrpHeaderFinalBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object qrGrpCustomerFinal: TQRGroup
-      Left = 38
-      Top = 536
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 665
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerFinalBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
@@ -1691,18 +1691,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
     object qrSubDetailFinal: TQRSubDetail
-      Left = 38
-      Top = 546
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 677
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrSubDetailFinalBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -1713,10 +1713,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       PrintIfEmpty = True
     end
     object qrBndJobsFinal: TQRBand
-      Left = 38
-      Top = 551
-      Width = 1047
-      Height = 21
+      Left = 47
+      Top = 683
+      Width = 1309
+      Height = 26
       AfterPrint = qrBndJobsFinalAfterPrint
       AlignToBottom = False
       BeforePrint = qrBndJobsFinalBeforePrint
@@ -1730,21 +1730,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        55.562500000000000000
-        2770.187500000000000000)
+        55.033333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText7: TQRDBText
-        Left = 10
-        Top = 2
-        Width = 68
-        Height = 15
+        Left = 12
+        Top = 3
+        Width = 80
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          5.291666666666667000
-          179.916666666666700000)
+          40.216666666666670000
+          25.400000000000000000
+          6.350000000000000000
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1755,7 +1755,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Activity_Code'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1768,15 +1768,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRDBText8: TQRDBText
-        Left = 88
-        Top = 2
-        Width = 80
-        Height = 15
+        Left = 110
+        Top = 3
+        Width = 98
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          232.833333333333400000
-          5.291666666666667000
-          211.666666666666700000)
+          40.216666666666670000
+          232.833333333333300000
+          6.350000000000000000
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1787,7 +1787,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1800,15 +1800,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblBasicTW: TQRLabel
-        Left = 359
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 451
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          949.854166666666700000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          954.616666666666700000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1818,7 +1818,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1829,15 +1829,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblOvertimeTW: TQRLabel
-        Left = 404
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 507
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1068.916666666667000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          1073.150000000000000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1847,7 +1847,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1858,15 +1858,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblTotalTW: TQRLabel
-        Left = 445
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 558
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1177.395833333333000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          1181.100000000000000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1876,7 +1876,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1887,15 +1887,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblTotalTD: TQRLabel
-        Left = 600
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 752
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1587.500000000000000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          1591.733333333333000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1905,7 +1905,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1916,15 +1916,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblChargeable: TQRLabel
-        Left = 687
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 861
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1817.687500000000000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          1822.450000000000000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1934,7 +1934,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1945,15 +1945,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblInvoiced: TQRLabel
-        Left = 748
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 937
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1979.083333333333000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          1983.316666666667000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1963,7 +1963,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -1974,15 +1974,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblDifference: TQRLabel
-        Left = 813
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 1018
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2151.062500000000000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          2154.766666666667000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -1992,7 +1992,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2003,15 +2003,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblOvertimeTD: TQRLabel
-        Left = 560
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 702
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1481.666666666667000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          1485.900000000000000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2021,7 +2021,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2032,15 +2032,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblBasicTD: TQRLabel
-        Left = 514
-        Top = 2
-        Width = 22
-        Height = 15
+        Left = 644
+        Top = 3
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1359.958333333333000000
-          5.291666666666667000
-          58.208333333333340000)
+          40.216666666666670000
+          1363.133333333333000000
+          6.350000000000000000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2050,7 +2050,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -2062,10 +2062,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object qrbndTotalsFinal: TQRBand
-      Left = 38
-      Top = 572
-      Width = 1047
-      Height = 26
+      Left = 47
+      Top = 709
+      Width = 1309
+      Height = 33
       Frame.DrawTop = True
       AlignToBottom = False
       BeforePrint = qrbndTotalsFinalBeforePrint
@@ -2079,21 +2079,21 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        68.791666666666670000
-        2770.187500000000000000)
+        69.850000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblReportBasicTW: TQRLabel
-        Left = 359
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 451
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          949.854166666666700000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          954.616666666666700000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2103,7 +2103,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2114,15 +2114,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportOvertimeTW: TQRLabel
-        Left = 404
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 507
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1068.916666666667000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          1073.150000000000000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2132,7 +2132,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2143,15 +2143,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportTotalTW: TQRLabel
-        Left = 445
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 558
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1177.395833333333000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          1181.100000000000000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2161,7 +2161,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2172,15 +2172,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportBasicTD: TQRLabel
-        Left = 514
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 644
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1359.958333333333000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          1363.133333333333000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2190,7 +2190,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2201,15 +2201,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportOvertimeTD: TQRLabel
-        Left = 559
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 701
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1479.020833333333000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          1483.783333333333000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2219,7 +2219,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2230,15 +2230,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportTotalTD: TQRLabel
-        Left = 600
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 752
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1587.500000000000000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          1591.733333333333000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2248,7 +2248,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2259,15 +2259,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportTotalChargeable: TQRLabel
-        Left = 687
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 861
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1817.687500000000000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          1822.450000000000000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2277,7 +2277,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2288,15 +2288,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportTotalInvoiced: TQRLabel
-        Left = 748
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 937
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1979.083333333333000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          1983.316666666667000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2306,7 +2306,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2317,15 +2317,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object qrlblReportTotalDifference: TQRLabel
-        Left = 813
-        Top = 6
-        Width = 22
-        Height = 15
+        Left = 1018
+        Top = 8
+        Width = 26
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2151.062500000000000000
-          15.875000000000000000
-          58.208333333333340000)
+          40.216666666666670000
+          2154.766666666667000000
+          16.933333333333330000
+          55.033333333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2335,7 +2335,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2346,15 +2346,15 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         FontSize = 8
       end
       object QRLabel40: TQRLabel
-        Left = 10
-        Top = 6
-        Width = 64
-        Height = 15
+        Left = 12
+        Top = 8
+        Width = 76
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          26.458333333333330000
-          15.875000000000000000
-          169.333333333333300000)
+          40.216666666666670000
+          25.400000000000000000
+          16.933333333333330000
+          160.866666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -2364,7 +2364,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -2376,18 +2376,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       end
     end
     object QRGrpPage1: TQRGroup
-      Left = 38
-      Top = 223
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 278
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'
@@ -2396,18 +2396,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
     object qrGrpFinal: TQRGroup
-      Left = 38
-      Top = 541
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 671
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerFinalBeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'
@@ -2416,18 +2416,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
     object qrGrpPage2: TQRGroup
-      Left = 38
-      Top = 329
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 409
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage2BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'
@@ -2436,18 +2436,18 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
     object qrGrpPage3: TQRGroup
-      Left = 38
-      Top = 435
-      Width = 1047
-      Height = 5
+      Left = 47
+      Top = 540
+      Width = 1309
+      Height = 6
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage3BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        13.229166666666670000
-        2770.187500000000000000)
+        12.700000000000000000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'

@@ -3,21 +3,21 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
   Top = 125
   BorderStyle = bsSingle
   Caption = 'Maintain Product E-Commerce Info'
-  ClientHeight = 281
-  ClientWidth = 441
+  ClientHeight = 309
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  TextHeight = 17
   object Shape2: TShape
     Left = 12
-    Top = 47
+    Top = 57
     Width = 160
     Height = 225
     Brush.Color = clBtnFace
@@ -25,20 +25,20 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
   object lblProdCode: TLabel
     Left = 13
     Top = 8
-    Width = 73
-    Height = 13
+    Width = 83
+    Height = 17
     Caption = 'Product Code:'
   end
   object lblPopUpImage: TLabel
     Left = 13
-    Top = 32
-    Width = 74
-    Height = 13
+    Top = 37
+    Width = 85
+    Height = 17
     Caption = 'Product Image'
   end
   object lblFullImagePath: TLabel
     Left = 184
-    Top = 80
+    Top = 90
     Width = 241
     Height = 113
     AutoSize = False
@@ -47,22 +47,22 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
   end
   object Image2: TImage
     Left = 13
-    Top = 48
+    Top = 58
     Width = 158
     Height = 223
     OnDblClick = Image2DblClick
   end
   object edtProdCode: TEdit
-    Left = 96
+    Left = 100
     Top = 4
     Width = 225
-    Height = 21
+    Height = 25
     Enabled = False
     TabOrder = 0
   end
   object btnBrowse2: TButton
     Left = 184
-    Top = 48
+    Top = 58
     Width = 97
     Height = 25
     Caption = 'Change Image'
@@ -90,7 +90,7 @@ object CCSMaintPrtImagesFrm: TCCSMaintPrtImagesFrm
   end
   object btbtnEraseImage2: TBitBtn
     Left = 288
-    Top = 48
+    Top = 58
     Width = 25
     Height = 25
     Glyph.Data = {

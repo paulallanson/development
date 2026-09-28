@@ -20,7 +20,7 @@ object PBRPProofFrm: TPBRPProofFrm
     Left = 216
     Top = -3
     Width = 992
-    Height = 2075
+    Height = 1403
     ShowingPreview = False
     BeforePrint = PrintPOsQuickReportBeforePrint
     DataSet = GetProofSQL

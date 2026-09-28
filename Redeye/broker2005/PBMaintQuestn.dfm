@@ -3,8 +3,8 @@ object PBMaintQuestnFrm: TPBMaintQuestnFrm
   Top = 110
   BorderStyle = bsDialog
   Caption = 'Maintain Product Type Questions'
-  ClientHeight = 194
-  ClientWidth = 414
+  ClientHeight = 185
+  ClientWidth = 408
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -66,7 +66,7 @@ object PBMaintQuestnFrm: TPBMaintQuestnFrm
     object Label5: TLabel
       Left = 16
       Top = 51
-      Width = 63
+      Width = 62
       Height = 13
       Caption = 'Prompt Type'
     end

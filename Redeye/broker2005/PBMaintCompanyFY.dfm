@@ -4,7 +4,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
   BorderStyle = bsDialog
   Caption = 'Current Financial Year details'
   ClientHeight = 222
-  ClientWidth = 332
+  ClientWidth = 345
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -15,7 +15,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
   OnActivate = FormActivate
   TextHeight = 17
   object OKBitBtn: TBitBtn
-    Left = 64
+    Left = 92
     Top = 176
     Width = 75
     Height = 25
@@ -26,7 +26,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     OnClick = OKBitBtnClick
   end
   object BitBtn2: TBitBtn
-    Left = 150
+    Left = 178
     Top = 176
     Width = 75
     Height = 25
@@ -35,7 +35,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     TabOrder = 1
   end
   object grpbxDetails: TGroupBox
-    Left = 8
+    Left = 18
     Top = 8
     Width = 313
     Height = 145
@@ -72,6 +72,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
       Height = 25
       KeyField = 'Financial_Year'
       ListField = 'Title'
+      ListSource = dtsYear
       TabOrder = 0
       OnClick = dblkpYearClick
     end
@@ -82,6 +83,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
       Height = 25
       KeyField = 'Period'
       ListField = 'Description'
+      ListSource = dtsPeriod
       TabOrder = 1
       OnClick = EnableOK
     end
@@ -93,8 +95,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
       'from sales_profit, period'
       'where sales_profit.period = period.period and'
       'period.financial_year = :Financial_year')
-    Left = 72
-    Top = 8
+    Left = 88
+    Top = 24
     ParamData = <
       item
         Name = 'Financial_year'
@@ -108,8 +110,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
       'Financial_Year = :Financial_Year,'
       'Period = :Period'
       '')
-    Left = 24
-    Top = 72
+    Left = 40
+    Top = 88
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -123,8 +125,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     SQL.Strings = (
       'Select Financial_Year, Period'
       'From Company')
-    Left = 64
-    Top = 64
+    Left = 80
+    Top = 80
   end
   object qryYear: TFDQuery
     ConnectionName = 'PB'
@@ -133,13 +135,13 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
       'from Financial_Year'
       'where Year_Closed_Off = '#39'N'#39
       'order by Financial_Year')
-    Left = 200
-    Top = 8
+    Left = 216
+    Top = 24
   end
   object dtsYear: TDataSource
     DataSet = qryYear
-    Left = 240
-    Top = 8
+    Left = 256
+    Top = 24
   end
   object qryPeriod: TFDQuery
     ConnectionName = 'PB'
@@ -149,8 +151,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
       'Period'
       'where Financial_Year = :Financial_Year'
       'order by Period')
-    Left = 200
-    Top = 72
+    Left = 216
+    Top = 88
     ParamData = <
       item
         Name = 'Financial_Year'
@@ -159,7 +161,7 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
   end
   object dtsPeriod: TDataSource
     DataSet = qryPeriod
-    Left = 240
-    Top = 72
+    Left = 256
+    Top = 88
   end
 end

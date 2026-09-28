@@ -2171,9 +2171,6 @@
         <DCCReference Include="..\PBLUContractSearch.pas">
             <Form>frmPBLUContractSearch</Form>
         </DCCReference>
-        <DCCReference Include="..\pbLuNCA.pas">
-            <Form>frmPBluNCA</Form>
-        </DCCReference>
         <DCCReference Include="..\PBRSJobBagComplete.pas">
             <Form>PBRSJobBagCompleteFrm</Form>
         </DCCReference>
@@ -2229,7 +2226,6 @@
         <DCCReference Include="..\PBRSSalesInvCost.pas"/>
         <DCCReference Include="..\PBRSSuppDet.pas"/>
         <DCCReference Include="..\PBRSStkRec.pas"/>
-        <DCCReference Include="..\PBLUNCARpts.pas"/>
         <DCCReference Include="..\PBRSNCACostGraph.pas"/>
         <DCCReference Include="..\PBRSNCASource.pas"/>
         <DCCReference Include="..\PBLUArtwrkTyp.pas">
@@ -2240,6 +2236,66 @@
         </DCCReference>
         <DCCReference Include="..\PBRSAccManPerformance.pas">
             <Form>PBRSAccManPerformanceFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCountry.pas">
+            <Form>PBLUCountryFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintCountry.pas">
+            <Form>PBMaintCountryFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBLUActivityType.pas">
+            <Form>PBLUActivityTypeFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintActivityType.pas">
+            <Form>PBMaintActivityTypeFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\pbLuNCA.pas">
+            <Form>frmPBluNCA</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBLUNCARpts.pas">
+            <Form>frmPBLUNCARpts</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\pbluNCASearch.pas">
+            <Form>frmpbluNCASearch</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBLUNonConformCat.pas">
+            <Form>PBLUNonConformCatFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBLUNonConformDept.pas">
+            <Form>PBLUNonConformDeptFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBLUNonConformType.pas">
+            <Form>PBLUNonConformTypeFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintNonConfDoc.pas">
+            <Form>PBMaintNonConfDocFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintNonConformCat.pas">
+            <Form>PBMaintNonConformCatFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintNonConformDept.pas">
+            <Form>PBMaintNonConformDeptFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintNonConformOps.pas">
+            <Form>PBMaintNonConformOpsFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintNonConformType.pas">
+            <Form>PBMaintNonConformTypeFrm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

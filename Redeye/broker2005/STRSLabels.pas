@@ -351,10 +351,10 @@ begin
   {This method used for backward compatibility with WIN95}
   IniFile := TIniFile.Create(GetBrokerstkIniFile);
   try
-    IniFile.ReadString('Centrereed Broker', 'Product Label Printer', DefaultPrinter);
-    IniFile.ReadString('Centrereed Broker', 'Product Label Printer Bin', TempIniVar);
+    IniFile.ReadString('Sales Orders', 'Product Label Printer', DefaultPrinter);
+    IniFile.ReadString('Sales Orders', 'Product Label Printer Bin', TempIniVar);
     DefaultBin := StrToIntDef(TempIniVar, 0);
-    IniFile.ReadString('Centrereed Broker', 'Product Label Printer Paper', TempIniVar);
+    IniFile.ReadString('Sales Orders', 'Product Label Printer Paper', TempIniVar);
     DefaultPaper := StrToIntDef(TempIniVar, 0);
   finally
     IniFile.Free;
@@ -483,9 +483,9 @@ var
 begin
   IniFile := TIniFile.Create(GetBrokerstkIniFile);
   try
-    IniFile.WriteString('Centrereed Broker', 'Product Label Printer', DefaultPrinter);
-    IniFile.WriteString('Centrereed Broker', 'Product Label Printer Bin', inttostr(DefaultBin));
-    IniFile.WriteString('Centrereed Broker', 'Product Label Printer Paper', inttostr(DefaultPaper));
+    IniFile.WriteString('Sales Orders', 'Product Label Printer', DefaultPrinter);
+    IniFile.WriteString('Sales Orders', 'Product Label Printer Bin', inttostr(DefaultBin));
+    IniFile.WriteString('Sales Orders', 'Product Label Printer Paper', inttostr(DefaultPaper));
   finally
     IniFile.Free;
   end;

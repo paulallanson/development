@@ -3,8 +3,8 @@ object PBMaintCapFrm: TPBMaintCapFrm
   Top = 199
   BorderStyle = bsDialog
   Caption = 'Maintain Capabilities'
-  ClientHeight = 130
-  ClientWidth = 415
+  ClientHeight = 121
+  ClientWidth = 409
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack

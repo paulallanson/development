@@ -3,8 +3,8 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
   Top = 104
   BorderStyle = bsDialog
   Caption = 'Maintain Supplier Order type'
-  ClientHeight = 255
-  ClientWidth = 435
+  ClientHeight = 246
+  ClientWidth = 429
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -148,8 +148,8 @@ object PBLUSupOrdTypeFrm: TPBLUSupOrdTypeFrm
   end
   object stsBrDets: TStatusBar
     Left = 0
-    Top = 236
-    Width = 435
+    Top = 227
+    Width = 429
     Height = 19
     Panels = <
       item
