@@ -3,7 +3,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   Top = 178
   Caption = 'Sales Invoices'
   ClientHeight = 379
-  ClientWidth = 1250
+  ClientWidth = 1244
   Color = clBtnFace
   Constraints.MinHeight = 426
   Constraints.MinWidth = 1182
@@ -25,20 +25,19 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1250
+    Width = 1244
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1254
+        Width = 1238
       end>
-    ExplicitWidth = 1256
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1241
+      Width = 1229
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -46,7 +45,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1241
+        Width = 1217
         Height = 40
         ButtonHeight = 40
         ButtonWidth = 76
@@ -196,7 +195,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1250
+    Width = 1244
     Height = 230
     Align = alClient
     DataSource = dmSalesInvoice.dsSIHeaderGrid
@@ -368,12 +367,11 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object Panel1: TPanel
     Left = 0
     Top = 304
-    Width = 1250
+    Width = 1244
     Height = 56
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 1164
     object Label1: TLabel
       Left = 8
       Top = 20
@@ -390,7 +388,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 944
+      Left = 932
       Top = 1
       Width = 311
       Height = 54
@@ -424,7 +422,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
         Caption = '&Close'
         TabOrder = 0
         OnClick = btnCloseClick
-        ExplicitLeft = 200
       end
       object edtNumber: TEdit
         Left = 122
@@ -521,7 +518,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 360
-    Width = 1250
+    Width = 1244
     Height = 19
     Panels = <
       item
@@ -530,12 +527,11 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       item
         Width = 50
       end>
-    ExplicitWidth = 1164
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1250
+    Width = 1244
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -543,7 +539,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
     Color = 16642529
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1164
     object Label4: TLabel
       Left = 8
       Top = 3

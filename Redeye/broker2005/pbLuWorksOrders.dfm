@@ -2,8 +2,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Left = 211
   Top = 165
   Caption = 'Works Instructions'
-  ClientHeight = 279
-  ClientWidth = 931
+  ClientHeight = 245
+  ClientWidth = 925
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,7 +24,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 931
+    Width = 925
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -32,7 +32,6 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     Color = 16642529
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 858
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -65,20 +64,19 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 931
+    Width = 925
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 935
+        Width = 919
       end>
-    ExplicitWidth = 858
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 922
+      Width = 910
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 67
@@ -169,8 +167,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 931
-    Height = 144
+    Width = 925
+    Height = 110
     Align = alClient
     DataSource = dtmdlWOrders.dtsWOHeaderGrid
     DrawingStyle = gdsGradient
@@ -277,14 +275,12 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 219
-    Width = 931
+    Top = 185
+    Width = 925
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 149
-    ExplicitWidth = 858
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -301,7 +297,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 624
+      Left = 612
       Top = 1
       Width = 312
       Height = 39
@@ -360,8 +356,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 260
-    Width = 931
+    Top = 226
+    Width = 925
     Height = 19
     Panels = <
       item
@@ -373,8 +369,6 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       item
         Width = 50
       end>
-    ExplicitTop = 190
-    ExplicitWidth = 858
   end
   object tmrSearch: TTimer
     Enabled = False

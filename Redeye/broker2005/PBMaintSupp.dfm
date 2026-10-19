@@ -25,6 +25,8 @@ object PBMaintSuppFrm: TPBMaintSuppFrm
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 521
+    ExplicitHeight = 540
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DetsGrpBox: TGroupBox

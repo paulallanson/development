@@ -2,8 +2,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   Left = 47
   Top = 102
   Caption = 'Purchase Credit Notes'
-  ClientHeight = 345
-  ClientWidth = 845
+  ClientHeight = 336
+  ClientWidth = 839
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,19 +21,19 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 845
+    Width = 839
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 839
+        Width = 833
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 830
+      Width = 824
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -41,7 +41,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 818
+        Width = 812
         Height = 41
         ButtonHeight = 40
         ButtonWidth = 67
@@ -116,8 +116,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 285
-    Width = 845
+    Top = 276
+    Width = 839
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -138,7 +138,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 659
+      Left = 653
       Top = 1
       Width = 185
       Height = 39
@@ -172,8 +172,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 326
-    Width = 845
+    Top = 317
+    Width = 839
     Height = 19
     Panels = <
       item
@@ -186,8 +186,8 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 845
-    Height = 211
+    Width = 839
+    Height = 202
     Align = alClient
     DataSource = dmSupplierInvoice.dsPCHeaderGrid
     DrawingStyle = gdsGradient
@@ -206,6 +206,7 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
     TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item
@@ -322,13 +323,14 @@ object frmPBLUPurchaseCredits: TfrmPBLUPurchaseCredits
         Expanded = False
         FieldName = 'New_Date'
         Title.Caption = 'Date Created'
+        Width = 64
         Visible = True
       end>
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 845
+    Width = 839
     Height = 30
     Align = alTop
     BevelInner = bvLowered

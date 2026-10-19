@@ -13,8 +13,8 @@ object frmPBRPQuote: TfrmPBRPQuote
   Scaled = False
   TextHeight = 13
   object qrpDetails: TQuickRep
-    Left = 142
-    Top = 64
+    Left = 126
+    Top = -600
     Width = 992
     Height = 1403
     ShowingPreview = False
@@ -733,21 +733,21 @@ object frmPBRPQuote: TfrmPBRPQuote
       object gtQRLabel16: TQRLabel
         Left = 10
         Top = 90
-        Width = 548
+        Width = 534
         Height = 21
         Size.Values = (
           44.450000000000000000
           21.166666666666670000
           190.500000000000000000
-          1159.933333333333000000)
+          1130.300000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         Caption = 
-          'RETURN ALL/PART OVERS BACK TO SERVICE GRAPHIC STOCK @ '#163'5 per pal' +
-          'let per week'
+          'RETURN ALL/PART OVERS BACK TO SOUTHERN MAIL STOCK @ '#163'5 per palle' +
+          't per week'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -1149,13 +1149,13 @@ object frmPBRPQuote: TfrmPBRPQuote
       end
       object qrmRegNumber: TQRMemo
         Left = 241
-        Top = 173
+        Top = 149
         Width = 703
         Height = 16
         Size.Values = (
           33.866666666666670000
           510.116666666666700000
-          366.183333333333300000
+          315.383333333333300000
           1488.016666666667000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -1180,13 +1180,13 @@ object frmPBRPQuote: TfrmPBRPQuote
       end
       object qrmRegOffice: TQRMemo
         Left = 637
-        Top = 192
+        Top = 168
         Width = 307
         Height = 16
         Size.Values = (
           33.866666666666670000
           1348.316666666667000000
-          406.400000000000000000
+          355.600000000000000000
           649.816666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral

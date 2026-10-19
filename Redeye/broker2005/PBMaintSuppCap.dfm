@@ -26,22 +26,23 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
       Caption = 'Panel1'
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 444
+      ExplicitTop = 3
+      ExplicitHeight = 490
       DesignSize = (
         191
         460)
       object Label1: TLabel
         Left = 1
-        Top = -3
+        Top = 3
         Width = 120
         Height = 17
         Caption = 'Selected Capabilities'
       end
       object SuppCapTreeView: TTreeView
-        Left = 3
-        Top = 16
+        Left = 2
+        Top = 25
         Width = 184
-        Height = 439
+        Height = 422
         Anchors = [akLeft, akTop, akRight, akBottom]
         Images = TreeViewImageList
         Indent = 19
@@ -52,7 +53,6 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         OnClick = SuppCapTreeViewClick
         OnCollapsing = SuppCapTreeViewCollapsing
         OnExpanding = SuppCapTreeViewExpanding
-        ExplicitHeight = 423
       end
     end
     object UnSelPanel: TPanel
@@ -64,8 +64,6 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
       Anchors = [akLeft, akTop, akRight, akBottom]
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 15
-      ExplicitHeight = 448
       object UnSelCapsPanel: TPanel
         Left = 1
         Top = 244
@@ -75,7 +73,6 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         Caption = 'UnSelCapsPanel'
         ParentBackground = False
         TabOrder = 0
-        ExplicitTop = 232
         DesignSize = (
           255
           215)
@@ -123,22 +120,22 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         end
         object Label3: TLabel
           Left = 2
-          Top = -7
+          Top = 2
           Width = 135
           Height = 17
           Caption = 'Unselected Capabilities'
         end
         object UnSelCapsDBGrid: TDBGrid
           Left = 32
-          Top = 14
+          Top = 25
           Width = 219
-          Height = 195
+          Height = 184
           Anchors = [akLeft, akTop, akRight, akBottom]
           DataSource = UnSelCapsDS
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -163,14 +160,15 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         Left = 1
         Top = 1
         Width = 255
-        Height = 237
+        Height = 238
         Align = alTop
         Caption = 'Panel3'
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 0
         DesignSize = (
           255
-          237)
+          238)
         object AddProdTypSpeedButton: TSpeedButton
           Left = 4
           Top = 34
@@ -215,22 +213,22 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         end
         object Label2: TLabel
           Left = 2
-          Top = -3
+          Top = 3
           Width = 150
           Height = 17
           Caption = 'Unselected Product Types'
         end
         object UnSelProdTypsDBGrid: TDBGrid
-          Left = 32
-          Top = 16
+          Left = 33
+          Top = 24
           Width = 219
-          Height = 214
+          Height = 208
           Anchors = [akLeft, akTop, akRight, akBottom]
           DataSource = UnSelProdTypsDS
           DrawingStyle = gdsGradient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]

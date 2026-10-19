@@ -333,6 +333,15 @@ begin
       (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
     end;
 
+  if(gdFocused in State) or (gdSelected in State) then
+    begin
+      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
+      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
+    end;
+
+  (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
+
   if  (Column.Title.Caption <> 'Total Cost') then
   	begin
       if Assigned(Column.Field) then

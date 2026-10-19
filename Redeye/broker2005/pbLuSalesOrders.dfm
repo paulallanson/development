@@ -2,8 +2,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   Left = 81
   Top = 105
   Caption = 'Sales Orders'
-  ClientHeight = 262
-  ClientWidth = 896
+  ClientHeight = 228
+  ClientWidth = 890
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,19 +24,19 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 896
+    Width = 890
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 890
+        Width = 884
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 881
+      Width = 875
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -44,7 +44,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 869
+        Width = 863
         Height = 40
         ButtonHeight = 48
         ButtonWidth = 73
@@ -186,8 +186,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 202
-    Width = 896
+    Top = 168
+    Width = 890
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -208,7 +208,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 602
+      Left = 596
       Top = 1
       Width = 293
       Height = 39
@@ -278,8 +278,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 243
-    Width = 896
+    Top = 209
+    Width = 890
     Height = 19
     Panels = <
       item
@@ -292,7 +292,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 896
+    Width = 890
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -332,8 +332,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 896
-    Height = 128
+    Width = 890
+    Height = 94
     Align = alClient
     DataSource = dtmdlOrders.dtsCallOffs
     DrawingStyle = gdsGradient

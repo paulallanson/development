@@ -3,8 +3,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   Top = 99
   ActiveControl = Panel1
   Caption = 'Customer details'
-  ClientHeight = 335
-  ClientWidth = 1104
+  ClientHeight = 317
+  ClientWidth = 1092
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,8 +23,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 316
-    Width = 1104
+    Top = 298
+    Width = 1092
     Height = 19
     Panels = <
       item
@@ -37,14 +37,14 @@ object frmpbluCustomers: TfrmpbluCustomers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1104
+    Width = 1092
     Height = 46
     Bands = <
       item
         Control = Toolbar1
         ImageIndex = -1
         MinHeight = 43
-        Width = 1098
+        Width = 1086
       end>
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -55,7 +55,7 @@ object frmpbluCustomers: TfrmpbluCustomers
     object Toolbar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1089
+      Width = 1077
       Height = 43
       Align = alClient
       ButtonHeight = 40
@@ -206,8 +206,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 76
-    Width = 1104
-    Height = 199
+    Width = 1092
+    Height = 181
     Align = alClient
     DataSource = dtmdlCustomers.dtsCustomers
     DrawingStyle = gdsGradient
@@ -395,8 +395,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 275
-    Width = 1104
+    Top = 257
+    Width = 1092
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -417,7 +417,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 918
+      Left = 906
       Top = 1
       Width = 185
       Height = 39
@@ -467,7 +467,7 @@ object frmpbluCustomers: TfrmpbluCustomers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1104
+    Width = 1092
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -514,7 +514,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       end
     end
     object Panel5: TPanel
-      Left = 853
+      Left = 841
       Top = 1
       Width = 250
       Height = 28
@@ -563,7 +563,7 @@ object frmpbluCustomers: TfrmpbluCustomers
     object PageScroller2: TPageScroller
       Left = 401
       Top = 1
-      Width = 452
+      Width = 440
       Height = 28
       Align = alClient
       Color = 16642529
@@ -574,14 +574,14 @@ object frmpbluCustomers: TfrmpbluCustomers
       object clbrDashboard: TCoolBar
         Left = 0
         Top = 0
-        Width = 440
+        Width = 428
         Height = 28
         Align = alClient
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 434
+            Width = 422
           end>
         Color = 16642529
         ParentColor = False
@@ -589,7 +589,7 @@ object frmpbluCustomers: TfrmpbluCustomers
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 425
+          Width = 413
           Height = 25
           Align = alClient
           ButtonHeight = 23

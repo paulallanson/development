@@ -2,8 +2,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   Left = 205
   Top = 107
   Caption = 'Contracts'
-  ClientHeight = 405
-  ClientWidth = 830
+  ClientHeight = 396
+  ClientWidth = 824
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 386
-    Width = 830
+    Top = 377
+    Width = 824
     Height = 19
     Panels = <
       item
@@ -35,13 +35,11 @@ object frmPBLUContracts: TfrmPBLUContracts
       item
         Width = 50
       end>
-    ExplicitTop = 395
-    ExplicitWidth = 836
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 830
+    Width = 824
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -49,7 +47,6 @@ object frmPBLUContracts: TfrmPBLUContracts
     Color = 16642529
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 836
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -82,20 +79,19 @@ object frmPBLUContracts: TfrmPBLUContracts
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 830
+    Width = 824
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 834
+        Width = 818
       end>
-    ExplicitWidth = 836
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
-      Width = 821
+      Width = 809
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 67
@@ -144,14 +140,12 @@ object frmPBLUContracts: TfrmPBLUContracts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 345
-    Width = 830
+    Top = 336
+    Width = 824
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 354
-    ExplicitWidth = 836
     object Label60: TLabel
       Left = 8
       Top = 13
@@ -177,7 +171,7 @@ object frmPBLUContracts: TfrmPBLUContracts
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 520
+      Left = 508
       Top = 1
       Width = 315
       Height = 39
@@ -219,8 +213,8 @@ object frmPBLUContracts: TfrmPBLUContracts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 830
-    Height = 270
+    Width = 824
+    Height = 261
     Align = alClient
     DataSource = dtmdlContract.dtsContractGrid
     DrawingStyle = gdsGradient
@@ -238,6 +232,7 @@ object frmPBLUContracts: TfrmPBLUContracts
     TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
     Columns = <

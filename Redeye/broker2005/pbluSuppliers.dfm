@@ -2,8 +2,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   Left = 51
   Top = 117
   Caption = 'Supplier details'
-  ClientHeight = 361
-  ClientWidth = 1006
+  ClientHeight = 352
+  ClientWidth = 1000
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,8 +21,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   TextHeight = 17
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 342
-    Width = 1006
+    Top = 333
+    Width = 1000
     Height = 19
     Panels = <
       item
@@ -34,14 +34,14 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 301
-    Width = 1006
+    Top = 292
+    Width = 1000
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      1006
+      1000
       41)
     object lblSearch: TLabel
       Left = 16
@@ -59,7 +59,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       OnChange = edtSearchChange
     end
     object btnClose: TButton
-      Left = 903
+      Left = 891
       Top = 8
       Width = 75
       Height = 25
@@ -81,19 +81,19 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1006
+    Width = 1000
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1000
+        Width = 994
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 991
+      Width = 985
       Height = 40
       ButtonHeight = 40
       ButtonWidth = 67
@@ -193,8 +193,8 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1006
-    Height = 227
+    Width = 1000
+    Height = 218
     Align = alClient
     DataSource = dtmdlSuppliers.dtsSuppliers
     DrawingStyle = gdsGradient
@@ -279,7 +279,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1006
+    Width = 1000
     Height = 30
     Align = alTop
     BevelInner = bvLowered

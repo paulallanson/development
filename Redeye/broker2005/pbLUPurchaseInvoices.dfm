@@ -2,8 +2,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   Left = 279
   Top = 102
   Caption = 'Purchase Invoices'
-  ClientHeight = 337
-  ClientWidth = 689
+  ClientHeight = 328
+  ClientWidth = 683
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,19 +21,19 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 689
+    Width = 683
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 683
+        Width = 677
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 674
+      Width = 668
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -41,7 +41,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 662
+        Width = 656
         Height = 41
         ButtonHeight = 40
         ButtonWidth = 67
@@ -126,8 +126,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 277
-    Width = 689
+    Top = 268
+    Width = 683
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -148,7 +148,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 503
+      Left = 497
       Top = 1
       Width = 185
       Height = 39
@@ -182,8 +182,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 318
-    Width = 689
+    Top = 309
+    Width = 683
     Height = 19
     Panels = <
       item
@@ -196,8 +196,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 689
-    Height = 203
+    Width = 683
+    Height = 194
     Align = alClient
     DataSource = dmSupplierInvoice.dsSIHeaderGrid
     DrawingStyle = gdsGradient
@@ -217,6 +217,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     OnCellClick = dbgDetailsCellClick
+    OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     OnTitleClick = dbgDetailsTitleClick
     Columns = <
@@ -318,7 +319,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 689
+    Width = 683
     Height = 30
     Align = alTop
     BevelInner = bvLowered

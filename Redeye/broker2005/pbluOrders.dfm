@@ -2,8 +2,8 @@ object frmpbLUOrders: TfrmpbLUOrders
   Left = 11
   Top = 154
   Caption = 'Purchase Print'
-  ClientHeight = 372
-  ClientWidth = 899
+  ClientHeight = 363
+  ClientWidth = 893
   Color = clBtnFace
   Constraints.MinHeight = 360
   Constraints.MinWidth = 745
@@ -25,26 +25,26 @@ object frmpbLUOrders: TfrmpbLUOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 899
+    Width = 893
     Height = 45
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 893
+        Width = 887
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 884
+      Width = 878
       Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 872
+        Width = 866
         Height = 41
         ButtonHeight = 40
         ButtonWidth = 67
@@ -198,8 +198,8 @@ object frmpbLUOrders: TfrmpbLUOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 899
-    Height = 237
+    Width = 893
+    Height = 228
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
     DrawingStyle = gdsGradient
@@ -333,12 +333,14 @@ object frmpbLUOrders: TfrmpbLUOrders
         Expanded = False
         FieldName = 'job_bag'
         Title.Caption = 'Job Bag'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Description_Reference'
         Title.Caption = 'Descriptive Reference'
+        Width = 64
         Visible = True
       end
       item
@@ -379,8 +381,8 @@ object frmpbLUOrders: TfrmpbLUOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 353
-    Width = 899
+    Top = 344
+    Width = 893
     Height = 19
     Panels = <
       item
@@ -396,14 +398,14 @@ object frmpbLUOrders: TfrmpbLUOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 312
-    Width = 899
+    Top = 303
+    Width = 893
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     DesignSize = (
-      899
+      893
       41)
     object Label1: TLabel
       Left = 8
@@ -413,7 +415,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       Caption = 'Customer'
     end
     object Label2: TLabel
-      Left = 602
+      Left = 590
       Top = 14
       Width = 84
       Height = 17
@@ -422,7 +424,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       ExplicitLeft = 614
     end
     object btnClose: TButton
-      Left = 797
+      Left = 785
       Top = 10
       Width = 75
       Height = 25
@@ -440,7 +442,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 691
+      Left = 679
       Top = 10
       Width = 90
       Height = 25
@@ -471,7 +473,7 @@ object frmpbLUOrders: TfrmpbLUOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 899
+    Width = 893
     Height = 30
     Align = alTop
     BevelInner = bvLowered
