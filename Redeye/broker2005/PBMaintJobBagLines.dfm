@@ -108,6 +108,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     NumGlyphs = 2
     TabOrder = 4
     OnClick = OKBitBtnClick
+    ExplicitTop = 414
   end
   object CancelBitBtn: TBitBtn
     Left = 438
@@ -118,6 +119,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 5
+    ExplicitTop = 414
   end
   object grpbxDetails: TGroupBox
     Left = 8
@@ -367,7 +369,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Height = 97
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       Lines.Strings = (

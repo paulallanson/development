@@ -2,8 +2,8 @@ object frmPBluNCA: TfrmPBluNCA
   Left = 29
   Top = 115
   Caption = 'Non Conformamce Advice'
-  ClientHeight = 334
-  ClientWidth = 749
+  ClientHeight = 325
+  ClientWidth = 743
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,20 +23,19 @@ object frmPBluNCA: TfrmPBluNCA
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 749
+    Width = 743
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 753
+        Width = 737
       end>
-    ExplicitWidth = 655
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 740
+      Width = 728
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 67
@@ -95,8 +94,8 @@ object frmPBluNCA: TfrmPBluNCA
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 749
-    Height = 199
+    Width = 743
+    Height = 190
     Align = alClient
     DataSource = dtmdlJobs.dtsJobsNCA
     DrawingStyle = gdsGradient
@@ -223,13 +222,12 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object Panel1: TPanel
     Left = 0
-    Top = 274
-    Width = 749
+    Top = 265
+    Width = 743
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 655
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -246,7 +244,7 @@ object frmPBluNCA: TfrmPBluNCA
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 481
+      Left = 469
       Top = 1
       Width = 273
       Height = 39
@@ -254,7 +252,6 @@ object frmPBluNCA: TfrmPBluNCA
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 381
       DesignSize = (
         273
         39)
@@ -297,8 +294,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 315
-    Width = 749
+    Top = 306
+    Width = 743
     Height = 19
     Panels = <
       item
@@ -310,12 +307,11 @@ object frmPBluNCA: TfrmPBluNCA
       item
         Width = 50
       end>
-    ExplicitWidth = 655
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 749
+    Width = 743
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -323,7 +319,6 @@ object frmPBluNCA: TfrmPBluNCA
     Color = 16642529
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 655
     object Label3: TLabel
       Left = 8
       Top = 3

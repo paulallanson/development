@@ -2,8 +2,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   Left = 59
   Top = 161
   Caption = 'Enquiries'
-  ClientHeight = 314
-  ClientWidth = 853
+  ClientHeight = 305
+  ClientWidth = 847
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   TextHeight = 17
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 295
-    Width = 853
+    Top = 286
+    Width = 847
     Height = 19
     Panels = <
       item
@@ -38,8 +38,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   end
   object Panel1: TPanel
     Left = 0
-    Top = 254
-    Width = 853
+    Top = 245
+    Width = 847
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -60,7 +60,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 552
+      Left = 546
       Top = 1
       Width = 300
       Height = 39
@@ -96,7 +96,6 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
         Anchors = [akRight, akBottom]
         TabOrder = 1
         OnKeyPress = edtNumberKeyPress
-        ExplicitLeft = 83
       end
     end
     object btnSearch: TBitBtn
@@ -112,8 +111,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 853
-    Height = 179
+    Width = 847
+    Height = 170
     Align = alClient
     DataSource = dtmdlEnqs.dtsEnqs
     DrawingStyle = gdsGradient
@@ -226,26 +225,26 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 853
+    Width = 847
     Height = 45
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 847
+        Width = 841
       end>
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 838
+      Width = 832
       Height = 41
       Control = Toolbar1
       TabOrder = 0
       object Toolbar1: TToolBar
         Left = 0
         Top = 0
-        Width = 826
+        Width = 820
         Height = 41
         ButtonHeight = 40
         ButtonWidth = 71
@@ -380,7 +379,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 853
+    Width = 847
     Height = 30
     Align = alTop
     BevelInner = bvLowered

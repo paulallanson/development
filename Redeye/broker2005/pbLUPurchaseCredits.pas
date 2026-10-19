@@ -59,6 +59,8 @@ type
     procedure btnReportsClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure pmnuFunctionsPopup(Sender: TObject);
+    procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     FActivated: boolean;
     DontSaveLayout: Boolean;
@@ -304,6 +306,20 @@ end;
 procedure TfrmPBLUPurchaseCredits.dbgDetailsDblClick(Sender: TObject);
 begin
   btnChangeClick(self);
+end;
+
+procedure TfrmPBLUPurchaseCredits.dbgDetailsDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+  if(gdFocused in State) or (gdSelected in State) then
+    begin
+      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
+      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
+    end;
+
+  (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
+
 end;
 
 procedure TfrmPBLUPurchaseCredits.SetFunctionBtns(Dataset: TDataset);

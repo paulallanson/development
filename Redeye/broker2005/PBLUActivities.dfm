@@ -2,8 +2,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   Left = 269
   Top = 66
   Caption = 'Activities'
-  ClientHeight = 396
-  ClientWidth = 850
+  ClientHeight = 378
+  ClientWidth = 838
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmPBLUActivities: TfrmPBLUActivities
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 850
+    Width = 838
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -31,7 +31,6 @@ object frmPBLUActivities: TfrmPBLUActivities
     Color = 16642529
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 856
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -63,8 +62,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 377
-    Width = 850
+    Top = 359
+    Width = 838
     Height = 19
     Panels = <
       item
@@ -76,19 +75,15 @@ object frmPBLUActivities: TfrmPBLUActivities
       item
         Width = 50
       end>
-    ExplicitTop = 386
-    ExplicitWidth = 856
   end
   object Panel1: TPanel
     Left = 0
-    Top = 336
-    Width = 850
+    Top = 318
+    Width = 838
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 345
-    ExplicitWidth = 856
     object Label60: TLabel
       Left = 8
       Top = 13
@@ -97,7 +92,7 @@ object frmPBLUActivities: TfrmPBLUActivities
       Caption = 'Customer Search'
     end
     object Panel2: TPanel
-      Left = 672
+      Left = 654
       Top = 1
       Width = 183
       Height = 39
@@ -145,20 +140,19 @@ object frmPBLUActivities: TfrmPBLUActivities
   object CoolBar7: TCoolBar
     Left = 0
     Top = 30
-    Width = 850
+    Width = 838
     Height = 45
     Bands = <
       item
         Control = ToolBar8
         ImageIndex = -1
         MinHeight = 41
-        Width = 854
+        Width = 832
       end>
-    ExplicitWidth = 856
     object ToolBar8: TToolBar
       Left = 11
       Top = 0
-      Width = 841
+      Width = 823
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 67
@@ -209,8 +203,8 @@ object frmPBLUActivities: TfrmPBLUActivities
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 850
-    Height = 261
+    Width = 838
+    Height = 243
     Align = alClient
     DataSource = dtmdlActivity.dtsActivityGrid
     DrawingStyle = gdsGradient

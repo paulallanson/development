@@ -78,6 +78,8 @@ type
     procedure SwitchUsers1Click(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
     procedure btnDeliveryNoteClick(Sender: TObject);
+    procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     FActivated: boolean;
     ActiveCode: string;
@@ -274,6 +276,19 @@ end;
 procedure TfrmPBLUPurchaseOrders.dbgDetailsDblClick(Sender: TObject);
 begin
   btnChangeClick(self);
+end;
+
+procedure TfrmPBLUPurchaseOrders.dbgDetailsDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+  if(gdFocused in State) or (gdSelected in State) then
+    begin
+      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
+      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.Color := clMenuHighlight;
+    end;
+
+  (Sender as TDBGrid).DefaultDrawColumnCell(Rect, DataCol, Column, State);
 end;
 
 procedure TfrmPBLUPurchaseOrders.edtOrderKeyPress(Sender: TObject;

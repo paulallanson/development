@@ -11,6 +11,7 @@ object PBMaintSuppInvoicePassFrm: TPBMaintSuppInvoicePassFrm
   Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 17

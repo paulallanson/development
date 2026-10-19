@@ -2,8 +2,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   Left = 26
   Top = 123
   Caption = 'Form References'
-  ClientHeight = 346
-  ClientWidth = 692
+  ClientHeight = 337
+  ClientWidth = 686
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 692
+    Width = 686
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -48,19 +48,19 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 692
+    Width = 686
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 686
+        Width = 680
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 677
+      Width = 671
       Height = 41
       ButtonHeight = 40
       ButtonWidth = 75
@@ -135,8 +135,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 692
-    Height = 211
+    Width = 686
+    Height = 202
     Align = alClient
     DataSource = dtmdlForms.dtsForms
     DrawingStyle = gdsGradient
@@ -153,6 +153,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
     TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item
@@ -209,8 +210,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   end
   object Panel1: TPanel
     Left = 0
-    Top = 286
-    Width = 692
+    Top = 277
+    Width = 686
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -231,7 +232,7 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 418
+      Left = 412
       Top = 1
       Width = 273
       Height = 39
@@ -263,8 +264,8 @@ object frmPBLUFormReferences: TfrmPBLUFormReferences
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 327
-    Width = 692
+    Top = 318
+    Width = 686
     Height = 19
     Panels = <
       item

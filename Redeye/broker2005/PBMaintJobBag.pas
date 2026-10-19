@@ -7580,7 +7580,7 @@ begin
                   MyLabel.Width := 150;
                   Mylabel.Font.Size := 8;
                   Mylabel.Font.Style := [fsBold];
-                  MyLabel.Height := 13;
+                  MyLabel.Height := 17;
                   MyLabel.Top := ipos;
                   ipos := ipos + Mylabel.Height+2;
 

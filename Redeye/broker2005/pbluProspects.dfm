@@ -2,8 +2,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   Left = 65
   Top = 104
   Caption = 'Prospects'
-  ClientHeight = 318
-  ClientWidth = 1059
+  ClientHeight = 309
+  ClientWidth = 1053
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,11 +20,11 @@ object frmPBLUProspects: TfrmPBLUProspects
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   DesignSize = (
-    1059
-    318)
+    1053
+    309)
   TextHeight = 17
   object Label4: TLabel
-    Left = -165
+    Left = -171
     Top = 7
     Width = 83
     Height = 13
@@ -41,19 +41,19 @@ object frmPBLUProspects: TfrmPBLUProspects
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1059
+    Width = 1053
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1053
+        Width = 1047
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1044
+      Width = 1038
       Height = 40
       Align = alLeft
       ButtonHeight = 40
@@ -178,8 +178,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1059
-    Height = 184
+    Width = 1053
+    Height = 175
     Align = alClient
     DataSource = dtmdlCustomers.dtsProspects
     DrawingStyle = gdsGradient
@@ -353,8 +353,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   end
   object Panel1: TPanel
     Left = 0
-    Top = 258
-    Width = 1059
+    Top = 249
+    Width = 1053
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -384,7 +384,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 873
+      Left = 867
       Top = 1
       Width = 185
       Height = 39
@@ -414,8 +414,8 @@ object frmPBLUProspects: TfrmPBLUProspects
   end
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 299
-    Width = 1059
+    Top = 290
+    Width = 1053
     Height = 19
     Panels = <
       item
@@ -428,7 +428,7 @@ object frmPBLUProspects: TfrmPBLUProspects
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1059
+    Width = 1053
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -475,7 +475,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       end
     end
     object Panel5: TPanel
-      Left = 808
+      Left = 802
       Top = 1
       Width = 250
       Height = 28
@@ -523,7 +523,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     object PageScroller1: TPageScroller
       Left = 401
       Top = 1
-      Width = 407
+      Width = 401
       Height = 28
       Align = alClient
       Color = 16642529
@@ -534,23 +534,22 @@ object frmPBLUProspects: TfrmPBLUProspects
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 407
+        Width = 389
         Height = 28
         Align = alClient
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 401
+            Width = 383
           end>
         Color = 16642529
         ParentColor = False
         Visible = False
-        ExplicitWidth = 395
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 392
+          Width = 374
           Height = 25
           Align = alClient
           ButtonHeight = 23
