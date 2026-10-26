@@ -200,7 +200,7 @@ object STStkTkslfrm: TSTStkTkslfrm
     object PrStkQtyCheckBox: TCheckBox
       Left = 8
       Top = 252
-      Width = 169
+      Width = 233
       Height = 17
       Caption = 'Print existing Stock Quantities'
       Font.Charset = ANSI_CHARSET
@@ -215,7 +215,7 @@ object STStkTkslfrm: TSTStkTkslfrm
     object PrAllBinsCheckBox: TCheckBox
       Left = 8
       Top = 276
-      Width = 169
+      Width = 225
       Height = 17
       Caption = 'Print All Bins'
       Font.Charset = ANSI_CHARSET
