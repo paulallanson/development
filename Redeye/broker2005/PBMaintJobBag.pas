@@ -5175,6 +5175,7 @@ begin
 
   try
     inx := StrToIntDef(sglines.cells[0,sgLines.row], 0);
+    inx := StrToInt(sglines.cells[0,sgLines.row]);
 
     if (inx > 0) and (inx <= JobBag.Lines.count) then
       begin
@@ -5672,7 +5673,8 @@ var
   i: integer;
 begin
   if ssRight in Shift then
-    sgLines.row := (Y div 19) + (sgLines.TopRow - 1);
+    sgLines.row := (Y div 23) + (sgLines.TopRow - 1);
+//    sgLines.row := (Y div 19) + (sgLines.TopRow - 1);
 
   if X <= sgLines.DefaultColWidth then
     begin
