@@ -857,7 +857,7 @@ begin
   end;
 
   {Setup the correct column widths}
-  SupplierPricesGrid.colwidths[0] := 190;
+  SupplierPricesGrid.colwidths[0] := 350;
   for icol := 1 to SupplierPricesGrid.colcount - 1 do
     SupplierPricesGrid.colwidths[icol] := 80;
 
@@ -891,7 +891,7 @@ begin
 
   {Set the Selected Prices Grid column widths}
   SelectedPricesGrid.colcount := SupplierPricesGrid.colcount;
-  SelectedPricesGrid.colwidths[0] := 190;
+  SelectedPricesGrid.colwidths[0] := 350;
   SelectedPricesGrid.RowCount := 5;
 
   for icol := 1 to SelectedPricesGrid.colcount - 1 do
@@ -948,104 +948,85 @@ end;
 procedure TPBEnqJobPriceFrm.SupplierPricesGridDrawCell(Sender: TObject;
   ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  lrow, lcol: Longint;
+  Grid: TStringGrid;
+  Text: string;
+  Gap: Integer;
+  WidthOfText, WidthOfCell, LeftOffset: Integer;
 begin
-  lRow := ARow;
-  lCol := ACol;
+  Grid := SupplierPricesGrid;
+  Text := Grid.Cells[ACol, ARow];
+  Gap := 4;
 
-  with Sender as TStringGrid, Canvas do
-  //set the background colour of the box and the text style depending
-  //on which cell is begin drawn
+  // *** Determine background colour ***
+  if (ARow < Grid.FixedRows) or (ACol < Grid.FixedCols) then
   begin
-    if (lRow < FixedRows) or (lCol < FixedCols) then
-    begin
-      //if its the left and top fixed column/row headers
-      Brush.Color := clbtnFace;
-      font.name := SupplierPricesGrid.Font.name;
-      font.size := SupplierPricesGrid.Font.size;
-      font.style := [];
-    end
-    else
-    if suppgrid.cells[8,lRow] = 'Y' then
-    begin
-      //Show in red if declined to quote
-      brush.color := clred;
-      font.style := [fsbold];
-    end
-    else
-    if Cells[lCol, lRow] = formatfloat('0.000', cheapestArray[iline, lcol]) then
-    begin
-      //if its the lowest price
-      brush.color := clyellow;
-      font.style := [fsbold];
-    end
-    else
-    begin
-      //otherwise....
-      Brush.Color := clWhite;
-      Font.Color := Font.Color;
-      font.style := [];
-    end;
+    Grid.Canvas.Brush.Color := clBtnFace;
+    Grid.Canvas.Font.Style := [];
+  end
+  else if suppgrid.Cells[8, ARow] = 'Y' then
+  begin
+    Grid.Canvas.Brush.Color := clRed;
+    Grid.Canvas.Font.Style := [fsBold];
+  end
+  else if Text = FormatFloat('0.000', cheapestArray[iline, ACol]) then
+  begin
+    Grid.Canvas.Brush.Color := clYellow;
+    Grid.Canvas.Font.Style := [fsBold];
+  end
+  else
+  begin
+    Grid.Canvas.Brush.Color := clWhite;
+    Grid.Canvas.Font.Style := [];
   end;
 
-  {If Heading Display Left justified in the cells}
-  with SupplierPricesGrid do
-  begin
-    const Gap = 4;
-    var Text := Cells[ACol, ARow];
-    var WidthOfText := Canvas.TextWidth(Text);
-    var WidthOfCell := ColWidths[aCol];
-    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+  // *** Selection override ***
+  if gdSelected in State then
+    Grid.Canvas.Brush.Color := $00FFF0E1;
 
-    if ACol = 0 then
-    begin
-      if gdFixed in State then
-        Canvas.Brush.Color := SupplierPricesGrid.FixedColor else
-        if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
-          Canvas.Brush.Color := clWindow;
-      Canvas.FillRect(Rect);
-      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
-    end
-    else
-    begin
-      {Display the Columns Right justified in the cells}
-      if gdFixed in State then
-        Canvas.Brush.Color := SupplierPricesGrid.FixedColor else
-        if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
-          Canvas.Brush.Color := clWindow;
-      Canvas.FillRect(Rect);
-      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
-    end;
+  // *** Paint background ***
+  Grid.Canvas.FillRect(Rect);
+
+  // *** Draw text ***
+  if ACol = 0 then
+    Grid.Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text)
+  else
+  begin
+    WidthOfText := Grid.Canvas.TextWidth(Text);
+    WidthOfCell := Grid.ColWidths[ACol];
+    LeftOffset := WidthOfCell - WidthOfText - Gap;
+    Grid.Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
   end;
 
-  with Sender as TStringGrid, Canvas do
+  // *** Draw selection rectangle ***
+  if gdSelected in State then
   begin
-    if (gdselected in State) then
-    begin
-      //draw a box around the selected cell
-      pen.Color := clHighlight;
-      pen.Width := 1;
-      polyline([point(rect.left+1,rect.top+1),
-                point(rect.right-2,rect.top+1),
-                point(rect.right-2,rect.bottom-2),
-                point(rect.left+1,rect.bottom-2),
-                point(rect.left+1,rect.top+1)]);
-      end;
-    if (lCol = 0) or (lRow = 0) then
-    begin
-      //default drawing has been switched off in the grid so we have
-      //to draw the highlight and shadow on 3d boxes
-      pen.color := clBtnHighlight;
-      polyline([point(rect.left,rect.bottom-1),
-                point(rect.left,rect.top),
-                point(rect.right,rect.top)]);
-      pen.color := clBtnShadow;
-      polyline([point(rect.right-1,rect.top+1),
-                point(rect.right-1,rect.bottom-1),
-                point(rect.left,rect.bottom-1)]);
-    end;
+    Grid.Canvas.Pen.Color := clHighlight;
+    Grid.Canvas.Pen.Width := 1;
+    Grid.Canvas.Polyline([
+      Point(Rect.Left+1, Rect.Top+1),
+      Point(Rect.Right-2, Rect.Top+1),
+      Point(Rect.Right-2, Rect.Bottom-2),
+      Point(Rect.Left+1, Rect.Bottom-2),
+      Point(Rect.Left+1, Rect.Top+1)
+    ]);
+  end;
+
+  // *** Draw fixed-cell 3D borders ***
+  if (ACol = 0) or (ARow = 0) then
+  begin
+    Grid.Canvas.Pen.Color := clBtnHighlight;
+    Grid.Canvas.Polyline([
+      Point(Rect.Left, Rect.Bottom-1),
+      Point(Rect.Left, Rect.Top),
+      Point(Rect.Right, Rect.Top)
+    ]);
+
+    Grid.Canvas.Pen.Color := clBtnShadow;
+    Grid.Canvas.Polyline([
+      Point(Rect.Right-1, Rect.Top+1),
+      Point(Rect.Right-1, Rect.Bottom-1),
+      Point(Rect.Left, Rect.Bottom-1)
+    ]);
   end;
 end;
 

@@ -138,7 +138,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       738
       42)
     object SaveBitBtn: TBitBtn
-      Left = 517
+      Left = 511
       Top = 10
       Width = 75
       Height = 25
@@ -203,10 +203,10 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = SaveBitBtnClick
-      ExplicitLeft = 511
+      ExplicitLeft = 505
     end
     object CancelBitBtn: TBitBtn
-      Left = 605
+      Left = 599
       Top = 10
       Width = 75
       Height = 25
@@ -272,10 +272,10 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 599
+      ExplicitLeft = 593
     end
     object PrintBitBtn: TBitBtn
-      Left = 427
+      Left = 421
       Top = 10
       Width = 75
       Height = 25
@@ -283,7 +283,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       Caption = 'Print'
       TabOrder = 2
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 421
+      ExplicitLeft = 415
     end
   end
   object pnlBody: TPanel
@@ -355,7 +355,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
               Height = 106
               Align = alClient
               ColCount = 2
-              DefaultColWidth = 195
+              DefaultColWidth = 250
               DefaultRowHeight = 20
               DrawingStyle = gdsGradient
               Enabled = False
@@ -370,10 +370,10 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
               OnMouseUp = SelectedPricesGridMouseUp
               OnSelectCell = SelectedPricesGridSelectCell
               OnTopLeftChanged = SelectedPricesGridTopLeftChanged
-              ExplicitWidth = 607
+              ExplicitTop = -2
               ColWidths = (
-                195
-                84)
+                250
+                90)
               RowHeights = (
                 20
                 20
@@ -657,7 +657,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
               Height = 269
               Align = alClient
               ColCount = 2
-              DefaultColWidth = 195
+              DefaultColWidth = 250
               DefaultRowHeight = 20
               DefaultDrawing = False
               DrawingStyle = gdsGradient
@@ -678,8 +678,8 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
               ExplicitWidth = 607
               ExplicitHeight = 260
               ColWidths = (
-                195
-                84)
+                250
+                93)
             end
           end
         end
@@ -697,8 +697,8 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       
         'order by Enquiry, Line, Supplier_EnquiryQty.Supplier, Supplier_E' +
         'nquiryQty.Branch_no, Quantity')
-    Left = 240
-    Top = 424
+    Left = 400
+    Top = 448
     ParamData = <
       item
         Name = 'enquiry'
@@ -722,8 +722,8 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       'where (Enquiry = :Enquiry) AND'
       '(Line = :Line)'
       'order by Quantity')
-    Left = 168
-    Top = 424
+    Left = 328
+    Top = 464
     ParamData = <
       item
         Name = 'Enquiry'
@@ -759,8 +759,8 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       'where (Enquiry = :Enquiry) AND'
       '(Line = :Line) AND'
       '(Quantity = :Quantity)')
-    Left = 440
-    Top = 400
+    Left = 504
+    Top = 312
     ParamData = <
       item
         Name = 'Cost'
@@ -893,8 +893,8 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
   end
   object PricesPopUp: TPopupMenu
     OnPopup = PricesPopUpPopup
-    Left = 514
-    Top = 413
+    Left = 538
+    Top = 301
     object Applysamemarkup: TMenuItem
       Caption = 'Apply same markup for all'
       OnClick = ApplysamemarkupClick

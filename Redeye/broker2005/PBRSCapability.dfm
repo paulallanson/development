@@ -7,13 +7,13 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 332
@@ -28,15 +28,15 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
     object Label1: TLabel
       Left = 8
       Top = 18
-      Width = 51
-      Height = 13
+      Width = 57
+      Height = 17
       Caption = 'Capability'
     end
     object edtCapability: TEdit
       Left = 72
       Top = 10
       Width = 225
-      Height = 21
+      Height = 25
       TabOrder = 0
       OnChange = edtCapabilityChange
     end
@@ -130,14 +130,14 @@ object PBRSCapabilityfrm: TPBRSCapabilityfrm
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 2
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <

@@ -3,7 +3,7 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
   Top = 113
   Caption = 'Quote Customer Report'
   ClientHeight = 519
-  ClientWidth = 1145
+  ClientWidth = 1362
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,8 +13,8 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
   Scaled = False
   TextHeight = 13
   object qrReport: TQuickRep
-    Left = -3
-    Top = -5
+    Left = -35
+    Top = -21
     Width = 1403
     Height = 992
     ShowingPreview = False
@@ -171,13 +171,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
       KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblRepTotalASP: TQRLabel
-        Left = 958
+        Left = 979
         Top = 15
         Width = 103
         Height = 19
         Size.Values = (
           40.216666666666670000
-          2027.766666666667000000
+          2072.216666666667000000
           31.750000000000000000
           218.016666666666700000)
         XLColumn = 0
@@ -200,13 +200,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRLabel20: TQRLabel
-        Left = 451
+        Left = 472
         Top = 15
         Width = 64
         Height = 19
         Size.Values = (
           40.216666666666670000
-          954.616666666666700000
+          999.066666666666700000
           31.750000000000000000
           135.466666666666700000)
         XLColumn = 0
@@ -229,13 +229,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object qrlblRepTotalSSP: TQRLabel
-        Left = 859
+        Left = 877
         Top = 15
         Width = 103
         Height = 19
         Size.Values = (
           40.216666666666670000
-          1818.216666666667000000
+          1856.316666666667000000
           31.750000000000000000
           218.016666666666700000)
         XLColumn = 0
@@ -258,13 +258,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object qrlblRepTotalCost: TQRLabel
-        Left = 758
+        Left = 778
         Top = 15
         Width = 103
         Height = 19
         Size.Values = (
           40.216666666666670000
-          1604.433333333333000000
+          1646.766666666667000000
           31.750000000000000000
           218.016666666666700000)
         XLColumn = 0
@@ -287,15 +287,15 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object qrbdataFooter: TQRDBText
-        Left = 531
+        Left = 552
         Top = 15
         Width = 173
         Height = 19
         Size.Values = (
-          39.687500000000000000
-          1124.479166666667000000
+          40.216666666666670000
+          1168.400000000000000000
           31.750000000000000000
-          365.125000000000000000)
+          366.183333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -320,15 +320,15 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRShape1: TQRShape
-        Left = 700
+        Left = 721
         Top = 5
         Width = 446
         Height = 10
         Size.Values = (
           21.166666666666670000
-          1481.666666666667000000
+          1526.116666666667000000
           10.583333333333330000
-          944.562500000000000000)
+          944.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -336,13 +336,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         VertAdjust = 0
       end
       object qrlblRepMarginPerc: TQRLabel
-        Left = 1027
+        Left = 1048
         Top = 15
         Width = 114
         Height = 19
         Size.Values = (
           40.216666666666670000
-          2173.816666666667000000
+          2218.266666666667000000
           31.750000000000000000
           241.300000000000000000)
         XLColumn = 0
@@ -382,13 +382,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
       KeepOnOnePage = False
       BandType = rbSummary
       object qrlblGrandTotalMarginPerc: TQRLabel
-        Left = 987
+        Left = 1008
         Top = 15
         Width = 154
         Height = 19
         Size.Values = (
           40.216666666666670000
-          2089.150000000000000000
+          2133.600000000000000000
           31.750000000000000000
           325.966666666666700000)
         XLColumn = 0
@@ -411,13 +411,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRLabel21: TQRLabel
-        Left = 586
+        Left = 607
         Top = 15
         Width = 95
         Height = 19
         Size.Values = (
           40.216666666666670000
-          1240.366666666667000000
+          1284.816666666667000000
           31.750000000000000000
           201.083333333333300000)
         XLColumn = 0
@@ -440,13 +440,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object qrlblGrandTotalSSP: TQRLabel
-        Left = 846
+        Left = 865
         Top = 15
         Width = 115
         Height = 19
         Size.Values = (
           40.216666666666670000
-          1790.700000000000000000
+          1830.916666666667000000
           31.750000000000000000
           243.416666666666700000)
         XLColumn = 0
@@ -469,13 +469,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object qrlblGrandTotalCost: TQRLabel
-        Left = 746
+        Left = 766
         Top = 15
         Width = 115
         Height = 19
         Size.Values = (
           40.216666666666670000
-          1579.033333333333000000
+          1621.366666666667000000
           31.750000000000000000
           243.416666666666700000)
         XLColumn = 0
@@ -498,13 +498,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object qrlblGrandTotalASP: TQRLabel
-        Left = 946
+        Left = 967
         Top = 15
         Width = 115
         Height = 19
         Size.Values = (
           40.216666666666670000
-          2002.366666666667000000
+          2046.816666666667000000
           31.750000000000000000
           243.416666666666700000)
         XLColumn = 0
@@ -527,15 +527,15 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRShape3: TQRShape
-        Left = 700
+        Left = 721
         Top = -4
         Width = 446
         Height = 18
         Size.Values = (
-          37.041666666666670000
-          1481.666666666667000000
-          -7.937500000000000000
-          944.562500000000000000)
+          38.100000000000000000
+          1526.116666666667000000
+          -8.466666666666667000
+          944.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -544,15 +544,15 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         VertAdjust = 0
       end
       object QRShape4: TQRShape
-        Left = 700
+        Left = 721
         Top = 35
         Width = 446
         Height = 11
         Size.Values = (
-          23.812500000000000000
-          1481.666666666667000000
-          74.083333333333340000
-          944.562500000000000000)
+          23.283333333333330000
+          1526.116666666667000000
+          74.083333333333330000
+          944.033333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -646,19 +646,19 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 11
+        Left = 0
         Top = 3
         Width = 36
         Height = 19
         Size.Values = (
           40.216666666666670000
-          23.283333333333330000
+          0.000000000000000000
           6.350000000000000000
           76.200000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
-        Alignment = taRightJustify
+        Alignment = taLeftJustify
         AlignToBand = False
         Color = clWhite
         DataSet = qryReport
@@ -711,13 +711,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 60
+        Left = 55
         Top = 3
         Width = 65
         Height = 19
         Size.Values = (
           40.216666666666670000
-          127.000000000000000000
+          116.416666666666700000
           6.350000000000000000
           137.583333333333300000)
         XLColumn = 0
@@ -1283,13 +1283,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
       ParentBand = qrbndPageHeader
       PrintOrder = cboAfterParent
       object QRLabel1: TQRLabel
-        Left = 8
+        Left = 0
         Top = 0
         Width = 36
         Height = 20
         Size.Values = (
           42.333333333333330000
-          16.933333333333330000
+          0.000000000000000000
           0.000000000000000000
           76.200000000000000000)
         XLColumn = 0
@@ -1312,13 +1312,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRLabel2: TQRLabel
-        Left = 60
+        Left = 55
         Top = 0
         Width = 28
         Height = 20
         Size.Values = (
           42.333333333333330000
-          127.000000000000000000
+          116.416666666666700000
           0.000000000000000000
           59.266666666666670000)
         XLColumn = 0
@@ -1765,13 +1765,13 @@ object PBRPQuoteCustFrm: TPBRPQuoteCustFrm
         FontSize = 8
       end
       object QRLabel10: TQRLabel
-        Left = 1261
+        Left = 1299
         Top = 0
         Width = 29
         Height = 19
         Size.Values = (
           40.216666666666670000
-          2669.116666666667000000
+          2749.550000000000000000
           0.000000000000000000
           61.383333333333330000)
         XLColumn = 0

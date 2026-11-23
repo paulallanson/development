@@ -28,7 +28,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         Width = 200
       end>
     ExplicitTop = 413
-    ExplicitWidth = 848
+    ExplicitWidth = 883
   end
   object pnlBody: TPanel
     Left = 0
@@ -39,7 +39,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 848
+    ExplicitWidth = 883
     ExplicitHeight = 413
     object dbgDetails: TDBGrid
       Left = 0
@@ -194,7 +194,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       ParentBackground = False
       TabOrder = 1
       ExplicitTop = 372
-      ExplicitWidth = 848
+      ExplicitWidth = 883
       object lblSearch: TLabel
         Left = 16
         Top = 14
@@ -228,7 +228,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 3
+        ExplicitLeft = 605
         DesignSize = (
           277
           39)
@@ -305,33 +305,36 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       ParentBackground = False
       TabOrder = 2
       ExplicitTop = 336
-      ExplicitWidth = 848
+      ExplicitWidth = 883
       DesignSize = (
         889
         36)
       object Label1: TLabel
-        Left = 714
+        Left = 708
         Top = 10
         Width = 88
         Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Machine Hours'
+        ExplicitLeft = 714
       end
       object Label4: TLabel
-        Left = 538
+        Left = 532
         Top = 10
         Width = 92
         Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Overtime Hours'
+        ExplicitLeft = 538
       end
       object Label5: TLabel
-        Left = 365
+        Left = 359
         Top = 10
         Width = 92
         Height = 17
         Anchors = [akTop, akRight]
         Caption = 'Standard Hours'
+        ExplicitLeft = 365
       end
       object lblDateFrom: TLabel
         Left = 16
@@ -341,7 +344,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         Caption = 'Date'
       end
       object memMachine: TMemo
-        Left = 805
+        Left = 799
         Top = 8
         Width = 65
         Height = 21
@@ -352,10 +355,10 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         TabOrder = 0
         WantReturns = False
         WordWrap = False
-        ExplicitLeft = 764
+        ExplicitLeft = 793
       end
       object memOvertime: TMemo
-        Left = 634
+        Left = 628
         Top = 8
         Width = 65
         Height = 21
@@ -366,9 +369,10 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         TabOrder = 1
         WantReturns = False
         WordWrap = False
+        ExplicitLeft = 622
       end
       object memLabour: TMemo
-        Left = 463
+        Left = 457
         Top = 8
         Width = 65
         Height = 21
@@ -379,6 +383,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         TabOrder = 2
         WantReturns = False
         WordWrap = False
+        ExplicitLeft = 451
       end
       object dtmDateFrom: TDateTimePicker
         Left = 56

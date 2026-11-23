@@ -7,7 +7,7 @@ uses
   DBGrids, PBJobBagDM, ExtCtrls, ComCtrls, DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects,
   Menus, PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX, OleCtrls, SHDocVw, pbSupplierInvoiceDM,
   ImgList, Clipbrd, ToolWin, FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param, DragDrop, DropTarget,
-  DragDropFile, DropComboTarget;
+  DragDropFile, DropComboTarget, Vcl.Shell.ShellCtrls;
 
 type
   TPBMaintJobBagFrm = class(TForm)
@@ -381,7 +381,6 @@ type
     btnEmail: TToolButton;
     btnAttach: TToolButton;
     imgDocuments: TImageList;
-    lstvwDocuments: TListView;
     chkbxReadytoInvoice: TCheckBox;
     lblJobRevenue: TLabel;
     dblkpJobRevenue: TDBLookupComboBox;
@@ -390,7 +389,6 @@ type
     edtDateCopiesReceived: TEdit;
     btnDateCopiesReceived: TBitBtn;
     lblCopiesReceivedBy: TLabel;
-    dirlstJobDocuments: TDirectoryListBox;
     pnlDocumentsLeft: TPanel;
     Label5: TLabel;
     edtAccountManager: TEdit;
@@ -459,6 +457,8 @@ type
     pmnuViewPI: TMenuItem;
     DropComboTarget1: TDropComboTarget;
     pnlBody: TPanel;
+    slvDocuments: TShellListView;
+    stvDocuments: TShellTreeView;
     procedure btnCancelClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -615,17 +615,16 @@ type
     procedure btnExcelClick(Sender: TObject);
     procedure btnEmailClick(Sender: TObject);
     procedure btnAttachClick(Sender: TObject);
-    procedure lstvwDocumentsDblClick(Sender: TObject);
+    procedure slvDocumentsDblClick(Sender: TObject);
     procedure pmnuPasteClick(Sender: TObject);
     procedure pmnuDeleteClick(Sender: TObject);
     procedure chkbxFileCopiesClick(Sender: TObject);
     procedure btnEmailSupplierClick(Sender: TObject);
-    procedure lstvwDocumentsColumnClick(Sender: TObject;
+    procedure slvDocumentsColumnClick(Sender: TObject;
       Column: TListColumn);
-    procedure lstvwDocumentsCompare(Sender: TObject; Item1,
+    procedure slvDocumentsCompare(Sender: TObject; Item1,
       Item2: TListItem; Data: Integer; var Compare: Integer);
     procedure btnDateCopiesReceivedClick(Sender: TObject);
-    procedure dirlstJobDocumentsChange(Sender: TObject);
     procedure btnSubRepClick(Sender: TObject);
     procedure chkbxInvoiceThisWeekClick(Sender: TObject);
     procedure btnEndUserClick(Sender: TObject);
@@ -634,6 +633,11 @@ type
     procedure rdgrpEnclosingTypeClick(Sender: TObject);
     procedure btnPackFormatClick(Sender: TObject);
     procedure DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint; var Effect: Integer);
+    procedure slvDocumentsMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure stvDocumentsDragDrop(Sender, Source: TObject; X, Y: Integer);
+    procedure stvDocumentsDragOver(Sender, Source: TObject; X, Y: Integer;
+      State: TDragState; var Accept: Boolean);
   private
     bReadPage: boolean;
     bOK: boolean;
@@ -920,7 +924,7 @@ begin
               begin
                 sParentPath := dmBroker.GetCompanyJobBagDirectory + '\' + inttostr(JobBag.dbKey) + '\';
                 sPath := sParentPath;
-                dirlstJobDocuments.Directory := sPath;
+                stvDocuments.root := sPath;
 
                 ShowDocuments;
               end;
@@ -2523,8 +2527,16 @@ begin
 end;
 
 function TPBMaintJobBagFrm.GetFilesPath: string;
+var
+  DocDir: string;
 begin
-  Result := sPath;
+  DocDir := dmBroker.GetCompanyJobBagDirectory;
+  DocDir := IncludeTrailingPathDelimiter(DocDir) + IntToStr(JobBag.dbKey);
+
+  if stvDocuments.TopItem.Text <> stvDocuments.Selected.Text then
+    DocDir := IncludeTrailingPathDelimiter(DocDir) + stvDocuments.Selected.Text;
+
+  Result := DocDir;
 end;
 
 procedure TPBMaintJobBagFrm.btnDateClick(Sender: TObject);
@@ -2804,9 +2816,9 @@ begin
   sSource := dmBroker.GetCompanyQuoteDirectory + '\' + floattostr(JobBag.datamodule.QuoteNo) + '\' ;
   sDest :=  dmBroker.GetCompanyJobBagDirectory + '\' + inttostr(JobBag.DbKey) + '\';
 
-  for irow := 0 to pred(lstvwDocuments.items.count) do
+  for irow := 0 to pred(slvDocuments.items.count) do
     begin
-      ListItem := lstvwDocuments.items[irow];
+      ListItem := slvDocuments.items[irow];
       //copy the file
       try
         filecopy(sSource+ListItem.Caption, sDest+ListItem.Caption);
@@ -2968,8 +2980,17 @@ end;
 procedure TPBMaintJobBagFrm.DropComboTarget1Drop(Sender: TObject; ShiftState: TShiftState; APoint: TPoint;
   var Effect: Integer);
 begin
-  var TargetPath := GetFilesPath;
-  DropComboTarget1.SaveDroppedFiles(TargetPath, ShowDocuments);
+  slvDocuments.AutoRefresh := true;
+  try
+    var TargetPath := GetFilesPath;
+    DropComboTarget1.SaveDroppedFiles(TargetPath,
+      procedure
+        begin
+          ShowDocuments;
+        end);
+  finally
+    slvDocuments.AutoRefresh := false;
+  end;
 end;
 
 procedure TPBMaintJobBagFrm.DropPurchaseOrders;
@@ -4925,20 +4946,32 @@ begin
 end;
 
 procedure TPBMaintJobBagFrm.ShowDocuments;
-//var
-//  sPath: string;
+var
+  sPath: string;
 begin
-//  sPath := dmBroker.GetCompanyJobBagDirectory + '\' + inttostr(JobBag.dbKey) + '\'
 
-  // Assign a Imagelist to the ListView
-  lstvwDocuments.Clear;
-  lstvwDocuments.LargeImages := imgDocuments;
+(*  // Assign a Imagelist to the ListView
+  slvDocuments.Clear;
+  slvDocuments.LargeImages := imgDocuments;
   // Show Listview in Report Style and add 2 Columns
-  lstvwDocuments.ViewStyle := vsReport;
+  slvDocuments.ViewStyle := vsReport;
 
   // Show the documents and directories associated with the job
-  ShowListViewDocuments(sPath, lstvwDocuments, imgDocuments);
-  lstvwDocumentsColumnClick(lstvwDocuments,lstvwDocuments.Columns[1]);
+
+  ShowListViewDocuments(sPath, slvDocuments, imgDocuments);
+  slvDocumentsColumnClick(slvDocuments,slvDocuments.Columns[1]);
+*)
+
+  sPath := dmBroker.GetCompanyJobBagDirectory + '\' + inttostr(JobBag.dbKey) + '\';
+
+  try
+    stvDocuments.root := sPath;
+    slvDocuments.root := sPath;
+  except
+    messagedlg('The document location hasn''t been defined for Sales Orders within Company Preferences. Contact your Firebelly administrator', mtError, [mbAbort], 0);
+    stvDocuments.visible := false;
+    slvDocuments.visible := false;
+  end;
 
   tlbrDocuments.Enabled := (Mode <> jbAdd) and (Mode <> jbRepeat) and (Mode <> jbConvert) and (Mode <> jbView);
   if  (Mode = jbAdd) or
@@ -4946,7 +4979,7 @@ begin
       (Mode = jbConvert) or
       (Mode = jbView) then
         begin
-          lstvwDocuments.PopupMenu := pmnDummy;
+          slvDocuments.PopupMenu := pmnDummy;
         end;
 end;
 
@@ -8543,17 +8576,86 @@ begin
   JobBag.Departments[inx].Specification := (Sender as TMemo).Text;
 end;
 
+procedure TPBMaintJobBagFrm.stvDocumentsDragDrop(Sender, Source: TObject; X,
+  Y: Integer);
+var
+  files: TStringList;
+  slv : TShellListView;
+  cnt: integer;
+  node: TTreeNode;
+  sNewFile, sOldFile: string;
+  pNewFile, pOldFile: array[0..255] of Char;
+begin
+  if (slvDocuments.selected = nil) or (X = 0) or (Y = 0) then
+    exit;
+
+  if (Source = slvDocuments) and (slvDocuments.ItemIndex > -1) and (Sender = stvDocuments) then
+    begin
+      try
+        node := stvDocuments.GetNodeAt(X, Y);
+      except
+        exit;
+      end;
+    end
+  else
+    exit;
+
+  slv := TShellListView(Source);
+
+  files := TStringList.Create;
+  try
+    if NOT slv.MultiSelect then
+      files.Add(slv.SelectedFolder.PathName)
+    else //multiselect
+    begin
+      for cnt := 0 to -1 + slv.Items.Count do
+        begin
+      //selected and NOT folder
+          if slv.Items[cnt].Selected AND (NOT slv.Folders[cnt].IsFolder) then
+            begin
+              if pos('.',slv.Folders[cnt].DisplayName) > 0 then
+                sNewFile := slv.Folders[cnt].DisplayName
+              else
+                sNewFile := slv.Folders[cnt].DisplayName + ExtractFileExt(slv.Folders[cnt].PathName);
+
+              if pos(Node.Text,slvDocuments.Root) > 0 then
+                sNewFile := slvDocuments.Root + sNewFile
+              else
+                sNewFile := slvDocuments.Root + Node.Text + '\' + sNewFile;
+
+              sOldFile := slv.Folders[cnt].PathName;
+
+              StrPCopy(pNewFile, sNewFile);
+              StrPCopy(pOldFile, sOldFile);
+              movefile(pOldFile, pNewfile);
+            end;
+        end;
+    end;
+  finally
+    files.Free;
+  end;
+
+end;
+
+procedure TPBMaintJobBagFrm.stvDocumentsDragOver(Sender, Source: TObject; X,
+  Y: Integer; State: TDragState; var Accept: Boolean);
+begin
+  Accept := Source is TShellListView;
+end;
+
 procedure TPBMaintJobBagFrm.ShowQuoteDocuments;
 var
   sPath: string;
 begin
   sPath := dmBroker.GetCompanyQuoteDirectory + '\' + floattostr(JobBag.datamodule.QuoteNo) + '\';
-  // Assign a Imagelist to the ListView
-  lstvwDocuments.Clear;
-  lstvwDocuments.LargeImages := imgDocuments;
+
+(*  // Assign a Imagelist to the ListView
+  slvDocuments.Clear;
+  slvDocuments.LargeImages := imgDocuments;
   // Show Listview in Report Style and add 2 Columns
-  lstvwDocuments.ViewStyle := vsReport;
-  ShowListViewDocuments(sPath, lstvwDocuments, imgDocuments);
+  slvDocuments.ViewStyle := vsReport;
+  ShowListViewDocuments(sPath, slvDocuments, imgDocuments);
+*)
 
   tlbrDocuments.Enabled := (Mode <> jbAdd) and (Mode <> jbRepeat) and (Mode <> jbConvert) and (Mode <> jbView);
   if  (Mode = jbAdd) or
@@ -8561,7 +8663,7 @@ begin
       (Mode = jbConvert) or
       (Mode = jbView) then
         begin
-          lstvwDocuments.PopupMenu := pmnDummy;
+          slvDocuments.PopupMenu := pmnDummy;
         end;
 end;
 
@@ -8739,14 +8841,14 @@ begin
 
       if docSaved then
       begin
-        lstvwDocuments.itemindex := -1;
-        for i := 0 to pred(lstvwDocuments.Items.count) do
+        slvDocuments.itemindex := -1;
+        for i := 0 to pred(slvDocuments.Items.count) do
           begin
-            if lstvwDocuments.Items[i].caption = sFileName then
-              lstvwDocuments.itemindex := i;
+            if slvDocuments.Items[i].caption = sFileName then
+              slvDocuments.itemindex := i;
           end;
-        if lstvwDocuments.itemindex >= 0 then
-          lstvwDocumentsDblClick(self);
+        if slvDocuments.itemindex >= 0 then
+          slvDocumentsDblClick(self);
       end;
     end
     else
@@ -8793,7 +8895,7 @@ begin
     end);
 end;
 
-procedure TPBMaintJobBagFrm.lstvwDocumentsDblClick(Sender: TObject);
+procedure TPBMaintJobBagFrm.slvDocumentsDblClick(Sender: TObject);
 var
 //  sPath: string;
   sDoc: string;
@@ -8805,14 +8907,14 @@ begin
   if sPath = '' then
     exit;
 
-  if lstvwDocuments.ItemIndex = -1 then
+  if slvDocuments.ItemIndex = -1 then
     begin
       sDoc := '';
       exit;
     end
   else
     begin
-      sDoc := lstvwDocuments.Items[lstvwDocuments.ItemIndex].caption;
+      sDoc := slvDocuments.Items[slvDocuments.ItemIndex].caption;
     end;
 
   Params := '' ;
@@ -8843,6 +8945,13 @@ begin
 
 end;
 
+procedure TPBMaintJobBagFrm.slvDocumentsMouseMove(Sender: TObject;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  if Shift = [ssLeft] then
+    (Sender as TShellListView).BeginDrag(false, 5);
+end;
+
 procedure TPBMaintJobBagFrm.pmnuPasteClick(Sender: TObject);
 var
   DocDir: string;
@@ -8865,30 +8974,30 @@ var
   ListItem: TListItem;
 begin
   sPath :=  dmBroker.GetCompanyJobBagDirectory + '\' + inttostr(JobBag.dbkey) + '\';
-  if (lstvwDocuments.selcount = 1) then
+  if (slvDocuments.selcount = 1) then
     begin
-      iRow := lstvwDocuments.ItemIndex;
+      iRow := slvDocuments.ItemIndex;
       if iRow = -1 then
         exit;
       if messagedlg('Delete the selected document?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
         begin
-          ListItem := lstvwDocuments.items[irow];
+          ListItem := slvDocuments.items[irow];
           sFileName := ListItem.caption;
 
-          lstvwDocuments.Items.Delete(iRow);
+          slvDocuments.Items.Delete(iRow);
           deletefile(sPath+sfileName);
         end
     end
   else
     begin
-      for iRow := pred(lstvwDocuments.items.count) downto 0 do
+      for iRow := pred(slvDocuments.items.count) downto 0 do
         begin
-          if lstvwDocuments.items[iRow].Selected then
+          if slvDocuments.items[iRow].Selected then
             begin
-              ListItem := lstvwDocuments.items[irow];
+              ListItem := slvDocuments.items[irow];
               sFileName := ListItem.caption;
 
-              lstvwDocuments.Items.Delete(iRow);
+              slvDocuments.Items.Delete(iRow);
               deletefile(sPath+sfileName);
             end;
 
@@ -8942,7 +9051,7 @@ begin
   end;
 end;
 
-procedure TPBMaintJobBagFrm.lstvwDocumentsColumnClick(Sender: TObject;
+procedure TPBMaintJobBagFrm.slvDocumentsColumnClick(Sender: TObject;
   Column: TListColumn);
 begin
   TListView(Sender).SortType := stNone;
@@ -8960,7 +9069,7 @@ begin
     TListView(Sender).SortType := stText;
 end;
 
-procedure TPBMaintJobBagFrm.lstvwDocumentsCompare(Sender: TObject; Item1,
+procedure TPBMaintJobBagFrm.slvDocumentsCompare(Sender: TObject; Item1,
   Item2: TListItem; Data: Integer; var Compare: Integer);
 var
   dtDate1, dtDate2: TDateTime;
@@ -9001,23 +9110,6 @@ begin
   finally
     DateSelV5Form.Free;
   end;
-end;
-
-procedure TPBMaintJobBagFrm.dirlstJobDocumentsChange(Sender: TObject);
-begin
-  if FActivated then
-    begin
-      if pos(inttostr(JobBag.dbKey),dirlstJobDocuments.directory) = 0 then
-        begin
-          messagedlg('The selected folder is outside the location for this job bag and is therefore invalid', mtError,[mbOk], 0);
-          dirlstJobDocuments.directory := sParentPath;
-        end;
-
-      sPath := trim(dirlstJobDocuments.directory) + '\';
-
-      {Show documents in this folder}
-      ShowDocuments;
-    end;
 end;
 
 procedure TPBMaintJobBagFrm.btnSubRepClick(Sender: TObject);

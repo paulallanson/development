@@ -8,11 +8,11 @@ object frmPBLUSupplierRpts: TfrmPBLUSupplierRpts
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -86,7 +86,7 @@ object frmPBLUSupplierRpts: TfrmPBLUSupplierRpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 328
+      Left = 322
       Top = 8
       Width = 75
       Height = 25
