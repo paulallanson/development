@@ -235,7 +235,6 @@ type
     GroupBox1: TGroupBox;
     ProofByLabel: TLabel;
     ProofStatLabel: TLabel;
-    ProofsReqChkBox: TCheckBox;
     ProofsDateEdit: TEdit;
     ProofDateBtn: TBitBtn;
     ProofsBitBtn: TBitBtn;
@@ -362,6 +361,7 @@ type
     ocWord: TOleContainer;
     ocExcel: TOleContainer;
     pnlBody: TPanel;
+    ProofsReqChkBox: TCheckBox;
     procedure ValidateQty(Sender: TObject);
     procedure ValidateMoney(Sender: TObject);
     procedure SaveValue(Sender: TObject);
@@ -579,6 +579,8 @@ type
     procedure CustReqDateEditChange(Sender: TObject);
     procedure chkbxFileCopiesClick(Sender: TObject);
     procedure edtAltPurchaseOrderExit(Sender: TObject);
+    procedure sgIntNotesDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
   private
     dtmdlActivities : TdtmdlActivity;
     iOldProductType: integer;
@@ -3209,7 +3211,8 @@ begin
       if gdFixed in State then
         Canvas.Brush.Color := DelivDetsStringGrid.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
@@ -3219,12 +3222,14 @@ begin
       if gdFixed in State then
         Canvas.Brush.Color := DelivDetsStringGrid.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end;
   end;
+
 end;
 
 procedure TPBMaintPOrdFrm.UpdatePOExtChg;
@@ -3445,7 +3450,8 @@ begin
         if gdFixed in State then
         Canvas.Brush.Color := ExtChgDetsStringGrid.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
@@ -3455,7 +3461,8 @@ begin
       if gdFixed in State then
         Canvas.Brush.Color := ExtChgDetsStringGrid.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
@@ -5444,7 +5451,8 @@ begin
       if gdFixed in State then
         Canvas.Brush.Color := sgCallOff.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
@@ -5454,7 +5462,8 @@ begin
       if gdFixed in State then
         Canvas.Brush.Color := sgCallOff.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
@@ -6969,6 +6978,44 @@ begin
     self.SelectedLine.IntNoteList[inx].Narrative.DataInfo;
 end;
 
+procedure TPBMaintPOrdFrm.sgIntNotesDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
+begin
+  with (Sender as TStringGrid) do
+  begin
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 1) or (ACol = 2) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := DelivDetsStringGrid.FixedColor else
+        if gdSelected in State then
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end
+    else
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := DelivDetsStringGrid.FixedColor else
+        if gdSelected in State then
+//          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end;
+  end;
+
+
+end;
+
 procedure TPBMaintPOrdFrm.ResetIntNotesDisplay;
 begin
   self.mmIntNote.Clear;
@@ -8124,22 +8171,24 @@ begin
     if (lCol = 3) or (lCol = 4) or (lCol = 5) or (lCol = 6) or (lCol = 7)  or (lCol = 8) then
     begin
       //right align
-      if gdFixed in State then
+(*      if gdFixed in State then
         Canvas.Brush.Color := strgrdSalesInvs.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
+*)
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end
     else
     begin
       //left align
-      if gdFixed in State then
+(*      if gdFixed in State then
         Canvas.Brush.Color := strgrdSalesInvs.FixedColor else
         if gdSelected in State then
-          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clmenuHighlight else
           Canvas.Brush.Color := clWindow;
+*)
       Canvas.FillRect(Rect);
       Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end;
@@ -9009,7 +9058,7 @@ begin
         if gdFixed in State then
           Canvas.Brush.Color := sgNCADetails.FixedColor else
           if gdSelected in State then
-            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clmenuHighlight else
             Canvas.Brush.Color := clWindow;
         Canvas.FillRect(Rect);
         Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
@@ -9020,7 +9069,7 @@ begin
         if gdFixed in State then
           Canvas.Brush.Color := sgNCADetails.FixedColor else
           if gdSelected in State then
-            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clMenuHighlight else
             Canvas.Brush.Color := clWindow;
         Canvas.FillRect(Rect);
         Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);

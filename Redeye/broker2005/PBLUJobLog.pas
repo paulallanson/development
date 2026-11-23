@@ -80,7 +80,7 @@ var
 begin
   stsbrDetails.Top := Screen.Height - stsbrDetails.Height;
 
-  IniFile := TIniFile.Create('datacollect.ini');
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     with IniFile do
     begin
@@ -127,15 +127,15 @@ begin
       edtSearch.Text := dtmdlJobBagLog.WCOperatorName;
     end;
 
-  CCSCommon.SetDBGridCols('', 'JobLogLU Col Order', 'datacollect.ini', self.dbgDetails);
-  CCSCommon.LoadFormLayout('datacollect.ini', self);
+  CCSCommon.SetDBGridCols('', 'JobLogLU Col Order', TfrmPBMainMenu.AppIniFile, self.dbgDetails);
+  CCSCommon.LoadFormLayout(TfrmPBMainMenu.AppIniFile, self);
 end;
 
 procedure TPBLUJobLogFrm.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  CCSCommon.SaveDBGridCols('', 'JobLogLU Col Order', 'datacollect.ini', self.dbgDetails);
-  CCSCommon.SaveFormLayout('datacollect.ini', self);
+  CCSCommon.SaveDBGridCols('', 'JobLogLU Col Order', TfrmPBMainMenu.AppIniFile, self.dbgDetails);
+  CCSCommon.SaveFormLayout(TfrmPBMainMenu.AppIniFile, self);
 
 end;
 
@@ -165,7 +165,7 @@ procedure TPBLUJobLogFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('datacollect.ini');
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     with IniFile do
     begin

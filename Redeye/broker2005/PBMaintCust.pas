@@ -471,6 +471,7 @@ type
     chkbxCTRLPCustomer: TCheckBox;
     DropComboTarget1: TDropComboTarget;
     pnlBody: TPanel;
+    TabSheet1: TTabSheet;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
@@ -3277,10 +3278,14 @@ begin
       end;
 
       if not pgCustomer.Pages[pgCustomer.ActivePageIndex].tabVisible then
-        pgCustomer.ActivePageIndex := 0;
+        begin
+          pgCustomer.ActivePageIndex := 0;
+        end;
     end
   else
-    pgCustomer.ActivePageIndex := 0;
+    begin
+      pgCustomer.ActivePageIndex := 0;
+    end;
 
   if CreditCheck then
     pgCustomer.ActivePage := tbFinancials;

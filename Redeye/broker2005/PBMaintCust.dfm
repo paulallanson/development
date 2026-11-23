@@ -55,8 +55,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ActivePage = tbDetails
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 1170
-      ExplicitHeight = 633
       object tbDetails: TTabSheet
         Caption = 'Details'
         object lblCreatedOn: TLabel
@@ -1099,7 +1097,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alLeft
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 601
           DesignSize = (
             673
             610)
@@ -1113,7 +1110,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Color = clBtnFace
             ParentColor = False
             TabOrder = 0
-            ExplicitHeight = 508
             DesignSize = (
               662
               517)
@@ -1676,22 +1672,19 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 489
-          ExplicitHeight = 601
           DesignSize = (
             495
             610)
           object grpbxCredit: TGroupBox
             Left = 6
             Top = 1
-            Width = 471
+            Width = 459
             Height = 576
             Anchors = [akLeft, akTop, akRight, akBottom]
             Caption = 'Credit Details'
             TabOrder = 0
-            ExplicitHeight = 567
             DesignSize = (
-              471
+              459
               576)
             object Label5: TLabel
               Tag = 100
@@ -1795,7 +1788,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 14
               Top = 222
-              Width = 472
+              Width = 460
               Height = 7
               Anchors = [akLeft, akTop, akRight]
               Shape = bsTopLine
@@ -1805,7 +1798,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Tag = 100
               Left = 0
               Top = 358
-              Width = 472
+              Width = 460
               Height = 7
               Anchors = [akLeft, akTop, akRight]
               Shape = bsTopLine
@@ -3250,7 +3243,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alBottom
           ParentBackground = False
           TabOrder = 3
-          ExplicitTop = 544
           DesignSize = (
             1168
             41)
@@ -3646,7 +3638,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Description Search'
           end
           object Label49: TLabel
-            Left = 922
+            Left = 910
             Top = 16
             Width = 84
             Height = 17
@@ -3663,7 +3655,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnChange = edtOrderSearchChange
           end
           object edtOrderNumber: TEdit
-            Left = 1017
+            Left = 1005
             Top = 12
             Width = 90
             Height = 25
@@ -3992,18 +3984,21 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Expanded = False
               FieldName = 'Description_Reference'
               Title.Caption = 'Descriptive Reference'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Rep_Name'
               Title.Caption = 'Rep'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Operator_Name'
               Title.Caption = 'Operator'
+              Width = 64
               Visible = True
             end>
         end
@@ -5407,6 +5402,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
       end
+      object TabSheet1: TTabSheet
+        Caption = 'TabSheet1'
+        ImageIndex = 13
+        TabVisible = False
+      end
     end
     object pnlFooter: TPanel
       Left = 0
@@ -5422,7 +5422,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         1176
         41)
       object DelLabel: TLabel
-        Left = 783
+        Left = 771
         Top = 13
         Width = 132
         Height = 17
@@ -5437,7 +5437,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitLeft = 795
       end
       object OKBitBtn: TBitBtn
-        Left = 929
+        Left = 917
         Top = 10
         Width = 75
         Height = 25
@@ -5511,10 +5511,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
         NumGlyphs = 2
         TabOrder = 4
         OnClick = OKBitBtnClick
-        ExplicitLeft = 923
+        ExplicitLeft = 911
       end
       object CancelBitBtn: TBitBtn
-        Left = 1009
+        Left = 997
         Top = 10
         Width = 75
         Height = 25
@@ -5589,7 +5589,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         NumGlyphs = 2
         TabOrder = 5
         OnClick = CancelBitBtnClick
-        ExplicitLeft = 1003
+        ExplicitLeft = 991
       end
       object PrintBitBtn: TBitBtn
         Left = 9
@@ -5705,7 +5705,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object NameEdit: TEdit
         Left = 108
         Top = 8
-        Width = 513
+        Width = 501
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         Color = clWhite
@@ -5714,7 +5714,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Text = 'NameEdit'
         OnChange = NameEditChange
         OnExit = NameEditExit
-        ExplicitWidth = 507
+        ExplicitWidth = 495
       end
     end
   end

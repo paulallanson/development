@@ -4,37 +4,37 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Supplier Capabilities'
-  ClientHeight = 214
-  ClientWidth = 410
+  ClientHeight = 237
+  ClientWidth = 432
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 13
+  TextHeight = 17
   object SupplierLabel: TLabel
     Left = 176
     Top = 8
-    Width = 83
-    Height = 13
+    Width = 92
+    Height = 17
     Caption = 'Supplier/Branch'
     Visible = False
   end
   object PrdTypLabel: TLabel
     Left = 176
-    Top = 88
-    Width = 65
-    Height = 13
+    Top = 96
+    Width = 76
+    Height = 17
     Caption = 'Product Type'
     Visible = False
   end
   object AllOrOneSuppRadioGroup: TRadioGroup
     Left = 8
     Top = 8
-    Width = 137
-    Height = 65
+    Width = 162
+    Height = 70
     ItemIndex = 0
     Items.Strings = (
       'All Suppliers'
@@ -44,8 +44,8 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     OnClick = AllOrOneSuppRadioGroupClick
   end
   object PrintBitBtn: TBitBtn
-    Left = 328
-    Top = 184
+    Left = 336
+    Top = 197
     Width = 75
     Height = 25
     Caption = '&Print'
@@ -67,8 +67,8 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
-    Left = 248
-    Top = 184
+    Left = 256
+    Top = 197
     Width = 75
     Height = 25
     Caption = 'Pre&view'
@@ -90,8 +90,8 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     OnClick = PreviewBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 160
-    Top = 184
+    Left = 176
+    Top = 197
     Width = 75
     Height = 25
     Caption = '&Cancel'
@@ -103,15 +103,15 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     Left = 176
     Top = 24
     Width = 201
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 4
     Visible = False
   end
   object RepTypeRadioGroup: TRadioGroup
     Left = 8
-    Top = 136
-    Width = 137
+    Top = 149
+    Width = 162
     Height = 73
     Caption = 'Sort by'
     ItemIndex = 0
@@ -139,9 +139,9 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   end
   object AllOrOnePrdGrpRadioGroup: TRadioGroup
     Left = 8
-    Top = 72
-    Width = 137
-    Height = 65
+    Top = 80
+    Width = 162
+    Height = 70
     ItemIndex = 0
     Items.Strings = (
       'All Product Groups'
@@ -152,16 +152,16 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   end
   object PrdTypEdit: TEdit
     Left = 176
-    Top = 104
+    Top = 112
     Width = 201
-    Height = 21
+    Height = 25
     ReadOnly = True
     TabOrder = 8
     Visible = False
   end
   object LUPrdTypButton: TButton
     Left = 384
-    Top = 104
+    Top = 112
     Width = 25
     Height = 25
     Caption = '...'

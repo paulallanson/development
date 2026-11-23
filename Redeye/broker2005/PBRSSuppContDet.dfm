@@ -3,29 +3,30 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
   Top = 122
   Caption = 'Supplier Contact Details'
   ClientHeight = 493
-  ClientWidth = 751
+  ClientWidth = 773
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 17
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 751
+    Width = 773
     Height = 81
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 751
     DesignSize = (
-      751
+      773
       81)
     object Panel2: TPanel
       Left = 9
@@ -36,13 +37,13 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       TabOrder = 0
       object Label2: TLabel
         Left = 8
-        Top = 8
-        Width = 23
-        Height = 14
+        Top = 3
+        Width = 27
+        Height = 16
         Caption = 'Type'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -51,17 +52,17 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
         Left = 8
         Top = 24
         Width = 133
-        Height = 21
+        Height = 25
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxContStatusChange
       end
     end
     object RadioGroup1: TRadioGroup
-      Left = 622
-      Top = 7
+      Left = 628
+      Top = 12
       Width = 120
-      Height = 63
+      Height = 65
       Anchors = [akTop, akRight]
       Caption = 'Report Type'
       ItemIndex = 0
@@ -72,8 +73,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       TabOrder = 1
     end
     object chkbxSuppliers: TCheckBox
-      Left = 448
-      Top = 16
+      Left = 416
+      Top = 14
       Width = 169
       Height = 17
       Caption = 'Include inactive Suppliers'
@@ -81,8 +82,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       OnClick = cmbbxContStatusChange
     end
     object chkbxContacts: TCheckBox
-      Left = 448
-      Top = 38
+      Left = 416
+      Top = 36
       Width = 169
       Height = 17
       Caption = 'Include inactive Contacts'
@@ -93,16 +94,17 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
   object pnlPrintControl: TPanel
     Left = 0
     Top = 433
-    Width = 751
+    Width = 773
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 751
     DesignSize = (
-      751
+      773
       41)
     object Panel1: TPanel
-      Left = 448
+      Left = 470
       Top = 1
       Width = 302
       Height = 39
@@ -110,6 +112,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 448
       DesignSize = (
         302
         39)
@@ -216,7 +219,7 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       end
     end
     object btnCancel: TBitBtn
-      Left = 7
+      Left = 8
       Top = 9
       Width = 75
       Height = 25
@@ -224,12 +227,13 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 7
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
     Top = 474
-    Width = 751
+    Width = 773
     Height = 19
     Panels = <
       item
@@ -241,25 +245,26 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       item
         Width = 50
       end>
+    ExplicitWidth = 751
   end
   object dbgrdContStatus: TDBGrid
     Left = 0
     Top = 81
-    Width = 751
+    Width = 773
     Height = 352
     Align = alClient
     DataSource = dtsrcCurrentContStatus
     DrawingStyle = gdsGradient
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
     TitleFont.Charset = ANSI_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
     Columns = <
@@ -324,8 +329,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     object lblExporting: TLabel
       Left = 16
       Top = 12
-      Width = 59
-      Height = 13
+      Width = 65
+      Height = 17
       Caption = 'Exporting...'
     end
     object prgbrExport: TProgressBar

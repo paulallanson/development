@@ -79,7 +79,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'Date'
       end
       object Label3: TLabel
-        Left = 549
+        Left = 525
         Top = 15
         Width = 84
         Height = 17
@@ -88,7 +88,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ExplicitLeft = 550
       end
       object Label25: TLabel
-        Left = 364
+        Left = 340
         Top = 15
         Width = 58
         Height = 17
@@ -97,7 +97,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ExplicitLeft = 365
       end
       object Label5: TLabel
-        Left = 767
+        Left = 743
         Top = 15
         Width = 103
         Height = 17
@@ -106,7 +106,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ExplicitLeft = 768
       end
       object lblAccountteam: TLabel
-        Left = 789
+        Left = 765
         Top = 44
         Width = 81
         Height = 17
@@ -153,7 +153,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnClick = btnDateClick
       end
       object edtDateReq: TEdit
-        Left = 637
+        Left = 613
         Top = 11
         Width = 81
         Height = 25
@@ -161,10 +161,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         TabOrder = 5
         OnChange = CheckOK
         OnExit = edtDateReqExit
-        ExplicitLeft = 631
+        ExplicitLeft = 607
       end
       object BitBtn2: TBitBtn
-        Left = 723
+        Left = 699
         Top = 11
         Width = 25
         Height = 25
@@ -185,20 +185,20 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         NumGlyphs = 2
         TabOrder = 6
         OnClick = BitBtn2Click
-        ExplicitLeft = 717
+        ExplicitLeft = 693
       end
       object edtStartDate: TEdit
-        Left = 427
+        Left = 403
         Top = 11
         Width = 81
         Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 3
         OnExit = edtDateExit
-        ExplicitLeft = 421
+        ExplicitLeft = 397
       end
       object BitBtn6: TBitBtn
-        Left = 513
+        Left = 489
         Top = 11
         Width = 25
         Height = 25
@@ -219,10 +219,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         NumGlyphs = 2
         TabOrder = 4
         OnClick = BitBtn6Click
-        ExplicitLeft = 507
+        ExplicitLeft = 483
       end
       object edtAccountManager: TEdit
-        Left = 877
+        Left = 853
         Top = 11
         Width = 115
         Height = 25
@@ -231,10 +231,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 7
-        ExplicitLeft = 871
+        ExplicitLeft = 847
       end
       object btnAccountManager: TBitBtn
-        Left = 1000
+        Left = 976
         Top = 11
         Width = 25
         Height = 25
@@ -248,10 +248,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentFont = False
         TabOrder = 8
         OnClick = btnAccountManagerClick
-        ExplicitLeft = 994
+        ExplicitLeft = 970
       end
       object edtAccountTeam: TEdit
-        Left = 877
+        Left = 853
         Top = 40
         Width = 115
         Height = 25
@@ -259,7 +259,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Color = clBtnFace
         ReadOnly = True
         TabOrder = 9
-        ExplicitLeft = 871
+        ExplicitLeft = 847
       end
     end
     object pnlEndUser: TPanel
@@ -286,15 +286,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object edtEndUser: TEdit
         Left = 80
         Top = 0
-        Width = 426
+        Width = 402
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 0
-        ExplicitWidth = 420
+        ExplicitWidth = 396
       end
       object btnEndUser: TBitBtn
-        Left = 518
+        Left = 494
         Top = 0
         Width = 25
         Height = 25
@@ -308,7 +308,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnEndUserClick
-        ExplicitLeft = 512
+        ExplicitLeft = 488
       end
     end
     object pnlHeader: TPanel
@@ -346,7 +346,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'Description'
       end
       object Label7: TLabel
-        Left = 752
+        Left = 728
         Top = 8
         Width = 118
         Height = 17
@@ -355,7 +355,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ExplicitLeft = 753
       end
       object Label8: TLabel
-        Left = 822
+        Left = 798
         Top = 35
         Width = 48
         Height = 17
@@ -371,7 +371,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'Rep'
       end
       object Label11: TLabel
-        Left = 704
+        Left = 680
         Top = 120
         Width = 126
         Height = 17
@@ -380,7 +380,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ExplicitLeft = 705
       end
       object Label10: TLabel
-        Left = 774
+        Left = 750
         Top = 62
         Width = 96
         Height = 17
@@ -391,15 +391,15 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object edtCustomer: TEdit
         Left = 80
         Top = 6
-        Width = 298
+        Width = 274
         Height = 25
         Anchors = [akLeft, akTop, akRight]
         ReadOnly = True
         TabOrder = 0
-        ExplicitWidth = 292
+        ExplicitWidth = 268
       end
       object btnCustomer: TBitBtn
-        Left = 388
+        Left = 364
         Top = 4
         Width = 25
         Height = 25
@@ -413,7 +413,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnCustomerClick
-        ExplicitLeft = 382
+        ExplicitLeft = 358
       end
       object BitBtn4: TBitBtn
         Left = 280
@@ -433,7 +433,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       object edtDescription: TEdit
         Left = 80
         Top = 118
-        Width = 522
+        Width = 498
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         Font.Charset = ANSI_CHARSET
@@ -444,7 +444,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentFont = False
         TabOrder = 7
         OnChange = CheckOK
-        ExplicitWidth = 516
+        ExplicitWidth = 492
       end
       object dblkpCustomerContact: TDBLookupComboBox
         Left = 80
@@ -458,17 +458,17 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnClick = dblkpCustomerContactClick
       end
       object edtCustOrderNo: TEdit
-        Left = 877
+        Left = 853
         Top = 6
         Width = 152
         Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 9
         OnChange = edtCustOrderNoChange
-        ExplicitLeft = 871
+        ExplicitLeft = 847
       end
       object memQuantity: TMemo
-        Left = 877
+        Left = 853
         Top = 32
         Width = 81
         Height = 23
@@ -478,7 +478,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnEnter = memQuantityEnter
         OnExit = ValidateQty
         OnKeyPress = memQuantityKeyPress
-        ExplicitLeft = 871
+        ExplicitLeft = 847
       end
       object btnRep: TBitBtn
         Left = 280
@@ -496,14 +496,14 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnClick = btnRepClick
       end
       object edtDescriptiveRef: TEdit
-        Left = 836
+        Left = 812
         Top = 116
         Width = 193
         Height = 25
         Anchors = [akTop, akRight]
         TabOrder = 8
         OnChange = CheckOK
-        ExplicitLeft = 830
+        ExplicitLeft = 806
       end
       object edtRep: TEdit
         Left = 80
@@ -514,7 +514,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         TabOrder = 2
       end
       object cmbOnHold: TComboBox
-        Left = 877
+        Left = 853
         Top = 60
         Width = 128
         Height = 25
@@ -524,10 +524,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Items.Strings = (
           'Job ON HOLD'
           'Postage Pay Reqd')
-        ExplicitLeft = 871
+        ExplicitLeft = 847
       end
       object BitBtn3: TBitBtn
-        Left = 1009
+        Left = 985
         Top = 58
         Width = 23
         Height = 24
@@ -557,10 +557,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ShowHint = True
         TabOrder = 12
         OnClick = BitBtn3Click
-        ExplicitLeft = 1003
+        ExplicitLeft = 979
       end
       object pnlCostCentre: TPanel
-        Left = 417
+        Left = 393
         Top = 2
         Width = 290
         Height = 29
@@ -569,7 +569,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         ParentBackground = False
         TabOrder = 6
         Visible = False
-        ExplicitLeft = 411
+        ExplicitLeft = 387
         object Label35: TLabel
           Left = 8
           Top = 8
@@ -1570,7 +1570,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Top = 241
       Width = 1075
       Height = 234
-      ActivePage = tsOrders
+      ActivePage = tsIntNotes
       Align = alClient
       TabOrder = 5
       ExplicitWidth = 1069
@@ -1585,8 +1585,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 976
-          ExplicitHeight = 193
           object btnAddPO: TBitBtn
             Left = 4
             Top = 7
@@ -1787,8 +1785,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           OnMouseUp = sgLinesMouseUp
           OnRowMoved = sgLinesRowMoved
           OnTopLeftChanged = sgLinesTopLeftChanged
-          ExplicitWidth = 976
-          ExplicitHeight = 193
           ColWidths = (
             40
             96
@@ -3275,6 +3271,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Caption = 'Panel6'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 1061
+          ExplicitHeight = 193
           object Panel7: TPanel
             Left = 1
             Top = 177
@@ -3284,6 +3282,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 0
+            ExplicitTop = 168
+            ExplicitWidth = 1059
             object lblDocumentDir: TLabel
               Left = 8
               Top = 6
@@ -3314,6 +3314,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             ShowHint = True
             TabOrder = 1
             Wrapable = False
+            ExplicitLeft = 1026
+            ExplicitHeight = 167
             object btnExcel: TToolButton
               Left = 0
               Top = 0
@@ -3368,53 +3370,52 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               OnClick = btnAttachClick
             end
           end
-          object lstvwDocuments: TListView
-            Left = 225
-            Top = 1
-            Width = 807
-            Height = 176
-            Align = alClient
-            Columns = <
-              item
-                Caption = 'Name'
-                Width = 200
-              end
-              item
-                Caption = 'Type'
-                Width = 200
-              end
-              item
-                Caption = 'Date modified'
-                Width = 200
-              end>
-            LargeImages = imgDocuments
-            MultiSelect = True
-            RowSelect = True
-            PopupMenu = pmnuDocuments
-            SmallImages = imgDocuments
-            TabOrder = 2
-            OnColumnClick = lstvwDocumentsColumnClick
-            OnCompare = lstvwDocumentsCompare
-            OnDblClick = lstvwDocumentsDblClick
-          end
-          object dirlstJobDocuments: TDirectoryListBox
+          object pnlDocumentsLeft: TPanel
             Left = 1
             Top = 1
-            Width = 176
-            Height = 176
-            Align = alLeft
-            ItemHeight = 17
-            TabOrder = 3
-            OnChange = dirlstJobDocumentsChange
-          end
-          object pnlDocumentsLeft: TPanel
-            Left = 177
-            Top = 1
-            Width = 48
+            Width = 140
             Height = 176
             Align = alLeft
             ParentBackground = False
-            TabOrder = 4
+            TabOrder = 2
+            ExplicitHeight = 167
+            object stvDocuments: TShellTreeView
+              Left = 1
+              Top = 1
+              Width = 138
+              Height = 174
+              ObjectTypes = [otFolders]
+              Root = 'C:\'
+              ShellListView = slvDocuments
+              UseShellImages = True
+              Align = alClient
+              AutoRefresh = False
+              Indent = 23
+              ParentColor = False
+              RightClickSelect = True
+              ShowRoot = False
+              TabOrder = 0
+              OnDragDrop = stvDocumentsDragDrop
+              OnDragOver = stvDocumentsDragOver
+              ExplicitHeight = 165
+            end
+          end
+          object slvDocuments: TShellListView
+            Left = 141
+            Top = 1
+            Width = 891
+            Height = 176
+            ObjectTypes = [otFolders, otNonFolders]
+            Root = 'C:\'
+            ShellTreeView = stvDocuments
+            Sorted = True
+            Align = alClient
+            ReadOnly = False
+            HideSelection = False
+            MultiSelect = True
+            OnMouseMove = slvDocumentsMouseMove
+            TabOrder = 3
+            ViewStyle = vsReport
           end
         end
       end
@@ -3955,7 +3956,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             1067
             32)
           object lblMachineHours: TLabel
-            Left = 833
+            Left = 809
             Top = 7
             Width = 138
             Height = 21
@@ -3966,7 +3967,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             ExplicitLeft = 851
           end
           object TLabel
-            Left = 980
+            Left = 956
             Top = 9
             Width = 4
             Height = 17
@@ -3975,7 +3976,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             ExplicitLeft = 981
           end
           object lblOvertimeHours: TLabel
-            Left = 664
+            Left = 640
             Top = 7
             Width = 139
             Height = 21
@@ -3986,7 +3987,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             ExplicitLeft = 682
           end
           object lblLabourHours: TLabel
-            Left = 497
+            Left = 473
             Top = 7
             Width = 130
             Height = 21
@@ -5141,7 +5142,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
     object pmnuOpen: TMenuItem
       Caption = 'Open'
-      OnClick = lstvwDocumentsDblClick
     end
     object pmnuPaste: TMenuItem
       Caption = 'Paste'
